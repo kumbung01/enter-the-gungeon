@@ -4,6 +4,8 @@
 #include "framework.h"
 #include "WinAPI.h"
 
+#include <vector>
+
 #define MAX_LOADSTRING 100
 
 #define MY_MACRO(Name) Name##Test
@@ -28,7 +30,7 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
 
     wcex.cbSize         = sizeof(WNDCLASSEX);
     wcex.style          = CS_HREDRAW | CS_VREDRAW;
-    wcex.lpfnWndProc    = WndProc;
+    wcex.lpfnWndProc    = &WndProc;
     wcex.cbClsExtra     = 0;
     wcex.cbWndExtra     = 0;
     wcex.hInstance      = hInstance;
@@ -57,12 +59,23 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
     UpdateWindow(hWnd);
 
 
-
+    // 단축키 테이블 
     HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_WINAPI));
-    MSG msg;
-    // 기본 메시지 루프입니다:
+
+
+
+    // 메시지 변수
+    MSG msg = {};
+
+    // GetMessage
+    // - 메세지 큐에 있는 메세지를 받아온다.
+    // - 메세지가 큐에 없으면, 함수가 반환되지 않는다.
+    // - 꺼낸 메세지가 WM_QUIT 이면, false 를 반환, 그 외에는 True 반환    
+    std::vector<UINT> vecMsg;
     while (GetMessage(&msg, nullptr, 0, 0))
     {
+        vecMsg.push_back(msg.message);
+
         if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
         {
             TranslateMessage(&msg);
@@ -80,16 +93,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
    return TRUE;
 }
 
-//
-//  함수: WndProc(HWND, UINT, WPARAM, LPARAM)
-//
-//  용도: 주 창의 메시지를 처리합니다.
-//
-//  WM_COMMAND  - 애플리케이션 메뉴를 처리합니다.
-//  WM_PAINT    - 주 창을 그립니다.
-//  WM_DESTROY  - 종료 메시지를 게시하고 반환합니다.
-//
-//
+
+// 메세지를 처리하는 함수
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)
@@ -115,9 +120,38 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         {
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
-            // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
+            
+            // 사각형 그리기
+            Rectangle(hdc, 10, 10, 110, 110);
+
             EndPaint(hWnd, &ps);
         }
+        break;
+    case WM_MOUSEMOVE: 
+    {
+        int a = 0;
+    }
+        break;
+
+    case WM_KEYDOWN:
+    {
+        switch (wParam)
+        {
+        case 'W':
+        {
+            int a = 0;
+        }
+            break;
+
+        case 'S':
+        {
+            int a = 0;
+        }
+            break;
+        }
+    }
+
+
         break;
     case WM_DESTROY:
         PostQuitMessage(0);
