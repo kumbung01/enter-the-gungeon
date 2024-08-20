@@ -4,19 +4,11 @@
 #include "framework.h"
 #include "WinAPI.h"
 
-#include <vector>
+#include "CEngine.h"
 
-#define MAX_LOADSTRING 100
-
-#define MY_MACRO(Name) Name##Test
 
 
 // 전역 변수
-HINSTANCE   hInst = nullptr;
-
-
-// 함수 선언
-BOOL                InitInstance(HINSTANCE, int);
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
 
@@ -88,6 +80,12 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
     // 반환값이 true == 메세지가 있었다.
     // 반환값이 false == 메세지가 없었다.
 
+    CEngine* pEngine = CEngine::GetInst();    
+    CEngine::Destroy();
+
+    CEngine::GetInst();
+
+
     while (true)
     {        
         // 메세지큐에 메세지가 있다.
@@ -110,6 +108,8 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
     }
 
     KillTimer(hWnd, 0);
+
+    CEngine::Destroy();
 
     return (int) msg.wParam;
 }
