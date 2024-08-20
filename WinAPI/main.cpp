@@ -71,27 +71,57 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
     // - 메세지 큐에 있는 메세지를 받아온다.
     // - 메세지가 큐에 없으면, 함수가 반환되지 않는다.
     // - 꺼낸 메세지가 WM_QUIT 이면, false 를 반환, 그 외에는 True 반환    
-    std::vector<UINT> vecMsg;
-    while (GetMessage(&msg, nullptr, 0, 0))
-    {
-        vecMsg.push_back(msg.message);
+    SetTimer(hWnd, 0, 50, 0);    
 
-        if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+    // 메세지가 없으면, 프로그램이 동작하지 않는 구조이다.
+    // 게임을 만들기에 적합하지 않음
+    // 강제로 일정시간마다 일정한 메세지를 발생시킨다. 
+    //  - Timer 를 이용해서 WM_TIMER 메세지를 일정시간마다 발생시킨다.
+    //  - 메세지큐에 메시지가 없어도 프로그램이 중단되어있지 않는 구조가 필요
+    // GetMessage -> PeekMessage
+    
+    // GetMessage 가 반환되었다 == 메세지가 있었다.
+    // 반환값이 false == 메세지가 WM_QUIT 이다.
+    // 반환값이 true ==  메세지가 WM_QUIT 아니다. 
+
+    // PeekMessage 가 반환되었다 == 메세지가 있었을 수도 있고, 없었을 수도 있다.
+    // 반환값이 true == 메세지가 있었다.
+    // 반환값이 false == 메세지가 없었다.
+
+    while (true)
+    {        
+        // 메세지큐에 메세지가 있다.
+        if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))
         {
-            TranslateMessage(&msg);
-            DispatchMessage(&msg);
+            // 메세지 처리
+            if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
+            {
+                TranslateMessage(&msg);
+                DispatchMessage(&msg);
+            }
         }
+
+        // 메세지큐에 메세지가 없다.
+        else
+        {
+            // 게임 실행
+            
+        }       
     }
+
+    KillTimer(hWnd, 0);
 
     return (int) msg.wParam;
 }
 
 
-BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
-{
-  
-   return TRUE;
-}
+// 1. 전역변수
+float g_X = 500.f;
+float g_Y = 300.f;
+
+float g_Width = 100.f;
+float g_Height = 100.f;
+
 
 
 // 메세지를 처리하는 함수
@@ -121,8 +151,15 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
             
+            // 무효화 영역 ( 화면을 다시 갱신해야 하는 영역 )
+
             // 사각형 그리기
-            Rectangle(hdc, 10, 10, 110, 110);
+            Rectangle(hdc
+                    , g_X - g_Width / 2.f
+                    , g_Y - g_Height / 2.f
+                    , g_X + g_Width / 2.f
+                    , g_Y + g_Height / 2.f);
+
 
             EndPaint(hWnd, &ps);
         }
@@ -138,20 +175,27 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         switch (wParam)
         {
         case 'W':
-        {
-            int a = 0;
-        }
+            g_Y -= 1.f;      
+            InvalidateRect(hWnd, nullptr, true);
             break;
-
         case 'S':
-        {
-            int a = 0;
-        }
+            g_Y += 1.f;
+            InvalidateRect(hWnd, nullptr, true);
+            break;
+        case 'A':
+            g_X -= 1.f;
+            InvalidateRect(hWnd, nullptr, true);
+            break;
+        case 'D':
+            g_X += 1.f;
+            InvalidateRect(hWnd, nullptr, true);
             break;
         }
     }
-
-
+    case WM_TIMER:
+    {
+        int a = 0;
+    }
         break;
     case WM_DESTROY:
         PostQuitMessage(0);
