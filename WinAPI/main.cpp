@@ -1,12 +1,10 @@
-﻿// WinAPI.cpp : 애플리케이션에 대한 진입점을 정의합니다.
-//
+﻿#include "pch.h"
 
-#include "framework.h"
 #include "WinAPI.h"
-
 #include "CEngine.h"
 
 
+HINSTANCE g_hInst = nullptr;
 
 // 전역 변수
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
@@ -18,43 +16,32 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
                     , LPWSTR lpCmdLine
                     , int   nCmdShow)
 {
+    g_hInst = hInstance; // 프로세스 시작 주소
+
     WNDCLASSEXW wcex = {};
 
-    wcex.cbSize         = sizeof(WNDCLASSEX);
-    wcex.style          = CS_HREDRAW | CS_VREDRAW;
-    wcex.lpfnWndProc    = &WndProc;
-    wcex.cbClsExtra     = 0;
-    wcex.cbWndExtra     = 0;
-    wcex.hInstance      = hInstance;
-    wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_WINAPI));
-    wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW);
-    wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW + 1);
-    wcex.lpszMenuName   = MAKEINTRESOURCEW(IDC_WINAPI);
-    wcex.lpszClassName  = L"Key";
-    wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
+    wcex.cbSize = sizeof(WNDCLASSEX);
+    wcex.style = CS_HREDRAW | CS_VREDRAW;
+    wcex.lpfnWndProc = &WndProc;
+    wcex.cbClsExtra = 0;
+    wcex.cbWndExtra = 0;
+    wcex.hInstance = hInstance;
+    wcex.hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_WINAPI));
+    wcex.hCursor = LoadCursor(nullptr, IDC_ARROW);
+    wcex.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
+    wcex.lpszMenuName = MAKEINTRESOURCEW(IDC_WINAPI);
+    wcex.lpszClassName = L"Key";
+    wcex.hIconSm = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
 
     RegisterClassExW(&wcex);
 
-    // HWND 윈도우 ID 타입
-    // 커널 오브젝트 ( OS 차원에서 관리되는 객체 )
-    HWND hWnd = CreateWindowW(L"Key", L"MyGame", WS_OVERLAPPEDWINDOW,
-        CW_USEDEFAULT, 0, CW_USEDEFAULT, 0, nullptr, nullptr, hInstance, nullptr);
-
-    if (!hWnd)
-    {
+    // Engine 초기화
+    if (FAILED(CEngine::GetInst()->Init(g_hInst, POINT{ 1280, 768 })))
         return FALSE;
-    }
-
-    // 윈도우 크기 설정, 위치 설정
-    SetWindowPos(hWnd, nullptr, 10, 10, 1280, 768, 0);
-    ShowWindow(hWnd, true);
-    UpdateWindow(hWnd);
 
 
     // 단축키 테이블 
     HACCEL hAccelTable = LoadAccelerators(hInstance, MAKEINTRESOURCE(IDC_WINAPI));
-
-
 
     // 메시지 변수
     MSG msg = {};
@@ -62,8 +49,7 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
     // GetMessage
     // - 메세지 큐에 있는 메세지를 받아온다.
     // - 메세지가 큐에 없으면, 함수가 반환되지 않는다.
-    // - 꺼낸 메세지가 WM_QUIT 이면, false 를 반환, 그 외에는 True 반환    
-    SetTimer(hWnd, 0, 50, 0);    
+    // - 꺼낸 메세지가 WM_QUIT 이면, false 를 반환, 그 외에는 True 반환        
 
     // 메세지가 없으면, 프로그램이 동작하지 않는 구조이다.
     // 게임을 만들기에 적합하지 않음
@@ -79,18 +65,14 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
     // PeekMessage 가 반환되었다 == 메세지가 있었을 수도 있고, 없었을 수도 있다.
     // 반환값이 true == 메세지가 있었다.
     // 반환값이 false == 메세지가 없었다.
-
-    CEngine* pEngine = CEngine::GetInst();    
-    CEngine::Destroy();
-
-    CEngine::GetInst();
-
-
     while (true)
     {        
         // 메세지큐에 메세지가 있다.
         if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))
         {
+            if (WM_QUIT == msg.message)
+                break;
+
             // 메세지 처리
             if (!TranslateAccelerator(msg.hwnd, hAccelTable, &msg))
             {
@@ -103,13 +85,9 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
         else
         {
             // 게임 실행
-            
+            CEngine::GetInst()->Progress();
         }       
     }
-
-    KillTimer(hWnd, 0);
-
-    CEngine::Destroy();
 
     return (int) msg.wParam;
 }
@@ -136,7 +114,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             switch (wmId)
             {
             case IDM_ABOUT:
-                DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
+                DialogBox(g_hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
                 break;
             case IDM_EXIT:
                 DestroyWindow(hWnd);

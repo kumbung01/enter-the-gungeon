@@ -16,6 +16,12 @@
     <ClInclude Include="CEngine.h">
       <Filter>Game\02. Engine</Filter>
     </ClInclude>
+    <ClInclude Include="define.h">
+      <Filter>Game\01. Header</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Default</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -29,6 +35,9 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="CEngine.cpp">
       <Filter>Game\02. Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Default</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
