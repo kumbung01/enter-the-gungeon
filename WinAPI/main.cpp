@@ -65,11 +65,23 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
     // PeekMessage 가 반환되었다 == 메세지가 있었을 수도 있고, 없었을 수도 있다.
     // 반환값이 true == 메세지가 있었다.
     // 반환값이 false == 메세지가 없었다.
+
+    // FPS ( Frame Per Second )
+    
+    UINT MessageCount = 0;
+    UINT NoneMessageCount = 0;
+
+    UINT PrevCount = 0;
+    UINT CurCount = 0;
+
+
     while (true)
     {        
         // 메세지큐에 메세지가 있다.
         if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))
         {
+            ++MessageCount;
+
             if (WM_QUIT == msg.message)
                 break;
 
@@ -84,23 +96,34 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
         // 메세지큐에 메세지가 없다.
         else
         {
+            ++NoneMessageCount;
+
             // 게임 실행
             CEngine::GetInst()->Progress();
         }       
+
+        CurCount = GetTickCount();
+
+        if (1000 < CurCount - PrevCount)
+        {
+            float A = 100.f * (float)MessageCount / (float)(MessageCount + NoneMessageCount);
+            float B = 100.f * (float)NoneMessageCount / (float)(MessageCount + NoneMessageCount);
+
+            wchar_t strBuff[255] = {};
+            swprintf_s(strBuff, 255, L"Message : %d, NoneMessage : %d, %f : %f"
+                    , MessageCount, NoneMessageCount, A, B);
+
+            SetWindowText(CEngine::GetInst()->GetMainWndHwnd(), strBuff);
+
+            MessageCount = 0;
+            NoneMessageCount = 0;
+            
+            PrevCount = CurCount;
+        }
     }
 
     return (int) msg.wParam;
 }
-
-
-// 1. 전역변수
-float g_X = 500.f;
-float g_Y = 300.f;
-
-float g_Width = 100.f;
-float g_Height = 100.f;
-
-
 
 // 메세지를 처리하는 함수
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
@@ -129,16 +152,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             PAINTSTRUCT ps;
             HDC hdc = BeginPaint(hWnd, &ps);
             
-            // 무효화 영역 ( 화면을 다시 갱신해야 하는 영역 )
-
-            // 사각형 그리기
-            Rectangle(hdc
-                    , g_X - g_Width / 2.f
-                    , g_Y - g_Height / 2.f
-                    , g_X + g_Width / 2.f
-                    , g_Y + g_Height / 2.f);
-
-
             EndPaint(hWnd, &ps);
         }
         break;
@@ -148,32 +161,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     }
         break;
 
-    case WM_KEYDOWN:
-    {
-        switch (wParam)
-        {
-        case 'W':
-            g_Y -= 1.f;      
-            InvalidateRect(hWnd, nullptr, true);
-            break;
-        case 'S':
-            g_Y += 1.f;
-            InvalidateRect(hWnd, nullptr, true);
-            break;
-        case 'A':
-            g_X -= 1.f;
-            InvalidateRect(hWnd, nullptr, true);
-            break;
-        case 'D':
-            g_X += 1.f;
-            InvalidateRect(hWnd, nullptr, true);
-            break;
-        }
-    }
-    case WM_TIMER:
-    {
-        int a = 0;
-    }
+   
         break;
     case WM_DESTROY:
         PostQuitMessage(0);

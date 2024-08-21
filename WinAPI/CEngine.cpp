@@ -11,6 +11,7 @@ CEngine::CEngine()
 
 CEngine::~CEngine()
 {
+    ReleaseDC(m_hWnd, m_hDC);
 }
 
 int CEngine::Init(HINSTANCE _hInst, POINT _Resolution)
@@ -32,6 +33,32 @@ int CEngine::Init(HINSTANCE _hInst, POINT _Resolution)
     // 윈도우 크기 설정, 위치 설정
     SetWindowPos(m_hWnd, nullptr, 10, 10, m_Resolution.x, m_Resolution.y, 0);
 
+    // DC 생성
+    //  - Draw 목적지 ==> Window Bitmap
+    //  - Balck Pen
+    //  - White Brush
+    m_hDC = GetDC(m_hWnd);
+
+    // 펜 생성
+    HPEN hRedPen = CreatePen(PS_SOLID, 1, RGB(255, 0, 0));
+
+    // 브러쉬 생성
+    HBRUSH hBlueBrush = CreateSolidBrush(RGB(0, 0, 255));
+
+    // DC 의 펜과 브러쉬를 교체
+    HPEN hPrevPen = (HPEN)SelectObject(m_hDC, hRedPen);
+    HBRUSH hPrevBrush = (HBRUSH)SelectObject(m_hDC, hBlueBrush);
+
+    Rectangle(m_hDC, 10, 10, 210, 210);
+
+    // 원래 펜, 브러쉬로 변경
+    SelectObject(m_hDC, hPrevPen);
+    SelectObject(m_hDC, hPrevBrush);
+
+    // 사용한 펜, 브러쉬 삭제요청
+    DeleteObject(hRedPen);
+    DeleteObject(hBlueBrush);
+
     return S_OK;
 }
 
@@ -49,6 +76,10 @@ void CEngine::Progress()
     {
         // 1초에 한번씩 if 수행
         m_FrameCount;
+
+        wchar_t strBuff[255] = {};
+        swprintf_s(strBuff, 255, L"FPS : %d", m_FrameCount);
+
 
         m_FrameCount = 0;
         PrevCount = CurCount;
