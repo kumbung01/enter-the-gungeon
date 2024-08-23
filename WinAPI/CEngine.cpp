@@ -1,6 +1,10 @@
 #include "pch.h"
 #include "CEngine.h"
 
+
+
+
+
 CEngine::CEngine()
     : m_hInst(nullptr)
     , m_hWnd(nullptr)
@@ -11,7 +15,19 @@ CEngine::CEngine()
 
 CEngine::~CEngine()
 {
+    // DC 해제
     ReleaseDC(m_hWnd, m_hDC);
+
+    // Pen 과 Brush 해제
+    for (UINT i = 0; i < (UINT)PEN_TYPE::END; ++i)
+    {
+        DeleteObject(m_Pen[i]);
+    }
+
+    for (UINT i = 0; i < (UINT)BRUSH_TYPE::END; ++i)
+    {
+        DeleteObject(m_Brush[i]);
+    }
 }
 
 int CEngine::Init(HINSTANCE _hInst, POINT _Resolution)
@@ -33,31 +49,21 @@ int CEngine::Init(HINSTANCE _hInst, POINT _Resolution)
     // 윈도우 크기 설정, 위치 설정
     SetWindowPos(m_hWnd, nullptr, 10, 10, m_Resolution.x, m_Resolution.y, 0);
 
-    // DC 생성
-    //  - Draw 목적지 ==> Window Bitmap
-    //  - Balck Pen
-    //  - White Brush
+    // DC 생성   
     m_hDC = GetDC(m_hWnd);
 
-    // 펜 생성
-    HPEN hRedPen = CreatePen(PS_SOLID, 1, RGB(255, 0, 0));
-
-    // 브러쉬 생성
-    HBRUSH hBlueBrush = CreateSolidBrush(RGB(0, 0, 255));
-
-    // DC 의 펜과 브러쉬를 교체
-    HPEN hPrevPen = (HPEN)SelectObject(m_hDC, hRedPen);
-    HBRUSH hPrevBrush = (HBRUSH)SelectObject(m_hDC, hBlueBrush);
-
+    // GDIObject 생성
+    CreateGDIObject();    
+  
+    // 생성한 Pen 과 Brush 로 사각형 그려보기
+    HPEN    hPrevPen = (HPEN)SelectObject(m_hDC, GetPen(PEN_TYPE::RED));
+    HBRUSH  hPrevBrush = (HBRUSH)SelectObject(m_hDC, GetBrush(BRUSH_TYPE::BLUE));
+    
     Rectangle(m_hDC, 10, 10, 210, 210);
 
     // 원래 펜, 브러쉬로 변경
     SelectObject(m_hDC, hPrevPen);
     SelectObject(m_hDC, hPrevBrush);
-
-    // 사용한 펜, 브러쉬 삭제요청
-    DeleteObject(hRedPen);
-    DeleteObject(hBlueBrush);
 
     return S_OK;
 }
@@ -85,4 +91,17 @@ void CEngine::Progress()
         PrevCount = CurCount;
     }
 
+}
+
+void CEngine::CreateGDIObject()
+{
+    // Pen
+    m_Pen[(UINT)PEN_TYPE::RED]      = CreatePen(PS_SOLID, 1, RGB(255, 0, 0));
+    m_Pen[(UINT)PEN_TYPE::GREEN]    = CreatePen(PS_SOLID, 1, RGB(0, 255, 0));
+    m_Pen[(UINT)PEN_TYPE::BLUE]     = CreatePen(PS_SOLID, 1, RGB(0, 0, 255));
+
+    // Brush
+    m_Brush[(UINT)BRUSH_TYPE::RED]      = CreateSolidBrush(RGB(255, 0, 0));
+    m_Brush[(UINT)BRUSH_TYPE::GREEN]    = CreateSolidBrush(RGB(0, 255, 0));
+    m_Brush[(UINT)BRUSH_TYPE::BLUE]     = CreateSolidBrush(RGB(0, 0, 255));
 }

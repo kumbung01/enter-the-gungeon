@@ -11,14 +11,20 @@ private:
 	POINT		m_Resolution;	// 메인 윈도우 해상도
 	HDC			m_hDC;			// Main DC(Device Context) 그리기 관련 관리자, 그리기 도구 집합체
 
-
 	UINT		m_FrameCount;
 
+	HPEN		m_Pen[(UINT)PEN_TYPE::END];
+	HBRUSH		m_Brush[(UINT)BRUSH_TYPE::END];
 
 public:
 	HWND GetMainWndHwnd() { return m_hWnd; }
+	HPEN GetPen(PEN_TYPE _Type) { return m_Pen[(UINT)_Type]; }
+	HBRUSH GetBrush(BRUSH_TYPE _Type) { return m_Brush[(UINT)_Type]; }
 
 public:
 	int Init(HINSTANCE _Inst, POINT _Resolution);
 	void Progress();
+
+private:
+	void CreateGDIObject();
 };

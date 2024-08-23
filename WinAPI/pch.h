@@ -11,4 +11,4 @@ using std::list;
 using std::map;
 using std::make_pair;
 
-#include "define.h"
+#include "global.h"
