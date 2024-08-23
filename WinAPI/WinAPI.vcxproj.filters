@@ -28,6 +28,9 @@
     <ClInclude Include="global.h">
       <Filter>Game\01. Header</Filter>
     </ClInclude>
+    <ClInclude Include="CSelectGDI.h">
+      <Filter>Game\Module</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -45,6 +48,9 @@
     <ClCompile Include="pch.cpp">
       <Filter>Default</Filter>
     </ClCompile>
+    <ClCompile Include="CSelectGDI.cpp">
+      <Filter>Game\Module</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">
@@ -58,6 +64,9 @@
     </Filter>
     <Filter Include="Game\02. Engine">
       <UniqueIdentifier>{f77ae0f6-6b9b-4fd6-952c-c3b38d606000}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Module">
+      <UniqueIdentifier>{8cd93ad2-534b-4036-a84d-1c6d23b2640a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

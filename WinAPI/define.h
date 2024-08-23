@@ -14,5 +14,6 @@
 								~Type();
 
 
-
+#define SELECT_PEN(Pen) CSelectGDI SelectPen(CEngine::GetInst()->GetMainDC(), CEngine::GetInst()->GetPen(Pen));
+#define SELECT_BRUSH(Brush) CSelectGDI SelectBrush(CEngine::GetInst()->GetMainDC(), CEngine::GetInst()->GetBrush(Brush));
 

@@ -1,9 +1,7 @@
 #include "pch.h"
 #include "CEngine.h"
 
-
-
-
+#include "CSelectGDI.h"
 
 CEngine::CEngine()
     : m_hInst(nullptr)
@@ -56,15 +54,13 @@ int CEngine::Init(HINSTANCE _hInst, POINT _Resolution)
     CreateGDIObject();    
   
     // 생성한 Pen 과 Brush 로 사각형 그려보기
-    HPEN    hPrevPen = (HPEN)SelectObject(m_hDC, GetPen(PEN_TYPE::RED));
-    HBRUSH  hPrevBrush = (HBRUSH)SelectObject(m_hDC, GetBrush(BRUSH_TYPE::BLUE));
-    
+    //CSelectGDI SelectPen(m_hDC, GetPen(PEN_TYPE::RED));
+    //CSelectGDI SelectBrush(m_hDC, GetBrush(BRUSH_TYPE::GREEN));
+    SELECT_PEN(PEN_TYPE::RED);
+    SELECT_BRUSH(BRUSH_TYPE::GREEN);
+
     Rectangle(m_hDC, 10, 10, 210, 210);
-
-    // 원래 펜, 브러쉬로 변경
-    SelectObject(m_hDC, hPrevPen);
-    SelectObject(m_hDC, hPrevBrush);
-
+    
     return S_OK;
 }
 
