@@ -31,6 +31,10 @@
     <ClInclude Include="CSelectGDI.h">
       <Filter>Game\Module</Filter>
     </ClInclude>
+    <ClInclude Include="CBase.h">
+      <Filter>Game\Module</Filter>
+    </ClInclude>
+    <ClInclude Include="CObj.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -51,6 +55,10 @@
     <ClCompile Include="CSelectGDI.cpp">
       <Filter>Game\Module</Filter>
     </ClCompile>
+    <ClCompile Include="CBase.cpp">
+      <Filter>Game\Module</Filter>
+    </ClCompile>
+    <ClCompile Include="CObj.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">
@@ -67,6 +75,9 @@
     </Filter>
     <Filter Include="Game\Module">
       <UniqueIdentifier>{8cd93ad2-534b-4036-a84d-1c6d23b2640a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\03. Object">
+      <UniqueIdentifier>{e17a9ac2-65f5-4902-bc17-ae5bdfe85ee0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

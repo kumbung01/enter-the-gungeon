@@ -2,6 +2,8 @@
 #include "CEngine.h"
 
 #include "CSelectGDI.h"
+#include "CBase.h"
+
 
 CEngine::CEngine()
     : m_hInst(nullptr)
@@ -9,6 +11,8 @@ CEngine::CEngine()
     , m_Resolution{}
     , m_FrameCount(0)
 {
+    CBase base1, base2, base3;
+    base2 = base3;
 }
 
 CEngine::~CEngine()
@@ -56,11 +60,18 @@ int CEngine::Init(HINSTANCE _hInst, POINT _Resolution)
     // 생성한 Pen 과 Brush 로 사각형 그려보기
     //CSelectGDI SelectPen(m_hDC, GetPen(PEN_TYPE::RED));
     //CSelectGDI SelectBrush(m_hDC, GetBrush(BRUSH_TYPE::GREEN));
-    SELECT_PEN(PEN_TYPE::RED);
-    SELECT_BRUSH(BRUSH_TYPE::GREEN);
+    {
+        SELECT_PEN(PEN_TYPE::RED);
+        SELECT_BRUSH(BRUSH_TYPE::GREEN);
+        Rectangle(m_hDC, 10, 10, 210, 210);
+    }
 
-    Rectangle(m_hDC, 10, 10, 210, 210);
-    
+    {
+        SELECT_PEN(PEN_TYPE::BLUE);
+        SELECT_BRUSH(BRUSH_TYPE::RED);
+        Rectangle(m_hDC, 200, 200, 400, 400);
+    }
+
     return S_OK;
 }
 
