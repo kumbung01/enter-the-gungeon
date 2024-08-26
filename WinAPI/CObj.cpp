@@ -2,6 +2,7 @@
 #include "CObj.h"
 
 #include "CEngine.h"
+#include "CTimeMgr.h"
 
 CObj::CObj()
 	: m_Pos{}
@@ -15,7 +16,8 @@ CObj::~CObj()
 
 void CObj::Tick()
 {
-	m_Pos.x += 0.0001f;
+	float Speed = 200.f;
+	m_Pos.x += Speed * DT;
 }
 
 void CObj::Render()

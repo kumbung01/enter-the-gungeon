@@ -9,10 +9,13 @@ private:
 	LARGE_INTEGER	m_CurCount;
 
 	UINT			m_FPS;
-	float			m_DT;
+	float			m_DT; // Delta Time : 프레임 간격 시간, 1 프레임 동작하는데 걸리는 시간
 
 public:
 	void Init();
 	void Tick();
+
+public:
+	float GetDeltaTime() { return m_DT; }
 };
 
