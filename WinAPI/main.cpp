@@ -3,6 +3,19 @@
 #include "WinAPI.h"
 #include "CEngine.h"
 
+struct MyType
+{
+    float f1;
+    float f2;
+};
+
+union MyUnion
+{
+    float f1;
+    float f2;
+};
+
+
 
 HINSTANCE g_hInst = nullptr;
 
@@ -16,6 +29,23 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
                     , LPWSTR lpCmdLine
                     , int   nCmdShow)
 {
+    int size = 0;
+
+    size = sizeof(MyType);
+    size = sizeof(MyUnion);
+
+    MyType type;
+    type.f1 = 10.f;
+    type.f2 = 0.f;
+
+    MyUnion uni = {};
+    uni.f1 = 10.f;
+
+
+
+
+
+
     g_hInst = hInstance; // 프로세스 시작 주소
 
     WNDCLASSEXW wcex = {};
@@ -45,43 +75,12 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
 
     // 메시지 변수
     MSG msg = {};
-
-    // GetMessage
-    // - 메세지 큐에 있는 메세지를 받아온다.
-    // - 메세지가 큐에 없으면, 함수가 반환되지 않는다.
-    // - 꺼낸 메세지가 WM_QUIT 이면, false 를 반환, 그 외에는 True 반환        
-
-    // 메세지가 없으면, 프로그램이 동작하지 않는 구조이다.
-    // 게임을 만들기에 적합하지 않음
-    // 강제로 일정시간마다 일정한 메세지를 발생시킨다. 
-    //  - Timer 를 이용해서 WM_TIMER 메세지를 일정시간마다 발생시킨다.
-    //  - 메세지큐에 메시지가 없어도 프로그램이 중단되어있지 않는 구조가 필요
-    // GetMessage -> PeekMessage
     
-    // GetMessage 가 반환되었다 == 메세지가 있었다.
-    // 반환값이 false == 메세지가 WM_QUIT 이다.
-    // 반환값이 true ==  메세지가 WM_QUIT 아니다. 
-
-    // PeekMessage 가 반환되었다 == 메세지가 있었을 수도 있고, 없었을 수도 있다.
-    // 반환값이 true == 메세지가 있었다.
-    // 반환값이 false == 메세지가 없었다.
-
-    // FPS ( Frame Per Second )
-    
-    UINT MessageCount = 0;
-    UINT NoneMessageCount = 0;
-
-    UINT PrevCount = 0;
-    UINT CurCount = 0;
-
-
     while (true)
     {        
         // 메세지큐에 메세지가 있다.
         if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))
-        {
-            ++MessageCount;
-
+        {          
             if (WM_QUIT == msg.message)
                 break;
 
@@ -95,31 +94,10 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
 
         // 메세지큐에 메세지가 없다.
         else
-        {
-            ++NoneMessageCount;
-
+        {          
             // 게임 실행
             CEngine::GetInst()->Progress();
-        }       
-
-        CurCount = GetTickCount();
-
-        if (1000 < CurCount - PrevCount)
-        {
-            float A = 100.f * (float)MessageCount / (float)(MessageCount + NoneMessageCount);
-            float B = 100.f * (float)NoneMessageCount / (float)(MessageCount + NoneMessageCount);
-
-            wchar_t strBuff[255] = {};
-            swprintf_s(strBuff, 255, L"Message : %d, NoneMessage : %d, %f : %f"
-                    , MessageCount, NoneMessageCount, A, B);
-
-            SetWindowText(CEngine::GetInst()->GetMainWndHwnd(), strBuff);
-
-            MessageCount = 0;
-            NoneMessageCount = 0;
-            
-            PrevCount = CurCount;
-        }
+        }              
     }
 
     return (int) msg.wParam;

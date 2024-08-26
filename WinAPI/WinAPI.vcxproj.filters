@@ -34,7 +34,15 @@
     <ClInclude Include="CBase.h">
       <Filter>Game\Module</Filter>
     </ClInclude>
-    <ClInclude Include="CObj.h" />
+    <ClInclude Include="CObj.h">
+      <Filter>Game\04. Object</Filter>
+    </ClInclude>
+    <ClInclude Include="struct.h">
+      <Filter>Game\01. Header</Filter>
+    </ClInclude>
+    <ClInclude Include="CTimeMgr.h">
+      <Filter>Game\03. Manager\01. Time</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -58,7 +66,12 @@
     <ClCompile Include="CBase.cpp">
       <Filter>Game\Module</Filter>
     </ClCompile>
-    <ClCompile Include="CObj.cpp" />
+    <ClCompile Include="CObj.cpp">
+      <Filter>Game\04. Object</Filter>
+    </ClCompile>
+    <ClCompile Include="CTimeMgr.cpp">
+      <Filter>Game\03. Manager\01. Time</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">
@@ -76,8 +89,14 @@
     <Filter Include="Game\Module">
       <UniqueIdentifier>{8cd93ad2-534b-4036-a84d-1c6d23b2640a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game\03. Object">
+    <Filter Include="Game\04. Object">
       <UniqueIdentifier>{e17a9ac2-65f5-4902-bc17-ae5bdfe85ee0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\03. Manager">
+      <UniqueIdentifier>{b7b55327-4974-4122-bffe-ad4a3c70087e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\03. Manager\01. Time">
+      <UniqueIdentifier>{a8bf3e2b-60e2-47e4-9d3f-7fa43d33aea2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

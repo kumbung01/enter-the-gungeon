@@ -1,8 +1,10 @@
 #include "pch.h"
 #include "CEngine.h"
 
+#include "CTimeMgr.h"
+
 #include "CSelectGDI.h"
-#include "CBase.h"
+#include "CObj.h"
 
 
 CEngine::CEngine()
@@ -10,9 +12,9 @@ CEngine::CEngine()
     , m_hWnd(nullptr)
     , m_Resolution{}
     , m_FrameCount(0)
+    , m_Object(nullptr)
 {
-    CBase base1, base2, base3;
-    base2 = base3;
+   
 }
 
 CEngine::~CEngine()
@@ -57,58 +59,39 @@ int CEngine::Init(HINSTANCE _hInst, POINT _Resolution)
     // GDIObject 생성
     CreateGDIObject();    
   
-    // 생성한 Pen 과 Brush 로 사각형 그려보기
-    //CSelectGDI SelectPen(m_hDC, GetPen(PEN_TYPE::RED));
-    //CSelectGDI SelectBrush(m_hDC, GetBrush(BRUSH_TYPE::GREEN));
-    {
-        SELECT_PEN(PEN_TYPE::RED);
-        SELECT_BRUSH(BRUSH_TYPE::GREEN);
-        Rectangle(m_hDC, 10, 10, 210, 210);
-    }
+    // Manater 생성 및 초기화
+    CTimeMgr::GetInst()->Init();
 
-    {
-        SELECT_PEN(PEN_TYPE::BLUE);
-        SELECT_BRUSH(BRUSH_TYPE::RED);
-        Rectangle(m_hDC, 200, 200, 400, 400);
-    }
+
+    // 오브젝트 1개 생성해보기
+    m_Object = new CObj;
+    m_Object->SetPos( m_Resolution.x / 2.f, m_Resolution.y / 2.f);
+    m_Object->SetScale(50.f, 50.f);
+
 
     return S_OK;
-}
-
-void CEngine::Progress()
-{
-    // FPS ( Frame Per Second )
-    ++m_FrameCount;
-
-    static UINT PrevCount = 0;
-    static UINT CurCount = 0;
-    
-    CurCount = GetTickCount();
-
-    if (1000 < CurCount - PrevCount)
-    {
-        // 1초에 한번씩 if 수행
-        m_FrameCount;
-
-        wchar_t strBuff[255] = {};
-        swprintf_s(strBuff, 255, L"FPS : %d", m_FrameCount);
-
-
-        m_FrameCount = 0;
-        PrevCount = CurCount;
-    }
-
 }
 
 void CEngine::CreateGDIObject()
 {
     // Pen
-    m_Pen[(UINT)PEN_TYPE::RED]      = CreatePen(PS_SOLID, 1, RGB(255, 0, 0));
-    m_Pen[(UINT)PEN_TYPE::GREEN]    = CreatePen(PS_SOLID, 1, RGB(0, 255, 0));
-    m_Pen[(UINT)PEN_TYPE::BLUE]     = CreatePen(PS_SOLID, 1, RGB(0, 0, 255));
+    m_Pen[(UINT)PEN_TYPE::RED] = CreatePen(PS_SOLID, 1, RGB(255, 0, 0));
+    m_Pen[(UINT)PEN_TYPE::GREEN] = CreatePen(PS_SOLID, 1, RGB(0, 255, 0));
+    m_Pen[(UINT)PEN_TYPE::BLUE] = CreatePen(PS_SOLID, 1, RGB(0, 0, 255));
 
     // Brush
-    m_Brush[(UINT)BRUSH_TYPE::RED]      = CreateSolidBrush(RGB(255, 0, 0));
-    m_Brush[(UINT)BRUSH_TYPE::GREEN]    = CreateSolidBrush(RGB(0, 255, 0));
-    m_Brush[(UINT)BRUSH_TYPE::BLUE]     = CreateSolidBrush(RGB(0, 0, 255));
+    m_Brush[(UINT)BRUSH_TYPE::RED] = CreateSolidBrush(RGB(255, 0, 0));
+    m_Brush[(UINT)BRUSH_TYPE::GREEN] = CreateSolidBrush(RGB(0, 255, 0));
+    m_Brush[(UINT)BRUSH_TYPE::BLUE] = CreateSolidBrush(RGB(0, 0, 255));
+}
+
+
+void CEngine::Progress()
+{
+    // Manager Tick
+    CTimeMgr::GetInst()->Tick();
+
+
+    m_Object->Tick();
+    m_Object->Render();
 }

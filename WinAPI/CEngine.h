@@ -1,5 +1,7 @@
 #pragma once
 
+class CObj;
+
 
 // 프로그램의 최상위 관리자
 class CEngine
@@ -15,6 +17,9 @@ private:
 
 	HPEN		m_Pen[(UINT)PEN_TYPE::END];
 	HBRUSH		m_Brush[(UINT)BRUSH_TYPE::END];
+
+	CObj*		m_Object;
+
 
 public:
 	HWND GetMainWndHwnd() { return m_hWnd; }
