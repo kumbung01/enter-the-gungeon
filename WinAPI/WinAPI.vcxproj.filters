@@ -35,13 +35,19 @@
       <Filter>Game\Module</Filter>
     </ClInclude>
     <ClInclude Include="CObj.h">
-      <Filter>Game\04. Object</Filter>
+      <Filter>Game\05. Object</Filter>
     </ClInclude>
     <ClInclude Include="struct.h">
       <Filter>Game\01. Header</Filter>
     </ClInclude>
     <ClInclude Include="CTimeMgr.h">
       <Filter>Game\03. Manager\01. Time</Filter>
+    </ClInclude>
+    <ClInclude Include="CKeyMgr.h">
+      <Filter>Game\03. Manager\02. Key</Filter>
+    </ClInclude>
+    <ClInclude Include="CLevel.h">
+      <Filter>Game\04. Level</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -67,10 +73,16 @@
       <Filter>Game\Module</Filter>
     </ClCompile>
     <ClCompile Include="CObj.cpp">
-      <Filter>Game\04. Object</Filter>
+      <Filter>Game\05. Object</Filter>
     </ClCompile>
     <ClCompile Include="CTimeMgr.cpp">
       <Filter>Game\03. Manager\01. Time</Filter>
+    </ClCompile>
+    <ClCompile Include="CKeyMgr.cpp">
+      <Filter>Game\03. Manager\02. Key</Filter>
+    </ClCompile>
+    <ClCompile Include="CLevel.cpp">
+      <Filter>Game\04. Level</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -89,14 +101,20 @@
     <Filter Include="Game\Module">
       <UniqueIdentifier>{8cd93ad2-534b-4036-a84d-1c6d23b2640a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game\04. Object">
-      <UniqueIdentifier>{e17a9ac2-65f5-4902-bc17-ae5bdfe85ee0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Game\03. Manager">
       <UniqueIdentifier>{b7b55327-4974-4122-bffe-ad4a3c70087e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Game\03. Manager\01. Time">
       <UniqueIdentifier>{a8bf3e2b-60e2-47e4-9d3f-7fa43d33aea2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\03. Manager\02. Key">
+      <UniqueIdentifier>{3c28a35e-c8da-4ae9-a0a7-1ecb2f1e7c8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\05. Object">
+      <UniqueIdentifier>{e17a9ac2-65f5-4902-bc17-ae5bdfe85ee0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\04. Level">
+      <UniqueIdentifier>{f4e876d7-2309-4b05-8f71-ca3e8b6f1452}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

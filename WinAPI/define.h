@@ -18,3 +18,10 @@
 #define SELECT_BRUSH(Brush) CSelectGDI SelectBrush(CEngine::GetInst()->GetMainDC(), CEngine::GetInst()->GetBrush(Brush));
 
 #define DT CTimeMgr::GetInst()->GetDeltaTime()
+
+#define KEY_CHECK(key, state) (CKeyMgr::GetInst()->GetKeyState(key) == state)
+
+#define KEY_NONE(key) KEY_CHECK(key, KEY_STATE::NONE)
+#define KEY_TAP(key) KEY_CHECK(key, KEY_STATE::TAP)
+#define KEY_PRESSED(key) KEY_CHECK(key, KEY_STATE::PRESSED)
+#define KEY_RELEASED(key) KEY_CHECK(key, KEY_STATE::RELEASED)

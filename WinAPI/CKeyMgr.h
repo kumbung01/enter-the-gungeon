@@ -39,6 +39,8 @@ class CKeyMgr
 private:
 	vector<KeyInfo>		m_vecKeyInfo;
 
+public:
+	KEY_STATE GetKeyState(KEY _key) { return m_vecKeyInfo[_key].State; }
 
 public:
 	void Init();

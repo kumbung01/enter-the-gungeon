@@ -3,6 +3,7 @@
 
 #include "CEngine.h"
 #include "CTimeMgr.h"
+#include "CKeyMgr.h"
 
 CObj::CObj()
 	: m_Pos{}
@@ -14,20 +15,39 @@ CObj::~CObj()
 {
 }
 
+void CObj::Begin()
+{
+}
+
 void CObj::Tick()
 {
 	// GetAsynkKeyState 의 반환값이 0x0001 : 함수 호출시점에는 안눌려있고, 그전까지는 눌린적이 있다.
 	//						       0x8000 : 함수 호출시점에 눌려있고, 이전에는 안눌렸었다.
-	if (GetAsyncKeyState(VK_RIGHT) & 0x8001)
-	{
-		float Speed = 200.f;
-		m_Pos.x += Speed * DT;
-	}
+	//if (GetAsyncKeyState(VK_RIGHT) & 0x8001)
+	//{
+	//	float Speed = 200.f;
+	//	m_Pos.x += Speed * DT;
+	//}
 
-	if (GetAsyncKeyState(VK_RIGHT) & 0x8001)
-	{
+	//if (CKeyMgr::GetInst()->GetKeyState(KEY::RIGHT) == RELEASED)
+	//{
+	//	float Speed = 200.f;
+	//	m_Pos.x += 100;
+	//}
 
+	/*if (KEY_CHECK(RIGHT, TAP))
+	{		
+		m_Pos.x += 100;
+	}*/
+
+	if (KEY_PRESSED(RIGHT))
+	{
+		m_Pos.x += 100 * DT;
 	}
+}
+
+void CObj::FinalTick()
+{
 }
 
 void CObj::Render()

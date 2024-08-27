@@ -9,7 +9,9 @@ private:
     Vec2   m_Scale;
 
 public:
+    void Begin();       // 레벨 시작할 때
     void Tick();        // 오브젝트가 할 일
+    void FinalTick();   // 오브젝트가 소유한 Component 가 할 일
     void Render();      // 오브젝트를 그리기
 
 public:

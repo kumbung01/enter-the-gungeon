@@ -5,6 +5,7 @@
 #include "CKeyMgr.h"
 
 #include "CSelectGDI.h"
+#include "CLevel.h"
 #include "CObj.h"
 
 
@@ -13,7 +14,7 @@ CEngine::CEngine()
     , m_hWnd(nullptr)
     , m_Resolution{}
     , m_FrameCount(0)
-    , m_Object(nullptr)
+    , m_Level(nullptr)
 {
    
 }
@@ -65,12 +66,26 @@ int CEngine::Init(HINSTANCE _hInst, POINT _Resolution)
     CKeyMgr::GetInst()->Init();
 
 
+    // 레벨 1개 생성하기
+    m_Level = new CLevel;
 
     // 오브젝트 1개 생성해보기
-    m_Object = new CObj;
-    m_Object->SetPos( m_Resolution.x / 2.f, m_Resolution.y / 2.f);
-    m_Object->SetScale(50.f, 50.f);
+    CObj* pObject = new CObj;
+    pObject->SetPos( m_Resolution.x / 2.f, m_Resolution.y / 2.f);
+    pObject->SetScale(50.f, 50.f);
 
+    // 오브젝트를 레벨에 넣기
+    m_Level->AddObject(pObject);
+
+    // 오브젝트 1개 더 만들기
+    pObject = new CObj;
+    pObject->SetPos(100.f, m_Resolution.y / 2.f);
+    pObject->SetScale(100.f, 100.f);
+    m_Level->AddObject(pObject);
+
+
+    // 레벨 시작
+    m_Level->Begin();
 
     return S_OK;
 }
@@ -95,9 +110,7 @@ void CEngine::Progress()
     CTimeMgr::GetInst()->Tick();
     CKeyMgr::GetInst()->Tick();
 
-    m_Object->Tick();
-    m_Object->Render();
-
-
-
+    m_Level->Tick();
+    m_Level->FinalTick();
+    m_Level->Render();
 }

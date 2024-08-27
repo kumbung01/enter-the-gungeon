@@ -133,6 +133,8 @@
   <ItemGroup>
     <ClInclude Include="CBase.h" />
     <ClInclude Include="CEngine.h" />
+    <ClInclude Include="CKeyMgr.h" />
+    <ClInclude Include="CLevel.h" />
     <ClInclude Include="CObj.h" />
     <ClInclude Include="CSelectGDI.h" />
     <ClInclude Include="CTimeMgr.h" />
@@ -149,6 +151,8 @@
   <ItemGroup>
     <ClCompile Include="CBase.cpp" />
     <ClCompile Include="CEngine.cpp" />
+    <ClCompile Include="CKeyMgr.cpp" />
+    <ClCompile Include="CLevel.cpp" />
     <ClCompile Include="CObj.cpp" />
     <ClCompile Include="CSelectGDI.cpp" />
     <ClCompile Include="CTimeMgr.cpp" />
