@@ -2,6 +2,7 @@
 #include "CEngine.h"
 
 #include "CTimeMgr.h"
+#include "CKeyMgr.h"
 
 #include "CSelectGDI.h"
 #include "CObj.h"
@@ -59,8 +60,10 @@ int CEngine::Init(HINSTANCE _hInst, POINT _Resolution)
     // GDIObject 생성
     CreateGDIObject();    
   
-    // Manater 생성 및 초기화
+    // Manager 생성 및 초기화
     CTimeMgr::GetInst()->Init();
+    CKeyMgr::GetInst()->Init();
+
 
 
     // 오브젝트 1개 생성해보기
@@ -90,8 +93,11 @@ void CEngine::Progress()
 {
     // Manager Tick
     CTimeMgr::GetInst()->Tick();
-
+    CKeyMgr::GetInst()->Tick();
 
     m_Object->Tick();
     m_Object->Render();
+
+
+
 }

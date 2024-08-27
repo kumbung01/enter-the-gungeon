@@ -3,20 +3,6 @@
 #include "WinAPI.h"
 #include "CEngine.h"
 
-struct MyType
-{
-    float f1;
-    float f2;
-};
-
-union MyUnion
-{
-    float f1;
-    float f2;
-};
-
-
-
 HINSTANCE g_hInst = nullptr;
 
 // 전역 변수
@@ -29,23 +15,6 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
                     , LPWSTR lpCmdLine
                     , int   nCmdShow)
 {
-    int size = 0;
-
-    size = sizeof(MyType);
-    size = sizeof(MyUnion);
-
-    MyType type;
-    type.f1 = 10.f;
-    type.f2 = 0.f;
-
-    MyUnion uni = {};
-    uni.f1 = 10.f;
-
-
-
-
-
-
     g_hInst = hInstance; // 프로세스 시작 주소
 
     WNDCLASSEXW wcex = {};
