@@ -14,6 +14,7 @@ enum class BRUSH_TYPE
 	RED,
 	GREEN,
 	BLUE,
+	GRAY,
 	HOLLOW,
 	END,
 };

@@ -12,5 +12,8 @@ private:
 public:
 	void Init();
 	void Progress();
+
+public:
+	void Render();
 };
 

@@ -49,6 +49,10 @@ void CLevelMgr::Progress()
         return;
 
     m_CurLevel->Tick();
-    m_CurLevel->FinalTick();
+    m_CurLevel->FinalTick();   
+}
+
+void CLevelMgr::Render()
+{
     m_CurLevel->Render();
 }

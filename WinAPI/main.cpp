@@ -22,23 +22,23 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
 
     WNDCLASSEXW wcex = {};
 
-    wcex.cbSize = sizeof(WNDCLASSEX);
-    wcex.style = CS_HREDRAW | CS_VREDRAW;
-    wcex.lpfnWndProc = &WndProc;
-    wcex.cbClsExtra = 0;
-    wcex.cbWndExtra = 0;
-    wcex.hInstance = hInstance;
-    wcex.hIcon = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_WINAPI));
-    wcex.hCursor = LoadCursor(nullptr, IDC_ARROW);
-    wcex.hbrBackground = (HBRUSH)(COLOR_WINDOW + 1);
-    wcex.lpszMenuName = MAKEINTRESOURCEW(IDC_WINAPI);
-    wcex.lpszClassName = L"Key";
-    wcex.hIconSm = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
+    wcex.cbSize         = sizeof(WNDCLASSEX);
+    wcex.style          = CS_HREDRAW | CS_VREDRAW;
+    wcex.lpfnWndProc    = &WndProc;
+    wcex.cbClsExtra     = 0;
+    wcex.cbWndExtra     = 0;
+    wcex.hInstance      = hInstance;
+    wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_WINAPI));
+    wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW);
+    wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW + 1);
+    wcex.lpszMenuName   = nullptr;//MAKEINTRESOURCEW(IDC_WINAPI);
+    wcex.lpszClassName  = L"Key";
+    wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
 
     RegisterClassExW(&wcex);
 
     // Engine 초기화
-    if (FAILED(CEngine::GetInst()->Init(g_hInst, POINT{ 1000, 600 })))
+    if (FAILED(CEngine::GetInst()->Init(g_hInst, POINT{ 1280, 768 })))
         return FALSE;
 
 
@@ -110,8 +110,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
         int a = 0;
     }
         break;
+    case WM_SIZE:
 
-   
+        break;           
+
+    case WM_SIZING:
+
         break;
     case WM_DESTROY:
         PostQuitMessage(0);
