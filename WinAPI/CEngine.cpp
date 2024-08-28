@@ -3,18 +3,15 @@
 
 #include "CTimeMgr.h"
 #include "CKeyMgr.h"
+#include "CLevelMgr.h"
 
 #include "CSelectGDI.h"
-#include "CLevel.h"
-#include "CObj.h"
-
 
 CEngine::CEngine()
     : m_hInst(nullptr)
     , m_hWnd(nullptr)
     , m_Resolution{}
-    , m_FrameCount(0)
-    , m_Level(nullptr)
+    , m_FrameCount(0)   
 {
    
 }
@@ -36,6 +33,7 @@ CEngine::~CEngine()
     }
 }
 
+
 int CEngine::Init(HINSTANCE _hInst, POINT _Resolution)
 {
     m_hInst = _hInst;
@@ -52,8 +50,8 @@ int CEngine::Init(HINSTANCE _hInst, POINT _Resolution)
     ShowWindow(m_hWnd, true);
     UpdateWindow(m_hWnd);
 
-    // 윈도우 크기 설정, 위치 설정
-    SetWindowPos(m_hWnd, nullptr, 10, 10, m_Resolution.x, m_Resolution.y, 0);
+    // 윈도우 크기를 해상도에 맞게 설정
+    ChangeWindowSize(m_Resolution);
 
     // DC 생성   
     m_hDC = GetDC(m_hWnd);
@@ -64,28 +62,7 @@ int CEngine::Init(HINSTANCE _hInst, POINT _Resolution)
     // Manager 생성 및 초기화
     CTimeMgr::GetInst()->Init();
     CKeyMgr::GetInst()->Init();
-
-
-    // 레벨 1개 생성하기
-    m_Level = new CLevel;
-
-    // 오브젝트 1개 생성해보기
-    CObj* pObject = new CObj;
-    pObject->SetPos( m_Resolution.x / 2.f, m_Resolution.y / 2.f);
-    pObject->SetScale(50.f, 50.f);
-
-    // 오브젝트를 레벨에 넣기
-    m_Level->AddObject(pObject);
-
-    // 오브젝트 1개 더 만들기
-    pObject = new CObj;
-    pObject->SetPos(100.f, m_Resolution.y / 2.f);
-    pObject->SetScale(100.f, 100.f);
-    m_Level->AddObject(pObject);
-
-
-    // 레벨 시작
-    m_Level->Begin();
+    CLevelMgr::GetInst()->Init();
 
     return S_OK;
 }
@@ -110,7 +87,17 @@ void CEngine::Progress()
     CTimeMgr::GetInst()->Tick();
     CKeyMgr::GetInst()->Tick();
 
-    m_Level->Tick();
-    m_Level->FinalTick();
-    m_Level->Render();
+    // 레벨 실행
+    CLevelMgr::GetInst()->Progress();
+}
+
+
+void CEngine::ChangeWindowSize(Vec2 _vResolution)
+{
+    m_Resolution = _vResolution;   
+
+    RECT rt = { 0, 0, m_Resolution.x, m_Resolution.y };    
+    AdjustWindowRect(&rt, WS_OVERLAPPEDWINDOW, true);
+
+    SetWindowPos(m_hWnd, nullptr, 10, 10, m_Resolution.x, m_Resolution.y, 0);
 }

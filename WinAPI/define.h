@@ -25,3 +25,5 @@
 #define KEY_TAP(key) KEY_CHECK(key, KEY_STATE::TAP)
 #define KEY_PRESSED(key) KEY_CHECK(key, KEY_STATE::PRESSED)
 #define KEY_RELEASED(key) KEY_CHECK(key, KEY_STATE::RELEASED)
+
+#define DELETE(p) if(p != nullptr) {delete p; p = nullptr;}

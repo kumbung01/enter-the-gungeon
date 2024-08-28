@@ -135,12 +135,14 @@
     <ClInclude Include="CEngine.h" />
     <ClInclude Include="CKeyMgr.h" />
     <ClInclude Include="CLevel.h" />
+    <ClInclude Include="CLevelMgr.h" />
     <ClInclude Include="CObj.h" />
     <ClInclude Include="CSelectGDI.h" />
     <ClInclude Include="CTimeMgr.h" />
     <ClInclude Include="define.h" />
     <ClInclude Include="enum.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="func_template.h" />
     <ClInclude Include="global.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
@@ -153,6 +155,7 @@
     <ClCompile Include="CEngine.cpp" />
     <ClCompile Include="CKeyMgr.cpp" />
     <ClCompile Include="CLevel.cpp" />
+    <ClCompile Include="CLevelMgr.cpp" />
     <ClCompile Include="CObj.cpp" />
     <ClCompile Include="CSelectGDI.cpp" />
     <ClCompile Include="CTimeMgr.cpp" />

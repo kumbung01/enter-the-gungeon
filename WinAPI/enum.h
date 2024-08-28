@@ -17,3 +17,14 @@ enum class BRUSH_TYPE
 	HOLLOW,
 	END,
 };
+
+enum class LEVEL_TYPE
+{
+	START,
+	STAGE_0,
+	STATE_1,
+	STATE_2,
+	EDITOR,
+
+	END,
+};

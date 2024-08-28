@@ -9,6 +9,7 @@ CLevel::CLevel()
 
 CLevel::~CLevel()
 {
+	Delete_Vector(m_vecObjects);
 }
 
 void CLevel::Begin()

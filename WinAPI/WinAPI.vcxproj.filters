@@ -49,6 +49,12 @@
     <ClInclude Include="CLevel.h">
       <Filter>Game\04. Level</Filter>
     </ClInclude>
+    <ClInclude Include="CLevelMgr.h">
+      <Filter>Game\03. Manager\03. Level</Filter>
+    </ClInclude>
+    <ClInclude Include="func_template.h">
+      <Filter>Game\01. Header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -84,6 +90,9 @@
     <ClCompile Include="CLevel.cpp">
       <Filter>Game\04. Level</Filter>
     </ClCompile>
+    <ClCompile Include="CLevelMgr.cpp">
+      <Filter>Game\03. Manager\03. Level</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">
@@ -115,6 +124,9 @@
     </Filter>
     <Filter Include="Game\04. Level">
       <UniqueIdentifier>{f4e876d7-2309-4b05-8f71-ca3e8b6f1452}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\03. Manager\03. Level">
+      <UniqueIdentifier>{0c73f03c-dce6-4fbb-9e21-1574f8b9284d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

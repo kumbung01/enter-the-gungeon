@@ -15,6 +15,9 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
                     , LPWSTR lpCmdLine
                     , int   nCmdShow)
 {
+    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+    //_CrtSetBreakAlloc(18);
+
     g_hInst = hInstance; // 프로세스 시작 주소
 
     WNDCLASSEXW wcex = {};
@@ -35,7 +38,7 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
     RegisterClassExW(&wcex);
 
     // Engine 초기화
-    if (FAILED(CEngine::GetInst()->Init(g_hInst, POINT{ 1280, 768 })))
+    if (FAILED(CEngine::GetInst()->Init(g_hInst, POINT{ 1000, 600 })))
         return FALSE;
 
 
