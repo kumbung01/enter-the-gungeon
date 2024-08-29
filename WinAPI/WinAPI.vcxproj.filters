@@ -55,6 +55,12 @@
     <ClInclude Include="func_template.h">
       <Filter>Game\01. Header</Filter>
     </ClInclude>
+    <ClInclude Include="CPlayer.h">
+      <Filter>Game\05. Object\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CMonster.h">
+      <Filter>Game\05. Object\Monster</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -93,6 +99,12 @@
     <ClCompile Include="CLevelMgr.cpp">
       <Filter>Game\03. Manager\03. Level</Filter>
     </ClCompile>
+    <ClCompile Include="CPlayer.cpp">
+      <Filter>Game\05. Object\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CMonster.cpp">
+      <Filter>Game\05. Object\Monster</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">
@@ -127,6 +139,12 @@
     </Filter>
     <Filter Include="Game\03. Manager\03. Level">
       <UniqueIdentifier>{0c73f03c-dce6-4fbb-9e21-1574f8b9284d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\05. Object\Player">
+      <UniqueIdentifier>{3f8bcf77-e85c-4ad7-8601-68d1fde18162}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\05. Object\Monster">
+      <UniqueIdentifier>{5baa8d0a-8169-4616-b03d-b5301d8226eb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

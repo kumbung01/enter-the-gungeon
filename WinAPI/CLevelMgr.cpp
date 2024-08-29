@@ -3,7 +3,8 @@
 #include "CLevel.h"
 #include "CEngine.h"
 
-#include "CObj.h"
+#include "CPlayer.h"
+#include "CMonster.h"
 
 
 CLevelMgr::CLevelMgr()
@@ -20,22 +21,24 @@ CLevelMgr::~CLevelMgr()
 
 void CLevelMgr::Init()
 {
+    Vec2 vResolution = CEngine::GetInst()->GetResolution();
+
 	// 레벨 제작       
     CLevel* pLevel = new CLevel;
 
-    // 오브젝트 1개 생성해보기
-    Vec2 vResolution = CEngine::GetInst()->GetResolution();
-
-    CObj* pObject = new CObj;
+    // Player 생성
+    CObj* pObject = new CPlayer;
     pObject->SetPos(vResolution.x / 2.f, vResolution.y / 2.f);
     pObject->SetScale(50.f, 50.f);    
     pLevel->AddObject(pObject);
 
-    // 오브젝트 1개 더 만들기
-    pObject = new CObj;
-    pObject->SetPos(500.f, 500.f);
-    pObject->SetScale(200.f, 200.f);
-    pLevel->AddObject(pObject);
+    // Monster 생성
+    CObj* pMonster = new CMonster;
+    pMonster->SetPos(600.f, 300.f);
+    pMonster->SetScale(100.f, 100.f);
+    pLevel->AddObject(pMonster);
+
+
 
     // 생성한 레벨을 START 레벨 이자 현재 재생 중인 레벨로 설정하고
     // Begin 을 호출한다.

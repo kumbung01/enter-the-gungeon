@@ -11,7 +11,8 @@ CEngine::CEngine()
     : m_hInst(nullptr)
     , m_hWnd(nullptr)
     , m_Resolution{}
-    , m_FrameCount(0)   
+    , m_hSecondDC(nullptr)
+    , m_hSecondBitmap(nullptr)
 {
    
 }
@@ -20,6 +21,11 @@ CEngine::~CEngine()
 {
     // DC 해제
     ReleaseDC(m_hWnd, m_hDC);
+
+    // SecondBuffer 관련 메모리 해제
+    DeleteDC(m_hSecondDC);
+    DeleteObject(m_hSecondBitmap);
+
 
     // Pen 과 Brush 해제
     for (UINT i = 0; i < (UINT)PEN_TYPE::END; ++i)
@@ -65,6 +71,8 @@ int CEngine::Init(HINSTANCE _hInst, POINT _Resolution)
     CLevelMgr::GetInst()->Init();
 
     // 더블버퍼링을 위한 추가버퍼 생성
+    CreateSecondBuffer();
+
 
     return S_OK;
 }
@@ -84,6 +92,7 @@ void CEngine::CreateGDIObject()
 }
 
 
+
 void CEngine::Progress()
 {
     // Manager Tick
@@ -94,21 +103,16 @@ void CEngine::Progress()
     CLevelMgr::GetInst()->Progress();
 
     // 렌더링
-    // 화면 Clear
-    /* for (UINT Row = 0; Row < (UINT)m_Resolution.y; ++Row)
-    {
-        for (UINT Col = 0; Col < (UINT)m_Resolution.x; ++Col)
-        {
-            SetPixel(m_hDC, Col, Row, RGB(255, 0, 0));
-        }
-    }*/
-
+    // 화면 클리어
     {
         SELECT_BRUSH(BRUSH_TYPE::GRAY);
-        Rectangle(m_hDC, -1, -1, (int)m_Resolution.x + 1, (int)m_Resolution.y + 1);
+        Rectangle(m_hSecondDC, -1, -1, (int)m_Resolution.x + 1, (int)m_Resolution.y + 1);
     }
 
     CLevelMgr::GetInst()->Render();
+
+    // SecondBitmap 있는 장면을 MainWindowBitmap 으로 복사해온다.
+    BitBlt(m_hDC, 0, 0, (int)m_Resolution.x, (int)m_Resolution.y, m_hSecondDC, 0, 0, SRCCOPY);
 }
 
 
@@ -124,4 +128,19 @@ void CEngine::ChangeWindowSize(Vec2 _vResolution)
     AdjustWindowRect(&rt, WS_OVERLAPPEDWINDOW, !!hMenu);
 
     SetWindowPos(m_hWnd, nullptr, 0, 0, rt.right - rt.left, rt.bottom - rt.top, 0);
+}
+
+void CEngine::CreateSecondBuffer()
+{
+    // 윈도우 비트맵과 동일한 크기(해상도) 비트맵을 생성
+    m_hSecondBitmap = CreateCompatibleBitmap(m_hDC, (int)m_Resolution.x, (int)m_Resolution.y);
+
+    // DC 생성
+    // Pen : Black
+    // Brush : White
+    // Bitmap : 1 pixel 비트맵
+    m_hSecondDC = CreateCompatibleDC(m_hDC);
+
+    // DC 가 Bitmap 을 렌더타겟으로 지정하고 기존에 가리키던 비트맵을 삭제요청 
+    DeleteObject(SelectObject(m_hSecondDC, m_hSecondBitmap));   
 }
