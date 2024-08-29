@@ -5,6 +5,7 @@
 
 #include "CPlayer.h"
 #include "CMonster.h"
+#include "CMissile.h"
 
 
 CLevelMgr::CLevelMgr()
@@ -33,11 +34,23 @@ void CLevelMgr::Init()
     pLevel->AddObject(pObject);
 
     // Monster 생성
-    CObj* pMonster = new CMonster;
+    CMonster* pMonster = new CMonster;
     pMonster->SetPos(600.f, 300.f);
     pMonster->SetScale(100.f, 100.f);
+
+    pMonster->SetDistance(200.f);
+    pMonster->SetSpeed(300.f);
+
     pLevel->AddObject(pMonster);
 
+
+    //// Missile 추가
+    //CMissile* pMissile = new CMissile;
+    //pMissile->SetSpeed(500.f);   
+
+    //pMissile->SetPos(vResolution.x / 2.f, vResolution.y / 2.f);
+    //pMissile->SetScale(10.f, 10.f);
+    //pLevel->AddObject(pMissile);
 
 
     // 생성한 레벨을 START 레벨 이자 현재 재생 중인 레벨로 설정하고

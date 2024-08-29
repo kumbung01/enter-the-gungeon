@@ -61,6 +61,9 @@
     <ClInclude Include="CMonster.h">
       <Filter>Game\05. Object\Monster</Filter>
     </ClInclude>
+    <ClInclude Include="CMissile.h">
+      <Filter>Game\05. Object\Missile</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -105,6 +108,9 @@
     <ClCompile Include="CMonster.cpp">
       <Filter>Game\05. Object\Monster</Filter>
     </ClCompile>
+    <ClCompile Include="CMissile.cpp">
+      <Filter>Game\05. Object\Missile</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">
@@ -145,6 +151,9 @@
     </Filter>
     <Filter Include="Game\05. Object\Monster">
       <UniqueIdentifier>{5baa8d0a-8169-4616-b03d-b5301d8226eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\05. Object\Missile">
+      <UniqueIdentifier>{c52c2ac2-980a-4edf-b139-f38195c8f54d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

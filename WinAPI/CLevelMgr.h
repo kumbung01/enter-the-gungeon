@@ -10,6 +10,10 @@ private:
 	CLevel*		m_CurLevel;							// 현재 재생중인 레벨
 
 public:
+	CLevel* GetCurrentLevel() { return m_CurLevel; }
+
+
+public:
 	void Init();
 	void Progress();
 

@@ -27,3 +27,5 @@
 #define KEY_RELEASED(key) KEY_CHECK(key, KEY_STATE::RELEASED)
 
 #define DELETE(p) if(p != nullptr) {delete p; p = nullptr;}
+
+#define PI 3.1515926535f

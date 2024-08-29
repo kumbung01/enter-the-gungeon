@@ -7,6 +7,14 @@ public:
 	float y;
 
 public:
+	Vec2 operator + (Vec2 _Other)
+	{
+		return Vec2(x + _Other.x, y + _Other.y);
+	}
+
+
+
+public:
 	Vec2()
 		: x(0.f)
 		, y(0.f)
