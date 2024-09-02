@@ -55,13 +55,8 @@ void CPlayer::Tick()
 			{
 				CMissile* pMissile = new CMissile;
 				pMissile->SetPos(vPos + Vec2(-20.f + i * 20.f, -GetScale().y / 2.f));
-				pMissile->SetScale(20.f, 20.f);
-				
-				tTask task = {};
-				task.Type = TASK_TYPE::CREATE_OBJECT;
-				task.Param0 = (DWORD_PTR)pMissile;
-
-				CTaskMgr::GetInst()->AddTask(task);
+				pMissile->SetScale(20.f, 20.f);				
+				CreateObject(pMissile, LAYER_TYPE::PLAYER_OBJECT);
 			}
 		}
 	}

@@ -4,7 +4,7 @@
 #include "CTimeMgr.h"
 #include "CKeyMgr.h"
 #include "CLevelMgr.h"
-
+#include "CTaskMgr.h"
 #include "CSelectGDI.h"
 
 CEngine::CEngine()
@@ -113,6 +113,10 @@ void CEngine::Progress()
 
     // SecondBitmap 있는 장면을 MainWindowBitmap 으로 복사해온다.
     BitBlt(m_hDC, 0, 0, (int)m_Resolution.x, (int)m_Resolution.y, m_hSecondDC, 0, 0, SRCCOPY);
+
+
+    // TaskMgr 동작
+    CTaskMgr::GetInst()->Tick();
 }
 
 

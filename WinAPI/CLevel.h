@@ -7,7 +7,7 @@ class CLevel :
     public CBase
 {
 private:
-    vector<CObj*>   m_vecObjects;
+    vector<CObj*>   m_vecObjects[(UINT)LAYER_TYPE::END];
 
 public:
     // 시점함수 
@@ -21,7 +21,7 @@ public:
     void Render();    
 
 public:
-    void AddObject(CObj* _Object) { m_vecObjects.push_back(_Object); }
+    void AddObject(CObj* _Object, LAYER_TYPE _Type) { m_vecObjects[(UINT)_Type].push_back(_Object); }
 
 public:
     CLevel();

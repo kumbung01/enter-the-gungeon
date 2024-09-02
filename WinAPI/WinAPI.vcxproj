@@ -141,10 +141,12 @@
     <ClInclude Include="CObj.h" />
     <ClInclude Include="CPlayer.h" />
     <ClInclude Include="CSelectGDI.h" />
+    <ClInclude Include="CTaskMgr.h" />
     <ClInclude Include="CTimeMgr.h" />
     <ClInclude Include="define.h" />
     <ClInclude Include="enum.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="func.h" />
     <ClInclude Include="func_template.h" />
     <ClInclude Include="global.h" />
     <ClInclude Include="pch.h" />
@@ -164,7 +166,9 @@
     <ClCompile Include="CObj.cpp" />
     <ClCompile Include="CPlayer.cpp" />
     <ClCompile Include="CSelectGDI.cpp" />
+    <ClCompile Include="CTaskMgr.cpp" />
     <ClCompile Include="CTimeMgr.cpp" />
+    <ClCompile Include="func.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

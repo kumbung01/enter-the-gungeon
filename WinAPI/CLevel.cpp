@@ -9,37 +9,52 @@ CLevel::CLevel()
 
 CLevel::~CLevel()
 {
-	Delete_Vector(m_vecObjects);
+	for (UINT i = 0; i < (UINT)LAYER_TYPE::END; ++i)
+	{
+		Delete_Vector(m_vecObjects[i]);
+	}
 }
 
 void CLevel::Begin()
 {
-	for (size_t i = 0; i < m_vecObjects.size(); ++i)
+	for (UINT i = 0; i < (UINT)LAYER_TYPE::END; ++i)
 	{
-		m_vecObjects[i]->Begin();
+		for (size_t j = 0; j < m_vecObjects[i].size(); ++j)
+		{
+			m_vecObjects[i][j]->Begin();
+		}
 	}	
 }
 
 void CLevel::Tick()
 {
-	for (size_t i = 0; i < m_vecObjects.size(); ++i)
+	for (UINT i = 0; i < (UINT)LAYER_TYPE::END; ++i)
 	{
-		m_vecObjects[i]->Tick();
+		for (size_t j = 0; j < m_vecObjects[i].size(); ++j)
+		{
+			m_vecObjects[i][j]->Tick();
+		}
 	}
 }
 
 void CLevel::FinalTick()
 {
-	for (size_t i = 0; i < m_vecObjects.size(); ++i)
+	for (UINT i = 0; i < (UINT)LAYER_TYPE::END; ++i)
 	{
-		m_vecObjects[i]->FinalTick();
+		for (size_t j = 0; j < m_vecObjects[i].size(); ++j)
+		{
+			m_vecObjects[i][j]->FinalTick();
+		}
 	}
 }
 
 void CLevel::Render()
 {
-	for (size_t i = 0; i < m_vecObjects.size(); ++i)
+	for (UINT i = 0; i < (UINT)LAYER_TYPE::END; ++i)
 	{
-		m_vecObjects[i]->Render();
+		for (size_t j = 0; j < m_vecObjects[i].size(); ++j)
+		{
+			m_vecObjects[i][j]->Render();
+		}
 	}
 }

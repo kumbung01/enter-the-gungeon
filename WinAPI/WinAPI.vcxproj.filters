@@ -64,6 +64,12 @@
     <ClInclude Include="CMissile.h">
       <Filter>Game\05. Object\Missile</Filter>
     </ClInclude>
+    <ClInclude Include="CTaskMgr.h">
+      <Filter>Game\03. Manager\04. Task</Filter>
+    </ClInclude>
+    <ClInclude Include="func.h">
+      <Filter>Game\01. Header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -111,6 +117,12 @@
     <ClCompile Include="CMissile.cpp">
       <Filter>Game\05. Object\Missile</Filter>
     </ClCompile>
+    <ClCompile Include="CTaskMgr.cpp">
+      <Filter>Game\03. Manager\04. Task</Filter>
+    </ClCompile>
+    <ClCompile Include="func.cpp">
+      <Filter>Game\01. Header</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">
@@ -154,6 +166,9 @@
     </Filter>
     <Filter Include="Game\05. Object\Missile">
       <UniqueIdentifier>{c52c2ac2-980a-4edf-b139-f38195c8f54d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\03. Manager\04. Task">
+      <UniqueIdentifier>{35478a27-922c-415a-906d-7a04b2ca258a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

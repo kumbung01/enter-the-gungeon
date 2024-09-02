@@ -31,7 +31,7 @@ void CLevelMgr::Init()
     CObj* pObject = new CPlayer;
     pObject->SetPos(vResolution.x / 2.f, vResolution.y / 2.f);
     pObject->SetScale(50.f, 50.f);    
-    pLevel->AddObject(pObject);
+    pLevel->AddObject(pObject, LAYER_TYPE::PLAYER);
 
     // Monster 생성
     CMonster* pMonster = new CMonster;
@@ -41,17 +41,7 @@ void CLevelMgr::Init()
     pMonster->SetDistance(200.f);
     pMonster->SetSpeed(300.f);
 
-    pLevel->AddObject(pMonster);
-
-
-    //// Missile 추가
-    //CMissile* pMissile = new CMissile;
-    //pMissile->SetSpeed(500.f);   
-
-    //pMissile->SetPos(vResolution.x / 2.f, vResolution.y / 2.f);
-    //pMissile->SetScale(10.f, 10.f);
-    //pLevel->AddObject(pMissile);
-
+    pLevel->AddObject(pMonster, LAYER_TYPE::MONSTER);
 
     // 생성한 레벨을 START 레벨 이자 현재 재생 중인 레벨로 설정하고
     // Begin 을 호출한다.
