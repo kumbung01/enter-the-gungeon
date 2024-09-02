@@ -3,6 +3,7 @@
 
 #include "CTimeMgr.h"
 #include "CKeyMgr.h"
+#include "CTaskMgr.h"
 
 #include "CMissile.h"
 #include "CLevelMgr.h"
@@ -49,19 +50,18 @@ void CPlayer::Tick()
 		{
 			m_AccTime -= 1.f / m_AttSpeed;
 
-
-			// 현재 레벨을 가져옴
-			CLevel* pCurLevel = CLevelMgr::GetInst()->GetCurrentLevel();
-
 			// 미사일 생성
 			for (int i = 0; i < 3; ++i)
 			{
 				CMissile* pMissile = new CMissile;
 				pMissile->SetPos(vPos + Vec2(-20.f + i * 20.f, -GetScale().y / 2.f));
 				pMissile->SetScale(20.f, 20.f);
+				
+				tTask task = {};
+				task.Type = TASK_TYPE::CREATE_OBJECT;
+				task.Param0 = (DWORD_PTR)pMissile;
 
-				// 레벨에 추가
-				pCurLevel->AddObject(pMissile);
+				CTaskMgr::GetInst()->AddTask(task);
 			}
 		}
 	}

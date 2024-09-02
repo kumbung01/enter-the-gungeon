@@ -3,6 +3,18 @@
 #include "WinAPI.h"
 #include "CEngine.h"
 
+#define AAA 
+
+#ifdef AAA
+typedef int MYINT;
+#else
+typedef short MYINT;
+#endif
+
+
+
+
+
 HINSTANCE g_hInst = nullptr;
 
 // 전역 변수
@@ -14,7 +26,7 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
                     , HINSTANCE hPrevInstance // 안쓰이는 인자
                     , LPWSTR lpCmdLine
                     , int   nCmdShow)
-{
+{    
     _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
     //_CrtSetBreakAlloc(18);
 
@@ -67,7 +79,7 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
         // 메세지큐에 메세지가 없다.
         else
         {          
-            // 게임 실행
+            // 게임 실행, 1 프레임
             CEngine::GetInst()->Progress();
         }              
     }

@@ -6,13 +6,16 @@
 
 CMissile::CMissile()
 	: m_Speed(500.f)
-	, m_Angle(PI / 2.f)
+	, m_Angle(PI / 4.f)
 {
 }
 
 CMissile::~CMissile()
 {
 }
+
+
+
 
 void CMissile::Tick()
 {
@@ -21,6 +24,7 @@ void CMissile::Tick()
 	//vPos.y -= DT * m_Speed;
 	vPos.x += cosf(m_Angle) * m_Speed * DT;
 	vPos.y -= sinf(m_Angle) * m_Speed * DT;
+	
 
 	SetPos(vPos);
 }

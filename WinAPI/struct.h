@@ -41,3 +41,11 @@ public:
 
 
 };
+
+
+struct tTask
+{
+	TASK_TYPE	Type;
+	DWORD_PTR	Param0;
+	DWORD_PTR	Param1;
+};

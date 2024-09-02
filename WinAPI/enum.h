@@ -29,3 +29,11 @@ enum class LEVEL_TYPE
 
 	END,
 };
+
+
+enum class TASK_TYPE
+{
+	CREATE_OBJECT,
+	DELETE_OBJECT,
+	CHANGE_LEVEL,
+};
