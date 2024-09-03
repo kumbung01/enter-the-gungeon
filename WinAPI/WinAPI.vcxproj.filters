@@ -70,6 +70,12 @@
     <ClInclude Include="func.h">
       <Filter>Game\01. Header</Filter>
     </ClInclude>
+    <ClInclude Include="CComponent.h">
+      <Filter>Game\06. Component</Filter>
+    </ClInclude>
+    <ClInclude Include="CCollider.h">
+      <Filter>Game\06. Component\01. Collider</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -123,6 +129,12 @@
     <ClCompile Include="func.cpp">
       <Filter>Game\01. Header</Filter>
     </ClCompile>
+    <ClCompile Include="CComponent.cpp">
+      <Filter>Game\06. Component</Filter>
+    </ClCompile>
+    <ClCompile Include="CCollider.cpp">
+      <Filter>Game\06. Component\01. Collider</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">
@@ -169,6 +181,12 @@
     </Filter>
     <Filter Include="Game\03. Manager\04. Task">
       <UniqueIdentifier>{35478a27-922c-415a-906d-7a04b2ca258a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\06. Component">
+      <UniqueIdentifier>{cafa2a6d-528b-4b95-8d04-163f96cbfd49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\06. Component\01. Collider">
+      <UniqueIdentifier>{a9c8bfae-691f-4c69-a37d-7f4c69ce73c1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -7,6 +7,8 @@
 #include "CMonster.h"
 #include "CMissile.h"
 
+#include "CCollider.h"
+
 
 CLevelMgr::CLevelMgr()
     : m_arrLevel{}
@@ -29,8 +31,14 @@ void CLevelMgr::Init()
 
     // Player 持失
     CObj* pObject = new CPlayer;
+    pObject->AddComponent(new CCollider);
+
     pObject->SetPos(vResolution.x / 2.f, vResolution.y / 2.f);
     pObject->SetScale(50.f, 50.f);    
+
+
+
+
     pLevel->AddObject(pObject, LAYER_TYPE::PLAYER);
 
     // Monster 持失

@@ -69,3 +69,11 @@ void CPlayer::Tick()
 
 	SetPos(vPos);
 }
+
+void CPlayer::FinalTick()
+{
+	// +A
+
+
+	CObj::FinalTick();	
+}

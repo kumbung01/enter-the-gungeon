@@ -12,7 +12,7 @@ private:
 
 public:     
     virtual void Begin() override;
-    virtual void Tick() override;
+    virtual void Tick() override;    
 
 public:
     CPlayer();
