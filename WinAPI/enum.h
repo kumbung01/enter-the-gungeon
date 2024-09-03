@@ -69,3 +69,11 @@ enum class COMPONENT_TYPE
 	FLIPBOOKCOMPONENT,
 	STATEMACHINE,
 };
+
+
+enum class DEBUG_SHAPE
+{
+	RECT,
+	CIRCLE,
+	LINE,
+};

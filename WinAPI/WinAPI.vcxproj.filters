@@ -76,6 +76,9 @@
     <ClInclude Include="CCollider.h">
       <Filter>Game\06. Component\01. Collider</Filter>
     </ClInclude>
+    <ClInclude Include="CDbgRender.h">
+      <Filter>Game\03. Manager\05. DbgRender</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -135,6 +138,9 @@
     <ClCompile Include="CCollider.cpp">
       <Filter>Game\06. Component\01. Collider</Filter>
     </ClCompile>
+    <ClCompile Include="CDbgRender.cpp">
+      <Filter>Game\03. Manager\05. DbgRender</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">
@@ -187,6 +193,9 @@
     </Filter>
     <Filter Include="Game\06. Component\01. Collider">
       <UniqueIdentifier>{a9c8bfae-691f-4c69-a37d-7f4c69ce73c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\03. Manager\05. DbgRender">
+      <UniqueIdentifier>{bf326e40-09a0-40bf-b2f9-ac433f0d5f4c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

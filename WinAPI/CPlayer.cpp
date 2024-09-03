@@ -9,16 +9,30 @@
 #include "CLevelMgr.h"
 #include "CLevel.h"
 
+#include "CCollider.h"
 
 CPlayer::CPlayer()
 	: m_Speed(200.f)
 	, m_AttSpeed(10.f)
 	, m_AccTime(0.f)
 {
+	// Collider 컴포넌트 추가
+	m_HitBox = new CCollider;
+	m_HitBox->SetName(L"HitBox_01");
+	m_HitBox->SetScale(Vec2(60.f, 60.f));
+	AddComponent(m_HitBox);
+
+	// RTTI(RunTime Type Identification(Infomation) ) -> C++ 의 경우 dynamic_cast 가 있다.
+
+	//CCollider* pC = (CCollider*)GetComponent(L"HitBox_01");
+	//CCollider* pC = (CCollider*)GetComponent(COMPONENT_TYPE::COLLIDER);
+	//CCollider* pC = GetComponent<CCollider>();
+
 }
 
 CPlayer::~CPlayer()
 {
+	
 }
 
 void CPlayer::Begin()
@@ -29,6 +43,7 @@ void CPlayer::Begin()
 void CPlayer::Tick()
 {
 	Vec2 vPos = GetPos();
+		
 
 	if (KEY_PRESSED(LEFT))
 		vPos.x -= DT * m_Speed;
@@ -70,10 +85,3 @@ void CPlayer::Tick()
 	SetPos(vPos);
 }
 
-void CPlayer::FinalTick()
-{
-	// +A
-
-
-	CObj::FinalTick();	
-}

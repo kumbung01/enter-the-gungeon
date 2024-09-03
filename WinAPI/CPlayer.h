@@ -1,13 +1,16 @@
 #pragma once
 #include "CObj.h"
 
+class CCollider;
+
 class CPlayer :
     public CObj
 {
 private:
-    float   m_Speed;
-    float   m_AttSpeed; // 초당 발사 속도
-    float   m_AccTime;  // 시간 누적
+    float       m_Speed;
+    float       m_AttSpeed; // 초당 발사 속도
+    float       m_AccTime;  // 시간 누적
+    CCollider*  m_HitBox;
 
 
 public:     

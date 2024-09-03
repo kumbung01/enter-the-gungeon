@@ -27,9 +27,25 @@ public:
     Vec2 GetScale() { return m_Scale; }
 
     CComponent* AddComponent(CComponent* _Component);
+    CComponent* GetComponent(const wstring& _Name);
+    CComponent* GetComponent(COMPONENT_TYPE _Type);
+
+    template<typename T>
+    T* GetComponent();
 
 public:
     CObj();
     ~CObj();
 };
 
+template<typename T>
+T* CObj::GetComponent()
+{
+    for (size_t i = 0; i < m_Component.size(); ++i)
+    {
+        if (dynamic_cast<T*>(m_Component[i]))
+            return (T*)m_Component[i];
+    }
+
+    return nullptr;
+}

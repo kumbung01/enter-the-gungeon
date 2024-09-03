@@ -49,3 +49,15 @@ struct tTask
 	DWORD_PTR	Param0;
 	DWORD_PTR	Param1;
 };
+
+
+struct tDbgRenderInfo
+{
+	DEBUG_SHAPE		Type;
+	Vec2			Position0;
+	Vec2			Position1;
+	Vec2			Scale;
+	UINT			Color;
+	float			Duration;	// 표시 시간
+	float			Time;		// 진행 시간
+};

@@ -12,6 +12,7 @@ CObj::CObj()
 
 CObj::~CObj()
 {
+	Delete_Vector(m_Component);
 }
 
 void CObj::Begin()
@@ -36,6 +37,8 @@ void CObj::Render()
 		, m_Pos.y - m_Scale.y / 2
 		, m_Pos.x + m_Scale.x / 2
 		, m_Pos.y + m_Scale.y / 2);
+
+	
 }
 
 CComponent* CObj::AddComponent(CComponent* _Component)
@@ -45,4 +48,26 @@ CComponent* CObj::AddComponent(CComponent* _Component)
 	_Component->m_Owner = this;
 
 	return _Component;
+}
+
+CComponent* CObj::GetComponent(const wstring& _Name)
+{
+	for (size_t i = 0; i < m_Component.size(); ++i)
+	{
+		if (m_Component[i]->GetName() == _Name)
+			return m_Component[i];
+	}
+
+	return nullptr;
+}
+
+CComponent* CObj::GetComponent(COMPONENT_TYPE _Type)
+{
+	for (size_t i = 0; i < m_Component.size(); ++i)
+	{
+		if (m_Component[i]->GetType() == _Type)
+			return m_Component[i];
+	}
+
+	return nullptr;
 }

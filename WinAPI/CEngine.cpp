@@ -5,6 +5,7 @@
 #include "CKeyMgr.h"
 #include "CLevelMgr.h"
 #include "CTaskMgr.h"
+#include "CDbgRender.h"
 #include "CSelectGDI.h"
 
 CEngine::CEngine()
@@ -109,7 +110,11 @@ void CEngine::Progress()
         Rectangle(m_hSecondDC, -1, -1, (int)m_Resolution.x + 1, (int)m_Resolution.y + 1);
     }
 
+    // 레벨 렌더링
     CLevelMgr::GetInst()->Render();
+
+    // 디버그 정보 렌더링
+    CDbgRender::GetInst()->Render();
 
     // SecondBitmap 있는 장면을 MainWindowBitmap 으로 복사해온다.
     BitBlt(m_hDC, 0, 0, (int)m_Resolution.x, (int)m_Resolution.y, m_hSecondDC, 0, 0, SRCCOPY);

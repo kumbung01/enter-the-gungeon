@@ -12,4 +12,5 @@ CCollider::~CCollider()
 
 void CCollider::FinalTick()
 {
+	
 }

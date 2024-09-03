@@ -30,8 +30,7 @@ void CLevelMgr::Init()
     CLevel* pLevel = new CLevel;
 
     // Player »ý¼º
-    CObj* pObject = new CPlayer;
-    pObject->AddComponent(new CCollider);
+    CObj* pObject = new CPlayer;   
 
     pObject->SetPos(vResolution.x / 2.f, vResolution.y / 2.f);
     pObject->SetScale(50.f, 50.f);    
