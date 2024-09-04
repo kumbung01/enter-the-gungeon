@@ -133,6 +133,7 @@
   <ItemGroup>
     <ClInclude Include="CBase.h" />
     <ClInclude Include="CCollider.h" />
+    <ClInclude Include="CCollisionMgr.h" />
     <ClInclude Include="CComponent.h" />
     <ClInclude Include="CDbgRender.h" />
     <ClInclude Include="CEngine.h" />
@@ -161,6 +162,7 @@
   <ItemGroup>
     <ClCompile Include="CBase.cpp" />
     <ClCompile Include="CCollider.cpp" />
+    <ClCompile Include="CCollisionMgr.cpp" />
     <ClCompile Include="CComponent.cpp" />
     <ClCompile Include="CDbgRender.cpp" />
     <ClCompile Include="CEngine.cpp" />

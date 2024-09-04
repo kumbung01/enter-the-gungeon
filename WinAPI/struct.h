@@ -10,13 +10,15 @@ public:
 	// 벡터의 길이
 	float Length()
 	{
-
+		return sqrt(x * x + y * y);
 	}
 
 	// 정규화
 	void Normalize()
 	{
-
+		float Len = Length();
+		x /= Len;
+		y /= Len;
 	}
 
 	Vec2 operator + (Vec2 _Other) { return Vec2(x + _Other.x, y + _Other.y); }

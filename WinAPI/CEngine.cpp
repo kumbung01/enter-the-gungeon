@@ -103,6 +103,7 @@ void CEngine::Progress()
     // Manager Tick
     CTimeMgr::GetInst()->Tick(); // DT 계산
     CKeyMgr::GetInst()->Tick();  // 각 키의 상태
+    CDbgRender::GetInst()->Tick();
 
     // 레벨 실행
     CLevelMgr::GetInst()->Progress();

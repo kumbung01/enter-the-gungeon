@@ -15,8 +15,6 @@ CMissile::~CMissile()
 }
 
 
-
-
 void CMissile::Tick()
 {
 	Vec2 vPos = GetPos();
@@ -25,8 +23,10 @@ void CMissile::Tick()
 	vPos.x += cosf(m_Angle) * m_Speed * DT;
 	vPos.y -= sinf(m_Angle) * m_Speed * DT;
 	
-
 	Vec2 vDir = Vec2(cosf(m_Angle) * m_Speed, -sinf(m_Angle) * m_Speed);
+	vDir.Normalize();
+	vDir *= 50.f;
+
 	DrawDebugLine(PEN_TYPE::BLUE, GetPos(), GetPos() + vDir, 0.f);
 
 	SetPos(vPos);

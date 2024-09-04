@@ -1,11 +1,13 @@
 #include "pch.h"
 #include "CDbgRender.h"
 
+#include "CKeyMgr.h"
 #include "CEngine.h"
 #include "CTimeMgr.h"
 #include "CSelectGDI.h"
 
 CDbgRender::CDbgRender()
+	: m_Show(true)
 {
 
 }
@@ -13,6 +15,14 @@ CDbgRender::CDbgRender()
 CDbgRender::~CDbgRender()
 {
 
+}
+
+void CDbgRender::Tick()
+{
+	if (KEY_TAP(KEY::NUM9))
+	{
+		m_Show ? m_Show = false : m_Show = true;
+	}
 }
 
 void CDbgRender::Render()
@@ -23,35 +33,37 @@ void CDbgRender::Render()
 
 	for (; iter != m_DbgInfo.end(); )
 	{		
-		SELECT_PEN((*iter).Color);
-		SELECT_BRUSH(BRUSH_TYPE::HOLLOW);
-
-
-		switch ((*iter).Type)
+		if (m_Show)
 		{
-		case DEBUG_SHAPE::RECT:		
-		
-			Rectangle(dc, (*iter).Position0.x - (*iter).Scale.x / 2.f
-						, (*iter).Position0.y - (*iter).Scale.y / 2.f
-						, (*iter).Position0.x + (*iter).Scale.x / 2.f
-						, (*iter).Position0.y + (*iter).Scale.y / 2.f);			
+			SELECT_PEN((*iter).Color);
+			SELECT_BRUSH(BRUSH_TYPE::HOLLOW);
 
-			break;
-		case DEBUG_SHAPE::CIRCLE:
+			switch ((*iter).Type)
+			{
+			case DEBUG_SHAPE::RECT:
 
-			Ellipse(dc, (*iter).Position0.x - (*iter).Scale.x / 2.f
-					  , (*iter).Position0.y - (*iter).Scale.y / 2.f
-					  , (*iter).Position0.x + (*iter).Scale.x / 2.f
-					  , (*iter).Position0.y + (*iter).Scale.y / 2.f);		
+				Rectangle(dc, (*iter).Position0.x - (*iter).Scale.x / 2.f
+					, (*iter).Position0.y - (*iter).Scale.y / 2.f
+					, (*iter).Position0.x + (*iter).Scale.x / 2.f
+					, (*iter).Position0.y + (*iter).Scale.y / 2.f);
 
-			break;
-		case DEBUG_SHAPE::LINE:
+				break;
+			case DEBUG_SHAPE::CIRCLE:
 
-			MoveToEx(dc, (*iter).Position0.x, (*iter).Position0.y, nullptr);
-			LineTo(dc, (*iter).Position1.x, (*iter).Position1.y);
+				Ellipse(dc, (*iter).Position0.x - (*iter).Scale.x / 2.f
+					, (*iter).Position0.y - (*iter).Scale.y / 2.f
+					, (*iter).Position0.x + (*iter).Scale.x / 2.f
+					, (*iter).Position0.y + (*iter).Scale.y / 2.f);
 
-			break;		
-		}
+				break;
+			case DEBUG_SHAPE::LINE:
+
+				MoveToEx(dc, (*iter).Position0.x, (*iter).Position0.y, nullptr);
+				LineTo(dc, (*iter).Position1.x, (*iter).Position1.y);
+
+				break;
+			}
+		}		
 
 		(*iter).Time += DT;
 		if ((*iter).Duration <= (*iter).Time)

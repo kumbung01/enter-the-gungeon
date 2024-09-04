@@ -12,6 +12,7 @@ private:
 
 public:
     COMPONENT_TYPE GetType() { return m_Type; }
+    CObj* GetOwner() { return m_Owner; }
 
 public:
     virtual void FinalTick() = 0;

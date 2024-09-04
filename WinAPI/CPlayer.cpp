@@ -20,7 +20,9 @@ CPlayer::CPlayer()
 	// Collider 컴포넌트 추가
 	m_HitBox = new CCollider;
 	m_HitBox->SetName(L"HitBox_01");
-	m_HitBox->SetScale(Vec2(60.f, 60.f));
+	m_HitBox->SetScale(Vec2(80.f, 80.f));
+	m_HitBox->SetOffset(Vec2(100.f, 0.f));
+
 	AddComponent(m_HitBox);
 
 	// RTTI(RunTime Type Identification(Infomation) ) -> C++ 의 경우 dynamic_cast 가 있다.
@@ -28,7 +30,6 @@ CPlayer::CPlayer()
 	//CCollider* pC = (CCollider*)GetComponent(L"HitBox_01");
 	//CCollider* pC = (CCollider*)GetComponent(COMPONENT_TYPE::COLLIDER);
 	//CCollider* pC = GetComponent<CCollider>();
-
 }
 
 CPlayer::~CPlayer()
@@ -55,12 +56,9 @@ void CPlayer::Tick()
 	if (KEY_PRESSED(DOWN))
 		vPos.y += DT * m_Speed;
 
-
-	DrawDebugRect(PEN_TYPE::GREEN, GetPos(), GetScale() * 2.f, 0.f);
-	
 	if (KEY_TAP(SPACE))
 	{
-		DrawDebugRect(PEN_TYPE::GREEN, GetPos(), GetScale() * 2.f, 3.f);
+		//DrawDebugRect(PEN_TYPE::GREEN, GetPos(), GetScale() * 2.f, 3.f);
 		//DrawDebugCircle(PEN_TYPE::GREEN, GetPos(), GetScale() * 2.f, 3.f);
 		//DrawDebugLine(PEN_TYPE::GREEN, GetPos(), GetPos() + GetScale(), 3.f);
 	}
