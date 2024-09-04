@@ -4,6 +4,7 @@
 #include "CTimeMgr.h"
 #include "CKeyMgr.h"
 #include "CTaskMgr.h"
+#include "CDbgRender.h"
 
 #include "CMissile.h"
 #include "CLevelMgr.h"
@@ -54,7 +55,16 @@ void CPlayer::Tick()
 	if (KEY_PRESSED(DOWN))
 		vPos.y += DT * m_Speed;
 
+
+	DrawDebugRect(PEN_TYPE::GREEN, GetPos(), GetScale() * 2.f, 0.f);
 	
+	if (KEY_TAP(SPACE))
+	{
+		DrawDebugRect(PEN_TYPE::GREEN, GetPos(), GetScale() * 2.f, 3.f);
+		//DrawDebugCircle(PEN_TYPE::GREEN, GetPos(), GetScale() * 2.f, 3.f);
+		//DrawDebugLine(PEN_TYPE::GREEN, GetPos(), GetPos() + GetScale(), 3.f);
+	}
+
 	// 미사일 발사
 	if (KEY_PRESSED(SPACE))
 	{
@@ -81,7 +91,9 @@ void CPlayer::Tick()
 		m_AccTime = 1.f / m_AttSpeed;
 	}
 
-
 	SetPos(vPos);
+
+
+
 }
 

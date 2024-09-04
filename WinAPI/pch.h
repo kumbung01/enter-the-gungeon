@@ -6,6 +6,7 @@
 #include <list>
 #include <map>
 #include <string>
+#include <assert.h>
 
 using std::vector;
 using std::list;

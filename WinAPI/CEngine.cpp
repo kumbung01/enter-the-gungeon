@@ -36,6 +36,9 @@ CEngine::~CEngine()
 
     for (UINT i = 0; i < (UINT)BRUSH_TYPE::END; ++i)
     {
+        if (BRUSH_TYPE::HOLLOW == (BRUSH_TYPE)i)
+            continue;
+
         DeleteObject(m_Brush[i]);
     }
 }
@@ -86,10 +89,11 @@ void CEngine::CreateGDIObject()
     m_Pen[(UINT)PEN_TYPE::BLUE] = CreatePen(PS_SOLID, 1, RGB(0, 0, 255));
 
     // Brush
-    m_Brush[(UINT)BRUSH_TYPE::RED] = CreateSolidBrush(RGB(255, 0, 0));
-    m_Brush[(UINT)BRUSH_TYPE::GREEN] = CreateSolidBrush(RGB(0, 255, 0));
-    m_Brush[(UINT)BRUSH_TYPE::BLUE] = CreateSolidBrush(RGB(0, 0, 255));
-    m_Brush[(UINT)BRUSH_TYPE::GRAY] = CreateSolidBrush(RGB(100, 100, 100));
+    m_Brush[(UINT)BRUSH_TYPE::RED]      = CreateSolidBrush(RGB(255, 0, 0));
+    m_Brush[(UINT)BRUSH_TYPE::GREEN]    = CreateSolidBrush(RGB(0, 255, 0));
+    m_Brush[(UINT)BRUSH_TYPE::BLUE]     = CreateSolidBrush(RGB(0, 0, 255));
+    m_Brush[(UINT)BRUSH_TYPE::GRAY]     = CreateSolidBrush(RGB(100, 100, 100));
+    m_Brush[(UINT)BRUSH_TYPE::HOLLOW]   = (HBRUSH)GetStockObject(HOLLOW_BRUSH);
 }
 
 

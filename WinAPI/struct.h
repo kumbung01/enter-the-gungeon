@@ -7,12 +7,37 @@ public:
 	float y;
 
 public:
-	Vec2 operator + (Vec2 _Other)
+	// 벡터의 길이
+	float Length()
 	{
-		return Vec2(x + _Other.x, y + _Other.y);
+
 	}
 
+	// 정규화
+	void Normalize()
+	{
 
+	}
+
+	Vec2 operator + (Vec2 _Other) { return Vec2(x + _Other.x, y + _Other.y); }
+	Vec2 operator + (float _f) { return Vec2(x + _f, y + _f); }
+	void operator += (Vec2 _Other) { x += _Other.x; y += _Other.y; }
+	void operator += (float _f) { x += _f; y += _f; }
+
+	Vec2 operator - (Vec2 _Other) { return Vec2(x - _Other.x, y - _Other.y); }
+	Vec2 operator - (float _f) { return Vec2(x - _f, y - _f); }
+	void operator -= (Vec2 _Other) { x -= _Other.x; y -= _Other.y; }
+	void operator -= (float _f) { x -= _f; y -= _f; }
+
+	Vec2 operator * (Vec2 _Other) { return Vec2(x * _Other.x, y * _Other.y); }
+	Vec2 operator * (float _f) { return Vec2(x * _f, y * _f); }
+	void operator *= (Vec2 _Other) { x *= _Other.x; y *= _Other.y; }
+	void operator *= (float _f) { x *= _f; y *= _f; }
+
+	Vec2 operator / (Vec2 _Other) { assert(_Other.x && _Other.y); return Vec2(x / _Other.x, y / _Other.y); }
+	Vec2 operator / (float _f) {  assert(_f); return Vec2(x / _f, y / _f); } 
+	void operator /= (Vec2 _Other) { assert(_Other.x && _Other.y); x /= _Other.x; y /= _Other.y; }
+	void operator /= (float _f) { assert(_f); x /= _f; y /= _f; }
 
 public:
 	Vec2()
@@ -42,7 +67,6 @@ public:
 
 };
 
-
 struct tTask
 {
 	TASK_TYPE	Type;
@@ -57,7 +81,7 @@ struct tDbgRenderInfo
 	Vec2			Position0;
 	Vec2			Position1;
 	Vec2			Scale;
-	UINT			Color;
+	PEN_TYPE		Color;
 	float			Duration;	// 표시 시간
 	float			Time;		// 진행 시간
-};
+}; 

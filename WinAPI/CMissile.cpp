@@ -26,6 +26,9 @@ void CMissile::Tick()
 	vPos.y -= sinf(m_Angle) * m_Speed * DT;
 	
 
+	Vec2 vDir = Vec2(cosf(m_Angle) * m_Speed, -sinf(m_Angle) * m_Speed);
+	DrawDebugLine(PEN_TYPE::BLUE, GetPos(), GetPos() + vDir, 0.f);
+
 	SetPos(vPos);
 }
 
