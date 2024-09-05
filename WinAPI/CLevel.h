@@ -2,12 +2,15 @@
 #include "CBase.h"
 
 class CObj;
+class CCollider;
 
 class CLevel :
     public CBase
 {
 private:
-    vector<CObj*>   m_vecObjects[(UINT)LAYER_TYPE::END];
+    vector<CObj*>       m_vecObjects[(UINT)LAYER_TYPE::END];
+    vector<CCollider*>  m_vecCollider[(UINT)LAYER_TYPE::END];
+
 
 public:
     // 시점함수 
@@ -21,7 +24,17 @@ public:
     void Render();    
 
 public:
-    void AddObject(CObj* _Object, LAYER_TYPE _Type) { m_vecObjects[(UINT)_Type].push_back(_Object); }
+    void AddObject(CObj* _Object, LAYER_TYPE _Type) 
+    { 
+        m_vecObjects[(UINT)_Type].push_back(_Object); 
+        _Object->m_LayerType = _Type; // 오브젝트의 소속 레이어를 알려줌
+    }
+
+    // Collider 를 레이어 번호에 맞는 곳에 등록
+    void RegisterCollider(CCollider* _Collider, LAYER_TYPE _Type) { m_vecCollider[(UINT)_Type].push_back(_Collider); }
+    const vector<CCollider*>& GetColliders(LAYER_TYPE _Type) { return m_vecCollider[(UINT)_Type]; }
+
+
 
 public:
     CLevel();

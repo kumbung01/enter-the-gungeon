@@ -7,6 +7,7 @@
 #include "CMonster.h"
 #include "CMissile.h"
 
+#include "CCollisionMgr.h"
 #include "CCollider.h"
 
 
@@ -49,6 +50,13 @@ void CLevelMgr::Init()
     pMonster->SetSpeed(300.f);
 
     pLevel->AddObject(pMonster, LAYER_TYPE::MONSTER);
+
+
+    // 충돌 설정
+    CCollisionMgr::GetInst()->CollisionCheckClear();
+    CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER_OBJECT, LAYER_TYPE::MONSTER);
+    CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::MONSTER, LAYER_TYPE::MONSTER);
+
 
     // 생성한 레벨을 START 레벨 이자 현재 재생 중인 레벨로 설정하고
     // Begin 을 호출한다.

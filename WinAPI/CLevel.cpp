@@ -28,6 +28,13 @@ void CLevel::Begin()
 
 void CLevel::Tick()
 {
+	// 이전프레임에 등록된 충돌체들 등록 해제
+	for (UINT i = 0; i < (UINT)LAYER_TYPE::END; ++i)
+	{
+		m_vecCollider[i].clear();
+	}
+
+
 	for (UINT i = 0; i < (UINT)LAYER_TYPE::END; ++i)
 	{
 		for (size_t j = 0; j < m_vecObjects[i].size(); ++j)

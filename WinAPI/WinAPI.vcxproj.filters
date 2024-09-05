@@ -79,7 +79,9 @@
     <ClInclude Include="CDbgRender.h">
       <Filter>Game\03. Manager\05. DbgRender</Filter>
     </ClInclude>
-    <ClInclude Include="CCollisionMgr.h" />
+    <ClInclude Include="CCollisionMgr.h">
+      <Filter>Game\03. Manager\06. CollisionMgr</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -142,7 +144,9 @@
     <ClCompile Include="CDbgRender.cpp">
       <Filter>Game\03. Manager\05. DbgRender</Filter>
     </ClCompile>
-    <ClCompile Include="CCollisionMgr.cpp" />
+    <ClCompile Include="CCollisionMgr.cpp">
+      <Filter>Game\03. Manager\06. CollisionMgr</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">

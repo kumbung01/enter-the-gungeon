@@ -9,6 +9,9 @@ private:
     Vec2        m_Scale;    // 크기
     Vec2        m_FinalPos; // 충돌체의 실제 위치
 
+    bool        m_Active;   // 활성화
+
+
 public:
     void SetScale(Vec2 _Scale) { m_Scale = _Scale; }
     Vec2 GetScale() { return m_Scale; }

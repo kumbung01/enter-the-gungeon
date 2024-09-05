@@ -10,6 +10,7 @@ private:
     Vec2                m_Pos;
     Vec2                m_Scale;
     vector<CComponent*> m_Component;
+    LAYER_TYPE          m_LayerType;
 
 public:
     virtual void Begin();               // 레벨 시작할 때
@@ -25,6 +26,7 @@ public:
 
     Vec2 GetPos() { return m_Pos; }
     Vec2 GetScale() { return m_Scale; }
+    LAYER_TYPE GetLayerType() { return m_LayerType; }
 
     CComponent* AddComponent(CComponent* _Component);
     CComponent* GetComponent(const wstring& _Name);
@@ -36,6 +38,8 @@ public:
 public:
     CObj();
     ~CObj();
+
+    friend class CLevel;
 };
 
 template<typename T>

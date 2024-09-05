@@ -7,6 +7,7 @@
 CObj::CObj()
 	: m_Pos{}
 	, m_Scale{}
+	, m_LayerType(LAYER_TYPE::END)
 {	
 }
 

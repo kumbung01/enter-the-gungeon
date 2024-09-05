@@ -6,6 +6,7 @@
 #include "CLevelMgr.h"
 #include "CTaskMgr.h"
 #include "CDbgRender.h"
+#include "CCollisionMgr.h"
 #include "CSelectGDI.h"
 
 CEngine::CEngine()
@@ -107,6 +108,9 @@ void CEngine::Progress()
 
     // 레벨 실행
     CLevelMgr::GetInst()->Progress();
+
+    // 충돌 검사 실행
+    CCollisionMgr::GetInst()->Tick();
 
     // 렌더링
     // 화면 클리어
