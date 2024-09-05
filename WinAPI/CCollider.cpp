@@ -6,6 +6,7 @@
 
 CCollider::CCollider()
 	: CComponent(COMPONENT_TYPE::COLLIDER)
+	, m_Collision(false)
 {
 }
 
@@ -21,12 +22,16 @@ void CCollider::FinalTick()
 	LAYER_TYPE LayerType = GetOwner()->GetLayerType();
 	CLevelMgr::GetInst()->GetCurrentLevel()->RegisterCollider(this, LayerType);
 
-	DrawDebugRect(PEN_TYPE::GREEN, m_FinalPos, m_Scale, 0.f);
+	if(m_Collision)
+		DrawDebugRect(PEN_TYPE::RED, m_FinalPos, m_Scale, 0.f);
+	else
+		DrawDebugRect(PEN_TYPE::GREEN, m_FinalPos, m_Scale, 0.f);
 }
 
 
 void CCollider::BeginOverlap(CCollider* _Other)
 {
+	m_Collision = true;
 }
 
 void CCollider::Overlap(CCollider* _Other)
@@ -35,4 +40,5 @@ void CCollider::Overlap(CCollider* _Other)
 
 void CCollider::EndOverlap(CCollider* _Other)
 {
+	m_Collision = false;
 }

@@ -43,7 +43,7 @@ void CLevelMgr::Init()
 
     // Monster 생성
     CMonster* pMonster = new CMonster;
-    pMonster->SetPos(600.f, 300.f);
+    pMonster->SetPos(600.f, 120.f);
     pMonster->SetScale(100.f, 100.f);
 
     pMonster->SetDistance(200.f);
@@ -55,7 +55,7 @@ void CLevelMgr::Init()
     // 충돌 설정
     CCollisionMgr::GetInst()->CollisionCheckClear();
     CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER_OBJECT, LAYER_TYPE::MONSTER);
-    CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::MONSTER, LAYER_TYPE::MONSTER);
+    CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER, LAYER_TYPE::MONSTER);
 
 
     // 생성한 레벨을 START 레벨 이자 현재 재생 중인 레벨로 설정하고

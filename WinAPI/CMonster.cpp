@@ -3,6 +3,7 @@
 
 #include "CEngine.h"
 #include "CTimeMgr.h"
+#include "CCollider.h"
 
 
 CMonster::CMonster()
@@ -10,6 +11,8 @@ CMonster::CMonster()
 	, m_Speed(300.f)
 	, m_Dist(100.f)
 {
+	m_Collider = (CCollider*)AddComponent(new CCollider);
+	m_Collider->SetScale(Vec2(100.f, 100.f));
 }
 
 CMonster::~CMonster()

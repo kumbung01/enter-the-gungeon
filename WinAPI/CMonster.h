@@ -1,6 +1,7 @@
 #pragma once
 #include "CObj.h"
 
+class CCollider;
 
 class CMonster :
     public CObj
@@ -10,6 +11,8 @@ private:
     float       m_Speed;
     Vec2        m_InitPos;
     float       m_Dist;
+
+    CCollider*  m_Collider;
 
 public:
     void SetSpeed(float _Speed) { m_Speed = _Speed; }

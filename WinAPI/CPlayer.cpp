@@ -21,7 +21,7 @@ CPlayer::CPlayer()
 	m_HitBox = new CCollider;
 	m_HitBox->SetName(L"HitBox_01");
 	m_HitBox->SetScale(Vec2(80.f, 80.f));
-	m_HitBox->SetOffset(Vec2(100.f, 0.f));
+	m_HitBox->SetOffset(Vec2(0.f, 0.f));
 
 	AddComponent(m_HitBox);
 

@@ -70,7 +70,7 @@ void CCollisionMgr::CollisionBtwLayer(LAYER_TYPE _Left, LAYER_TYPE _Right)
 		{
 			for (size_t j = 0; j < vecRight.size(); ++j)
 			{
-
+				CollisionBtwCollider(vecLeft[i], vecRight[j]);
 			}
 		}
 	}
@@ -83,8 +83,74 @@ void CCollisionMgr::CollisionBtwLayer(LAYER_TYPE _Left, LAYER_TYPE _Right)
 		{
 			for (size_t j = i + 1; j < vecRight.size(); ++j)
 			{
-
+				CollisionBtwCollider(vecLeft[i], vecRight[j]);
 			}
 		}
 	}
+}
+
+void CCollisionMgr::CollisionBtwCollider(CCollider* _LeftCol, CCollider* _RightCol)
+{
+	COLLISION_ID ColID = {};
+	ColID.Left = _LeftCol->GetID();
+	ColID.Right = _RightCol->GetID();
+
+	map<ULONGLONG, bool>::iterator iter = m_ColInfo.find(ColID.ID);
+
+	// 두 충돌체 조합이 등록된 적이 없다.
+	if (iter == m_ColInfo.end())
+	{
+		// 등록을 시킨다.
+		m_ColInfo.insert(make_pair(ColID.ID, false));
+		iter = m_ColInfo.find(ColID.ID);
+	}
+	
+	// 현재 겹쳐있다.
+	if (IsCollision(_LeftCol, _RightCol))
+	{
+		// 이전에도 겹쳐있었다.
+		if (iter->second)
+		{
+			_LeftCol->Overlap(_RightCol);
+			_RightCol->Overlap(_LeftCol);
+		}
+
+		// 이전에는 겹쳐있지 않았다.
+		else
+		{
+			_LeftCol->BeginOverlap(_RightCol);
+			_RightCol->BeginOverlap(_LeftCol);
+			iter->second = true; // 충돌정보 갱신
+		} 
+	}
+
+	// 현재 떨어져 있다.
+	else
+	{
+		// 이전에는 겹쳐있었다.
+		if (iter->second)
+		{
+			_LeftCol->EndOverlap(_RightCol);
+			_RightCol->EndOverlap(_LeftCol);
+			iter->second = false;
+		}
+	}
+}
+
+bool CCollisionMgr::IsCollision(CCollider* _LeftCol, CCollider* _RightCol)
+{
+	Vec2 LeftPos = _LeftCol->GetFinalPos();
+	Vec2 RightPos = _RightCol->GetFinalPos();
+
+	Vec2 LeftScale = _LeftCol->GetScale();
+	Vec2 RightScale = _RightCol->GetScale();
+	Vec2 vDiff = LeftPos - RightPos;
+
+	if (fabs(vDiff.x) < (LeftScale.x + RightScale.x) / 2.f
+		&& fabs(vDiff.y) < (LeftScale.y + RightScale.y) / 2.f)
+	{
+		return true;
+	}
+
+	return false;
 }

@@ -35,6 +35,7 @@ void CLevel::Tick()
 	}
 
 
+
 	for (UINT i = 0; i < (UINT)LAYER_TYPE::END; ++i)
 	{
 		for (size_t j = 0; j < m_vecObjects[i].size(); ++j)
@@ -64,4 +65,10 @@ void CLevel::Render()
 			m_vecObjects[i][j]->Render();
 		}
 	}
+}
+
+void CLevel::AddObject(CObj* _Object, LAYER_TYPE _Type)
+{
+	m_vecObjects[(UINT)_Type].push_back(_Object);
+	_Object->m_LayerType = _Type; // 오브젝트의 소속 레이어를 알려줌
 }

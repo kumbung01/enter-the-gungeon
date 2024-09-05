@@ -24,12 +24,8 @@ public:
     void Render();    
 
 public:
-    void AddObject(CObj* _Object, LAYER_TYPE _Type) 
-    { 
-        m_vecObjects[(UINT)_Type].push_back(_Object); 
-        _Object->m_LayerType = _Type; // 오브젝트의 소속 레이어를 알려줌
-    }
-
+    void AddObject(CObj* _Object, LAYER_TYPE _Type);
+   
     // Collider 를 레이어 번호에 맞는 곳에 등록
     void RegisterCollider(CCollider* _Collider, LAYER_TYPE _Type) { m_vecCollider[(UINT)_Type].push_back(_Collider); }
     const vector<CCollider*>& GetColliders(LAYER_TYPE _Type) { return m_vecCollider[(UINT)_Type]; }

@@ -11,6 +11,8 @@ private:
 
     bool        m_Active;   // 활성화
 
+    bool        m_Collision; // 충돌중인지 체크
+
 
 public:
     void SetScale(Vec2 _Scale) { m_Scale = _Scale; }
