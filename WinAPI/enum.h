@@ -41,8 +41,6 @@ enum class TASK_TYPE
 
 	// Param0 : Next Level
 	CHANGE_LEVEL,
-
-
 };
 
 enum class LAYER_TYPE

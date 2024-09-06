@@ -27,6 +27,8 @@ void CMonster::Begin()
 
 void CMonster::Tick()
 {
+	return;
+
 	Vec2 vPos = GetPos();
 
 	vPos.x += DT * m_Speed * m_Dir;

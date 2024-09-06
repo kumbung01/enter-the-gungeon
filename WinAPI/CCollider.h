@@ -11,7 +11,7 @@ private:
 
     bool        m_Active;   // 활성화
 
-    bool        m_Collision; // 충돌중인지 체크
+    int         m_OverlapCount; // 충돌 중인 물체의 숫자
 
 
 public:

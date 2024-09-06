@@ -2,6 +2,7 @@
 #include "CBase.h"
 
 class CComponent;
+class CCollider;
 
 class CObj :
     public CBase
@@ -12,11 +13,19 @@ private:
     vector<CComponent*> m_Component;
     LAYER_TYPE          m_LayerType;
 
+    bool                m_Dead;         // 삭제 예정
+
 public:
     virtual void Begin();               // 레벨 시작할 때
     virtual void Tick() = 0;            // 오브젝트가 할 일
     virtual void FinalTick() final;     // 오브젝트가 소유한 Component 가 할 일
     virtual void Render();              // 오브젝트를 그리기
+
+    virtual void BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider) {}
+    virtual void Overlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider) {}
+    virtual void EndOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider) {}
+
+
 
 public:
     void SetPos(Vec2 _Pos) { m_Pos = _Pos; }
@@ -27,6 +36,8 @@ public:
     Vec2 GetPos() { return m_Pos; }
     Vec2 GetScale() { return m_Scale; }
     LAYER_TYPE GetLayerType() { return m_LayerType; }
+
+    bool IsDead() { return m_Dead; }
 
     CComponent* AddComponent(CComponent* _Component);
     CComponent* GetComponent(const wstring& _Name);
@@ -40,6 +51,7 @@ public:
     ~CObj();
 
     friend class CLevel;
+    friend class CTaskMgr;
 };
 
 template<typename T>

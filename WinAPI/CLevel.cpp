@@ -60,10 +60,20 @@ void CLevel::Render()
 {
 	for (UINT i = 0; i < (UINT)LAYER_TYPE::END; ++i)
 	{
-		for (size_t j = 0; j < m_vecObjects[i].size(); ++j)
+		vector<CObj*>& vecObjects = m_vecObjects[i];
+		vector<CObj*>::iterator iter = vecObjects.begin();
+		for (; iter != vecObjects.end(); )
 		{
-			m_vecObjects[i][j]->Render();
-		}
+			if ((*iter)->IsDead())
+			{
+				iter = vecObjects.erase(iter);
+			}
+			else
+			{
+				(*iter)->Render();
+				++iter;
+			}
+		}			
 	}
 }
 

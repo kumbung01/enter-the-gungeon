@@ -8,6 +8,7 @@ CObj::CObj()
 	: m_Pos{}
 	, m_Scale{}
 	, m_LayerType(LAYER_TYPE::END)
+	, m_Dead(false)
 {	
 }
 
@@ -37,9 +38,7 @@ void CObj::Render()
 		, m_Pos.x - m_Scale.x / 2
 		, m_Pos.y - m_Scale.y / 2
 		, m_Pos.x + m_Scale.x / 2
-		, m_Pos.y + m_Scale.y / 2);
-
-	
+		, m_Pos.y + m_Scale.y / 2);	
 }
 
 CComponent* CObj::AddComponent(CComponent* _Component)

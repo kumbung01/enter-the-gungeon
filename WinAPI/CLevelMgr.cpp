@@ -43,13 +43,21 @@ void CLevelMgr::Init()
 
     // Monster 생성
     CMonster* pMonster = new CMonster;
+    pMonster->SetName(L"Monster");
     pMonster->SetPos(600.f, 120.f);
     pMonster->SetScale(100.f, 100.f);
-
     pMonster->SetDistance(200.f);
     pMonster->SetSpeed(300.f);
-
     pLevel->AddObject(pMonster, LAYER_TYPE::MONSTER);
+
+    pMonster = new CMonster;
+    pMonster->SetName(L"Monster");
+    pMonster->SetPos(700.f, 120.f);
+    pMonster->SetScale(100.f, 100.f);
+    pMonster->SetDistance(200.f);
+    pMonster->SetSpeed(300.f);
+    pLevel->AddObject(pMonster, LAYER_TYPE::MONSTER);
+
 
 
     // 충돌 설정

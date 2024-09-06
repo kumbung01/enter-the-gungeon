@@ -17,6 +17,11 @@ public:
     virtual void Begin() override;
     virtual void Tick() override;    
 
+    virtual void BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider);
+    virtual void Overlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider);
+    virtual void EndOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider);
+
+
 public:
     CPlayer();
     ~CPlayer();    

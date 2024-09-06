@@ -10,6 +10,7 @@
 #include "CLevelMgr.h"
 #include "CLevel.h"
 
+#include "CMonster.h"
 #include "CCollider.h"
 
 CPlayer::CPlayer()
@@ -90,8 +91,26 @@ void CPlayer::Tick()
 	}
 
 	SetPos(vPos);
+}
 
+void CPlayer::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
+{
+	if (_OtherObject->GetName() == L"Monster")
+	{
+		tTask task = {};
 
+		task.Type = TASK_TYPE::DELETE_OBJECT;
+		task.Param0 = (DWORD_PTR)_OtherObject;
 
+		CTaskMgr::GetInst()->AddTask(task);
+	}
+}
+
+void CPlayer::Overlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
+{
+}
+
+void CPlayer::EndOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
+{
 }
 
