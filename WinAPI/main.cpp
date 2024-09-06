@@ -3,18 +3,6 @@
 #include "WinAPI.h"
 #include "CEngine.h"
 
-#define AAA 
-
-#ifdef AAA
-typedef int MYINT;
-#else
-typedef short MYINT;
-#endif
-
-
-
-
-
 HINSTANCE g_hInst = nullptr;
 
 // 전역 변수

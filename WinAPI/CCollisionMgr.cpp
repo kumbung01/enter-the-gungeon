@@ -105,8 +105,11 @@ void CCollisionMgr::CollisionBtwCollider(CCollider* _LeftCol, CCollider* _RightC
 		iter = m_ColInfo.find(ColID.ID);
 	}
 	
+	// 두 충돌체 중 1개라도 삭제 예정 오브젝트라면
+	bool IsDead = _LeftCol->GetOwner()->IsDead() || _RightCol->GetOwner()->IsDead();
+
 	// 현재 겹쳐있다.
-	if (IsCollision(_LeftCol, _RightCol))
+	if (!IsDead && IsCollision(_LeftCol, _RightCol))
 	{
 		// 이전에도 겹쳐있었다.
 		if (iter->second)

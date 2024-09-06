@@ -38,8 +38,14 @@ void CTaskMgr::Tick()
 		case TASK_TYPE::DELETE_OBJECT:
 		{
 			CObj* pObject = (CObj*)m_Task[i].Param0;
-			pObject->m_Dead = true;
-			m_Garbage.push_back(pObject);
+
+			// Dead 처리가 안된 경우에만 처리해준다. 
+			// 동시에 같은 오브젝트에 대해서 Delete 요청이 여러번인 경우 대처하기 위함
+			if (!pObject->IsDead())
+			{
+				pObject->m_Dead = true;
+				m_Garbage.push_back(pObject);
+			}
 		}
 			break;
 		case TASK_TYPE::CHANGE_LEVEL:
