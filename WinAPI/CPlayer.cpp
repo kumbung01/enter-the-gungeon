@@ -12,6 +12,8 @@
 
 #include "CMonster.h"
 #include "CCollider.h"
+#include "CGuidedMissile.h"
+
 
 CPlayer::CPlayer()
 	: m_Speed(200.f)
@@ -74,14 +76,12 @@ void CPlayer::Tick()
 		{
 			m_AccTime -= 1.f / m_AttSpeed;
 
-			// 固荤老 积己
-			for (int i = 0; i < 3; ++i)
-			{
-				CMissile* pMissile = new CMissile;
-				pMissile->SetPos(vPos + Vec2(-20.f + i * 20.f, -GetScale().y / 2.f));
-				pMissile->SetScale(20.f, 20.f);				
-				CreateObject(pMissile, LAYER_TYPE::PLAYER_OBJECT);
-			}
+			// 固荤老 积己			
+			CMissile* pMissile = new CGuidedMissile;
+			pMissile->SetPos(vPos + Vec2(0.f, -GetScale().y / 2.f));
+			pMissile->SetScale(20.f, 20.f);
+			pMissile->SetVelocity(Vec2(cosf(PI / 2.f), -sinf(PI / 2.f)) * 200.f);
+			CreateObject(pMissile, LAYER_TYPE::PLAYER_OBJECT);			
 		}
 	}
 
@@ -97,12 +97,7 @@ void CPlayer::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* 
 {
 	if (_OtherObject->GetName() == L"Monster")
 	{
-		tTask task = {};
-
-		task.Type = TASK_TYPE::DELETE_OBJECT;
-		task.Param0 = (DWORD_PTR)_OtherObject;
-
-		CTaskMgr::GetInst()->AddTask(task);
+		DeleteObject(_OtherObject);
 	}
 }
 

@@ -12,6 +12,16 @@ void CreateObject(CObj* _NewObject, LAYER_TYPE _Layer)
 	CTaskMgr::GetInst()->AddTask(task);
 }
 
+void DeleteObject(CObj* _DeleteObj)
+{
+	tTask task = {};
+
+	task.Type = TASK_TYPE::DELETE_OBJECT;
+	task.Param0 = (DWORD_PTR)_DeleteObj;
+
+	CTaskMgr::GetInst()->AddTask(task);
+}
+
 void DrawDebugRect(PEN_TYPE _pen, Vec2 _Pos, Vec2 _Scale, float _Duration)
 {
 	tDbgRenderInfo info = {};

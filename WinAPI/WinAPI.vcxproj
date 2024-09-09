@@ -137,6 +137,7 @@
     <ClInclude Include="CComponent.h" />
     <ClInclude Include="CDbgRender.h" />
     <ClInclude Include="CEngine.h" />
+    <ClInclude Include="CGuidedMissile.h" />
     <ClInclude Include="CKeyMgr.h" />
     <ClInclude Include="CLevel.h" />
     <ClInclude Include="CLevelMgr.h" />
@@ -166,6 +167,7 @@
     <ClCompile Include="CComponent.cpp" />
     <ClCompile Include="CDbgRender.cpp" />
     <ClCompile Include="CEngine.cpp" />
+    <ClCompile Include="CGuidedMissile.cpp" />
     <ClCompile Include="CKeyMgr.cpp" />
     <ClCompile Include="CLevel.cpp" />
     <ClCompile Include="CLevelMgr.cpp" />

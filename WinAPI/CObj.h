@@ -12,7 +12,6 @@ private:
     Vec2                m_Scale;
     vector<CComponent*> m_Component;
     LAYER_TYPE          m_LayerType;
-
     bool                m_Dead;         // 삭제 예정
 
 public:

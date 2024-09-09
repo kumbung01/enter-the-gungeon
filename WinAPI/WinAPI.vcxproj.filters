@@ -82,6 +82,9 @@
     <ClInclude Include="CCollisionMgr.h">
       <Filter>Game\03. Manager\06. CollisionMgr</Filter>
     </ClInclude>
+    <ClInclude Include="CGuidedMissile.h">
+      <Filter>Game\05. Object\Missile\GuidedMissile</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -147,6 +150,9 @@
     <ClCompile Include="CCollisionMgr.cpp">
       <Filter>Game\03. Manager\06. CollisionMgr</Filter>
     </ClCompile>
+    <ClCompile Include="CGuidedMissile.cpp">
+      <Filter>Game\05. Object\Missile\GuidedMissile</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">
@@ -205,6 +211,9 @@
     </Filter>
     <Filter Include="Game\03. Manager\06. CollisionMgr">
       <UniqueIdentifier>{d5925ffe-1cf9-4839-9887-97f9bd013d99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\05. Object\Missile\GuidedMissile">
+      <UniqueIdentifier>{d1f38a70-7d24-4935-b138-87eeee29ca41}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

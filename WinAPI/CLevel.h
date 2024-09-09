@@ -25,7 +25,8 @@ public:
 
 public:
     void AddObject(CObj* _Object, LAYER_TYPE _Type);
-   
+    const vector<CObj*>& GetObjects(LAYER_TYPE _Type) { return m_vecObjects[(UINT)_Type]; }
+
     // Collider 를 레이어 번호에 맞는 곳에 등록
     void RegisterCollider(CCollider* _Collider, LAYER_TYPE _Type) { m_vecCollider[(UINT)_Type].push_back(_Collider); }
     const vector<CCollider*>& GetColliders(LAYER_TYPE _Type) { return m_vecCollider[(UINT)_Type]; }

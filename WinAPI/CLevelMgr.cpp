@@ -44,7 +44,7 @@ void CLevelMgr::Init()
     // Monster »ý¼º
     CMonster* pMonster = new CMonster;
     pMonster->SetName(L"Monster");
-    pMonster->SetPos(600.f, 120.f);
+    pMonster->SetPos(300.f, 120.f);
     pMonster->SetScale(100.f, 100.f);
     pMonster->SetDistance(200.f);
     pMonster->SetSpeed(300.f);
@@ -52,7 +52,7 @@ void CLevelMgr::Init()
 
     pMonster = new CMonster;
     pMonster->SetName(L"Monster");
-    pMonster->SetPos(700.f, 120.f);
+    pMonster->SetPos(1000.f, 120.f);
     pMonster->SetScale(100.f, 100.f);
     pMonster->SetDistance(200.f);
     pMonster->SetSpeed(300.f);
