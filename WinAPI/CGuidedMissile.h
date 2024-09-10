@@ -8,6 +8,9 @@ private:
     CObj*   m_Target;       // 추적 대상
     float   m_DetectRange;  // 추적 범위
 
+
+
+
 public:
     void SetDetectRange(float _Range) { m_DetectRange = _Range; }
 
@@ -17,6 +20,10 @@ public:
 
 private:
     void FindTarget();
+    void TraceTarget_0();
+    void TraceTarget_1();
+    void TraceTarget_2();
+
 
 public:
     CGuidedMissile();

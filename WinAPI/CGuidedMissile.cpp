@@ -19,18 +19,18 @@ CGuidedMissile::~CGuidedMissile()
 
 void CGuidedMissile::Tick()
 {
-	// 타겟을 찾는다.
-	if(nullptr == m_Target || m_Target->IsDead())
-		FindTarget();
-
-	// 타겟이 있으면
-	if (m_Target)
+	// 타겟이 유효하면
+	if (IsValid(m_Target))
 	{
-		// 타겟을 향해서 이동방향을 설정한다.
-		Vec2 vDir = (m_Target->GetPos() - GetPos());
-		vDir.Normalize(); // 목적지를 향한 방향정보
-		vDir *= GetVelocity().Length();
-		SetVelocity(vDir);		
+		//TraceTarget_0();
+		TraceTarget_1();
+	}
+
+	// 타겟이 유효하지 않으면
+	else
+	{
+		// 다음 대상을 찾는다.
+		FindTarget();
 	}
 
 	DrawDebugCircle(PEN_TYPE::BLUE, GetPos(), Vec2(m_DetectRange * 2.f, m_DetectRange*2.f), 0.f);
@@ -66,11 +66,35 @@ void CGuidedMissile::FindTarget()
 	}
 }
 
+void CGuidedMissile::TraceTarget_0()
+{
+	// 타겟을 향해서 이동방향을 설정한다.
+	Vec2 vDir = (m_Target->GetPos() - GetPos());
+	vDir.Normalize(); // 목적지를 향한 방향정보
+	vDir *= GetVelocity().Length();
+	SetVelocity(vDir);
+}
+
+void CGuidedMissile::TraceTarget_1()
+{
+	// 타겟을 향해서 힘을 준다.
+	// 1. 타겟을 향한 방향을 알아낸다.
+	Vec2 vDir = m_Target->GetPos() - GetPos();
+	vDir.Normalize();
+	AddForce(vDir * 500.f);
+}
+
+void CGuidedMissile::TraceTarget_2()
+{
+	// 타겟을 향한 방향을 회전시킨다.
+
+}
+
 void CGuidedMissile::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
 {
 	if (_OtherObject->GetName() == L"Monster")
 	{
-		DeleteObject(this);
-		DeleteObject(_OtherObject);
+		//DeleteObject(this);
+		//DeleteObject(_OtherObject);
 	}		
 }

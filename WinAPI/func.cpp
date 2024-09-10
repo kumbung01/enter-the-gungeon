@@ -22,6 +22,22 @@ void DeleteObject(CObj* _DeleteObj)
 	CTaskMgr::GetInst()->AddTask(task);
 }
 
+#include "CObj.h"
+bool IsValid(CObj*& _Object)
+{
+	if (nullptr == _Object)
+	{
+		return false;
+	}	
+	else if (_Object->IsDead())
+	{
+		_Object = nullptr;
+		return false;
+	}
+
+	return true;
+}
+
 void DrawDebugRect(PEN_TYPE _pen, Vec2 _Pos, Vec2 _Scale, float _Duration)
 {
 	tDbgRenderInfo info = {};

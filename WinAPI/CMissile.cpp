@@ -6,7 +6,8 @@
 
 #include "CCollider.h"
 
-CMissile::CMissile()	
+CMissile::CMissile()
+	: m_Mass(1.f)
 {
 	m_Collider = (CCollider*)AddComponent(new CCollider);
 	m_Collider->SetScale(Vec2(15.f, 15.f));
@@ -23,13 +24,24 @@ CMissile::~CMissile()
 
 void CMissile::Tick()
 {
-	Vec2 vPos = GetPos();
-	
-	vPos += m_Velocity * DT;
-	
+	// 누적된 힘을 확인한다.
+	// 누적된 힘에의해서 생겨난 가속도를 계산한다.
+	// F = M * A
+	Vec2 vAccel = m_Force / m_Mass;
+
+	// 가속도에 따른 속도의 변화 적용
+	m_Velocity += vAccel * DT;
+
+
+	// 속도에 따른 이동
+	Vec2 vPos = GetPos();	
+	vPos += m_Velocity * DT;	
 	SetPos(vPos);
 
 	DrawDebugLine(PEN_TYPE::BLUE, GetPos(), GetPos() + m_Velocity * 0.1f, 0.f);
+
+	// 적용중인 힘 리셋
+	m_Force = Vec2(0.f, 0.f);
 }
 
 void CMissile::Render()
