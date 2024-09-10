@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CGuidedMissile.h"
 
+#include "CTimeMgr.h"
 
 #include "CLevelMgr.h"
 #include "CLevel.h"
@@ -23,7 +24,8 @@ void CGuidedMissile::Tick()
 	if (IsValid(m_Target))
 	{
 		//TraceTarget_0();
-		TraceTarget_1();
+		//TraceTarget_1();
+		TraceTarget_2();
 	}
 
 	// 타겟이 유효하지 않으면
@@ -86,8 +88,23 @@ void CGuidedMissile::TraceTarget_1()
 
 void CGuidedMissile::TraceTarget_2()
 {
-	// 타겟을 향한 방향을 회전시킨다.
+	// 타겟을 향한 방향을 회전시킨다
+	Vec2 V = GetVelocity();
+	V.Normalize();
 
+	// 방향 회전 ( 사인 코싸인 합차공식 )
+	Vec2 vRotate = Rotate(V, PI * DT);
+	vRotate *= GetVelocity().Length();
+	SetVelocity(vRotate);
+	
+	// 내적
+	// - 두 방향벡터 사이의 각도를 계산 ( 속도가 향하는 방향, 타겟을 향한 방향, 두 벡터사이의 각도 )
+	// - 정사영, 한 벡터를 다른 벡터로 투영시킨 길이
+	// - 직교행렬 역행렬 구할 때
+
+	// 외적
+	// - 3차원 직교벡터의 방향을 구할 때 --> 유도탄이 회전할 방향(시계 or 반시계)
+	// - 평행사변의 넓이, Intersects 직선이 삼각형을 통과 검사	
 }
 
 void CGuidedMissile::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)

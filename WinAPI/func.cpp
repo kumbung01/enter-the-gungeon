@@ -38,6 +38,16 @@ bool IsValid(CObj*& _Object)
 	return true;
 }
 
+Vec2 Rotate(Vec2 _Dir, float _Angle)
+{
+	_Dir.Normalize();
+
+	Vec2 vRotate = Vec2( cosf(_Angle) * _Dir.x - sinf(_Angle) * _Dir.y
+						, sinf(_Angle) * _Dir.x + cosf(_Angle) * _Dir.y);
+
+	return vRotate;
+}
+
 void DrawDebugRect(PEN_TYPE _pen, Vec2 _Pos, Vec2 _Scale, float _Duration)
 {
 	tDbgRenderInfo info = {};
