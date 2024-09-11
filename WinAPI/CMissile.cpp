@@ -8,6 +8,7 @@
 
 CMissile::CMissile()
 	: m_Mass(1.f)
+	, m_VelocityScale(1.f)
 {
 	m_Collider = (CCollider*)AddComponent(new CCollider);
 	m_Collider->SetScale(Vec2(15.f, 15.f));
@@ -35,7 +36,7 @@ void CMissile::Tick()
 
 	// 속도에 따른 이동
 	Vec2 vPos = GetPos();	
-	vPos += m_Velocity * DT;	
+	vPos += m_Velocity * m_VelocityScale * DT;
 	SetPos(vPos);
 
 	DrawDebugLine(PEN_TYPE::BLUE, GetPos(), GetPos() + m_Velocity * 0.1f, 0.f);

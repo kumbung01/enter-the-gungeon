@@ -101,7 +101,15 @@ void CGuidedMissile::TraceTarget_2()
 	float fTheta = acosf(Dot);
 
 	// 라디안을 60분법으로 변경
-	float Degree = (fTheta * 180.f) / PI;
+	float Degree = fabs((fTheta * 180.f) / PI);
+
+	// 진행 방향과, 목적지를 향한 방향의 각도에 따라서 속도에 배율을 적용시킨다.
+	float Scale = Degree / 90.f;
+	if (1.f < Scale)
+		Scale = 1.f;
+	Scale = 1.f - Scale;
+	Scale = 0.3f + Scale * 0.7f;
+	SetVelocityScale(Scale);
 
 	// 두 벡터의 각도가 0 이 아니면 회전을 한다.
 	if ( !(0.f <= Degree && Degree <= 2.f) )

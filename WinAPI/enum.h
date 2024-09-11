@@ -68,6 +68,14 @@ enum class COMPONENT_TYPE
 	STATEMACHINE,
 };
 
+enum class ASSET_TYPE
+{
+	TEXTURE,	// 이미지
+	SOUND,		// 소리	
+	SPRITE,		// 특정 텍스쳐의 특정 부위
+	FLIPBOOK,	// Sprite 의 집합체
+};
+
 
 enum class DEBUG_SHAPE
 {

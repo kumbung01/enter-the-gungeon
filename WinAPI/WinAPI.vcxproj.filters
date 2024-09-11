@@ -85,6 +85,13 @@
     <ClInclude Include="CGuidedMissile.h">
       <Filter>Game\05. Object\Missile\GuidedMissile</Filter>
     </ClInclude>
+    <ClInclude Include="CAsset.h">
+      <Filter>Game\07. Asset</Filter>
+    </ClInclude>
+    <ClInclude Include="CAssetMgr.h" />
+    <ClInclude Include="CTexture.h">
+      <Filter>Game\07. Asset\1. Texture</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -153,6 +160,13 @@
     <ClCompile Include="CGuidedMissile.cpp">
       <Filter>Game\05. Object\Missile\GuidedMissile</Filter>
     </ClCompile>
+    <ClCompile Include="CAsset.cpp">
+      <Filter>Game\07. Asset</Filter>
+    </ClCompile>
+    <ClCompile Include="CAssetMgr.cpp" />
+    <ClCompile Include="CTexture.cpp">
+      <Filter>Game\07. Asset\1. Texture</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">
@@ -214,6 +228,15 @@
     </Filter>
     <Filter Include="Game\05. Object\Missile\GuidedMissile">
       <UniqueIdentifier>{d1f38a70-7d24-4935-b138-87eeee29ca41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\07. Asset">
+      <UniqueIdentifier>{6d9dbe1d-5943-4610-ab07-928345c3ae01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\03. Manager\07. Asset">
+      <UniqueIdentifier>{87c98fc8-797a-476d-9534-a3553ab869a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\07. Asset\1. Texture">
+      <UniqueIdentifier>{a2c012b6-cddb-4d23-8b99-99dd275c4ac1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

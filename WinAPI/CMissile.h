@@ -8,6 +8,8 @@ class CMissile :
 {
 private:
     Vec2        m_Velocity;
+    float       m_VelocityScale;
+
     CCollider*  m_Collider;
     float       m_Mass;     // Áú·®
 
@@ -18,6 +20,10 @@ private:
 public:
     void SetVelocity(Vec2 _Velocity) { m_Velocity = _Velocity; }
     Vec2 GetVelocity() { return m_Velocity; }
+
+    float GetVelocityScale() { return m_VelocityScale; }
+    void SetVelocityScale(float _Scale) { m_VelocityScale = _Scale; }
+
     CCollider* GetCollider() { return m_Collider; }
 
     void SetMass(float _Mass) { m_Mass = _Mass; }
