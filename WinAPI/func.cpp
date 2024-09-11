@@ -48,6 +48,16 @@ Vec2 Rotate(Vec2 _Dir, float _Angle)
 	return vRotate;
 }
 
+bool GetClockWise(Vec2 _A, Vec2 _B)
+{
+	float F = _A.x* _B.y - _A.y * _B.x;
+
+	if (0.f < F)
+		return true;
+
+	return false;
+}
+
 void DrawDebugRect(PEN_TYPE _pen, Vec2 _Pos, Vec2 _Scale, float _Duration)
 {
 	tDbgRenderInfo info = {};

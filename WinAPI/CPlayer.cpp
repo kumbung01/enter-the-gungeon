@@ -80,7 +80,7 @@ void CPlayer::Tick()
 			CMissile* pMissile = new CGuidedMissile;
 			pMissile->SetPos(vPos + Vec2(0.f, -GetScale().y / 2.f));
 			pMissile->SetScale(20.f, 20.f);
-			pMissile->SetVelocity(Vec2(cosf(PI / 2.f), -sinf(PI / 2.f)) * 200.f);
+			pMissile->SetVelocity(Vec2(cosf(PI / 2.f), -sinf(PI / 2.f)) * 400.f);
 			CreateObject(pMissile, LAYER_TYPE::PLAYER_OBJECT);			
 		}
 	}

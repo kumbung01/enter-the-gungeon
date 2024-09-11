@@ -88,15 +88,35 @@ void CGuidedMissile::TraceTarget_1()
 
 void CGuidedMissile::TraceTarget_2()
 {
-	// 타겟을 향한 방향을 회전시킨다
+	// 타겟을 향한 방향을 마주보도록 회전을 시킨다.
 	Vec2 V = GetVelocity();
 	V.Normalize();
 
-	// 방향 회전 ( 사인 코싸인 합차공식 )
-	Vec2 vRotate = Rotate(V, PI * DT);
-	vRotate *= GetVelocity().Length();
-	SetVelocity(vRotate);
-	
+	// 타겟을 향한 방향을 구한다.
+	Vec2 vDir = m_Target->GetPos() - GetPos();
+	vDir.Normalize();
+
+	// 진행 방향과 타겟을 향한 방향 사이의 각도를 구한다
+	float Dot = V.Dot(vDir);
+	float fTheta = acosf(Dot);
+
+	// 라디안을 60분법으로 변경
+	float Degree = (fTheta * 180.f) / PI;
+
+	// 두 벡터의 각도가 0 이 아니면 회전을 한다.
+	if ( !(0.f <= Degree && Degree <= 2.f) )
+	{
+		float RotateDir = 0.f;
+		if (GetClockWise(V, vDir))
+			RotateDir = 1.f;
+		else
+			RotateDir = -1.f;
+
+		Vec2 vRotate = Rotate(V, RotateDir * PI * DT * 0.5f);
+		vRotate *= GetVelocity().Length();
+		SetVelocity(vRotate);
+	}
+
 	// 내적
 	// - 두 방향벡터 사이의 각도를 계산 ( 속도가 향하는 방향, 타겟을 향한 방향, 두 벡터사이의 각도 )
 	// - 정사영, 한 벡터를 다른 벡터로 투영시킨 길이
@@ -104,14 +124,14 @@ void CGuidedMissile::TraceTarget_2()
 
 	// 외적
 	// - 3차원 직교벡터의 방향을 구할 때 --> 유도탄이 회전할 방향(시계 or 반시계)
-	// - 평행사변의 넓이, Intersects 직선이 삼각형을 통과 검사	
+	// - 평행사변의 넓이, Intersects 직선이 삼각형을 통과 검사
 }
 
 void CGuidedMissile::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
 {
 	if (_OtherObject->GetName() == L"Monster")
 	{
-		//DeleteObject(this);
+		DeleteObject(this);
 		//DeleteObject(_OtherObject);
 	}		
 }
