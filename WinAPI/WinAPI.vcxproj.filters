@@ -88,9 +88,14 @@
     <ClInclude Include="CAsset.h">
       <Filter>Game\07. Asset</Filter>
     </ClInclude>
-    <ClInclude Include="CAssetMgr.h" />
     <ClInclude Include="CTexture.h">
       <Filter>Game\07. Asset\1. Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="CAssetMgr.h">
+      <Filter>Game\03. Manager\07. Asset</Filter>
+    </ClInclude>
+    <ClInclude Include="CPathMgr.h">
+      <Filter>Game\03. Manager\08. PathMgr</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -163,9 +168,14 @@
     <ClCompile Include="CAsset.cpp">
       <Filter>Game\07. Asset</Filter>
     </ClCompile>
-    <ClCompile Include="CAssetMgr.cpp" />
     <ClCompile Include="CTexture.cpp">
       <Filter>Game\07. Asset\1. Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="CAssetMgr.cpp">
+      <Filter>Game\03. Manager\07. Asset</Filter>
+    </ClCompile>
+    <ClCompile Include="CPathMgr.cpp">
+      <Filter>Game\03. Manager\08. PathMgr</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -237,6 +247,9 @@
     </Filter>
     <Filter Include="Game\07. Asset\1. Texture">
       <UniqueIdentifier>{a2c012b6-cddb-4d23-8b99-99dd275c4ac1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\03. Manager\08. PathMgr">
+      <UniqueIdentifier>{93baf8e6-b73c-40a3-aef8-6babe7a2433a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

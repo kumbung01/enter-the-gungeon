@@ -2,6 +2,7 @@
 #include "CTexture.h"
 
 #include "CEngine.h"
+#include "CPathMgr.h"
 
 CTexture::CTexture()
 	: CAsset(ASSET_TYPE::TEXTURE)
@@ -20,8 +21,11 @@ CTexture::~CTexture()
 
 int CTexture::Load(const wstring& _FilePath)
 {
+	wstring strContent = CPathMgr::GetContentPath();
+	strContent += _FilePath;
+
 	// 경로로에 존재하는 이미지 파일을 비트맵 형태로 메모리에 로딩
-	m_hBit = (HBITMAP)LoadImage(nullptr, _FilePath.c_str(), IMAGE_BITMAP, 0, 0, LR_CREATEDIBSECTION | LR_LOADFROMFILE);
+	m_hBit = (HBITMAP)LoadImage(nullptr, strContent.c_str(), IMAGE_BITMAP, 0, 0, LR_CREATEDIBSECTION | LR_LOADFROMFILE);
 
 	// 비트맵을 타겟으로 지정할 DC 생성
 	m_DC = CreateCompatibleDC(CEngine::GetInst()->GetMainDC());

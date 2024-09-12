@@ -37,9 +37,9 @@ CPlayer::CPlayer()
 	//CCollider* pC = (CCollider*)GetComponent(COMPONENT_TYPE::COLLIDER);
 	//CCollider* pC = GetComponent<CCollider>();
 
-	// 절대경로, 객체 중복 로딩 방지	
+	// 절대경로, 객체 중복 로딩 방지
 	m_Texture = new CTexture;
-	m_Texture->Load(L"D:\\JeeHun\\AssortRock NormalClass\\53th\\AR53\\WinAPI\\Fighter.bmp");
+	m_Texture->Load(L"Texture\\Fighter.bmp");
 }
 
 CPlayer::~CPlayer()
