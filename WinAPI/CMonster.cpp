@@ -13,6 +13,7 @@ CMonster::CMonster()
 {
 	m_Collider = (CCollider*)AddComponent(new CCollider);
 	m_Collider->SetScale(Vec2(100.f, 100.f));
+	
 }
 
 CMonster::~CMonster()
