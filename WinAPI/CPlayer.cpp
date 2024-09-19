@@ -17,6 +17,7 @@
 
 #include "CEngine.h"
 #include "CTexture.h"
+#include "CSprite.h"
 
 CPlayer::CPlayer()
 	: m_Speed(200.f)
@@ -33,7 +34,8 @@ CPlayer::CPlayer()
 	AddComponent(m_HitBox);
 
 	// 텍스쳐 로딩하기
-	m_Texture = CAssetMgr::GetInst()->LoadTexture(L"PlayerTexture", L"Texture\\Fighter.bmp");
+	//m_Texture = CAssetMgr::GetInst()->LoadTexture(L"PlayerTexture", L"Texture\\Fighter.bmp");
+	//m_Texture = CAssetMgr::GetInst()->FindTexture(L"Link");
 }
 
 CPlayer::~CPlayer()
@@ -95,17 +97,34 @@ void CPlayer::Tick()
 
 void CPlayer::Render()
 {
-	Vec2 Pos = GetPos();		
-	UINT Width = m_Texture->GetWidth();
-	UINT Height = m_Texture->GetHeight();
+	CSprite* pSprite = CAssetMgr::GetInst()->FindSprite(L"Link_0");
+
+	Vec2 Pos = GetPos();
 	HDC hBackDC = CEngine::GetInst()->GetSecondDC();
 
-	TransparentBlt(hBackDC
-		, Pos.x - (Width / 2)
-		, Pos.y - (Height / 2)
-		, Width, Height
-		, m_Texture->GetDC()
-		, 0, 0, Width, Height, RGB(255, 0, 255));
+	TransparentBlt(   hBackDC
+					, Pos.x - (pSprite->GetSlice().x / 2)
+					, Pos.y - (pSprite->GetSlice().y / 2)
+					, pSprite->GetSlice().x
+					, pSprite->GetSlice().y
+					, pSprite->GetAtlas()->GetDC()
+					, pSprite->GetLeftTop().x
+					, pSprite->GetLeftTop().y
+					, pSprite->GetSlice().x
+					, pSprite->GetSlice().y
+					, RGB(255, 0, 255));
+
+	//Vec2 Pos = GetPos();		
+	//UINT Width = m_Texture->GetWidth();
+	//UINT Height = m_Texture->GetHeight();
+	//HDC hBackDC = CEngine::GetInst()->GetSecondDC();
+
+	//TransparentBlt(hBackDC
+	//	, Pos.x - (Width / 2)
+	//	, Pos.y - (Height / 2)
+	//	, Width, Height
+	//	, m_Texture->GetDC()
+	//	, 0, 0, Width, Height, RGB(255, 0, 255));
 }
 
 void CPlayer::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)

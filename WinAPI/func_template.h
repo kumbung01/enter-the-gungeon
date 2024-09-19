@@ -23,6 +23,24 @@ void Delete_Array(T* (&arr)[ArraySize])
 	}
 }
 
+
+template<typename T1, typename T2>
+void Delete_Map(map<T1, T2>& _map)
+{
+	typename map<T1, T2>::iterator iter = _map.begin();
+
+	for (; iter != _map.end(); ++iter)
+	{
+		delete iter->second;
+	}
+
+	_map.clear();
+}
+
+
+
+
+
 //class CLevel;
 //void Delete_Array(CLevel* (&arr)[5])
 //{

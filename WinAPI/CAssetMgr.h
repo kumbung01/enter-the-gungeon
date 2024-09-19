@@ -2,6 +2,7 @@
 
 class CTexture;
 class CSprite;
+class CFlipbook;
 
 class CAssetMgr
 {
@@ -9,13 +10,11 @@ class CAssetMgr
 private:
 	map<wstring, CTexture*>		m_mapTex;	
 	map<wstring, CSprite*>		m_mapSprite;
-	//map<wstring, CSound*>		m_mapFlipbook;
+	map<wstring, CFlipbook*>	m_mapFlipbook;
 	//map<wstring, CSound*>		m_mapSound;
 
 public:	
 	void Init();
-
-
 
 	CTexture* FindTexture(const wstring& _Key);
 	CTexture* LoadTexture(const wstring& _Key, const wstring& _RelativePath);
@@ -23,6 +22,10 @@ public:
 	CSprite* FindSprite(const wstring& _Key);
 	CSprite* LoadSprite(const wstring& _Key, const wstring& _RelativePath);
 	void AddSprite(const wstring& _Key, CSprite* _Sprite);
+
+	CFlipbook* FindFlipbook(const wstring& _Key);
+	CFlipbook* LoadFlipbook(const wstring& _Key, const wstring& _RelativePath);
+	void AddFlipbook(const wstring& _Key, CFlipbook* _Flipbook);
 
 
 	//CSound* LoadSound();
