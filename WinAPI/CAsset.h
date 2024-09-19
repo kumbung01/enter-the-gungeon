@@ -14,11 +14,16 @@ public:
     const wstring& GetKey() { return m_Key; }
     const wstring& GetRelativePath() { return m_RelativePath; }
 
-public:
+private:
+    void SetKey(const wstring& _Key) { m_Key = _Key; }
+    void SetRelativePath(const wstring& _RelativePath) { m_RelativePath = _RelativePath; }
+
+private:
     virtual int Load(const wstring& _FilePath) = 0;
 
 public:
     CAsset(ASSET_TYPE _Type);
     ~CAsset();
+    friend class CAssetMgr;
 };
 

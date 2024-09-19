@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CEngine.h"
 
+#include "CAssetMgr.h"
 #include "CPathMgr.h"
 #include "CTimeMgr.h"
 #include "CKeyMgr.h"
@@ -75,6 +76,7 @@ int CEngine::Init(HINSTANCE _hInst, POINT _Resolution)
     CPathMgr::Init();
     CTimeMgr::GetInst()->Init();
     CKeyMgr::GetInst()->Init();
+    CAssetMgr::GetInst()->Init();
     CLevelMgr::GetInst()->Init();
 
     // 더블버퍼링을 위한 추가버퍼 생성

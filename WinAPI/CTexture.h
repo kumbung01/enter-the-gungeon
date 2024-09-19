@@ -16,7 +16,7 @@ public:
     UINT GetWidth() { return m_BitmapInfo.bmWidth; }
     UINT GetHeight() { return m_BitmapInfo.bmHeight; }
 
-public:
+private:
     virtual int Load(const wstring& _FilePath) override;
 
 public:

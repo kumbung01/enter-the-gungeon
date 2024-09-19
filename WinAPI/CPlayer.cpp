@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CPlayer.h"
 
+#include "CAssetMgr.h"
 #include "CTimeMgr.h"
 #include "CKeyMgr.h"
 #include "CTaskMgr.h"
@@ -31,15 +32,8 @@ CPlayer::CPlayer()
 
 	AddComponent(m_HitBox);
 
-	// RTTI(RunTime Type Identification(Infomation) ) -> C++ 의 경우 dynamic_cast 가 있다.
-
-	//CCollider* pC = (CCollider*)GetComponent(L"HitBox_01");
-	//CCollider* pC = (CCollider*)GetComponent(COMPONENT_TYPE::COLLIDER);
-	//CCollider* pC = GetComponent<CCollider>();
-
-	// 절대경로, 객체 중복 로딩 방지
-	m_Texture = new CTexture;
-	m_Texture->Load(L"Texture\\Fighter.bmp");
+	// 텍스쳐 로딩하기
+	m_Texture = CAssetMgr::GetInst()->LoadTexture(L"PlayerTexture", L"Texture\\Fighter.bmp");
 }
 
 CPlayer::~CPlayer()
@@ -105,13 +99,6 @@ void CPlayer::Render()
 	UINT Width = m_Texture->GetWidth();
 	UINT Height = m_Texture->GetHeight();
 	HDC hBackDC = CEngine::GetInst()->GetSecondDC();
-
-	/*BitBlt(hBackDC
-		, Pos.x - (Width / 2)
-		, Pos.y - (Height / 2)
-		, Width, Height
-		, m_Texture->GetDC()
-		, 0, 0, SRCCOPY);*/
 
 	TransparentBlt(hBackDC
 		, Pos.x - (Width / 2)
