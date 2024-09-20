@@ -20,7 +20,7 @@ public:
     void AddFlipbook(CFlipbook* _Flipbook) { m_vecFlipbook.push_back(_Flipbook); }
     void AddFlipbook(int _idx, CFlipbook* _Flipbook)
     {
-        if (m_vecFlipbook.size() < _idx)
+        if (m_vecFlipbook.size() <= _idx)
         {
             m_vecFlipbook.resize(_idx + 1);
         }
@@ -40,9 +40,16 @@ public:
 
     bool IsFinish() { return m_Finish; }
 
+    void Reset()
+    {
+        m_Finish = false;
+        m_SpriteIdx = 0;        
+    }
+
 
 public:
     virtual void FinalTick() override;
+    void Render(); 
 
 public:
     CFlipbookPlayer();

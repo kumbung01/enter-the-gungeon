@@ -13,7 +13,8 @@ CAssetMgr::CAssetMgr()
 CAssetMgr::~CAssetMgr()
 {
     Delete_Map(m_mapTex);
-    Delete_Map(m_mapSprite);    
+    Delete_Map(m_mapSprite); 
+    Delete_Map(m_mapFlipbook);
 }
 
 void CAssetMgr::Init()
@@ -43,6 +44,76 @@ void CAssetMgr::Init()
     }
 
     AddFlipbook(L"Link_MOVEDOWN", pFlipbook);
+
+
+    // Sprite 持失馬奄
+    for (int i = 0; i < 10; ++i)
+    {
+        CSprite* pSprite = new CSprite;
+        pSprite->Create(pAtlas, Vec2(120.f * i, 650.f), Vec2(120.f, 130.f));
+
+        wchar_t Key[50] = {};
+        swprintf_s(Key, 50, L"Link_MOVELEFT_%d", i);
+        AddSprite(Key, pSprite);
+    }
+
+    // Flipbook 持失馬奄
+    pFlipbook = new CFlipbook;
+
+    for (int i = 0; i < 10; ++i)
+    {
+        wchar_t Key[50] = {};
+        swprintf_s(Key, 50, L"Link_MOVELEFT_%d", i);
+        pFlipbook->AddSprite(FindSprite(Key));
+    }
+    AddFlipbook(L"Link_MOVELEFT", pFlipbook);
+
+    // Sprite 持失馬奄
+    for (int i = 0; i < 10; ++i)
+    {
+        CSprite* pSprite = new CSprite;
+        pSprite->Create(pAtlas, Vec2(120.f * i, 780.f), Vec2(120.f, 130.f));
+
+        wchar_t Key[50] = {};
+        swprintf_s(Key, 50, L"Link_MOVEUP_%d", i);
+        AddSprite(Key, pSprite);
+    }
+
+    // Flipbook 持失馬奄
+    pFlipbook = new CFlipbook;
+
+    for (int i = 0; i < 10; ++i)
+    {
+        wchar_t Key[50] = {};
+        swprintf_s(Key, 50, L"Link_MOVEUP_%d", i);
+        pFlipbook->AddSprite(FindSprite(Key));
+    }
+    AddFlipbook(L"Link_MOVEUP", pFlipbook);
+
+
+
+    // Sprite 持失馬奄
+    for (int i = 0; i < 10; ++i)
+    {
+        CSprite* pSprite = new CSprite;
+        pSprite->Create(pAtlas, Vec2(120.f * i, 910.f), Vec2(120.f, 130.f));
+
+        wchar_t Key[50] = {};
+        swprintf_s(Key, 50, L"Link_MOVERIGHT_%d", i);
+        AddSprite(Key, pSprite);
+    }
+
+    // Flipbook 持失馬奄
+    pFlipbook = new CFlipbook;
+
+    for (int i = 0; i < 10; ++i)
+    {
+        wchar_t Key[50] = {};
+        swprintf_s(Key, 50, L"Link_MOVERIGHT_%d", i);
+        pFlipbook->AddSprite(FindSprite(Key));
+    }
+
+    AddFlipbook(L"Link_MOVERIGHT", pFlipbook);
 }
 
 CTexture* CAssetMgr::FindTexture(const wstring& _Key)

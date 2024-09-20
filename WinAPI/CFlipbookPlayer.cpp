@@ -4,6 +4,10 @@
 #include "CTimeMgr.h"
 #include "CFlipbook.h"
 
+#include "CEngine.h"
+#include "CSprite.h"
+#include "CTexture.h"
+
 CFlipbookPlayer::CFlipbookPlayer()
 	: CComponent(COMPONENT_TYPE::FLIPBOOKPLAYER)
 	, m_CurFlipbook(nullptr)
@@ -27,10 +31,17 @@ void CFlipbookPlayer::FinalTick()
 		return;
 	}
 
-	CSprite* Sprite = m_CurFlipbook->GetSprite(m_SpriteIdx);
+	if (m_Finish)
+	{	
+		// 반복 재생하기로 했으면 다시 0 번 스프라이트로 인덱스를 변경한다.
+		if (m_Repeat)
+			Reset();
 
-	// Sprite 를 화면에 그린다.
-
+		// 한번 재생이 끝났고(m_Finish), 반복 재생모드가 아니라면
+		// 마지막 프레임을 유지하도록 한다.
+		else
+			return;
+	}	
 
 	// FPS 에 따른 시간체크
 	m_Time += DT;
@@ -40,9 +51,35 @@ void CFlipbookPlayer::FinalTick()
 		++m_SpriteIdx;
 
 		// 마지막 Sprite 에 도달했다면
-		// 1. 반복재생 -> 0 번 인덱스로 변경
-
-		// 2. 한번재생 -> 마지막 스프라이트 인덱스를 유지
-
+		if (m_CurFlipbook->GetMaxSpriteCount() <= m_SpriteIdx)
+		{
+			// Finish 상태 On
+			m_Finish = true;
+			--m_SpriteIdx;
+		}
 	}
+}
+
+void CFlipbookPlayer::Render()
+{
+	if (nullptr == m_CurFlipbook)
+		return;
+
+	CSprite* Sprite = m_CurFlipbook->GetSprite(m_SpriteIdx);
+
+	// Sprite 를 화면에 그린다.
+	HDC hBackDC = CEngine::GetInst()->GetSecondDC();
+	Vec2 vPos = GetOwner()->GetPos();
+
+	TransparentBlt(hBackDC
+		, vPos.x - (Sprite->GetSlice().x / 2)
+		, vPos.y - (Sprite->GetSlice().y / 2)
+		, Sprite->GetSlice().x
+		, Sprite->GetSlice().y
+		, Sprite->GetAtlas()->GetDC()
+		, Sprite->GetLeftTop().x
+		, Sprite->GetLeftTop().y
+		, Sprite->GetSlice().x
+		, Sprite->GetSlice().y
+		, RGB(255, 0, 255));
 }

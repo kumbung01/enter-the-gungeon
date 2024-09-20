@@ -13,6 +13,8 @@ public:
     void AddSprite(CSprite* _Sprite) { m_Sprites.push_back(_Sprite); }
     CSprite* GetSprite(int _Idx) { return m_Sprites[_Idx]; }
 
+    int GetMaxSpriteCount() { return m_Sprites.size(); }
+
 public:
     virtual int Load(const wstring& _RelativePath) override;
 
