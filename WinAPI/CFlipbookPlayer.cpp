@@ -72,8 +72,8 @@ void CFlipbookPlayer::Render()
 	Vec2 vPos = GetOwner()->GetPos();
 
 	TransparentBlt(hBackDC
-		, vPos.x - (Sprite->GetSlice().x / 2)
-		, vPos.y - (Sprite->GetSlice().y / 2)
+		, vPos.x - (Sprite->GetSlice().x / 2) + Sprite->GetOffset().x
+		, vPos.y - (Sprite->GetSlice().y / 2) + Sprite->GetOffset().y
 		, Sprite->GetSlice().x
 		, Sprite->GetSlice().y
 		, Sprite->GetAtlas()->GetDC()
