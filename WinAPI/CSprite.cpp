@@ -27,26 +27,34 @@ int CSprite::Save(const wstring& _RelativePath)
 
 	FILE* File = nullptr;
 	_wfopen_s(&File, strFilePath.c_str(), L"wb");
+	
+	fwrite(&m_LeftTop, sizeof(Vec2), 1, File);
+	fwrite(&m_Slice, sizeof(Vec2), 1, File);
+	fwrite(&m_Offset, sizeof(Vec2), 1, File);
 
 	// 가리키던 Atlas 텍스쳐의 키, 경로를 저장한다.
-	m_Atlas->GetKey();
-	m_Atlas->GetRelativePath();
-
-
-
-	m_LeftTop;
-	m_Slice;
-	m_Offset;
-
-
-
+	SaveAssetRef(m_Atlas, File);
 
 	fclose(File);
 
 	return S_OK;
 }
 
-int CSprite::Load(const wstring& _FilePath)
+int CSprite::Load(const wstring& _RelativePath)
 {
+	wstring strFilePath = CPathMgr::GetContentPath() + _RelativePath + L".sprite";
+
+	FILE* File = nullptr;
+	_wfopen_s(&File, strFilePath.c_str(), L"rb");
+
+	fread(&m_LeftTop, sizeof(Vec2), 1, File);
+	fread(&m_Slice, sizeof(Vec2), 1, File);
+	fread(&m_Offset, sizeof(Vec2), 1, File);
+
+	// 가리키던 Atlas 텍스쳐의 키, 경로를 저장한다.
+	m_Atlas = (CTexture*)LoadAssetRef(File);
+
+	fclose(File);
+
 	return S_OK;
 }

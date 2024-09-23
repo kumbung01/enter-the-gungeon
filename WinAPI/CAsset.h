@@ -13,6 +13,7 @@ private:
 public:
     const wstring& GetKey() { return m_Key; }
     const wstring& GetRelativePath() { return m_RelativePath; }
+    ASSET_TYPE GetAssetType() { return m_Type; }
 
 private:
     void SetKey(const wstring& _Key) { m_Key = _Key; }

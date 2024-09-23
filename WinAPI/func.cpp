@@ -58,14 +58,80 @@ bool GetClockWise(Vec2 _A, Vec2 _B)
 	return false;
 }
 
+#include "CAssetMgr.h"
 #include "CAsset.h"
 void SaveAssetRef(CAsset* _Asset, FILE* _File)
 {
+	// 저장하려는 Asset 이 nullptr 이면 0 하나 저장한다.
+	int Asset = !!_Asset;
+	fwrite(&Asset, sizeof(int), 1, _File);
+	if (!Asset)
+		return;
+
+	// Asset 의 종류를 저장한다.
+	ASSET_TYPE type = _Asset->GetAssetType();
+	fwrite(&type, sizeof(ASSET_TYPE), 1, _File);
+
+	// 저장하려는 Asset 의 Key, Path 를 가져온다.
+	const wstring& strKey = _Asset->GetKey();
+	const wstring& strPath = _Asset->GetRelativePath();
+	
+	// Asset 의 Key, Path 문자열을 저장한다.
+	size_t len = strKey.length();
+	fwrite(&len, sizeof(size_t), 1, _File);
+	fwrite(strKey.c_str(), sizeof(wchar_t), strKey.length(), _File);
+
+	len = strPath.length();
+	fwrite(&len, sizeof(size_t), 1, _File);
+	fwrite(strPath.c_str(), sizeof(wchar_t), strPath.length(), _File);
 }
 
 CAsset* LoadAssetRef(FILE* _File)
 {
-	return nullptr;
+	// 불러오려는 Asset 의 유무를 확인
+	int Asset = 0;
+	fread(&Asset, sizeof(int), 1, _File);
+	if (!Asset)
+		return nullptr;
+
+	// 불러올 Asset 의 종류를 읽어들인다.
+	ASSET_TYPE type;
+	fread(&type, sizeof(ASSET_TYPE), 1, _File);
+
+	// 불러올 Asset 의 키 Path 를 알아낸다.
+	wstring strKey, strPath;	
+
+	wchar_t buffer[255] = {};
+
+	size_t len = 0;
+	fread(&len, sizeof(size_t), 1, _File);
+	fread(buffer, sizeof(wchar_t), len, _File);
+	strKey = buffer;
+
+	wmemset(buffer, 0, 255);	
+		
+	fread(&len, sizeof(size_t), 1, _File);
+	fread(buffer, sizeof(wchar_t), len, _File);
+	strPath = buffer;
+
+	CAsset* pAsset = nullptr;
+	switch (type)
+	{
+	case ASSET_TYPE::TEXTURE:
+		pAsset = (CAsset*)CAssetMgr::GetInst()->LoadTexture(strKey, strPath);
+		break;
+	case ASSET_TYPE::SOUND:
+		//pAsset = CAssetMgr::GetInst()->LoadTexture();
+		break;
+	case ASSET_TYPE::SPRITE:
+		pAsset = (CAsset*)CAssetMgr::GetInst()->LoadSprite(strKey, strPath);
+		break;
+	case ASSET_TYPE::FLIPBOOK:
+		pAsset = (CAsset*)CAssetMgr::GetInst()->LoadFlipbook(strKey, strPath);
+		break;
+	}
+
+	return pAsset;
 }
 
 void DrawDebugRect(PEN_TYPE _pen, Vec2 _Pos, Vec2 _Scale, float _Duration)
