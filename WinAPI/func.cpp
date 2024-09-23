@@ -58,6 +58,16 @@ bool GetClockWise(Vec2 _A, Vec2 _B)
 	return false;
 }
 
+#include "CAsset.h"
+void SaveAssetRef(CAsset* _Asset, FILE* _File)
+{
+}
+
+CAsset* LoadAssetRef(FILE* _File)
+{
+	return nullptr;
+}
+
 void DrawDebugRect(PEN_TYPE _pen, Vec2 _Pos, Vec2 _Scale, float _Duration)
 {
 	tDbgRenderInfo info = {};

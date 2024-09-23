@@ -8,6 +8,9 @@ bool IsValid(CObj*& _Object);
 Vec2 Rotate(Vec2 _Dir, float _Angle);
 bool GetClockWise(Vec2 _A, Vec2 _B);
 
+class CAsset;
+void SaveAssetRef(CAsset* _Asset, FILE* _File);
+CAsset* LoadAssetRef(FILE* _File);
 
 
 void DrawDebugRect(PEN_TYPE _pen, Vec2 _Pos, Vec2 _Scale, float _Duration);

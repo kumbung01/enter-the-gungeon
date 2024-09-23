@@ -16,7 +16,7 @@ public:
     int GetMaxSpriteCount() { return m_Sprites.size(); }
 
 public:
-    //void Save
+    virtual int Save(const wstring& _RelativePath) override;
     virtual int Load(const wstring& _RelativePath) override;
 
 public:

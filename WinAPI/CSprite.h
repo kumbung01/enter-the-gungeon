@@ -8,6 +8,7 @@ class CSprite :
 {
 private:
     CTexture*   m_Atlas;    // 스프라이트가 타겟으로 지정한 아틀라스 텍스쳐
+
     Vec2        m_LeftTop;  // 좌, 상단 픽셀 위치
     Vec2        m_Slice;    // 조각 크기
     Vec2        m_Offset;   // 추가 보정이동
@@ -20,7 +21,9 @@ public:
 
     void SetOffset(Vec2 _Offset) { m_Offset = _Offset; }
 public:
-    virtual int Load(const wstring& _FilePath) override;
+    virtual int Save(const wstring& _RelativePath) override;
+    virtual int Load(const wstring& _RelativePath) override;
+
     void Create(CTexture* _Atlas, Vec2 _LeftTop, Vec2 _Slice);   
 
 public:

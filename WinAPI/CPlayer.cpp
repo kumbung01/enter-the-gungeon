@@ -197,6 +197,10 @@ void CPlayer::CreateFlipbook(const wstring& _FlipbookName, CTexture* _Atlas, Vec
 		wchar_t Key[50] = {};
 		swprintf_s(Key, 50, (_FlipbookName + L"_%d").c_str(), i);
 		CAssetMgr::GetInst()->AddSprite(Key, pSprite);
+
+		wstring strSavePath = L"Sprite\\";
+		strSavePath += pSprite->GetKey();
+		pSprite->Save(strSavePath);
 	}
 
 	// Flipbook 생성하기

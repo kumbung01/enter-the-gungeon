@@ -19,6 +19,7 @@ private:
     void SetRelativePath(const wstring& _RelativePath) { m_RelativePath = _RelativePath; }
 
 private:
+    virtual int Save(const wstring& _FilePath) { return S_OK; }
     virtual int Load(const wstring& _FilePath) = 0;
 
 public:
