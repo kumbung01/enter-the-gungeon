@@ -158,16 +158,14 @@ void CPlayer::CreatePlayerFlipbook()
 	// AtlasTexture
 	CTexture* pAtlas = CAssetMgr::GetInst()->LoadTexture(L"Link", L"Texture\\link_32.bmp");
 
-	CreateFlipbook(L"LINK_IDLEDOWN", pAtlas, Vec2(0.f, 0.f), Vec2(120.f, 130.), 3);
+	/*CreateFlipbook(L"LINK_IDLEDOWN", pAtlas, Vec2(0.f, 0.f), Vec2(120.f, 130.), 3);
 	CreateFlipbook(L"LINK_IDLELEFT", pAtlas, Vec2(0.f, 130.f), Vec2(120.f, 130.), 3);
 	CreateFlipbook(L"LINK_IDLEUP", pAtlas, Vec2(0.f, 260.f), Vec2(120.f, 130.), 1);
 	CreateFlipbook(L"LINK_IDLERIGHT", pAtlas, Vec2(0.f, 390.f), Vec2(120.f, 130.), 3);
 	CreateFlipbook(L"LINK_MOVEDOWN", pAtlas, Vec2(0.f, 520.f), Vec2(120.f, 130.), 10);
 	CreateFlipbook(L"LINK_MOVELEFT", pAtlas, Vec2(0.f, 650.f), Vec2(120.f, 130.), 10);
 	CreateFlipbook(L"LINK_MOVEUP", pAtlas, Vec2(0.f, 780.f), Vec2(120.f, 130.), 10);
-	CreateFlipbook(L"LINK_MOVERIGHT", pAtlas, Vec2(0.f, 910.f), Vec2(120.f, 130.), 10);
-
-
+	CreateFlipbook(L"LINK_MOVERIGHT", pAtlas, Vec2(0.f, 910.f), Vec2(120.f, 130.), 10);*/
 
 	// FlipbookPlayer 컴포넌트 추가하기
 	m_FlipbookPlayer = (CFlipbookPlayer*)AddComponent(new CFlipbookPlayer);
@@ -188,7 +186,7 @@ void CPlayer::CreatePlayerFlipbook()
 void CPlayer::CreateFlipbook(const wstring& _FlipbookName, CTexture* _Atlas, Vec2 _LeftTop, Vec2 _Slice, int MaxFrame)
 {
 	// Sprite 생성하기
-	/*for (int i = 0; i < MaxFrame; ++i)
+	for (int i = 0; i < MaxFrame; ++i)
 	{
 		CSprite* pSprite = new CSprite;
 		pSprite->Create(_Atlas, Vec2(_LeftTop.x + (_Slice.x * i), _LeftTop.y), _Slice);
@@ -200,16 +198,16 @@ void CPlayer::CreateFlipbook(const wstring& _FlipbookName, CTexture* _Atlas, Vec
 		wstring strSavePath = L"Sprite\\";
 		strSavePath += pSprite->GetKey();
 		pSprite->Save(strSavePath);
-	}*/
-
-	for (int i = 0; i < MaxFrame; ++i)
-	{
-		wchar_t Key[50] = {};
-		swprintf_s(Key, 50, (_FlipbookName + L"_%d").c_str(), i);		
-		wstring Path = L"Sprite\\";		
-		Path += Key;
-		CAssetMgr::GetInst()->LoadSprite(Key, Path);
 	}
+
+	//for (int i = 0; i < MaxFrame; ++i)
+	//{
+	//	wchar_t Key[50] = {};
+	//	swprintf_s(Key, 50, (_FlipbookName + L"_%d").c_str(), i);		
+	//	wstring Path = L"Sprite\\";		
+	//	Path += Key;
+	//	CAssetMgr::GetInst()->LoadSprite(Key, Path);
+	//}
 
 
 	// Flipbook 생성하기
@@ -219,9 +217,11 @@ void CPlayer::CreateFlipbook(const wstring& _FlipbookName, CTexture* _Atlas, Vec
 	{
 		wchar_t Key[50] = {};
 		swprintf_s(Key, 50, (_FlipbookName + L"_%d").c_str(), i);
-		pFlipbook->AddSprite(CAssetMgr::GetInst()->FindSprite(Key));
+		pFlipbook->AddSprite(CAssetMgr::GetInst()->FindSprite(Key));		
 	}
 
 	CAssetMgr::GetInst()->AddFlipbook(_FlipbookName, pFlipbook);
+	wstring Path = L"Flipbook\\";
+	pFlipbook->Save(Path + _FlipbookName);
 }
 

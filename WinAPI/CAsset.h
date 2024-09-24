@@ -15,7 +15,8 @@ public:
     const wstring& GetRelativePath() { return m_RelativePath; }
     ASSET_TYPE GetAssetType() { return m_Type; }
 
-private:
+protected:
+    void CheckExt(const wstring& _Ext, wstring& _strFilePath);
     void SetKey(const wstring& _Key) { m_Key = _Key; }
     void SetRelativePath(const wstring& _RelativePath) { m_RelativePath = _RelativePath; }
 

@@ -23,7 +23,14 @@ void CSprite::Create(CTexture* _Atlas, Vec2 _LeftTop, Vec2 _Slice)
 
 int CSprite::Save(const wstring& _RelativePath)
 {
-	wstring strFilePath = CPathMgr::GetContentPath() + _RelativePath + L".sprite";
+	wstring RelativePath = _RelativePath;
+	CheckExt(L".sprite", RelativePath);
+
+	// 에셋이 자신이 어디에 저장되는지를 알게 함
+	SetRelativePath(RelativePath);
+
+	wstring strFilePath = CPathMgr::GetContentPath() + RelativePath;
+	
 
 	FILE* File = nullptr;
 	_wfopen_s(&File, strFilePath.c_str(), L"wb");
@@ -42,7 +49,7 @@ int CSprite::Save(const wstring& _RelativePath)
 
 int CSprite::Load(const wstring& _RelativePath)
 {
-	wstring strFilePath = CPathMgr::GetContentPath() + _RelativePath + L".sprite";
+	wstring strFilePath = CPathMgr::GetContentPath() + _RelativePath;
 
 	FILE* File = nullptr;
 	_wfopen_s(&File, strFilePath.c_str(), L"rb");
