@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CSprite.h"
 
+#include "CAssetMgr.h"
 #include "CPathMgr.h"
 #include "CTexture.h"
 
@@ -31,16 +32,37 @@ int CSprite::Save(const wstring& _RelativePath)
 
 	wstring strFilePath = CPathMgr::GetContentPath() + RelativePath;
 	
-
 	FILE* File = nullptr;
-	_wfopen_s(&File, strFilePath.c_str(), L"wb");
+	_wfopen_s(&File, strFilePath.c_str(), L"w");
 	
-	fwrite(&m_LeftTop, sizeof(Vec2), 1, File);
-	fwrite(&m_Slice, sizeof(Vec2), 1, File);
-	fwrite(&m_Offset, sizeof(Vec2), 1, File);
+	// 가리키던 Atlas 텍스쳐의 키, 경로를 저장한다.	
+	fwprintf_s(File, L"[KEY]\n");
+	fwprintf_s(File, L"%s\n\n", GetKey().c_str());
 
-	// 가리키던 Atlas 텍스쳐의 키, 경로를 저장한다.
-	SaveAssetRef(m_Atlas, File);
+	fwprintf_s(File, L"[PATH]\n");
+	fwprintf_s(File, L"%s\n\n", GetRelativePath().c_str());
+		
+	wstring strAtlasKey, strAtlasPath;
+	if (m_Atlas)
+	{
+		strAtlasKey = m_Atlas->GetKey();
+		strAtlasPath = m_Atlas->GetRelativePath();		
+	}	
+	fwprintf_s(File, L"[ATLAS_KEY]\n");
+	fwprintf_s(File, L"%s\n", strAtlasKey.c_str());
+	fwprintf_s(File, L"[ATLAS_PATH]\n");
+	fwprintf_s(File, L"%s\n\n", strAtlasPath.c_str());
+
+
+	fwprintf_s(File, L"[LEFT_TOP]\n");
+	fwprintf_s(File, L"%d, %d\n\n", (int)m_LeftTop.x, (int)m_LeftTop.y);
+
+	fwprintf_s(File, L"[SLICE]\n");
+	fwprintf_s(File, L"%d, %d\n\n", (int)m_Slice.x, (int)m_Slice.y);
+
+	fwprintf_s(File, L"[OFFSET]\n");
+	fwprintf_s(File, L"%d, %d\n\n", (int)m_Offset.x, (int)m_Offset.y);
+	
 
 	fclose(File);
 
@@ -52,14 +74,66 @@ int CSprite::Load(const wstring& _RelativePath)
 	wstring strFilePath = CPathMgr::GetContentPath() + _RelativePath;
 
 	FILE* File = nullptr;
-	_wfopen_s(&File, strFilePath.c_str(), L"rb");
-
-	fread(&m_LeftTop, sizeof(Vec2), 1, File);
-	fread(&m_Slice, sizeof(Vec2), 1, File);
-	fread(&m_Offset, sizeof(Vec2), 1, File);
+	_wfopen_s(&File, strFilePath.c_str(), L"r");
 
 	// 가리키던 Atlas 텍스쳐의 키, 경로를 저장한다.
-	m_Atlas = (CTexture*)LoadAssetRef(File);
+	wstring AtlasKey, AtlasPath;
+
+	while (true)
+	{
+		wchar_t szBuff[255] = {};
+		if (EOF == fwscanf_s(File, L"%s", szBuff, 255))
+		{
+			break;
+		}
+
+		if (!wcscmp(szBuff, L"[KEY]"))
+		{
+			fwscanf_s(File, L"%s", szBuff, 255);
+			SetKey(szBuff);
+		}
+
+		else if (!wcscmp(szBuff, L"[PATH]"))
+		{
+			fwscanf_s(File, L"%s", szBuff, 255);
+			SetRelativePath(szBuff);
+		}
+
+		else if (!wcscmp(szBuff, L"[ATLAS_KEY]"))
+		{			
+			fwscanf_s(File, L"%s", szBuff, 255);
+			AtlasKey = szBuff;
+		}
+
+		else if (!wcscmp(szBuff, L"[ATLAS_PATH]"))
+		{
+			fwscanf_s(File, L"%s", szBuff, 255);
+			AtlasPath = szBuff;
+			m_Atlas = CAssetMgr::GetInst()->LoadTexture(AtlasKey, AtlasPath);
+		}
+
+		else if (!wcscmp(szBuff, L"[LEFT_TOP]"))
+		{
+			int x = 0, y = 0;
+			fwscanf_s(File, L"%d, %d", &x, &y);
+			m_LeftTop = Vec2(x, y);			
+		}
+
+		else if (!wcscmp(szBuff, L"[SLICE]"))
+		{
+			int x = 0, y = 0;
+			fwscanf_s(File, L"%d, %d", &x, &y);
+			m_Slice = Vec2(x, y);
+		}
+
+		else if (!wcscmp(szBuff, L"[OFFSET]"))
+		{
+			int x = 0, y = 0;
+			fwscanf_s(File, L"%d, %d", &x, &y);
+			m_Offset = Vec2(x, y);
+		}
+	}
+
 
 	fclose(File);
 
