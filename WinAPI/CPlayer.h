@@ -4,6 +4,7 @@
 class CCollider;
 class CTexture;
 class CFlipbookPlayer;
+class CRigidBody;
 
 class CPlayer :
     public CObj
@@ -14,8 +15,9 @@ private:
     float               m_AccTime;  // 시간 누적
     CCollider*          m_HitBox;
     CFlipbookPlayer*    m_FlipbookPlayer;
+    CRigidBody*         m_RigidBody;
 
-    CTexture*   m_Texture;
+    
 
 
 

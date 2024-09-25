@@ -20,6 +20,7 @@
 #include "CTexture.h"
 #include "CFlipbook.h"
 #include "CSprite.h"
+#include "CRigidBody.h"
 
 enum PLAYER_ANIM_STATE
 {
@@ -41,7 +42,7 @@ CPlayer::CPlayer()
 	, m_AccTime(0.f)
 	, m_HitBox(nullptr)
 	, m_FlipbookPlayer(nullptr)
-	, m_Texture(nullptr)
+	, m_RigidBody(nullptr)
 {
 	// Collider 컴포넌트 추가
 	m_HitBox = new CCollider;
@@ -53,11 +54,15 @@ CPlayer::CPlayer()
 
 	// Flipbook 생성 및 등록
 	CreatePlayerFlipbook();
+
+	// RigidBody 컴포넌트 추가
+	m_RigidBody = (CRigidBody*)AddComponent(new CRigidBody);
+	//m_RigidBody->SetMass(1.f);
+	//m_RigidBody->SetMaxSpeed(500.f);
 }
 
 CPlayer::~CPlayer()
-{
-	DELETE(m_Texture);
+{	
 }
 
 void CPlayer::Begin()
@@ -158,18 +163,17 @@ void CPlayer::CreatePlayerFlipbook()
 	// AtlasTexture
 	CTexture* pAtlas = CAssetMgr::GetInst()->LoadTexture(L"Link", L"Texture\\link_32.bmp");
 
-	CreateFlipbook(L"LINK_IDLEDOWN", pAtlas, Vec2(0.f, 0.f), Vec2(120.f, 130.), 3);
+	/*CreateFlipbook(L"LINK_IDLEDOWN", pAtlas, Vec2(0.f, 0.f), Vec2(120.f, 130.), 3);
 	CreateFlipbook(L"LINK_IDLELEFT", pAtlas, Vec2(0.f, 130.f), Vec2(120.f, 130.), 3);
 	CreateFlipbook(L"LINK_IDLEUP", pAtlas, Vec2(0.f, 260.f), Vec2(120.f, 130.), 1);
 	CreateFlipbook(L"LINK_IDLERIGHT", pAtlas, Vec2(0.f, 390.f), Vec2(120.f, 130.), 3);
 	CreateFlipbook(L"LINK_MOVEDOWN", pAtlas, Vec2(0.f, 520.f), Vec2(120.f, 130.), 10);
 	CreateFlipbook(L"LINK_MOVELEFT", pAtlas, Vec2(0.f, 650.f), Vec2(120.f, 130.), 10);
 	CreateFlipbook(L"LINK_MOVEUP", pAtlas, Vec2(0.f, 780.f), Vec2(120.f, 130.), 10);
-	CreateFlipbook(L"LINK_MOVERIGHT", pAtlas, Vec2(0.f, 910.f), Vec2(120.f, 130.), 10);
+	CreateFlipbook(L"LINK_MOVERIGHT", pAtlas, Vec2(0.f, 910.f), Vec2(120.f, 130.), 10);*/
 
 	// FlipbookPlayer 컴포넌트 추가하기
 	m_FlipbookPlayer = (CFlipbookPlayer*)AddComponent(new CFlipbookPlayer);
-
 	
 	m_FlipbookPlayer->AddFlipbook(IDLE_DOWN, CAssetMgr::GetInst()->LoadFlipbook(L"LINK_IDLEDOWN" , L"Flipbook\\LINK_IDLEDOWN.flip" ));
 	m_FlipbookPlayer->AddFlipbook(IDLE_LEFT, CAssetMgr::GetInst()->LoadFlipbook(L"LINK_IDLELEFT",  L"Flipbook\\LINK_IDLELEFT.flip" ));
@@ -188,19 +192,19 @@ void CPlayer::CreatePlayerFlipbook()
 void CPlayer::CreateFlipbook(const wstring& _FlipbookName, CTexture* _Atlas, Vec2 _LeftTop, Vec2 _Slice, int MaxFrame)
 {
 	// Sprite 생성하기
-	for (int i = 0; i < MaxFrame; ++i)
-	{
-		CSprite* pSprite = new CSprite;
-		pSprite->Create(_Atlas, Vec2(_LeftTop.x + (_Slice.x * i), _LeftTop.y), _Slice);
+	//for (int i = 0; i < MaxFrame; ++i)
+	//{
+	//	CSprite* pSprite = new CSprite;
+	//	pSprite->Create(_Atlas, Vec2(_LeftTop.x + (_Slice.x * i), _LeftTop.y), _Slice);
 
-		wchar_t Key[50] = {};
-		swprintf_s(Key, 50, (_FlipbookName + L"_%d").c_str(), i);
-		CAssetMgr::GetInst()->AddSprite(Key, pSprite);
+	//	wchar_t Key[50] = {};
+	//	swprintf_s(Key, 50, (_FlipbookName + L"_%d").c_str(), i);
+	//	CAssetMgr::GetInst()->AddSprite(Key, pSprite);
 
-		wstring strSavePath = L"Sprite\\";
-		strSavePath += pSprite->GetKey();
-		pSprite->Save(strSavePath);
-	}
+	//	wstring strSavePath = L"Sprite\\";
+	//	strSavePath += pSprite->GetKey();
+	//	pSprite->Save(strSavePath);
+	//}
 
 	for (int i = 0; i < MaxFrame; ++i)
 	{
@@ -213,17 +217,17 @@ void CPlayer::CreateFlipbook(const wstring& _FlipbookName, CTexture* _Atlas, Vec
 
 
 	// Flipbook 생성하기
-	CFlipbook* pFlipbook = new CFlipbook;
+	//CFlipbook* pFlipbook = new CFlipbook;
 
-	for (int i = 0; i < MaxFrame; ++i)
-	{
-		wchar_t Key[50] = {};
-		swprintf_s(Key, 50, (_FlipbookName + L"_%d").c_str(), i);
-		pFlipbook->AddSprite(CAssetMgr::GetInst()->FindSprite(Key));		
-	}
+	//for (int i = 0; i < MaxFrame; ++i)
+	//{
+	//	wchar_t Key[50] = {};
+	//	swprintf_s(Key, 50, (_FlipbookName + L"_%d").c_str(), i);
+	//	pFlipbook->AddSprite(CAssetMgr::GetInst()->FindSprite(Key));		
+	//}
 
-	CAssetMgr::GetInst()->AddFlipbook(_FlipbookName, pFlipbook);
-	wstring Path = L"Flipbook\\";
-	pFlipbook->Save(Path + _FlipbookName);
+	//CAssetMgr::GetInst()->AddFlipbook(_FlipbookName, pFlipbook);
+	//wstring Path = L"Flipbook\\";
+	//pFlipbook->Save(Path + _FlipbookName);
 }
 

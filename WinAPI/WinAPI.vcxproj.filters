@@ -106,6 +106,9 @@
     <ClInclude Include="CFlipbookPlayer.h">
       <Filter>Game\06. Component\02. FlipbookPlayer</Filter>
     </ClInclude>
+    <ClInclude Include="CRigidBody.h">
+      <Filter>Game\06. Component\03. RigidBody</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -195,6 +198,9 @@
     <ClCompile Include="CFlipbookPlayer.cpp">
       <Filter>Game\06. Component\02. FlipbookPlayer</Filter>
     </ClCompile>
+    <ClCompile Include="CRigidBody.cpp">
+      <Filter>Game\06. Component\03. RigidBody</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">
@@ -277,6 +283,9 @@
     </Filter>
     <Filter Include="Game\06. Component\02. FlipbookPlayer">
       <UniqueIdentifier>{93915c35-be07-43a9-b0b8-a620a8b96dc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\06. Component\03. RigidBody">
+      <UniqueIdentifier>{4648f219-c025-406b-a14b-d4121c6fe315}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

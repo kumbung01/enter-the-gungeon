@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CFlipbook.h"
 
+#include "CAssetMgr.h"
 #include "CPathMgr.h"
 #include "CSprite.h"
 
@@ -26,14 +27,29 @@ int CFlipbook::Save(const wstring& _RelativePath)
 
     // Sprite 의 Key, RelativePath 를 저장
     FILE* File = nullptr;
-    _wfopen_s(&File, strFilePath.c_str(), L"wb");
+    _wfopen_s(&File, strFilePath.c_str(), L"w");
 
-    size_t SpriteCount = m_Sprites.size();
-    fwrite(&SpriteCount, sizeof(size_t), 1, File);
+    // KEY, Path 저장
+    fwprintf_s(File, L"[KEY]\n");
+    fwprintf_s(File, L"%s\n", GetKey().c_str());
 
-    for (size_t i = 0; i < m_Sprites.size(); ++i)
+    fwprintf_s(File, L"[PATH]\n");
+    fwprintf_s(File, L"%s\n\n", GetRelativePath().c_str());
+
+    // Sprite 개수
+    fwprintf_s(File, L"[SPRITE_COUNT]\n");
+    int SpriteCount = (int)m_Sprites.size();
+    fwprintf_s(File, L"%d\n", SpriteCount);
+
+    // 각각의 Sprite 정보 저장
+    for (int i = 0; i < (int)m_Sprites.size(); ++i)
     {
-        SaveAssetRef(m_Sprites[i], File);
+        fwprintf_s(File, L"[INDEX]\n");
+        fwprintf_s(File, L"%d\n", i);
+        fwprintf_s(File, L"[KEY]\n");
+        fwprintf_s(File, L"%s\n", m_Sprites[i]->GetKey().c_str());
+        fwprintf_s(File, L"[PATH]\n");
+        fwprintf_s(File, L"%s\n\n", m_Sprites[i]->GetRelativePath().c_str());
     }
 
     fclose(File);
@@ -44,20 +60,58 @@ int CFlipbook::Save(const wstring& _RelativePath)
 int CFlipbook::Load(const wstring& _RelativePath)
 {
     wstring strFilePath = CPathMgr::GetContentPath();
-    strFilePath += _RelativePath; 
+    strFilePath += _RelativePath;
 
     // Sprite 의 Key, RelativePath 를 저장
     FILE* File = nullptr;
-    _wfopen_s(&File, strFilePath.c_str(), L"rb");
+    _wfopen_s(&File, strFilePath.c_str(), L"r");
 
-    size_t SpriteCount = 0;
-    fread(&SpriteCount, sizeof(size_t), 1, File);
+    wchar_t Buff[255] = {};
 
-    for (size_t i = 0; i < SpriteCount; ++i)
+    while (true)
     {
-        CSprite* pSprite = (CSprite*)LoadAssetRef(File);
-        m_Sprites.push_back(pSprite);
+        if (EOF == fwscanf_s(File, L"%s", Buff, 255))
+            break;
+
+        wstring strRead = Buff;
+
+        if (strRead == L"[KEY]")
+        {
+            fwscanf_s(File, L"%s", Buff, 255);
+            SetKey(Buff);
+        }
+
+        else if (strRead == L"[PATH]")
+        {
+            fwscanf_s(File, L"%s", Buff, 255);
+            SetRelativePath(Buff);
+        }
+
+        else if (strRead == L"[SPRITE_COUNT]")
+        {
+            int SpriteCount = 0;
+            fwscanf_s(File, L"%d", &SpriteCount);
+            m_Sprites.resize(SpriteCount);
+        }
+
+        else if (strRead == L"[INDEX]")
+        {
+            int index = 0;
+            fwscanf_s(File, L"%d", &index);
+            fwscanf_s(File, L"%s", Buff, 255);
+            fwscanf_s(File, L"%s", Buff, 255);
+
+            wstring SpriteKey = Buff;
+
+            fwscanf_s(File, L"%s", Buff, 255);
+            fwscanf_s(File, L"%s", Buff, 255);
+
+            wstring SpritePath = Buff;
+
+            m_Sprites[index] = CAssetMgr::GetInst()->LoadSprite(SpriteKey, SpritePath);
+        }
     }
+
 
     fclose(File);
 
