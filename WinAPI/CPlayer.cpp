@@ -57,6 +57,7 @@ CPlayer::CPlayer()
 
 	// RigidBody 컴포넌트 추가
 	m_RigidBody = (CRigidBody*)AddComponent(new CRigidBody);
+	m_RigidBody->SetInitialSpeed(200.f);
 	//m_RigidBody->SetMass(1.f);
 	//m_RigidBody->SetMaxSpeed(500.f);
 }
@@ -74,16 +75,22 @@ void CPlayer::Begin()
 
 void CPlayer::Tick()
 {
-	Vec2 vPos = GetPos();
-	
-	if(KEY_TAP(LEFT))
-		m_FlipbookPlayer->Play(MOVE_LEFT, 15.f, true);
+	if (KEY_TAP(LEFT))
+	{
+		m_FlipbookPlayer->Play(MOVE_LEFT, 15.f, true);		
+	}	
 	if (KEY_TAP(RIGHT))
-		m_FlipbookPlayer->Play(MOVE_RIGHT, 15.f, true);
+	{
+		m_FlipbookPlayer->Play(MOVE_RIGHT, 15.f, true);		
+	}		
 	if (KEY_TAP(UP))
-		m_FlipbookPlayer->Play(MOVE_UP, 15.f, true);
+	{
+		m_FlipbookPlayer->Play(MOVE_UP, 15.f, true);		
+	}	
 	if (KEY_TAP(DOWN))
-		m_FlipbookPlayer->Play(MOVE_DOWN, 15.f, true);
+	{
+		m_FlipbookPlayer->Play(MOVE_DOWN, 15.f, true);		
+	}		
 
 	if (KEY_RELEASED(LEFT))
 		m_FlipbookPlayer->Play(IDLE_LEFT, 5.f, true);
@@ -95,13 +102,13 @@ void CPlayer::Tick()
 		m_FlipbookPlayer->Play(IDLE_DOWN, 5.f, true);
 
 	if (KEY_PRESSED(LEFT))
-		vPos.x -= DT * m_Speed;
+		m_RigidBody->AddForce(Vec2(-100.f, 0.f));
 	if (KEY_PRESSED(RIGHT))
-		vPos.x += DT * m_Speed;
+		m_RigidBody->AddForce(Vec2(100.f, 0.f));
 	if (KEY_PRESSED(UP))
-		vPos.y -= DT * m_Speed;
+		m_RigidBody->AddForce(Vec2(0.f, -100.f));
 	if (KEY_PRESSED(DOWN))
-		vPos.y += DT * m_Speed;
+		m_RigidBody->AddForce(Vec2(0.f, 100.f));
 
 	if (KEY_TAP(SPACE))
 	{
@@ -122,7 +129,7 @@ void CPlayer::Tick()
 
 			// 미사일 생성			
 			CMissile* pMissile = new CGuidedMissile;
-			pMissile->SetPos(vPos + Vec2(0.f, -GetScale().y / 2.f));
+			pMissile->SetPos(GetPos() + Vec2(0.f, -GetScale().y / 2.f));
 			pMissile->SetScale(20.f, 20.f);
 			pMissile->SetVelocity(Vec2(cosf(PI / 2.f), -sinf(PI / 2.f)) * 400.f);
 			CreateObject(pMissile, LAYER_TYPE::PLAYER_OBJECT);			
@@ -133,8 +140,6 @@ void CPlayer::Tick()
 	{
 		m_AccTime = 1.f / m_AttSpeed;
 	}
-
-	SetPos(vPos);
 }
 
 void CPlayer::Render()
