@@ -6,6 +6,7 @@
 #include "CPlayer.h"
 #include "CMonster.h"
 #include "CMissile.h"
+#include "CPlatform.h"
 
 #include "CCollisionMgr.h"
 #include "CCollider.h"
@@ -36,9 +37,6 @@ void CLevelMgr::Init()
     pObject->SetPos(vResolution.x / 2.f, vResolution.y / 2.f);
     pObject->SetScale(50.f, 50.f);    
 
-
-
-
     pLevel->AddObject(pObject, LAYER_TYPE::PLAYER);
 
     // Monster 생성
@@ -58,7 +56,10 @@ void CLevelMgr::Init()
     pMonster->SetSpeed(300.f);
     pLevel->AddObject(pMonster, LAYER_TYPE::MONSTER);
 
-
+    // Platform Object 추가
+    CObj* pPlatform = new CPlatform;    
+    pPlatform->SetPos(vResolution.x / 2.f, (vResolution.y * 3.f) / 4.f);
+    pLevel->AddObject(pPlatform, LAYER_TYPE::TILE);
 
     // 충돌 설정
     CCollisionMgr::GetInst()->CollisionCheckClear();

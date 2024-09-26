@@ -109,6 +109,9 @@
     <ClInclude Include="CRigidBody.h">
       <Filter>Game\06. Component\03. RigidBody</Filter>
     </ClInclude>
+    <ClInclude Include="CPlatform.h">
+      <Filter>Game\05. Object\Platform</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -201,6 +204,9 @@
     <ClCompile Include="CRigidBody.cpp">
       <Filter>Game\06. Component\03. RigidBody</Filter>
     </ClCompile>
+    <ClCompile Include="CPlatform.cpp">
+      <Filter>Game\05. Object\Platform</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">
@@ -286,6 +292,12 @@
     </Filter>
     <Filter Include="Game\06. Component\03. RigidBody">
       <UniqueIdentifier>{4648f219-c025-406b-a14b-d4121c6fe315}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\05. Object\Platform">
+      <UniqueIdentifier>{9c733706-251f-4738-8960-b60d09fe4c7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\06. Component\04. TileMap">
+      <UniqueIdentifier>{9cd33749-06c2-4afd-8a29-aa001956cba6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
