@@ -71,6 +71,9 @@ void CFlipbookPlayer::Render()
 	HDC hBackDC = CEngine::GetInst()->GetSecondDC();
 	Vec2 vPos = GetOwner()->GetPos();
 
+	Vec2 LeftTop = Vec2(vPos.x - (Sprite->GetSlice().x / 2) + Sprite->GetOffset().x,
+						vPos.y - (Sprite->GetSlice().y / 2) + Sprite->GetOffset().y);
+
 	TransparentBlt(hBackDC
 		, vPos.x - (Sprite->GetSlice().x / 2) + Sprite->GetOffset().x
 		, vPos.y - (Sprite->GetSlice().y / 2) + Sprite->GetOffset().y

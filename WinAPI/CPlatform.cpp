@@ -2,6 +2,8 @@
 #include "CPlatform.h"
 
 #include "CCollider.h"
+#include "CPlayer.h"
+#include "CRigidBody.h"
 
 CPlatform::CPlatform()
 	: m_Collider(nullptr)
@@ -20,6 +22,11 @@ void CPlatform::Tick()
 
 void CPlatform::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
 {
+	if (_OtherObject->GetName() == L"Player")
+	{
+		CRigidBody* pBody = _OtherObject->GetComponent<CRigidBody>();
+		pBody->SetGround(true);
+	}
 }
 
 void CPlatform::Overlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
@@ -28,4 +35,9 @@ void CPlatform::Overlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _Ot
 
 void CPlatform::EndOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
 {
+	if (_OtherObject->GetName() == L"Player")
+	{
+		CRigidBody* pBody = _OtherObject->GetComponent<CRigidBody>();
+		pBody->SetGround(false);
+	}
 }

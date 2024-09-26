@@ -33,8 +33,8 @@ void CLevelMgr::Init()
 
     // Player 생성
     CObj* pObject = new CPlayer;   
-
-    pObject->SetPos(vResolution.x / 2.f, vResolution.y / 2.f);
+    pObject->SetName(L"Player");
+    pObject->SetPos(vResolution.x / 2.f, 100.f);
     pObject->SetScale(50.f, 50.f);    
 
     pLevel->AddObject(pObject, LAYER_TYPE::PLAYER);
@@ -65,6 +65,7 @@ void CLevelMgr::Init()
     CCollisionMgr::GetInst()->CollisionCheckClear();
     CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER_OBJECT, LAYER_TYPE::MONSTER);
     CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER, LAYER_TYPE::MONSTER);
+    CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER, LAYER_TYPE::TILE);
 
 
     // 생성한 레벨을 START 레벨 이자 현재 재생 중인 레벨로 설정하고
