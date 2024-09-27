@@ -5,6 +5,8 @@
 #include "CPlayer.h"
 #include "CRigidBody.h"
 
+#include "CCamera.h"
+
 CPlatform::CPlatform()
 	: m_Collider(nullptr)
 {
@@ -26,6 +28,7 @@ void CPlatform::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider
 	{
 		CRigidBody* pBody = _OtherObject->GetComponent<CRigidBody>();
 		pBody->SetGround(true);
+		CCamera::GetInst()->Oscillation(0.15f, 5.f, 10.f);
 	}
 }
 

@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "CPlayer.h"
 
+#include "CCamera.h"
 #include "CAssetMgr.h"
 #include "CTimeMgr.h"
 #include "CKeyMgr.h"
@@ -74,6 +75,8 @@ void CPlayer::Begin()
 	m_AccTime = 1.f / m_AttSpeed;
 
 	m_FlipbookPlayer->Play(IDLE_DOWN, 5.f, true);
+
+	CCamera::GetInst()->SetTarget(this);
 }
 
 void CPlayer::Tick()
