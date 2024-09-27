@@ -35,7 +35,7 @@ void CGuidedMissile::Tick()
 		FindTarget();
 	}
 
-	DrawDebugCircle(PEN_TYPE::BLUE, GetPos(), Vec2(m_DetectRange * 2.f, m_DetectRange*2.f), 0.f);
+	DrawDebugCircle(PEN_TYPE::BLUE, GetRenderPos(), Vec2(m_DetectRange * 2.f, m_DetectRange*2.f), 0.f);
 
 	CMissile::Tick();
 }

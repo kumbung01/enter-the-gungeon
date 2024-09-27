@@ -3,6 +3,7 @@
 
 #include "CEngine.h"
 #include "CComponent.h"
+#include "CCamera.h"
 
 CObj::CObj()
 	: m_Pos{}
@@ -34,11 +35,13 @@ void CObj::Render()
 {
 	HDC dc = CEngine::GetInst()->GetSecondDC();
 
+	Vec2 vPos = GetRenderPos();
+
 	Rectangle(dc
-		, m_Pos.x - m_Scale.x / 2
-		, m_Pos.y - m_Scale.y / 2
-		, m_Pos.x + m_Scale.x / 2
-		, m_Pos.y + m_Scale.y / 2);	
+		, vPos.x - m_Scale.x / 2
+		, vPos.y - m_Scale.y / 2
+		, vPos.x + m_Scale.x / 2
+		, vPos.y + m_Scale.y / 2);
 }
 
 CComponent* CObj::AddComponent(CComponent* _Component)
@@ -70,4 +73,9 @@ CComponent* CObj::GetComponent(COMPONENT_TYPE _Type)
 	}
 
 	return nullptr;
+}
+
+Vec2 CObj::GetRenderPos()
+{
+	return CCamera::GetInst()->GetRenderPos(m_Pos);
 }

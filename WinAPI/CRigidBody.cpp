@@ -29,6 +29,9 @@ void CRigidBody::FinalTick()
 		FinalTick_TopView();
 	else
 		FinalTick_BeltScroll();
+
+	// Velocity Debug Render
+	DrawDebugLine(PEN_TYPE::BLUE, GetOwner()->GetRenderPos(), GetOwner()->GetRenderPos() + m_Velocity * 0.3f, 0.f);
 }
 
 void CRigidBody::FinalTick_TopView()
@@ -80,7 +83,7 @@ void CRigidBody::FinalTick_BeltScroll()
 	CheckState();
 
 	// 초기속도 계산
-	//CalcInitSpeed_BeltScroll();
+	CalcInitSpeed_BeltScroll();
 
 	// 마찰력에 따른 속도 감소
 	CalcFriction_BeltScroll();
@@ -104,8 +107,9 @@ void CRigidBody::FinalTick_BeltScroll()
 	vPos += m_Velocity * DT;
 	pObject->SetPos(vPos);
 
-	// 힘 초기화
+	// 초기화
 	m_Force = Vec2(0.f, 0.f);
+	m_Self = false;
 }
 
 void CRigidBody::CheckState()
@@ -121,7 +125,7 @@ void CRigidBody::CheckState()
 
 void CRigidBody::CalcInitSpeed_TopView()
 {
-	if (m_bPrevMove == false && m_bMove == true)
+	if (m_bPrevMove == false && m_bMove == true && m_Self)
 	{
 		Vec2 vDir = m_Velocity;
 		vDir.Normalize();
@@ -131,12 +135,12 @@ void CRigidBody::CalcInitSpeed_TopView()
 
 void CRigidBody::CalcInitSpeed_BeltScroll()
 {
-	/*if (m_bPrevMove == false && m_bMove == true)
+	if (m_bPrevMove == false && m_bMove == true && m_Self)
 	{
 		Vec2 vDir = m_VelocityX;
 		vDir.Normalize();
 		m_VelocityX += vDir * m_InitialSpeed;
-	}*/
+	}
 }
 
 void CRigidBody::CalcFriction_TopView()

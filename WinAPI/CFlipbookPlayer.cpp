@@ -69,7 +69,7 @@ void CFlipbookPlayer::Render()
 
 	// Sprite 를 화면에 그린다.
 	HDC hBackDC = CEngine::GetInst()->GetSecondDC();
-	Vec2 vPos = GetOwner()->GetPos();
+	Vec2 vPos = GetOwner()->GetRenderPos();
 
 	Vec2 LeftTop = Vec2(vPos.x - (Sprite->GetSlice().x / 2) + Sprite->GetOffset().x,
 						vPos.y - (Sprite->GetSlice().y / 2) + Sprite->GetOffset().y);

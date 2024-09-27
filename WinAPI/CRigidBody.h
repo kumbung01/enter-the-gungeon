@@ -12,6 +12,8 @@ class CRigidBody :
 {
 private:
     Vec2            m_Force;        // 방향, 힘의 크기
+    bool            m_Self;         // 힘을 준 주체가 자기자신인지 확인
+
     Vec2            m_Velocity;     // 방향, 속력
     float           m_Mass;         // F = M x A
     float           m_InitialSpeed; // 초기 이동속력
@@ -32,7 +34,7 @@ private:
 
 public:
     Vec2 GetForce() { return m_Force; }
-    void AddForce(Vec2 _Force) { m_Force += _Force; }
+    void AddForce(Vec2 _Force, bool _Self = false) { m_Force += _Force; m_Self = _Self; }
     
     float GetMass() { return m_Mass; }
     void SetMass(float _Mass) { m_Mass = _Mass; }

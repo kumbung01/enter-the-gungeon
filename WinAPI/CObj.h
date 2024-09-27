@@ -9,6 +9,7 @@ class CObj :
 {
 private:
     Vec2                m_Pos;
+    Vec2                m_PrevPos;
     Vec2                m_Scale;
     vector<CComponent*> m_Component;
     LAYER_TYPE          m_LayerType;
@@ -33,6 +34,7 @@ public:
     void SetScale(float _x, float _y) { m_Scale = Vec2(_x, _y); }
 
     Vec2 GetPos() { return m_Pos; }
+    Vec2 GetRenderPos();
     Vec2 GetScale() { return m_Scale; }
     LAYER_TYPE GetLayerType() { return m_LayerType; }
 

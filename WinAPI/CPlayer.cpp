@@ -105,9 +105,9 @@ void CPlayer::Tick()
 		m_FlipbookPlayer->Play(IDLE_DOWN, 5.f, true);*/
 
 	if (KEY_PRESSED(LEFT))
-		m_RigidBody->AddForce(Vec2(-1000.f, 0.f));
+		m_RigidBody->AddForce(Vec2(-1000.f, 0.f), true);
 	if (KEY_PRESSED(RIGHT))
-		m_RigidBody->AddForce(Vec2(1000.f, 0.f));
+		m_RigidBody->AddForce(Vec2(1000.f, 0.f), true);
 	/*if (KEY_PRESSED(UP))
 		m_RigidBody->AddForce(Vec2(0.f, -1000.f));
 	if (KEY_PRESSED(DOWN))

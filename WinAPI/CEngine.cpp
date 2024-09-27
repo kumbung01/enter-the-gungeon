@@ -10,6 +10,7 @@
 #include "CDbgRender.h"
 #include "CCollisionMgr.h"
 #include "CSelectGDI.h"
+#include "CCamera.h"
 
 CEngine::CEngine()
     : m_hInst(nullptr)
@@ -78,6 +79,7 @@ int CEngine::Init(HINSTANCE _hInst, POINT _Resolution)
     CKeyMgr::GetInst()->Init();
     CAssetMgr::GetInst()->Init();
     CLevelMgr::GetInst()->Init();
+    CCamera::GetInst()->Init();
 
     // 더블버퍼링을 위한 추가버퍼 생성
     CreateSecondBuffer();
@@ -109,6 +111,7 @@ void CEngine::Progress()
     CTimeMgr::GetInst()->Tick(); // DT 계산
     CKeyMgr::GetInst()->Tick();  // 각 키의 상태
     CDbgRender::GetInst()->Tick();
+    CCamera::GetInst()->Tick();
 
     // 레벨 실행
     CLevelMgr::GetInst()->Progress();

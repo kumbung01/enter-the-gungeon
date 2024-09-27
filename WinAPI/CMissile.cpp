@@ -39,7 +39,7 @@ void CMissile::Tick()
 	vPos += m_Velocity * m_VelocityScale * DT;
 	SetPos(vPos);
 
-	DrawDebugLine(PEN_TYPE::BLUE, GetPos(), GetPos() + m_Velocity * 0.1f, 0.f);
+	DrawDebugLine(PEN_TYPE::BLUE, GetRenderPos(), GetRenderPos() + m_Velocity * 0.1f, 0.f);
 
 	// 적용중인 힘 리셋
 	m_Force = Vec2(0.f, 0.f);
@@ -49,7 +49,7 @@ void CMissile::Render()
 {
 	HDC dc = CEngine::GetInst()->GetSecondDC();
 
-	Vec2 vPos = GetPos();
+	Vec2 vPos = GetRenderPos();
 	Vec2 vScale = GetScale();
 
 	Ellipse(dc, vPos.x - vScale.x / 2.f, vPos.y - vScale.y / 2
