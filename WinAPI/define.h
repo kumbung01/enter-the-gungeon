@@ -29,3 +29,5 @@
 #define DELETE(p) if(p != nullptr) {delete p; p = nullptr;}
 
 #define PI 3.1515926535f
+
+#define TILE_SIZE 64

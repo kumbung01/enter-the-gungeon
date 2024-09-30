@@ -7,6 +7,7 @@
 #include "CMonster.h"
 #include "CMissile.h"
 #include "CPlatform.h"
+#include "CMap.h"
 
 #include "CCollisionMgr.h"
 #include "CCollider.h"
@@ -60,6 +61,12 @@ void CLevelMgr::Init()
     CObj* pPlatform = new CPlatform;    
     pPlatform->SetPos(vResolution.x / 2.f, (vResolution.y * 3.f) / 4.f);
     pLevel->AddObject(pPlatform, LAYER_TYPE::TILE);
+
+
+    // TileMap Object 추가
+    CObj* pTileMap = new CMap;
+    pTileMap->SetPos(Vec2(0.f, 0.f));
+    pLevel->AddObject(pTileMap, LAYER_TYPE::TILE);
 
     // 충돌 설정
     CCollisionMgr::GetInst()->CollisionCheckClear();

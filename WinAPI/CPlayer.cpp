@@ -76,7 +76,7 @@ void CPlayer::Begin()
 
 	m_FlipbookPlayer->Play(IDLE_DOWN, 5.f, true);
 
-	CCamera::GetInst()->SetTarget(this);
+	//CCamera::GetInst()->SetTarget(this);
 }
 
 void CPlayer::Tick()
