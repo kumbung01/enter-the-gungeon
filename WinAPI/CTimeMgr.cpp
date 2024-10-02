@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "CTimeMgr.h"
 
+#include "CEngine.h"
+
 CTimeMgr::CTimeMgr()
 	: m_Frequency{}
 	, m_PrevCount{}
@@ -35,12 +37,16 @@ void CTimeMgr::Tick()
 
 	m_PrevCount = m_CurCount;
 
-
 	++m_FPS;
 	m_Time += m_DT;
 
 	if (1.f <= m_Time)
 	{
-		m_Time -= 1.f;		
+		wchar_t buff[255] = {};
+		swprintf_s(buff, 255, L"FPS : %d, DeltaTime : %f", m_FPS, m_DT);
+		SetWindowText(CEngine::GetInst()->GetMainWndHwnd(), buff);
+
+		m_FPS = 0;
+		m_Time -= 1.f;
 	}
 }

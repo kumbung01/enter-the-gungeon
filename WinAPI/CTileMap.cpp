@@ -46,18 +46,24 @@ void CTileMap::Render()
 	Vec2 OwnerPos = GetOwner()->GetRenderPos();
 	HDC dc = CEngine::GetInst()->GetSecondDC();
 
-	// N 번 인덱스 타일 이미지를 모든 타일칸에 렌더링한다.
-	int ImgIdx = 47;
-	int ImgRow = ImgIdx / m_AtlasTileCol; //  1 행
-	int ImgCol = ImgIdx % m_AtlasTileCol; //   6 열
-
-	if (ImgIdx < 0 || m_AtlasTileCol * m_AtlasTileRow <= ImgIdx)
-		return;
-
 	for (int Row = 0; Row < m_Row; ++Row)
 	{
 		for (int Col = 0; Col < m_Col; ++Col)
 		{
+			// 반복문 회차에 맞는 행렬에 대해서 이게 몇번째 타일정보인지 1차원 인덱스로 변환
+			// 해당 타일정보에 접근한다.
+			int TileIdx = m_Col * Row + Col;
+			int ImgIdx = m_vecTileInfo[TileIdx].ImgIdx;
+
+			// 해당 타일의 ImgIdx 가 -1 인 경우, Blank Tile
+			if (ImgIdx == -1)
+				continue;
+
+			int ImgRow = ImgIdx / m_AtlasTileCol; //  1 행
+			int ImgCol = ImgIdx % m_AtlasTileCol; //   6 열
+
+			assert(!(ImgIdx < 0 || m_AtlasTileCol * m_AtlasTileRow <= ImgIdx));
+
 			BitBlt(dc
 				 , (int)OwnerPos.x + Col * TILE_SIZE
 				 , (int)OwnerPos.y + Row * TILE_SIZE
@@ -77,10 +83,8 @@ void CTileMap::SetRowCol(int Row, int Col)
 	if(m_vecTileInfo.size() < m_Row * m_Col)
 		m_vecTileInfo.resize(m_Row * m_Col);
 
-	for (int i = 0; i < m_Row * m_Col; ++i)
-	{
+	for (int i = 0; i < m_vecTileInfo.size(); ++i)
 		m_vecTileInfo[i].ImgIdx = 1;
-	}	
 }
 
 void CTileMap::SetAtlasTexture(CTexture* _Atlas)

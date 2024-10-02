@@ -9,7 +9,7 @@ CMap::CMap()
 	: m_TileMap(nullptr)
 {
 	m_TileMap = (CTileMap*)AddComponent(new CTileMap);
-	m_TileMap->SetRowCol(5, 5);
+	m_TileMap->SetRowCol(100, 100);
 	m_TileMap->SetAtlasTexture(CAssetMgr::GetInst()->LoadTexture(L"TileMapAtlas", L"Texture\\TILE.bmp"));
 }
 
