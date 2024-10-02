@@ -18,12 +18,9 @@ private:
     // 각 타일마다 자신이 원하는 이미지를 고를 수 있어야함
     vector<tTile>   m_vecTileInfo;
 
-
-
 public:
     void SetRowCol(int Row, int Col);
-    void SetAtlasTexture(CTexture* _Atlas);
-    
+    void SetAtlasTexture(CTexture* _Atlas);    
 
 public:
     virtual void FinalTick() override;

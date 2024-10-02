@@ -4,6 +4,8 @@
 #include "CEngine.h"
 #include "CTexture.h"
 
+#include "CCamera.h"
+
 CTileMap::CTileMap()
 	: CComponent(COMPONENT_TYPE::TILEMAP)
 	, m_Col(1)
@@ -43,12 +45,38 @@ void CTileMap::Render()
 	if (nullptr == m_Atlas)
 		return;
 
-	Vec2 OwnerPos = GetOwner()->GetRenderPos();
+	Vec2 OwnerRenderPos = GetOwner()->GetRenderPos();
 	HDC dc = CEngine::GetInst()->GetSecondDC();
 
-	for (int Row = 0; Row < m_Row; ++Row)
+	// 카메라 영역 안에 들어오는 행, 열을 계산하기
+	Vec2 vCamLook = CCamera::GetInst()->GetLookAt();
+	Vec2 vResolution = CEngine::GetInst()->GetResolution();
+	Vec2 vCamLeftTop = vCamLook - (vResolution / 2.f);
+	Vec2 vCamRightBot = vCamLook + (vResolution / 2.f);
+
+	Vec2 vOwnerPos = GetOwner()->GetPos();
+	vCamLeftTop = vCamLeftTop - vOwnerPos;
+
+	int LeftTopCol = vCamLeftTop.x / TILE_SIZE;
+	int LeftTopRow = vCamLeftTop.y / TILE_SIZE;
+
+	if (LeftTopCol < 0)
+		LeftTopCol = 0;
+	if(LeftTopRow < 0)
+		LeftTopRow = 0;
+
+	vCamRightBot = vCamRightBot - vOwnerPos;
+	int RightBotCol = (vCamRightBot.x / TILE_SIZE) + 1;
+	int RightBotRow = (vCamRightBot.y / TILE_SIZE) + 1;
+
+	if (m_Col < RightBotCol)
+		RightBotCol = m_Col;
+	if (m_Row < RightBotRow)
+		RightBotRow = m_Row;
+
+	for (int Row = LeftTopRow; Row < RightBotRow; ++Row)
 	{
-		for (int Col = 0; Col < m_Col; ++Col)
+		for (int Col = LeftTopCol; Col < RightBotCol; ++Col)
 		{
 			// 반복문 회차에 맞는 행렬에 대해서 이게 몇번째 타일정보인지 1차원 인덱스로 변환
 			// 해당 타일정보에 접근한다.
@@ -65,8 +93,8 @@ void CTileMap::Render()
 			assert(!(ImgIdx < 0 || m_AtlasTileCol * m_AtlasTileRow <= ImgIdx));
 
 			BitBlt(dc
-				 , (int)OwnerPos.x + Col * TILE_SIZE
-				 , (int)OwnerPos.y + Row * TILE_SIZE
+				 , (int)OwnerRenderPos.x + Col * TILE_SIZE
+				 , (int)OwnerRenderPos.y + Row * TILE_SIZE
 				 , TILE_SIZE, TILE_SIZE
 				 , m_Atlas->GetDC()
 				 , ImgCol * TILE_SIZE, ImgRow * TILE_SIZE
