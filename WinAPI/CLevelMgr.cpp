@@ -74,7 +74,6 @@ void CLevelMgr::Init()
     CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER, LAYER_TYPE::MONSTER);
     CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER, LAYER_TYPE::TILE);
 
-
     // 생성한 레벨을 START 레벨 이자 현재 재생 중인 레벨로 설정하고
     // Begin 을 호출한다.
     m_CurLevel = m_arrLevel[(UINT)LEVEL_TYPE::START] = pLevel;
