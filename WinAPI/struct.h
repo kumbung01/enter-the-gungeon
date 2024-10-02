@@ -95,3 +95,9 @@ struct tDbgRenderInfo
 	float			Duration;	// 표시 시간
 	float			Time;		// 진행 시간
 }; 
+
+
+struct tTile
+{
+	int ImgIdx;
+};

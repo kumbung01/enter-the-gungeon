@@ -7,20 +7,22 @@ class CTileMap :
     public CComponent
 {
 private:
-    int         m_Col;              // 타일 열 개수
-    int         m_Row;              // 타일 행 개수    
+    int             m_Col;              // 타일 열 개수
+    int             m_Row;              // 타일 행 개수    
 
-    CTexture*   m_Atlas;
-    int         m_AtlasTileCol;     // 아틀라스 텍스쳐 안에 있는 타일 열 개수
-    int         m_AtlasTileRow;     // 아틀라스 텍스쳐 안에 있는 타일 행 개수
-    Vec2        m_AtlasResolution;  // 아틀라스 해상도
+    CTexture*       m_Atlas;
+    int             m_AtlasTileCol;     // 아틀라스 텍스쳐 안에 있는 타일 열 개수
+    int             m_AtlasTileRow;     // 아틀라스 텍스쳐 안에 있는 타일 행 개수
+    Vec2            m_AtlasResolution;  // 아틀라스 해상도
+
+    // 각 타일마다 자신이 원하는 이미지를 고를 수 있어야함
+    vector<tTile>   m_vecTileInfo;
+
+
 
 public:
-    void SetRowCol(int Row, int Col) { m_Row = Row, m_Col = Col; }
+    void SetRowCol(int Row, int Col);
     void SetAtlasTexture(CTexture* _Atlas);
-    
-        
-    
     
 
 public:
