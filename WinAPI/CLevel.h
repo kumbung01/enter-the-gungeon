@@ -17,10 +17,12 @@ public:
     //  Tcik        : 매 프레임마다 Object 들이 수행할 작업
     //  FinalTick   : 매 프레임마다 Object 의 Component 들이 수행할 작업
     //  Render      : 매 프레임마다 Object 가 화면에 그려질 때    
-    void Begin();
-    void Tick();
-    void FinalTick();
-    void Render();    
+    //  End         : 레벨이 종료될때 호출되는 함수
+    virtual void Begin(); 
+    virtual void Tick();
+    virtual void FinalTick();
+    virtual void Render();
+    virtual void End() = 0; 
 
 public:
     void AddObject(CObj* _Object, LAYER_TYPE _Type);
@@ -30,7 +32,9 @@ public:
     void RegisterCollider(CCollider* _Collider, LAYER_TYPE _Type) { m_vecCollider[(UINT)_Type].push_back(_Collider); }
     const vector<CCollider*>& GetColliders(LAYER_TYPE _Type) { return m_vecCollider[(UINT)_Type]; }
 
-
+protected:
+    void DeleteObject(int _LayerIdx);
+    void DeleteAllObject();
 
 public:
     CLevel();

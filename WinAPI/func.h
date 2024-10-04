@@ -2,6 +2,8 @@
 
 void CreateObject(class CObj* _NewObject, LAYER_TYPE _Layer);
 void DeleteObject(CObj* _DeleteObj);
+void ChangeLevel(LEVEL_TYPE _NextLevel);
+
 
 bool IsValid(CObj*& _Object);
 

@@ -30,6 +30,9 @@ private:
     Vec2            m_GravityAccel; // 중력 가속도
     bool            m_bGround;      // 땅위에 서있는지
 
+    int             m_JumpStack;
+    int             m_MaxJumpStack;
+
     RIGIDBODY_MODE  m_Mode;         // 동작 모드
 
 public:
@@ -55,7 +58,14 @@ public:
     Vec2 GetGravityAccel() { return m_GravityAccel; }
 
     bool IsGround() { return m_bGround; }
-    void SetGround(bool _Ground) { m_bGround = _Ground; }
+    void SetGround(bool _Ground) {
+        m_bGround = _Ground; 
+
+        if (m_bGround)
+        {
+            m_JumpStack = m_MaxJumpStack;
+        }
+    }
 
     void SetJumpVelocity(Vec2 _Veloticy) { m_JumpVelocity = _Veloticy; }
 

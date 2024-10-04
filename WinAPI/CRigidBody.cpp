@@ -14,6 +14,8 @@ CRigidBody::CRigidBody()
 	, m_bMove(false)
 	, m_GravityAccel(Vec2(0.f, 980.f))
 	, m_Mode(RIGIDBODY_MODE::TOPVIEW)
+	, m_JumpStack(1)
+	, m_MaxJumpStack(3)
 {
 
 }
@@ -199,9 +201,11 @@ void CRigidBody::CalcMaxSpeed_BeltScroll()
 
 void CRigidBody::Jump()
 {
-	if (RIGIDBODY_MODE::TOPVIEW == m_Mode || !m_bGround)
+	if (RIGIDBODY_MODE::TOPVIEW == m_Mode || m_JumpStack <= 0)
 		return;
 
-	m_VelocityY += m_JumpVelocity;
+	m_VelocityY = m_JumpVelocity;
 	m_bGround = false;
+
+	--m_JumpStack;
 }

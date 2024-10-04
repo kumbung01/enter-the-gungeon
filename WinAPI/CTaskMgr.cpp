@@ -49,7 +49,10 @@ void CTaskMgr::Tick()
 		}
 			break;
 		case TASK_TYPE::CHANGE_LEVEL:
-
+		{
+			LEVEL_TYPE eNextLevel = (LEVEL_TYPE)m_Task[i].Param0;
+			CLevelMgr::GetInst()->ChangeLevel(eNextLevel);
+		}
 
 			break;	
 		}

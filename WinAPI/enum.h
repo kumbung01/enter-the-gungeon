@@ -23,8 +23,8 @@ enum class LEVEL_TYPE
 {
 	START,
 	STAGE_0,
-	STATE_1,
-	STATE_2,
+	STAGE_1,
+	STAGE_2,
 	EDITOR,
 
 	END,

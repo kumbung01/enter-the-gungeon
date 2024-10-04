@@ -82,3 +82,24 @@ void CLevel::AddObject(CObj* _Object, LAYER_TYPE _Type)
 	m_vecObjects[(UINT)_Type].push_back(_Object);
 	_Object->m_LayerType = _Type; // 오브젝트의 소속 레이어를 알려줌
 }
+
+void CLevel::DeleteObject(int _LayerIdx)
+{	
+	for (size_t i = 0; i < m_vecObjects[_LayerIdx].size(); ++i)
+	{
+		if (m_vecObjects[_LayerIdx][i]->IsDead())
+			continue;
+
+		delete m_vecObjects[_LayerIdx][i];
+	}	
+
+	m_vecObjects[_LayerIdx].clear();
+}
+
+void CLevel::DeleteAllObject()
+{
+	for (int i = 0; i < (int)LAYER_TYPE::END; ++i)
+	{
+		DeleteObject(i);
+	}
+}

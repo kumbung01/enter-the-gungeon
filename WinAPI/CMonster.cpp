@@ -55,3 +55,14 @@ void CMonster::Render()
 	Ellipse(dc, vPos.x - vScale.x / 2.f, vPos.y - vScale.y / 2
 		, vPos.x + vScale.x / 2.f, vPos.y + vScale.y / 2.f );
 }
+
+
+
+void CMonster::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
+{
+	if (_OtherObject->GetName() == L"Player")
+	{
+		// 플레이어랑 부딪히면 다음 스테이지로 넘어간다.
+		ChangeLevel(LEVEL_TYPE::EDITOR);
+	}
+}

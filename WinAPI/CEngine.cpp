@@ -132,14 +132,8 @@ void CEngine::Progress()
     // 디버그 정보 렌더링
     CDbgRender::GetInst()->Render();
 
-    TextOut(m_hSecondDC, 10, 10, CPathMgr::GetContentPath(), wcslen(CPathMgr::GetContentPath()));
-
-
-
-
     // SecondBitmap 있는 장면을 MainWindowBitmap 으로 복사해온다.
     BitBlt(m_hDC, 0, 0, (int)m_Resolution.x, (int)m_Resolution.y, m_hSecondDC, 0, 0, SRCCOPY);
-
 
     // TaskMgr 동작
     CTaskMgr::GetInst()->Tick();

@@ -121,6 +121,12 @@
     <ClInclude Include="CMap.h">
       <Filter>Game\05. Object\Map</Filter>
     </ClInclude>
+    <ClInclude Include="CLevel_Editor.h">
+      <Filter>Game\04. Level\Level_Editor</Filter>
+    </ClInclude>
+    <ClInclude Include="CLevel_Start.h">
+      <Filter>Game\04. Level\Level_Start</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -225,6 +231,12 @@
     <ClCompile Include="CMap.cpp">
       <Filter>Game\05. Object\Map</Filter>
     </ClCompile>
+    <ClCompile Include="CLevel_Editor.cpp">
+      <Filter>Game\04. Level\Level_Editor</Filter>
+    </ClCompile>
+    <ClCompile Include="CLevel_Start.cpp">
+      <Filter>Game\04. Level\Level_Start</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">
@@ -322,6 +334,12 @@
     </Filter>
     <Filter Include="Game\05. Object\Map">
       <UniqueIdentifier>{41c04507-f2a4-4b7a-b2aa-d1905298950b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\04. Level\Level_Editor">
+      <UniqueIdentifier>{38f42483-fa84-408a-a87f-b2d5b023a947}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\04. Level\Level_Start">
+      <UniqueIdentifier>{917814d0-fe1e-4a73-ac74-aeb8c1df710e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

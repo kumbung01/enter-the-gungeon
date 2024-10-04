@@ -22,6 +22,16 @@ void DeleteObject(CObj* _DeleteObj)
 	CTaskMgr::GetInst()->AddTask(task);
 }
 
+void ChangeLevel(LEVEL_TYPE _NextLevel)
+{
+	tTask task = {};
+
+	task.Type = TASK_TYPE::CHANGE_LEVEL;
+	task.Param0 = (DWORD_PTR)_NextLevel;
+
+	CTaskMgr::GetInst()->AddTask(task);
+}
+
 #include "CObj.h"
 bool IsValid(CObj*& _Object)
 {
