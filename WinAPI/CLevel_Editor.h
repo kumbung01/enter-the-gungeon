@@ -5,8 +5,16 @@
 class CLevel_Editor :
     public CLevel
 {
+private:
+    class CMap* m_MapObj;
+    HMENU       m_hMenu;
+
+
+
 public:
     virtual void Begin() override;
+    virtual void Tick() override;
+    virtual void Render() override;
     virtual void End() override;
 
 public:

@@ -74,6 +74,13 @@ void CLevel_Start::Begin()
     CLevel::Begin();
 }
 
+void CLevel_Start::Render()
+{
+    CLevel::Render();
+
+    TextOut(CEngine::GetInst()->GetSecondDC(), 10, 10, L"Start Level", wcslen(L"Start Level"));
+}
+
 void CLevel_Start::End()
 {
     DeleteAllObject();

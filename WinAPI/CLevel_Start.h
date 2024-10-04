@@ -6,6 +6,7 @@ class CLevel_Start :
 {
 public:
     virtual void Begin() override;
+    virtual void Render() override;
     virtual void End() override;
 
 public:

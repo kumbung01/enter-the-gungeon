@@ -31,7 +31,7 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
     wcex.hIcon          = LoadIcon(hInstance, MAKEINTRESOURCE(IDI_WINAPI));
     wcex.hCursor        = LoadCursor(nullptr, IDC_ARROW);
     wcex.hbrBackground  = (HBRUSH)(COLOR_WINDOW + 1);
-    wcex.lpszMenuName   = nullptr;//MAKEINTRESOURCEW(IDC_WINAPI);
+    wcex.lpszMenuName   = nullptr;// MAKEINTRESOURCEW(IDC_WINAPI);
     wcex.lpszClassName  = L"Key";
     wcex.hIconSm        = LoadIcon(wcex.hInstance, MAKEINTRESOURCE(IDI_SMALL));
 

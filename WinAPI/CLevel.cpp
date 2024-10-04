@@ -34,8 +34,7 @@ void CLevel::Tick()
 		m_vecCollider[i].clear();
 	}
 
-
-
+	// 레벨 안에 있는 물체들에게 Tick 호출
 	for (UINT i = 0; i < (UINT)LAYER_TYPE::END; ++i)
 	{
 		for (size_t j = 0; j < m_vecObjects[i].size(); ++j)
