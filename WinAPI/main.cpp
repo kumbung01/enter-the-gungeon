@@ -8,6 +8,7 @@ HINSTANCE g_hInst = nullptr;
 // 전역 변수
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
+INT_PTR CALLBACK    TileMapInfoProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam);
 
 // SAL : 주석 언어
 int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
@@ -87,10 +88,14 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             switch (wmId)
             {
             case IDM_ABOUT:
-                DialogBox(g_hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
+                // Modal
+                DialogBox(g_hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, &About);
                 break;
             case IDM_EXIT:
                 DestroyWindow(hWnd);
+                break;
+            case ID_TILE_INFO:
+                DialogBox(g_hInst, MAKEINTRESOURCE(DLG_TILEMAP_INFO), hWnd, &TileMapInfoProc);
                 break;
             default:
                 return DefWindowProc(hWnd, message, wParam, lParam);
@@ -128,6 +133,27 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 // 정보 대화 상자의 메시지 처리기입니다.
 INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
+{
+    UNREFERENCED_PARAMETER(lParam);
+    switch (message)
+    {
+    case WM_INITDIALOG:
+        return (INT_PTR)TRUE;
+
+    case WM_COMMAND:
+        if (LOWORD(wParam) == IDOK || LOWORD(wParam) == IDCANCEL)
+        {
+            EndDialog(hDlg, LOWORD(wParam));
+            return (INT_PTR)TRUE;
+        }
+        break;
+    }
+    return (INT_PTR)FALSE;
+}
+
+
+// 정보 대화 상자의 메시지 처리기입니다.
+INT_PTR CALLBACK TileMapInfoProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 {
     UNREFERENCED_PARAMETER(lParam);
     switch (message)

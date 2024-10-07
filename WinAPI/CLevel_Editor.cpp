@@ -37,6 +37,20 @@ void CLevel_Editor::Begin()
 	CLevel::Begin();
 }
 
+void CLevel_Editor::End()
+{
+	DeleteAllObject();
+
+	// 메뉴바 제거
+	SetMenu(CEngine::GetInst()->GetMainWndHwnd(), nullptr);
+
+	// 메뉴가 제거되었으므로, 다시 윈도우 크기 조정
+	CEngine::GetInst()->ChangeWindowSize(CEngine::GetInst()->GetResolution());
+}
+
+
+
+
 void CLevel_Editor::Tick()
 {
 	CLevel::Tick();
@@ -53,13 +67,3 @@ void CLevel_Editor::Render()
 	TextOut(CEngine::GetInst()->GetSecondDC(), 10, 10, L"Editor Level", wcslen(L"Editor Level"));
 }
 
-void CLevel_Editor::End()
-{
-	DeleteAllObject();
-
-	// 메뉴바 제거
-	SetMenu(CEngine::GetInst()->GetMainWndHwnd(), nullptr);
-
-	// 메뉴가 제거되었으므로, 다시 윈도우 크기 조정
-	CEngine::GetInst()->ChangeWindowSize(CEngine::GetInst()->GetResolution());
-}
