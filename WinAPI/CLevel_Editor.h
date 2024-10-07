@@ -12,6 +12,10 @@ private:
 
 
 public:
+    CMap* GetMapObject() { return m_MapObj; }
+
+
+public:
     virtual void Begin() override;
     virtual void Tick() override;
     virtual void Render() override;

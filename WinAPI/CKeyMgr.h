@@ -49,9 +49,11 @@ class CKeyMgr
 	SINGLE(CKeyMgr);
 private:
 	vector<KeyInfo>		m_vecKeyInfo;
+	Vec2				m_MousePos;
 
 public:
 	KEY_STATE GetKeyState(KEY _key) { return m_vecKeyInfo[_key].State; }
+	Vec2 GetMousePos() { return m_MousePos; }	
 
 public:
 	void Init();

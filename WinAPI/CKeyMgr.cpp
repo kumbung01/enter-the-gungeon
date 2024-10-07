@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "CKeyMgr.h"
 
-
+#include "CEngine.h"
 
 UINT KeyValue[KEY::KEY_END] =
 {
@@ -90,4 +90,11 @@ void CKeyMgr::Tick()
 			m_vecKeyInfo[i].bPrevPressed = false;
 		}
 	}
+
+	// 마우스 좌표 갱신
+	POINT ptPos = {};
+	GetCursorPos(&ptPos);
+	ScreenToClient(CEngine::GetInst()->GetMainWndHwnd(), &ptPos);
+
+	m_MousePos = ptPos;
 }

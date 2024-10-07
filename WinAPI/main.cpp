@@ -4,6 +4,7 @@
 #include "CEngine.h"
 
 HINSTANCE g_hInst = nullptr;
+HWND      g_hDlg = nullptr;
 
 // 전역 변수
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
@@ -95,7 +96,14 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                 DestroyWindow(hWnd);
                 break;
             case ID_TILE_INFO:
+            {
                 DialogBox(g_hInst, MAKEINTRESOURCE(DLG_TILEMAP_INFO), hWnd, &TileMapInfoProc);
+
+                /* if(nullptr == g_hDlg)
+                    g_hDlg = CreateDialog(g_hInst, MAKEINTRESOURCE(DLG_TILEMAP_INFO), hWnd, &TileMapInfoProc);
+
+                ShowWindow(g_hDlg, true);*/
+            }
                 break;
             default:
                 return DefWindowProc(hWnd, message, wParam, lParam);
@@ -133,27 +141,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 // 정보 대화 상자의 메시지 처리기입니다.
 INT_PTR CALLBACK About(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
-{
-    UNREFERENCED_PARAMETER(lParam);
-    switch (message)
-    {
-    case WM_INITDIALOG:
-        return (INT_PTR)TRUE;
-
-    case WM_COMMAND:
-        if (LOWORD(wParam) == IDOK || LOWORD(wParam) == IDCANCEL)
-        {
-            EndDialog(hDlg, LOWORD(wParam));
-            return (INT_PTR)TRUE;
-        }
-        break;
-    }
-    return (INT_PTR)FALSE;
-}
-
-
-// 정보 대화 상자의 메시지 처리기입니다.
-INT_PTR CALLBACK TileMapInfoProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam)
 {
     UNREFERENCED_PARAMETER(lParam);
     switch (message)
