@@ -24,6 +24,11 @@ public:
     tTile* GetTileInfo(Vec2 _MousePos);
 
 public:
+    bool SaveTileMap(wstring _FullPath);
+    bool LoadTileMap(wstring _FullPath);
+
+
+public:
     virtual void FinalTick() override;
     void Render();
 

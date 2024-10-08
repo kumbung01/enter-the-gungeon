@@ -1,5 +1,7 @@
 #pragma once
 
+#include <commdlg.h>
+
 #include "define.h"
 #include "enum.h"
 #include "struct.h"

@@ -9,7 +9,7 @@ HWND      g_hDlg = nullptr;
 // 전역 변수
 LRESULT CALLBACK    WndProc(HWND, UINT, WPARAM, LPARAM);
 INT_PTR CALLBACK    About(HWND, UINT, WPARAM, LPARAM);
-INT_PTR CALLBACK    TileMapInfoProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam);
+
 
 // SAL : 주석 언어
 int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
@@ -77,7 +77,9 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
     return (int) msg.wParam;
 }
 
-// 메세지를 처리하는 함수
+
+bool EditorMenu(HINSTANCE _inst, HWND _wnd, int wParam);
+
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)
@@ -85,6 +87,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
     case WM_COMMAND:
         {
             int wmId = LOWORD(wParam);
+
+            if (EditorMenu(g_hInst, hWnd, wmId))
+            {
+                break;
+            }
+            
             // 메뉴 선택을 구문 분석합니다:
             switch (wmId)
             {
@@ -94,16 +102,6 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
                 break;
             case IDM_EXIT:
                 DestroyWindow(hWnd);
-                break;
-            case ID_TILE_INFO:
-            {
-                DialogBox(g_hInst, MAKEINTRESOURCE(DLG_TILEMAP_INFO), hWnd, &TileMapInfoProc);
-
-                /* if(nullptr == g_hDlg)
-                    g_hDlg = CreateDialog(g_hInst, MAKEINTRESOURCE(DLG_TILEMAP_INFO), hWnd, &TileMapInfoProc);
-
-                ShowWindow(g_hDlg, true);*/
-            }
                 break;
             default:
                 return DefWindowProc(hWnd, message, wParam, lParam);

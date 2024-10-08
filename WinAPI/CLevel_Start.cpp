@@ -12,6 +12,8 @@
 #include "CCollisionMgr.h"
 #include "CCollider.h"
 
+#include "CTileMap.h"
+
 CLevel_Start::CLevel_Start()
 {
 
@@ -60,9 +62,17 @@ void CLevel_Start::Begin()
     AddObject(pPlatform, LAYER_TYPE::TILE);
 
     // TileMap Object 추가
-    //CObj* pTileMap = new CMap;
-    //pTileMap->SetPos(Vec2(0.f, 0.f));
-    //AddObject(pTileMap, LAYER_TYPE::TILE);
+    CMap* pTileMap = new CMap;
+    pTileMap->SetPos(Vec2(0.f, 0.f));
+    pTileMap->GetTileMap()->LoadTileMap(L"TileMap\\Temp.tile");
+    AddObject(pTileMap, LAYER_TYPE::TILE);
+
+    // TileMap Object 추가
+    pTileMap = new CMap;
+    pTileMap->SetPos(Vec2(1000.f, 1000.f));
+    pTileMap->GetTileMap()->LoadTileMap(L"TileMap\\Temp.tile");
+    AddObject(pTileMap, LAYER_TYPE::TILE);
+
 
     // 충돌 설정
     CCollisionMgr::GetInst()->CollisionCheckClear();

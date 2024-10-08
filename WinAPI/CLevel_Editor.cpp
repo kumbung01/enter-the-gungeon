@@ -11,6 +11,8 @@
 #include "CLevelMgr.h"
 #include "CCamera.h"
 
+#include "CPathMgr.h"
+
 CLevel_Editor::CLevel_Editor()
 	: m_MapObj(nullptr)
 	, m_hMenu(nullptr)
@@ -53,8 +55,6 @@ void CLevel_Editor::End()
 }
 
 
-
-
 void CLevel_Editor::Tick()
 {
 	CLevel::Tick();
@@ -88,13 +88,99 @@ void CLevel_Editor::Render()
 	TextOut(CEngine::GetInst()->GetSecondDC(), 10, 10, L"Editor Level", wcslen(L"Editor Level"));
 }
 
+void CLevel_Editor::SaveTileMap()
+{
+	wstring strContentPath = CPathMgr::GetContentPath();
+	strContentPath += L"TileMap";
 
 
+	// 파일 경로 문자열
+	wchar_t szFilePath[255] = {};
+
+	OPENFILENAME Desc = {};
+
+	Desc.lStructSize = sizeof(OPENFILENAME);
+	Desc.hwndOwner = nullptr;
+	Desc.lpstrFile = szFilePath;	// 최종적으로 고른 경로를 받아낼 목적지
+	Desc.nMaxFile = 255;
+	Desc.lpstrFilter = L"Tile\0*.tile\0ALL\0*.*";
+	Desc.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;
+	Desc.lpstrInitialDir = strContentPath.c_str();
+
+	if (GetSaveFileName(&Desc))
+	{
+		// 맵 오브젝트의 TileMap 컴포넌트 정보를 저장한다.
+		m_MapObj->GetTileMap()->SaveTileMap(szFilePath);
+	}
+}
+
+void CLevel_Editor::LoadTileMap()
+{
+	wstring strContentPath = CPathMgr::GetContentPath();
+	strContentPath += L"TileMap";
+
+	// 파일 경로 문자열
+	wchar_t szFilePath[255] = {};
+
+	OPENFILENAME Desc = {};
+
+	Desc.lStructSize = sizeof(OPENFILENAME);
+	Desc.hwndOwner = nullptr;
+	Desc.lpstrFile = szFilePath;
+	Desc.nMaxFile = 255;
+	Desc.lpstrFilter = L"Tile\0*.tile\0ALL\0*.*";
+	Desc.Flags = OFN_PATHMUSTEXIST | OFN_FILEMUSTEXIST;
+	Desc.lpstrInitialDir = strContentPath.c_str();
+
+	if (GetOpenFileName(&Desc))
+	{
+		m_MapObj->GetTileMap()->LoadTileMap(szFilePath);
+	}	
+}
 
 
+INT_PTR CALLBACK    TileMapInfoProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam);
 
+bool EditorMenu(HINSTANCE _inst, HWND _wnd, int wParam)
+{
+	switch (wParam)
+	{
+	case ID_TILE_INFO:
+	{
+		DialogBox(_inst, MAKEINTRESOURCE(DLG_TILEMAP_INFO), _wnd, &TileMapInfoProc);
 
+		/* if(nullptr == g_hDlg)
+			g_hDlg = CreateDialog(g_hInst, MAKEINTRESOURCE(DLG_TILEMAP_INFO), hWnd, &TileMapInfoProc);
 
+		ShowWindow(g_hDlg, true);*/
+		return true;
+	}
+	case ID_TILEMAP_SAVE:
+	{
+		// CLevel_Editor 에 있는 MapObject 의 타일맵 컴포넌트의 행 렬을 설정해주어야 함
+		// 현재 레벨을 알아낸다. 정황상 현재 레벨은 반드시 CLevel_Editor 여야 한다.
+		CLevel* pLevel = CLevelMgr::GetInst()->GetCurrentLevel();
+		CLevel_Editor* pEditorLevel = dynamic_cast<CLevel_Editor*>(pLevel);
+		assert(pEditorLevel);
+
+		pEditorLevel->SaveTileMap();
+	}
+		return true;
+	case ID_TILEMAP_LOAD:
+	{
+		// CLevel_Editor 에 있는 MapObject 의 타일맵 컴포넌트의 행 렬을 설정해주어야 함
+		// 현재 레벨을 알아낸다. 정황상 현재 레벨은 반드시 CLevel_Editor 여야 한다.
+		CLevel* pLevel = CLevelMgr::GetInst()->GetCurrentLevel();
+		CLevel_Editor* pEditorLevel = dynamic_cast<CLevel_Editor*>(pLevel);
+		assert(pEditorLevel);
+
+		pEditorLevel->LoadTileMap();
+	}
+		return true;
+	};
+
+	return false;
+}
 
 // ============================
 // Tile_Map_Info Dialog 프로시저

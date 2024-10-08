@@ -8,6 +8,9 @@
 
 #include "CCamera.h"
 
+#include "CPathMgr.h"
+
+
 CTileMap::CTileMap()
 	: CComponent(COMPONENT_TYPE::TILEMAP)
 	, m_Col(1)
@@ -112,9 +115,6 @@ void CTileMap::SetRowCol(int Row, int Col)
 
 	if(m_vecTileInfo.size() < m_Row * m_Col)
 		m_vecTileInfo.resize(m_Row * m_Col);
-
-	for (int i = 0; i < m_vecTileInfo.size(); ++i)
-		m_vecTileInfo[i].ImgIdx = 1;
 }
 
 void CTileMap::SetAtlasTexture(CTexture* _Atlas)
@@ -147,4 +147,58 @@ tTile* CTileMap::GetTileInfo(Vec2 _MousePos)
 
 	int idx = Row * m_Col + Col;
 	return &m_vecTileInfo[idx];
+}
+
+bool CTileMap::SaveTileMap(wstring _FullPath)
+{
+	FILE* pFile = nullptr;
+
+	_wfopen_s(&pFile, _FullPath.c_str(), L"wb");
+	assert(pFile);
+
+	// 타일 행, 렬 개수 정보
+	fwrite(&m_Col, sizeof(int), 1, pFile);
+	fwrite(&m_Row, sizeof(int), 1, pFile);
+
+	// 참조하던 아틀라스 텍스쳐 정보
+	SaveAssetRef(m_Atlas, pFile);
+
+	// 각각의 타일이 사용하던 이미지 인덱스 정보
+	int TileCount = m_Col * m_Row;
+	for (int i = 0; i < TileCount; ++i)
+	{
+		fwrite(&m_vecTileInfo[i], sizeof(tTile), 1, pFile);
+	}	
+
+	fclose(pFile);
+
+	return true;
+}
+
+bool CTileMap::LoadTileMap(wstring _FullPath)
+{
+	FILE* pFile = nullptr;
+
+	_wfopen_s(&pFile, _FullPath.c_str(), L"rb");
+	assert(pFile);
+
+	// 타일 행, 렬 개수 정보
+	fread(&m_Col, sizeof(int), 1, pFile);
+	fread(&m_Row, sizeof(int), 1, pFile);
+	SetRowCol(m_Row, m_Col);
+
+	// 참조하던 아틀라스 텍스쳐 정보
+	m_Atlas = (CTexture*)LoadAssetRef(pFile);
+	SetAtlasTexture(m_Atlas);
+
+	// 각각의 타일이 사용하던 이미지 인덱스 정보
+	int TileCount = m_Col * m_Row;
+	for (int i = 0; i < TileCount; ++i)
+	{		
+		fread(&m_vecTileInfo[i], sizeof(tTile), 1, pFile);
+	}
+
+	fclose(pFile);
+
+	return true;
 }
