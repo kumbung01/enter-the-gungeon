@@ -28,6 +28,9 @@ UINT KeyValue[KEY::KEY_END] =
 	VK_NUMPAD7,
 	VK_NUMPAD8,
 	VK_NUMPAD9,	
+
+	VK_LBUTTON,
+	VK_RBUTTON,
 };
 
 
@@ -53,48 +56,91 @@ void CKeyMgr::Init()
 
 void CKeyMgr::Tick()
 {
-	for (size_t i = 0; i < m_vecKeyInfo.size(); ++i)
+	// 게임 윈도우가 포커싱 중일 때
+	if (GetFocus() == CEngine::GetInst()->GetMainWndHwnd())
 	{
-		// 현재 해당 키가 눌려있다.
-		if (GetAsyncKeyState(KeyValue[i]) & 0x8001)
+		for (size_t i = 0; i < m_vecKeyInfo.size(); ++i)
 		{
-			// 이전에도 눌려있었다.
-			if (m_vecKeyInfo[i].bPrevPressed)
+			// 현재 해당 키가 눌려있다.
+			if (GetAsyncKeyState(KeyValue[i]) & 0x8001)
 			{
-				m_vecKeyInfo[i].State = KEY_STATE::PRESSED;
+				// 이전에도 눌려있었다.
+				if (m_vecKeyInfo[i].bPrevPressed)
+				{
+					m_vecKeyInfo[i].State = KEY_STATE::PRESSED;
+				}
+
+				// 이전에 눌려있지 않았다.
+				else
+				{
+					m_vecKeyInfo[i].State = KEY_STATE::TAP;
+				}
+
+				m_vecKeyInfo[i].bPrevPressed = true;
 			}
 
-			// 이전에 눌려있지 않았다.
+			// 현재 해당키가 안눌려있다.
 			else
 			{
-				m_vecKeyInfo[i].State = KEY_STATE::TAP;
+				// 이전에는 눌려있었다.
+				if (m_vecKeyInfo[i].bPrevPressed)
+				{
+					m_vecKeyInfo[i].State = KEY_STATE::RELEASED;
+				}
+
+				else
+				{
+					m_vecKeyInfo[i].State = KEY_STATE::NONE;
+				}
+
+				m_vecKeyInfo[i].bPrevPressed = false;
 			}
+		}
 
-			m_vecKeyInfo[i].bPrevPressed = true;
-		}		
+		// 마우스 좌표 갱신
+		POINT ptPos = {};
+		GetCursorPos(&ptPos);
+		ScreenToClient(CEngine::GetInst()->GetMainWndHwnd(), &ptPos);
 
-		// 현재 해당키가 안눌려있다.
-		else
+		m_MousePos = ptPos;
+	}
+
+	// 게임 윈도우가 비활성화 되어 있을 때
+	else
+	{
+		for (size_t i = 0; i < m_vecKeyInfo.size(); ++i)
 		{
-			// 이전에는 눌려있었다.
-			if (m_vecKeyInfo[i].bPrevPressed)
+			if (KEY_STATE::TAP == m_vecKeyInfo[i].State
+				|| KEY_STATE::PRESSED == m_vecKeyInfo[i].State)
 			{
 				m_vecKeyInfo[i].State = KEY_STATE::RELEASED;
 			}
 
-			else
+			else if (KEY_STATE::RELEASED == m_vecKeyInfo[i].State)
 			{
 				m_vecKeyInfo[i].State = KEY_STATE::NONE;
 			}
 
 			m_vecKeyInfo[i].bPrevPressed = false;
 		}
+
+		// 마우스 좌표 갱신
+		*((int*)&m_MousePos.x) = 0xffffffff;
+		*((int*)&m_MousePos.y) = 0xffffffff;
 	}
+}
 
-	// 마우스 좌표 갱신
-	POINT ptPos = {};
-	GetCursorPos(&ptPos);
-	ScreenToClient(CEngine::GetInst()->GetMainWndHwnd(), &ptPos);
+bool CKeyMgr::IsMouseOffScreen()
+{
+	Vec2 vResolution = CEngine::GetInst()->GetResolution();
 
-	m_MousePos = ptPos;
+	if (vResolution.x <= m_MousePos.x || vResolution.y <= m_MousePos.y
+		|| m_MousePos.x < 0 || m_MousePos.y < 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}	
 }

@@ -21,6 +21,7 @@ private:
 public:
     void SetRowCol(int Row, int Col);
     void SetAtlasTexture(CTexture* _Atlas);    
+    tTile* GetTileInfo(Vec2 _MousePos);
 
 public:
     virtual void FinalTick() override;

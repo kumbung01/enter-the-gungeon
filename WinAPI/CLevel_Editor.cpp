@@ -9,6 +9,7 @@
 #include "CTileMap.h"
 
 #include "CLevelMgr.h"
+#include "CCamera.h"
 
 CLevel_Editor::CLevel_Editor()
 	: m_MapObj(nullptr)
@@ -68,6 +69,16 @@ void CLevel_Editor::Tick()
 	// 마우스 클릭으로 CMap 오브젝트의 타일 이미지 인덱스 변경
 	// 일반적인 렌더링 : 실제 좌표 -> Render 좌표 변경
 	// 마우스 좌표 : Render 좌표(마우스좌표) -> 실제 좌표로 변경
+	if (KEY_TAP(KEY::LBTN))
+	{
+		Vec2 vMousePos = CKeyMgr::GetInst()->GetMousePos();	
+		tTile* TileInfo = m_MapObj->GetTileMap()->GetTileInfo(vMousePos);
+
+		if (nullptr != TileInfo)
+		{
+			TileInfo->ImgIdx = 20;
+		}		
+	}
 }
 
 void CLevel_Editor::Render()

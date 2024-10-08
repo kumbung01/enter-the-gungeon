@@ -34,6 +34,9 @@ enum KEY
 	NUM8,
 	NUM9,
 
+	LBTN,
+	RBTN,
+
 	KEY_END,
 };
 
@@ -54,6 +57,8 @@ private:
 public:
 	KEY_STATE GetKeyState(KEY _key) { return m_vecKeyInfo[_key].State; }
 	Vec2 GetMousePos() { return m_MousePos; }	
+
+	bool IsMouseOffScreen();
 
 public:
 	void Init();

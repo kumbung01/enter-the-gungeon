@@ -9,7 +9,9 @@ class CMap :
 private:
     CTileMap*   m_TileMap;
 
+
 public:
+    CTileMap* GetTileMap() { return m_TileMap; }
     virtual void Tick() override;
     virtual void Render() override;
 

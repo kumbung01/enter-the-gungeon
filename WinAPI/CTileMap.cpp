@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "CTileMap.h"
 
+#include "CKeyMgr.h"
+
 #include "CEngine.h"
 #include "CTexture.h"
 
@@ -126,4 +128,23 @@ void CTileMap::SetAtlasTexture(CTexture* _Atlas)
 	m_AtlasResolution = Vec2((float)m_Atlas->GetWidth(), (float)m_Atlas->GetHeight());
 	m_AtlasTileCol = m_AtlasResolution.x / TILE_SIZE;
 	m_AtlasTileRow = m_AtlasResolution.y / TILE_SIZE;
+}
+
+tTile* CTileMap::GetTileInfo(Vec2 _MousePos)
+{
+	if (CKeyMgr::GetInst()->IsMouseOffScreen())
+		return nullptr;
+
+	_MousePos = CCamera::GetInst()->GetRealPos(_MousePos);
+	Vec2 vOffset = _MousePos - GetOwner()->GetPos();
+
+	// 마우스 위치가 타일맵이 보유한 타일 중에서 몇행 몇열 위치인지 알아낸다.
+	int Col = (int)vOffset.x / TILE_SIZE;
+	int Row = (int)vOffset.y / TILE_SIZE;
+
+	if (Col < 0 || Row < 0 || m_Col <= Col || m_Row <= Row)
+		return nullptr;
+
+	int idx = Row * m_Col + Col;
+	return &m_vecTileInfo[idx];
 }
