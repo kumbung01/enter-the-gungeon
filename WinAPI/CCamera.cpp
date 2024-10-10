@@ -7,6 +7,9 @@
 
 #include "CObj.h"
 
+#include "CAssetMgr.h"
+#include "CTexture.h"
+
 CCamera::CCamera()
 	: m_Target(nullptr)
 	, m_Duration(0.f)
@@ -16,6 +19,8 @@ CCamera::CCamera()
 	, m_Dir(1.f)
 	, m_bOscillation(false)
 {
+	Vec2 vResolution = CEngine::GetInst()->GetResolution();
+	m_CamTex = CAssetMgr::GetInst()->CreateTexture(L"CameraTex", (UINT)vResolution.x, (UINT)vResolution.y);
 }
 
 CCamera::~CCamera()
@@ -55,6 +60,24 @@ void CCamera::Tick()
 
 void CCamera::Render()
 {
+	HDC dc = CEngine::GetInst()->GetSecondDC();
+
+	BLENDFUNCTION blend = {};
+
+	blend.BlendOp = AC_SRC_OVER;
+	blend.BlendFlags = 0;
+	blend.SourceConstantAlpha = 0; // 추가 알파블렌드
+	blend.AlphaFormat = 0;
+
+	AlphaBlend(dc
+		, 0.f, 0.f
+		, m_CamTex->GetWidth()
+		, m_CamTex->GetHeight()
+		, m_CamTex->GetDC()
+		, 0, 0
+		, m_CamTex->GetWidth()
+		, m_CamTex->GetHeight()
+		, blend);
 }
 
 void CCamera::Oscillation()

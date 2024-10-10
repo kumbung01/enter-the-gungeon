@@ -58,6 +58,23 @@ CTexture* CAssetMgr::LoadTexture(const wstring& _Key, const wstring& _RelativePa
     return (CTexture*)pTex;
 }
 
+CTexture* CAssetMgr::CreateTexture(const wstring& _Key, UINT _Width, UINT _Height)
+{
+    CTexture* pTex = FindTexture(_Key);
+    assert(!pTex);
+
+    pTex = new CTexture;
+    pTex->Create(_Width, _Height);
+
+    // 에셋에, 자신이 에셋매니저에 등록될때 사용된 키값을 세팅해준다.
+    pTex->SetKey(_Key);
+  
+    // 컨테이너에 텍스쳐 등록
+    m_mapTex.insert(make_pair(_Key, (CTexture*)pTex));
+
+    return pTex;
+}
+
 CSprite* CAssetMgr::FindSprite(const wstring& _Key)
 {
     map<wstring, CSprite*>::iterator iter = m_mapSprite.find(_Key);

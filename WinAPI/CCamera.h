@@ -1,21 +1,25 @@
 #pragma once
 
+class CTexture;
+
 class CCamera
 {
 	SINGLE(CCamera);
 private:
-	Vec2	m_LookAt;	// 카메라가 바라보고 있는 곳
-	Vec2	m_Diff;		// 카메라가 보는 지점과 해상도 중앙의 위치 차이값
-	Vec2	m_Offset;	// 카메라가 바라보는 위치에서 추가적인 Offset
+	Vec2		m_LookAt;	// 카메라가 바라보고 있는 곳
+	Vec2		m_Diff;		// 카메라가 보는 지점과 해상도 중앙의 위치 차이값
+	Vec2		m_Offset;	// 카메라가 바라보는 위치에서 추가적인 Offset
 
-	CObj*	m_Target;	// 카메라 타겟 오브젝트
+	CObj*		m_Target;	// 카메라 타겟 오브젝트
 
-	float	m_Duration;    // 진동 유지시간
-	float	m_Amplitude;   // 진촉
-	float	m_Frequency;   // 초당 진동횟수
-	float	m_Time;		   // 누적시간
-	float   m_Dir;		   // 진동 방향
-	bool	m_bOscillation;// 진동 On / Off
+	float		m_Duration;    // 진동 유지시간
+	float		m_Amplitude;   // 진촉
+	float		m_Frequency;   // 초당 진동횟수
+	float		m_Time;		   // 누적시간
+	float		m_Dir;		   // 진동 방향
+	bool		m_bOscillation;// 진동 On / Off
+
+	CTexture*	m_CamTex;
 
 public:
 	void Init();

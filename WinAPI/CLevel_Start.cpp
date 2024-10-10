@@ -51,7 +51,7 @@ void CLevel_Start::Begin()
 
     pMonster = new CMonster;
     pMonster->SetName(L"Monster");
-    pMonster->SetPos(1000.f, 120.f);
+    pMonster->SetPos(1000.f, 500.f);
     pMonster->SetScale(100.f, 100.f);
     pMonster->SetDistance(200.f);
     pMonster->SetSpeed(300.f);

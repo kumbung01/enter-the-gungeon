@@ -127,7 +127,9 @@
     <ClInclude Include="CLevel_Start.h">
       <Filter>Game\04. Level\Level_Start</Filter>
     </ClInclude>
-    <ClInclude Include="CUI.h" />
+    <ClInclude Include="CUI.h">
+      <Filter>Game\05. Object\UI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -238,7 +240,9 @@
     <ClCompile Include="CLevel_Start.cpp">
       <Filter>Game\04. Level\Level_Start</Filter>
     </ClCompile>
-    <ClCompile Include="CUI.cpp" />
+    <ClCompile Include="CUI.cpp">
+      <Filter>Game\05. Object\UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">

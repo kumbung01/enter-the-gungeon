@@ -16,21 +16,14 @@ CEngine::CEngine()
     : m_hInst(nullptr)
     , m_hWnd(nullptr)
     , m_Resolution{}
-    , m_hSecondDC(nullptr)
-    , m_hSecondBitmap(nullptr)
-{
-   
+    , m_BackBuffer(nullptr)
+{   
 }
 
 CEngine::~CEngine()
 {
     // DC 해제
     ReleaseDC(m_hWnd, m_hDC);
-
-    // SecondBuffer 관련 메모리 해제
-    DeleteDC(m_hSecondDC);
-    DeleteObject(m_hSecondBitmap);
-
 
     // Pen 과 Brush 해제
     for (UINT i = 0; i < (UINT)PEN_TYPE::END; ++i)
@@ -123,17 +116,21 @@ void CEngine::Progress()
     // 화면 클리어
     {
         SELECT_BRUSH(BRUSH_TYPE::GRAY);
-        Rectangle(m_hSecondDC, -1, -1, (int)m_Resolution.x + 1, (int)m_Resolution.y + 1);
+        Rectangle(m_BackBuffer->GetDC(), -1, -1, (int)m_Resolution.x + 1, (int)m_Resolution.y + 1);
     }
 
     // 레벨 렌더링
     CLevelMgr::GetInst()->Render();
 
+    // Camera 렌더링
+    CCamera::GetInst()->Render();
+
     // 디버그 정보 렌더링
     CDbgRender::GetInst()->Render();
 
     // SecondBitmap 있는 장면을 MainWindowBitmap 으로 복사해온다.
-    BitBlt(m_hDC, 0, 0, (int)m_Resolution.x, (int)m_Resolution.y, m_hSecondDC, 0, 0, SRCCOPY);
+    BitBlt(m_hDC, 0, 0, (int)m_Resolution.x, (int)m_Resolution.y
+        , m_BackBuffer->GetDC(), 0, 0, SRCCOPY);
 
     // TaskMgr 동작
     CTaskMgr::GetInst()->Tick();
@@ -156,15 +153,5 @@ void CEngine::ChangeWindowSize(Vec2 _vResolution)
 
 void CEngine::CreateSecondBuffer()
 {
-    // 윈도우 비트맵과 동일한 크기(해상도) 비트맵을 생성
-    m_hSecondBitmap = CreateCompatibleBitmap(m_hDC, (int)m_Resolution.x, (int)m_Resolution.y);
-
-    // DC 생성
-    // Pen : Black
-    // Brush : White
-    // Bitmap : 1 pixel 비트맵
-    m_hSecondDC = CreateCompatibleDC(m_hDC);
-
-    // DC 가 Bitmap 을 렌더타겟으로 지정하고 기존에 가리키던 비트맵을 삭제요청 
-    DeleteObject(SelectObject(m_hSecondDC, m_hSecondBitmap));   
+    m_BackBuffer = CAssetMgr::GetInst()->CreateTexture(L"BackBuffer", (int)m_Resolution.x, (int)m_Resolution.y);
 }

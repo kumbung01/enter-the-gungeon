@@ -63,3 +63,16 @@ int CTexture::Load(const wstring& _FilePath)
 
 	return S_OK;
 }
+
+void CTexture::Create(UINT _Width, UINT _Height)
+{
+	m_hBit = CreateCompatibleBitmap(CEngine::GetInst()->GetMainDC(), _Width, _Height);
+
+	m_DC = CreateCompatibleDC(CEngine::GetInst()->GetMainDC());
+
+	// 비트맵과 DC 연결
+	DeleteObject(SelectObject(m_DC, m_hBit));
+
+	// 비트맵의 정보를 받아온다.
+	GetObject(m_hBit, sizeof(BITMAP), &m_BitmapInfo);
+}

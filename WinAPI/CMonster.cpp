@@ -17,7 +17,7 @@ CMonster::CMonster()
 	m_Collider = (CCollider*)AddComponent(new CCollider);
 	m_Collider->SetScale(Vec2(100.f, 100.f));
 
-	m_Tex = CAssetMgr::GetInst()->LoadTexture(L"Character", L"Texture\\Character.png");
+	m_Tex = CAssetMgr::GetInst()->LoadTexture(L"Character", L"Texture\\TX_GlowScene_2.png");
 }
 
 CMonster::~CMonster()
@@ -56,19 +56,32 @@ void CMonster::Render()
 	Vec2 vPos = GetRenderPos();
 	Vec2 vScale = GetScale();
 
-	BitBlt(dc
+	//BitBlt(dc
+	//	, vPos.x - m_Tex->GetWidth() / 2.f
+	//	, vPos.y - m_Tex->GetHeight() / 2
+	//	, m_Tex->GetWidth()
+	//	, m_Tex->GetHeight()
+	//	, m_Tex->GetDC()
+	//	, 0, 0
+	//	, SRCCOPY);
+
+	BLENDFUNCTION blend = {};
+
+	blend.BlendOp = AC_SRC_OVER;
+	blend.BlendFlags = 0;
+	blend.SourceConstantAlpha = 127;
+	blend.AlphaFormat = AC_SRC_ALPHA;
+
+	AlphaBlend(dc
 		, vPos.x - m_Tex->GetWidth() / 2.f
-		, vPos.y - m_Tex->GetHeight() / 2
+		, vPos.y - m_Tex->GetHeight() / 2.f
 		, m_Tex->GetWidth()
 		, m_Tex->GetHeight()
 		, m_Tex->GetDC()
 		, 0, 0
-		, SRCCOPY);
-
-
-	//AlphaBlend();
-
-
+		, m_Tex->GetWidth()
+		, m_Tex->GetHeight()
+		, blend);
 
 	/*Ellipse(dc, vPos.x - vScale.x / 2.f, vPos.y - vScale.y / 2
 		, vPos.x + vScale.x / 2.f, vPos.y + vScale.y / 2.f );*/
@@ -81,6 +94,6 @@ void CMonster::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider*
 	if (_OtherObject->GetName() == L"Player")
 	{
 		// 플레이어랑 부딪히면 다음 스테이지로 넘어간다.
-		ChangeLevel(LEVEL_TYPE::EDITOR);
+		//ChangeLevel(LEVEL_TYPE::EDITOR);
 	}
 }

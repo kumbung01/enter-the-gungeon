@@ -158,7 +158,7 @@ void CPlayer::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* 
 {
 	if (_OtherObject->GetName() == L"Monster")
 	{
-		DeleteObject(_OtherObject);
+		//DeleteObject(_OtherObject);
 	}
 }
 

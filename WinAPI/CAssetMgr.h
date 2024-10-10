@@ -18,7 +18,8 @@ public:
 
 	CTexture* FindTexture(const wstring& _Key);
 	CTexture* LoadTexture(const wstring& _Key, const wstring& _RelativePath);
-	
+	CTexture* CreateTexture(const wstring& _Key, UINT _Width, UINT _Height);
+
 	CSprite* FindSprite(const wstring& _Key);
 	CSprite* LoadSprite(const wstring& _Key, const wstring& _RelativePath);
 	void AddSprite(const wstring& _Key, CSprite* _Sprite);
