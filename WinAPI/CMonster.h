@@ -2,6 +2,7 @@
 #include "CObj.h"
 
 class CCollider;
+class CTexture;
 
 class CMonster :
     public CObj
@@ -11,6 +12,8 @@ private:
     float       m_Speed;
     Vec2        m_InitPos;
     float       m_Dist;
+
+    CTexture*   m_Tex;
 
     CCollider*  m_Collider;
 

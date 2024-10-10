@@ -13,6 +13,7 @@
 #include "CCollider.h"
 
 #include "CTileMap.h"
+#include "CPathMgr.h"
 
 CLevel_Start::CLevel_Start()
 {
@@ -64,13 +65,14 @@ void CLevel_Start::Begin()
     // TileMap Object 추가
     CMap* pTileMap = new CMap;
     pTileMap->SetPos(Vec2(0.f, 0.f));
-    pTileMap->GetTileMap()->LoadTileMap(L"TileMap\\Temp.tile");
+    wstring FilePath = CPathMgr::GetContentPath();
+    pTileMap->GetTileMap()->LoadTileMap(FilePath + L"TileMap\\Temp.tile");
     AddObject(pTileMap, LAYER_TYPE::TILE);
 
     // TileMap Object 추가
     pTileMap = new CMap;
     pTileMap->SetPos(Vec2(1000.f, 1000.f));
-    pTileMap->GetTileMap()->LoadTileMap(L"TileMap\\Temp.tile");
+    pTileMap->GetTileMap()->LoadTileMap(FilePath + L"TileMap\\Temp.tile");
     AddObject(pTileMap, LAYER_TYPE::TILE);
 
 

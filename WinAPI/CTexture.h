@@ -10,6 +10,7 @@ private:
     HDC         m_DC;           // 비트맵을 목적지로 지정하는 DC
     BITMAP      m_BitmapInfo;   // 비트맵 정보
 
+    Image*      m_Image;
 
 public:
     HDC GetDC() { return m_DC; }

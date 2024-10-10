@@ -127,6 +127,7 @@
     <ClInclude Include="CLevel_Start.h">
       <Filter>Game\04. Level\Level_Start</Filter>
     </ClInclude>
+    <ClInclude Include="CUI.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -237,6 +238,7 @@
     <ClCompile Include="CLevel_Start.cpp">
       <Filter>Game\04. Level\Level_Start</Filter>
     </ClCompile>
+    <ClCompile Include="CUI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">
@@ -340,6 +342,9 @@
     </Filter>
     <Filter Include="Game\04. Level\Level_Start">
       <UniqueIdentifier>{917814d0-fe1e-4a73-ac74-aeb8c1df710e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\05. Object\UI">
+      <UniqueIdentifier>{2e5b4e6b-0e1e-492d-bba6-822425950d2f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

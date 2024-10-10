@@ -60,7 +60,7 @@ void CLevel_Editor::Tick()
 	CLevel::Tick();
 
 	// 특정 키가 눌리면 Start 레벨로 변경
-	if (KEY_TAP(KEY::ENTER))
+	if (KEY_TAP(KEY::M))
 	{
 		Vec2 vMousePos = CKeyMgr::GetInst()->GetMousePos();
 		ChangeLevel(LEVEL_TYPE::START);

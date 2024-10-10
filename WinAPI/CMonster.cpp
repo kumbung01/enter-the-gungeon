@@ -5,6 +5,9 @@
 #include "CTimeMgr.h"
 #include "CCollider.h"
 
+#include "CAssetMgr.h"
+#include "CTexture.h"
+
 
 CMonster::CMonster()
 	: m_Dir(1)
@@ -13,7 +16,8 @@ CMonster::CMonster()
 {
 	m_Collider = (CCollider*)AddComponent(new CCollider);
 	m_Collider->SetScale(Vec2(100.f, 100.f));
-	
+
+	m_Tex = CAssetMgr::GetInst()->LoadTexture(L"Character", L"Texture\\Character.png");
 }
 
 CMonster::~CMonster()
@@ -52,8 +56,22 @@ void CMonster::Render()
 	Vec2 vPos = GetRenderPos();
 	Vec2 vScale = GetScale();
 
-	Ellipse(dc, vPos.x - vScale.x / 2.f, vPos.y - vScale.y / 2
-		, vPos.x + vScale.x / 2.f, vPos.y + vScale.y / 2.f );
+	BitBlt(dc
+		, vPos.x - m_Tex->GetWidth() / 2.f
+		, vPos.y - m_Tex->GetHeight() / 2
+		, m_Tex->GetWidth()
+		, m_Tex->GetHeight()
+		, m_Tex->GetDC()
+		, 0, 0
+		, SRCCOPY);
+
+
+	//AlphaBlend();
+
+
+
+	/*Ellipse(dc, vPos.x - vScale.x / 2.f, vPos.y - vScale.y / 2
+		, vPos.x + vScale.x / 2.f, vPos.y + vScale.y / 2.f );*/
 }
 
 
