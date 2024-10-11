@@ -9,31 +9,35 @@ enum POST_PROCESS
 	HEART,
 };
 
+struct tCamEffect
+{	
+	POST_PROCESS	Effect;		// 진행중인 효과 종류	
+	float			Time;		// 효과 진행시간 계산
+	float			Duration;	// 효과 최대 진행 시간
+};
+
 class CCamera
 {
 	SINGLE(CCamera);
 private:
-	Vec2		m_LookAt;	// 카메라가 바라보고 있는 곳
-	Vec2		m_Diff;		// 카메라가 보는 지점과 해상도 중앙의 위치 차이값
-	Vec2		m_Offset;	// 카메라가 바라보는 위치에서 추가적인 Offset
+	Vec2				m_LookAt;	// 카메라가 바라보고 있는 곳
+	Vec2				m_Diff;		// 카메라가 보는 지점과 해상도 중앙의 위치 차이값
+	Vec2				m_Offset;	// 카메라가 바라보는 위치에서 추가적인 Offset
 
-	CObj*		m_Target;	// 카메라 타겟 오브젝트
+	CObj*				m_Target;	// 카메라 타겟 오브젝트
 
-	float		m_Duration;    // 진동 유지시간
-	float		m_Amplitude;   // 진촉
-	float		m_Frequency;   // 초당 진동횟수
-	float		m_Time;		   // 누적시간
-	float		m_Dir;		   // 진동 방향
-	bool		m_bOscillation;// 진동 On / Off
+	float				m_Duration;    // 진동 유지시간
+	float				m_Amplitude;   // 진촉
+	float				m_Frequency;   // 초당 진동횟수
+	float				m_Time;		   // 누적시간
+	float				m_Dir;		   // 진동 방향
+	bool				m_bOscillation;// 진동 On / Off
 
-	CTexture*	m_CamTex;
+	CTexture*			m_CamTex;
+	CTexture*			m_CamTex1;
 
-
-	// PostProcess( 후 처리 )
-	POST_PROCESS	m_Effect;		// 진행중인 효과 종류
-	bool			m_PostProcess;	// 효과 On / Off
-	float			m_PPTime;		// 효과 진행시간 계산
-	float			m_PPDuration;	// 효과 최대 진행 시간
+	list<tCamEffect>	m_CamEffectList;
+	
 	
 
 
@@ -62,11 +66,8 @@ public:
 	}
 
 	void PostProcessEffect(POST_PROCESS _Type, float _Duration)
-	{
-		m_Effect = _Type;
-		m_PPDuration = _Duration;
-		m_PPTime = 0.f;
-		m_PostProcess = true;
+	{		
+		m_CamEffectList.push_back(tCamEffect{ _Type , 0.f, _Duration });
 	}
 };
 

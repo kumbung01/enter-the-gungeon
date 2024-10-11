@@ -118,6 +118,7 @@ void CPlayer::Tick()
 
 	if (KEY_TAP(SPACE))
 	{
+		CCamera::GetInst()->PostProcessEffect(HEART, 0.2f);
 		m_RigidBody->Jump();
 		//DrawDebugRect(PEN_TYPE::GREEN, GetPos(), GetScale() * 2.f, 3.f);
 		//DrawDebugCircle(PEN_TYPE::GREEN, GetPos(), GetScale() * 2.f, 3.f);

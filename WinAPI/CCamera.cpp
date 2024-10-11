@@ -9,6 +9,8 @@
 
 #include "CAssetMgr.h"
 #include "CTexture.h"
+#include "CEngine.h"
+#include "CSelectGDI.h"
 
 CCamera::CCamera()
 	: m_Target(nullptr)
@@ -18,13 +20,15 @@ CCamera::CCamera()
 	, m_Time(0.f)
 	, m_Dir(1.f)
 	, m_bOscillation(false)
-	, m_Effect(POST_PROCESS::FADE_IN)
-	, m_PostProcess(false)
-	, m_PPTime(0.f)
-	, m_PPDuration(0.f)
 {
 	Vec2 vResolution = CEngine::GetInst()->GetResolution();
 	m_CamTex = CAssetMgr::GetInst()->CreateTexture(L"CameraTex", (UINT)vResolution.x, (UINT)vResolution.y);
+	m_CamTex1 = CAssetMgr::GetInst()->CreateTexture(L"CameraTex1", (UINT)vResolution.x, (UINT)vResolution.y);
+
+	// m_CamTex1 전체를 red 색으로 채운다.
+	HBRUSH hPrev = (HBRUSH)SelectObject(m_CamTex1->GetDC(), CEngine::GetInst()->GetBrush(BRUSH_TYPE::RED));
+	Rectangle(m_CamTex1->GetDC(), -1, -1, (int)vResolution.x + 1, (int)vResolution.y + 1);
+	SelectObject(m_CamTex1->GetDC(), hPrev);
 }
 
 CCamera::~CCamera()
@@ -64,29 +68,50 @@ void CCamera::Tick()
 
 void CCamera::Render()
 {
-	if (!m_PostProcess)
+	if (m_CamEffectList.empty())
 		return;
 
+	tCamEffect& effect = m_CamEffectList.front();
+
 	// 진행률
-	float NormalizedAge = Saturate(m_PPTime / m_PPDuration);
-	int Alpha = 0.f;
+	float NormalizedAge = Saturate(effect.Time / effect.Duration);
+	int Alpha = 0;
+	CTexture* pTex = nullptr;
 
 	// FADE_IN : 점점 밝아진다		255 -> 0
 	// FADE_OUT : 점점 어두워진다		0 -> 255
-	if (FADE_IN == m_Effect)
+	if (FADE_IN == effect.Effect)
 	{
-		Alpha = (int)(1.f - 255.f * NormalizedAge);
+		Alpha = (int)(255.f * (1.f - NormalizedAge));
+		pTex = m_CamTex;
 	}
-	else if (FADE_OUT == m_Effect)
+	else if (FADE_OUT == effect.Effect)
 	{
 		Alpha = (int)(255.f * NormalizedAge);
+		pTex = m_CamTex;
+	}
+	else if (HEART == effect.Effect)
+	{
+		NormalizedAge *= 2.f;
+
+		if (NormalizedAge <= 1.f)
+		{
+			Alpha = (int)(150.f * NormalizedAge);
+		}
+		else
+		{
+			NormalizedAge -= 1.f;
+			Alpha = (int)(150.f * (1.f - NormalizedAge));			
+		}
+
+		pTex = m_CamTex1;
 	}
 
 	// 후처리 효과시간이 만료되면 기능을 Off 한다.
-	m_PPTime += DT;
-	if (m_PPDuration <= m_PPTime)
+	effect.Time += DT;
+	if (effect.Duration <= effect.Time)
 	{
-		m_PostProcess = false;
+		m_CamEffectList.pop_front();
 	}
 
 	HDC dc = CEngine::GetInst()->GetSecondDC();
@@ -99,12 +124,12 @@ void CCamera::Render()
 
 	AlphaBlend(dc
 		, 0.f, 0.f
-		, m_CamTex->GetWidth()
-		, m_CamTex->GetHeight()
-		, m_CamTex->GetDC()
+		, pTex->GetWidth()
+		, pTex->GetHeight()
+		, pTex->GetDC()
 		, 0, 0
-		, m_CamTex->GetWidth()
-		, m_CamTex->GetHeight()
+		, pTex->GetWidth()
+		, pTex->GetHeight()
 		, blend);
 }
 
