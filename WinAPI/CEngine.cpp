@@ -11,12 +11,16 @@
 #include "CCollisionMgr.h"
 #include "CSelectGDI.h"
 #include "CCamera.h"
+#include "CUIMgr.h"
 
 CEngine::CEngine()
     : m_hInst(nullptr)
     , m_hWnd(nullptr)
     , m_Resolution{}
+    , m_hDC(nullptr)
     , m_BackBuffer(nullptr)
+    , m_Pen{}
+    , m_Brush{}
 {   
 }
 
@@ -111,6 +115,10 @@ void CEngine::Progress()
 
     // 충돌 검사 실행
     CCollisionMgr::GetInst()->Tick();
+
+    // UI 매니저 체크
+    CUIMgr::GetInst()->Tick();
+
 
     // 렌더링
     // 화면 클리어

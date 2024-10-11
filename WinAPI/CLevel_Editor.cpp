@@ -12,6 +12,8 @@
 #include "CCamera.h"
 
 #include "CPathMgr.h"
+#include "CUI.h"
+
 
 CLevel_Editor::CLevel_Editor()
 	: m_MapObj(nullptr)
@@ -35,9 +37,26 @@ void CLevel_Editor::Begin()
 	// 메뉴바가 추가되었기 때문에, 윈도우 크기를 재조정한다.
 	CEngine::GetInst()->ChangeWindowSize(CEngine::GetInst()->GetResolution());
 
+	Vec2 vResolution = CEngine::GetInst()->GetResolution();
+
+
+	// UI 용 오브젝트 추가
+	CUI* pUI = new CUI;
+	pUI->SetName(L"TestUI");
+	Vec2 vScale = Vec2(150.f, 50.f);
+
+	pUI->SetPos(Vec2(vResolution.x - vScale.x - 10, 10.f));
+	pUI->SetScale(vScale);
+
+	AddObject(pUI, LAYER_TYPE::UI);
+
 	// 샘플용 Map 오브젝트 생성
 	m_MapObj = new CMap;
 	AddObject(m_MapObj, LAYER_TYPE::TILE);
+
+	
+
+
 
 	// 레벨 소속 모든 오브젝트가 Begin 을 호출받을 수 있도록 한다
 	CLevel::Begin();

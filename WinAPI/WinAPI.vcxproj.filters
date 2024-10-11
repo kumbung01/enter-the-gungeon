@@ -130,6 +130,9 @@
     <ClInclude Include="CUI.h">
       <Filter>Game\05. Object\UI</Filter>
     </ClInclude>
+    <ClInclude Include="CUIMgr.h">
+      <Filter>Game\03. Manager\10. UIMgr</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -243,6 +246,9 @@
     <ClCompile Include="CUI.cpp">
       <Filter>Game\05. Object\UI</Filter>
     </ClCompile>
+    <ClCompile Include="CUIMgr.cpp">
+      <Filter>Game\03. Manager\10. UIMgr</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">
@@ -349,6 +355,9 @@
     </Filter>
     <Filter Include="Game\05. Object\UI">
       <UniqueIdentifier>{2e5b4e6b-0e1e-492d-bba6-822425950d2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\03. Manager\10. UIMgr">
+      <UniqueIdentifier>{e4c48863-1b73-41b6-ad3d-1120881eb82c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
