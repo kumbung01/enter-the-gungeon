@@ -18,6 +18,10 @@ CCamera::CCamera()
 	, m_Time(0.f)
 	, m_Dir(1.f)
 	, m_bOscillation(false)
+	, m_Effect(POST_PROCESS::FADE_IN)
+	, m_PostProcess(false)
+	, m_PPTime(0.f)
+	, m_PPDuration(0.f)
 {
 	Vec2 vResolution = CEngine::GetInst()->GetResolution();
 	m_CamTex = CAssetMgr::GetInst()->CreateTexture(L"CameraTex", (UINT)vResolution.x, (UINT)vResolution.y);
@@ -60,13 +64,37 @@ void CCamera::Tick()
 
 void CCamera::Render()
 {
-	HDC dc = CEngine::GetInst()->GetSecondDC();
+	if (!m_PostProcess)
+		return;
 
+	// 진행률
+	float NormalizedAge = Saturate(m_PPTime / m_PPDuration);
+	int Alpha = 0.f;
+
+	// FADE_IN : 점점 밝아진다		255 -> 0
+	// FADE_OUT : 점점 어두워진다		0 -> 255
+	if (FADE_IN == m_Effect)
+	{
+		Alpha = (int)(1.f - 255.f * NormalizedAge);
+	}
+	else if (FADE_OUT == m_Effect)
+	{
+		Alpha = (int)(255.f * NormalizedAge);
+	}
+
+	// 후처리 효과시간이 만료되면 기능을 Off 한다.
+	m_PPTime += DT;
+	if (m_PPDuration <= m_PPTime)
+	{
+		m_PostProcess = false;
+	}
+
+	HDC dc = CEngine::GetInst()->GetSecondDC();
 	BLENDFUNCTION blend = {};
 
 	blend.BlendOp = AC_SRC_OVER;
 	blend.BlendFlags = 0;
-	blend.SourceConstantAlpha = 0; // 추가 알파블렌드
+	blend.SourceConstantAlpha = Alpha; // 추가 알파블렌드
 	blend.AlphaFormat = 0;
 
 	AlphaBlend(dc

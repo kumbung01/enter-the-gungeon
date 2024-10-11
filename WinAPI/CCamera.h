@@ -2,6 +2,13 @@
 
 class CTexture;
 
+enum POST_PROCESS
+{
+	FADE_IN,
+	FADE_OUT,
+	HEART,
+};
+
 class CCamera
 {
 	SINGLE(CCamera);
@@ -20,6 +27,15 @@ private:
 	bool		m_bOscillation;// 진동 On / Off
 
 	CTexture*	m_CamTex;
+
+
+	// PostProcess( 후 처리 )
+	POST_PROCESS	m_Effect;		// 진행중인 효과 종류
+	bool			m_PostProcess;	// 효과 On / Off
+	float			m_PPTime;		// 효과 진행시간 계산
+	float			m_PPDuration;	// 효과 최대 진행 시간
+	
+
 
 public:
 	void Init();
@@ -43,6 +59,14 @@ public:
 		m_Time = 0.f;
 		m_bOscillation = true;
 		m_Dir = 1.f;
+	}
+
+	void PostProcessEffect(POST_PROCESS _Type, float _Duration)
+	{
+		m_Effect = _Type;
+		m_PPDuration = _Duration;
+		m_PPTime = 0.f;
+		m_PostProcess = true;
 	}
 };
 

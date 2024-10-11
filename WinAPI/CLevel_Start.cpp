@@ -14,6 +14,7 @@
 
 #include "CTileMap.h"
 #include "CPathMgr.h"
+#include "CCamera.h"
 
 CLevel_Start::CLevel_Start()
 {
@@ -24,8 +25,6 @@ CLevel_Start::~CLevel_Start()
 {
 
 }
-
-
 
 void CLevel_Start::Begin()
 {
@@ -81,6 +80,10 @@ void CLevel_Start::Begin()
     CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER_OBJECT, LAYER_TYPE::MONSTER);
     CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER, LAYER_TYPE::MONSTER);
     CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER, LAYER_TYPE::TILE);
+
+    // Camera 효과
+    CCamera::GetInst()->PostProcessEffect(FADE_OUT, 3.f);
+    CCamera::GetInst()->PostProcessEffect(FADE_IN, 2.f);
 
     // 부모 CLevel 의 Begin 호출
     CLevel::Begin();

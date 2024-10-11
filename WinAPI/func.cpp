@@ -185,3 +185,15 @@ void DrawDebugLine(PEN_TYPE _pen, Vec2 _Start, Vec2 _End, float _Duration)
 
 	CDbgRender::GetInst()->AddDbgInfo(info);
 }
+
+
+// 0.f ~ 1.f 범위 제한 함수
+float Saturate(float _Ratio)
+{
+	if (_Ratio < 0.f)
+		_Ratio = 0.f;
+	else if (1.f < _Ratio)
+		_Ratio = 1.f;	
+
+	return _Ratio;
+}
