@@ -27,7 +27,7 @@ void CUIMgr::Tick()
 	const vector<CObj*>& vecUI = pCurLevel->GetObjects(LAYER_TYPE::UI);
 
 	// 마우스 왼쪽버튼이 눌린 상황 체크
-	bool bLbtnDown = KEY_TAP(KEY::LBTN);
+	KEY_STATE LBtnState = CKeyMgr::GetInst()->GetKeyState(KEY::LBTN);
 
 	for (size_t i = 0; i < vecUI.size(); ++i)
 	{
@@ -36,9 +36,25 @@ void CUIMgr::Tick()
 		assert(pUI);
 
 		// UI 가 눌렸는지 확인
-		if (bLbtnDown && pUI->IsMouseHover())
+		if (LBtnState == KEY_STATE::TAP && pUI->IsMouseHover())
 		{
+			pUI->m_LBtnDown = true;
 			pUI->MouseLBtnDown();
+		}
+
+		// UI 가 클릭됐는지 체크
+		if (LBtnState == KEY_STATE::RELEASED)
+		{
+			if (pUI->IsMouseHover())
+			{
+				if(pUI->m_LBtnDown)
+					pUI->MouseLBtnClikced();
+				else
+					pUI->MouseReleased();
+			}
+
+			// LBtn 키가 해제되었기 때문에, 눌린 상태를 해제한다.
+			pUI->m_LBtnDown = false;
 		}
 	}
 }
