@@ -14,5 +14,9 @@ private:
 
 public:	
 	void Tick();
+
+private:
+	CUI* GetPriorityUI(CUI* _ParentUI);
+
 };
 

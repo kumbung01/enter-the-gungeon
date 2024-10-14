@@ -16,6 +16,8 @@ private:
 
 public:
     bool IsMouseHover() { return m_MouseHover; }
+    bool IsLBtnDown() { return m_LBtnDown; }
+
     Vec2 GetFinalPos() { return m_FinalPos; }
 
     void AddChildUI(CUI* _ChildUI)
@@ -27,7 +29,10 @@ public:
 
 public:
     virtual void Tick() override;
+    virtual void Tick_UI() = 0;
+
     virtual void Render() override;
+    virtual void Render_UI();
 
 protected:
     virtual void MouseHoverCheck();

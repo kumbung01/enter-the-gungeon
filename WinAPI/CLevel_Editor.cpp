@@ -13,6 +13,8 @@
 
 #include "CPathMgr.h"
 #include "CUI.h"
+#include "CPanelUI.h"
+#include "CBtnUI.h"
 
 
 CLevel_Editor::CLevel_Editor()
@@ -41,14 +43,23 @@ void CLevel_Editor::Begin()
 
 
 	// UI 용 오브젝트 추가
-	CUI* pUI = new CUI;
-	pUI->SetName(L"TestUI");
-	Vec2 vScale = Vec2(150.f, 50.f);
+	CPanelUI* pPanel = new CPanelUI;
+	pPanel->SetName(L"Panel");
+	Vec2 vScale = Vec2(380.f, 500.f);
 
-	pUI->SetPos(Vec2(vResolution.x - vScale.x - 10, 10.f));
-	pUI->SetScale(vScale);
+	pPanel->SetPos(Vec2(vResolution.x - vScale.x - 10, 10.f));
+	pPanel->SetScale(vScale);
 
-	AddObject(pUI, LAYER_TYPE::UI);
+	// Panel 에 넣을 자식 UI
+	CBtnUI* pBtn = new CBtnUI;
+	pBtn->SetScale(Vec2(150.f, 100.f));
+	pBtn->SetPos(Vec2(10.f, 10.f));
+
+	pPanel->AddChildUI(pBtn);
+
+	AddObject(pPanel, LAYER_TYPE::UI);
+
+
 
 	// 샘플용 Map 오브젝트 생성
 	m_MapObj = new CMap;

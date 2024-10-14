@@ -133,6 +133,12 @@
     <ClInclude Include="CUIMgr.h">
       <Filter>Game\03. Manager\10. UIMgr</Filter>
     </ClInclude>
+    <ClInclude Include="CPanelUI.h">
+      <Filter>Game\05. Object\UI\PanelUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CBtnUI.h">
+      <Filter>Game\05. Object\UI\BtnUI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -249,6 +255,12 @@
     <ClCompile Include="CUIMgr.cpp">
       <Filter>Game\03. Manager\10. UIMgr</Filter>
     </ClCompile>
+    <ClCompile Include="CPanelUI.cpp">
+      <Filter>Game\05. Object\UI\PanelUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CBtnUI.cpp">
+      <Filter>Game\05. Object\UI\BtnUI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">
@@ -358,6 +370,12 @@
     </Filter>
     <Filter Include="Game\03. Manager\10. UIMgr">
       <UniqueIdentifier>{e4c48863-1b73-41b6-ad3d-1120881eb82c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\05. Object\UI\PanelUI">
+      <UniqueIdentifier>{bf9dc511-314a-468d-a7d3-f5ec96dc29d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\05. Object\UI\BtnUI">
+      <UniqueIdentifier>{f7bd4d1a-892d-4fd3-a7e2-36b3af994ae0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
