@@ -9,7 +9,11 @@ private:
 
 public:    
     virtual void Tick_UI() override;
+    virtual void Render_UI() override;
+
     virtual void MouseLBtnDown() override;
+    virtual void MouseLBtnClikced() override;
+
 public:
     CPanelUI();
     ~CPanelUI();

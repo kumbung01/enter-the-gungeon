@@ -42,9 +42,9 @@ void CLevel_Editor::Begin()
 	Vec2 vResolution = CEngine::GetInst()->GetResolution();
 
 
-	// UI 용 오브젝트 추가
+	// PanelUI 생성
 	CPanelUI* pPanel = new CPanelUI;
-	pPanel->SetName(L"Panel");
+	pPanel->SetName(L"Panel 1");
 	Vec2 vScale = Vec2(380.f, 500.f);
 
 	pPanel->SetPos(Vec2(vResolution.x - vScale.x - 10, 10.f));
@@ -56,8 +56,24 @@ void CLevel_Editor::Begin()
 	pBtn->SetPos(Vec2(10.f, 10.f));
 
 	pPanel->AddChildUI(pBtn);
-
 	AddObject(pPanel, LAYER_TYPE::UI);
+
+	// PanelUI 생성
+	pPanel = new CPanelUI;
+	pPanel->SetName(L"Panel 2");	
+
+	pPanel->SetPos(Vec2(vResolution.x - vScale.x - 10.f- 500.f, 10.f));
+	pPanel->SetScale(vScale);
+
+	// Panel 에 넣을 자식 UI
+	pBtn = new CBtnUI;
+	pBtn->SetScale(Vec2(150.f, 100.f));
+	pBtn->SetPos(Vec2(10.f, 10.f));
+
+	pPanel->AddChildUI(pBtn);
+	AddObject(pPanel, LAYER_TYPE::UI);
+
+	
 
 
 

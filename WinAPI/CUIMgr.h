@@ -16,6 +16,9 @@ public:
 	void Tick();
 
 private:
+	void ReleaseCheck(CUI* _UI);
+
+private:
 	CUI* GetPriorityUI(CUI* _ParentUI);
 
 };
