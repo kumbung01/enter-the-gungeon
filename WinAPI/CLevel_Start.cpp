@@ -16,6 +16,9 @@
 #include "CPathMgr.h"
 #include "CCamera.h"
 
+#include "CAssetMgr.h"
+#include "CSound.h"
+
 CLevel_Start::CLevel_Start()
 {
 
@@ -28,6 +31,14 @@ CLevel_Start::~CLevel_Start()
 
 void CLevel_Start::Begin()
 {
+    // 배경음 지정
+    CSound* pBGM = CAssetMgr::GetInst()->LoadSound(L"BattleBGM", L"Sound\\BGM_Stage1.wav");
+    if (nullptr != pBGM)
+    {
+        pBGM->SetVolume(70.f);
+        pBGM->PlayToBGM(true);
+    }
+    
     // 화면 해상도 
     Vec2 vResolution = CEngine::GetInst()->GetResolution();
 

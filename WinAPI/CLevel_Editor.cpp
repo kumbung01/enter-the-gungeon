@@ -16,6 +16,9 @@
 #include "CPanelUI.h"
 #include "CBtnUI.h"
 
+#include "CAssetMgr.h"
+#include "CSound.h"
+
 
 CLevel_Editor::CLevel_Editor()
 	: m_MapObj(nullptr)
@@ -29,6 +32,14 @@ CLevel_Editor::~CLevel_Editor()
 
 void CLevel_Editor::Begin()
 {
+	// 배경음 지정
+	CSound* pSound = CAssetMgr::GetInst()->LoadSound(L"DM_Opening", L"Sound\\DM.wav");
+	if (nullptr != pSound)
+	{
+		pSound->SetVolume(70.f);
+		pSound->PlayToBGM(true);
+	}
+
 	// 메뉴바 로드 및 메인 윈도우에 부착
 	if (nullptr == m_hMenu)
 	{

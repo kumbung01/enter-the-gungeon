@@ -12,6 +12,7 @@
 #include "CSelectGDI.h"
 #include "CCamera.h"
 #include "CUIMgr.h"
+#include "CSoundMgr.h"
 
 CEngine::CEngine()
     : m_hInst(nullptr)
@@ -72,11 +73,13 @@ int CEngine::Init(HINSTANCE _hInst, POINT _Resolution)
   
     // Manager 생성 및 초기화
     CPathMgr::Init();
+    CSoundMgr::GetInst()->Init();    
     CTimeMgr::GetInst()->Init();
     CKeyMgr::GetInst()->Init();
     CAssetMgr::GetInst()->Init();
     CLevelMgr::GetInst()->Init();
     CCamera::GetInst()->Init();
+    
 
     // 더블버퍼링을 위한 추가버퍼 생성
     CreateSecondBuffer();

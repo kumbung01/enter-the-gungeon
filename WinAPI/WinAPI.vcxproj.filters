@@ -139,6 +139,12 @@
     <ClInclude Include="CBtnUI.h">
       <Filter>Game\05. Object\UI\BtnUI</Filter>
     </ClInclude>
+    <ClInclude Include="CSound.h">
+      <Filter>Game\07. Asset\4. Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="CSoundMgr.h">
+      <Filter>Game\03. Manager\11. Sound</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -261,6 +267,12 @@
     <ClCompile Include="CBtnUI.cpp">
       <Filter>Game\05. Object\UI\BtnUI</Filter>
     </ClCompile>
+    <ClCompile Include="CSound.cpp">
+      <Filter>Game\07. Asset\4. Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="CSoundMgr.cpp">
+      <Filter>Game\03. Manager\11. Sound</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">
@@ -376,6 +388,12 @@
     </Filter>
     <Filter Include="Game\05. Object\UI\BtnUI">
       <UniqueIdentifier>{f7bd4d1a-892d-4fd3-a7e2-36b3af994ae0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\07. Asset\4. Sound">
+      <UniqueIdentifier>{188fe770-26b1-4b85-b47b-a8ea68d6b441}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\03. Manager\11. Sound">
+      <UniqueIdentifier>{3cd604a2-7fbd-4b2d-9b04-4cd718f4ec0d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
