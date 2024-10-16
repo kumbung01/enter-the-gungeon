@@ -4,7 +4,11 @@
 #include "CEngine.h"
 #include "CSelectGDI.h"
 
+#include "CLevelMgr.h"
+#include "CLevel_Editor.h"
+
 CBtnUI::CBtnUI()
+	: m_Func(nullptr)
 {
 }
 
@@ -40,5 +44,19 @@ void CBtnUI::Render_UI()
 
 void CBtnUI::MouseLBtnClikced()
 {
+	/*CLevel* pCurLevel = CLevelMgr::GetInst()->GetCurrentLevel();
+	CLevel_Editor* pEditorLevel = dynamic_cast<CLevel_Editor*>(pCurLevel);
 
+	if (nullptr == pEditorLevel)
+		return;
+
+	pEditorLevel->SaveTileMap();*/
+
+	if (nullptr != m_Func)
+		m_Func();
+
+	if (m_Inst && m_MemFunc)
+	{
+		(m_Inst->*m_MemFunc)();
+	}
 }

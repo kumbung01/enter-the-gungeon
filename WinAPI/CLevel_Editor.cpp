@@ -55,6 +55,10 @@ void CLevel_Editor::Begin()
 	pBtn->SetScale(Vec2(150.f, 100.f));
 	pBtn->SetPos(Vec2(10.f, 10.f));
 
+	void SaveTileMap();
+	//pBtn->AddCallBack(&SaveTileMap);
+	pBtn->AddDelegate(this, (DELEGATE_0)&CLevel_Editor::SaveTileMap);
+
 	pPanel->AddChildUI(pBtn);
 	AddObject(pPanel, LAYER_TYPE::UI);
 
@@ -70,12 +74,13 @@ void CLevel_Editor::Begin()
 	pBtn->SetScale(Vec2(150.f, 100.f));
 	pBtn->SetPos(Vec2(10.f, 10.f));
 
+	void LoadTileMap();
+	//pBtn->AddCallBack(&LoadTileMap);
+	pBtn->AddDelegate(this, (DELEGATE_0)&CLevel_Editor::LoadTileMap);
+
 	pPanel->AddChildUI(pBtn);
 	AddObject(pPanel, LAYER_TYPE::UI);
-
 	
-
-
 
 	// 샘플용 Map 오브젝트 생성
 	m_MapObj = new CMap;
@@ -139,7 +144,6 @@ void CLevel_Editor::SaveTileMap()
 	wstring strContentPath = CPathMgr::GetContentPath();
 	strContentPath += L"TileMap";
 
-
 	// 파일 경로 문자열
 	wchar_t szFilePath[255] = {};
 
@@ -185,7 +189,38 @@ void CLevel_Editor::LoadTileMap()
 }
 
 
+
+
+
+
+// =======
+// 전역함수
+// =======
 INT_PTR CALLBACK    TileMapInfoProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM lParam);
+
+void SaveTileMap()
+{
+	DialogBox(nullptr, MAKEINTRESOURCE(DLG_TILEMAP_INFO), CEngine::GetInst()->GetMainWndHwnd(), &TileMapInfoProc);
+
+	/*CLevel* pCurLevel = CLevelMgr::GetInst()->GetCurrentLevel();
+	CLevel_Editor* pEditorLevel = dynamic_cast<CLevel_Editor*>(pCurLevel);
+	if (nullptr == pEditorLevel)
+		return;
+
+	pEditorLevel->SaveTileMap();*/
+}
+
+void LoadTileMap()
+{
+	CLevel* pCurLevel = CLevelMgr::GetInst()->GetCurrentLevel();
+	CLevel_Editor* pEditorLevel = dynamic_cast<CLevel_Editor*>(pCurLevel);
+	if (nullptr == pEditorLevel)
+		return;
+
+	pEditorLevel->LoadTileMap();
+}
+
+
 
 bool EditorMenu(HINSTANCE _inst, HWND _wnd, int wParam)
 {

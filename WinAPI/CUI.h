@@ -1,6 +1,16 @@
 #pragma once
 #include "CObj.h"
 
+
+typedef void (*PARAM_0)(void);
+typedef void (*PARAM_1)(DWORD_PTR);
+
+
+typedef void(CBase::* DELEGATE_0)(void);
+typedef void(CBase::* DELEGATE_1)(DWORD_PTR);
+typedef void(CBase::* DELEGATE_2)(DWORD_PTR, DWORD_PTR);
+
+
 class CUI :
     public CObj
 {
