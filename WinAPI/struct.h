@@ -101,3 +101,22 @@ struct tTile
 {
 	int ImgIdx;
 };
+
+
+struct tMonInfo
+{
+	float MaxHP;
+	float CurHP;
+
+	float MaxMP;
+	float CurMP;
+
+	float Att;
+	float Def;
+	float Dex;
+
+	float AttRange;
+	float DetectRange;
+
+	float Speed;
+};

@@ -3,23 +3,31 @@
 
 class CCollider;
 class CTexture;
+class CFSM;
 
 class CMonster :
     public CObj
 {
 private:
+    tMonInfo    m_Info;
+
     int         m_Dir;
     float       m_Speed;
     Vec2        m_InitPos;
     float       m_Dist;
 
-    CTexture*   m_Tex;
 
+
+
+    CTexture*   m_Tex;
     CCollider*  m_Collider;
+    CFSM*       m_FSM;
 
 public:
     void SetSpeed(float _Speed) { m_Speed = _Speed; }
     void SetDistance(float _Dist) { m_Dist = _Dist; }
+
+    const tMonInfo& GetMonInfo() { return m_Info; }
 
 public:
     virtual void Begin() override;

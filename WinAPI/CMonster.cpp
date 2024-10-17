@@ -7,17 +7,37 @@
 
 #include "CAssetMgr.h"
 #include "CTexture.h"
+#include "CFSM.h"
 
+#include "CIdleState.h"
+#include "CTraceState.h"
 
 CMonster::CMonster()
 	: m_Dir(1)
 	, m_Speed(300.f)
 	, m_Dist(100.f)
+	, m_Collider(nullptr)
+	, m_FSM(nullptr)
 {
+	m_Tex = CAssetMgr::GetInst()->LoadTexture(L"Character", L"Texture\\TX_GlowScene_2.png");
+
+	// Collider 컴포넌트 추가
 	m_Collider = (CCollider*)AddComponent(new CCollider);
 	m_Collider->SetScale(Vec2(100.f, 100.f));
 
-	m_Tex = CAssetMgr::GetInst()->LoadTexture(L"Character", L"Texture\\TX_GlowScene_2.png");
+	// 몬스터 스탯
+	m_Info.MaxHP = 100.f;
+	m_Info.CurHP = 100.f;
+	m_Info.AttRange = 100.f;
+	m_Info.DetectRange = 400.f;
+	m_Info.Speed = 100.f;
+
+	// FSM 컴포넌트 추가
+	m_FSM = (CFSM*)AddComponent(new CFSM);
+
+	// FSM 에 상태 추가
+	m_FSM->AddState(L"Idle", new CIdleState);
+	m_FSM->AddState(L"Trace", new CTraceState);
 }
 
 CMonster::~CMonster()
