@@ -32,6 +32,8 @@ public:
     void RegisterCollider(CCollider* _Collider, LAYER_TYPE _Type) { m_vecCollider[(UINT)_Type].push_back(_Collider); }
     const vector<CCollider*>& GetColliders(LAYER_TYPE _Type) { return m_vecCollider[(UINT)_Type]; }
 
+    CObj* FindObjectByName(LAYER_TYPE _Layer, const wstring& _Name);
+
 protected:
     void DeleteObject(int _LayerIdx);
     void DeleteAllObject();

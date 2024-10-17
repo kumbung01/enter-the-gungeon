@@ -145,6 +145,18 @@
     <ClInclude Include="CSoundMgr.h">
       <Filter>Game\03. Manager\11. Sound</Filter>
     </ClInclude>
+    <ClInclude Include="CFSM.h">
+      <Filter>Game\06. Component\05. FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="CState.h">
+      <Filter>Game\State</Filter>
+    </ClInclude>
+    <ClInclude Include="CIdleState.h">
+      <Filter>Game\State\Idle</Filter>
+    </ClInclude>
+    <ClInclude Include="CTraceState.h">
+      <Filter>Game\State\Trace</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -273,6 +285,18 @@
     <ClCompile Include="CSoundMgr.cpp">
       <Filter>Game\03. Manager\11. Sound</Filter>
     </ClCompile>
+    <ClCompile Include="CFSM.cpp">
+      <Filter>Game\06. Component\05. FSM</Filter>
+    </ClCompile>
+    <ClCompile Include="CState.cpp">
+      <Filter>Game\State</Filter>
+    </ClCompile>
+    <ClCompile Include="CIdleState.cpp">
+      <Filter>Game\State\Idle</Filter>
+    </ClCompile>
+    <ClCompile Include="CTraceState.cpp">
+      <Filter>Game\State\Trace</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">
@@ -394,6 +418,18 @@
     </Filter>
     <Filter Include="Game\03. Manager\11. Sound">
       <UniqueIdentifier>{3cd604a2-7fbd-4b2d-9b04-4cd718f4ec0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\06. Component\05. FSM">
+      <UniqueIdentifier>{3e762c39-65af-4370-9577-a81972e9a55c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\State">
+      <UniqueIdentifier>{6318c495-9b93-4133-b348-406a86e84974}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\State\Idle">
+      <UniqueIdentifier>{b8cc514f-a594-437e-9c17-d788e0e41488}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\State\Trace">
+      <UniqueIdentifier>{f63c433a-e559-406d-98e6-3544f8620360}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

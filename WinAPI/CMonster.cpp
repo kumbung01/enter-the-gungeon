@@ -29,7 +29,7 @@ CMonster::CMonster()
 	m_Info.MaxHP = 100.f;
 	m_Info.CurHP = 100.f;
 	m_Info.AttRange = 100.f;
-	m_Info.DetectRange = 400.f;
+	m_Info.DetectRange = 200.f;
 	m_Info.Speed = 100.f;
 
 	// FSM 컴포넌트 추가
@@ -46,6 +46,8 @@ CMonster::~CMonster()
 
 void CMonster::Begin()
 {
+	m_FSM->ChangeState(L"Idle");
+
 	// 레벨이 시작할때 초기 위치값 기록
 	m_InitPos = GetPos();
 }

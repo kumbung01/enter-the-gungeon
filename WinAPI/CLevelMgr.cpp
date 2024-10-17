@@ -59,3 +59,11 @@ void CLevelMgr::ChangeLevel(LEVEL_TYPE _NextLevel)
     // 3. 변경된 레벨의 Begin 을 호출시킨다.
     m_CurLevel->Begin();
 }
+
+CObj* CLevelMgr::FindObjectByName(LAYER_TYPE _Layer, const wstring& _Name)
+{
+    if (nullptr == m_CurLevel)
+        return nullptr;
+
+    return m_CurLevel->FindObjectByName(_Layer, _Name);
+}

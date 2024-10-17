@@ -11,6 +11,8 @@ private:
 
 public:
 	CLevel* GetCurrentLevel() { return m_CurLevel; }
+	CObj* FindObjectByName(LAYER_TYPE _Type, const wstring& _Name);
+
 
 private:
 	void ChangeLevel(LEVEL_TYPE _NextLevel);

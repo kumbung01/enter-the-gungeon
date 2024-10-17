@@ -11,6 +11,7 @@ CFSM::CFSM()
 
 CFSM::~CFSM()
 {
+	Delete_Map(m_mapState);
 }
 
 void CFSM::FinalTick()
@@ -44,7 +45,7 @@ void CFSM::AddState(const wstring& _Key, CState* _State)
 void CFSM::ChangeState(const wstring& _NextState)
 {
 	CState* pNextState = FindState(_NextState);
-	assert(!pNextState);
+	assert(pNextState);
 
 	if (nullptr != m_CurState)
 		m_CurState->Exit();
