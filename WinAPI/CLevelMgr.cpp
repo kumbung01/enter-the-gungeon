@@ -26,7 +26,7 @@ void CLevelMgr::Init()
     m_arrLevel[(UINT)LEVEL_TYPE::EDITOR] = new CLevel_Editor;
 
     // 현재 레벨을 CLevel_Start 로 지정
-    m_CurLevel = m_arrLevel[(UINT)LEVEL_TYPE::EDITOR];
+    m_CurLevel = m_arrLevel[(UINT)LEVEL_TYPE::START];
     m_CurLevel->Begin();
 }
 

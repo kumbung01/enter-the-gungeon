@@ -8,6 +8,7 @@
 #include "CMissile.h"
 #include "CPlatform.h"
 #include "CMap.h"
+#include "CCursor.h"
 
 #include "CCollisionMgr.h"
 #include "CCollider.h"
@@ -36,7 +37,7 @@ void CLevel_Start::Begin()
     if (nullptr != pBGM)
     {
         pBGM->SetVolume(70.f);
-        pBGM->PlayToBGM(true);
+        //pBGM->PlayToBGM(true);
     }
     
     // 화면 해상도 
@@ -76,14 +77,21 @@ void CLevel_Start::Begin()
     CMap* pTileMap = new CMap;
     pTileMap->SetPos(Vec2(0.f, 0.f));
     wstring FilePath = CPathMgr::GetContentPath();
-    pTileMap->GetTileMap()->LoadTileMap(FilePath + L"TileMap\\Temp.tile");
+    //pTileMap->GetTileMap()->LoadTileMap(FilePath + L"TileMap\\Temp.tile");
     AddObject(pTileMap, LAYER_TYPE::TILE);
 
     // TileMap Object 추가
     pTileMap = new CMap;
     pTileMap->SetPos(Vec2(1000.f, 1000.f));
-    pTileMap->GetTileMap()->LoadTileMap(FilePath + L"TileMap\\Temp.tile");
+    //pTileMap->GetTileMap()->LoadTileMap(FilePath + L"TileMap\\Temp.tile");
     AddObject(pTileMap, LAYER_TYPE::TILE);
+
+
+    // Cursor 추가
+    CCursor* pCursor = new CCursor;
+    pCursor->SetPos(Vec2(0.f, 0.f));
+    pCursor->SetScale(Vec2(50.f, 50.f));
+    AddObject(pCursor, LAYER_TYPE::DEFAULT);
 
 
     // 충돌 설정

@@ -147,6 +147,7 @@
     <ClInclude Include="CCollider.h" />
     <ClInclude Include="CCollisionMgr.h" />
     <ClInclude Include="CComponent.h" />
+    <ClInclude Include="CCursor.h" />
     <ClInclude Include="CDbgRender.h" />
     <ClInclude Include="CEngine.h" />
     <ClInclude Include="CFlipbook.h" />
@@ -201,6 +202,7 @@
     <ClCompile Include="CCollider.cpp" />
     <ClCompile Include="CCollisionMgr.cpp" />
     <ClCompile Include="CComponent.cpp" />
+    <ClCompile Include="CCursor.cpp" />
     <ClCompile Include="CDbgRender.cpp" />
     <ClCompile Include="CEngine.cpp" />
     <ClCompile Include="CFlipbook.cpp" />

@@ -43,27 +43,27 @@ CPlayer::CPlayer()
 	, m_AccTime(0.f)
 	, m_HitBox(nullptr)
 	, m_FlipbookPlayer(nullptr)
-	, m_RigidBody(nullptr)
+	//, m_RigidBody(nullptr)
 {
 	// Collider 컴포넌트 추가
 	m_HitBox = new CCollider;
 	m_HitBox->SetName(L"HitBox_01");
 	m_HitBox->SetScale(Vec2(60.f, 100.f));
-	m_HitBox->SetOffset(Vec2(0.f, 15.f));
+	m_HitBox->SetOffset(Vec2(0.f, -20.f));
 
 	AddComponent(m_HitBox);
 
 	// Flipbook 생성 및 등록
-	CreatePlayerFlipbook();
+	//CreatePlayerFlipbook();
 
-	// RigidBody 컴포넌트 추가
-	m_RigidBody = (CRigidBody*)AddComponent(new CRigidBody);
-	m_RigidBody->SetMode(RIGIDBODY_MODE::BELTSCROLL);
-	m_RigidBody->SetInitialSpeed(100.f);
-	m_RigidBody->SetMaxSpeed(500.f);
-	m_RigidBody->SetMass(1.f);
-	m_RigidBody->SetFriction(700.f);
-	m_RigidBody->SetJumpVelocity(Vec2(0.f, -500.f));
+	//// RigidBody 컴포넌트 추가
+	//m_RigidBody = (CRigidBody*)AddComponent(new CRigidBody);
+	//m_RigidBody->SetMode(RIGIDBODY_MODE::BELTSCROLL);
+	//m_RigidBody->SetInitialSpeed(100.f);
+	//m_RigidBody->SetMaxSpeed(500.f);
+	//m_RigidBody->SetMass(1.f);
+	//m_RigidBody->SetFriction(700.f);
+	//m_RigidBody->SetJumpVelocity(Vec2(0.f, -500.f));
 }
 
 CPlayer::~CPlayer()
@@ -74,21 +74,21 @@ void CPlayer::Begin()
 {
 	m_AccTime = 1.f / m_AttSpeed;
 
-	m_FlipbookPlayer->Play(IDLE_DOWN, 5.f, true);
+	//m_FlipbookPlayer->Play(IDLE_DOWN, 5.f, true);
 
 	//CCamera::GetInst()->SetTarget(this);
 }
 
 void CPlayer::Tick()
 {
-	if (KEY_TAP(LEFT))
-	{
-		m_FlipbookPlayer->Play(MOVE_LEFT, 15.f, true);		
-	}	
-	if (KEY_TAP(RIGHT))
-	{
-		m_FlipbookPlayer->Play(MOVE_RIGHT, 15.f, true);		
-	}		
+	//if (KEY_TAP(LEFT))
+	//{
+	//	m_FlipbookPlayer->Play(MOVE_LEFT, 15.f, true);		
+	//}	
+	//if (KEY_TAP(RIGHT))
+	//{
+	//	m_FlipbookPlayer->Play(MOVE_RIGHT, 15.f, true);		
+	//}		
 	//if (KEY_TAP(UP))
 	//{
 	//	m_FlipbookPlayer->Play(MOVE_UP, 15.f, true);		
@@ -98,61 +98,56 @@ void CPlayer::Tick()
 	//	m_FlipbookPlayer->Play(MOVE_DOWN, 15.f, true);		
 	//}		
 
-	if (KEY_RELEASED(LEFT))
-		m_FlipbookPlayer->Play(IDLE_LEFT, 5.f, true);
-	if (KEY_RELEASED(RIGHT))
-		m_FlipbookPlayer->Play(IDLE_RIGHT, 5.f, true);
+	//if (KEY_RELEASED(LEFT))
+	//	m_FlipbookPlayer->Play(IDLE_LEFT, 5.f, true);
+	//if (KEY_RELEASED(RIGHT))
+	//	m_FlipbookPlayer->Play(IDLE_RIGHT, 5.f, true);
 	/*if (KEY_RELEASED(UP))
 		m_FlipbookPlayer->Play(IDLE_UP, 5.f, true);
 	if (KEY_RELEASED(DOWN))
 		m_FlipbookPlayer->Play(IDLE_DOWN, 5.f, true);*/
 
+	Vec2 cursorPos = CCamera::GetInst()->GetRealPos(CKeyMgr::GetInst()->GetMousePos());
+
 	if (KEY_PRESSED(LEFT))
-		m_RigidBody->AddForce(Vec2(-1000.f, 0.f), true);
+		//m_RigidBody->AddForce(Vec2(-1000.f, 0.f), true);
+		SetPos(GetPos() + Vec2(-0.1f, 0.f));
 	if (KEY_PRESSED(RIGHT))
-		m_RigidBody->AddForce(Vec2(1000.f, 0.f), true);
-	/*if (KEY_PRESSED(UP))
-		m_RigidBody->AddForce(Vec2(0.f, -1000.f));
+		SetPos(GetPos() + Vec2(0.1f, 0.f));
+	if (KEY_PRESSED(UP))
+		SetPos(GetPos() + Vec2(0.f, -0.1f));
 	if (KEY_PRESSED(DOWN))
-		m_RigidBody->AddForce(Vec2(0.f, 1000.f));*/
+		SetPos(GetPos() + Vec2(0.f, 0.1f));
 
 	if (KEY_TAP(SPACE))
 	{
 		CCamera::GetInst()->PostProcessEffect(HEART, 0.2f);
-		m_RigidBody->Jump();
+		//m_RigidBody->Jump();
 		//DrawDebugRect(PEN_TYPE::GREEN, GetPos(), GetScale() * 2.f, 3.f);
 		//DrawDebugCircle(PEN_TYPE::GREEN, GetPos(), GetScale() * 2.f, 3.f);
 		//DrawDebugLine(PEN_TYPE::GREEN, GetPos(), GetPos() + GetScale(), 3.f);
 	}
 
 	// 미사일 발사
-	if (KEY_PRESSED(SPACE))
+	if (KEY_TAP(LBTN))
 	{
-		// 시간체크
-		m_AccTime += DT;
+		// 밑의 GUN 에서 총알 발사 하도록
+		CMissile* pMissile = new CMissile;
+		pMissile->SetPos(GetPos());
+		pMissile->SetScale(20.f, 20.f);
 
-		if (1.f / m_AttSpeed <= m_AccTime)
-		{
-			m_AccTime -= 1.f / m_AttSpeed;
-
-			// 미사일 생성			
-			CMissile* pMissile = new CGuidedMissile;
-			pMissile->SetPos(GetPos() + Vec2(0.f, -GetScale().y / 2.f));
-			pMissile->SetScale(20.f, 20.f);
-			pMissile->SetVelocity(Vec2(cosf(PI / 2.f), -sinf(PI / 2.f)) * 400.f);
-			CreateObject(pMissile, LAYER_TYPE::PLAYER_OBJECT);			
-		}
+		Vec2 targetDirection = (cursorPos - GetPos());
+		targetDirection.Normalize();
+		pMissile->SetVelocity(targetDirection * 400.f);
+		CreateObject(pMissile, LAYER_TYPE::PLAYER_OBJECT);
 	}
 
-	else if (KEY_RELEASED(SPACE))
-	{
-		m_AccTime = 1.f / m_AttSpeed;
-	}
+	DrawDebugCircle(PEN_TYPE::RED, GetRenderPos(), Vec2(5.f, 5.f), 0.f);
 }
 
 void CPlayer::Render()
 {
-	m_FlipbookPlayer->Render();
+	//m_FlipbookPlayer->Render();
 }
 
 void CPlayer::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
@@ -173,6 +168,7 @@ void CPlayer::EndOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _O
 
 void CPlayer::CreatePlayerFlipbook()
 {
+	return;
 	// AtlasTexture
 	CTexture* pAtlas = CAssetMgr::GetInst()->LoadTexture(L"Link", L"Texture\\link_32.bmp");
 
@@ -204,6 +200,7 @@ void CPlayer::CreatePlayerFlipbook()
 
 void CPlayer::CreateFlipbook(const wstring& _FlipbookName, CTexture* _Atlas, Vec2 _LeftTop, Vec2 _Slice, int MaxFrame)
 {
+	return;
 	// Sprite 생성하기
 	//for (int i = 0; i < MaxFrame; ++i)
 	//{

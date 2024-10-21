@@ -157,6 +157,9 @@
     <ClInclude Include="CTraceState.h">
       <Filter>Game\State\Trace</Filter>
     </ClInclude>
+    <ClInclude Include="CCursor.h">
+      <Filter>Game\05. Object\Cursor</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -297,6 +300,9 @@
     <ClCompile Include="CTraceState.cpp">
       <Filter>Game\State\Trace</Filter>
     </ClCompile>
+    <ClCompile Include="CCursor.cpp">
+      <Filter>Game\05. Object\Cursor</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">
@@ -430,6 +436,9 @@
     </Filter>
     <Filter Include="Game\State\Trace">
       <UniqueIdentifier>{f63c433a-e559-406d-98e6-3544f8620360}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\05. Object\Cursor">
+      <UniqueIdentifier>{e23e6ecc-0e3a-40a2-8ffe-9c2cd1622d97}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
