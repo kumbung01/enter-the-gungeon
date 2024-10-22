@@ -25,15 +25,10 @@ FIRE_RESULT CGun::Fire()
 
 	m_fireTime -= m_fireDelay;
 
-	Vec2 mousePos = CKeyMgr::GetInst()->GetMousePos();
-	Vec2 realMousePos = CCamera::GetInst()->GetRealPos(mousePos);
-	Vec2 fireDir = realMousePos - m_owner->GetPos();
-	fireDir.Normalize();
-
 	CMissile* pMissile = new CMissile;
 	pMissile->SetPos(GetPos());
 	pMissile->SetScale(20.f, 20.f);
-	pMissile->SetVelocity(fireDir * 500.f);
+	pMissile->SetVelocity(m_fireDir * 500.f);
 	CreateObject(pMissile, LAYER_TYPE::PLAYER_OBJECT);
 
 	return FIRED;
@@ -50,7 +45,12 @@ float CGun::Reload()
 
 void CGun::Tick()
 {
-	SetPos(m_owner->GetPos());
+	Vec2 mousePos = CKeyMgr::GetInst()->GetMousePos();
+	Vec2 realMousePos = CCamera::GetInst()->GetRealPos(mousePos);
+	m_fireDir = realMousePos - m_owner->GetPos();
+	m_fireDir.Normalize();
+
+	SetPos(m_owner->GetPos() + m_fireDir * 70.f);
 }
 
 void CGun::Render()

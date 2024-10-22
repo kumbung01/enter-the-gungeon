@@ -21,6 +21,7 @@ class CGun :
 {
 private:  
     CObj* m_owner;              // 총의 주인(플레이어, 몬스터)
+    Vec2  m_fireDir;
 
     float     m_fireDelay;      // 총알 발사 딜레이
     float     m_fireTime;       // 현재 총알 발사 시간
