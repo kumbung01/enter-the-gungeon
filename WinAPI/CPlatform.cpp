@@ -26,8 +26,8 @@ void CPlatform::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider
 {
 	if (_OtherObject->GetName() == L"Player")
 	{
-		CRigidBody* pBody = _OtherObject->GetComponent<CRigidBody>();
-		pBody->SetGround(true);
+		//CRigidBody* pBody = _OtherObject->GetComponent<CRigidBody>();
+		//pBody->SetGround(true);
 		CCamera::GetInst()->Oscillation(0.15f, 5.f, 10.f);
 	}
 }
@@ -40,7 +40,7 @@ void CPlatform::EndOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* 
 {
 	if (_OtherObject->GetName() == L"Player")
 	{
-		CRigidBody* pBody = _OtherObject->GetComponent<CRigidBody>();
-		pBody->SetGround(false);
+		//CRigidBody* pBody = _OtherObject->GetComponent<CRigidBody>();
+		//pBody->SetGround(false);
 	}
 }
