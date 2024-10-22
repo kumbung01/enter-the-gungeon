@@ -115,14 +115,14 @@ void CPlayer::Tick()
 
 	Vec2 cursorPos = CCamera::GetInst()->GetRealPos(CKeyMgr::GetInst()->GetMousePos());
 
-	if (KEY_PRESSED(LEFT))
+	if (KEY_PRESSED(KEY::A))
 		//m_RigidBody->AddForce(Vec2(-1000.f, 0.f), true);
 		SetPos(GetPos() + Vec2(-0.1f, 0.f));
-	if (KEY_PRESSED(RIGHT))
+	if (KEY_PRESSED(KEY::D))
 		SetPos(GetPos() + Vec2(0.1f, 0.f));
-	if (KEY_PRESSED(UP))
+	if (KEY_PRESSED(KEY::W))
 		SetPos(GetPos() + Vec2(0.f, -0.1f));
-	if (KEY_PRESSED(DOWN))
+	if (KEY_PRESSED(KEY::S))
 		SetPos(GetPos() + Vec2(0.f, 0.1f));
 
 	if (KEY_TAP(KEY::LBTN) || KEY_PRESSED(KEY::LBTN))
