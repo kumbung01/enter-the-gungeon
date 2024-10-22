@@ -4,6 +4,7 @@
 class CCollider;
 class CTexture;
 class CFlipbookPlayer;
+class CGun;
 //class CRigidBody;
 
 class CPlayer :
@@ -15,6 +16,10 @@ private:
     float               m_AccTime;  // 시간 누적
     CCollider*          m_HitBox;
     CFlipbookPlayer*    m_FlipbookPlayer;
+
+    CGun* m_currentGun;
+    std::list<CGun*> m_guns;
+
     //CRigidBody*         m_RigidBody;
 
     
@@ -29,6 +34,8 @@ public:
     virtual void BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider);
     virtual void Overlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider);
     virtual void EndOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider);
+
+    void GetGun(CGun* _gun);
 
 private:
     void CreatePlayerFlipbook();

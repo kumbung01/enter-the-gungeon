@@ -9,6 +9,7 @@
 #include "CPlatform.h"
 #include "CMap.h"
 #include "CCursor.h"
+#include "CGun.h"
 
 #include "CCollisionMgr.h"
 #include "CCollider.h"
@@ -44,12 +45,17 @@ void CLevel_Start::Begin()
     Vec2 vResolution = CEngine::GetInst()->GetResolution();
 
     // Player 持失
-    CObj* pObject = new CPlayer;
+    CPlayer* pObject = new CPlayer;
     pObject->SetName(L"Player");
     pObject->SetPos(vResolution.x / 2.f, 100.f);
     pObject->SetScale(50.f, 50.f);
 
     AddObject(pObject, LAYER_TYPE::PLAYER);
+
+    CGun* gun = new CGun;
+    gun->SetPos(pObject->GetPos());
+    pObject->GetGun(gun);
+    AddObject(gun, LAYER_TYPE::PLAYER_OBJECT);
 
     // Monster 持失
     CMonster* pMonster = new CMonster;

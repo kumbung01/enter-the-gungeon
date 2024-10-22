@@ -11,6 +11,7 @@
 #include "CMissile.h"
 #include "CLevelMgr.h"
 #include "CLevel.h"
+#include "CGun.h"
 
 #include "CMonster.h"
 #include "CCollider.h"
@@ -43,6 +44,7 @@ CPlayer::CPlayer()
 	, m_AccTime(0.f)
 	, m_HitBox(nullptr)
 	, m_FlipbookPlayer(nullptr)
+	, m_currentGun(nullptr)
 	//, m_RigidBody(nullptr)
 {
 	// Collider 컴포넌트 추가
@@ -52,6 +54,8 @@ CPlayer::CPlayer()
 	m_HitBox->SetOffset(Vec2(0.f, -20.f));
 
 	AddComponent(m_HitBox);
+
+
 
 	// Flipbook 생성 및 등록
 	//CreatePlayerFlipbook();
@@ -77,6 +81,8 @@ void CPlayer::Begin()
 	//m_FlipbookPlayer->Play(IDLE_DOWN, 5.f, true);
 
 	//CCamera::GetInst()->SetTarget(this);
+
+
 }
 
 void CPlayer::Tick()
@@ -119,6 +125,11 @@ void CPlayer::Tick()
 	if (KEY_PRESSED(DOWN))
 		SetPos(GetPos() + Vec2(0.f, 0.1f));
 
+	if (KEY_TAP(KEY::LBTN) || KEY_PRESSED(KEY::LBTN))
+	{
+		auto res = m_currentGun->Fire();
+	}
+
 	if (KEY_TAP(SPACE))
 	{
 		CCamera::GetInst()->PostProcessEffect(HEART, 0.2f);
@@ -126,20 +137,6 @@ void CPlayer::Tick()
 		//DrawDebugRect(PEN_TYPE::GREEN, GetPos(), GetScale() * 2.f, 3.f);
 		//DrawDebugCircle(PEN_TYPE::GREEN, GetPos(), GetScale() * 2.f, 3.f);
 		//DrawDebugLine(PEN_TYPE::GREEN, GetPos(), GetPos() + GetScale(), 3.f);
-	}
-
-	// 미사일 발사
-	if (KEY_TAP(LBTN))
-	{
-		// 밑의 GUN 에서 총알 발사 하도록
-		CMissile* pMissile = new CMissile;
-		pMissile->SetPos(GetPos());
-		pMissile->SetScale(20.f, 20.f);
-
-		Vec2 targetDirection = (cursorPos - GetPos());
-		targetDirection.Normalize();
-		pMissile->SetVelocity(targetDirection * 400.f);
-		CreateObject(pMissile, LAYER_TYPE::PLAYER_OBJECT);
 	}
 
 	DrawDebugCircle(PEN_TYPE::RED, GetRenderPos(), Vec2(5.f, 5.f), 0.f);
@@ -164,6 +161,13 @@ void CPlayer::Overlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _Othe
 
 void CPlayer::EndOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
 {
+}
+
+void CPlayer::GetGun(CGun* _gun)
+{
+	_gun->SetOwner(this);
+	m_guns.push_back(_gun);
+	m_currentGun = m_guns.back();
 }
 
 void CPlayer::CreatePlayerFlipbook()
