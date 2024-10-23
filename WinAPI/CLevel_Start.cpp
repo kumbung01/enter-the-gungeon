@@ -10,6 +10,7 @@
 #include "CMap.h"
 #include "CCursor.h"
 #include "CGun.h"
+#include "CReloadUI.h"
 
 #include "CCollisionMgr.h"
 #include "CCollider.h"
@@ -54,8 +55,14 @@ void CLevel_Start::Begin()
 
     CGun* gun = new CGun;
     gun->SetPos(pObject->GetPos());
-    pObject->GetGun(gun);
-    AddObject(gun, LAYER_TYPE::PLAYER_OBJECT);
+    gun->SetOwner(pObject);
+    pObject->SetGun(gun);
+    AddObject(gun, LAYER_TYPE::GUN);
+
+    CReloadUI* ui = new CReloadUI;
+    ui->SetOwner(pObject);
+    pObject->SetReloadUI(ui);
+    AddObject(ui, LAYER_TYPE::DEFAULT);
 
     // Monster 생성
     CMonster* pMonster = new CMonster;
@@ -74,10 +81,10 @@ void CLevel_Start::Begin()
     pMonster->SetSpeed(300.f);
     AddObject(pMonster, LAYER_TYPE::MONSTER);
 
-    // Platform Object 추가
-    CObj* pPlatform = new CPlatform;
-    pPlatform->SetPos(vResolution.x / 2.f, (vResolution.y * 3.f) / 4.f);
-    AddObject(pPlatform, LAYER_TYPE::TILE);
+    //// Platform Object 추가
+    //CObj* pPlatform = new CPlatform;
+    //pPlatform->SetPos(vResolution.x / 2.f, (vResolution.y * 3.f) / 4.f);
+    //AddObject(pPlatform, LAYER_TYPE::TILE);
 
     // TileMap Object 추가
     CMap* pTileMap = new CMap;
