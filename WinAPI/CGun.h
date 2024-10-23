@@ -9,11 +9,11 @@ enum FIRE_TYPE
     END
 };
 
-enum FIRE_RESULT
+enum class GUN_STATE
 {
-    FIRED,
-    WAIT,
-    RELOAD,
+    IDLE,
+    FIRING,
+    RELOADING,
 };
 
 class CGun :
@@ -22,6 +22,7 @@ class CGun :
 private:  
     CObj* m_owner;              // 총의 주인(플레이어, 몬스터)
     Vec2  m_fireDir;
+    GUN_STATE m_gunState;     // 현재 총 상태
 
     float     m_fireDelay;      // 총알 발사 딜레이
     float     m_fireTime;       // 현재 총알 발사 시간
@@ -32,16 +33,20 @@ private:
     int       m_bullets;        // 현재 탄약량
     int       m_maxBullets;     // 최대 탄약량
 
+    bool      m_bIsInfiniteBullet;  //  무한탄창
     float     m_bulletSpread;   // 산탄도
     float     m_knockback;      // 넉백
 
     //FIRE_TYPE m_fireType;     // 총알 발사 방법
 
 public:
-    FIRE_RESULT  Fire();      // 발사, 파라미터: 방향, return type 발사 여부(고장, 재장전 등)
-    float Reload(); // 재장전, 파라미터: 총알 수
+    virtual bool Trigger();           // 방아쇠 당김
+    virtual void Fire();      // 발사, 파라미터: 방향, return type 발사 여부(고장, 재장전 등)
+    virtual void Reload(bool isFired = false); // 재장전, 파라미터: 총알 수
     void SetOwner(CObj* _owner) { m_owner = _owner; }
-    
+private:
+    void CreateBullet();
+    void CalculateFireDirection();
 
 public:
     void Tick() override;

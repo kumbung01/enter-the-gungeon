@@ -52,7 +52,7 @@ enum class LAYER_TYPE
 	PLAYER_OBJECT,
 	MONSTER,
 	MONSTER_OBJECT,
-
+	GUN,
 	// 7 ~ 30
 
 	UI = 31,

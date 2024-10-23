@@ -12,6 +12,7 @@
 #include "CLevelMgr.h"
 #include "CLevel.h"
 #include "CGun.h"
+#include "CReloadUI.h"
 
 #include "CMonster.h"
 #include "CCollider.h"
@@ -39,19 +40,19 @@ enum PLAYER_ANIM_STATE
 
 
 CPlayer::CPlayer()
-	: m_Speed(200.f)
+	: m_Speed(0.2f)
 	, m_AttSpeed(10.f)
 	, m_AccTime(0.f)
 	, m_HitBox(nullptr)
 	, m_FlipbookPlayer(nullptr)
-	, m_currentGun(nullptr)
+	, m_gun(nullptr)
 	//, m_RigidBody(nullptr)
 {
 	// Collider 컴포넌트 추가
 	m_HitBox = new CCollider;
 	m_HitBox->SetName(L"HitBox_01");
-	m_HitBox->SetScale(Vec2(60.f, 100.f));
-	m_HitBox->SetOffset(Vec2(0.f, -20.f));
+	m_HitBox->SetScale(Vec2(60.f, 60.f));
+	m_HitBox->SetOffset(Vec2(0.f, 0.f));
 
 	AddComponent(m_HitBox);
 
@@ -115,19 +116,27 @@ void CPlayer::Tick()
 
 	Vec2 cursorPos = CCamera::GetInst()->GetRealPos(CKeyMgr::GetInst()->GetMousePos());
 
+	Vec2 moveDir = { 0.f, 0.f };
+
 	if (KEY_PRESSED(KEY::A))
 		//m_RigidBody->AddForce(Vec2(-1000.f, 0.f), true);
-		SetPos(GetPos() + Vec2(-0.1f, 0.f));
+		moveDir += Vec2(-0.1f, 0.f);
 	if (KEY_PRESSED(KEY::D))
-		SetPos(GetPos() + Vec2(0.1f, 0.f));
+		moveDir += Vec2(0.1f, 0.f);
 	if (KEY_PRESSED(KEY::W))
-		SetPos(GetPos() + Vec2(0.f, -0.1f));
+		moveDir += Vec2(0.f, -0.1f);
 	if (KEY_PRESSED(KEY::S))
-		SetPos(GetPos() + Vec2(0.f, 0.1f));
+		moveDir += Vec2(0.f, 0.1f);
+	
+	if (moveDir.x != 0.f || moveDir.y != 0.f)
+		moveDir.Normalize();
 
-	if (KEY_TAP(KEY::LBTN) || KEY_PRESSED(KEY::LBTN))
+	SetPos(GetPos() + moveDir * m_Speed);
+
+	if (m_gun != nullptr)
 	{
-		auto res = m_currentGun->Fire();
+		m_gun->Fire();
+		m_gun->Reload(false);
 	}
 
 	if (KEY_TAP(SPACE))
@@ -161,13 +170,6 @@ void CPlayer::Overlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _Othe
 
 void CPlayer::EndOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
 {
-}
-
-void CPlayer::GetGun(CGun* _gun)
-{
-	_gun->SetOwner(this);
-	m_guns.push_back(_gun);
-	m_currentGun = m_guns.back();
 }
 
 void CPlayer::CreatePlayerFlipbook()
@@ -243,5 +245,10 @@ void CPlayer::CreateFlipbook(const wstring& _FlipbookName, CTexture* _Atlas, Vec
 	//CAssetMgr::GetInst()->AddFlipbook(_FlipbookName, pFlipbook);
 	//wstring Path = L"Flipbook\\";
 	//pFlipbook->Save(Path + _FlipbookName);
+}
+
+void CPlayer::Reload(float _duration)
+{
+	m_reloadUI->DrawUI(_duration);
 }
 

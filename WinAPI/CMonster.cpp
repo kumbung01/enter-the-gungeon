@@ -118,4 +118,9 @@ void CMonster::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider*
 		// 플레이어랑 부딪히면 다음 스테이지로 넘어간다.
 		ChangeLevel(LEVEL_TYPE::EDITOR);
 	}
+
+	else if (_OtherObject->GetLayerType() == LAYER_TYPE::PLAYER_OBJECT)
+	{
+		DeleteObject(this);
+	}
 }
