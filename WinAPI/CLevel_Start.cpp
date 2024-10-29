@@ -46,22 +46,22 @@ void CLevel_Start::Begin()
     Vec2 vResolution = CEngine::GetInst()->GetResolution();
 
     // Player 생성
-    CPlayer* pObject = new CPlayer;
-    pObject->SetName(L"Player");
-    pObject->SetPos(vResolution.x / 2.f, 100.f);
-    pObject->SetScale(50.f, 50.f);
+    CPlayer* pPlayer = new CPlayer;
+    pPlayer->SetName(L"Player");
+    pPlayer->SetPos(vResolution.x / 2.f, 100.f);
+    pPlayer->SetScale(50.f, 50.f);
 
-    AddObject(pObject, LAYER_TYPE::PLAYER);
+    AddObject(pPlayer, LAYER_TYPE::PLAYER);
 
     CGun* gun = new CGun;
-    gun->SetPos(pObject->GetPos());
-    gun->SetOwner(pObject);
-    pObject->SetGun(gun);
+    gun->SetPos(pPlayer->GetPos());
+    gun->SetOwner(pPlayer);
+    pPlayer->SetGun(gun);
     AddObject(gun, LAYER_TYPE::GUN);
 
     CReloadUI* ui = new CReloadUI;
-    ui->SetOwner(pObject);
-    pObject->SetReloadUI(ui);
+    ui->SetOwner(pPlayer);
+    pPlayer->SetReloadUI(ui);
     AddObject(ui, LAYER_TYPE::DEFAULT);
 
     // Monster 생성
@@ -114,6 +114,8 @@ void CLevel_Start::Begin()
     CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER, LAYER_TYPE::TILE);
 
     // Camera 효과
+    CCamera::GetInst()->SetTarget(pPlayer);
+    CCamera::GetInst()->SetState(CAMERA_STATE::FOLLOW_PLAYER);
     CCamera::GetInst()->PostProcessEffect(HEART, 0.5f);  
 
     // 부모 CLevel 의 Begin 호출
