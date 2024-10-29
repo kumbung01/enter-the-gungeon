@@ -18,8 +18,6 @@ void CGun::CreateBullet()
 	pMissile->SetScale(20.f, 20.f);
 	pMissile->SetVelocity(m_fireDir * 900.f);
 	CreateObject(pMissile, LAYER_TYPE::PLAYER_OBJECT);
-
-	m_magBullets--;
 }
 
 void CGun::CalculateFireDirection()
@@ -35,49 +33,52 @@ void CGun::CalculateFireDirection()
 * parameter: none
 * returns: none
 */
-void CGun::Fire()
+GUN_STATE CGun::Fire()
 {
-	if (m_magBullets == 0)
+	if (m_gunState == GUN_STATE::EMPTY)
 	{
 		if (KEY_TAP(KEY::LBTN))
 		{
-			Reload(true);
-			return;
+			return Reload(true);
 		}
-		else if (KEY_PRESSED(KEY::LBTN))
-			return; // just hang
 		else
-			return; // idle
+			return m_gunState;
 	}
 
 	if (!KEY_PRESSED(KEY::LBTN))
-		return;
+		return m_gunState;
 
 	if (m_gunState != GUN_STATE::IDLE)
-		return;
-
-	CreateBullet();
+		return m_gunState;
 
 	m_gunState = GUN_STATE::FIRING;
+
+	CreateBullet();
+	m_magBullets--;
+
+	return m_gunState;
 }
 /*
 * reloads the bullets.
 * parameter: none,
 * returns: none
 */
-void CGun::Reload(bool isFired)
+GUN_STATE CGun::Reload(bool isFired)
 {
 	if (!KEY_TAP(KEY::R) && !isFired)
-		return;
+		return m_gunState;
 
 	// if R key is tapped or called from Fire()
-
-	if (m_gunState != GUN_STATE::IDLE)
-		return;
+	 
+	if (m_gunState == GUN_STATE::RELOAD ||
+		m_gunState == GUN_STATE::RELOADING)
+		return m_gunState;
 
 	int bulletsToReload = m_maxMagBullets - m_magBullets;
 	if (bulletsToReload == 0)
-		return;
+		return m_gunState;
+
+	m_gunState = GUN_STATE::RELOAD;
 
 	// ÃÑ¾Ë ÀåÀü
 	if (!m_bIsInfiniteBullet)
@@ -88,21 +89,14 @@ void CGun::Reload(bool isFired)
 	
 	m_fireTime = 0.f; // resets fireTime
 
-	if (m_owner->GetName() == L"Player")
-	{
-		CPlayer* player = (CPlayer*)m_owner;
-		player->Reload(m_reloadDelay);
-	}
-
-	m_gunState = GUN_STATE::RELOADING;
-
-	return;
+	return m_gunState;
 }
 
 void CGun::Tick()
 {
 	switch (m_gunState)
 	{
+	case GUN_STATE::EMPTY:
 	case GUN_STATE::IDLE:
 		break;
 	case GUN_STATE::FIRING:
@@ -110,11 +104,16 @@ void CGun::Tick()
 		if (m_fireTime > m_fireDelay)
 		{
 			m_fireTime -= m_fireDelay;
-			m_gunState = GUN_STATE::IDLE;
+			if (m_magBullets == 0)
+				m_gunState = GUN_STATE::EMPTY;
+			else
+				m_gunState = GUN_STATE::IDLE;
 		}
 		break;
+	case GUN_STATE::RELOAD:
+		m_gunState = GUN_STATE::RELOADING;
+		break;
 	case GUN_STATE::RELOADING:
-		//DrawDebugRect(PEN_TYPE::RED, GetRenderPos(), Vec2(30.f, 30.f), 0.f);
 		m_reloadTime += DT;
 		if (m_reloadTime > m_reloadDelay)
 		{
@@ -122,6 +121,9 @@ void CGun::Tick()
 			m_gunState = GUN_STATE::IDLE;
 		}
 		break;
+	case GUN_STATE::GROUND:
+		// do not update position
+		return;
 	default:
 		break;
 	}

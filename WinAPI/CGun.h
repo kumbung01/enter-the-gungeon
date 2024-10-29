@@ -13,7 +13,10 @@ enum class GUN_STATE
 {
     IDLE,
     FIRING,
-    RELOADING,
+    EMPTY,
+    RELOAD,     // reload start
+    RELOADING,  // reloading
+    GROUND,
 };
 
 class CGun :
@@ -41,9 +44,10 @@ private:
 
 public:
     virtual bool Trigger();           // 방아쇠 당김
-    virtual void Fire();      // 발사, 파라미터: 방향, return type 발사 여부(고장, 재장전 등)
-    virtual void Reload(bool isFired = false); // 재장전, 파라미터: 총알 수
+    virtual GUN_STATE Fire();      // 발사, 파라미터: 방향, return type 발사 여부(고장, 재장전 등)
+    virtual GUN_STATE Reload(bool isFired = false); // 재장전, 파라미터: 총알 수
     void SetOwner(CObj* _owner) { m_owner = _owner; }
+    float GetReloadDelay() { return m_reloadDelay; }
 private:
     void CreateBullet();
     void CalculateFireDirection();

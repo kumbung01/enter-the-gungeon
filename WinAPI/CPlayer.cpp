@@ -135,8 +135,12 @@ void CPlayer::Tick()
 
 	if (m_gun != nullptr)
 	{
-		m_gun->Fire();
-		m_gun->Reload(false);
+		GUN_STATE fireResult = m_gun->Fire();
+		GUN_STATE reloadResult = m_gun->Reload(false);
+		if (fireResult == GUN_STATE::RELOAD || reloadResult == GUN_STATE::RELOAD)
+		{
+			this->Reload(m_gun->GetReloadDelay());
+		}
 	}
 
 	if (KEY_TAP(SPACE))
