@@ -197,3 +197,10 @@ float Saturate(float _Ratio)
 
 	return _Ratio;
 }
+
+
+// 0.f ~ 1.f 범위 제한 함수
+float EaseInOut(float t)
+{
+	return t * t * (3.0f - 2.0f * t);
+}
