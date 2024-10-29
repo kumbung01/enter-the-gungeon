@@ -20,6 +20,7 @@ CCamera::CCamera()
 	, m_Time(0.f)
 	, m_Dir(1.f)
 	, m_bOscillation(false)
+	, m_state(CAMERA_STATE::NORMAL)
 {
 	Vec2 vResolution = CEngine::GetInst()->GetResolution();
 	m_CamTex = CAssetMgr::GetInst()->CreateTexture(L"CameraTex", (UINT)vResolution.x, (UINT)vResolution.y);
@@ -48,18 +49,24 @@ void CCamera::Tick()
 	Vec2 Resolution = CEngine::GetInst()->GetResolution();
 	m_Diff = (m_LookAt + m_Offset) - (Resolution / 2.f);
 
-	if (KEY_PRESSED(KEY::UP))
-		m_LookAt.y -= DT * 500.f;
-	if (KEY_PRESSED(KEY::DOWN))
-		m_LookAt.y += DT * 500.f;
-	if (KEY_PRESSED(KEY::LEFT))
-		m_LookAt.x -= DT * 500.f;
-	if (KEY_PRESSED(KEY::RIGHT))
-		m_LookAt.x += DT * 500.f;
-
-	if (m_Target)
+	if (m_state == CAMERA_STATE::FOLLOW_PLAYER && m_Target)
 	{
+		float maxOffset = Resolution.y * 0.3f;
 		m_LookAt = m_Target->GetPos();
+
+		Vec2 mousePos = GetRealPos(CKeyMgr::GetInst()->GetMousePos());
+		Vec2 mouseDiff = (mousePos - m_LookAt) * 0.35f;
+
+		if (abs(mouseDiff.x) > maxOffset)
+		{
+			mouseDiff.x = mouseDiff.x > 0 ? maxOffset : -maxOffset;
+		}
+		if (abs(mouseDiff.y) > maxOffset)
+		{
+			mouseDiff.y = mouseDiff.y > 0 ? maxOffset : -maxOffset;
+		}
+
+		m_LookAt += mouseDiff;
 	}
 	
 	// 카메라 진동 효과
