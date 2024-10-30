@@ -13,12 +13,13 @@ private:
     map<wstring, CState*>   m_mapState;
     CState*                 m_CurState;
     CState*                 m_PrevState;
+    wstring                 m_CurStateName;
 
 public:
     void AddState(const wstring& _Key, CState* _State);
     CState* FindState(const wstring& _Key);
     void ChangeState(const wstring& _NextState);
-
+    const WCHAR* GetCurStateName() { return m_CurStateName.c_str(); }
 
 public:
     virtual void FinalTick() override;

@@ -45,7 +45,7 @@ void CTraceState::FinalTick()
 
 		
 	// 인지범위 시각화
-	DrawDebugCircle(PEN_TYPE::BLUE, pMon->GetPos(), Vec2(info.DetectRange * 2.f, info.DetectRange * 2.f), 0.f);
+	DrawDebugCircle(PEN_TYPE::BLUE, pMon->GetRenderPos(), Vec2(info.DetectRange * 2.f, info.DetectRange * 2.f), 0.f);
 }
 
 void CTraceState::Exit()

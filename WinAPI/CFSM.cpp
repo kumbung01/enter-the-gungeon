@@ -51,6 +51,7 @@ void CFSM::ChangeState(const wstring& _NextState)
 		m_CurState->Exit();
 	
 	m_CurState = pNextState;
+	m_CurStateName = _NextState;
 
 	m_CurState->Enter();
 }

@@ -7,7 +7,7 @@ enum class UI_STATE
     DRAWING,
 };
 
-class CReloadUI :
+class CReloadBar :
     public CObj
 {
 private:
@@ -18,12 +18,12 @@ private:
     float m_currentTime;
 public:
     void SetOwner(CObj* _owner) { m_owner = _owner; }
-    void DrawUI(float _duration);
+    void Draw(float _duration);
 
     void Tick() override;
     void Render() override;
 public:
-    CReloadUI();
-    ~CReloadUI();
+    CReloadBar();
+    ~CReloadBar();
 };
 

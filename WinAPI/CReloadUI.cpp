@@ -4,14 +4,14 @@
 
 
 
-void CReloadUI::DrawUI(float _duration)
+void CReloadBar::Draw(float _duration)
 {
 	m_currentTime = 0.f;
 	m_duration = _duration;
 	m_state = UI_STATE::DRAWING;
 }
 
-void CReloadUI::Tick()
+void CReloadBar::Tick()
 {
 	switch (m_state)
 	{
@@ -27,7 +27,7 @@ void CReloadUI::Tick()
 	}
 }
 
-void CReloadUI::Render()
+void CReloadBar::Render()
 {
 	if (m_state == UI_STATE::DRAWING)
 	{
@@ -39,7 +39,7 @@ void CReloadUI::Render()
 	}
 }
 
-CReloadUI::CReloadUI()
+CReloadBar::CReloadBar()
 	: m_owner(nullptr)
 	, m_duration(0.f)
 	, m_currentTime(0.f)
@@ -47,6 +47,6 @@ CReloadUI::CReloadUI()
 {
 }
 
-CReloadUI::~CReloadUI()
+CReloadBar::~CReloadBar()
 {
 }

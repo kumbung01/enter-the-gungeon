@@ -25,6 +25,11 @@
 #include "CSprite.h"
 #include "CRigidBody.h"
 
+#include "CFSM.h"
+#include "CPlayerIdleState.h"
+#include "CPlayerMovingState.h"
+#include "CPlayerEvadingState.h"
+
 enum PLAYER_ANIM_STATE
 {
 	IDLE_UP,
@@ -40,12 +45,15 @@ enum PLAYER_ANIM_STATE
 
 
 CPlayer::CPlayer()
-	: m_Speed(0.2f)
-	, m_AttSpeed(10.f)
+	: m_Speed(500.f)
+	, m_AttSpeed(0.1f)
 	, m_AccTime(0.f)
 	, m_HitBox(nullptr)
 	, m_FlipbookPlayer(nullptr)
 	, m_gun(nullptr)
+	, m_fsm(nullptr)
+	, m_evadeSpeed(1200.f)
+	, m_evadeTime(0.7f)
 	//, m_RigidBody(nullptr)
 {
 	// Collider 컴포넌트 추가
@@ -56,6 +64,11 @@ CPlayer::CPlayer()
 
 	AddComponent(m_HitBox);
 
+	// fsm 생성 및 등록
+	m_fsm = (CFSM*)AddComponent(new CFSM);
+	m_fsm->AddState(L"Idle", new CPlayerIdleState);
+	m_fsm->AddState(L"Moving", new CPlayerMovingState);
+	m_fsm->AddState(L"Evading", new CPlayerEvadingState);
 
 
 	// Flipbook 생성 및 등록
@@ -69,6 +82,8 @@ CPlayer::CPlayer()
 	//m_RigidBody->SetMass(1.f);
 	//m_RigidBody->SetFriction(700.f);
 	//m_RigidBody->SetJumpVelocity(Vec2(0.f, -500.f));
+
+
 }
 
 CPlayer::~CPlayer()
@@ -86,8 +101,36 @@ void CPlayer::Begin()
 
 }
 
+float EaseOutQuad(float t)
+{
+	return (t - 1)* (t - 1)* (t - 1)* (t - 1)* (t - 1) + 1;
+}
+
 void CPlayer::Tick()
 {
+	// get gun direction
+	Vec2 mousePos = CCamera::GetInst()->GetRealPos(CKeyMgr::GetInst()->GetMousePos());
+	m_gunDir = GetPos() - mousePos;
+	m_gunDir.Normalize();
+
+	if (m_state != PLAYER_STATE::EVADING)
+	{
+		// get move direction
+		m_moveDir = { 0.f, 0.f };
+
+		if (KEY_PRESSED(KEY::A))
+			m_moveDir += Vec2(-1.f, 0.f);
+		if (KEY_PRESSED(KEY::D))
+			m_moveDir += Vec2(1.f, 0.f);
+		if (KEY_PRESSED(KEY::W))
+			m_moveDir += Vec2(0.f, -1.f);
+		if (KEY_PRESSED(KEY::S))
+			m_moveDir += Vec2(0.f, 1.f);
+
+		if (m_moveDir.x != 0.f || m_moveDir.y != 0.f)
+			m_moveDir.Normalize();
+	}
+
 	//if (KEY_TAP(LEFT))
 	//{
 	//	m_FlipbookPlayer->Play(MOVE_LEFT, 15.f, true);		
@@ -114,35 +157,67 @@ void CPlayer::Tick()
 	if (KEY_RELEASED(DOWN))
 		m_FlipbookPlayer->Play(IDLE_DOWN, 5.f, true);*/
 
-	Vec2 cursorPos = CCamera::GetInst()->GetRealPos(CKeyMgr::GetInst()->GetMousePos());
+	// EVADE
+	if ((m_state == PLAYER_STATE::MOVING) && KEY_TAP(KEY::RBTN))
+	{
+		m_evadeAccTime = 0;
+		
+		m_state = PLAYER_STATE::EVADING;
+	}
 
-	Vec2 moveDir = { 0.f, 0.f };
 
-	if (KEY_PRESSED(KEY::A))
-		//m_RigidBody->AddForce(Vec2(-1000.f, 0.f), true);
-		moveDir += Vec2(-0.1f, 0.f);
-	if (KEY_PRESSED(KEY::D))
-		moveDir += Vec2(0.1f, 0.f);
-	if (KEY_PRESSED(KEY::W))
-		moveDir += Vec2(0.f, -0.1f);
-	if (KEY_PRESSED(KEY::S))
-		moveDir += Vec2(0.f, 0.1f);
-	
-	if (moveDir.x != 0.f || moveDir.y != 0.f)
-		moveDir.Normalize();
 
-	SetPos(GetPos() + moveDir * m_Speed);
+	if (m_state == PLAYER_STATE::EVADING)
+	{
+		m_evadeAccTime += DT;
+		if (m_evadeAccTime < m_evadeTime)
+		{
+			//float evadeSpeed = EaseInOut(m_evadeAccTime / m_evadeTime) * m_evadeSpeed;
+			float evadeSpeed = m_evadeSpeed;
+			float ratio = m_evadeAccTime / m_evadeTime;
+			evadeSpeed *= ratio < 0.4f ? 1.0f : 0.15f;
+			SetPos(GetPos() + m_moveDir * evadeSpeed * DT);
+			// state 표시용
+			DrawDebugRect(PEN_TYPE::RED, GetRenderPos() + Vec2(50.f, -50.f), Vec2(10.f, 10.f), 0.f);
+			return;
+		}
 
+		m_state = PLAYER_STATE::MOVING;
+	}
+
+	// move
+	if (m_moveDir.Length() > 0)
+	{
+		SetPos(GetPos() + m_moveDir * m_Speed * DT);
+		m_state = PLAYER_STATE::MOVING;
+
+		// state 표시용
+		DrawDebugRect(PEN_TYPE::BLUE, GetRenderPos() + Vec2(50.f, -50.f), Vec2(10.f, 10.f), 0.f);
+	}
+	else
+	{
+		m_state = PLAYER_STATE::IDLE;
+		// state 표시용
+		DrawDebugRect(PEN_TYPE::GREEN, GetRenderPos() + Vec2(50.f, -50.f), Vec2(10.f, 10.f), 0.f);
+	}
+
+	// gun related
 	if (m_gun != nullptr)
 	{
-		GUN_STATE fireResult = m_gun->Fire();
-		GUN_STATE reloadResult = m_gun->Reload(false);
-		if (fireResult == GUN_STATE::RELOAD || reloadResult == GUN_STATE::RELOAD)
+		if (m_state != PLAYER_STATE::EVADING)
 		{
-			this->Reload(m_gun->GetReloadDelay());
+			GUN_STATE fireResult = m_gun->Fire();
+			GUN_STATE reloadResult = m_gun->Reload(false);
+			if (fireResult == GUN_STATE::RELOAD || reloadResult == GUN_STATE::RELOAD)
+			{
+				this->Reload(m_gun->GetReloadDelay());
+			}
 		}
 	}
 
+
+
+	// USE item
 	if (KEY_TAP(SPACE))
 	{
 		CCamera::GetInst()->PostProcessEffect(HEART, 0.2f);
@@ -164,7 +239,14 @@ void CPlayer::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* 
 {
 	if (_OtherObject->GetName() == L"Monster")
 	{
-		//DeleteObject(_OtherObject);
+		ChangeLevel(LEVEL_TYPE::EDITOR);
+	}
+	else if (_OtherObject->GetLayerType() == LAYER_TYPE::MONSTER_OBJECT)
+	{
+		if (m_state != PLAYER_STATE::EVADING)
+		{
+			ChangeLevel(LEVEL_TYPE::EDITOR);
+		}
 	}
 }
 
@@ -251,8 +333,21 @@ void CPlayer::CreateFlipbook(const wstring& _FlipbookName, CTexture* _Atlas, Vec
 	//pFlipbook->Save(Path + _FlipbookName);
 }
 
+void CPlayer::IdleState()
+{
+}
+
+void CPlayer::MoveState()
+{
+}
+
+void CPlayer::EvadeState()
+{
+
+}
+
 void CPlayer::Reload(float _duration)
 {
-	m_reloadUI->DrawUI(_duration);
+	m_reloadBar->Draw(_duration);
 }
 

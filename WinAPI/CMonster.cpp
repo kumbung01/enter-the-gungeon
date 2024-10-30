@@ -54,21 +54,21 @@ void CMonster::Begin()
 
 void CMonster::Tick()
 {
-	return;
+	//return;
 
-	Vec2 vPos = GetPos();
+	//Vec2 vPos = GetPos();
 
-	vPos.x += DT * m_Speed * m_Dir;
-	
-	float fDistance = fabs(m_InitPos.x - vPos.x);
+	//vPos.x += DT * m_Speed * m_Dir;
+	//
+	//float fDistance = fabs(m_InitPos.x - vPos.x);
 
-	if (m_Dist < fDistance)
-	{
-		vPos.x = m_InitPos.x + m_Dir * m_Dist;
-		m_Dir *= -1;
-	}
+	//if (m_Dist < fDistance)
+	//{
+	//	vPos.x = m_InitPos.x + m_Dir * m_Dist;
+	//	m_Dir *= -1;
+	//}
 
-	SetPos(vPos);
+	//SetPos(vPos);
 }
 
 void CMonster::Render()
@@ -113,13 +113,7 @@ void CMonster::Render()
 
 void CMonster::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
 {
-	if (_OtherObject->GetName() == L"Player")
-	{
-		// 플레이어랑 부딪히면 다음 스테이지로 넘어간다.
-		ChangeLevel(LEVEL_TYPE::EDITOR);
-	}
-
-	else if (_OtherObject->GetLayerType() == LAYER_TYPE::PLAYER_OBJECT)
+	if (_OtherObject->GetLayerType() == LAYER_TYPE::PLAYER_OBJECT)
 	{
 		DeleteObject(this);
 	}
