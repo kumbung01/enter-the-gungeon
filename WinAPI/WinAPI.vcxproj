@@ -154,6 +154,7 @@
     <ClInclude Include="CFlipbookPlayer.h" />
     <ClInclude Include="CFSM.h" />
     <ClInclude Include="CGuidedMissile.h" />
+    <ClInclude Include="CGun.h" />
     <ClInclude Include="CIdleState.h" />
     <ClInclude Include="CKeyMgr.h" />
     <ClInclude Include="CLevel.h" />
@@ -168,6 +169,10 @@
     <ClInclude Include="CPathMgr.h" />
     <ClInclude Include="CPlatform.h" />
     <ClInclude Include="CPlayer.h" />
+    <ClInclude Include="CPlayerEvadingState.h" />
+    <ClInclude Include="CPlayerIdleState.h" />
+    <ClInclude Include="CPlayerMovingState.h" />
+    <ClInclude Include="CReloadUI.h" />
     <ClInclude Include="CRigidBody.h" />
     <ClInclude Include="CSelectGDI.h" />
     <ClInclude Include="CSound.h" />
@@ -209,6 +214,7 @@
     <ClCompile Include="CFlipbookPlayer.cpp" />
     <ClCompile Include="CFSM.cpp" />
     <ClCompile Include="CGuidedMissile.cpp" />
+    <ClCompile Include="CGun.cpp" />
     <ClCompile Include="CIdleState.cpp" />
     <ClCompile Include="CKeyMgr.cpp" />
     <ClCompile Include="CLevel.cpp" />
@@ -223,6 +229,10 @@
     <ClCompile Include="CPathMgr.cpp" />
     <ClCompile Include="CPlatform.cpp" />
     <ClCompile Include="CPlayer.cpp" />
+    <ClCompile Include="CPlayerEvadingState.cpp" />
+    <ClCompile Include="CPlayerIdleState.cpp" />
+    <ClCompile Include="CPlayerMovingState.cpp" />
+    <ClCompile Include="CReloadUI.cpp" />
     <ClCompile Include="CRigidBody.cpp" />
     <ClCompile Include="CSelectGDI.cpp" />
     <ClCompile Include="CSound.cpp" />

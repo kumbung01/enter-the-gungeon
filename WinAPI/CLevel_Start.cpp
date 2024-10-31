@@ -59,9 +59,9 @@ void CLevel_Start::Begin()
     pPlayer->SetGun(gun);
     AddObject(gun, LAYER_TYPE::GUN);
 
-    CReloadUI* ui = new CReloadUI;
+    CReloadBar* ui = new CReloadBar;
     ui->SetOwner(pPlayer);
-    pPlayer->SetReloadUI(ui);
+    pPlayer->SetReloadBar(ui);
     AddObject(ui, LAYER_TYPE::DEFAULT);
 
     // Monster 생성
@@ -72,6 +72,7 @@ void CLevel_Start::Begin()
     pMonster->SetDistance(200.f);
     pMonster->SetSpeed(300.f);
     AddObject(pMonster, LAYER_TYPE::MONSTER);
+
 
     pMonster = new CMonster;
     pMonster->SetName(L"Monster");
@@ -111,6 +112,7 @@ void CLevel_Start::Begin()
     CCollisionMgr::GetInst()->CollisionCheckClear();
     CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER_OBJECT, LAYER_TYPE::MONSTER);
     CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER, LAYER_TYPE::MONSTER);
+    CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER, LAYER_TYPE::MONSTER_OBJECT);
     CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER, LAYER_TYPE::TILE);
 
     // Camera 효과

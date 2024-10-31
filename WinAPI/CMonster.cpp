@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "CMonster.h"
+#include "CMissile.h"
 
 #include "CEngine.h"
 #include "CTimeMgr.h"
@@ -26,11 +27,12 @@ CMonster::CMonster()
 	m_Collider->SetScale(Vec2(100.f, 100.f));
 
 	// 몬스터 스탯
-	m_Info.MaxHP = 100.f;
-	m_Info.CurHP = 100.f;
+	m_Info.MaxHP = 25.f;
+	m_Info.CurHP = 25.f;
 	m_Info.AttRange = 100.f;
 	m_Info.DetectRange = 200.f;
 	m_Info.Speed = 100.f;
+	m_Info.AttDelay = 1.f;
 
 	// FSM 컴포넌트 추가
 	m_FSM = (CFSM*)AddComponent(new CFSM);
@@ -115,6 +117,9 @@ void CMonster::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider*
 {
 	if (_OtherObject->GetLayerType() == LAYER_TYPE::PLAYER_OBJECT)
 	{
-		DeleteObject(this);
+		auto pMissile = (CMissile*)_OtherObject;
+		m_Info.CurHP -= pMissile->GetDamage();
+		if (m_Info.CurHP <= 0)
+			DeleteObject(this);
 	}
 }

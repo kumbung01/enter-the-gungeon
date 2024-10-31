@@ -15,7 +15,7 @@ private:
 
     Vec2        m_Force;    // 크기, 방향
 
-
+    float       m_damage;
 
 public:
     void SetVelocity(Vec2 _Velocity) { m_Velocity = _Velocity; }
@@ -32,6 +32,8 @@ public:
     void AddForce(Vec2 _Force) { m_Force += _Force; }
     Vec2 GetForce() { return m_Force; }
 
+    float GetDamage() { return m_damage; }
+    void  SetDamage(float _damage) { m_damage = _damage; }
 
 public:
     virtual void Tick() override;

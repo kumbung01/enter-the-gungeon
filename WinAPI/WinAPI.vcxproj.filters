@@ -160,6 +160,21 @@
     <ClInclude Include="CCursor.h">
       <Filter>Game\05. Object\Cursor</Filter>
     </ClInclude>
+    <ClInclude Include="CGun.h">
+      <Filter>Game\05. Object\Gun</Filter>
+    </ClInclude>
+    <ClInclude Include="CReloadUI.h">
+      <Filter>Game\05. Object\Player\ReloadUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayerEvadingState.h">
+      <Filter>Game\State\Player\PlayerEvading</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayerMovingState.h">
+      <Filter>Game\State\Player\PlayerMoving</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayerIdleState.h">
+      <Filter>Game\State\Player\PlayerIdle</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="small.ico">
@@ -303,6 +318,21 @@
     <ClCompile Include="CCursor.cpp">
       <Filter>Game\05. Object\Cursor</Filter>
     </ClCompile>
+    <ClCompile Include="CGun.cpp">
+      <Filter>Game\05. Object\Gun</Filter>
+    </ClCompile>
+    <ClCompile Include="CReloadUI.cpp">
+      <Filter>Game\05. Object\Player\ReloadUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerEvadingState.cpp">
+      <Filter>Game\State\Player\PlayerEvading</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerMovingState.cpp">
+      <Filter>Game\State\Player\PlayerMoving</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerIdleState.cpp">
+      <Filter>Game\State\Player\PlayerIdle</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Default">
@@ -439,6 +469,24 @@
     </Filter>
     <Filter Include="Game\05. Object\Cursor">
       <UniqueIdentifier>{e23e6ecc-0e3a-40a2-8ffe-9c2cd1622d97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\05. Object\Gun">
+      <UniqueIdentifier>{53c25d43-eada-486c-bdc1-170d93dac898}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\05. Object\Player\ReloadUI">
+      <UniqueIdentifier>{e67f739d-a105-434e-a61f-87d018c21cb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\State\Player">
+      <UniqueIdentifier>{30a59b90-a3d6-4908-b7e1-6a294416ee2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\State\Player\PlayerIdle">
+      <UniqueIdentifier>{6dad4b3a-ae62-4c53-a241-b463ca42f1f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\State\Player\PlayerMoving">
+      <UniqueIdentifier>{9a4bbba5-7cec-4710-bed5-517e2b03a8c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\State\Player\PlayerEvading">
+      <UniqueIdentifier>{3a4e4945-ace9-4347-8f3f-b6bb9d659de7}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

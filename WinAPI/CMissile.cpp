@@ -9,6 +9,7 @@
 CMissile::CMissile()
 	: m_Mass(1.f)
 	, m_VelocityScale(1.f)
+	, m_damage(5.f)
 {
 	m_Collider = (CCollider*)AddComponent(new CCollider);
 	m_Collider->SetScale(Vec2(15.f, 15.f));

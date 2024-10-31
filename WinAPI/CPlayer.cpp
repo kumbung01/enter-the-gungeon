@@ -45,15 +45,18 @@ enum PLAYER_ANIM_STATE
 
 
 CPlayer::CPlayer()
-	: m_Speed(500.f)
-	, m_AttSpeed(0.1f)
-	, m_AccTime(0.f)
+	: m_curHP(6)
+	, m_maxHP(6)
+	, m_moveSpeed(500.f)
 	, m_HitBox(nullptr)
 	, m_FlipbookPlayer(nullptr)
 	, m_gun(nullptr)
 	, m_fsm(nullptr)
-	, m_evadeSpeed(1200.f)
-	, m_evadeTime(0.7f)
+	, m_rollSpeed(1200.f)
+	, m_rollTime(0.7f)
+	, m_isInvincible(false)
+	, m_invincibleAccTime(0.f)
+	, m_invincibleTime(0.7f)
 	//, m_RigidBody(nullptr)
 {
 	// Collider 컴포넌트 추가
@@ -92,7 +95,6 @@ CPlayer::~CPlayer()
 
 void CPlayer::Begin()
 {
-	m_AccTime = 1.f / m_AttSpeed;
 
 	//m_FlipbookPlayer->Play(IDLE_DOWN, 5.f, true);
 
@@ -101,19 +103,15 @@ void CPlayer::Begin()
 
 }
 
-float EaseOutQuad(float t)
-{
-	return (t - 1)* (t - 1)* (t - 1)* (t - 1)* (t - 1) + 1;
-}
-
 void CPlayer::Tick()
 {
-	// get gun direction
+	// update gun direction
 	Vec2 mousePos = CCamera::GetInst()->GetRealPos(CKeyMgr::GetInst()->GetMousePos());
 	m_gunDir = GetPos() - mousePos;
 	m_gunDir.Normalize();
 
-	if (m_state != PLAYER_STATE::EVADING)
+	// update move direction
+	if (m_state != PLAYER_STATE::ROLLING)
 	{
 		// get move direction
 		m_moveDir = { 0.f, 0.f };
@@ -131,94 +129,59 @@ void CPlayer::Tick()
 			m_moveDir.Normalize();
 	}
 
-	//if (KEY_TAP(LEFT))
-	//{
-	//	m_FlipbookPlayer->Play(MOVE_LEFT, 15.f, true);		
-	//}	
-	//if (KEY_TAP(RIGHT))
-	//{
-	//	m_FlipbookPlayer->Play(MOVE_RIGHT, 15.f, true);		
-	//}		
-	//if (KEY_TAP(UP))
-	//{
-	//	m_FlipbookPlayer->Play(MOVE_UP, 15.f, true);		
-	//}	
-	//if (KEY_TAP(DOWN))
-	//{
-	//	m_FlipbookPlayer->Play(MOVE_DOWN, 15.f, true);		
-	//}		
-
-	//if (KEY_RELEASED(LEFT))
-	//	m_FlipbookPlayer->Play(IDLE_LEFT, 5.f, true);
-	//if (KEY_RELEASED(RIGHT))
-	//	m_FlipbookPlayer->Play(IDLE_RIGHT, 5.f, true);
-	/*if (KEY_RELEASED(UP))
-		m_FlipbookPlayer->Play(IDLE_UP, 5.f, true);
-	if (KEY_RELEASED(DOWN))
-		m_FlipbookPlayer->Play(IDLE_DOWN, 5.f, true);*/
-
-	// EVADE
-	if ((m_state == PLAYER_STATE::MOVING) && KEY_TAP(KEY::RBTN))
+	// check for invincible state
+	if (m_isInvincible)
 	{
-		m_evadeAccTime = 0;
-		
-		m_state = PLAYER_STATE::EVADING;
-	}
-
-
-
-	if (m_state == PLAYER_STATE::EVADING)
-	{
-		m_evadeAccTime += DT;
-		if (m_evadeAccTime < m_evadeTime)
+		m_invincibleAccTime += DT;
+		if (m_invincibleAccTime >= m_invincibleTime)
 		{
-			//float evadeSpeed = EaseInOut(m_evadeAccTime / m_evadeTime) * m_evadeSpeed;
-			float evadeSpeed = m_evadeSpeed;
-			float ratio = m_evadeAccTime / m_evadeTime;
-			evadeSpeed *= ratio < 0.4f ? 1.0f : 0.15f;
-			SetPos(GetPos() + m_moveDir * evadeSpeed * DT);
-			// state 표시용
-			DrawDebugRect(PEN_TYPE::RED, GetRenderPos() + Vec2(50.f, -50.f), Vec2(10.f, 10.f), 0.f);
-			return;
+			m_invincibleAccTime = 0;
+			m_isInvincible = false;
 		}
-
-		m_state = PLAYER_STATE::MOVING;
 	}
 
-	// move
-	if (m_moveDir.Length() > 0)
+	// for animation
+	switch (m_state)
 	{
-		SetPos(GetPos() + m_moveDir * m_Speed * DT);
-		m_state = PLAYER_STATE::MOVING;
-
-		// state 표시용
-		DrawDebugRect(PEN_TYPE::BLUE, GetRenderPos() + Vec2(50.f, -50.f), Vec2(10.f, 10.f), 0.f);
-	}
-	else
-	{
-		m_state = PLAYER_STATE::IDLE;
-		// state 표시용
-		DrawDebugRect(PEN_TYPE::GREEN, GetRenderPos() + Vec2(50.f, -50.f), Vec2(10.f, 10.f), 0.f);
+	case PLAYER_STATE::MOVING:
+		MoveState();
+		break;
+	case PLAYER_STATE::ROLLING:
+		RollState();
+		break;
+	case PLAYER_STATE::DEAD:
+		DeadState();
+		break;
+	case PLAYER_STATE::FALLING:
+		break;
+	case PLAYER_STATE::IDLE:
+	default:
+		IdleState();
+		break;
 	}
 
 	// gun related
 	if (m_gun != nullptr)
 	{
-		if (m_state != PLAYER_STATE::EVADING)
+		if (m_state != PLAYER_STATE::ROLLING)
 		{
 			GUN_STATE fireResult = m_gun->Fire();
-			GUN_STATE reloadResult = m_gun->Reload(false);
-			if (fireResult == GUN_STATE::RELOAD || reloadResult == GUN_STATE::RELOAD)
+			if (fireResult == GUN_STATE::RELOAD)
 			{
 				this->Reload(m_gun->GetReloadDelay());
 			}
 		}
+
+		// R key works even if rolling happening
+		GUN_STATE reloadResult = m_gun->Reload(false);
+		if (reloadResult == GUN_STATE::RELOAD)
+		{
+			this->Reload(m_gun->GetReloadDelay());
+		}
 	}
 
-
-
 	// USE item
-	if (KEY_TAP(SPACE))
+	if (KEY_TAP(SPACE) && m_state != PLAYER_STATE::ROLLING)
 	{
 		CCamera::GetInst()->PostProcessEffect(HEART, 0.2f);
 		//m_RigidBody->Jump();
@@ -227,7 +190,29 @@ void CPlayer::Tick()
 		//DrawDebugLine(PEN_TYPE::GREEN, GetPos(), GetPos() + GetScale(), 3.f);
 	}
 
+	// use blank
+	if (KEY_TAP(KEY::Q))
+	{
+		// do blank stuff
+	}
+
 	DrawDebugCircle(PEN_TYPE::RED, GetRenderPos(), Vec2(5.f, 5.f), 0.f);
+
+	PEN_TYPE penType = PEN_TYPE::RED;
+	switch (m_state)
+	{
+	case PLAYER_STATE::MOVING:
+		penType = PEN_TYPE::BLUE;
+		break;
+	case PLAYER_STATE::ROLLING:
+		penType = PEN_TYPE::RED;
+		break;
+	case PLAYER_STATE::IDLE:
+	default:
+		penType = PEN_TYPE::GREEN;
+	}
+
+	DrawDebugRect(penType, GetRenderPos() + Vec2(50.f, -50.f), Vec2(10.f, 10.f), 0.f);
 }
 
 void CPlayer::Render()
@@ -239,14 +224,23 @@ void CPlayer::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* 
 {
 	if (_OtherObject->GetName() == L"Monster")
 	{
-		ChangeLevel(LEVEL_TYPE::EDITOR);
+		if (m_isInvincible)
+			return;
+
+		m_curHP--;
+		if (m_curHP == 0)
+			m_state = PLAYER_STATE::DEAD;
+		m_isInvincible = true;
 	}
 	else if (_OtherObject->GetLayerType() == LAYER_TYPE::MONSTER_OBJECT)
 	{
-		if (m_state != PLAYER_STATE::EVADING)
-		{
-			ChangeLevel(LEVEL_TYPE::EDITOR);
-		}
+		if (m_isInvincible || m_state == PLAYER_STATE::ROLLING)
+			return;
+
+		m_curHP--;
+		if (m_curHP == 0)
+			m_state = PLAYER_STATE::DEAD;
+		m_isInvincible = true;
 	}
 }
 
@@ -335,15 +329,47 @@ void CPlayer::CreateFlipbook(const wstring& _FlipbookName, CTexture* _Atlas, Vec
 
 void CPlayer::IdleState()
 {
+	if (m_moveDir.Length() > 0)
+		m_state = PLAYER_STATE::MOVING;
 }
 
 void CPlayer::MoveState()
 {
+	if (KEY_TAP(KEY::RBTN))
+	{
+		m_state = PLAYER_STATE::ROLLING;
+	}
+	else if (m_moveDir.Length() > 0)
+	{
+		SetPos(GetPos() + m_moveDir * m_moveSpeed * DT);
+	}
+	else
+	{
+		m_state = PLAYER_STATE::IDLE;
+	}
 }
 
-void CPlayer::EvadeState()
+void CPlayer::RollState()
 {
+	m_rollAccTime += DT;
+	if (m_rollAccTime < m_rollTime)
+	{
+		float rollSpeed = m_rollSpeed;
+		float ratio = m_rollAccTime / m_rollTime;
+		rollSpeed *= ratio < 0.4f ? 1.0f : 0.15f;
+		SetPos(GetPos() + m_moveDir * rollSpeed * DT);
+		// state 표시용
+		DrawDebugRect(PEN_TYPE::RED, GetRenderPos() + Vec2(50.f, -50.f), Vec2(10.f, 10.f), 0.f);
+		return;
+	}
 
+	m_rollAccTime = 0;
+	m_state = PLAYER_STATE::MOVING;
+}
+
+void CPlayer::DeadState()
+{
+	ChangeLevel(LEVEL_TYPE::EDITOR);
 }
 
 void CPlayer::Reload(float _duration)

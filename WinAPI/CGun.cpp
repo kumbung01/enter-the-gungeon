@@ -6,7 +6,7 @@
 #include "CTimeMgr.h"
 
 #include "CMissile.h"
-bool CGun::Trigger()
+bool CGun::IsTriggered()
 {
 	return KEY_PRESSED(KEY::LBTN);
 }
@@ -45,7 +45,7 @@ GUN_STATE CGun::Fire()
 			return m_gunState;
 	}
 
-	if (!KEY_PRESSED(KEY::LBTN))
+	if (!IsTriggered())
 		return m_gunState;
 
 	if (m_gunState != GUN_STATE::IDLE)
