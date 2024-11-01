@@ -83,9 +83,15 @@ void CLevel_Start::Begin()
     AddObject(pMonster, LAYER_TYPE::MONSTER);
 
     //// Platform Object 추가
-    //CObj* pPlatform = new CPlatform;
-    //pPlatform->SetPos(vResolution.x / 2.f, (vResolution.y * 3.f) / 4.f);
-    //AddObject(pPlatform, LAYER_TYPE::TILE);
+    CObj* pPlatform = new CPlatform;
+    pPlatform->SetPos(vResolution.x / 2.f, (vResolution.y * 3.f) / 4.f);
+    AddObject(pPlatform, LAYER_TYPE::TILE);
+
+
+    auto pos = pPlatform->GetPos();
+    pPlatform = new CPlatform;
+    pPlatform->SetPos(pos + Vec2(350.f, 75.f));
+    AddObject(pPlatform, LAYER_TYPE::TILE);
 
     // TileMap Object 추가
     CMap* pTileMap = new CMap;
@@ -98,6 +104,10 @@ void CLevel_Start::Begin()
     pTileMap = new CMap;
     pTileMap->SetPos(Vec2(1000.f, 1000.f));
     //pTileMap->GetTileMap()->LoadTileMap(FilePath + L"TileMap\\Temp.tile");
+
+    tTile* pTile = pTileMap->GetTileMap()->GetTileInfo(0, 0);
+    pTile->ImgIdx = 5;
+    pTile->isWall = true;
     AddObject(pTileMap, LAYER_TYPE::TILE);
 
 
@@ -114,6 +124,9 @@ void CLevel_Start::Begin()
     CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER, LAYER_TYPE::MONSTER);
     CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER, LAYER_TYPE::MONSTER_OBJECT);
     CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER, LAYER_TYPE::TILE);
+    CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::MONSTER, LAYER_TYPE::TILE);
+    CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER_OBJECT, LAYER_TYPE::TILE);
+    CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::MONSTER_OBJECT, LAYER_TYPE::TILE);
 
     // Camera 효과
     CCamera::GetInst()->SetTarget(pPlayer);
