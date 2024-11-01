@@ -61,7 +61,7 @@ CPlayer::CPlayer()
 	, m_invincibleAccTime(0.f)
 	, m_invincibleTime(0.7f)
 	, m_state(PLAYER_STATE::IDLE)
-	//, m_RigidBody(nullptr)
+	, m_RigidBody(nullptr)
 {
 	// Collider 컴포넌트 추가
 	m_HitBox = new CCollider;
@@ -81,13 +81,13 @@ CPlayer::CPlayer()
 	// Flipbook 생성 및 등록
 	//CreatePlayerFlipbook();
 
-	//// RigidBody 컴포넌트 추가
-	//m_RigidBody = (CRigidBody*)AddComponent(new CRigidBody);
-	//m_RigidBody->SetMode(RIGIDBODY_MODE::BELTSCROLL);
+	// RigidBody 컴포넌트 추가
+	m_RigidBody = (CRigidBody*)AddComponent(new CRigidBody);
+	m_RigidBody->SetMode(RIGIDBODY_MODE::TOPVIEW);
 	//m_RigidBody->SetInitialSpeed(100.f);
 	//m_RigidBody->SetMaxSpeed(500.f);
-	//m_RigidBody->SetMass(1.f);
-	//m_RigidBody->SetFriction(700.f);
+	m_RigidBody->SetMass(1.f);
+	//m_RigidBody->SetFriction(1000.f);
 	//m_RigidBody->SetJumpVelocity(Vec2(0.f, -500.f));
 
 
@@ -131,6 +131,16 @@ void CPlayer::Tick()
 
 		if (m_moveDir.x != 0.f || m_moveDir.y != 0.f)
 			m_moveDir.Normalize();
+	}
+
+	// check if collided with wall
+	if (m_normal.x * m_moveDir.x < 0) // if normal and move direction is "not" the same
+	{
+		m_moveDir.x = 0.f;
+	}
+	if (m_normal.y * m_moveDir.y < 0)
+	{
+		m_moveDir.y = 0.f;
 	}
 
 	// check for invincible state
@@ -257,10 +267,22 @@ void CPlayer::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* 
 
 void CPlayer::Overlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
 {
+	if (_OtherObject->GetLayerType() == LAYER_TYPE::TILE)
+	{
+		auto normal = _Collider->CalCulateNormal(_OtherCollider);
+
+		if (abs(normal.x) > 0) m_normal.x = normal.x;
+		else m_normal.y = normal.y;
+	}
 }
 
 void CPlayer::EndOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
 {
+	if (_OtherObject->GetLayerType() == LAYER_TYPE::TILE)
+	{
+		m_normal = Vec2(0.f, 0.f);
+	}
+
 }
 
 void CPlayer::CreatePlayerFlipbook()
@@ -352,10 +374,13 @@ void CPlayer::MoveState()
 	}
 	else if (m_moveDir.Length() > 0)
 	{
-		SetPos(GetPos() + m_moveDir * m_moveSpeed * DT);
+		auto velocity = m_moveDir * m_moveSpeed;
+		m_RigidBody->SetVelocity(velocity);
+		//SetPos(GetPos() + m_moveDir * m_moveSpeed * DT);
 	}
 	else
 	{
+		m_RigidBody->SetVelocity(Vec2(0.f, 0.f));
 		m_state = PLAYER_STATE::IDLE;
 	}
 }
@@ -368,7 +393,8 @@ void CPlayer::RollState()
 		float rollSpeed = m_rollSpeed;
 		float ratio = m_rollAccTime / m_rollTime;
 		rollSpeed *= ratio < 0.4f ? 1.0f : 0.15f;
-		SetPos(GetPos() + m_moveDir * rollSpeed * DT);
+		//SetPos(GetPos() + m_moveDir * rollSpeed * DT);
+		m_RigidBody->SetVelocity(m_moveDir * rollSpeed);
 		// state 표시용
 		DrawDebugRect(PEN_TYPE::RED, GetRenderPos() + Vec2(50.f, -50.f), Vec2(10.f, 10.f), 0.f);
 		return;

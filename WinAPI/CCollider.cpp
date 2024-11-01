@@ -32,6 +32,31 @@ void CCollider::FinalTick()
 }
 
 
+Vec2 CCollider::CalCulateNormal(CCollider* _other)
+{
+	Vec2 myPos = m_FinalPos + m_Offset;
+	Vec2 urPos = _other->m_FinalPos + _other->m_Offset;
+	Vec2 diff = myPos - urPos;
+
+	float diffx = abs(diff.x);
+	float diffy = abs(diff.y);
+
+	float scalediffx = (m_Scale.x + _other->m_Scale.x) / 2.f;
+	float scalediffy = (m_Scale.y + _other->m_Scale.y) / 2.f;
+
+	float comparedX = scalediffx - diffx;
+	float comparedY = scalediffy - diffy;
+
+	if (comparedX <= comparedY)
+	{
+		return diff.x < 0 ? Vec2(-1.f, 0.f) : Vec2(1.f, 0.f);
+	}
+	else
+	{
+		return diff.y < 0 ? Vec2(0.f, -1.f) : Vec2(0.f, 1.f);
+	}
+}
+
 void CCollider::BeginOverlap(CCollider* _Other)
 {
 	++m_OverlapCount;

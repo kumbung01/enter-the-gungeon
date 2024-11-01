@@ -23,6 +23,8 @@ public:
 
     Vec2 GetFinalPos() { return m_FinalPos; }
 
+    Vec2 CalCulateNormal(CCollider* _other);
+
 public:
     void BeginOverlap(CCollider* _Other);   // 다른 충돌체와 최초 충돌 시
     void Overlap(CCollider* _Other);        // 다른 충돌체와 BeginOverlap 이후에도 계속 겹쳐있을 경우

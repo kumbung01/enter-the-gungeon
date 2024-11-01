@@ -7,7 +7,7 @@ class CFlipbookPlayer;
 class CGun;
 class CReloadBar;
 class CFSM;
-//class CRigidBody;
+class CRigidBody;
 
 enum class PLAYER_STATE
 {
@@ -45,7 +45,8 @@ private:
     bool                m_isInvincible;
     float               m_invincibleAccTime;
     float               m_invincibleTime;
-    //CRigidBody*         m_RigidBody;
+    CRigidBody*         m_RigidBody;
+    Vec2                m_normal; // for collision
 
     
 
