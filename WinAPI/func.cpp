@@ -4,6 +4,7 @@
 #include "func.h"
 
 #include "CTaskMgr.h"
+#include "CLevel.h"
 #include "CDbgRender.h"
 
 void CreateObject(CObj* _NewObject, LAYER_TYPE _Layer)
@@ -18,6 +19,16 @@ void DeleteObject(CObj* _DeleteObj)
 
 	task.Type = TASK_TYPE::DELETE_OBJECT;
 	task.Param0 = (DWORD_PTR)_DeleteObj;
+
+	CTaskMgr::GetInst()->AddTask(task);
+}
+
+void DeleteObjects(LAYER_TYPE _layer)
+{
+	tTask task = {};
+	
+	task.Type = TASK_TYPE::DELETE_OBJECTS;
+	task.Param0 = (DWORD_PTR)_layer;
 
 	CTaskMgr::GetInst()->AddTask(task);
 }

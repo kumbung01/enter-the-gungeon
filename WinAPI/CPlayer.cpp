@@ -43,20 +43,24 @@ enum PLAYER_ANIM_STATE
 	MOVE_RIGHT,	
 };
 
-
 CPlayer::CPlayer()
 	: m_curHP(6)
 	, m_maxHP(6)
+	, m_blankCnt(1)
+	, m_keyCnt(1)
 	, m_moveSpeed(500.f)
 	, m_HitBox(nullptr)
 	, m_FlipbookPlayer(nullptr)
 	, m_gun(nullptr)
 	, m_fsm(nullptr)
+	, m_reloadBar(nullptr)
 	, m_rollSpeed(1200.f)
 	, m_rollTime(0.7f)
+	, m_rollAccTime(0.f)
 	, m_isInvincible(false)
 	, m_invincibleAccTime(0.f)
 	, m_invincibleTime(0.7f)
+	, m_state(PLAYER_STATE::IDLE)
 	//, m_RigidBody(nullptr)
 {
 	// Collider 컴포넌트 추가
@@ -183,7 +187,6 @@ void CPlayer::Tick()
 	// USE item
 	if (KEY_TAP(SPACE) && m_state != PLAYER_STATE::ROLLING)
 	{
-		CCamera::GetInst()->PostProcessEffect(HEART, 0.2f);
 		//m_RigidBody->Jump();
 		//DrawDebugRect(PEN_TYPE::GREEN, GetPos(), GetScale() * 2.f, 3.f);
 		//DrawDebugCircle(PEN_TYPE::GREEN, GetPos(), GetScale() * 2.f, 3.f);
@@ -194,6 +197,14 @@ void CPlayer::Tick()
 	if (KEY_TAP(KEY::Q))
 	{
 		// do blank stuff
+		if (m_blankCnt > 0) 
+		{
+			// blank effect
+			CCamera::GetInst()->PostProcessEffect(HEART, 0.2f);
+
+			DeleteObjects(LAYER_TYPE::MONSTER_OBJECT);
+			m_blankCnt--;
+		}
 	}
 
 	DrawDebugCircle(PEN_TYPE::RED, GetRenderPos(), Vec2(5.f, 5.f), 0.f);

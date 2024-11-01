@@ -39,6 +39,9 @@ enum class TASK_TYPE
 	// Param0 : Object Address
 	DELETE_OBJECT,
 
+	// Param0 : Objects Layer
+	DELETE_OBJECTS,
+
 	// Param0 : Next Level
 	CHANGE_LEVEL,
 };

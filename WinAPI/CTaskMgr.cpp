@@ -48,6 +48,23 @@ void CTaskMgr::Tick()
 			}
 		}
 			break;
+		case TASK_TYPE::DELETE_OBJECTS:
+		{
+			LAYER_TYPE layer = (LAYER_TYPE)m_Task[i].Param0;
+			CLevel* level = CLevelMgr::GetInst()->GetCurrentLevel();
+			std::vector<CObj*> objects = level->GetObjects(layer);
+
+			for (CObj* pObject : objects)
+			{
+				if (!pObject->IsDead())
+				{
+					pObject->m_Dead = true;
+					m_Garbage.push_back(pObject);
+				}
+			}
+			break;
+		}
+
 		case TASK_TYPE::CHANGE_LEVEL:
 		{
 			LEVEL_TYPE eNextLevel = (LEVEL_TYPE)m_Task[i].Param0;
