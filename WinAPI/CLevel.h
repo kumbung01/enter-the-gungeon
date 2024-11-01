@@ -35,7 +35,7 @@ public:
     CObj* FindObjectByName(LAYER_TYPE _Layer, const wstring& _Name);
 
 protected:
-    void DeleteObject(int _LayerIdx);
+    void DeleteObjects(int _LayerIdx);
     void DeleteAllObject();
 
 public:

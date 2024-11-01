@@ -96,7 +96,7 @@ CObj* CLevel::FindObjectByName(LAYER_TYPE _Layer, const wstring& _Name)
 	return nullptr;
 }
 
-void CLevel::DeleteObject(int _LayerIdx)
+void CLevel::DeleteObjects(int _LayerIdx)
 {	
 	for (size_t i = 0; i < m_vecObjects[_LayerIdx].size(); ++i)
 	{
@@ -113,6 +113,6 @@ void CLevel::DeleteAllObject()
 {
 	for (int i = 0; i < (int)LAYER_TYPE::END; ++i)
 	{
-		DeleteObject(i);
+		DeleteObjects(i);
 	}
 }
