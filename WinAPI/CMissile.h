@@ -39,6 +39,8 @@ public:
     virtual void Tick() override;
     virtual void Render() override;
 
+    virtual void BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider) override;
+
 public:
     CMissile();
     ~CMissile();

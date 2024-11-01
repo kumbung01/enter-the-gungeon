@@ -57,3 +57,11 @@ void CMissile::Render()
 		, vPos.x + vScale.x / 2.f, vPos.y + vScale.y / 2.f);
 }
 
+void CMissile::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
+{
+	if (_OtherObject->GetLayerType() == LAYER_TYPE::TILE)
+	{
+		DeleteObject(this);
+	}
+}
+
