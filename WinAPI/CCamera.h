@@ -76,5 +76,6 @@ public:
 		m_CamEffectList.push_back(tCamEffect{ _Type , 0.f, _Duration });
 	}
 	void SetState(CAMERA_STATE _state) { m_state = _state; }
+	void AddOffset(Vec2 _offset) { m_Offset += _offset; }
 };
 

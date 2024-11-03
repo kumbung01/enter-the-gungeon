@@ -7,6 +7,7 @@
 #include "CKeyMgr.h"
 #include "CMap.h"
 #include "CTileMap.h"
+#include "CAtlas.h"
 
 #include "CLevelMgr.h"
 #include "CCamera.h"
@@ -33,12 +34,12 @@ CLevel_Editor::~CLevel_Editor()
 void CLevel_Editor::Begin()
 {
 	// 배경음 지정
-	CSound* pSound = CAssetMgr::GetInst()->LoadSound(L"DM_Opening", L"Sound\\DM.wav");
-	if (nullptr != pSound)
-	{
-		pSound->SetVolume(70.f);
-		pSound->PlayToBGM(true);
-	}
+	//CSound* pSound = CAssetMgr::GetInst()->LoadSound(L"DM_Opening", L"Sound\\DM.wav");
+	//if (nullptr != pSound)
+	//{
+	//	pSound->SetVolume(70.f);
+	//	pSound->PlayToBGM(true);
+	//}
 
 	// 메뉴바 로드 및 메인 윈도우에 부착
 	if (nullptr == m_hMenu)
@@ -54,51 +55,54 @@ void CLevel_Editor::Begin()
 
 
 	// PanelUI 생성
-	CPanelUI* pPanel = new CPanelUI;
-	pPanel->SetName(L"Panel 1");
-	Vec2 vScale = Vec2(380.f, 500.f);
+	//CPanelUI* pPanel = new CPanelUI;
+	//pPanel->SetName(L"Panel 1");
+	//Vec2 vScale = Vec2(380.f, 500.f);
 
-	pPanel->SetPos(Vec2(vResolution.x - vScale.x - 10, 10.f));
-	pPanel->SetScale(vScale);
+	//pPanel->SetPos(Vec2(vResolution.x - vScale.x - 10, 10.f));
+	//pPanel->SetScale(vScale);
 
-	// Panel 에 넣을 자식 UI
-	CBtnUI* pBtn = new CBtnUI;
-	pBtn->SetScale(Vec2(150.f, 100.f));
-	pBtn->SetPos(Vec2(10.f, 10.f));
+	//// Panel 에 넣을 자식 UI
+	//CBtnUI* pBtn = new CBtnUI;
+	//pBtn->SetScale(Vec2(150.f, 100.f));
+	//pBtn->SetPos(Vec2(10.f, 10.f));
 
-	void SaveTileMap();
-	//pBtn->AddCallBack(&SaveTileMap);
-	pBtn->AddDelegate(this, (DELEGATE_0)&CLevel_Editor::SaveTileMap);
+	//void SaveTileMap();
+	////pBtn->AddCallBack(&SaveTileMap);
+	//pBtn->AddDelegate(this, (DELEGATE_0)&CLevel_Editor::SaveTileMap);
 
-	pPanel->AddChildUI(pBtn);
-	AddObject(pPanel, LAYER_TYPE::UI);
+	//pPanel->AddChildUI(pBtn);
+	//AddObject(pPanel, LAYER_TYPE::UI);
 
-	// PanelUI 생성
-	pPanel = new CPanelUI;
-	pPanel->SetName(L"Panel 2");	
+	//// PanelUI 생성
+	//pPanel = new CPanelUI;
+	//pPanel->SetName(L"Panel 2");	
 
-	pPanel->SetPos(Vec2(vResolution.x - vScale.x - 10.f- 500.f, 10.f));
-	pPanel->SetScale(vScale);
+	//pPanel->SetPos(Vec2(vResolution.x - vScale.x - 10.f- 500.f, 10.f));
+	//pPanel->SetScale(vScale);
 
-	// Panel 에 넣을 자식 UI
-	pBtn = new CBtnUI;
-	pBtn->SetScale(Vec2(150.f, 100.f));
-	pBtn->SetPos(Vec2(10.f, 10.f));
+	//// Panel 에 넣을 자식 UI
+	//pBtn = new CBtnUI;
+	//pBtn->SetScale(Vec2(150.f, 100.f));
+	//pBtn->SetPos(Vec2(10.f, 10.f));
 
-	void LoadTileMap();
-	//pBtn->AddCallBack(&LoadTileMap);
-	pBtn->AddDelegate(this, (DELEGATE_0)&CLevel_Editor::LoadTileMap);
+	//void LoadTileMap();
+	////pBtn->AddCallBack(&LoadTileMap);
+	//pBtn->AddDelegate(this, (DELEGATE_0)&CLevel_Editor::LoadTileMap);
 
-	pPanel->AddChildUI(pBtn);
-	AddObject(pPanel, LAYER_TYPE::UI);
+	//pPanel->AddChildUI(pBtn);
+	//AddObject(pPanel, LAYER_TYPE::UI);
+	//
+
+	//// 샘플용 Map 오브젝트 생성
+	//m_MapObj = new CMap;
+	//AddObject(m_MapObj, LAYER_TYPE::TILE);
+
 	
-
-	// 샘플용 Map 오브젝트 생성
-	m_MapObj = new CMap;
-	AddObject(m_MapObj, LAYER_TYPE::TILE);
-
-	
-
+	auto pAtlas = new CAtlas;
+	pAtlas->SetName(L"Atlas");
+	AddObject(pAtlas, LAYER_TYPE::DEFAULT);
+	CCamera::GetInst()->SetTarget(pAtlas);
 
 
 	// 레벨 소속 모든 오브젝트가 Begin 을 호출받을 수 있도록 한다
@@ -133,13 +137,36 @@ void CLevel_Editor::Tick()
 	// 마우스 좌표 : Render 좌표(마우스좌표) -> 실제 좌표로 변경
 	if (KEY_TAP(KEY::LBTN))
 	{
-		Vec2 vMousePos = CKeyMgr::GetInst()->GetMousePos();	
-		tTile* TileInfo = m_MapObj->GetTileMap()->GetTileInfo(vMousePos);
+		//Vec2 vMousePos = CKeyMgr::GetInst()->GetMousePos();	
+		//tTile* TileInfo = m_MapObj->GetTileMap()->GetTileInfo(vMousePos);
 
-		if (nullptr != TileInfo)
-		{
-			TileInfo->ImgIdx = 20;
-		}		
+		//if (nullptr != TileInfo)
+		//{
+		//	TileInfo->ImgIdx = 20;
+		//}		
+	}
+
+	static Vec2 before;
+	if (KEY_TAP(KEY::RBTN))
+	{
+		before = CKeyMgr::GetInst()->GetMousePos();
+	}
+	if (KEY_PRESSED(KEY::RBTN))
+	{
+		Vec2 now = CKeyMgr::GetInst()->GetMousePos();
+		CCamera::GetInst()->AddOffset(before - now);
+		before = now;
+	}
+
+	if (KEY_TAP(KEY::UP))
+	{
+		CAtlas* pAtlas = (CAtlas*)FindObjectByName(LAYER_TYPE::DEFAULT, L"Atlas");
+		pAtlas->AddMagnification(1.f);
+	}
+	else if (KEY_TAP(KEY::DOWN))
+	{
+		CAtlas* pAtlas = (CAtlas*)FindObjectByName(LAYER_TYPE::DEFAULT, L"Atlas");
+		pAtlas->AddMagnification(-1.f);
 	}
 }
 
@@ -232,7 +259,7 @@ void LoadTileMap()
 }
 
 
-
+void OpenFileDialog(HWND _wnd);
 bool EditorMenu(HINSTANCE _inst, HWND _wnd, int wParam)
 {
 	switch (wParam)
@@ -245,6 +272,13 @@ bool EditorMenu(HINSTANCE _inst, HWND _wnd, int wParam)
 			g_hDlg = CreateDialog(g_hInst, MAKEINTRESOURCE(DLG_TILEMAP_INFO), hWnd, &TileMapInfoProc);
 
 		ShowWindow(g_hDlg, true);*/
+		return true;
+	}
+	case ID_LOAD_ATLAS:
+	{
+		//DialogBox(_inst, MAKEINTRESOURCE(DLG_TILEMAP_INFO), _wnd, &TileMapInfoProc);
+		OpenFileDialog(_wnd);
+
 		return true;
 	}
 	case ID_TILEMAP_SAVE:
@@ -318,4 +352,39 @@ INT_PTR CALLBACK TileMapInfoProc(HWND hDlg, UINT message, WPARAM wParam, LPARAM 
 		break;
 	}
 	return (INT_PTR)FALSE;
+}
+
+void OpenFileDialog(HWND hwnd) {
+	IFileDialog* pFileDialog = NULL;
+
+	// Initialize COM library
+	HRESULT hr = CoInitialize(NULL);
+	if (SUCCEEDED(hr)) {
+		// Create the FileOpenDialog object
+		hr = CoCreateInstance(CLSID_FileOpenDialog, NULL, CLSCTX_ALL, IID_PPV_ARGS(&pFileDialog));
+		if (SUCCEEDED(hr)) {
+			// Show the dialog
+			hr = pFileDialog->Show(hwnd);
+			if (SUCCEEDED(hr)) {
+				IShellItem* pItem;
+				// Get the selected file
+				hr = pFileDialog->GetResult(&pItem);
+				if (SUCCEEDED(hr)) {
+					LPWSTR pszFilePath;
+					// Get the file path
+					hr = pItem->GetDisplayName(SIGDN_NORMALDISPLAY, &pszFilePath);
+					if (SUCCEEDED(hr)) {
+						// Show the file path in a message box
+						//MessageBox(hwnd, pszFilePath, L"Selected File", MB_OK);
+						CAtlas* pAtlas = (CAtlas*)CLevelMgr::GetInst()->FindObjectByName(LAYER_TYPE::DEFAULT, L"Atlas");
+						pAtlas->LoadTexture(pszFilePath, pszFilePath);
+						CoTaskMemFree(pszFilePath); // Free the memory
+					}
+					pItem->Release();
+				}
+			}
+			pFileDialog->Release(); // Release the dialog object
+		}
+		CoUninitialize(); // Uninitialize COM
+	}
 }

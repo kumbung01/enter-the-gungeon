@@ -27,7 +27,23 @@ public:
 		return x * _Other.x + y * _Other.y;
 	}
 
+	void Round()
+	{
+		x = roundf(x);
+		y = roundf(y);
+	}
 
+	void Floor()
+	{
+		x = floorf(x);
+		y = floorf(y);
+	}
+
+	void Ceil()
+	{
+		x = ceilf(x);
+		y = ceilf(y);
+	}
 
 	Vec2 operator + (Vec2 _Other) { return Vec2(x + _Other.x, y + _Other.y); }
 	Vec2 operator + (float _f) { return Vec2(x + _f, y + _f); }
