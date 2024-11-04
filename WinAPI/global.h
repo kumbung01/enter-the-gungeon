@@ -1,6 +1,7 @@
 #pragma once
 
 #include <commdlg.h>
+#include <ShObjIdl.h>
 
 // »ç¿îµå
 #include <mmsystem.h>

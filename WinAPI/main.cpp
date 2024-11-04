@@ -2,6 +2,7 @@
 
 #include "WinAPI.h"
 #include "CEngine.h"
+#include "CKeyMgr.h"
 
 HINSTANCE g_hInst = nullptr;
 HWND      g_hDlg = nullptr;
@@ -84,6 +85,15 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch (message)
     {
+    case WM_MOUSEWHEEL:
+    {
+        auto instance = CKeyMgr::GetInst();
+        if (instance != nullptr)
+        {
+            instance->SetMouseScroll(wParam);
+        }
+    }
+    break;
     case WM_COMMAND:
         {
             int wmId = LOWORD(wParam);

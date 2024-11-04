@@ -53,10 +53,18 @@ class CKeyMgr
 private:
 	vector<KeyInfo>		m_vecKeyInfo;
 	Vec2				m_MousePos;
+	int					m_mouseScroll;
 
 public:
 	KEY_STATE GetKeyState(KEY _key) { return m_vecKeyInfo[_key].State; }
 	Vec2 GetMousePos() { return m_MousePos; }	
+	
+	void SetMouseScroll(int _mouseScroll) { m_mouseScroll = _mouseScroll; }
+	int  GetMouseScroll() { 
+		int ret = m_mouseScroll;
+		m_mouseScroll = 0;
+		return ret;
+	}
 
 	bool IsMouseOffScreen();
 

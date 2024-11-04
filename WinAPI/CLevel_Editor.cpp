@@ -158,15 +158,11 @@ void CLevel_Editor::Tick()
 		before = now;
 	}
 
-	if (KEY_TAP(KEY::UP))
+	CAtlas* pAtlas = (CAtlas*)FindObjectByName(LAYER_TYPE::DEFAULT, L"Atlas");
+	int mouseScrollValue = CKeyMgr::GetInst()->GetMouseScroll();
+	if (mouseScrollValue != 0)
 	{
-		CAtlas* pAtlas = (CAtlas*)FindObjectByName(LAYER_TYPE::DEFAULT, L"Atlas");
-		pAtlas->AddMagnification(1.f);
-	}
-	else if (KEY_TAP(KEY::DOWN))
-	{
-		CAtlas* pAtlas = (CAtlas*)FindObjectByName(LAYER_TYPE::DEFAULT, L"Atlas");
-		pAtlas->AddMagnification(-1.f);
+		pAtlas->AddMagnification(mouseScrollValue > 0 ? 1.f : -1.f);
 	}
 }
 
