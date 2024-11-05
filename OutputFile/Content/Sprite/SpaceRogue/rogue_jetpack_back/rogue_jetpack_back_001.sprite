@@ -1,0 +1,14 @@
+[KEY]
+rogue_jetpack_back_001
+[PATH]
+Sprite/SpaceRogue/rogue_jetpack_back/rogue_jetpack_back_001.sprite
+[ATLAS_KEY]
+rogue
+[ATLAS_PATH]
+Texture/rogue.png
+[LEFT_TOP]
+184, 219
+[SLICE]
+23, 24
+[OFFSET]
+0, 0

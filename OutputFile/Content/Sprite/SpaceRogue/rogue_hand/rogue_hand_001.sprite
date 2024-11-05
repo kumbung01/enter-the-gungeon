@@ -1,0 +1,14 @@
+[KEY]
+rogue_hand_001
+[PATH]
+Sprite/SpaceRogue/rogue_hand/rogue_hand_001.sprite
+[ATLAS_KEY]
+rogue
+[ATLAS_PATH]
+Texture/rogue.png
+[LEFT_TOP]
+504, 4
+[SLICE]
+4, 4
+[OFFSET]
+0, 0

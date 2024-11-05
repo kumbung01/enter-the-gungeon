@@ -105,10 +105,10 @@ void CLevel_Start::Begin()
     pTileMap->SetPos(Vec2(1000.f, 1000.f));
     //pTileMap->GetTileMap()->LoadTileMap(FilePath + L"TileMap\\Temp.tile");
 
-    tTile* pTile = pTileMap->GetTileMap()->GetTileInfo(0, 0);
+ /*   tTile* pTile = pTileMap->GetTileMap()->GetTileInfo(0, 0);
     pTile->ImgIdx = 5;
     pTile->isWall = true;
-    AddObject(pTileMap, LAYER_TYPE::TILE);
+    AddObject(pTileMap, LAYER_TYPE::TILE);*/
 
 
     // Cursor Ãß°¡

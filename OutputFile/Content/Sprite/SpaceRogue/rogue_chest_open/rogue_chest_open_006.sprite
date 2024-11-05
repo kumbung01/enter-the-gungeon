@@ -1,0 +1,14 @@
+[KEY]
+rogue_chest_open_006
+[PATH]
+Sprite/SpaceRogue/rogue_chest_open/rogue_chest_open_006.sprite
+[ATLAS_KEY]
+rogue
+[ATLAS_PATH]
+Texture/rogue.png
+[LEFT_TOP]
+161, 73
+[SLICE]
+23, 24
+[OFFSET]
+0, 0

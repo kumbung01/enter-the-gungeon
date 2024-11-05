@@ -1,0 +1,14 @@
+[KEY]
+rogue_select_crouch_draw_002
+[PATH]
+Sprite/SpaceRogue/rogue_select_crouch_draw/rogue_select_crouch_draw_002.sprite
+[ATLAS_KEY]
+rogue
+[ATLAS_PATH]
+Texture/rogue.png
+[LEFT_TOP]
+207, 424
+[SLICE]
+23, 24
+[OFFSET]
+0, 0

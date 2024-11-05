@@ -15,6 +15,7 @@ private:
     float               m_Time;         // 누적시간
     bool                m_Repeat;       // 반복재생인지 아닌지
     bool                m_Finish;       // 재생이 끝났는지 체크
+    bool                m_mirror;       // 좌우 반전 확인
 
 public:
     void AddFlipbook(CFlipbook* _Flipbook) { m_vecFlipbook.push_back(_Flipbook); }
@@ -28,7 +29,7 @@ public:
         m_vecFlipbook[_idx] = _Flipbook;
     }
 
-    void Play(int _FlipbookIdx, float _FPS, bool _Repeat)
+    void Play(int _FlipbookIdx, float _FPS, bool _Repeat, bool _IsMirrored=false)
     {
         m_CurFlipbook = m_vecFlipbook[_FlipbookIdx];
         m_SpriteIdx = 0;
@@ -36,6 +37,7 @@ public:
         m_Repeat = _Repeat;
         m_Finish = false;
         m_Time = 0.f;
+        m_mirror = _IsMirrored;
     }
 
     bool IsFinish() { return m_Finish; }

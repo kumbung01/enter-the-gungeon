@@ -1,0 +1,14 @@
+[KEY]
+rogue_spaceflail_004
+[PATH]
+Sprite/SpaceRogue/rogue_spaceflail/rogue_spaceflail_004.sprite
+[ATLAS_KEY]
+rogue
+[ATLAS_PATH]
+Texture/rogue.png
+[LEFT_TOP]
+490, 94
+[SLICE]
+21, 22
+[OFFSET]
+0, 0

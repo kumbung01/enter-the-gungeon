@@ -74,15 +74,29 @@ void CFlipbookPlayer::Render()
 	Vec2 LeftTop = Vec2(vPos.x - (Sprite->GetSlice().x / 2) + Sprite->GetOffset().x,
 						vPos.y - (Sprite->GetSlice().y / 2) + Sprite->GetOffset().y);
 
-	TransparentBlt(hBackDC
-		, vPos.x - (Sprite->GetSlice().x / 2) + Sprite->GetOffset().x
-		, vPos.y - (Sprite->GetSlice().y / 2) + Sprite->GetOffset().y
-		, Sprite->GetSlice().x
-		, Sprite->GetSlice().y
+	//TransparentBlt(hBackDC
+	//	, vPos.x - (Sprite->GetSlice().x / 2) + Sprite->GetOffset().x
+	//	, vPos.y - (Sprite->GetSlice().y / 2) + Sprite->GetOffset().y
+	//	, Sprite->GetSlice().x
+	//	, Sprite->GetSlice().y
+	//	, Sprite->GetAtlas()->GetDC()
+	//	, Sprite->GetLeftTop().x
+	//	, Sprite->GetLeftTop().y
+	//	, Sprite->GetSlice().x
+	//	, Sprite->GetSlice().y
+	//	, RGB(255, 0, 255));
+
+	StretchBlt(hBackDC
+		, vPos.x - (Sprite->GetSlice().x * (m_mirror ? -2 : 2)) + Sprite->GetOffset().x
+		, vPos.y - (Sprite->GetSlice().y * 2) + Sprite->GetOffset().y
+		, Sprite->GetSlice().x * 4 * (m_mirror ? -1 : 1)
+		, Sprite->GetSlice().y * 4
 		, Sprite->GetAtlas()->GetDC()
 		, Sprite->GetLeftTop().x
 		, Sprite->GetLeftTop().y
 		, Sprite->GetSlice().x
 		, Sprite->GetSlice().y
-		, RGB(255, 0, 255));
+		, SRCCOPY);
+	//	, RGB(255, 0, 255));
+
 }

@@ -30,18 +30,43 @@
 #include "CPlayerMovingState.h"
 #include "CPlayerEvadingState.h"
 
-enum PLAYER_ANIM_STATE
-{
-	IDLE_UP,
-	IDLE_DOWN,
-	IDLE_LEFT,
-	IDLE_RIGHT,
 
-	MOVE_UP,
-	MOVE_DOWN,
-	MOVE_LEFT,
-	MOVE_RIGHT,	
-};
+
+bool IsRollState(PLAYER_ANIM_STATE _state)
+{
+	return _state == ROLL_UP
+		|| _state == ROLL_UPRIGHT
+		|| _state == ROLL_UPLEFT
+		|| _state == ROLL_DOWN
+		|| _state == ROLL_DOWNLEFT
+		|| _state == ROLL_LEFT
+		|| _state == ROLL_RIGHT
+		|| _state == ROLL_START;
+}
+
+bool IsIdleState(PLAYER_ANIM_STATE _state)
+{
+	return _state == IDLE_UP
+		|| _state == IDLE_UPRIGHT
+		|| _state == IDLE_UPLEFT
+		|| _state == IDLE_DOWN
+		|| _state == IDLE_DOWNLEFT
+		|| _state == IDLE_LEFT
+		|| _state == IDLE_RIGHT
+		|| _state == IDLE_START;
+}
+
+bool IsMoveState(PLAYER_ANIM_STATE _state)
+{
+	return _state == MOVE_UP
+		|| _state == MOVE_UPRIGHT
+		|| _state == MOVE_UPLEFT
+		|| _state == MOVE_DOWN
+		|| _state == MOVE_DOWNLEFT
+		|| _state == MOVE_LEFT
+		|| _state == MOVE_RIGHT
+		|| _state == MOVE_START;
+}
 
 CPlayer::CPlayer()
 	: m_curHP(6)
@@ -60,7 +85,7 @@ CPlayer::CPlayer()
 	, m_isInvincible(false)
 	, m_invincibleAccTime(0.f)
 	, m_invincibleTime(0.7f)
-	, m_state(PLAYER_STATE::IDLE)
+	, m_state(IDLE_DOWN)
 	, m_RigidBody(nullptr)
 {
 	// Collider 컴포넌트 추가
@@ -79,7 +104,7 @@ CPlayer::CPlayer()
 
 
 	// Flipbook 생성 및 등록
-	//CreatePlayerFlipbook();
+	CreatePlayerFlipbook();
 
 	// RigidBody 컴포넌트 추가
 	m_RigidBody = (CRigidBody*)AddComponent(new CRigidBody);
@@ -100,9 +125,9 @@ CPlayer::~CPlayer()
 void CPlayer::Begin()
 {
 
-	//m_FlipbookPlayer->Play(IDLE_DOWN, 5.f, true);
+	m_FlipbookPlayer->Play(IDLE_DOWN, 5.f, true);
 
-	//CCamera::GetInst()->SetTarget(this);
+	CCamera::GetInst()->SetTarget(this);
 
 
 }
@@ -115,7 +140,7 @@ void CPlayer::Tick()
 	m_gunDir.Normalize();
 
 	// update move direction
-	if (m_state != PLAYER_STATE::ROLLING)
+	if (!IsRollState(m_state))
 	{
 		// get move direction
 		m_moveDir = { 0.f, 0.f };
@@ -157,18 +182,41 @@ void CPlayer::Tick()
 	// for animation
 	switch (m_state)
 	{
-	case PLAYER_STATE::MOVING:
+	case IDLE_UP:
+	case IDLE_UPRIGHT:
+	case IDLE_UPLEFT:
+	case IDLE_DOWN:
+	case IDLE_DOWNRIGHT:
+	case IDLE_DOWNLEFT:
+	case IDLE_LEFT:
+	case IDLE_RIGHT:
+	case IDLE_START:
+		IdleState();
+		break;
+	case MOVE_UP:
+	case MOVE_UPRIGHT:
+	case MOVE_UPLEFT:
+	case MOVE_DOWN:
+	case MOVE_DOWNRIGHT:
+	case MOVE_DOWNLEFT:
+	case MOVE_LEFT:
+	case MOVE_RIGHT:
+	case MOVE_START:
 		MoveState();
 		break;
-	case PLAYER_STATE::ROLLING:
+	case ROLL_UP:
+	case ROLL_UPRIGHT:
+	case ROLL_UPLEFT:
+	case ROLL_DOWN:
+	case ROLL_DOWNRIGHT:
+	case ROLL_DOWNLEFT:
+	case ROLL_LEFT:
+	case ROLL_RIGHT:
+	case ROLL_START:
 		RollState();
 		break;
-	case PLAYER_STATE::DEAD:
+	case DEAD:
 		DeadState();
-		break;
-	case PLAYER_STATE::FALLING:
-		break;
-	case PLAYER_STATE::IDLE:
 	default:
 		IdleState();
 		break;
@@ -177,7 +225,7 @@ void CPlayer::Tick()
 	// gun related
 	if (m_gun != nullptr)
 	{
-		if (m_state != PLAYER_STATE::ROLLING)
+		if (!IsRollState(m_state))
 		{
 			GUN_STATE fireResult = m_gun->Fire();
 			if (fireResult == GUN_STATE::RELOAD)
@@ -195,7 +243,7 @@ void CPlayer::Tick()
 	}
 
 	// USE item
-	if (KEY_TAP(SPACE) && m_state != PLAYER_STATE::ROLLING)
+	if (KEY_TAP(SPACE) && !IsRollState(m_state))
 	{
 		//m_RigidBody->Jump();
 		//DrawDebugRect(PEN_TYPE::GREEN, GetPos(), GetScale() * 2.f, 3.f);
@@ -220,17 +268,42 @@ void CPlayer::Tick()
 	DrawDebugCircle(PEN_TYPE::RED, GetRenderPos(), Vec2(5.f, 5.f), 0.f);
 
 	PEN_TYPE penType = PEN_TYPE::RED;
+
 	switch (m_state)
 	{
-	case PLAYER_STATE::MOVING:
+	case IDLE_UP:
+	case IDLE_UPRIGHT:
+	case IDLE_UPLEFT:
+	case IDLE_DOWN:
+	case IDLE_DOWNRIGHT:
+	case IDLE_DOWNLEFT:
+	case IDLE_LEFT:
+	case IDLE_RIGHT:
+		penType = PEN_TYPE::GREEN;
+		break;
+	case MOVE_UP:
+	case MOVE_UPRIGHT:
+	case MOVE_UPLEFT:
+	case MOVE_DOWN:
+	case MOVE_DOWNRIGHT:
+	case MOVE_DOWNLEFT:
+	case MOVE_LEFT:
+	case MOVE_RIGHT:
 		penType = PEN_TYPE::BLUE;
 		break;
-	case PLAYER_STATE::ROLLING:
+	case ROLL_UP:
+	case ROLL_UPRIGHT:
+	case ROLL_UPLEFT:
+	case ROLL_DOWN:
+	case ROLL_DOWNRIGHT:
+	case ROLL_DOWNLEFT:
+	case ROLL_LEFT:
+	case ROLL_RIGHT:
 		penType = PEN_TYPE::RED;
 		break;
-	case PLAYER_STATE::IDLE:
 	default:
 		penType = PEN_TYPE::GREEN;
+		break;
 	}
 
 	DrawDebugRect(penType, GetRenderPos() + Vec2(50.f, -50.f), Vec2(10.f, 10.f), 0.f);
@@ -238,7 +311,7 @@ void CPlayer::Tick()
 
 void CPlayer::Render()
 {
-	//m_FlipbookPlayer->Render();
+	m_FlipbookPlayer->Render();
 }
 
 void CPlayer::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
@@ -250,17 +323,17 @@ void CPlayer::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* 
 
 		m_curHP--;
 		if (m_curHP == 0)
-			m_state = PLAYER_STATE::DEAD;
+			m_state = DEAD;
 		m_isInvincible = true;
 	}
 	else if (_OtherObject->GetLayerType() == LAYER_TYPE::MONSTER_OBJECT)
 	{
-		if (m_isInvincible || m_state == PLAYER_STATE::ROLLING)
+		if (m_isInvincible || IsRollState(m_state))
 			return;
 
 		m_curHP--;
 		if (m_curHP == 0)
-			m_state = PLAYER_STATE::DEAD;
+			m_state = DEAD;
 		m_isInvincible = true;
 	}
 }
@@ -287,34 +360,18 @@ void CPlayer::EndOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _O
 
 void CPlayer::CreatePlayerFlipbook()
 {
-	return;
-	// AtlasTexture
-	CTexture* pAtlas = CAssetMgr::GetInst()->LoadTexture(L"Link", L"Texture\\link_32.bmp");
-
-	/*CreateFlipbook(L"LINK_IDLEDOWN", pAtlas, Vec2(0.f, 0.f), Vec2(120.f, 130.), 3);
-	CreateFlipbook(L"LINK_IDLELEFT", pAtlas, Vec2(0.f, 130.f), Vec2(120.f, 130.), 3);
-	CreateFlipbook(L"LINK_IDLEUP", pAtlas, Vec2(0.f, 260.f), Vec2(120.f, 130.), 1);
-	CreateFlipbook(L"LINK_IDLERIGHT", pAtlas, Vec2(0.f, 390.f), Vec2(120.f, 130.), 3);
-	CreateFlipbook(L"LINK_MOVEDOWN", pAtlas, Vec2(0.f, 520.f), Vec2(120.f, 130.), 10);
-	CreateFlipbook(L"LINK_MOVELEFT", pAtlas, Vec2(0.f, 650.f), Vec2(120.f, 130.), 10);
-	CreateFlipbook(L"LINK_MOVEUP", pAtlas, Vec2(0.f, 780.f), Vec2(120.f, 130.), 10);
-	CreateFlipbook(L"LINK_MOVERIGHT", pAtlas, Vec2(0.f, 910.f), Vec2(120.f, 130.), 10);*/
-
 	// FlipbookPlayer 컴포넌트 추가하기
 	m_FlipbookPlayer = (CFlipbookPlayer*)AddComponent(new CFlipbookPlayer);
 	
-	m_FlipbookPlayer->AddFlipbook(IDLE_DOWN, CAssetMgr::GetInst()->LoadFlipbook(L"LINK_IDLEDOWN" , L"Flipbook\\LINK_IDLEDOWN.flip" ));
-	m_FlipbookPlayer->AddFlipbook(IDLE_LEFT, CAssetMgr::GetInst()->LoadFlipbook(L"LINK_IDLELEFT",  L"Flipbook\\LINK_IDLELEFT.flip" ));
-	m_FlipbookPlayer->AddFlipbook(IDLE_UP,	 CAssetMgr::GetInst()->LoadFlipbook(L"LINK_IDLEUP"	,  L"Flipbook\\LINK_IDLEUP.flip"   ));
-	m_FlipbookPlayer->AddFlipbook(IDLE_RIGHT,CAssetMgr::GetInst()->LoadFlipbook(L"LINK_IDLERIGHT", L"Flipbook\\LINK_IDLERIGHT.flip" ));
+	m_FlipbookPlayer->AddFlipbook(IDLE_DOWN, CAssetMgr::GetInst()->LoadFlipbook(L"rogue_idle_front" , L"Flipbook\\SpaceRogue\\rogue_idle_front.flip" ));
+	m_FlipbookPlayer->AddFlipbook(IDLE_LEFT, CAssetMgr::GetInst()->LoadFlipbook(L"rogue_idle_hands2", L"Flipbook\\SpaceRogue\\rogue_idle_hands2.flip" ));
+	m_FlipbookPlayer->AddFlipbook(IDLE_UP,	 CAssetMgr::GetInst()->LoadFlipbook(L"rogue_idle_back",   L"Flipbook\\SpaceRogue\\rogue_idle_back.flip"   ));
+	m_FlipbookPlayer->AddFlipbook(IDLE_RIGHT,CAssetMgr::GetInst()->LoadFlipbook(L"rogue_idle_hands",  L"Flipbook\\SpaceRogue\\rogue_idle_hands.flip" ));
 
-	m_FlipbookPlayer->AddFlipbook(MOVE_DOWN, CAssetMgr::GetInst()->LoadFlipbook( L"LINK_MOVEDOWN"	,L"Flipbook\\LINK_MOVEDOWN.flip" ));
-	m_FlipbookPlayer->AddFlipbook(MOVE_LEFT, CAssetMgr::GetInst()->LoadFlipbook( L"LINK_MOVELEFT"	,L"Flipbook\\LINK_MOVELEFT.flip" ));
-	m_FlipbookPlayer->AddFlipbook(MOVE_UP, CAssetMgr::GetInst()->LoadFlipbook(   L"LINK_MOVEUP"		,L"Flipbook\\LINK_MOVEUP.flip"   ));
-	m_FlipbookPlayer->AddFlipbook(MOVE_RIGHT, CAssetMgr::GetInst()->LoadFlipbook(L"LINK_MOVERIGHT"	,L"Flipbook\\LINK_MOVERIGHT.flip"));
-
-	CSprite* pSprite = CAssetMgr::GetInst()->FindSprite(L"LINK_IDLERIGHT_1");
-	pSprite->SetOffset(Vec2(1.f, 0.f));
+	m_FlipbookPlayer->AddFlipbook(MOVE_DOWN, CAssetMgr::GetInst()->LoadFlipbook(L"rogue_run_front",   L"Flipbook\\SpaceRogue\\rogue_run_front.flip"));
+	m_FlipbookPlayer->AddFlipbook(MOVE_LEFT, CAssetMgr::GetInst()->LoadFlipbook(L"rogue_run_forward", L"Flipbook\\SpaceRogue\\rogue_run_forward.flip"));
+	m_FlipbookPlayer->AddFlipbook(MOVE_UP,   CAssetMgr::GetInst()->LoadFlipbook(L"rogue_run_back",    L"Flipbook\\SpaceRogue\\rogue_run_back.flip"));
+	m_FlipbookPlayer->AddFlipbook(MOVE_RIGHT,CAssetMgr::GetInst()->LoadFlipbook(L"rogue_run_forward", L"Flipbook\\SpaceRogue\\rogue_run_forward.flip"));
 }
 
 void CPlayer::CreateFlipbook(const wstring& _FlipbookName, CTexture* _Atlas, Vec2 _LeftTop, Vec2 _Slice, int MaxFrame)
@@ -363,25 +420,68 @@ void CPlayer::CreateFlipbook(const wstring& _FlipbookName, CTexture* _Atlas, Vec
 void CPlayer::IdleState()
 {
 	if (m_moveDir.Length() > 0)
-		m_state = PLAYER_STATE::MOVING;
+	{
+		m_state = MOVE_START;
+		return;
+	}
+
+	
 }
 
 void CPlayer::MoveState()
 {
 	if (KEY_TAP(KEY::RBTN))
 	{
-		m_state = PLAYER_STATE::ROLLING;
+		m_state = ROLL_DOWN;
 	}
 	else if (m_moveDir.Length() > 0)
 	{
 		auto velocity = m_moveDir * m_moveSpeed;
 		m_RigidBody->SetVelocity(velocity);
-		//SetPos(GetPos() + m_moveDir * m_moveSpeed * DT);
+		PLAYER_ANIM_STATE before = m_state;
+		bool isMirrored = false;
+		if (m_moveDir.x > 0)
+		{
+			m_state = MOVE_RIGHT;
+		}
+		else if (m_moveDir.x < 0)
+		{
+			m_state = MOVE_RIGHT;
+			isMirrored = true;
+		}
+		else if (m_moveDir.y > 0)
+		{
+			m_state = MOVE_DOWN;
+		}
+		else
+			m_state = MOVE_UP;
+
+		if (before != m_state)
+			m_FlipbookPlayer->Play(m_state, 10.f, true, isMirrored);
 	}
 	else
 	{
 		m_RigidBody->SetVelocity(Vec2(0.f, 0.f));
-		m_state = PLAYER_STATE::IDLE;
+		switch (m_state)
+		{
+		case MOVE_UP:
+			m_state = IDLE_UP;
+			break;
+		case MOVE_DOWN:
+			m_state = IDLE_DOWN;
+			break;
+		case MOVE_UPRIGHT:
+		case MOVE_DOWNRIGHT:
+		case MOVE_RIGHT:
+			m_state = IDLE_RIGHT;
+			break;
+		case MOVE_UPLEFT:
+		case MOVE_DOWNLEFT:
+		case MOVE_LEFT:
+			m_state = IDLE_LEFT;
+			break;
+		}
+		m_FlipbookPlayer->Play(m_state, 10.f, true);
 	}
 }
 
@@ -401,7 +501,7 @@ void CPlayer::RollState()
 	}
 
 	m_rollAccTime = 0;
-	m_state = PLAYER_STATE::MOVING;
+	m_state = MOVE_DOWN;
 }
 
 void CPlayer::DeadState()

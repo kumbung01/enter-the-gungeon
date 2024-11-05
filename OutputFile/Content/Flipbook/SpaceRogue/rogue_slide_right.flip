@@ -1,0 +1,15 @@
+[KEY]
+rogue_slide_up
+[PATH]
+Flipbook/SpaceRogue/rogue_slide_right.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+rogue_slide_right_001
+[PATH]
+Sprite/SpaceRogue/rogue_slide_right/rogue_slide_right_001.sprite
+
+
+

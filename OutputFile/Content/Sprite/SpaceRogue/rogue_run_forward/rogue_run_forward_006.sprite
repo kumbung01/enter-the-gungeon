@@ -1,0 +1,14 @@
+[KEY]
+rogue_run_forward_006
+[PATH]
+Sprite/SpaceRogue/rogue_run_forward/rogue_run_forward_006.sprite
+[ATLAS_KEY]
+rogue
+[ATLAS_PATH]
+Texture/rogue.png
+[LEFT_TOP]
+138, 376
+[SLICE]
+23, 24
+[OFFSET]
+0, 0

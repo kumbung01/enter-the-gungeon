@@ -1,0 +1,14 @@
+[KEY]
+rogue_tablekick_002
+[PATH]
+Sprite/SpaceRogue/rogue_tablekick/rogue_tablekick_002.sprite
+[ATLAS_KEY]
+rogue
+[ATLAS_PATH]
+Texture/rogue.png
+[LEFT_TOP]
+345, 337
+[SLICE]
+23, 24
+[OFFSET]
+0, 0

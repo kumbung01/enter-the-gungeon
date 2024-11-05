@@ -1,0 +1,14 @@
+[KEY]
+rogue_run_backward_hands2_004
+[PATH]
+Sprite/SpaceRogue/rogue_run_backward_hands2/rogue_run_backward_hands2_004.sprite
+[ATLAS_KEY]
+rogue
+[ATLAS_PATH]
+Texture/rogue.png
+[LEFT_TOP]
+115, 376
+[SLICE]
+23, 24
+[OFFSET]
+0, 0

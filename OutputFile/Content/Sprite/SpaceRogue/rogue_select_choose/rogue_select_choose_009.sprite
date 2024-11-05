@@ -1,0 +1,14 @@
+[KEY]
+rogue_select_choose_009
+[PATH]
+Sprite/SpaceRogue/rogue_select_choose/rogue_select_choose_009.sprite
+[ATLAS_KEY]
+rogue
+[ATLAS_PATH]
+Texture/rogue.png
+[LEFT_TOP]
+23, 73
+[SLICE]
+23, 26
+[OFFSET]
+0, 0

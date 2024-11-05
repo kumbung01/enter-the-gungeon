@@ -1,0 +1,14 @@
+[KEY]
+rogue_dadflip_south_006
+[PATH]
+Sprite/SpaceRogue/rogue_dadflip_south/rogue_dadflip_south_006.sprite
+[ATLAS_KEY]
+rogue
+[ATLAS_PATH]
+Texture/rogue.png
+[LEFT_TOP]
+306, 73
+[SLICE]
+23, 24
+[OFFSET]
+0, 0

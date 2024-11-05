@@ -1,0 +1,14 @@
+[KEY]
+rogue_pit_return_002
+[PATH]
+Sprite/SpaceRogue/rogue_pit_return/rogue_pit_return_002.sprite
+[ATLAS_KEY]
+rogue
+[ATLAS_PATH]
+Texture/rogue.png
+[LEFT_TOP]
+391, 237
+[SLICE]
+23, 24
+[OFFSET]
+0, 0

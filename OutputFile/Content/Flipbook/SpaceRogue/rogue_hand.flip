@@ -1,0 +1,15 @@
+[KEY]
+rogue_ghost_back
+[PATH]
+Flipbook/SpaceRogue/rogue_hand.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+rogue_hand_001
+[PATH]
+Sprite/SpaceRogue/rogue_hand/rogue_hand_001.sprite
+
+
+

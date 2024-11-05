@@ -18,6 +18,41 @@ enum class PLAYER_STATE
     DEAD,
 };
 
+enum PLAYER_ANIM_STATE
+{
+    IDLE_START,
+    IDLE_UP,
+    IDLE_UPRIGHT,
+    IDLE_UPLEFT,
+    IDLE_DOWN,
+    IDLE_DOWNRIGHT,
+    IDLE_DOWNLEFT,
+    IDLE_LEFT,
+    IDLE_RIGHT,
+
+    MOVE_START,
+    MOVE_UP,
+    MOVE_UPRIGHT,
+    MOVE_UPLEFT,
+    MOVE_DOWN,
+    MOVE_DOWNRIGHT,
+    MOVE_DOWNLEFT,
+    MOVE_LEFT,
+    MOVE_RIGHT,
+
+    ROLL_START,
+    ROLL_UP,
+    ROLL_UPRIGHT,
+    ROLL_UPLEFT,
+    ROLL_DOWN,
+    ROLL_DOWNRIGHT,
+    ROLL_DOWNLEFT,
+    ROLL_LEFT,
+    ROLL_RIGHT,
+
+    DEAD,
+};
+
 class CPlayer :
     public CObj
 {
@@ -38,7 +73,7 @@ private:
 
     Vec2                m_moveDir;
     Vec2                m_gunDir;
-    PLAYER_STATE        m_state;
+    PLAYER_ANIM_STATE   m_state;
 
     CFSM*               m_fsm;
 

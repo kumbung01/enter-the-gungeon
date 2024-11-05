@@ -1,0 +1,15 @@
+[KEY]
+rogue_dadflip_north
+[PATH]
+Flipbook/SpaceRogue/rogue_dadflip.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+rogue_dadflip_005
+[PATH]
+Sprite/SpaceRogue/rogue_dadflip/rogue_dadflip_005.sprite
+
+
+

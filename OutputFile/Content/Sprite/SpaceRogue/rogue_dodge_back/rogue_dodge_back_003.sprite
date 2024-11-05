@@ -1,0 +1,14 @@
+[KEY]
+rogue_dodge_back_003
+[PATH]
+Sprite/SpaceRogue/rogue_dodge_back/rogue_dodge_back_003.sprite
+[ATLAS_KEY]
+rogue
+[ATLAS_PATH]
+Texture/rogue.png
+[LEFT_TOP]
+69, 121
+[SLICE]
+23, 24
+[OFFSET]
+0, 0

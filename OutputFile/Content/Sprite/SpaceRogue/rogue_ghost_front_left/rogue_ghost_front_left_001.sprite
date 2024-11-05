@@ -1,0 +1,14 @@
+[KEY]
+rogue_ghost_front_left_001
+[PATH]
+Sprite/SpaceRogue/rogue_ghost_front_left/rogue_ghost_front_left_001.sprite
+[ATLAS_KEY]
+rogue
+[ATLAS_PATH]
+Texture/rogue.png
+[LEFT_TOP]
+263, 25
+[SLICE]
+24, 24
+[OFFSET]
+0, 0
