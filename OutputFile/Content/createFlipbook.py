@@ -25,11 +25,11 @@ with open(texture_json_path, 'r') as json_file:
         match = re.match(key_pattern, key)
         if match:
             sprite_key = match.group(1)
-            flipbook_key = match.group(2)
+            flipbook_key_now = match.group(2)
             frame_number = match.group(3)
 
             sprite_filename = f'{sprite_key}.sprite'
-            sprite_folder = f'Sprite/{folder_name}/{flipbook_key}'
+            sprite_folder = f'Sprite/{folder_name}/{flipbook_key_now}'
             sprite_path = f'{sprite_folder}/{sprite_filename}'
 
             # create sprite json
@@ -59,7 +59,8 @@ with open(texture_json_path, 'r') as json_file:
                 print(f'filename \'{sprite_filename}\' has been written')
                 print('\n'.join(output) + '\n')
 
-            if flipbook_key != flipbook_key_before != '':
+            if flipbook_key_now != flipbook_key_before != '':
+                flipbook_key = flipbook_key_before
                 flipbook_folder = f'Flipbook/{folder_name}'
                 flipbook_filename = f'{flipbook_key_before}.flip'
                 flipbook_path = f'{flipbook_folder}/{flipbook_filename}'
@@ -88,11 +89,11 @@ with open(texture_json_path, 'r') as json_file:
                         ])
 
                     print('\n'.join(output) + '\n', file=newfile)
-                    print(f'filename {flipbook_key_before}.json has been written')
+                    print(f'filename {flipbook_key}.json has been written')
 
                 # then empty the flipbook
                 flipbook['sprites'] = []
 
             # add frame
             flipbook['sprites'].append({'key': sprite_key, 'path': f'{sprite_folder}/{sprite_filename}'})
-            flipbook_key_before = flipbook_key
+            flipbook_key_before = flipbook_key_now
