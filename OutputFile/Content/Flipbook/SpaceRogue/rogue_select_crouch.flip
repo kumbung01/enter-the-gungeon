@@ -1,5 +1,5 @@
 [KEY]
-rogue_select_crouch_draw
+rogue_select_crouch
 [PATH]
 Flipbook/SpaceRogue/rogue_select_crouch.flip
 [SPRITE_COUNT]
