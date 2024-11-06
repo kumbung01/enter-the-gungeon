@@ -7,6 +7,7 @@
 #include <map>
 #include <string>
 #include <assert.h>
+#include <cmath>
 
 #pragma comment(lib, "Msimg32.lib")
 

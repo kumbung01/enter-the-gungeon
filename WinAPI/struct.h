@@ -134,3 +134,18 @@ struct tMonInfo
 
 	float Speed;
 };
+
+struct tAnimState
+{
+public:
+	PLAYER_ANIM_STATE state;
+	bool			  mirror;
+
+public:
+	bool operator == (const tAnimState& _other) const {
+		return (this->state == _other.state) && (this->mirror == _other.mirror);
+	}
+	bool operator != (const tAnimState& _other) const {
+		return !(*this == _other);
+	}
+};
