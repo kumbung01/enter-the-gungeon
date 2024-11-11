@@ -69,10 +69,18 @@ void CLevel::Render()
 			}
 			else
 			{
+				m_renderQueue.push(*iter);
 				(*iter)->Render();
 				++iter;
 			}
-		}			
+		}
+	}
+
+	while (!m_renderQueue.empty())
+	{
+		auto obj = m_renderQueue.top();
+		m_renderQueue.pop();
+		obj->Render();
 	}
 }
 

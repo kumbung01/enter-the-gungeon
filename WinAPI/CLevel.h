@@ -1,16 +1,34 @@
 #pragma once
 #include "CBase.h"
+#include "CObj.h"
 
-class CObj;
+//class CObj;
 class CCollider;
+
+struct cmp {
+    bool operator()(CObj* a, CObj* b)
+    {
+        if (a->GetLayerType() == b->GetLayerType()) {
+            return a->GetPos().y > b->GetPos().y;
+        }
+        
+        bool isAUi = (int)a->GetLayerType() > (int)LAYER_TYPE::UIS;
+        bool isBUi = (int)b->GetLayerType() > (int)LAYER_TYPE::UIS;
+
+        if (isAUi != isBUi)
+            return isAUi;
+
+        return a->GetPos().y > b->GetPos().y;
+    }
+};
 
 class CLevel :
     public CBase
 {
 private:
-    vector<CObj*>       m_vecObjects[(UINT)LAYER_TYPE::END];
-    vector<CCollider*>  m_vecCollider[(UINT)LAYER_TYPE::END];
-
+    vector<CObj*>                                       m_vecObjects[(UINT)LAYER_TYPE::END];
+    vector<CCollider*>                                  m_vecCollider[(UINT)LAYER_TYPE::END];
+    std::priority_queue<CObj*, std::vector<CObj*>, cmp> m_renderQueue;
 public:
     // 시점함수 
     //  Begin       : 레벨이 시작될 때, Object 들에게 호출

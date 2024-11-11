@@ -57,7 +57,8 @@ enum class LAYER_TYPE
 	MONSTER_OBJECT,
 	GUN,
 	// 7 ~ 30
-
+	UIS,
+	INGAME_UI = 30,
 	UI = 31,
 	END = 32
 };

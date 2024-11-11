@@ -62,7 +62,7 @@ void CLevel_Start::Begin()
     CReloadBar* ui = new CReloadBar;
     ui->SetOwner(pPlayer);
     pPlayer->SetReloadBar(ui);
-    AddObject(ui, LAYER_TYPE::DEFAULT);
+    AddObject(ui, LAYER_TYPE::INGAME_UI);
 
     // Monster 생성
     CMonster* pMonster = new CMonster;
@@ -103,6 +103,7 @@ void CLevel_Start::Begin()
     // TileMap Object 추가
     pTileMap = new CMap;
     pTileMap->SetPos(Vec2(1000.f, 1000.f));
+    AddObject(pTileMap, LAYER_TYPE::TILE);
     //pTileMap->GetTileMap()->LoadTileMap(FilePath + L"TileMap\\Temp.tile");
 
  /*   tTile* pTile = pTileMap->GetTileMap()->GetTileInfo(0, 0);
@@ -115,7 +116,7 @@ void CLevel_Start::Begin()
     CCursor* pCursor = new CCursor;
     pCursor->SetPos(Vec2(0.f, 0.f));
     pCursor->SetScale(Vec2(50.f, 50.f));
-    AddObject(pCursor, LAYER_TYPE::DEFAULT);
+    AddObject(pCursor, LAYER_TYPE::INGAME_UI);
 
 
     // 충돌 설정
