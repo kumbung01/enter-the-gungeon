@@ -16,6 +16,7 @@ CFlipbookPlayer::CFlipbookPlayer()
 	, m_Time(0.f)
 	, m_Repeat(false)
 	, m_Finish(false)
+	, m_mirror(false)
 {
 }
 
@@ -66,37 +67,27 @@ void CFlipbookPlayer::Render()
 		return;
 
 	CSprite* Sprite = m_CurFlipbook->GetSprite(m_SpriteIdx);
+	wprintf(L"%s\n", Sprite->GetKey().c_str());
 
 	// Sprite 를 화면에 그린다.
-	HDC hBackDC = CEngine::GetInst()->GetSecondDC();
+	Gdiplus::Graphics* graphics = CEngine::GetInst()->GetBackGraphics();
 	Vec2 vPos = GetOwner()->GetRenderPos();
 
 	Vec2 LeftTop = Vec2(vPos.x - (Sprite->GetSlice().x / 2) + Sprite->GetOffset().x,
 						vPos.y - (Sprite->GetSlice().y / 2) + Sprite->GetOffset().y);
 
-	//TransparentBlt(hBackDC
-	//	, vPos.x - (Sprite->GetSlice().x / 2) + Sprite->GetOffset().x
-	//	, vPos.y - (Sprite->GetSlice().y / 2) + Sprite->GetOffset().y
-	//	, Sprite->GetSlice().x
-	//	, Sprite->GetSlice().y
-	//	, Sprite->GetAtlas()->GetDC()
-	//	, Sprite->GetLeftTop().x
-	//	, Sprite->GetLeftTop().y
-	//	, Sprite->GetSlice().x
-	//	, Sprite->GetSlice().y
-	//	, RGB(255, 0, 255));
+	float centerX = vPos.x - (Sprite->GetSlice().x * 2.f);
+	float centerY = vPos.y - (Sprite->GetSlice().y * 2.f);
 
-	StretchBlt(hBackDC
-		, vPos.x - (Sprite->GetSlice().x * (m_mirror ? -2 : 2)) + Sprite->GetOffset().x
-		, vPos.y - (Sprite->GetSlice().y * 2) + Sprite->GetOffset().y
-		, Sprite->GetSlice().x * 4 * (m_mirror ? -1 : 1)
-		, Sprite->GetSlice().y * 4
-		, Sprite->GetAtlas()->GetDC()
-		, Sprite->GetLeftTop().x
-		, Sprite->GetLeftTop().y
-		, Sprite->GetSlice().x
-		, Sprite->GetSlice().y
-		, SRCCOPY);
-	//	, RGB(255, 0, 255));
+	graphics->TranslateTransform(centerX, centerY);
+	graphics->ScaleTransform((m_mirror ? -1.f : 1.f) * 4.f, 4.f);
+	graphics->TranslateTransform(-centerX - (m_mirror ? Sprite->GetSlice().x : 0.f), -centerY);
+	
+	graphics->DrawImage(Sprite->GetAtlas()->GetImage(),
+		centerX, centerY,
+		Sprite->GetLeftTop().x, Sprite->GetLeftTop().y,
+		Sprite->GetSlice().x, Sprite->GetSlice().y, UnitPixel);
+
+	graphics->ResetTransform();
 
 }
