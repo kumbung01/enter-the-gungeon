@@ -59,9 +59,6 @@ void CMissile::Render()
 
 void CMissile::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
 {
-	if (_OtherObject->GetLayerType() == LAYER_TYPE::TILE)
-	{
-		DeleteObject(this);
-	}
+	DeleteObject(this);
 }
 
