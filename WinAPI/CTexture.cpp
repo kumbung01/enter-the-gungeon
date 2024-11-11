@@ -9,6 +9,7 @@ CTexture::CTexture()
 	, m_hBit(nullptr)
 	, m_DC(nullptr)
 	, m_BitmapInfo{}
+	, m_Image(nullptr)
 {
 }
 
@@ -45,7 +46,7 @@ int CTexture::Load(const wstring& _FilePath)
 
 		GdiplusStartup(&gdiplusToken, &gidstartupinput, nullptr);
 		m_Image = Image::FromFile(strContent.c_str(), false);
-		Bitmap* pBit = (Bitmap*)m_Image->Clone();
+		Bitmap* pBit = (Bitmap*)m_Image;
 	
 		Status stat = pBit->GetHBITMAP(Color(0, 0, 0, 0), &m_hBit);
 		if (stat != Status::Ok)

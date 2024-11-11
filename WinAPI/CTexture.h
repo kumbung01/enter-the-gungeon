@@ -16,6 +16,8 @@ public:
     HDC GetDC() { return m_DC; }
     UINT GetWidth() { return m_BitmapInfo.bmWidth; }
     UINT GetHeight() { return m_BitmapInfo.bmHeight; }
+    HBITMAP GetBitmap() { return m_hBit; }
+    Image* GetImage() { return m_Image;}
 
 private:
     virtual int Load(const wstring& _FilePath) override;
