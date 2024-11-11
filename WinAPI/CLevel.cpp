@@ -70,7 +70,6 @@ void CLevel::Render()
 			else
 			{
 				m_renderQueue.push(*iter);
-				(*iter)->Render();
 				++iter;
 			}
 		}
