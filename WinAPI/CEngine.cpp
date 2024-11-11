@@ -43,6 +43,8 @@ CEngine::~CEngine()
 
         DeleteObject(m_Brush[i]);
     }
+
+    DELETE(m_backGraphics);
 }
 
 
@@ -165,4 +167,8 @@ void CEngine::ChangeWindowSize(Vec2 _vResolution)
 void CEngine::CreateSecondBuffer()
 {
     m_BackBuffer = CAssetMgr::GetInst()->CreateTexture(L"BackBuffer", (int)m_Resolution.x, (int)m_Resolution.y);
+    
+    // gdiplus graphics object for back buffer
+    m_backGraphics = new Gdiplus::Graphics(GetSecondDC());
+    m_backGraphics->SetInterpolationMode(InterpolationModeNearestNeighbor);
 }
