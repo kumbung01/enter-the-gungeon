@@ -8,6 +8,8 @@
 #include <string>
 #include <assert.h>
 #include <cmath>
+#include <queue>
+#include <functional>
 
 #pragma comment(lib, "Msimg32.lib")
 
