@@ -1,8 +1,13 @@
 ﻿#include "pch.h"
+#include <crtdbg.h>
 
 #include "WinAPI.h"
 #include "CEngine.h"
 #include "CKeyMgr.h"
+
+
+
+#pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console")
 
 HINSTANCE g_hInst = nullptr;
 HWND      g_hDlg = nullptr;
@@ -19,7 +24,8 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
                     , int   nCmdShow)
 {    
     _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-    //_CrtSetBreakAlloc(18);
+    //_CrtSetBreakAlloc(4835);
+    ShowCursor(false);
 
     g_hInst = hInstance; // 프로세스 시작 주소
 
@@ -74,6 +80,8 @@ int APIENTRY wWinMain(HINSTANCE hInstance   // 프로세스 주소(ID)
             CEngine::GetInst()->Progress();
         }              
     }
+
+    //_CrtDumpMemoryLeaks();
 
     return (int) msg.wParam;
 }
