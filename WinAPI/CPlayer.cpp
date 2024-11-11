@@ -25,11 +25,6 @@
 #include "CSprite.h"
 #include "CRigidBody.h"
 
-#include "CFSM.h"
-#include "CPlayerIdleState.h"
-#include "CPlayerMovingState.h"
-#include "CPlayerEvadingState.h"
-
 
 
 
@@ -125,15 +120,15 @@ tAnimState ProcessAnimState(const Vec2& _dir, const PLAYER_STATE _state)
 	}
 	else if (-120.f < angle && angle <= -90.f)
 	{
-		state.mirror = false;
+		state.mirror = true;
 		switch (_state)
 		{
 		case PLAYER_STATE::MOVING:
-			state.state = ROGUE_RUN_FRONT_HANDS2;
+			state.state = ROGUE_RUN_FRONT_HANDS_LEFT;
 			break;
 		case PLAYER_STATE::IDLE:
 		default:
-			state.state = ROGUE_IDLE_FRONT_HAND_RIGHT;
+			state.state = ROGUE_IDLE_FRONT_HAND_LEFT;
 			break;
 		}
 	}
@@ -180,7 +175,6 @@ CPlayer::CPlayer()
 	, m_HitBox(nullptr)
 	, m_FlipbookPlayer(nullptr)
 	, m_gun(nullptr)
-	, m_fsm(nullptr)
 	, m_reloadBar(nullptr)
 	, m_rollSpeed(1200.f)
 	, m_rollTime(0.7f)
@@ -199,26 +193,13 @@ CPlayer::CPlayer()
 
 	AddComponent(m_HitBox);
 
-	// fsm 생성 및 등록
-	m_fsm = (CFSM*)AddComponent(new CFSM);
-	m_fsm->AddState(L"Idle", new CPlayerIdleState);
-	m_fsm->AddState(L"Moving", new CPlayerMovingState);
-	m_fsm->AddState(L"Evading", new CPlayerEvadingState);
-
-
 	// Flipbook 생성 및 등록
 	CreatePlayerFlipbook();
 
 	// RigidBody 컴포넌트 추가
 	m_RigidBody = (CRigidBody*)AddComponent(new CRigidBody);
 	m_RigidBody->SetMode(RIGIDBODY_MODE::TOPVIEW);
-	//m_RigidBody->SetInitialSpeed(100.f);
-	//m_RigidBody->SetMaxSpeed(500.f);
 	m_RigidBody->SetMass(1.f);
-	//m_RigidBody->SetFriction(1000.f);
-	//m_RigidBody->SetJumpVelocity(Vec2(0.f, -500.f));
-
-
 }
 
 CPlayer::~CPlayer()

@@ -6,7 +6,6 @@ class CTexture;
 class CFlipbookPlayer;
 class CGun;
 class CReloadBar;
-class CFSM;
 class CRigidBody;
 
 
@@ -33,8 +32,6 @@ private:
     Vec2                m_gunDir;
     tAnimState          m_animState;
     PLAYER_STATE        m_state;
-
-    CFSM*               m_fsm;
 
     bool                m_isInvincible;
     float               m_invincibleAccTime;
