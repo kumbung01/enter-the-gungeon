@@ -69,6 +69,11 @@ Vec2 Rotate(Vec2 _Dir, float _Angle)
 	return vRotate;
 }
 
+float ToDegree(Vec2 _Dir)
+{
+	return std::atan2f(_Dir.y, _Dir.x) * 180.f / PI;
+}
+
 bool GetClockWise(Vec2 _A, Vec2 _B)
 {
 	float F = _A.x* _B.y - _A.y * _B.x;

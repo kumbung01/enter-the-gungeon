@@ -9,6 +9,7 @@ bool IsValid(CObj*& _Object);
 
 Vec2 Rotate(Vec2 _Dir, float _Angle);
 bool GetClockWise(Vec2 _A, Vec2 _B);
+float ToDegree(Vec2 _Dir);
 
 class CAsset;
 void SaveAssetRef(CAsset* _Asset, FILE* _File);
