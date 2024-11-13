@@ -138,12 +138,15 @@ struct tMonInfo
 struct tAnimState
 {
 public:
-	PLAYER_ANIM_STATE state;
-	bool			  mirror;
+	int   idx;
+	bool  mirror;
+	float angle;
 
 public:
 	bool operator == (const tAnimState& _other) const {
-		return (this->state == _other.state) && (this->mirror == _other.mirror);
+		return (this->idx    == _other.idx) && 
+			   (this->mirror == _other.mirror) &&
+			   (this->angle  == _other.angle);
 	}
 	bool operator != (const tAnimState& _other) const {
 		return !(*this == _other);
