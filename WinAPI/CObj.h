@@ -14,6 +14,7 @@ private:
     vector<CComponent*> m_Component;
     LAYER_TYPE          m_LayerType;
     bool                m_Dead;         // 삭제 예정
+    float               m_renderOffset; // render 순서 조절 위함
 
 public:
     virtual void Begin();               // 레벨 시작할 때
@@ -32,11 +33,13 @@ public:
     void SetPos(float _x, float _y) { m_Pos = Vec2(_x, _y); }
     void SetScale(Vec2 _Scale) { m_Scale = _Scale; }
     void SetScale(float _x, float _y) { m_Scale = Vec2(_x, _y); }
+    void SetRenderOffset(float _offset) { m_renderOffset = _offset; }
 
     Vec2 GetPos() { return m_Pos; }
     Vec2 GetRenderPos();
     Vec2 GetScale() { return m_Scale; }
     LAYER_TYPE GetLayerType() { return m_LayerType; }
+    float GetRenderOffset() { return m_renderOffset; }
 
     bool IsDead() { return m_Dead; }
 
