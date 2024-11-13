@@ -62,6 +62,7 @@ public:
 private:
     void CreatePlayerFlipbook();
     void CreateFlipbook(const wstring& _FlipbookName, CTexture* _Atlas, Vec2 _LeftTop, Vec2 _Slice, int MaxFrame);
+    tAnimState ProcessAnimState(const Vec2& _dir, const PLAYER_STATE _state);
     void IdleState();
     void MoveState();
     void RollState();
