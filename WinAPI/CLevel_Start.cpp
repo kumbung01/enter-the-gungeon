@@ -11,6 +11,7 @@
 #include "CCursor.h"
 #include "CGun.h"
 #include "CReloadUI.h"
+#include "CRevolver.h"
 
 #include "CCollisionMgr.h"
 #include "CCollider.h"
@@ -34,6 +35,8 @@ CLevel_Start::~CLevel_Start()
 
 void CLevel_Start::Begin()
 {
+    ShowCursor(false);
+
     // 배경음 지정
     CSound* pBGM = CAssetMgr::GetInst()->LoadSound(L"BattleBGM", L"Sound\\BGM_Stage1.wav");
     if (nullptr != pBGM)
@@ -53,7 +56,7 @@ void CLevel_Start::Begin()
 
     AddObject(pPlayer, LAYER_TYPE::PLAYER);
 
-    CGun* gun = new CGun;
+    CGun* gun = new CRevolver;
     gun->SetPos(pPlayer->GetPos());
     gun->SetOwner(pPlayer);
     pPlayer->SetGun(gun);
@@ -132,7 +135,7 @@ void CLevel_Start::Begin()
     // Camera 효과
     CCamera::GetInst()->SetTarget(pPlayer);
     CCamera::GetInst()->SetState(CAMERA_STATE::FOLLOW_PLAYER);
-    CCamera::GetInst()->PostProcessEffect(HEART, 0.5f);  
+    //CCamera::GetInst()->PostProcessEffect(HEART, 0.5f);  
 
     // 부모 CLevel 의 Begin 호출
     CLevel::Begin();
