@@ -26,8 +26,8 @@
     },
     "SpaceRogue/rogue_tarnisher_002.png": {
       "frame": {
-        "x": 0,
-        "y": 55,
+        "x": 23,
+        "y": 0,
         "w": 23,
         "h": 55
       },
@@ -50,8 +50,8 @@
     },
     "SpaceRogue/rogue_tarnisher_003.png": {
       "frame": {
-        "x": 0,
-        "y": 110,
+        "x": 46,
+        "y": 0,
         "w": 23,
         "h": 55
       },
@@ -75,7 +75,7 @@
     "SpaceRogue/rogue_tarnisher_004.png": {
       "frame": {
         "x": 0,
-        "y": 165,
+        "y": 55,
         "w": 23,
         "h": 55
       },
@@ -98,8 +98,8 @@
     },
     "SpaceRogue/rogue_tarnisher_005.png": {
       "frame": {
-        "x": 0,
-        "y": 220,
+        "x": 23,
+        "y": 55,
         "w": 23,
         "h": 55
       },
@@ -122,8 +122,8 @@
     },
     "SpaceRogue/rogue_tarnisher_006.png": {
       "frame": {
-        "x": 0,
-        "y": 275,
+        "x": 46,
+        "y": 55,
         "w": 23,
         "h": 55
       },
@@ -144,297 +144,9 @@
         "y": 0.5
       }
     },
-    "SpaceRogue/rogue_select_choose_001.png": {
+    "SpaceRogue/rogue_chest_open_fake_014.png": {
       "frame": {
-        "x": 0,
-        "y": 330,
-        "w": 23,
-        "h": 26
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 26
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 26
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_select_choose_002.png": {
-      "frame": {
-        "x": 0,
-        "y": 356,
-        "w": 23,
-        "h": 26
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 26
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 26
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_select_choose_003.png": {
-      "frame": {
-        "x": 0,
-        "y": 382,
-        "w": 23,
-        "h": 26
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 26
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 26
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_select_choose_004.png": {
-      "frame": {
-        "x": 0,
-        "y": 408,
-        "w": 23,
-        "h": 26
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 26
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 26
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_select_choose_005.png": {
-      "frame": {
-        "x": 0,
-        "y": 434,
-        "w": 23,
-        "h": 26
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 26
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 26
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_select_choose_006.png": {
-      "frame": {
-        "x": 0,
-        "y": 460,
-        "w": 23,
-        "h": 26
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 26
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 26
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_select_choose_007.png": {
-      "frame": {
-        "x": 0,
-        "y": 486,
-        "w": 23,
-        "h": 26
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 26
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 26
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_chest_open_fake_001.png": {
-      "frame": {
-        "x": 23,
-        "y": 0,
-        "w": 27,
-        "h": 25
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 27,
-        "h": 25
-      },
-      "sourceSize": {
-        "w": 27,
-        "h": 25
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_chest_open_fake_002.png": {
-      "frame": {
-        "x": 50,
-        "y": 0,
-        "w": 27,
-        "h": 25
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 27,
-        "h": 25
-      },
-      "sourceSize": {
-        "w": 27,
-        "h": 25
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_chest_open_fake_003.png": {
-      "frame": {
-        "x": 77,
-        "y": 0,
-        "w": 27,
-        "h": 25
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 27,
-        "h": 25
-      },
-      "sourceSize": {
-        "w": 27,
-        "h": 25
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_chest_open_fake_004.png": {
-      "frame": {
-        "x": 104,
-        "y": 0,
-        "w": 27,
-        "h": 25
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 27,
-        "h": 25
-      },
-      "sourceSize": {
-        "w": 27,
-        "h": 25
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_chest_open_fake_005.png": {
-      "frame": {
-        "x": 131,
-        "y": 0,
-        "w": 27,
-        "h": 25
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 27,
-        "h": 25
-      },
-      "sourceSize": {
-        "w": 27,
-        "h": 25
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_chest_open_fake_006.png": {
-      "frame": {
-        "x": 158,
+        "x": 69,
         "y": 0,
         "w": 27,
         "h": 25
@@ -458,32 +170,8 @@
     },
     "SpaceRogue/rogue_chest_open_fake_007.png": {
       "frame": {
-        "x": 185,
-        "y": 0,
-        "w": 27,
-        "h": 25
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 27,
-        "h": 25
-      },
-      "sourceSize": {
-        "w": 27,
-        "h": 25
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_chest_open_fake_008.png": {
-      "frame": {
-        "x": 212,
-        "y": 0,
+        "x": 69,
+        "y": 25,
         "w": 27,
         "h": 25
       },
@@ -506,8 +194,8 @@
     },
     "SpaceRogue/rogue_chest_open_fake_009.png": {
       "frame": {
-        "x": 239,
-        "y": 0,
+        "x": 69,
+        "y": 50,
         "w": 27,
         "h": 25
       },
@@ -528,34 +216,10 @@
         "y": 0.5
       }
     },
-    "SpaceRogue/rogue_chest_open_fake_010.png": {
+    "SpaceRogue/rogue_chest_open_fake_002.png": {
       "frame": {
-        "x": 266,
-        "y": 0,
-        "w": 27,
-        "h": 25
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 27,
-        "h": 25
-      },
-      "sourceSize": {
-        "w": 27,
-        "h": 25
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_chest_open_fake_011.png": {
-      "frame": {
-        "x": 293,
-        "y": 0,
+        "x": 69,
+        "y": 75,
         "w": 27,
         "h": 25
       },
@@ -578,7 +242,7 @@
     },
     "SpaceRogue/rogue_chest_open_fake_012.png": {
       "frame": {
-        "x": 320,
+        "x": 96,
         "y": 0,
         "w": 27,
         "h": 25
@@ -602,7 +266,175 @@
     },
     "SpaceRogue/rogue_chest_open_fake_013.png": {
       "frame": {
-        "x": 347,
+        "x": 96,
+        "y": 25,
+        "w": 27,
+        "h": 25
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 27,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 27,
+        "h": 25
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_chest_open_fake_008.png": {
+      "frame": {
+        "x": 96,
+        "y": 50,
+        "w": 27,
+        "h": 25
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 27,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 27,
+        "h": 25
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_chest_open_fake_001.png": {
+      "frame": {
+        "x": 96,
+        "y": 75,
+        "w": 27,
+        "h": 25
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 27,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 27,
+        "h": 25
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_chest_open_fake_006.png": {
+      "frame": {
+        "x": 0,
+        "y": 110,
+        "w": 27,
+        "h": 25
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 27,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 27,
+        "h": 25
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_chest_open_fake_005.png": {
+      "frame": {
+        "x": 27,
+        "y": 110,
+        "w": 27,
+        "h": 25
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 27,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 27,
+        "h": 25
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_chest_open_fake_004.png": {
+      "frame": {
+        "x": 54,
+        "y": 110,
+        "w": 27,
+        "h": 25
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 27,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 27,
+        "h": 25
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_chest_open_fake_003.png": {
+      "frame": {
+        "x": 81,
+        "y": 100,
+        "w": 27,
+        "h": 25
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 27,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 27,
+        "h": 25
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_chest_open_fake_010.png": {
+      "frame": {
+        "x": 123,
         "y": 0,
         "w": 27,
         "h": 25
@@ -624,936 +456,48 @@
         "y": 0.5
       }
     },
-    "SpaceRogue/rogue_chest_open_fake_014.png": {
+    "SpaceRogue/rogue_select_choose_006.png": {
       "frame": {
-        "x": 374,
-        "y": 0,
-        "w": 27,
-        "h": 25
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 27,
-        "h": 25
-      },
-      "sourceSize": {
-        "w": 27,
-        "h": 25
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_chest_open_fake_015.png": {
-      "frame": {
-        "x": 401,
-        "y": 0,
-        "w": 27,
-        "h": 25
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 27,
-        "h": 25
-      },
-      "sourceSize": {
-        "w": 27,
-        "h": 25
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_back_001.png": {
-      "frame": {
-        "x": 428,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_back_002.png": {
-      "frame": {
-        "x": 452,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_back_003.png": {
-      "frame": {
-        "x": 476,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/mr_shadow.png": {
-      "frame": {
-        "x": 500,
-        "y": 0,
-        "w": 12,
-        "h": 4
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 12,
-        "h": 4
-      },
-      "sourceSize": {
-        "w": 12,
-        "h": 4
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/paradox_hand_001.png": {
-      "frame": {
-        "x": 500,
-        "y": 4,
-        "w": 4,
-        "h": 4
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 4,
-        "h": 4
-      },
-      "sourceSize": {
-        "w": 4,
-        "h": 4
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_hand_001.png": {
-      "frame": {
-        "x": 504,
-        "y": 4,
-        "w": 4,
-        "h": 4
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 4,
-        "h": 4
-      },
-      "sourceSize": {
-        "w": 4,
-        "h": 4
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_back_004.png": {
-      "frame": {
-        "x": 428,
-        "y": 24,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_back_left_001.png": {
-      "frame": {
-        "x": 452,
-        "y": 24,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_back_left_002.png": {
-      "frame": {
-        "x": 476,
-        "y": 24,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_back_left_003.png": {
-      "frame": {
-        "x": 23,
+        "x": 123,
         "y": 25,
-        "w": 24,
-        "h": 24
+        "w": 23,
+        "h": 26
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 24,
-        "h": 24
+        "w": 23,
+        "h": 26
       },
       "sourceSize": {
-        "w": 24,
-        "h": 24
+        "w": 23,
+        "h": 26
       },
       "pivot": {
         "x": 0.5,
         "y": 0.5
       }
     },
-    "SpaceRogue/rogue_ghost_back_left_004.png": {
+    "SpaceRogue/rogue_select_choose_007.png": {
       "frame": {
-        "x": 47,
-        "y": 25,
-        "w": 24,
-        "h": 24
+        "x": 123,
+        "y": 51,
+        "w": 23,
+        "h": 26
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 24,
-        "h": 24
+        "w": 23,
+        "h": 26
       },
       "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_back_right_001.png": {
-      "frame": {
-        "x": 71,
-        "y": 25,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_back_right_002.png": {
-      "frame": {
-        "x": 95,
-        "y": 25,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_back_right_003.png": {
-      "frame": {
-        "x": 119,
-        "y": 25,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_back_right_004.png": {
-      "frame": {
-        "x": 143,
-        "y": 25,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_front_001.png": {
-      "frame": {
-        "x": 167,
-        "y": 25,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_front_002.png": {
-      "frame": {
-        "x": 191,
-        "y": 25,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_front_003.png": {
-      "frame": {
-        "x": 215,
-        "y": 25,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_front_004.png": {
-      "frame": {
-        "x": 239,
-        "y": 25,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_front_left_001.png": {
-      "frame": {
-        "x": 263,
-        "y": 25,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_front_left_002.png": {
-      "frame": {
-        "x": 287,
-        "y": 25,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_front_left_003.png": {
-      "frame": {
-        "x": 311,
-        "y": 25,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_front_left_004.png": {
-      "frame": {
-        "x": 335,
-        "y": 25,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_front_right_001.png": {
-      "frame": {
-        "x": 359,
-        "y": 25,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_front_right_002.png": {
-      "frame": {
-        "x": 383,
-        "y": 25,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_spaceflail_001.png": {
-      "frame": {
-        "x": 407,
-        "y": 25,
-        "w": 21,
-        "h": 22
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 21,
-        "h": 22
-      },
-      "sourceSize": {
-        "w": 21,
-        "h": 22
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_spaceflail_002.png": {
-      "frame": {
-        "x": 407,
-        "y": 47,
-        "w": 21,
-        "h": 22
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 21,
-        "h": 22
-      },
-      "sourceSize": {
-        "w": 21,
-        "h": 22
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_front_right_003.png": {
-      "frame": {
-        "x": 428,
-        "y": 48,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_front_right_004.png": {
-      "frame": {
-        "x": 452,
-        "y": 48,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_sneeze_front_left_001.png": {
-      "frame": {
-        "x": 476,
-        "y": 48,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_sneeze_front_left_002.png": {
-      "frame": {
-        "x": 23,
-        "y": 49,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_sneeze_front_left_003.png": {
-      "frame": {
-        "x": 47,
-        "y": 49,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_sneeze_front_left_004.png": {
-      "frame": {
-        "x": 71,
-        "y": 49,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_sneeze_front_right_001.png": {
-      "frame": {
-        "x": 95,
-        "y": 49,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_sneeze_front_right_002.png": {
-      "frame": {
-        "x": 119,
-        "y": 49,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_sneeze_front_right_003.png": {
-      "frame": {
-        "x": 143,
-        "y": 49,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_ghost_sneeze_front_right_004.png": {
-      "frame": {
-        "x": 167,
-        "y": 49,
-        "w": 24,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 24,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 24,
-        "h": 24
+        "w": 23,
+        "h": 26
       },
       "pivot": {
         "x": 0.5,
@@ -1562,8 +506,8 @@
     },
     "SpaceRogue/rogue_select_choose_008.png": {
       "frame": {
-        "x": 191,
-        "y": 49,
+        "x": 123,
+        "y": 77,
         "w": 23,
         "h": 26
       },
@@ -1586,8 +530,8 @@
     },
     "SpaceRogue/rogue_select_choose_009.png": {
       "frame": {
-        "x": 23,
-        "y": 73,
+        "x": 108,
+        "y": 103,
         "w": 23,
         "h": 26
       },
@@ -1608,12 +552,60 @@
         "y": 0.5
       }
     },
-    "SpaceRogue/rogue_chest_open_001.png": {
+    "SpaceRogue/rogue_select_choose_001.png": {
+      "frame": {
+        "x": 0,
+        "y": 135,
+        "w": 23,
+        "h": 26
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 26
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 26
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_select_choose_002.png": {
+      "frame": {
+        "x": 23,
+        "y": 135,
+        "w": 23,
+        "h": 26
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 26
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 26
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_select_choose_003.png": {
       "frame": {
         "x": 46,
-        "y": 73,
+        "y": 135,
         "w": 23,
-        "h": 24
+        "h": 26
       },
       "rotated": false,
       "trimmed": false,
@@ -1621,23 +613,23 @@
         "x": 0,
         "y": 0,
         "w": 23,
-        "h": 24
+        "h": 26
       },
       "sourceSize": {
         "w": 23,
-        "h": 24
+        "h": 26
       },
       "pivot": {
         "x": 0.5,
         "y": 0.5
       }
     },
-    "SpaceRogue/rogue_chest_open_002.png": {
+    "SpaceRogue/rogue_select_choose_004.png": {
       "frame": {
         "x": 69,
-        "y": 73,
+        "y": 135,
         "w": 23,
-        "h": 24
+        "h": 26
       },
       "rotated": false,
       "trimmed": false,
@@ -1645,23 +637,23 @@
         "x": 0,
         "y": 0,
         "w": 23,
-        "h": 24
+        "h": 26
       },
       "sourceSize": {
         "w": 23,
-        "h": 24
+        "h": 26
       },
       "pivot": {
         "x": 0.5,
         "y": 0.5
       }
     },
-    "SpaceRogue/rogue_chest_open_003.png": {
+    "SpaceRogue/rogue_select_choose_005.png": {
       "frame": {
         "x": 92,
-        "y": 73,
+        "y": 129,
         "w": 23,
-        "h": 24
+        "h": 26
       },
       "rotated": false,
       "trimmed": false,
@@ -1669,261 +661,21 @@
         "x": 0,
         "y": 0,
         "w": 23,
-        "h": 24
+        "h": 26
       },
       "sourceSize": {
         "w": 23,
-        "h": 24
+        "h": 26
       },
       "pivot": {
         "x": 0.5,
         "y": 0.5
       }
     },
-    "SpaceRogue/rogue_chest_open_004.png": {
+    "SpaceRogue/rogue_pet_right_002.png": {
       "frame": {
         "x": 115,
-        "y": 73,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_chest_open_005.png": {
-      "frame": {
-        "x": 138,
-        "y": 73,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_chest_open_006.png": {
-      "frame": {
-        "x": 161,
-        "y": 73,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_chest_open_007.png": {
-      "frame": {
-        "x": 214,
-        "y": 49,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_chest_open_008.png": {
-      "frame": {
-        "x": 237,
-        "y": 49,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_chest_recover_001.png": {
-      "frame": {
-        "x": 260,
-        "y": 49,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_chest_recover_002.png": {
-      "frame": {
-        "x": 283,
-        "y": 49,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_chest_recover_003.png": {
-      "frame": {
-        "x": 306,
-        "y": 49,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_chest_recover_004.png": {
-      "frame": {
-        "x": 329,
-        "y": 49,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_chest_recover_005.png": {
-      "frame": {
-        "x": 352,
-        "y": 49,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_chest_recover_006.png": {
-      "frame": {
-        "x": 375,
-        "y": 49,
+        "y": 129,
         "w": 23,
         "h": 24
       },
@@ -1946,8 +698,8 @@
     },
     "SpaceRogue/rogue_chest_recover_007.png": {
       "frame": {
-        "x": 398,
-        "y": 69,
+        "x": 150,
+        "y": 0,
         "w": 23,
         "h": 24
       },
@@ -1970,8 +722,8 @@
     },
     "SpaceRogue/rogue_dadflip_001.png": {
       "frame": {
-        "x": 421,
-        "y": 72,
+        "x": 150,
+        "y": 24,
         "w": 23,
         "h": 24
       },
@@ -1994,8 +746,8 @@
     },
     "SpaceRogue/rogue_dadflip_002.png": {
       "frame": {
-        "x": 444,
-        "y": 93,
+        "x": 131,
+        "y": 103,
         "w": 23,
         "h": 24
       },
@@ -2010,30 +762,6 @@
       "sourceSize": {
         "w": 23,
         "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_shadow.png": {
-      "frame": {
-        "x": 444,
-        "y": 72,
-        "w": 16,
-        "h": 5
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 16,
-        "h": 5
-      },
-      "sourceSize": {
-        "w": 16,
-        "h": 5
       },
       "pivot": {
         "x": 0.5,
@@ -2042,8 +770,8 @@
     },
     "SpaceRogue/rogue_dadflip_003.png": {
       "frame": {
-        "x": 467,
-        "y": 72,
+        "x": 146,
+        "y": 48,
         "w": 23,
         "h": 24
       },
@@ -2058,54 +786,6 @@
       "sourceSize": {
         "w": 23,
         "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_spaceflail_003.png": {
-      "frame": {
-        "x": 490,
-        "y": 72,
-        "w": 21,
-        "h": 22
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 21,
-        "h": 22
-      },
-      "sourceSize": {
-        "w": 21,
-        "h": 22
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_spaceflail_004.png": {
-      "frame": {
-        "x": 490,
-        "y": 94,
-        "w": 21,
-        "h": 22
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 21,
-        "h": 22
-      },
-      "sourceSize": {
-        "w": 21,
-        "h": 22
       },
       "pivot": {
         "x": 0.5,
@@ -2114,8 +794,8 @@
     },
     "SpaceRogue/rogue_dadflip_004.png": {
       "frame": {
-        "x": 467,
-        "y": 96,
+        "x": 146,
+        "y": 72,
         "w": 23,
         "h": 24
       },
@@ -2130,30 +810,6 @@
       "sourceSize": {
         "w": 23,
         "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_spaceflail_005.png": {
-      "frame": {
-        "x": 490,
-        "y": 116,
-        "w": 21,
-        "h": 22
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 21,
-        "h": 22
-      },
-      "sourceSize": {
-        "w": 21,
-        "h": 22
       },
       "pivot": {
         "x": 0.5,
@@ -2162,8 +818,8 @@
     },
     "SpaceRogue/rogue_dadflip_005.png": {
       "frame": {
-        "x": 214,
-        "y": 73,
+        "x": 138,
+        "y": 127,
         "w": 23,
         "h": 24
       },
@@ -2186,8 +842,8 @@
     },
     "SpaceRogue/rogue_dadflip_north_001.png": {
       "frame": {
-        "x": 184,
-        "y": 75,
+        "x": 0,
+        "y": 161,
         "w": 23,
         "h": 24
       },
@@ -2210,8 +866,8 @@
     },
     "SpaceRogue/rogue_dadflip_north_002.png": {
       "frame": {
-        "x": 46,
-        "y": 97,
+        "x": 23,
+        "y": 161,
         "w": 23,
         "h": 24
       },
@@ -2234,8 +890,8 @@
     },
     "SpaceRogue/rogue_dadflip_north_003.png": {
       "frame": {
-        "x": 23,
-        "y": 117,
+        "x": 46,
+        "y": 161,
         "w": 23,
         "h": 24
       },
@@ -2259,7 +915,7 @@
     "SpaceRogue/rogue_dadflip_north_004.png": {
       "frame": {
         "x": 69,
-        "y": 97,
+        "y": 161,
         "w": 23,
         "h": 24
       },
@@ -2283,7 +939,7 @@
     "SpaceRogue/rogue_dadflip_north_005.png": {
       "frame": {
         "x": 92,
-        "y": 97,
+        "y": 155,
         "w": 23,
         "h": 24
       },
@@ -2307,7 +963,7 @@
     "SpaceRogue/rogue_dadflip_north_006.png": {
       "frame": {
         "x": 115,
-        "y": 97,
+        "y": 153,
         "w": 23,
         "h": 24
       },
@@ -2331,7 +987,7 @@
     "SpaceRogue/rogue_dadflip_south_001.png": {
       "frame": {
         "x": 138,
-        "y": 97,
+        "y": 151,
         "w": 23,
         "h": 24
       },
@@ -2354,8 +1010,8 @@
     },
     "SpaceRogue/rogue_dadflip_south_002.png": {
       "frame": {
-        "x": 161,
-        "y": 97,
+        "x": 173,
+        "y": 0,
         "w": 23,
         "h": 24
       },
@@ -2378,8 +1034,8 @@
     },
     "SpaceRogue/rogue_dadflip_south_003.png": {
       "frame": {
-        "x": 237,
-        "y": 73,
+        "x": 173,
+        "y": 24,
         "w": 23,
         "h": 24
       },
@@ -2402,8 +1058,8 @@
     },
     "SpaceRogue/rogue_dadflip_south_004.png": {
       "frame": {
-        "x": 260,
-        "y": 73,
+        "x": 169,
+        "y": 48,
         "w": 23,
         "h": 24
       },
@@ -2426,8 +1082,8 @@
     },
     "SpaceRogue/rogue_dadflip_south_005.png": {
       "frame": {
-        "x": 283,
-        "y": 73,
+        "x": 169,
+        "y": 72,
         "w": 23,
         "h": 24
       },
@@ -2450,8 +1106,8 @@
     },
     "SpaceRogue/rogue_dadflip_south_006.png": {
       "frame": {
-        "x": 306,
-        "y": 73,
+        "x": 154,
+        "y": 96,
         "w": 23,
         "h": 24
       },
@@ -2474,8 +1130,8 @@
     },
     "SpaceRogue/rogue_death_001.png": {
       "frame": {
-        "x": 329,
-        "y": 73,
+        "x": 161,
+        "y": 120,
         "w": 23,
         "h": 24
       },
@@ -2498,8 +1154,8 @@
     },
     "SpaceRogue/rogue_death_002.png": {
       "frame": {
-        "x": 352,
-        "y": 73,
+        "x": 161,
+        "y": 144,
         "w": 23,
         "h": 24
       },
@@ -2522,8 +1178,8 @@
     },
     "SpaceRogue/rogue_death_003.png": {
       "frame": {
-        "x": 375,
-        "y": 73,
+        "x": 0,
+        "y": 185,
         "w": 23,
         "h": 24
       },
@@ -2546,8 +1202,8 @@
     },
     "SpaceRogue/rogue_death_004.png": {
       "frame": {
-        "x": 398,
-        "y": 93,
+        "x": 23,
+        "y": 185,
         "w": 23,
         "h": 24
       },
@@ -2570,8 +1226,8 @@
     },
     "SpaceRogue/rogue_death_005.png": {
       "frame": {
-        "x": 421,
-        "y": 96,
+        "x": 46,
+        "y": 185,
         "w": 23,
         "h": 24
       },
@@ -2594,8 +1250,8 @@
     },
     "SpaceRogue/rogue_death_006.png": {
       "frame": {
-        "x": 444,
-        "y": 117,
+        "x": 69,
+        "y": 185,
         "w": 23,
         "h": 24
       },
@@ -2618,8 +1274,8 @@
     },
     "SpaceRogue/rogue_death_007.png": {
       "frame": {
-        "x": 467,
-        "y": 120,
+        "x": 92,
+        "y": 179,
         "w": 23,
         "h": 24
       },
@@ -2634,30 +1290,6 @@
       "sourceSize": {
         "w": 23,
         "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_spaceflail_006.png": {
-      "frame": {
-        "x": 490,
-        "y": 138,
-        "w": 21,
-        "h": 22
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 21,
-        "h": 22
-      },
-      "sourceSize": {
-        "w": 21,
-        "h": 22
       },
       "pivot": {
         "x": 0.5,
@@ -2666,8 +1298,8 @@
     },
     "SpaceRogue/rogue_death_008.png": {
       "frame": {
-        "x": 207,
-        "y": 97,
+        "x": 115,
+        "y": 177,
         "w": 23,
         "h": 24
       },
@@ -2690,8 +1322,8 @@
     },
     "SpaceRogue/rogue_death_009.png": {
       "frame": {
-        "x": 184,
-        "y": 99,
+        "x": 138,
+        "y": 175,
         "w": 23,
         "h": 24
       },
@@ -2714,8 +1346,8 @@
     },
     "SpaceRogue/rogue_dodge_back_001.png": {
       "frame": {
-        "x": 46,
-        "y": 121,
+        "x": 161,
+        "y": 168,
         "w": 23,
         "h": 24
       },
@@ -2738,8 +1370,8 @@
     },
     "SpaceRogue/rogue_dodge_back_002.png": {
       "frame": {
-        "x": 23,
-        "y": 144,
+        "x": 177,
+        "y": 96,
         "w": 23,
         "h": 24
       },
@@ -2762,8 +1394,8 @@
     },
     "SpaceRogue/rogue_dodge_back_003.png": {
       "frame": {
-        "x": 69,
-        "y": 121,
+        "x": 196,
+        "y": 0,
         "w": 23,
         "h": 24
       },
@@ -2786,8 +1418,8 @@
     },
     "SpaceRogue/rogue_dodge_back_004.png": {
       "frame": {
-        "x": 92,
-        "y": 121,
+        "x": 196,
+        "y": 24,
         "w": 23,
         "h": 24
       },
@@ -2810,8 +1442,8 @@
     },
     "SpaceRogue/rogue_dodge_back_005.png": {
       "frame": {
-        "x": 115,
-        "y": 121,
+        "x": 192,
+        "y": 48,
         "w": 23,
         "h": 24
       },
@@ -2834,8 +1466,8 @@
     },
     "SpaceRogue/rogue_dodge_back_006.png": {
       "frame": {
-        "x": 138,
-        "y": 121,
+        "x": 192,
+        "y": 72,
         "w": 23,
         "h": 24
       },
@@ -2858,8 +1490,8 @@
     },
     "SpaceRogue/rogue_dodge_back_007.png": {
       "frame": {
-        "x": 161,
-        "y": 121,
+        "x": 184,
+        "y": 120,
         "w": 23,
         "h": 24
       },
@@ -2882,8 +1514,8 @@
     },
     "SpaceRogue/rogue_dodge_back_008.png": {
       "frame": {
-        "x": 230,
-        "y": 97,
+        "x": 184,
+        "y": 144,
         "w": 23,
         "h": 24
       },
@@ -2906,8 +1538,8 @@
     },
     "SpaceRogue/rogue_dodge_back_009.png": {
       "frame": {
-        "x": 253,
-        "y": 97,
+        "x": 184,
+        "y": 168,
         "w": 23,
         "h": 24
       },
@@ -2930,8 +1562,8 @@
     },
     "SpaceRogue/rogue_dodge_front_001.png": {
       "frame": {
-        "x": 276,
-        "y": 97,
+        "x": 0,
+        "y": 209,
         "w": 23,
         "h": 24
       },
@@ -2954,8 +1586,8 @@
     },
     "SpaceRogue/rogue_dodge_front_002.png": {
       "frame": {
-        "x": 299,
-        "y": 97,
+        "x": 23,
+        "y": 209,
         "w": 23,
         "h": 24
       },
@@ -2978,8 +1610,8 @@
     },
     "SpaceRogue/rogue_dodge_front_003.png": {
       "frame": {
-        "x": 322,
-        "y": 97,
+        "x": 46,
+        "y": 209,
         "w": 23,
         "h": 24
       },
@@ -3002,8 +1634,8 @@
     },
     "SpaceRogue/rogue_dodge_front_004.png": {
       "frame": {
-        "x": 345,
-        "y": 97,
+        "x": 69,
+        "y": 209,
         "w": 23,
         "h": 24
       },
@@ -3026,8 +1658,8 @@
     },
     "SpaceRogue/rogue_dodge_front_005.png": {
       "frame": {
-        "x": 368,
-        "y": 97,
+        "x": 92,
+        "y": 203,
         "w": 23,
         "h": 24
       },
@@ -3050,8 +1682,8 @@
     },
     "SpaceRogue/rogue_dodge_front_006.png": {
       "frame": {
-        "x": 391,
-        "y": 117,
+        "x": 115,
+        "y": 201,
         "w": 23,
         "h": 24
       },
@@ -3074,8 +1706,8 @@
     },
     "SpaceRogue/rogue_dodge_front_007.png": {
       "frame": {
-        "x": 391,
-        "y": 141,
+        "x": 138,
+        "y": 199,
         "w": 23,
         "h": 24
       },
@@ -3098,8 +1730,8 @@
     },
     "SpaceRogue/rogue_dodge_front_008.png": {
       "frame": {
-        "x": 414,
-        "y": 120,
+        "x": 161,
+        "y": 192,
         "w": 23,
         "h": 24
       },
@@ -3122,8 +1754,8 @@
     },
     "SpaceRogue/rogue_dodge_front_009.png": {
       "frame": {
-        "x": 414,
-        "y": 144,
+        "x": 184,
+        "y": 192,
         "w": 23,
         "h": 24
       },
@@ -3146,8 +1778,8 @@
     },
     "SpaceRogue/rogue_dodge_left_000.png": {
       "frame": {
-        "x": 437,
-        "y": 141,
+        "x": 200,
+        "y": 96,
         "w": 23,
         "h": 24
       },
@@ -3170,8 +1802,8 @@
     },
     "SpaceRogue/rogue_dodge_left_001.png": {
       "frame": {
-        "x": 437,
-        "y": 165,
+        "x": 219,
+        "y": 0,
         "w": 23,
         "h": 24
       },
@@ -3194,8 +1826,8 @@
     },
     "SpaceRogue/rogue_dodge_left_001_02.png": {
       "frame": {
-        "x": 460,
-        "y": 144,
+        "x": 219,
+        "y": 24,
         "w": 23,
         "h": 24
       },
@@ -3218,8 +1850,8 @@
     },
     "SpaceRogue/rogue_dodge_left_002.png": {
       "frame": {
-        "x": 483,
-        "y": 160,
+        "x": 215,
+        "y": 48,
         "w": 23,
         "h": 24
       },
@@ -3242,8 +1874,8 @@
     },
     "SpaceRogue/rogue_dodge_left_002_02.png": {
       "frame": {
-        "x": 460,
-        "y": 168,
+        "x": 215,
+        "y": 72,
         "w": 23,
         "h": 24
       },
@@ -3266,8 +1898,8 @@
     },
     "SpaceRogue/rogue_dodge_left_003.png": {
       "frame": {
-        "x": 483,
-        "y": 184,
+        "x": 207,
+        "y": 120,
         "w": 23,
         "h": 24
       },
@@ -3291,7 +1923,7 @@
     "SpaceRogue/rogue_dodge_left_004.png": {
       "frame": {
         "x": 207,
-        "y": 121,
+        "y": 144,
         "w": 23,
         "h": 24
       },
@@ -3314,8 +1946,8 @@
     },
     "SpaceRogue/rogue_dodge_left_004_02.png": {
       "frame": {
-        "x": 184,
-        "y": 123,
+        "x": 207,
+        "y": 168,
         "w": 23,
         "h": 24
       },
@@ -3338,8 +1970,8 @@
     },
     "SpaceRogue/rogue_dodge_left_005.png": {
       "frame": {
-        "x": 46,
-        "y": 145,
+        "x": 207,
+        "y": 192,
         "w": 23,
         "h": 24
       },
@@ -3362,8 +1994,8 @@
     },
     "SpaceRogue/rogue_dodge_left_back_001.png": {
       "frame": {
-        "x": 23,
-        "y": 168,
+        "x": 0,
+        "y": 233,
         "w": 23,
         "h": 24
       },
@@ -3386,8 +2018,8 @@
     },
     "SpaceRogue/rogue_dodge_left_back_002.png": {
       "frame": {
-        "x": 69,
-        "y": 145,
+        "x": 23,
+        "y": 233,
         "w": 23,
         "h": 24
       },
@@ -3410,8 +2042,8 @@
     },
     "SpaceRogue/rogue_dodge_left_back_003.png": {
       "frame": {
-        "x": 92,
-        "y": 145,
+        "x": 46,
+        "y": 233,
         "w": 23,
         "h": 24
       },
@@ -3434,8 +2066,8 @@
     },
     "SpaceRogue/rogue_dodge_left_back_004.png": {
       "frame": {
-        "x": 115,
-        "y": 145,
+        "x": 69,
+        "y": 233,
         "w": 23,
         "h": 24
       },
@@ -3458,8 +2090,8 @@
     },
     "SpaceRogue/rogue_dodge_left_back_005.png": {
       "frame": {
-        "x": 138,
-        "y": 145,
+        "x": 92,
+        "y": 227,
         "w": 23,
         "h": 24
       },
@@ -3482,8 +2114,8 @@
     },
     "SpaceRogue/rogue_dodge_left_back_006.png": {
       "frame": {
-        "x": 161,
-        "y": 145,
+        "x": 115,
+        "y": 225,
         "w": 23,
         "h": 24
       },
@@ -3506,8 +2138,8 @@
     },
     "SpaceRogue/rogue_dodge_left_back_007.png": {
       "frame": {
-        "x": 230,
-        "y": 121,
+        "x": 138,
+        "y": 223,
         "w": 23,
         "h": 24
       },
@@ -3530,8 +2162,8 @@
     },
     "SpaceRogue/rogue_dodge_left_back_008.png": {
       "frame": {
-        "x": 253,
-        "y": 121,
+        "x": 161,
+        "y": 216,
         "w": 23,
         "h": 24
       },
@@ -3554,8 +2186,752 @@
     },
     "SpaceRogue/rogue_dodge_left_back_009.png": {
       "frame": {
-        "x": 276,
-        "y": 121,
+        "x": 184,
+        "y": 216,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_back_001.png": {
+      "frame": {
+        "x": 207,
+        "y": 216,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_back_002.png": {
+      "frame": {
+        "x": 223,
+        "y": 96,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_back_003.png": {
+      "frame": {
+        "x": 242,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_back_004.png": {
+      "frame": {
+        "x": 242,
+        "y": 24,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_back_left_001.png": {
+      "frame": {
+        "x": 238,
+        "y": 48,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_back_left_002.png": {
+      "frame": {
+        "x": 238,
+        "y": 72,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_back_left_003.png": {
+      "frame": {
+        "x": 231,
+        "y": 120,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_back_right_001.png": {
+      "frame": {
+        "x": 231,
+        "y": 144,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_back_right_002.png": {
+      "frame": {
+        "x": 231,
+        "y": 168,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_back_right_003.png": {
+      "frame": {
+        "x": 230,
+        "y": 192,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_front_001.png": {
+      "frame": {
+        "x": 231,
+        "y": 216,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_front_002.png": {
+      "frame": {
+        "x": 0,
+        "y": 257,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_front_003.png": {
+      "frame": {
+        "x": 24,
+        "y": 257,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_front_004.png": {
+      "frame": {
+        "x": 48,
+        "y": 257,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_front_left_001.png": {
+      "frame": {
+        "x": 72,
+        "y": 257,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_front_left_002.png": {
+      "frame": {
+        "x": 96,
+        "y": 251,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_front_left_003.png": {
+      "frame": {
+        "x": 120,
+        "y": 249,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_front_left_004.png": {
+      "frame": {
+        "x": 144,
+        "y": 247,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_front_right_001.png": {
+      "frame": {
+        "x": 168,
+        "y": 240,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_front_right_002.png": {
+      "frame": {
+        "x": 192,
+        "y": 240,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_front_right_003.png": {
+      "frame": {
+        "x": 216,
+        "y": 240,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_front_right_004.png": {
+      "frame": {
+        "x": 240,
+        "y": 240,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_sneeze_front_left_001.png": {
+      "frame": {
+        "x": 247,
+        "y": 96,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_sneeze_front_left_002.png": {
+      "frame": {
+        "x": 254,
+        "y": 192,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_sneeze_front_left_003.png": {
+      "frame": {
+        "x": 266,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_sneeze_front_left_004.png": {
+      "frame": {
+        "x": 255,
+        "y": 216,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_sneeze_front_right_001.png": {
+      "frame": {
+        "x": 266,
+        "y": 24,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_sneeze_front_right_002.png": {
+      "frame": {
+        "x": 264,
+        "y": 240,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_sneeze_front_right_003.png": {
+      "frame": {
+        "x": 262,
+        "y": 48,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_sneeze_front_right_004.png": {
+      "frame": {
+        "x": 262,
+        "y": 72,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_weaponget_005.png": {
+      "frame": {
+        "x": 255,
+        "y": 120,
         "w": 23,
         "h": 24
       },
@@ -3578,8 +2954,8 @@
     },
     "SpaceRogue/rogue_idle_001.png": {
       "frame": {
-        "x": 299,
-        "y": 121,
+        "x": 255,
+        "y": 144,
         "w": 23,
         "h": 24
       },
@@ -3602,8 +2978,8 @@
     },
     "SpaceRogue/rogue_idle_002.png": {
       "frame": {
-        "x": 322,
-        "y": 121,
+        "x": 255,
+        "y": 168,
         "w": 23,
         "h": 24
       },
@@ -3626,8 +3002,8 @@
     },
     "SpaceRogue/rogue_idle_003.png": {
       "frame": {
-        "x": 345,
-        "y": 121,
+        "x": 0,
+        "y": 281,
         "w": 23,
         "h": 24
       },
@@ -3650,8 +3026,8 @@
     },
     "SpaceRogue/rogue_idle_004.png": {
       "frame": {
-        "x": 368,
-        "y": 121,
+        "x": 23,
+        "y": 281,
         "w": 23,
         "h": 24
       },
@@ -3674,8 +3050,8 @@
     },
     "SpaceRogue/rogue_idle_back_001.png": {
       "frame": {
-        "x": 207,
-        "y": 145,
+        "x": 46,
+        "y": 281,
         "w": 23,
         "h": 24
       },
@@ -3698,8 +3074,8 @@
     },
     "SpaceRogue/rogue_idle_back_002.png": {
       "frame": {
-        "x": 184,
-        "y": 147,
+        "x": 69,
+        "y": 281,
         "w": 23,
         "h": 24
       },
@@ -3722,8 +3098,8 @@
     },
     "SpaceRogue/rogue_idle_back_003.png": {
       "frame": {
-        "x": 46,
-        "y": 169,
+        "x": 92,
+        "y": 281,
         "w": 23,
         "h": 24
       },
@@ -3746,8 +3122,8 @@
     },
     "SpaceRogue/rogue_idle_back_004.png": {
       "frame": {
-        "x": 23,
-        "y": 192,
+        "x": 115,
+        "y": 275,
         "w": 23,
         "h": 24
       },
@@ -3770,8 +3146,8 @@
     },
     "SpaceRogue/rogue_idle_back_005.png": {
       "frame": {
-        "x": 69,
-        "y": 169,
+        "x": 138,
+        "y": 273,
         "w": 23,
         "h": 24
       },
@@ -3794,8 +3170,8 @@
     },
     "SpaceRogue/rogue_idle_back_006.png": {
       "frame": {
-        "x": 92,
-        "y": 169,
+        "x": 161,
+        "y": 271,
         "w": 23,
         "h": 24
       },
@@ -3818,8 +3194,8 @@
     },
     "SpaceRogue/rogue_idle_back_hand_left_001.png": {
       "frame": {
-        "x": 115,
-        "y": 169,
+        "x": 184,
+        "y": 264,
         "w": 23,
         "h": 24
       },
@@ -3842,8 +3218,8 @@
     },
     "SpaceRogue/rogue_idle_back_hand_left_002.png": {
       "frame": {
-        "x": 138,
-        "y": 169,
+        "x": 207,
+        "y": 264,
         "w": 23,
         "h": 24
       },
@@ -3866,8 +3242,8 @@
     },
     "SpaceRogue/rogue_idle_back_hand_left_003.png": {
       "frame": {
-        "x": 161,
-        "y": 169,
+        "x": 230,
+        "y": 264,
         "w": 23,
         "h": 24
       },
@@ -3890,8 +3266,8 @@
     },
     "SpaceRogue/rogue_idle_back_hand_left_004.png": {
       "frame": {
-        "x": 230,
-        "y": 145,
+        "x": 253,
+        "y": 264,
         "w": 23,
         "h": 24
       },
@@ -3914,8 +3290,8 @@
     },
     "SpaceRogue/rogue_idle_back_hand_left_005.png": {
       "frame": {
-        "x": 253,
-        "y": 145,
+        "x": 271,
+        "y": 96,
         "w": 23,
         "h": 24
       },
@@ -3938,200 +3314,8 @@
     },
     "SpaceRogue/rogue_idle_back_hand_left_006.png": {
       "frame": {
-        "x": 276,
-        "y": 145,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
+        "x": 290,
         "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_idle_back_hand_right_001.png": {
-      "frame": {
-        "x": 299,
-        "y": 145,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_idle_back_hand_right_002.png": {
-      "frame": {
-        "x": 322,
-        "y": 145,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_idle_back_hand_right_003.png": {
-      "frame": {
-        "x": 345,
-        "y": 145,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_idle_back_hand_right_004.png": {
-      "frame": {
-        "x": 368,
-        "y": 145,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_idle_back_hand_right_005.png": {
-      "frame": {
-        "x": 391,
-        "y": 165,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_idle_back_hand_right_006.png": {
-      "frame": {
-        "x": 414,
-        "y": 168,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_idle_back_hands_001.png": {
-      "frame": {
-        "x": 437,
-        "y": 189,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_idle_back_hands_002.png": {
-      "frame": {
-        "x": 460,
-        "y": 192,
         "w": 23,
         "h": 24
       },
@@ -4154,8 +3338,8 @@
     },
     "SpaceRogue/rogue_idle_back_hands_003.png": {
       "frame": {
-        "x": 483,
-        "y": 208,
+        "x": 290,
+        "y": 24,
         "w": 23,
         "h": 24
       },
@@ -4178,8 +3362,8 @@
     },
     "SpaceRogue/rogue_idle_back_hands_004.png": {
       "frame": {
-        "x": 207,
-        "y": 169,
+        "x": 288,
+        "y": 120,
         "w": 23,
         "h": 24
       },
@@ -4202,8 +3386,8 @@
     },
     "SpaceRogue/rogue_idle_back_hands_005.png": {
       "frame": {
-        "x": 184,
-        "y": 171,
+        "x": 288,
+        "y": 144,
         "w": 23,
         "h": 24
       },
@@ -4226,8 +3410,8 @@
     },
     "SpaceRogue/rogue_idle_back_hands_006.png": {
       "frame": {
-        "x": 46,
-        "y": 193,
+        "x": 288,
+        "y": 168,
         "w": 23,
         "h": 24
       },
@@ -4250,8 +3434,8 @@
     },
     "SpaceRogue/rogue_idle_backwards_001.png": {
       "frame": {
-        "x": 23,
-        "y": 216,
+        "x": 278,
+        "y": 192,
         "w": 23,
         "h": 24
       },
@@ -4274,8 +3458,8 @@
     },
     "SpaceRogue/rogue_idle_backwards_002.png": {
       "frame": {
-        "x": 69,
-        "y": 193,
+        "x": 279,
+        "y": 216,
         "w": 23,
         "h": 24
       },
@@ -4298,8 +3482,8 @@
     },
     "SpaceRogue/rogue_idle_backwards_003.png": {
       "frame": {
-        "x": 92,
-        "y": 193,
+        "x": 288,
+        "y": 240,
         "w": 23,
         "h": 24
       },
@@ -4322,8 +3506,8 @@
     },
     "SpaceRogue/rogue_idle_backwards_004.png": {
       "frame": {
-        "x": 115,
-        "y": 193,
+        "x": 286,
+        "y": 48,
         "w": 23,
         "h": 24
       },
@@ -4346,8 +3530,8 @@
     },
     "SpaceRogue/rogue_idle_backwards_hands2_001.png": {
       "frame": {
-        "x": 138,
-        "y": 193,
+        "x": 286,
+        "y": 72,
         "w": 23,
         "h": 24
       },
@@ -4370,8 +3554,8 @@
     },
     "SpaceRogue/rogue_idle_backwards_hands2_002.png": {
       "frame": {
-        "x": 161,
-        "y": 193,
+        "x": 276,
+        "y": 264,
         "w": 23,
         "h": 24
       },
@@ -4394,8 +3578,8 @@
     },
     "SpaceRogue/rogue_idle_backwards_hands2_003.png": {
       "frame": {
-        "x": 230,
-        "y": 169,
+        "x": 0,
+        "y": 305,
         "w": 23,
         "h": 24
       },
@@ -4418,8 +3602,8 @@
     },
     "SpaceRogue/rogue_idle_backwards_hands2_004.png": {
       "frame": {
-        "x": 253,
-        "y": 169,
+        "x": 23,
+        "y": 305,
         "w": 23,
         "h": 24
       },
@@ -4442,8 +3626,8 @@
     },
     "SpaceRogue/rogue_idle_front_001.png": {
       "frame": {
-        "x": 276,
-        "y": 169,
+        "x": 46,
+        "y": 305,
         "w": 23,
         "h": 24
       },
@@ -4466,8 +3650,8 @@
     },
     "SpaceRogue/rogue_idle_front_002.png": {
       "frame": {
-        "x": 299,
-        "y": 169,
+        "x": 69,
+        "y": 305,
         "w": 23,
         "h": 24
       },
@@ -4490,8 +3674,8 @@
     },
     "SpaceRogue/rogue_idle_front_003.png": {
       "frame": {
-        "x": 322,
-        "y": 169,
+        "x": 92,
+        "y": 305,
         "w": 23,
         "h": 24
       },
@@ -4514,32 +3698,8 @@
     },
     "SpaceRogue/rogue_idle_front_004.png": {
       "frame": {
-        "x": 345,
-        "y": 169,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_idle_front_005.png": {
-      "frame": {
-        "x": 368,
-        "y": 169,
+        "x": 115,
+        "y": 299,
         "w": 23,
         "h": 24
       },
@@ -4562,8 +3722,8 @@
     },
     "SpaceRogue/rogue_idle_front_006.png": {
       "frame": {
-        "x": 391,
-        "y": 189,
+        "x": 138,
+        "y": 297,
         "w": 23,
         "h": 24
       },
@@ -4586,8 +3746,8 @@
     },
     "SpaceRogue/rogue_idle_front_hand_left_001.png": {
       "frame": {
-        "x": 414,
-        "y": 192,
+        "x": 161,
+        "y": 295,
         "w": 23,
         "h": 24
       },
@@ -4610,8 +3770,8 @@
     },
     "SpaceRogue/rogue_idle_front_hand_left_002.png": {
       "frame": {
-        "x": 437,
-        "y": 213,
+        "x": 184,
+        "y": 288,
         "w": 23,
         "h": 24
       },
@@ -4634,8 +3794,8 @@
     },
     "SpaceRogue/rogue_idle_front_hand_left_003.png": {
       "frame": {
-        "x": 460,
-        "y": 216,
+        "x": 207,
+        "y": 288,
         "w": 23,
         "h": 24
       },
@@ -4658,32 +3818,8 @@
     },
     "SpaceRogue/rogue_idle_front_hand_left_004.png": {
       "frame": {
-        "x": 483,
-        "y": 232,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_idle_front_hand_left_005.png": {
-      "frame": {
-        "x": 207,
-        "y": 193,
+        "x": 230,
+        "y": 288,
         "w": 23,
         "h": 24
       },
@@ -4706,8 +3842,8 @@
     },
     "SpaceRogue/rogue_idle_front_hand_left_006.png": {
       "frame": {
-        "x": 184,
-        "y": 195,
+        "x": 253,
+        "y": 288,
         "w": 23,
         "h": 24
       },
@@ -4730,8 +3866,8 @@
     },
     "SpaceRogue/rogue_idle_front_hand_right_001.png": {
       "frame": {
-        "x": 46,
-        "y": 217,
+        "x": 276,
+        "y": 288,
         "w": 23,
         "h": 24
       },
@@ -4754,8 +3890,8 @@
     },
     "SpaceRogue/rogue_idle_front_hand_right_002.png": {
       "frame": {
-        "x": 23,
-        "y": 240,
+        "x": 301,
+        "y": 192,
         "w": 23,
         "h": 24
       },
@@ -4778,8 +3914,8 @@
     },
     "SpaceRogue/rogue_idle_front_hand_right_003.png": {
       "frame": {
-        "x": 69,
-        "y": 217,
+        "x": 294,
+        "y": 96,
         "w": 23,
         "h": 24
       },
@@ -4802,32 +3938,8 @@
     },
     "SpaceRogue/rogue_idle_front_hand_right_004.png": {
       "frame": {
-        "x": 92,
-        "y": 217,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_idle_front_hand_right_005.png": {
-      "frame": {
-        "x": 115,
-        "y": 217,
+        "x": 302,
+        "y": 216,
         "w": 23,
         "h": 24
       },
@@ -4850,8 +3962,8 @@
     },
     "SpaceRogue/rogue_idle_front_hand_right_006.png": {
       "frame": {
-        "x": 138,
-        "y": 217,
+        "x": 313,
+        "y": 0,
         "w": 23,
         "h": 24
       },
@@ -4874,8 +3986,8 @@
     },
     "SpaceRogue/rogue_idle_front_hands_001.png": {
       "frame": {
-        "x": 161,
-        "y": 217,
+        "x": 313,
+        "y": 24,
         "w": 23,
         "h": 24
       },
@@ -4898,8 +4010,8 @@
     },
     "SpaceRogue/rogue_idle_front_hands_002.png": {
       "frame": {
-        "x": 230,
-        "y": 193,
+        "x": 311,
+        "y": 120,
         "w": 23,
         "h": 24
       },
@@ -4922,8 +4034,8 @@
     },
     "SpaceRogue/rogue_idle_front_hands_003.png": {
       "frame": {
-        "x": 253,
-        "y": 193,
+        "x": 311,
+        "y": 240,
         "w": 23,
         "h": 24
       },
@@ -4946,32 +4058,8 @@
     },
     "SpaceRogue/rogue_idle_front_hands_004.png": {
       "frame": {
-        "x": 276,
-        "y": 193,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_idle_front_hands_005.png": {
-      "frame": {
-        "x": 299,
-        "y": 193,
+        "x": 311,
+        "y": 144,
         "w": 23,
         "h": 24
       },
@@ -4994,8 +4082,8 @@
     },
     "SpaceRogue/rogue_idle_front_hands_006.png": {
       "frame": {
-        "x": 322,
-        "y": 193,
+        "x": 311,
+        "y": 168,
         "w": 23,
         "h": 24
       },
@@ -5018,8 +4106,8 @@
     },
     "SpaceRogue/rogue_idle_hands2_001.png": {
       "frame": {
-        "x": 345,
-        "y": 193,
+        "x": 309,
+        "y": 48,
         "w": 23,
         "h": 24
       },
@@ -5042,8 +4130,8 @@
     },
     "SpaceRogue/rogue_idle_hands2_002.png": {
       "frame": {
-        "x": 368,
-        "y": 193,
+        "x": 309,
+        "y": 72,
         "w": 23,
         "h": 24
       },
@@ -5066,8 +4154,8 @@
     },
     "SpaceRogue/rogue_idle_hands2_003.png": {
       "frame": {
-        "x": 391,
-        "y": 213,
+        "x": 299,
+        "y": 264,
         "w": 23,
         "h": 24
       },
@@ -5090,8 +4178,8 @@
     },
     "SpaceRogue/rogue_idle_hands2_004.png": {
       "frame": {
-        "x": 414,
-        "y": 216,
+        "x": 299,
+        "y": 288,
         "w": 23,
         "h": 24
       },
@@ -5114,8 +4202,8 @@
     },
     "SpaceRogue/rogue_idle_hands_001.png": {
       "frame": {
-        "x": 437,
-        "y": 237,
+        "x": 0,
+        "y": 329,
         "w": 23,
         "h": 24
       },
@@ -5138,8 +4226,8 @@
     },
     "SpaceRogue/rogue_idle_hands_002.png": {
       "frame": {
-        "x": 460,
-        "y": 240,
+        "x": 23,
+        "y": 329,
         "w": 23,
         "h": 24
       },
@@ -5162,8 +4250,8 @@
     },
     "SpaceRogue/rogue_idle_hands_003.png": {
       "frame": {
-        "x": 483,
-        "y": 256,
+        "x": 46,
+        "y": 329,
         "w": 23,
         "h": 24
       },
@@ -5186,8 +4274,8 @@
     },
     "SpaceRogue/rogue_idle_hands_004.png": {
       "frame": {
-        "x": 207,
-        "y": 217,
+        "x": 69,
+        "y": 329,
         "w": 23,
         "h": 24
       },
@@ -5210,8 +4298,8 @@
     },
     "SpaceRogue/rogue_jetpack_back_001.png": {
       "frame": {
-        "x": 184,
-        "y": 219,
+        "x": 92,
+        "y": 329,
         "w": 23,
         "h": 24
       },
@@ -5234,8 +4322,8 @@
     },
     "SpaceRogue/rogue_jetpack_back_002.png": {
       "frame": {
-        "x": 46,
-        "y": 241,
+        "x": 115,
+        "y": 323,
         "w": 23,
         "h": 24
       },
@@ -5258,8 +4346,8 @@
     },
     "SpaceRogue/rogue_jetpack_back_right_001.png": {
       "frame": {
-        "x": 23,
-        "y": 264,
+        "x": 138,
+        "y": 321,
         "w": 23,
         "h": 24
       },
@@ -5282,8 +4370,8 @@
     },
     "SpaceRogue/rogue_jetpack_back_right_002.png": {
       "frame": {
-        "x": 69,
-        "y": 241,
+        "x": 161,
+        "y": 319,
         "w": 23,
         "h": 24
       },
@@ -5306,8 +4394,8 @@
     },
     "SpaceRogue/rogue_jetpack_front_001.png": {
       "frame": {
-        "x": 92,
-        "y": 241,
+        "x": 184,
+        "y": 312,
         "w": 23,
         "h": 24
       },
@@ -5330,8 +4418,8 @@
     },
     "SpaceRogue/rogue_jetpack_front_002.png": {
       "frame": {
-        "x": 115,
-        "y": 241,
+        "x": 207,
+        "y": 312,
         "w": 23,
         "h": 24
       },
@@ -5354,8 +4442,8 @@
     },
     "SpaceRogue/rogue_jetpack_front_hand_001.png": {
       "frame": {
-        "x": 138,
-        "y": 241,
+        "x": 230,
+        "y": 312,
         "w": 23,
         "h": 24
       },
@@ -5378,8 +4466,8 @@
     },
     "SpaceRogue/rogue_jetpack_front_hand_002.png": {
       "frame": {
-        "x": 161,
-        "y": 241,
+        "x": 253,
+        "y": 312,
         "w": 23,
         "h": 24
       },
@@ -5402,8 +4490,8 @@
     },
     "SpaceRogue/rogue_jetpack_front_right_001.png": {
       "frame": {
-        "x": 230,
-        "y": 217,
+        "x": 276,
+        "y": 312,
         "w": 23,
         "h": 24
       },
@@ -5426,8 +4514,8 @@
     },
     "SpaceRogue/rogue_jetpack_front_right_002.png": {
       "frame": {
-        "x": 253,
-        "y": 217,
+        "x": 299,
+        "y": 312,
         "w": 23,
         "h": 24
       },
@@ -5450,8 +4538,8 @@
     },
     "SpaceRogue/rogue_jetpack_front_right_hand_001.png": {
       "frame": {
-        "x": 276,
-        "y": 217,
+        "x": 324,
+        "y": 192,
         "w": 23,
         "h": 24
       },
@@ -5474,8 +4562,8 @@
     },
     "SpaceRogue/rogue_jetpack_front_right_hand_002.png": {
       "frame": {
-        "x": 299,
-        "y": 217,
+        "x": 317,
+        "y": 96,
         "w": 23,
         "h": 24
       },
@@ -5498,8 +4586,8 @@
     },
     "SpaceRogue/rogue_pet_right_001.png": {
       "frame": {
-        "x": 322,
-        "y": 217,
+        "x": 325,
+        "y": 216,
         "w": 23,
         "h": 24
       },
@@ -5520,10 +4608,10 @@
         "y": 0.5
       }
     },
-    "SpaceRogue/rogue_pet_right_002.png": {
+    "SpaceRogue/rogue_weaponget_004.png": {
       "frame": {
-        "x": 345,
-        "y": 217,
+        "x": 336,
+        "y": 0,
         "w": 23,
         "h": 24
       },
@@ -5546,8 +4634,8 @@
     },
     "SpaceRogue/rogue_pit_return_001.png": {
       "frame": {
-        "x": 368,
-        "y": 217,
+        "x": 336,
+        "y": 24,
         "w": 23,
         "h": 24
       },
@@ -5570,8 +4658,8 @@
     },
     "SpaceRogue/rogue_pit_return_002.png": {
       "frame": {
-        "x": 391,
-        "y": 237,
+        "x": 334,
+        "y": 120,
         "w": 23,
         "h": 24
       },
@@ -5594,7 +4682,7 @@
     },
     "SpaceRogue/rogue_pit_return_003.png": {
       "frame": {
-        "x": 414,
+        "x": 334,
         "y": 240,
         "w": 23,
         "h": 24
@@ -5618,8 +4706,8 @@
     },
     "SpaceRogue/rogue_pit_return_004.png": {
       "frame": {
-        "x": 437,
-        "y": 261,
+        "x": 334,
+        "y": 144,
         "w": 23,
         "h": 24
       },
@@ -5642,8 +4730,8 @@
     },
     "SpaceRogue/rogue_pit_return_005.png": {
       "frame": {
-        "x": 460,
-        "y": 264,
+        "x": 334,
+        "y": 168,
         "w": 23,
         "h": 24
       },
@@ -5666,8 +4754,8 @@
     },
     "SpaceRogue/rogue_pit_return_006.png": {
       "frame": {
-        "x": 483,
-        "y": 280,
+        "x": 332,
+        "y": 48,
         "w": 23,
         "h": 24
       },
@@ -5690,8 +4778,8 @@
     },
     "SpaceRogue/rogue_pitfall_001.png": {
       "frame": {
-        "x": 207,
-        "y": 241,
+        "x": 332,
+        "y": 72,
         "w": 23,
         "h": 24
       },
@@ -5714,8 +4802,8 @@
     },
     "SpaceRogue/rogue_pitfall_002.png": {
       "frame": {
-        "x": 184,
-        "y": 243,
+        "x": 322,
+        "y": 264,
         "w": 23,
         "h": 24
       },
@@ -5738,8 +4826,8 @@
     },
     "SpaceRogue/rogue_pitfall_003.png": {
       "frame": {
-        "x": 46,
-        "y": 265,
+        "x": 322,
+        "y": 288,
         "w": 23,
         "h": 24
       },
@@ -5762,8 +4850,8 @@
     },
     "SpaceRogue/rogue_pitfall_004.png": {
       "frame": {
-        "x": 23,
-        "y": 288,
+        "x": 322,
+        "y": 312,
         "w": 23,
         "h": 24
       },
@@ -5786,8 +4874,8 @@
     },
     "SpaceRogue/rogue_pitfall_005.png": {
       "frame": {
-        "x": 69,
-        "y": 265,
+        "x": 0,
+        "y": 353,
         "w": 23,
         "h": 24
       },
@@ -5810,8 +4898,8 @@
     },
     "SpaceRogue/rogue_pitfall_006.png": {
       "frame": {
-        "x": 92,
-        "y": 265,
+        "x": 23,
+        "y": 353,
         "w": 23,
         "h": 24
       },
@@ -5834,8 +4922,8 @@
     },
     "SpaceRogue/rogue_pitfall_down_001.png": {
       "frame": {
-        "x": 115,
-        "y": 265,
+        "x": 46,
+        "y": 353,
         "w": 23,
         "h": 24
       },
@@ -5858,8 +4946,8 @@
     },
     "SpaceRogue/rogue_pitfall_down_002.png": {
       "frame": {
-        "x": 138,
-        "y": 265,
+        "x": 69,
+        "y": 353,
         "w": 23,
         "h": 24
       },
@@ -5882,8 +4970,8 @@
     },
     "SpaceRogue/rogue_pitfall_down_003.png": {
       "frame": {
-        "x": 161,
-        "y": 265,
+        "x": 92,
+        "y": 353,
         "w": 23,
         "h": 24
       },
@@ -5906,8 +4994,8 @@
     },
     "SpaceRogue/rogue_pitfall_down_004.png": {
       "frame": {
-        "x": 230,
-        "y": 241,
+        "x": 115,
+        "y": 347,
         "w": 23,
         "h": 24
       },
@@ -5930,8 +5018,8 @@
     },
     "SpaceRogue/rogue_pitfall_down_005.png": {
       "frame": {
-        "x": 253,
-        "y": 241,
+        "x": 138,
+        "y": 345,
         "w": 23,
         "h": 24
       },
@@ -5954,8 +5042,8 @@
     },
     "SpaceRogue/rogue_pitfall_down_006.png": {
       "frame": {
-        "x": 276,
-        "y": 241,
+        "x": 161,
+        "y": 343,
         "w": 23,
         "h": 24
       },
@@ -5978,8 +5066,8 @@
     },
     "SpaceRogue/rogue_run_back_001.png": {
       "frame": {
-        "x": 299,
-        "y": 241,
+        "x": 184,
+        "y": 336,
         "w": 23,
         "h": 24
       },
@@ -6002,8 +5090,8 @@
     },
     "SpaceRogue/rogue_run_back_002.png": {
       "frame": {
-        "x": 322,
-        "y": 241,
+        "x": 207,
+        "y": 336,
         "w": 23,
         "h": 24
       },
@@ -6026,8 +5114,8 @@
     },
     "SpaceRogue/rogue_run_back_003.png": {
       "frame": {
-        "x": 345,
-        "y": 241,
+        "x": 230,
+        "y": 336,
         "w": 23,
         "h": 24
       },
@@ -6050,8 +5138,8 @@
     },
     "SpaceRogue/rogue_run_back_004.png": {
       "frame": {
-        "x": 368,
-        "y": 241,
+        "x": 253,
+        "y": 336,
         "w": 23,
         "h": 24
       },
@@ -6074,8 +5162,8 @@
     },
     "SpaceRogue/rogue_run_back_005.png": {
       "frame": {
-        "x": 391,
-        "y": 261,
+        "x": 276,
+        "y": 336,
         "w": 23,
         "h": 24
       },
@@ -6098,32 +5186,8 @@
     },
     "SpaceRogue/rogue_run_back_006.png": {
       "frame": {
-        "x": 414,
-        "y": 264,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_run_back_doorway_001.png": {
-      "frame": {
-        "x": 437,
-        "y": 285,
+        "x": 299,
+        "y": 336,
         "w": 23,
         "h": 24
       },
@@ -6146,8 +5210,8 @@
     },
     "SpaceRogue/rogue_run_back_doorway_002.png": {
       "frame": {
-        "x": 460,
-        "y": 288,
+        "x": 322,
+        "y": 336,
         "w": 23,
         "h": 24
       },
@@ -6170,8 +5234,8 @@
     },
     "SpaceRogue/rogue_run_back_doorway_003.png": {
       "frame": {
-        "x": 483,
-        "y": 304,
+        "x": 347,
+        "y": 192,
         "w": 23,
         "h": 24
       },
@@ -6194,8 +5258,8 @@
     },
     "SpaceRogue/rogue_run_back_doorway_004.png": {
       "frame": {
-        "x": 23,
-        "y": 328,
+        "x": 340,
+        "y": 96,
         "w": 23,
         "h": 24
       },
@@ -6218,8 +5282,8 @@
     },
     "SpaceRogue/rogue_run_back_doorway_005.png": {
       "frame": {
-        "x": 23,
-        "y": 352,
+        "x": 348,
+        "y": 216,
         "w": 23,
         "h": 24
       },
@@ -6242,8 +5306,8 @@
     },
     "SpaceRogue/rogue_run_back_doorway_006.png": {
       "frame": {
-        "x": 23,
-        "y": 376,
+        "x": 359,
+        "y": 0,
         "w": 23,
         "h": 24
       },
@@ -6266,8 +5330,8 @@
     },
     "SpaceRogue/rogue_run_back_doorway_007.png": {
       "frame": {
-        "x": 23,
-        "y": 400,
+        "x": 359,
+        "y": 24,
         "w": 23,
         "h": 24
       },
@@ -6290,8 +5354,8 @@
     },
     "SpaceRogue/rogue_run_back_doorway_008.png": {
       "frame": {
-        "x": 23,
-        "y": 424,
+        "x": 357,
+        "y": 120,
         "w": 23,
         "h": 24
       },
@@ -6314,8 +5378,8 @@
     },
     "SpaceRogue/rogue_run_back_doorway_009.png": {
       "frame": {
-        "x": 23,
-        "y": 448,
+        "x": 357,
+        "y": 240,
         "w": 23,
         "h": 24
       },
@@ -6338,8 +5402,8 @@
     },
     "SpaceRogue/rogue_run_back_doorway_010.png": {
       "frame": {
-        "x": 23,
-        "y": 472,
+        "x": 357,
+        "y": 144,
         "w": 23,
         "h": 24
       },
@@ -6362,8 +5426,8 @@
     },
     "SpaceRogue/rogue_run_back_hands2_001.png": {
       "frame": {
-        "x": 46,
-        "y": 328,
+        "x": 357,
+        "y": 168,
         "w": 23,
         "h": 24
       },
@@ -6386,8 +5450,8 @@
     },
     "SpaceRogue/rogue_run_back_hands2_002.png": {
       "frame": {
-        "x": 46,
-        "y": 289,
+        "x": 355,
+        "y": 48,
         "w": 23,
         "h": 24
       },
@@ -6410,8 +5474,8 @@
     },
     "SpaceRogue/rogue_run_back_hands2_003.png": {
       "frame": {
-        "x": 46,
-        "y": 352,
+        "x": 355,
+        "y": 72,
         "w": 23,
         "h": 24
       },
@@ -6434,8 +5498,8 @@
     },
     "SpaceRogue/rogue_run_back_hands2_004.png": {
       "frame": {
-        "x": 46,
-        "y": 376,
+        "x": 345,
+        "y": 264,
         "w": 23,
         "h": 24
       },
@@ -6458,8 +5522,8 @@
     },
     "SpaceRogue/rogue_run_back_hands2_005.png": {
       "frame": {
-        "x": 46,
-        "y": 400,
+        "x": 345,
+        "y": 288,
         "w": 23,
         "h": 24
       },
@@ -6482,8 +5546,8 @@
     },
     "SpaceRogue/rogue_run_back_hands2_006.png": {
       "frame": {
-        "x": 46,
-        "y": 424,
+        "x": 345,
+        "y": 312,
         "w": 23,
         "h": 24
       },
@@ -6506,8 +5570,8 @@
     },
     "SpaceRogue/rogue_run_back_hands_001.png": {
       "frame": {
-        "x": 46,
-        "y": 448,
+        "x": 345,
+        "y": 336,
         "w": 23,
         "h": 24
       },
@@ -6530,8 +5594,8 @@
     },
     "SpaceRogue/rogue_run_back_hands_002.png": {
       "frame": {
-        "x": 46,
-        "y": 472,
+        "x": 0,
+        "y": 377,
         "w": 23,
         "h": 24
       },
@@ -6554,8 +5618,8 @@
     },
     "SpaceRogue/rogue_run_back_hands_003.png": {
       "frame": {
-        "x": 69,
-        "y": 328,
+        "x": 23,
+        "y": 377,
         "w": 23,
         "h": 24
       },
@@ -6578,32 +5642,8 @@
     },
     "SpaceRogue/rogue_run_back_hands_004.png": {
       "frame": {
-        "x": 69,
-        "y": 289,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_run_back_hands_005.png": {
-      "frame": {
-        "x": 69,
-        "y": 352,
+        "x": 46,
+        "y": 377,
         "w": 23,
         "h": 24
       },
@@ -6627,31 +5667,7 @@
     "SpaceRogue/rogue_run_back_hands_006.png": {
       "frame": {
         "x": 69,
-        "y": 376,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_run_back_hands_left_001.png": {
-      "frame": {
-        "x": 69,
-        "y": 400,
+        "y": 377,
         "w": 23,
         "h": 24
       },
@@ -6674,104 +5690,8 @@
     },
     "SpaceRogue/rogue_run_back_hands_left_002.png": {
       "frame": {
-        "x": 69,
-        "y": 424,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_run_back_hands_left_003.png": {
-      "frame": {
-        "x": 69,
-        "y": 448,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_run_back_hands_left_004.png": {
-      "frame": {
-        "x": 69,
-        "y": 472,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_run_back_hands_left_005.png": {
-      "frame": {
         "x": 92,
-        "y": 328,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_run_back_hands_left_006.png": {
-      "frame": {
-        "x": 92,
-        "y": 289,
+        "y": 377,
         "w": 23,
         "h": 24
       },
@@ -6794,8 +5714,8 @@
     },
     "SpaceRogue/rogue_run_backward_001.png": {
       "frame": {
-        "x": 92,
-        "y": 352,
+        "x": 115,
+        "y": 371,
         "w": 23,
         "h": 24
       },
@@ -6818,8 +5738,8 @@
     },
     "SpaceRogue/rogue_run_backward_002.png": {
       "frame": {
-        "x": 92,
-        "y": 376,
+        "x": 138,
+        "y": 369,
         "w": 23,
         "h": 24
       },
@@ -6842,8 +5762,8 @@
     },
     "SpaceRogue/rogue_run_backward_003.png": {
       "frame": {
-        "x": 92,
-        "y": 400,
+        "x": 161,
+        "y": 367,
         "w": 23,
         "h": 24
       },
@@ -6866,8 +5786,8 @@
     },
     "SpaceRogue/rogue_run_backward_004.png": {
       "frame": {
-        "x": 92,
-        "y": 424,
+        "x": 184,
+        "y": 360,
         "w": 23,
         "h": 24
       },
@@ -6890,8 +5810,8 @@
     },
     "SpaceRogue/rogue_run_backward_005.png": {
       "frame": {
-        "x": 92,
-        "y": 448,
+        "x": 207,
+        "y": 360,
         "w": 23,
         "h": 24
       },
@@ -6914,8 +5834,8 @@
     },
     "SpaceRogue/rogue_run_backward_006.png": {
       "frame": {
-        "x": 92,
-        "y": 472,
+        "x": 230,
+        "y": 360,
         "w": 23,
         "h": 24
       },
@@ -6938,8 +5858,8 @@
     },
     "SpaceRogue/rogue_run_backward_hands2_001.png": {
       "frame": {
-        "x": 115,
-        "y": 328,
+        "x": 253,
+        "y": 360,
         "w": 23,
         "h": 24
       },
@@ -6962,8 +5882,8 @@
     },
     "SpaceRogue/rogue_run_backward_hands2_002.png": {
       "frame": {
-        "x": 115,
-        "y": 289,
+        "x": 276,
+        "y": 360,
         "w": 23,
         "h": 24
       },
@@ -6986,8 +5906,8 @@
     },
     "SpaceRogue/rogue_run_backward_hands2_003.png": {
       "frame": {
-        "x": 115,
-        "y": 352,
+        "x": 299,
+        "y": 360,
         "w": 23,
         "h": 24
       },
@@ -7010,8 +5930,8 @@
     },
     "SpaceRogue/rogue_run_backward_hands2_004.png": {
       "frame": {
-        "x": 115,
-        "y": 376,
+        "x": 322,
+        "y": 360,
         "w": 23,
         "h": 24
       },
@@ -7034,8 +5954,8 @@
     },
     "SpaceRogue/rogue_run_backward_hands2_005.png": {
       "frame": {
-        "x": 115,
-        "y": 400,
+        "x": 345,
+        "y": 360,
         "w": 23,
         "h": 24
       },
@@ -7058,8 +5978,8 @@
     },
     "SpaceRogue/rogue_run_backward_hands2_006.png": {
       "frame": {
-        "x": 115,
-        "y": 424,
+        "x": 370,
+        "y": 192,
         "w": 23,
         "h": 24
       },
@@ -7082,8 +6002,8 @@
     },
     "SpaceRogue/rogue_run_forward_001.png": {
       "frame": {
-        "x": 115,
-        "y": 448,
+        "x": 363,
+        "y": 96,
         "w": 23,
         "h": 24
       },
@@ -7106,8 +6026,8 @@
     },
     "SpaceRogue/rogue_run_forward_002.png": {
       "frame": {
-        "x": 115,
-        "y": 472,
+        "x": 371,
+        "y": 216,
         "w": 23,
         "h": 24
       },
@@ -7130,8 +6050,8 @@
     },
     "SpaceRogue/rogue_run_forward_003.png": {
       "frame": {
-        "x": 138,
-        "y": 328,
+        "x": 382,
+        "y": 0,
         "w": 23,
         "h": 24
       },
@@ -7154,8 +6074,8 @@
     },
     "SpaceRogue/rogue_run_forward_004.png": {
       "frame": {
-        "x": 138,
-        "y": 289,
+        "x": 382,
+        "y": 24,
         "w": 23,
         "h": 24
       },
@@ -7178,8 +6098,8 @@
     },
     "SpaceRogue/rogue_run_forward_005.png": {
       "frame": {
-        "x": 138,
-        "y": 352,
+        "x": 380,
+        "y": 120,
         "w": 23,
         "h": 24
       },
@@ -7202,8 +6122,8 @@
     },
     "SpaceRogue/rogue_run_forward_006.png": {
       "frame": {
-        "x": 138,
-        "y": 376,
+        "x": 380,
+        "y": 240,
         "w": 23,
         "h": 24
       },
@@ -7226,8 +6146,8 @@
     },
     "SpaceRogue/rogue_run_forward_hands2_001.png": {
       "frame": {
-        "x": 138,
-        "y": 400,
+        "x": 380,
+        "y": 144,
         "w": 23,
         "h": 24
       },
@@ -7250,8 +6170,8 @@
     },
     "SpaceRogue/rogue_run_forward_hands2_002.png": {
       "frame": {
-        "x": 138,
-        "y": 424,
+        "x": 380,
+        "y": 168,
         "w": 23,
         "h": 24
       },
@@ -7274,8 +6194,8 @@
     },
     "SpaceRogue/rogue_run_forward_hands2_003.png": {
       "frame": {
-        "x": 138,
-        "y": 448,
+        "x": 378,
+        "y": 48,
         "w": 23,
         "h": 24
       },
@@ -7298,8 +6218,8 @@
     },
     "SpaceRogue/rogue_run_forward_hands2_004.png": {
       "frame": {
-        "x": 138,
-        "y": 472,
+        "x": 378,
+        "y": 72,
         "w": 23,
         "h": 24
       },
@@ -7322,8 +6242,8 @@
     },
     "SpaceRogue/rogue_run_forward_hands2_005.png": {
       "frame": {
-        "x": 161,
-        "y": 328,
+        "x": 368,
+        "y": 264,
         "w": 23,
         "h": 24
       },
@@ -7346,8 +6266,8 @@
     },
     "SpaceRogue/rogue_run_forward_hands2_006.png": {
       "frame": {
-        "x": 161,
-        "y": 289,
+        "x": 368,
+        "y": 288,
         "w": 23,
         "h": 24
       },
@@ -7370,56 +6290,8 @@
     },
     "SpaceRogue/rogue_run_forward_hands_001.png": {
       "frame": {
-        "x": 161,
-        "y": 352,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_run_forward_hands_002.png": {
-      "frame": {
-        "x": 161,
-        "y": 376,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_run_forward_hands_003.png": {
-      "frame": {
-        "x": 161,
-        "y": 400,
+        "x": 368,
+        "y": 312,
         "w": 23,
         "h": 24
       },
@@ -7442,8 +6314,8 @@
     },
     "SpaceRogue/rogue_run_forward_hands_004.png": {
       "frame": {
-        "x": 161,
-        "y": 424,
+        "x": 368,
+        "y": 336,
         "w": 23,
         "h": 24
       },
@@ -7466,8 +6338,8 @@
     },
     "SpaceRogue/rogue_run_forward_hands_005.png": {
       "frame": {
-        "x": 161,
-        "y": 448,
+        "x": 368,
+        "y": 360,
         "w": 23,
         "h": 24
       },
@@ -7490,8 +6362,8 @@
     },
     "SpaceRogue/rogue_run_forward_hands_006.png": {
       "frame": {
-        "x": 161,
-        "y": 472,
+        "x": 0,
+        "y": 401,
         "w": 23,
         "h": 24
       },
@@ -7514,8 +6386,8 @@
     },
     "SpaceRogue/rogue_run_front_001.png": {
       "frame": {
-        "x": 184,
-        "y": 328,
+        "x": 23,
+        "y": 401,
         "w": 23,
         "h": 24
       },
@@ -7538,8 +6410,8 @@
     },
     "SpaceRogue/rogue_run_front_002.png": {
       "frame": {
-        "x": 184,
-        "y": 288,
+        "x": 46,
+        "y": 401,
         "w": 23,
         "h": 24
       },
@@ -7562,8 +6434,8 @@
     },
     "SpaceRogue/rogue_run_front_003.png": {
       "frame": {
-        "x": 184,
-        "y": 352,
+        "x": 69,
+        "y": 401,
         "w": 23,
         "h": 24
       },
@@ -7586,8 +6458,8 @@
     },
     "SpaceRogue/rogue_run_front_004.png": {
       "frame": {
-        "x": 184,
-        "y": 376,
+        "x": 92,
+        "y": 401,
         "w": 23,
         "h": 24
       },
@@ -7610,8 +6482,8 @@
     },
     "SpaceRogue/rogue_run_front_005.png": {
       "frame": {
-        "x": 184,
-        "y": 400,
+        "x": 115,
+        "y": 395,
         "w": 23,
         "h": 24
       },
@@ -7634,8 +6506,8 @@
     },
     "SpaceRogue/rogue_run_front_006.png": {
       "frame": {
-        "x": 184,
-        "y": 424,
+        "x": 138,
+        "y": 393,
         "w": 23,
         "h": 24
       },
@@ -7658,8 +6530,8 @@
     },
     "SpaceRogue/rogue_run_front_hands2_001.png": {
       "frame": {
-        "x": 184,
-        "y": 448,
+        "x": 161,
+        "y": 391,
         "w": 23,
         "h": 24
       },
@@ -7683,7 +6555,7 @@
     "SpaceRogue/rogue_run_front_hands2_002.png": {
       "frame": {
         "x": 184,
-        "y": 472,
+        "y": 384,
         "w": 23,
         "h": 24
       },
@@ -7707,7 +6579,7 @@
     "SpaceRogue/rogue_run_front_hands2_003.png": {
       "frame": {
         "x": 207,
-        "y": 328,
+        "y": 384,
         "w": 23,
         "h": 24
       },
@@ -7730,8 +6602,8 @@
     },
     "SpaceRogue/rogue_run_front_hands2_004.png": {
       "frame": {
-        "x": 207,
-        "y": 288,
+        "x": 230,
+        "y": 384,
         "w": 23,
         "h": 24
       },
@@ -7746,54 +6618,6 @@
       "sourceSize": {
         "w": 23,
         "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_spaceflail_007.png": {
-      "frame": {
-        "x": 207,
-        "y": 265,
-        "w": 21,
-        "h": 22
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 21,
-        "h": 22
-      },
-      "sourceSize": {
-        "w": 21,
-        "h": 22
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_spaceflail_008.png": {
-      "frame": {
-        "x": 228,
-        "y": 265,
-        "w": 21,
-        "h": 22
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 21,
-        "h": 22
-      },
-      "sourceSize": {
-        "w": 21,
-        "h": 22
       },
       "pivot": {
         "x": 0.5,
@@ -7802,8 +6626,8 @@
     },
     "SpaceRogue/rogue_run_front_hands2_005.png": {
       "frame": {
-        "x": 249,
-        "y": 265,
+        "x": 253,
+        "y": 384,
         "w": 23,
         "h": 24
       },
@@ -7826,8 +6650,8 @@
     },
     "SpaceRogue/rogue_run_front_hands2_006.png": {
       "frame": {
-        "x": 272,
-        "y": 265,
+        "x": 276,
+        "y": 384,
         "w": 23,
         "h": 24
       },
@@ -7850,8 +6674,8 @@
     },
     "SpaceRogue/rogue_run_front_hands_001.png": {
       "frame": {
-        "x": 295,
-        "y": 265,
+        "x": 299,
+        "y": 384,
         "w": 23,
         "h": 24
       },
@@ -7874,8 +6698,8 @@
     },
     "SpaceRogue/rogue_run_front_hands_002.png": {
       "frame": {
-        "x": 318,
-        "y": 265,
+        "x": 322,
+        "y": 384,
         "w": 23,
         "h": 24
       },
@@ -7898,8 +6722,8 @@
     },
     "SpaceRogue/rogue_run_front_hands_003.png": {
       "frame": {
-        "x": 341,
-        "y": 265,
+        "x": 345,
+        "y": 384,
         "w": 23,
         "h": 24
       },
@@ -7922,8 +6746,8 @@
     },
     "SpaceRogue/rogue_run_front_hands_004.png": {
       "frame": {
-        "x": 364,
-        "y": 265,
+        "x": 368,
+        "y": 384,
         "w": 23,
         "h": 24
       },
@@ -7946,8 +6770,8 @@
     },
     "SpaceRogue/rogue_run_front_hands_005.png": {
       "frame": {
-        "x": 387,
-        "y": 285,
+        "x": 393,
+        "y": 192,
         "w": 23,
         "h": 24
       },
@@ -7970,8 +6794,8 @@
     },
     "SpaceRogue/rogue_run_front_hands_006.png": {
       "frame": {
-        "x": 387,
-        "y": 309,
+        "x": 386,
+        "y": 96,
         "w": 23,
         "h": 24
       },
@@ -7992,10 +6816,10 @@
         "y": 0.5
       }
     },
-    "SpaceRogue/rogue_run_front_hands_left_001.png": {
+    "SpaceRogue/rogue_chest_open_004.png": {
       "frame": {
-        "x": 410,
-        "y": 288,
+        "x": 394,
+        "y": 216,
         "w": 23,
         "h": 24
       },
@@ -8016,10 +6840,10 @@
         "y": 0.5
       }
     },
-    "SpaceRogue/rogue_run_front_hands_left_002.png": {
+    "SpaceRogue/rogue_chest_open_005.png": {
       "frame": {
-        "x": 433,
-        "y": 309,
+        "x": 405,
+        "y": 0,
         "w": 23,
         "h": 24
       },
@@ -8040,10 +6864,10 @@
         "y": 0.5
       }
     },
-    "SpaceRogue/rogue_run_front_hands_left_003.png": {
+    "SpaceRogue/rogue_chest_open_006.png": {
       "frame": {
-        "x": 410,
-        "y": 312,
+        "x": 405,
+        "y": 24,
         "w": 23,
         "h": 24
       },
@@ -8064,10 +6888,10 @@
         "y": 0.5
       }
     },
-    "SpaceRogue/rogue_run_front_hands_left_004.png": {
+    "SpaceRogue/rogue_chest_open_007.png": {
       "frame": {
-        "x": 456,
-        "y": 312,
+        "x": 403,
+        "y": 120,
         "w": 23,
         "h": 24
       },
@@ -8088,10 +6912,10 @@
         "y": 0.5
       }
     },
-    "SpaceRogue/rogue_run_front_hands_left_005.png": {
+    "SpaceRogue/rogue_chest_open_008.png": {
       "frame": {
-        "x": 433,
-        "y": 333,
+        "x": 403,
+        "y": 240,
         "w": 23,
         "h": 24
       },
@@ -8112,10 +6936,82 @@
         "y": 0.5
       }
     },
-    "SpaceRogue/rogue_run_front_hands_left_006.png": {
+    "SpaceRogue/rogue_weaponget_006.png": {
       "frame": {
-        "x": 479,
-        "y": 328,
+        "x": 403,
+        "y": 144,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_chest_open_001.png": {
+      "frame": {
+        "x": 403,
+        "y": 168,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_chest_open_002.png": {
+      "frame": {
+        "x": 401,
+        "y": 48,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_chest_open_003.png": {
+      "frame": {
+        "x": 401,
+        "y": 72,
         "w": 23,
         "h": 24
       },
@@ -8138,8 +7034,8 @@
     },
     "SpaceRogue/rogue_select_crouch_001.png": {
       "frame": {
-        "x": 456,
-        "y": 336,
+        "x": 391,
+        "y": 264,
         "w": 23,
         "h": 24
       },
@@ -8162,8 +7058,8 @@
     },
     "SpaceRogue/rogue_select_crouch_002.png": {
       "frame": {
-        "x": 479,
-        "y": 352,
+        "x": 391,
+        "y": 288,
         "w": 23,
         "h": 24
       },
@@ -8186,8 +7082,8 @@
     },
     "SpaceRogue/rogue_select_crouch_003.png": {
       "frame": {
-        "x": 207,
-        "y": 376,
+        "x": 391,
+        "y": 312,
         "w": 23,
         "h": 24
       },
@@ -8210,8 +7106,8 @@
     },
     "SpaceRogue/rogue_select_crouch_004.png": {
       "frame": {
-        "x": 207,
-        "y": 352,
+        "x": 391,
+        "y": 336,
         "w": 23,
         "h": 24
       },
@@ -8234,8 +7130,8 @@
     },
     "SpaceRogue/rogue_select_crouch_draw_001.png": {
       "frame": {
-        "x": 207,
-        "y": 400,
+        "x": 391,
+        "y": 360,
         "w": 23,
         "h": 24
       },
@@ -8258,8 +7154,8 @@
     },
     "SpaceRogue/rogue_select_crouch_draw_002.png": {
       "frame": {
-        "x": 207,
-        "y": 424,
+        "x": 391,
+        "y": 384,
         "w": 23,
         "h": 24
       },
@@ -8282,8 +7178,8 @@
     },
     "SpaceRogue/rogue_select_crouch_draw_003.png": {
       "frame": {
-        "x": 207,
-        "y": 448,
+        "x": 0,
+        "y": 425,
         "w": 23,
         "h": 24
       },
@@ -8306,8 +7202,8 @@
     },
     "SpaceRogue/rogue_select_crouch_draw_004.png": {
       "frame": {
-        "x": 207,
-        "y": 472,
+        "x": 23,
+        "y": 425,
         "w": 23,
         "h": 24
       },
@@ -8330,8 +7226,8 @@
     },
     "SpaceRogue/rogue_select_idle_001.png": {
       "frame": {
-        "x": 230,
-        "y": 376,
+        "x": 46,
+        "y": 425,
         "w": 23,
         "h": 24
       },
@@ -8354,8 +7250,8 @@
     },
     "SpaceRogue/rogue_select_idle_002.png": {
       "frame": {
-        "x": 230,
-        "y": 336,
+        "x": 69,
+        "y": 425,
         "w": 23,
         "h": 24
       },
@@ -8378,8 +7274,8 @@
     },
     "SpaceRogue/rogue_select_idle_003.png": {
       "frame": {
-        "x": 230,
-        "y": 289,
+        "x": 92,
+        "y": 425,
         "w": 23,
         "h": 24
       },
@@ -8402,8 +7298,8 @@
     },
     "SpaceRogue/rogue_select_idle_004.png": {
       "frame": {
-        "x": 230,
-        "y": 400,
+        "x": 115,
+        "y": 419,
         "w": 23,
         "h": 24
       },
@@ -8426,8 +7322,8 @@
     },
     "SpaceRogue/rogue_select_idle_005.png": {
       "frame": {
-        "x": 230,
-        "y": 424,
+        "x": 138,
+        "y": 417,
         "w": 23,
         "h": 24
       },
@@ -8450,8 +7346,8 @@
     },
     "SpaceRogue/rogue_select_pose_001.png": {
       "frame": {
-        "x": 230,
-        "y": 448,
+        "x": 161,
+        "y": 415,
         "w": 23,
         "h": 24
       },
@@ -8474,8 +7370,8 @@
     },
     "SpaceRogue/rogue_select_pose_002.png": {
       "frame": {
-        "x": 230,
-        "y": 472,
+        "x": 184,
+        "y": 408,
         "w": 23,
         "h": 24
       },
@@ -8498,8 +7394,8 @@
     },
     "SpaceRogue/rogue_select_pose_003.png": {
       "frame": {
-        "x": 253,
-        "y": 289,
+        "x": 207,
+        "y": 408,
         "w": 23,
         "h": 24
       },
@@ -8522,8 +7418,8 @@
     },
     "SpaceRogue/rogue_select_pose_004.png": {
       "frame": {
-        "x": 276,
-        "y": 289,
+        "x": 230,
+        "y": 408,
         "w": 23,
         "h": 24
       },
@@ -8546,8 +7442,8 @@
     },
     "SpaceRogue/rogue_select_pose_005.png": {
       "frame": {
-        "x": 299,
-        "y": 289,
+        "x": 253,
+        "y": 408,
         "w": 23,
         "h": 24
       },
@@ -8570,8 +7466,8 @@
     },
     "SpaceRogue/rogue_select_pose_dance_001.png": {
       "frame": {
-        "x": 322,
-        "y": 289,
+        "x": 276,
+        "y": 408,
         "w": 23,
         "h": 24
       },
@@ -8594,8 +7490,8 @@
     },
     "SpaceRogue/rogue_select_pose_dance_002.png": {
       "frame": {
-        "x": 345,
-        "y": 289,
+        "x": 299,
+        "y": 408,
         "w": 23,
         "h": 24
       },
@@ -8618,8 +7514,8 @@
     },
     "SpaceRogue/rogue_select_pose_dance_003.png": {
       "frame": {
-        "x": 253,
-        "y": 313,
+        "x": 322,
+        "y": 408,
         "w": 23,
         "h": 24
       },
@@ -8642,8 +7538,8 @@
     },
     "SpaceRogue/rogue_select_thumbs_up_001.png": {
       "frame": {
-        "x": 276,
-        "y": 313,
+        "x": 345,
+        "y": 408,
         "w": 23,
         "h": 24
       },
@@ -8666,8 +7562,8 @@
     },
     "SpaceRogue/rogue_select_thumbs_up_002.png": {
       "frame": {
-        "x": 299,
-        "y": 313,
+        "x": 368,
+        "y": 408,
         "w": 23,
         "h": 24
       },
@@ -8690,8 +7586,8 @@
     },
     "SpaceRogue/rogue_select_thumbs_up_003.png": {
       "frame": {
-        "x": 322,
-        "y": 313,
+        "x": 391,
+        "y": 408,
         "w": 23,
         "h": 24
       },
@@ -8714,8 +7610,8 @@
     },
     "SpaceRogue/rogue_select_thumbs_up_004.png": {
       "frame": {
-        "x": 345,
-        "y": 313,
+        "x": 416,
+        "y": 192,
         "w": 23,
         "h": 24
       },
@@ -8738,8 +7634,8 @@
     },
     "SpaceRogue/rogue_select_thumbs_up_005.png": {
       "frame": {
-        "x": 368,
-        "y": 333,
+        "x": 409,
+        "y": 96,
         "w": 23,
         "h": 24
       },
@@ -8762,8 +7658,8 @@
     },
     "SpaceRogue/rogue_select_thumbs_up_006.png": {
       "frame": {
-        "x": 391,
-        "y": 336,
+        "x": 417,
+        "y": 216,
         "w": 23,
         "h": 24
       },
@@ -8786,8 +7682,32 @@
     },
     "SpaceRogue/rogue_select_thumbs_up_007.png": {
       "frame": {
-        "x": 391,
-        "y": 360,
+        "x": 428,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_weaponget_003.png": {
+      "frame": {
+        "x": 428,
+        "y": 24,
         "w": 23,
         "h": 24
       },
@@ -8810,8 +7730,8 @@
     },
     "SpaceRogue/rogue_shot_death_001.png": {
       "frame": {
-        "x": 414,
-        "y": 357,
+        "x": 426,
+        "y": 120,
         "w": 23,
         "h": 24
       },
@@ -8834,8 +7754,8 @@
     },
     "SpaceRogue/rogue_shot_death_002.png": {
       "frame": {
-        "x": 437,
-        "y": 360,
+        "x": 426,
+        "y": 240,
         "w": 23,
         "h": 24
       },
@@ -8858,8 +7778,8 @@
     },
     "SpaceRogue/rogue_shot_death_003.png": {
       "frame": {
-        "x": 414,
-        "y": 381,
+        "x": 426,
+        "y": 144,
         "w": 23,
         "h": 24
       },
@@ -8882,8 +7802,8 @@
     },
     "SpaceRogue/rogue_shot_death_004.png": {
       "frame": {
-        "x": 460,
-        "y": 376,
+        "x": 426,
+        "y": 168,
         "w": 23,
         "h": 24
       },
@@ -8906,8 +7826,8 @@
     },
     "SpaceRogue/rogue_shot_death_005.png": {
       "frame": {
-        "x": 437,
-        "y": 384,
+        "x": 424,
+        "y": 48,
         "w": 23,
         "h": 24
       },
@@ -8930,8 +7850,8 @@
     },
     "SpaceRogue/rogue_shot_death_006.png": {
       "frame": {
-        "x": 483,
-        "y": 376,
+        "x": 424,
+        "y": 72,
         "w": 23,
         "h": 24
       },
@@ -8954,8 +7874,8 @@
     },
     "SpaceRogue/rogue_shot_death_007.png": {
       "frame": {
-        "x": 483,
-        "y": 400,
+        "x": 414,
+        "y": 264,
         "w": 23,
         "h": 24
       },
@@ -8978,8 +7898,8 @@
     },
     "SpaceRogue/rogue_shot_death_008.png": {
       "frame": {
-        "x": 460,
-        "y": 400,
+        "x": 414,
+        "y": 288,
         "w": 23,
         "h": 24
       },
@@ -9002,8 +7922,8 @@
     },
     "SpaceRogue/rogue_shot_death_009.png": {
       "frame": {
-        "x": 253,
-        "y": 424,
+        "x": 414,
+        "y": 312,
         "w": 23,
         "h": 24
       },
@@ -9026,8 +7946,8 @@
     },
     "SpaceRogue/rogue_shot_death_010.png": {
       "frame": {
-        "x": 253,
-        "y": 384,
+        "x": 414,
+        "y": 336,
         "w": 23,
         "h": 24
       },
@@ -9050,8 +7970,8 @@
     },
     "SpaceRogue/rogue_slide_altright_001.png": {
       "frame": {
-        "x": 253,
-        "y": 357,
+        "x": 414,
+        "y": 360,
         "w": 23,
         "h": 24
       },
@@ -9074,8 +7994,8 @@
     },
     "SpaceRogue/rogue_slide_right_001.png": {
       "frame": {
-        "x": 253,
-        "y": 448,
+        "x": 414,
+        "y": 384,
         "w": 23,
         "h": 24
       },
@@ -9098,8 +8018,8 @@
     },
     "SpaceRogue/rogue_slide_up_001.png": {
       "frame": {
-        "x": 253,
-        "y": 472,
+        "x": 414,
+        "y": 408,
         "w": 23,
         "h": 24
       },
@@ -9120,10 +8040,178 @@
         "y": 0.5
       }
     },
-    "SpaceRogue/rogue_spin_001.png": {
+    "SpaceRogue/rogue_weaponget_002.png": {
       "frame": {
-        "x": 276,
-        "y": 424,
+        "x": 0,
+        "y": 449,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_weaponget_001.png": {
+      "frame": {
+        "x": 23,
+        "y": 449,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_chest_recover_001.png": {
+      "frame": {
+        "x": 46,
+        "y": 449,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_chest_recover_002.png": {
+      "frame": {
+        "x": 69,
+        "y": 449,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_chest_recover_003.png": {
+      "frame": {
+        "x": 92,
+        "y": 449,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_chest_recover_004.png": {
+      "frame": {
+        "x": 115,
+        "y": 443,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_chest_recover_005.png": {
+      "frame": {
+        "x": 138,
+        "y": 441,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_chest_recover_006.png": {
+      "frame": {
+        "x": 161,
+        "y": 439,
         "w": 23,
         "h": 24
       },
@@ -9146,8 +8234,8 @@
     },
     "SpaceRogue/rogue_spin_002.png": {
       "frame": {
-        "x": 276,
-        "y": 384,
+        "x": 184,
+        "y": 432,
         "w": 23,
         "h": 24
       },
@@ -9170,8 +8258,8 @@
     },
     "SpaceRogue/rogue_spin_003.png": {
       "frame": {
-        "x": 276,
-        "y": 357,
+        "x": 207,
+        "y": 432,
         "w": 23,
         "h": 24
       },
@@ -9194,8 +8282,8 @@
     },
     "SpaceRogue/rogue_spin_004.png": {
       "frame": {
-        "x": 276,
-        "y": 448,
+        "x": 230,
+        "y": 432,
         "w": 23,
         "h": 24
       },
@@ -9218,32 +8306,8 @@
     },
     "SpaceRogue/rogue_spin_005.png": {
       "frame": {
-        "x": 276,
-        "y": 472,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_spin_006.png": {
-      "frame": {
-        "x": 299,
-        "y": 337,
+        "x": 253,
+        "y": 432,
         "w": 23,
         "h": 24
       },
@@ -9266,8 +8330,8 @@
     },
     "SpaceRogue/rogue_tablekick_001.png": {
       "frame": {
-        "x": 322,
-        "y": 337,
+        "x": 276,
+        "y": 432,
         "w": 23,
         "h": 24
       },
@@ -9290,8 +8354,8 @@
     },
     "SpaceRogue/rogue_tablekick_002.png": {
       "frame": {
-        "x": 345,
-        "y": 337,
+        "x": 299,
+        "y": 432,
         "w": 23,
         "h": 24
       },
@@ -9314,8 +8378,8 @@
     },
     "SpaceRogue/rogue_tablekick_003.png": {
       "frame": {
-        "x": 345,
-        "y": 361,
+        "x": 322,
+        "y": 432,
         "w": 23,
         "h": 24
       },
@@ -9338,8 +8402,8 @@
     },
     "SpaceRogue/rogue_tablekick_004.png": {
       "frame": {
-        "x": 368,
-        "y": 357,
+        "x": 345,
+        "y": 432,
         "w": 23,
         "h": 24
       },
@@ -9363,7 +8427,7 @@
     "SpaceRogue/rogue_tablekick_down_001.png": {
       "frame": {
         "x": 368,
-        "y": 381,
+        "y": 432,
         "w": 23,
         "h": 24
       },
@@ -9387,31 +8451,7 @@
     "SpaceRogue/rogue_tablekick_down_002.png": {
       "frame": {
         "x": 391,
-        "y": 384,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_tablekick_down_003.png": {
-      "frame": {
-        "x": 414,
-        "y": 405,
+        "y": 432,
         "w": 23,
         "h": 24
       },
@@ -9434,8 +8474,8 @@
     },
     "SpaceRogue/rogue_tablekick_down_hands_001.png": {
       "frame": {
-        "x": 437,
-        "y": 408,
+        "x": 414,
+        "y": 432,
         "w": 23,
         "h": 24
       },
@@ -9458,8 +8498,8 @@
     },
     "SpaceRogue/rogue_tablekick_down_hands_002.png": {
       "frame": {
-        "x": 299,
-        "y": 361,
+        "x": 439,
+        "y": 192,
         "w": 23,
         "h": 24
       },
@@ -9482,8 +8522,8 @@
     },
     "SpaceRogue/rogue_tablekick_down_hands_003.png": {
       "frame": {
-        "x": 322,
-        "y": 361,
+        "x": 432,
+        "y": 96,
         "w": 23,
         "h": 24
       },
@@ -9506,8 +8546,8 @@
     },
     "SpaceRogue/rogue_tablekick_down_twohands_001.png": {
       "frame": {
-        "x": 460,
-        "y": 424,
+        "x": 440,
+        "y": 216,
         "w": 23,
         "h": 24
       },
@@ -9530,8 +8570,8 @@
     },
     "SpaceRogue/rogue_tablekick_down_twohands_002.png": {
       "frame": {
-        "x": 483,
-        "y": 424,
+        "x": 451,
+        "y": 0,
         "w": 23,
         "h": 24
       },
@@ -9554,8 +8594,8 @@
     },
     "SpaceRogue/rogue_tablekick_down_twohands_003.png": {
       "frame": {
-        "x": 299,
-        "y": 448,
+        "x": 451,
+        "y": 24,
         "w": 23,
         "h": 24
       },
@@ -9578,8 +8618,8 @@
     },
     "SpaceRogue/rogue_tablekick_hands_001.png": {
       "frame": {
-        "x": 299,
-        "y": 408,
+        "x": 449,
+        "y": 120,
         "w": 23,
         "h": 24
       },
@@ -9602,8 +8642,8 @@
     },
     "SpaceRogue/rogue_tablekick_hands_002.png": {
       "frame": {
-        "x": 299,
-        "y": 472,
+        "x": 449,
+        "y": 240,
         "w": 23,
         "h": 24
       },
@@ -9626,8 +8666,8 @@
     },
     "SpaceRogue/rogue_tablekick_hands_003.png": {
       "frame": {
-        "x": 322,
-        "y": 385,
+        "x": 449,
+        "y": 144,
         "w": 23,
         "h": 24
       },
@@ -9650,8 +8690,8 @@
     },
     "SpaceRogue/rogue_tablekick_hands_004.png": {
       "frame": {
-        "x": 345,
-        "y": 385,
+        "x": 449,
+        "y": 168,
         "w": 23,
         "h": 24
       },
@@ -9674,8 +8714,8 @@
     },
     "SpaceRogue/rogue_tablekick_twohands_001.png": {
       "frame": {
-        "x": 368,
-        "y": 405,
+        "x": 447,
+        "y": 48,
         "w": 23,
         "h": 24
       },
@@ -9698,8 +8738,8 @@
     },
     "SpaceRogue/rogue_tablekick_twohands_002.png": {
       "frame": {
-        "x": 391,
-        "y": 408,
+        "x": 447,
+        "y": 72,
         "w": 23,
         "h": 24
       },
@@ -9722,8 +8762,8 @@
     },
     "SpaceRogue/rogue_tablekick_twohands_003.png": {
       "frame": {
-        "x": 414,
-        "y": 429,
+        "x": 437,
+        "y": 264,
         "w": 23,
         "h": 24
       },
@@ -9747,7 +8787,7 @@
     "SpaceRogue/rogue_tablekick_twohands_004.png": {
       "frame": {
         "x": 437,
-        "y": 432,
+        "y": 288,
         "w": 23,
         "h": 24
       },
@@ -9770,8 +8810,8 @@
     },
     "SpaceRogue/rogue_tablekick_up_001.png": {
       "frame": {
-        "x": 322,
-        "y": 409,
+        "x": 437,
+        "y": 312,
         "w": 23,
         "h": 24
       },
@@ -9794,32 +8834,8 @@
     },
     "SpaceRogue/rogue_tablekick_up_002.png": {
       "frame": {
-        "x": 345,
-        "y": 409,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_tablekick_up_003.png": {
-      "frame": {
-        "x": 368,
-        "y": 429,
+        "x": 437,
+        "y": 336,
         "w": 23,
         "h": 24
       },
@@ -9842,8 +8858,8 @@
     },
     "SpaceRogue/rogue_tablekick_up_twohand_001.png": {
       "frame": {
-        "x": 345,
-        "y": 433,
+        "x": 437,
+        "y": 360,
         "w": 23,
         "h": 24
       },
@@ -9866,8 +8882,8 @@
     },
     "SpaceRogue/rogue_tablekick_up_twohand_002.png": {
       "frame": {
-        "x": 322,
-        "y": 433,
+        "x": 437,
+        "y": 384,
         "w": 23,
         "h": 24
       },
@@ -9890,7 +8906,1111 @@
     },
     "SpaceRogue/rogue_tablekick_up_twohand_003.png": {
       "frame": {
-        "x": 391,
+        "x": 437,
+        "y": 408,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_spaceflail_002.png": {
+      "frame": {
+        "x": 437,
+        "y": 432,
+        "w": 21,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 21,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 21,
+        "h": 22
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_spaceflail_008.png": {
+      "frame": {
+        "x": 0,
+        "y": 473,
+        "w": 21,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 21,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 21,
+        "h": 22
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_spaceflail_006.png": {
+      "frame": {
+        "x": 21,
+        "y": 473,
+        "w": 21,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 21,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 21,
+        "h": 22
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_spaceflail_005.png": {
+      "frame": {
+        "x": 42,
+        "y": 473,
+        "w": 21,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 21,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 21,
+        "h": 22
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_spaceflail_004.png": {
+      "frame": {
+        "x": 63,
+        "y": 473,
+        "w": 21,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 21,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 21,
+        "h": 22
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_spaceflail_003.png": {
+      "frame": {
+        "x": 84,
+        "y": 473,
+        "w": 21,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 21,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 21,
+        "h": 22
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_spaceflail_007.png": {
+      "frame": {
+        "x": 105,
+        "y": 473,
+        "w": 21,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 21,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 21,
+        "h": 22
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_spaceflail_001.png": {
+      "frame": {
+        "x": 126,
+        "y": 467,
+        "w": 21,
+        "h": 22
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 21,
+        "h": 22
+      },
+      "sourceSize": {
+        "w": 21,
+        "h": 22
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_shadow.png": {
+      "frame": {
+        "x": 168,
+        "y": 264,
+        "w": 16,
+        "h": 5
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 16,
+        "h": 5
+      },
+      "sourceSize": {
+        "w": 16,
+        "h": 5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/mr_shadow.png": {
+      "frame": {
+        "x": 69,
+        "y": 100,
+        "w": 12,
+        "h": 4
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 12,
+        "h": 4
+      },
+      "sourceSize": {
+        "w": 12,
+        "h": 4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/paradox_hand_001.png": {
+      "frame": {
+        "x": 81,
+        "y": 125,
+        "w": 4,
+        "h": 4
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 4,
+        "h": 4
+      },
+      "sourceSize": {
+        "w": 4,
+        "h": 4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_hand_001.png": {
+      "frame": {
+        "x": 146,
+        "y": 25,
+        "w": 4,
+        "h": 4
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 4,
+        "h": 4
+      },
+      "sourceSize": {
+        "w": 4,
+        "h": 4
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_idle_back_hands_001.png": {
+      "frame": {
+        "x": 403,
+        "y": 168,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_idle_back_hands_002.png": {
+      "frame": {
+        "x": 401,
+        "y": 48,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_chest_open_fake_011.png": {
+      "frame": {
+        "x": 69,
+        "y": 50,
+        "w": 27,
+        "h": 25
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 27,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 27,
+        "h": 25
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_chest_open_fake_015.png": {
+      "frame": {
+        "x": 96,
+        "y": 25,
+        "w": 27,
+        "h": 25
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 27,
+        "h": 25
+      },
+      "sourceSize": {
+        "w": 27,
+        "h": 25
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_back_left_004.png": {
+      "frame": {
+        "x": 238,
+        "y": 48,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_ghost_back_right_004.png": {
+      "frame": {
+        "x": 231,
+        "y": 144,
+        "w": 24,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 24,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 24,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_idle_back_hand_right_001.png": {
+      "frame": {
+        "x": 184,
+        "y": 264,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_idle_back_hand_right_002.png": {
+      "frame": {
+        "x": 207,
+        "y": 264,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_idle_back_hand_right_003.png": {
+      "frame": {
+        "x": 230,
+        "y": 264,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_idle_back_hand_right_004.png": {
+      "frame": {
+        "x": 253,
+        "y": 264,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_idle_back_hand_right_005.png": {
+      "frame": {
+        "x": 271,
+        "y": 96,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_idle_back_hand_right_006.png": {
+      "frame": {
+        "x": 290,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_spin_006.png": {
+      "frame": {
+        "x": 286,
+        "y": 72,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_idle_front_005.png": {
+      "frame": {
+        "x": 46,
+        "y": 305,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_idle_front_hand_left_005.png": {
+      "frame": {
+        "x": 161,
+        "y": 295,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_idle_front_hand_right_005.png": {
+      "frame": {
+        "x": 276,
+        "y": 288,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_idle_front_hands_005.png": {
+      "frame": {
+        "x": 313,
+        "y": 24,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_spin_001.png": {
+      "frame": {
+        "x": 309,
+        "y": 48,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_run_back_doorway_001.png": {
+      "frame": {
+        "x": 184,
+        "y": 336,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_run_back_hands_005.png": {
+      "frame": {
+        "x": 345,
+        "y": 288,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_run_back_hands_left_005.png": {
+      "frame": {
+        "x": 345,
+        "y": 288,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_run_back_hands_left_001.png": {
+      "frame": {
+        "x": 345,
+        "y": 336,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_run_back_hands_left_003.png": {
+      "frame": {
+        "x": 23,
+        "y": 377,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_run_back_hands_left_004.png": {
+      "frame": {
+        "x": 46,
+        "y": 377,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_run_back_hands_left_006.png": {
+      "frame": {
+        "x": 69,
+        "y": 377,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_run_forward_hands_002.png": {
+      "frame": {
+        "x": 380,
+        "y": 168,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_run_forward_hands_003.png": {
+      "frame": {
+        "x": 378,
+        "y": 48,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_run_front_hands_left_001.png": {
+      "frame": {
+        "x": 299,
+        "y": 384,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_run_front_hands_left_002.png": {
+      "frame": {
+        "x": 322,
+        "y": 384,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_run_front_hands_left_003.png": {
+      "frame": {
+        "x": 345,
+        "y": 384,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_run_front_hands_left_004.png": {
+      "frame": {
+        "x": 368,
+        "y": 384,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_run_front_hands_left_005.png": {
+      "frame": {
+        "x": 393,
+        "y": 192,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_run_front_hands_left_006.png": {
+      "frame": {
+        "x": 386,
+        "y": 96,
+        "w": 23,
+        "h": 24
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 23,
+        "h": 24
+      },
+      "sourceSize": {
+        "w": 23,
+        "h": 24
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "SpaceRogue/rogue_tablekick_down_003.png": {
+      "frame": {
+        "x": 368,
         "y": 432,
         "w": 23,
         "h": 24
@@ -9912,130 +10032,10 @@
         "y": 0.5
       }
     },
-    "SpaceRogue/rogue_weaponget_001.png": {
+    "SpaceRogue/rogue_tablekick_up_003.png": {
       "frame": {
-        "x": 368,
-        "y": 453,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_weaponget_002.png": {
-      "frame": {
-        "x": 414,
-        "y": 453,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_weaponget_003.png": {
-      "frame": {
-        "x": 391,
-        "y": 456,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_weaponget_004.png": {
-      "frame": {
-        "x": 322,
-        "y": 480,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_weaponget_005.png": {
-      "frame": {
-        "x": 345,
-        "y": 457,
-        "w": 23,
-        "h": 24
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 23,
-        "h": 24
-      },
-      "sourceSize": {
-        "w": 23,
-        "h": 24
-      },
-      "pivot": {
-        "x": 0.5,
-        "y": 0.5
-      }
-    },
-    "SpaceRogue/rogue_weaponget_006.png": {
-      "frame": {
-        "x": 368,
-        "y": 477,
+        "x": 437,
+        "y": 312,
         "w": 23,
         "h": 24
       },
@@ -10060,11 +10060,11 @@
   "meta": {
     "app": "http://free-tex-packer.com",
     "version": "0.6.7",
-    "image": "texture.png",
+    "image": "rogue.png",
     "format": "RGBA8888",
     "size": {
-      "w": 512,
-      "h": 512
+      "w": 474,
+      "h": 495
     },
     "scale": 1
   }
