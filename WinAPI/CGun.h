@@ -9,6 +9,13 @@ enum FIRE_TYPE
     END
 };
 
+enum GUN_ANIM_STATE
+{
+    GUN_IDLE,
+    GUN_FIRE,
+    GUN_RELOAD
+};
+
 enum class GUN_STATE
 {
     IDLE,
@@ -19,12 +26,15 @@ enum class GUN_STATE
     GROUND,
 };
 
+class CFlipbookPlayer;
+class CSprite;
+
 class CGun :
     public CObj
 {
 protected:  
     CObj* m_owner;              // 총의 주인(플레이어, 몬스터)
-    Vec2  m_fireDir;
+    Vec2  m_gunDir;
     GUN_STATE m_gunState;     // 현재 총 상태
 
     float     m_fireDelay;      // 총알 발사 딜레이
@@ -40,7 +50,13 @@ protected:
     float     m_bulletSpread;   // 산탄도
     float     m_knockback;      // 넉백
 
-    //FIRE_TYPE m_fireType;     // 총알 발사 방법
+    CFlipbookPlayer* m_flipbookPlayer;
+    float     m_magnification;
+
+    bool      m_isRightHand;
+    Vec2      m_muzzle;
+    Vec2      m_hand;
+    CSprite*  m_handSprite;
 
 public:
     virtual GUN_STATE Fire();      // 발사, 파라미터: 방향, return type 발사 여부(고장, 재장전 등)
@@ -48,12 +64,16 @@ public:
 public:
     void SetOwner(CObj* _owner) { m_owner = _owner; }
     float GetReloadDelay() { return m_reloadDelay; }
+    void SetVisible(bool _visible);
+    bool IsRightHand() { return m_isRightHand; }
 protected:
     virtual bool IsTriggered();           // 방아쇠 당김
     virtual void CreateBullet();
-    virtual void CalculateFireDirection();
+    Vec2 CalculateFireDirection();
+    virtual void CreateFlipbook();
 
 public:
+    void Begin() override;
     void Tick() override;
     void Render() override;
 public:

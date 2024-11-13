@@ -3,9 +3,18 @@
 #include "CPlayer.h"
 #include "CKeyMgr.h"
 #include "CCamera.h"
+#include "CAssetMgr.h"
 #include "CTimeMgr.h"
-
+#include "CEngine.h"
+#include "CSprite.h"
 #include "CMissile.h"
+#include "CFlipbookPlayer.h"
+
+void CGun::SetVisible(bool _visible)
+{
+	m_flipbookPlayer->SetVisible(_visible);
+}
+
 bool CGun::IsTriggered()
 {
 	return KEY_PRESSED(KEY::LBTN);
@@ -14,18 +23,26 @@ bool CGun::IsTriggered()
 void CGun::CreateBullet()
 {
 	CMissile* pMissile = new CMissile;
-	pMissile->SetPos(GetPos());
+	pMissile->SetPos(m_muzzle);
 	pMissile->SetScale(20.f, 20.f);
-	pMissile->SetVelocity(m_fireDir * 900.f);
+	pMissile->SetVelocity(m_gunDir * 900.f);
 	CreateObject(pMissile, LAYER_TYPE::PLAYER_OBJECT);
 }
 
-void CGun::CalculateFireDirection()
+Vec2 CGun::CalculateFireDirection()
 {
-	Vec2 mousePos = CKeyMgr::GetInst()->GetMousePos();
-	Vec2 realMousePos = CCamera::GetInst()->GetRealPos(mousePos);
-	m_fireDir = realMousePos - m_owner->GetPos();
-	m_fireDir.Normalize();
+	Vec2 realMousePos = CCamera::GetInst()->GetRealPos(CKeyMgr::GetInst()->GetMousePos());
+	Vec2 fireDirection = realMousePos - m_owner->GetPos();
+	fireDirection.Normalize();
+
+	return fireDirection;
+}
+
+void CGun::CreateFlipbook()
+{
+	m_flipbookPlayer = (CFlipbookPlayer*)AddComponent(new CFlipbookPlayer);
+	m_flipbookPlayer->SetMagnification(m_magnification);
+	//m_flipbookPlayer->SetOffset(Vec2(10.f, 0.f));
 }
 
 /*
@@ -55,6 +72,12 @@ GUN_STATE CGun::Fire()
 
 	CreateBullet();
 	m_magBullets--;
+
+	if (nullptr != m_flipbookPlayer)
+	{
+		tAnimState state{ GUN_FIRE, false, ToDegree(m_gunDir) };
+		m_flipbookPlayer->Play(state, 5.f, false);
+	}
 
 	return m_gunState;
 }
@@ -89,7 +112,24 @@ GUN_STATE CGun::Reload(bool isFired)
 	
 	m_fireTime = 0.f; // resets fireTime
 
+	if (nullptr != m_flipbookPlayer)
+	{
+		tAnimState state{ GUN_RELOAD,false, ToDegree(m_gunDir) };
+		m_flipbookPlayer->Play(state, 5.f, true);
+	}
+
 	return m_gunState;
+}
+
+void CGun::Begin()
+{
+	tAnimState state;
+	state.angle = ToDegree(m_gunDir);
+	state.mirror = false;
+	state.idx = GUN_IDLE;
+
+	if (nullptr != m_flipbookPlayer)
+		m_flipbookPlayer->Play(state, 5.f, true);
 }
 
 void CGun::Tick()
@@ -98,6 +138,11 @@ void CGun::Tick()
 	{
 	case GUN_STATE::EMPTY:
 	case GUN_STATE::IDLE:
+		if (nullptr != m_flipbookPlayer && !m_flipbookPlayer->IsFlipbookMatch(GUN_IDLE))
+		{
+			tAnimState state{ GUN_IDLE, false, ToDegree(m_gunDir) };
+			m_flipbookPlayer->Play(state, 5.f, true);
+		}
 		break;
 	case GUN_STATE::FIRING:
 		m_fireTime += DT;
@@ -128,19 +173,78 @@ void CGun::Tick()
 		break;
 	}
 
-	CalculateFireDirection();
-	SetPos(m_owner->GetPos() + m_fireDir * 70.f);
+	{
+		m_gunDir = CalculateFireDirection();
+
+		float offset = 20.f;
+		float angle = fabs(ToDegree(m_gunDir));
+		//wprintf(L"%.3f ", angle);
+		if (m_isRightHand && (100.f <= angle && angle <= 180.f))
+		{
+			m_isRightHand = false;
+		}
+		else if (!m_isRightHand && (0.f <= angle && angle <= 80.f))
+		{
+			m_isRightHand = true;
+		}
+
+		m_hand = m_owner->GetPos() + Vec2{ m_isRightHand ? offset : -offset, 20.f };
+		Vec2 realPos = m_hand + Vec2{ m_isRightHand ? 10.f : -10.f, -5.f };
+
+		SetPos(realPos);
+		m_muzzle = GetPos() + m_gunDir * 9.f;
+	}
 }
 
 void CGun::Render()
 {
 	DrawDebugCircle(PEN_TYPE::BLUE, GetRenderPos(), Vec2(50.f, 50.f), 0);
+	if (nullptr != m_flipbookPlayer) {
+		float angle = ToDegree(m_gunDir);
+		if (!m_isRightHand) {
+			float sign = angle > 0.f ? 1.f : -1.f;
+			angle = (180.f - abs(angle)) * sign;
+		}
+
+		// to draw before PC when up
+		if (m_gunDir.y <= 0)
+		{
+			SetRenderOffset(-20.1f);
+		}
+		else
+		{
+			SetRenderOffset(0.f);
+		}
+
+		m_flipbookPlayer->SetAngle(angle);
+		m_flipbookPlayer->SetMirror(!m_isRightHand);
+		m_flipbookPlayer->Render();
+
+		Gdiplus::Graphics* graphics = CEngine::GetInst()->GetBackGraphics();
+		Vec2 vPos = CCamera::GetInst()->GetRenderPos(m_hand);
+		Vec2 center = m_handSprite->GetSlice() / 2.f;
+
+		Matrix mat;
+		mat.Translate(vPos.x, vPos.y);
+		mat.Scale(3.f, 3.f);
+		mat.Translate(-center.x, -center.y);
+		graphics->SetTransform(&mat);
+
+		auto res = graphics->DrawImage(m_handSprite->GetAtlas()->GetImage(),
+			0.f, 0.f,
+			m_handSprite->GetLeftTop().x, m_handSprite->GetLeftTop().y,
+			m_handSprite->GetSlice().x, m_handSprite->GetSlice().y, UnitPixel);
+
+		graphics->ResetTransform();
+	}
+
 }
 
 CGun::CGun()
 	: m_owner(nullptr)
+	, m_flipbookPlayer(nullptr)
+	, m_handSprite(nullptr)
 	, m_bIsInfiniteBullet(true)
-	//, m_fireType(SEMIAUTO)
 	, m_gunState(GUN_STATE::IDLE)
 	, m_fireDelay(0.3f)
 	, m_fireTime(0.f)
@@ -152,7 +256,10 @@ CGun::CGun()
 	, m_maxBullets(350)
 	, m_bulletSpread(0.f)
 	, m_knockback(0.f)
+	, m_magnification(2.f)
+	, m_isRightHand(false)
 {
+	m_handSprite = CAssetMgr::GetInst()->LoadSprite(L"rogue_hand_001", L"Sprite\\SpaceRogue\\rogue_hand\\rogue_hand_001.sprite");
 }
 
 CGun::~CGun()
