@@ -9,7 +9,7 @@ struct cmp {
     bool operator()(CObj* a, CObj* b)
     {
         if (a->GetLayerType() == b->GetLayerType()) {
-            return a->GetPos().y > b->GetPos().y;
+            return a->GetPos().y + a->GetRenderOffset() > b->GetPos().y + b->GetRenderOffset();
         }
         
         bool isAUi = (int)a->GetLayerType() > (int)LAYER_TYPE::UIS;
@@ -18,7 +18,7 @@ struct cmp {
         if (isAUi != isBUi)
             return isAUi;
 
-        return a->GetPos().y > b->GetPos().y;
+        return a->GetPos().y + a->GetRenderOffset() > b->GetPos().y + b->GetRenderOffset();
     }
 };
 
