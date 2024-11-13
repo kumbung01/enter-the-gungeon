@@ -22,7 +22,7 @@ private:
 	map<ULONGLONG, bool>	m_ColInfo;
 
 public:
-	void CollisionCheck(LAYER_TYPE _Left, LAYER_TYPE _Right);
+	void CollisionCheck(LAYER_TYPE _Left, LAYER_TYPE _Right, bool set=true);
 	void CollisionCheckClear() { memset(m_Matrix, 0, sizeof(UINT) * (UINT)LAYER_TYPE::END); m_ColInfo.clear(); }
 
 private:
