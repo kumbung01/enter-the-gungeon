@@ -1,0 +1,14 @@
+[KEY]
+Rust_Sidearm_reload_001
+[PATH]
+Sprite/Weapon/Rust_Sidearm_reload/Rust_Sidearm_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+439, 117
+[SLICE]
+18, 10
+[OFFSET]
+0, 0

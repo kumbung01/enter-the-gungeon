@@ -1,0 +1,15 @@
+[KEY]
+skullGun_reload
+[PATH]
+Flipbook/Weapon/skullGun_reload.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+skullGun_reload_002
+[PATH]
+Sprite/Weapon/skullGun_reload/skullGun_reload_002.sprite
+
+
+

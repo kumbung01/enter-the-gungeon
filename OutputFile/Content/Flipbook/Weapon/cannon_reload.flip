@@ -1,0 +1,15 @@
+[KEY]
+cannon_reload
+[PATH]
+Flipbook/Weapon/cannon_reload.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+cannon_reload_001
+[PATH]
+Sprite/Weapon/cannon_reload/cannon_reload_001.sprite
+
+
+

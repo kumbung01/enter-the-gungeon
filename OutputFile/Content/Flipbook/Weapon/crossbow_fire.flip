@@ -1,0 +1,15 @@
+[KEY]
+crossbow_fire
+[PATH]
+Flipbook/Weapon/crossbow_fire.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+crossbow_fire_005
+[PATH]
+Sprite/Weapon/crossbow_fire/crossbow_fire_005.sprite
+
+
+

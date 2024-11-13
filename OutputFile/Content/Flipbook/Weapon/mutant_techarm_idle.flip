@@ -1,0 +1,15 @@
+[KEY]
+mutant_techarm_idle
+[PATH]
+Flipbook/Weapon/mutant_techarm_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+mutant_techarm_idle_004
+[PATH]
+Sprite/Weapon/mutant_techarm_idle/mutant_techarm_idle_004.sprite
+
+
+

@@ -1,0 +1,14 @@
+[KEY]
+stinger_fire_005
+[PATH]
+Sprite/Weapon/stinger_fire/stinger_fire_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+138, 62
+[SLICE]
+32, 13
+[OFFSET]
+0, 0

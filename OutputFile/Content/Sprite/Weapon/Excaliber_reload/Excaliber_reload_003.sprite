@@ -1,0 +1,14 @@
+[KEY]
+Excaliber_reload_003
+[PATH]
+Sprite/Weapon/Excaliber_reload/Excaliber_reload_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+36, 42
+[SLICE]
+36, 14
+[OFFSET]
+0, 0

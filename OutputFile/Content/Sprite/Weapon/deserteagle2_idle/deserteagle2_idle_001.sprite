@@ -1,0 +1,14 @@
+[KEY]
+deserteagle2_idle_001
+[PATH]
+Sprite/Weapon/deserteagle2_idle/deserteagle2_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+478, 168
+[SLICE]
+16, 12
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+looper_idle
+[PATH]
+Flipbook/Weapon/looper_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+looper_idle_001
+[PATH]
+Sprite/Weapon/looper_idle/looper_idle_001.sprite
+
+
+

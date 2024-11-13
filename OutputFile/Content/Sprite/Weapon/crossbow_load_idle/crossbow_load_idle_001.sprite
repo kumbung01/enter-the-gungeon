@@ -1,0 +1,14 @@
+[KEY]
+crossbow_load_idle_001
+[PATH]
+Sprite/Weapon/crossbow_load_idle/crossbow_load_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+379, 231
+[SLICE]
+21, 7
+[OFFSET]
+0, 0

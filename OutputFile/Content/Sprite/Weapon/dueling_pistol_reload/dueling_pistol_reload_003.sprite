@@ -1,0 +1,14 @@
+[KEY]
+dueling_pistol_reload_003
+[PATH]
+Sprite/Weapon/dueling_pistol_reload/dueling_pistol_reload_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+398, 439
+[SLICE]
+18, 9
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+quick_buster_idle
+[PATH]
+Flipbook/Weapon/quick_buster_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+quick_buster_idle_001
+[PATH]
+Sprite/Weapon/quick_buster_idle/quick_buster_idle_001.sprite
+
+
+

@@ -1,0 +1,14 @@
+[KEY]
+missile_launcher_fire_003
+[PATH]
+Sprite/Weapon/missile_launcher_fire/missile_launcher_fire_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+171, 52
+[SLICE]
+31, 12
+[OFFSET]
+0, 0

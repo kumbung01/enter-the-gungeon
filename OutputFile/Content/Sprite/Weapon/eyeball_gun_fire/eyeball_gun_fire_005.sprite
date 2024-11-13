@@ -1,0 +1,14 @@
+[KEY]
+eyeball_gun_fire_005
+[PATH]
+Sprite/Weapon/eyeball_gun_fire/eyeball_gun_fire_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+173, 476
+[SLICE]
+10, 6
+[OFFSET]
+0, 0

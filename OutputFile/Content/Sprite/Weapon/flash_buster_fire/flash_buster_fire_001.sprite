@@ -1,0 +1,14 @@
+[KEY]
+flash_buster_fire_001
+[PATH]
+Sprite/Weapon/flash_buster_fire/flash_buster_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+105, 387
+[SLICE]
+9, 10
+[OFFSET]
+0, 0

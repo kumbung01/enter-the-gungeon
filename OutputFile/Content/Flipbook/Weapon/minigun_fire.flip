@@ -1,0 +1,15 @@
+[KEY]
+minigun_fire
+[PATH]
+Flipbook/Weapon/minigun_fire.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+minigun_fire_002
+[PATH]
+Sprite/Weapon/minigun_fire/minigun_fire_002.sprite
+
+
+

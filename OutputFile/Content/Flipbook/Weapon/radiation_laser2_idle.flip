@@ -1,0 +1,15 @@
+[KEY]
+radiation_laser2_idle
+[PATH]
+Flipbook/Weapon/radiation_laser2_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+radiation_laser2_idle_001
+[PATH]
+Sprite/Weapon/radiation_laser2_idle/radiation_laser2_idle_001.sprite
+
+
+

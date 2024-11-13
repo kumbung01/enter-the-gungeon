@@ -1,0 +1,15 @@
+[KEY]
+plasma_rifle_idle
+[PATH]
+Flipbook/Weapon/plasma_rifle_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+plasma_rifle_idle_004
+[PATH]
+Sprite/Weapon/plasma_rifle_idle/plasma_rifle_idle_004.sprite
+
+
+

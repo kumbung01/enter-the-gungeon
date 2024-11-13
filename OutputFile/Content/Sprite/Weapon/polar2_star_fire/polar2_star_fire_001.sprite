@@ -1,0 +1,14 @@
+[KEY]
+polar2_star_fire_001
+[PATH]
+Sprite/Weapon/polar2_star_fire/polar2_star_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+104, 329
+[SLICE]
+26, 11
+[OFFSET]
+0, 0

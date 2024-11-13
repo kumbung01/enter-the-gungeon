@@ -1,0 +1,14 @@
+[KEY]
+cactus2_gun_idle_006
+[PATH]
+Sprite/Weapon/cactus2_gun_idle/cactus2_gun_idle_006.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+81, 289
+[SLICE]
+27, 15
+[OFFSET]
+0, 0

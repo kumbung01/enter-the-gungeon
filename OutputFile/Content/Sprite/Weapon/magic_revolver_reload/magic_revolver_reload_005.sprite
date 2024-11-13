@@ -1,0 +1,14 @@
+[KEY]
+magic_revolver_reload_005
+[PATH]
+Sprite/Weapon/magic_revolver_reload/magic_revolver_reload_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+302, 482
+[SLICE]
+15, 15
+[OFFSET]
+0, 0

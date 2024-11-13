@@ -1,0 +1,15 @@
+[KEY]
+pulsehandgun2_idle
+[PATH]
+Flipbook/Weapon/pulsehandgun2_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+pulsehandgun2_idle_001
+[PATH]
+Sprite/Weapon/pulsehandgun2_idle/pulsehandgun2_idle_001.sprite
+
+
+

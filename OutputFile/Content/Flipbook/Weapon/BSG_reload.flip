@@ -1,0 +1,15 @@
+[KEY]
+BSG_reload
+[PATH]
+Flipbook/Weapon/BSG_reload.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+BSG_reload_003
+[PATH]
+Sprite/Weapon/BSG_reload/BSG_reload_003.sprite
+
+
+

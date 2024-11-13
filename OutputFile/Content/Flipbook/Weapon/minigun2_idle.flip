@@ -1,0 +1,15 @@
+[KEY]
+minigun2_idle
+[PATH]
+Flipbook/Weapon/minigun2_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+minigun2_idle_001
+[PATH]
+Sprite/Weapon/minigun2_idle/minigun2_idle_001.sprite
+
+
+

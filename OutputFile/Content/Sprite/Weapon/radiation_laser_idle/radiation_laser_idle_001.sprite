@@ -1,0 +1,14 @@
+[KEY]
+radiation_laser_idle_001
+[PATH]
+Sprite/Weapon/radiation_laser_idle/radiation_laser_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+365, 155
+[SLICE]
+14, 9
+[OFFSET]
+0, 0

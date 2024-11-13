@@ -1,0 +1,14 @@
+[KEY]
+rpg_reload_003
+[PATH]
+Sprite/Weapon/rpg_reload/rpg_reload_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+263, 226
+[SLICE]
+27, 10
+[OFFSET]
+0, 0

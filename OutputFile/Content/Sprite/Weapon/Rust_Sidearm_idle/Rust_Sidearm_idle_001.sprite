@@ -1,0 +1,14 @@
+[KEY]
+Rust_Sidearm_idle_001
+[PATH]
+Sprite/Weapon/Rust_Sidearm_idle/Rust_Sidearm_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+439, 127
+[SLICE]
+18, 10
+[OFFSET]
+0, 0

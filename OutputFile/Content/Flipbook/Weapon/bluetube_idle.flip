@@ -1,0 +1,15 @@
+[KEY]
+bluetube_idle
+[PATH]
+Flipbook/Weapon/bluetube_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+bluetube_idle_001
+[PATH]
+Sprite/Weapon/bluetube_idle/bluetube_idle_001.sprite
+
+
+

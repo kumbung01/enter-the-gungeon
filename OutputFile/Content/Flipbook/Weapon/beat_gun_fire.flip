@@ -1,0 +1,15 @@
+[KEY]
+beat_gun_fire
+[PATH]
+Flipbook/Weapon/beat_gun_fire.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+beat_gun_fire_003
+[PATH]
+Sprite/Weapon/beat_gun_fire/beat_gun_fire_003.sprite
+
+
+

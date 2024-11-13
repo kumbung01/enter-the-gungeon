@@ -1,0 +1,15 @@
+[KEY]
+radiation_laser_reload
+[PATH]
+Flipbook/Weapon/radiation_laser_reload.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+radiation_laser_reload_001
+[PATH]
+Sprite/Weapon/radiation_laser_reload/radiation_laser_reload_001.sprite
+
+
+

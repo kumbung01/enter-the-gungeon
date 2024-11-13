@@ -1,0 +1,15 @@
+[KEY]
+caster_idle
+[PATH]
+Flipbook/Weapon/caster_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+caster_idle_001
+[PATH]
+Sprite/Weapon/caster_idle/caster_idle_001.sprite
+
+
+

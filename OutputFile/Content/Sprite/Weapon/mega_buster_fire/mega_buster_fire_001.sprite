@@ -1,0 +1,14 @@
+[KEY]
+mega_buster_fire_001
+[PATH]
+Sprite/Weapon/mega_buster_fire/mega_buster_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+509, 240
+[SLICE]
+9, 10
+[OFFSET]
+0, 0

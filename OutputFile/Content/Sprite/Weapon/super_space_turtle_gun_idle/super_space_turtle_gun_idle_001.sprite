@@ -1,0 +1,14 @@
+[KEY]
+super_space_turtle_gun_idle_001
+[PATH]
+Sprite/Weapon/super_space_turtle_gun_idle/super_space_turtle_gun_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+36, 67
+[SLICE]
+4, 3
+[OFFSET]
+0, 0

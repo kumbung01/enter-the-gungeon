@@ -1,0 +1,14 @@
+[KEY]
+yari_rocket_launcher_fire_002
+[PATH]
+Sprite/Weapon/yari_rocket_launcher_fire/yari_rocket_launcher_fire_002.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+27, 280
+[SLICE]
+27, 9
+[OFFSET]
+0, 0

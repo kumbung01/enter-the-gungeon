@@ -1,0 +1,15 @@
+[KEY]
+blunderbuss2_idle
+[PATH]
+Flipbook/Weapon/blunderbuss2_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+blunderbuss2_idle_001
+[PATH]
+Sprite/Weapon/blunderbuss2_idle/blunderbuss2_idle_001.sprite
+
+
+

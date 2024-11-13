@@ -1,0 +1,15 @@
+[KEY]
+missile_launcher_idle
+[PATH]
+Flipbook/Weapon/missile_launcher_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+missile_launcher_idle_001
+[PATH]
+Sprite/Weapon/missile_launcher_idle/missile_launcher_idle_001.sprite
+
+
+

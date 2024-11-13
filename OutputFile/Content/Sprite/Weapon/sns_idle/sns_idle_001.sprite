@@ -1,0 +1,14 @@
+[KEY]
+sns_idle_001
+[PATH]
+Sprite/Weapon/sns_idle/sns_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+210, 495
+[SLICE]
+13, 10
+[OFFSET]
+0, 0

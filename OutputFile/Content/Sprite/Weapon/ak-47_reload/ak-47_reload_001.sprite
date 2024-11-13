@@ -1,0 +1,14 @@
+[KEY]
+ak-47_reload_001
+[PATH]
+Sprite/Weapon/ak-47_reload/ak-47_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+80, 307
+[SLICE]
+26, 10
+[OFFSET]
+0, 0

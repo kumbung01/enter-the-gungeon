@@ -1,0 +1,14 @@
+[KEY]
+mummy_gun_fire_001
+[PATH]
+Sprite/Weapon/mummy_gun_fire/mummy_gun_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+345, 342
+[SLICE]
+22, 11
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+awp_fire
+[PATH]
+Flipbook/Weapon/awp_fire.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+awp_fire_004
+[PATH]
+Sprite/Weapon/awp_fire/awp_fire_004.sprite
+
+
+

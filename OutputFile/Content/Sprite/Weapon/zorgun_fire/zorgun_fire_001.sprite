@@ -1,0 +1,14 @@
+[KEY]
+zorgun_fire_001
+[PATH]
+Sprite/Weapon/zorgun_fire/zorgun_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+341, 245
+[SLICE]
+23, 15
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+charm_bow_fire_005
+[PATH]
+Sprite/Weapon/charm_bow_fire/charm_bow_fire_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+305, 251
+[SLICE]
+4, 19
+[OFFSET]
+0, 0

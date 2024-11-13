@@ -1,0 +1,14 @@
+[KEY]
+magnum_enemy_fire_004
+[PATH]
+Sprite/Weapon/magnum_enemy_fire/magnum_enemy_fire_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+290, 497
+[SLICE]
+12, 11
+[OFFSET]
+0, 0

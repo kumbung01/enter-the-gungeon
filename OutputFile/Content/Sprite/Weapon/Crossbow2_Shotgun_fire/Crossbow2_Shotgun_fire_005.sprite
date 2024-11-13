@@ -1,0 +1,14 @@
+[KEY]
+Crossbow2_Shotgun_fire_005
+[PATH]
+Sprite/Weapon/Crossbow2_Shotgun_fire/Crossbow2_Shotgun_fire_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+234, 0
+[SLICE]
+29, 16
+[OFFSET]
+0, 0

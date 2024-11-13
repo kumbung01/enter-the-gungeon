@@ -1,0 +1,14 @@
+[KEY]
+sticky_crossbow_idle_001
+[PATH]
+Sprite/Weapon/sticky_crossbow_idle/sticky_crossbow_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+13, 506
+[SLICE]
+13, 10
+[OFFSET]
+0, 0

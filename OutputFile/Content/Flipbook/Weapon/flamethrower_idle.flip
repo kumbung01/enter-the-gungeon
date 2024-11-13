@@ -1,0 +1,15 @@
+[KEY]
+flamethrower_idle
+[PATH]
+Flipbook/Weapon/flamethrower_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+flamethrower_idle_001
+[PATH]
+Sprite/Weapon/flamethrower_idle/flamethrower_idle_001.sprite
+
+
+

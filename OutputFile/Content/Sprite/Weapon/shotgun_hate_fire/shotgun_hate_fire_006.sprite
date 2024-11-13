@@ -1,0 +1,14 @@
+[KEY]
+shotgun_hate_fire_006
+[PATH]
+Sprite/Weapon/shotgun_hate_fire/shotgun_hate_fire_006.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+263, 84
+[SLICE]
+28, 16
+[OFFSET]
+0, 0

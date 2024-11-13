@@ -1,0 +1,14 @@
+[KEY]
+yari_rocket_launcher_reload_007
+[PATH]
+Sprite/Weapon/yari_rocket_launcher_reload/yari_rocket_launcher_reload_007.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+27, 289
+[SLICE]
+27, 9
+[OFFSET]
+0, 0

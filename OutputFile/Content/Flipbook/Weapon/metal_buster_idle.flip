@@ -1,0 +1,15 @@
+[KEY]
+metal_buster_idle
+[PATH]
+Flipbook/Weapon/metal_buster_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+metal_buster_idle_001
+[PATH]
+Sprite/Weapon/metal_buster_idle/metal_buster_idle_001.sprite
+
+
+

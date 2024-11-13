@@ -1,0 +1,14 @@
+[KEY]
+AKey-47_2_idle_001
+[PATH]
+Sprite/Weapon/AKey-47_2_idle/AKey-47_2_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+291, 106
+[SLICE]
+27, 11
+[OFFSET]
+0, 0

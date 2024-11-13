@@ -1,0 +1,15 @@
+[KEY]
+ice_gun_fire
+[PATH]
+Flipbook/Weapon/ice_gun_fire.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+ice_gun_fire_001
+[PATH]
+Sprite/Weapon/ice_gun_fire/ice_gun_fire_001.sprite
+
+
+

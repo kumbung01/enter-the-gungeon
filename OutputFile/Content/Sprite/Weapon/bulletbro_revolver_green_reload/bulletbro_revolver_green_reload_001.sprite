@@ -1,0 +1,14 @@
+[KEY]
+bulletbro_revolver_green_reload_001
+[PATH]
+Sprite/Weapon/bulletbro_revolver_green_reload/bulletbro_revolver_green_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+0, 421
+[SLICE]
+19, 10
+[OFFSET]
+0, 0

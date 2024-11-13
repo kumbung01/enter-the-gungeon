@@ -1,0 +1,14 @@
+[KEY]
+deserteagle2_reload_008
+[PATH]
+Sprite/Weapon/deserteagle2_reload/deserteagle2_reload_008.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+169, 506
+[SLICE]
+10, 13
+[OFFSET]
+0, 0

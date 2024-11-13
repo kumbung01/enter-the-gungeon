@@ -1,0 +1,15 @@
+[KEY]
+yellow_blaster_idle
+[PATH]
+Flipbook/Weapon/yellow_blaster_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+yellow_blaster_idle_001
+[PATH]
+Sprite/Weapon/yellow_blaster_idle/yellow_blaster_idle_001.sprite
+
+
+

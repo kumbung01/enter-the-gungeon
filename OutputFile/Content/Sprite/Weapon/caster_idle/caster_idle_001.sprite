@@ -1,0 +1,14 @@
+[KEY]
+caster_idle_001
+[PATH]
+Sprite/Weapon/caster_idle/caster_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+443, 298
+[SLICE]
+18, 9
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+m249_fire
+[PATH]
+Flipbook/Weapon/m249_fire.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+m249_fire_001
+[PATH]
+Sprite/Weapon/m249_fire/m249_fire_001.sprite
+
+
+

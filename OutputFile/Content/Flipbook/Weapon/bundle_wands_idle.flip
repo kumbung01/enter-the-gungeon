@@ -1,0 +1,15 @@
+[KEY]
+bundle_wands_idle
+[PATH]
+Flipbook/Weapon/bundle_wands_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+bundle_wands_idle_001
+[PATH]
+Sprite/Weapon/bundle_wands_idle/bundle_wands_idle_001.sprite
+
+
+

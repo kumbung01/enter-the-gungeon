@@ -1,0 +1,14 @@
+[KEY]
+cannon_reload_001
+[PATH]
+Sprite/Weapon/cannon_reload/cannon_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+0, 400
+[SLICE]
+21, 21
+[OFFSET]
+0, 0

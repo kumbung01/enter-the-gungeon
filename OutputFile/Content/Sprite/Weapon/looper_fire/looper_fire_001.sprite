@@ -1,0 +1,14 @@
+[KEY]
+looper_fire_001
+[PATH]
+Sprite/Weapon/looper_fire/looper_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+84, 399
+[SLICE]
+21, 8
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+T_Shirt_Gun_idle
+[PATH]
+Flipbook/Weapon/T_Shirt_Gun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+T_Shirt_Gun_idle_001
+[PATH]
+Sprite/Weapon/T_Shirt_Gun_idle/T_Shirt_Gun_idle_001.sprite
+
+
+

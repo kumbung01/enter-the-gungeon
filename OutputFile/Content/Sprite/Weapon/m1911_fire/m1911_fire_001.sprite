@@ -1,0 +1,14 @@
+[KEY]
+m1911_fire_001
+[PATH]
+Sprite/Weapon/m1911_fire/m1911_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+438, 423
+[SLICE]
+17, 11
+[OFFSET]
+0, 0

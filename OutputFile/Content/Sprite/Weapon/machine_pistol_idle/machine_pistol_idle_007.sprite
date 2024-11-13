@@ -1,0 +1,14 @@
+[KEY]
+machine_pistol_idle_007
+[PATH]
+Sprite/Weapon/machine_pistol_idle/machine_pistol_idle_007.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+372, 506
+[SLICE]
+13, 13
+[OFFSET]
+0, 0

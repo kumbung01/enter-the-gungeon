@@ -1,0 +1,15 @@
+[KEY]
+SAA_fire
+[PATH]
+Flipbook/Weapon/SAA_fire.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+SAA_fire_002
+[PATH]
+Sprite/Weapon/SAA_fire/SAA_fire_002.sprite
+
+
+

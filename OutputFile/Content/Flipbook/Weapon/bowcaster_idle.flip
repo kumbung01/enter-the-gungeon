@@ -1,0 +1,15 @@
+[KEY]
+bowcaster_idle
+[PATH]
+Flipbook/Weapon/bowcaster_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+bowcaster_idle_001
+[PATH]
+Sprite/Weapon/bowcaster_idle/bowcaster_idle_001.sprite
+
+
+

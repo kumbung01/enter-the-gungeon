@@ -1,0 +1,15 @@
+[KEY]
+crossbow_load_idle
+[PATH]
+Flipbook/Weapon/crossbow_load_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+crossbow_load_idle_001
+[PATH]
+Sprite/Weapon/crossbow_load_idle/crossbow_load_idle_001.sprite
+
+
+

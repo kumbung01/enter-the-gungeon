@@ -1,0 +1,14 @@
+[KEY]
+burning2_hand_fire_001
+[PATH]
+Sprite/Weapon/burning2_hand_fire/burning2_hand_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+191, 123
+[SLICE]
+4, 11
+[OFFSET]
+0, 0

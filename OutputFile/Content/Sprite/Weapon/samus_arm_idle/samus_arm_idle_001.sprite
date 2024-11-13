@@ -1,0 +1,14 @@
+[KEY]
+samus_arm_idle_001
+[PATH]
+Sprite/Weapon/samus_arm_idle/samus_arm_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+461, 288
+[SLICE]
+17, 9
+[OFFSET]
+0, 0

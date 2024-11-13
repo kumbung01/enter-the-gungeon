@@ -1,0 +1,15 @@
+[KEY]
+sns_idle
+[PATH]
+Flipbook/Weapon/sns_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+sns_idle_001
+[PATH]
+Sprite/Weapon/sns_idle/sns_idle_001.sprite
+
+
+

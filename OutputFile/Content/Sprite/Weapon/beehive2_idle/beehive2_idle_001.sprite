@@ -1,0 +1,14 @@
+[KEY]
+beehive2_idle_001
+[PATH]
+Sprite/Weapon/beehive2_idle/beehive2_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+280, 454
+[SLICE]
+17, 12
+[OFFSET]
+0, 0

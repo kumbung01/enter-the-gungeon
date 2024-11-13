@@ -1,0 +1,14 @@
+[KEY]
+cannon_fire_003
+[PATH]
+Sprite/Weapon/cannon_fire/cannon_fire_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+263, 116
+[SLICE]
+28, 15
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+zapper_fire_001
+[PATH]
+Sprite/Weapon/zapper_fire/zapper_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+365, 164
+[SLICE]
+14, 12
+[OFFSET]
+0, 0

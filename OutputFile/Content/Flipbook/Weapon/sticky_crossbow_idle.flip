@@ -1,0 +1,15 @@
+[KEY]
+sticky_crossbow_idle
+[PATH]
+Flipbook/Weapon/sticky_crossbow_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+sticky_crossbow_idle_001
+[PATH]
+Sprite/Weapon/sticky_crossbow_idle/sticky_crossbow_idle_001.sprite
+
+
+

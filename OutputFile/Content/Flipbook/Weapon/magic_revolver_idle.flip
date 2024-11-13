@@ -1,0 +1,15 @@
+[KEY]
+magic_revolver_idle
+[PATH]
+Flipbook/Weapon/magic_revolver_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+magic_revolver_idle_001
+[PATH]
+Sprite/Weapon/magic_revolver_idle/magic_revolver_idle_001.sprite
+
+
+

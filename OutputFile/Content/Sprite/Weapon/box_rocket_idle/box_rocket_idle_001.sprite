@@ -1,0 +1,14 @@
+[KEY]
+box_rocket_idle_001
+[PATH]
+Sprite/Weapon/box_rocket_idle/box_rocket_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+84, 266
+[SLICE]
+27, 14
+[OFFSET]
+0, 0

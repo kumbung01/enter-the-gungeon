@@ -1,0 +1,14 @@
+[KEY]
+blunderbuss_fire_004
+[PATH]
+Sprite/Weapon/blunderbuss_fire/blunderbuss_fire_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+60, 224
+[SLICE]
+30, 8
+[OFFSET]
+0, 0

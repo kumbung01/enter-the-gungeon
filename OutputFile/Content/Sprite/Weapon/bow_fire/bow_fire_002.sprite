@@ -1,0 +1,14 @@
+[KEY]
+bow_fire_002
+[PATH]
+Sprite/Weapon/bow_fire/bow_fire_002.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+254, 132
+[SLICE]
+7, 19
+[OFFSET]
+0, 0

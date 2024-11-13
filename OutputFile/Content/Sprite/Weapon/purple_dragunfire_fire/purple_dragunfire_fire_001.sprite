@@ -1,0 +1,14 @@
+[KEY]
+purple_dragunfire_fire_001
+[PATH]
+Sprite/Weapon/purple_dragunfire_fire/purple_dragunfire_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+315, 408
+[SLICE]
+20, 13
+[OFFSET]
+0, 0

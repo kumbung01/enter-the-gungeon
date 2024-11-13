@@ -1,0 +1,15 @@
+[KEY]
+eyeball_sgun_idle
+[PATH]
+Flipbook/Weapon/eyeball_sgun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+eyeball_sgun_idle_001
+[PATH]
+Sprite/Weapon/eyeball_sgun_idle/eyeball_sgun_idle_001.sprite
+
+
+

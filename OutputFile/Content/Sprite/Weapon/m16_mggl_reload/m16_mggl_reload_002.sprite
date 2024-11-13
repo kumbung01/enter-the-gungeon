@@ -1,0 +1,14 @@
+[KEY]
+m16_mggl_reload_002
+[PATH]
+Sprite/Weapon/m16_mggl_reload/m16_mggl_reload_002.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+34, 81
+[SLICE]
+34, 15
+[OFFSET]
+0, 0

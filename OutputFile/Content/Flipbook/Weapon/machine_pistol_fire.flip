@@ -1,0 +1,15 @@
+[KEY]
+machine_pistol_fire
+[PATH]
+Flipbook/Weapon/machine_pistol_fire.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+machine_pistol_fire_001
+[PATH]
+Sprite/Weapon/machine_pistol_fire/machine_pistol_fire_001.sprite
+
+
+

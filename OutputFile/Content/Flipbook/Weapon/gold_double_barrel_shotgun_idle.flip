@@ -1,0 +1,15 @@
+[KEY]
+gold_double_barrel_shotgun_idle
+[PATH]
+Flipbook/Weapon/gold_double_barrel_shotgun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+gold_double_barrel_shotgun_idle_001
+[PATH]
+Sprite/Weapon/gold_double_barrel_shotgun_idle/gold_double_barrel_shotgun_idle_001.sprite
+
+
+

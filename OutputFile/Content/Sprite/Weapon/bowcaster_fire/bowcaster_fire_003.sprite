@@ -1,0 +1,14 @@
+[KEY]
+bowcaster_fire_003
+[PATH]
+Sprite/Weapon/bowcaster_fire/bowcaster_fire_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+316, 223
+[SLICE]
+25, 13
+[OFFSET]
+0, 0

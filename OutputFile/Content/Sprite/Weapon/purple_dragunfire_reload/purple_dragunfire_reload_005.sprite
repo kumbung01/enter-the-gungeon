@@ -1,0 +1,14 @@
+[KEY]
+purple_dragunfire_reload_005
+[PATH]
+Sprite/Weapon/purple_dragunfire_reload/purple_dragunfire_reload_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+294, 408
+[SLICE]
+21, 13
+[OFFSET]
+0, 0

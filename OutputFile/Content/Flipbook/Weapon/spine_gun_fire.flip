@@ -1,0 +1,15 @@
+[KEY]
+spine_gun_fire
+[PATH]
+Flipbook/Weapon/spine_gun_fire.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+spine_gun_fire_001
+[PATH]
+Sprite/Weapon/spine_gun_fire/spine_gun_fire_001.sprite
+
+
+

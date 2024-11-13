@@ -1,0 +1,14 @@
+[KEY]
+knav3_fire_001
+[PATH]
+Sprite/Weapon/knav3_fire/knav3_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+314, 497
+[SLICE]
+12, 12
+[OFFSET]
+0, 0

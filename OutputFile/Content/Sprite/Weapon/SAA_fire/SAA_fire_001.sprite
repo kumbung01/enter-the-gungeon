@@ -1,0 +1,14 @@
+[KEY]
+SAA_fire_001
+[PATH]
+Sprite/Weapon/SAA_fire/SAA_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+365, 188
+[SLICE]
+14, 10
+[OFFSET]
+0, 0

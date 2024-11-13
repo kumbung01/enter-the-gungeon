@@ -1,0 +1,15 @@
+[KEY]
+stinger_fire
+[PATH]
+Flipbook/Weapon/stinger_fire.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+stinger_fire_003
+[PATH]
+Sprite/Weapon/stinger_fire/stinger_fire_003.sprite
+
+
+

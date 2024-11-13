@@ -1,0 +1,15 @@
+[KEY]
+awp2_idle
+[PATH]
+Flipbook/Weapon/awp2_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+awp2_idle_001
+[PATH]
+Sprite/Weapon/awp2_idle/awp2_idle_001.sprite
+
+
+

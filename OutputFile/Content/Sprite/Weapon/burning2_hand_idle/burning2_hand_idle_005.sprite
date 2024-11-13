@@ -1,0 +1,14 @@
+[KEY]
+burning2_hand_idle_005
+[PATH]
+Sprite/Weapon/burning2_hand_idle/burning2_hand_idle_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+499, 476
+[SLICE]
+10, 13
+[OFFSET]
+0, 0

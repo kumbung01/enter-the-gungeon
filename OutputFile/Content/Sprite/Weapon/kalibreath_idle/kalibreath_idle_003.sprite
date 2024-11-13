@@ -1,0 +1,14 @@
+[KEY]
+kalibreath_idle_003
+[PATH]
+Sprite/Weapon/kalibreath_idle/kalibreath_idle_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+381, 386
+[SLICE]
+21, 13
+[OFFSET]
+0, 0

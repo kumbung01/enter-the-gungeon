@@ -1,0 +1,15 @@
+[KEY]
+klobb_idle
+[PATH]
+Flipbook/Weapon/klobb_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+klobb_idle_001
+[PATH]
+Sprite/Weapon/klobb_idle/klobb_idle_001.sprite
+
+
+

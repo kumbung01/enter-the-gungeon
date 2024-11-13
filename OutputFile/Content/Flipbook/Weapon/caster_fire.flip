@@ -1,0 +1,15 @@
+[KEY]
+caster_fire
+[PATH]
+Flipbook/Weapon/caster_fire.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+caster_fire_002
+[PATH]
+Sprite/Weapon/caster_fire/caster_fire_002.sprite
+
+
+

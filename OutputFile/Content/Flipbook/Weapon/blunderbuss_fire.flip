@@ -1,0 +1,15 @@
+[KEY]
+blunderbuss_fire
+[PATH]
+Flipbook/Weapon/blunderbuss_fire.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+blunderbuss_fire_003
+[PATH]
+Sprite/Weapon/blunderbuss_fire/blunderbuss_fire_003.sprite
+
+
+

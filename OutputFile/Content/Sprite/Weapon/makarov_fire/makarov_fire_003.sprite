@@ -1,0 +1,14 @@
+[KEY]
+makarov_fire_003
+[PATH]
+Sprite/Weapon/makarov_fire/makarov_fire_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+95, 486
+[SLICE]
+15, 10
+[OFFSET]
+0, 0

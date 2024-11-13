@@ -1,0 +1,14 @@
+[KEY]
+tommygun2_reload_003
+[PATH]
+Sprite/Weapon/tommygun2_reload/tommygun2_reload_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+406, 134
+[SLICE]
+20, 13
+[OFFSET]
+0, 0

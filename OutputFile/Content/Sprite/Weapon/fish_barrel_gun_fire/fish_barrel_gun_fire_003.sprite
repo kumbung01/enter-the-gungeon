@@ -1,0 +1,14 @@
+[KEY]
+fish_barrel_gun_fire_003
+[PATH]
+Sprite/Weapon/fish_barrel_gun_fire/fish_barrel_gun_fire_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+28, 497
+[SLICE]
+13, 9
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+m1_rifle2_fire_001
+[PATH]
+Sprite/Weapon/m1_rifle2_fire/m1_rifle2_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+181, 204
+[SLICE]
+30, 10
+[OFFSET]
+0, 0

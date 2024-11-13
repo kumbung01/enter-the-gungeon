@@ -1,0 +1,14 @@
+[KEY]
+looper_idle_001
+[PATH]
+Sprite/Weapon/looper_idle/looper_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+155, 191
+[SLICE]
+23, 6
+[OFFSET]
+0, 0

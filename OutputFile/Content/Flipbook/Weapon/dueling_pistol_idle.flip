@@ -1,0 +1,15 @@
+[KEY]
+dueling_pistol_idle
+[PATH]
+Flipbook/Weapon/dueling_pistol_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+dueling_pistol_idle_001
+[PATH]
+Sprite/Weapon/dueling_pistol_idle/dueling_pistol_idle_001.sprite
+
+
+

@@ -1,0 +1,14 @@
+[KEY]
+bolt2_rifle_fire_003
+[PATH]
+Sprite/Weapon/bolt2_rifle_fire/bolt2_rifle_fire_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+189, 398
+[SLICE]
+21, 17
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+space_shotgun_reload_001
+[PATH]
+Sprite/Weapon/space_shotgun_reload/space_shotgun_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+421, 380
+[SLICE]
+19, 11
+[OFFSET]
+0, 0

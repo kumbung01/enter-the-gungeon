@@ -1,0 +1,14 @@
+[KEY]
+fish_barrel_gun_reload_001
+[PATH]
+Sprite/Weapon/fish_barrel_gun_reload/fish_barrel_gun_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+426, 143
+[SLICE]
+13, 15
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+cactus_gun_idle
+[PATH]
+Flipbook/Weapon/cactus_gun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+cactus_gun_idle_003
+[PATH]
+Sprite/Weapon/cactus_gun_idle/cactus_gun_idle_003.sprite
+
+
+

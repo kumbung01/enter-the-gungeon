@@ -1,0 +1,14 @@
+[KEY]
+screech_gun_fire_005
+[PATH]
+Sprite/Weapon/screech_gun_fire/screech_gun_fire_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+419, 424
+[SLICE]
+18, 8
+[OFFSET]
+0, 0

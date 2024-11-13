@@ -1,0 +1,14 @@
+[KEY]
+dragonbreath_reload_003
+[PATH]
+Sprite/Weapon/dragonbreath_reload/dragonbreath_reload_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+379, 41
+[SLICE]
+21, 16
+[OFFSET]
+0, 0

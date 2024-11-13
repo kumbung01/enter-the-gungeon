@@ -1,0 +1,14 @@
+[KEY]
+skullGun_reload_003
+[PATH]
+Sprite/Weapon/skullGun_reload/skullGun_reload_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+367, 22
+[SLICE]
+12, 19
+[OFFSET]
+0, 0

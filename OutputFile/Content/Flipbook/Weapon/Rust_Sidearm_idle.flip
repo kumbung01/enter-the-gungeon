@@ -1,0 +1,15 @@
+[KEY]
+Rust_Sidearm_idle
+[PATH]
+Flipbook/Weapon/Rust_Sidearm_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+Rust_Sidearm_idle_001
+[PATH]
+Sprite/Weapon/Rust_Sidearm_idle/Rust_Sidearm_idle_001.sprite
+
+
+

@@ -1,0 +1,15 @@
+[KEY]
+m1_rifle_reload
+[PATH]
+Flipbook/Weapon/m1_rifle_reload.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+m1_rifle_reload_001
+[PATH]
+Sprite/Weapon/m1_rifle_reload/m1_rifle_reload_001.sprite
+
+
+

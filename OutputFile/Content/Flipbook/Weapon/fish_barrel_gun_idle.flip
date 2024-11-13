@@ -1,0 +1,15 @@
+[KEY]
+fish_barrel_gun_idle
+[PATH]
+Flipbook/Weapon/fish_barrel_gun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+fish_barrel_gun_idle_001
+[PATH]
+Sprite/Weapon/fish_barrel_gun_idle/fish_barrel_gun_idle_001.sprite
+
+
+

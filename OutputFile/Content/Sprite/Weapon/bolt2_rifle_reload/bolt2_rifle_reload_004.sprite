@@ -1,0 +1,14 @@
+[KEY]
+bolt2_rifle_reload_004
+[PATH]
+Sprite/Weapon/bolt2_rifle_reload/bolt2_rifle_reload_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+274, 335
+[SLICE]
+24, 12
+[OFFSET]
+0, 0

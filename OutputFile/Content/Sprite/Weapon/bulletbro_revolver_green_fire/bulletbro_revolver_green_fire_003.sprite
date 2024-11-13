@@ -1,0 +1,14 @@
+[KEY]
+bulletbro_revolver_green_fire_003
+[PATH]
+Sprite/Weapon/bulletbro_revolver_green_fire/bulletbro_revolver_green_fire_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+34, 454
+[SLICE]
+17, 12
+[OFFSET]
+0, 0

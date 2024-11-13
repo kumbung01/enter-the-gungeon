@@ -1,0 +1,15 @@
+[KEY]
+caster_reload
+[PATH]
+Flipbook/Weapon/caster_reload.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+caster_reload_001
+[PATH]
+Sprite/Weapon/caster_reload/caster_reload_001.sprite
+
+
+

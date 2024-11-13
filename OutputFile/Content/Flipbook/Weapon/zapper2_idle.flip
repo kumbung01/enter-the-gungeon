@@ -1,0 +1,15 @@
+[KEY]
+zapper2_idle
+[PATH]
+Flipbook/Weapon/zapper2_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+zapper2_idle_001
+[PATH]
+Sprite/Weapon/zapper2_idle/zapper2_idle_001.sprite
+
+
+

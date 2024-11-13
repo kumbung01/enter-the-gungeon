@@ -1,0 +1,14 @@
+[KEY]
+beholster_gun_reload_007
+[PATH]
+Sprite/Weapon/beholster_gun_reload/beholster_gun_reload_007.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+342, 159
+[SLICE]
+23, 12
+[OFFSET]
+0, 0

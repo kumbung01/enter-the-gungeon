@@ -1,0 +1,15 @@
+[KEY]
+beholster_gun_reload
+[PATH]
+Flipbook/Weapon/beholster_gun_reload.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+beholster_gun_reload_001
+[PATH]
+Sprite/Weapon/beholster_gun_reload/beholster_gun_reload_001.sprite
+
+
+

@@ -1,0 +1,15 @@
+[KEY]
+bowcaster2_fire
+[PATH]
+Flipbook/Weapon/bowcaster2_fire.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+bowcaster2_fire_001
+[PATH]
+Sprite/Weapon/bowcaster2_fire/bowcaster2_fire_001.sprite
+
+
+

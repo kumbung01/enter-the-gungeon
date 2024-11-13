@@ -1,0 +1,14 @@
+[KEY]
+sns_reload_001
+[PATH]
+Sprite/Weapon/sns_reload/sns_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+480, 502
+[SLICE]
+11, 13
+[OFFSET]
+0, 0

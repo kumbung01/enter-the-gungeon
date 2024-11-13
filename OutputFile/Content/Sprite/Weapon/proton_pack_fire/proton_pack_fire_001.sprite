@@ -1,0 +1,14 @@
+[KEY]
+proton_pack_fire_001
+[PATH]
+Sprite/Weapon/proton_pack_fire/proton_pack_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+226, 439
+[SLICE]
+17, 7
+[OFFSET]
+0, 0

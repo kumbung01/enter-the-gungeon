@@ -1,0 +1,14 @@
+[KEY]
+Mac10_fire_001
+[PATH]
+Sprite/Weapon/Mac10_fire/Mac10_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+201, 353
+[SLICE]
+23, 14
+[OFFSET]
+0, 0

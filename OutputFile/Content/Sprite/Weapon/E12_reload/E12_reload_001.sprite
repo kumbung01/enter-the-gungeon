@@ -1,0 +1,14 @@
+[KEY]
+E12_reload_001
+[PATH]
+Sprite/Weapon/E12_reload/E12_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+91, 197
+[SLICE]
+30, 13
+[OFFSET]
+0, 0

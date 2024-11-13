@@ -1,0 +1,15 @@
+[KEY]
+zorgun_idle
+[PATH]
+Flipbook/Weapon/zorgun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+zorgun_idle_001
+[PATH]
+Sprite/Weapon/zorgun_idle/zorgun_idle_001.sprite
+
+
+

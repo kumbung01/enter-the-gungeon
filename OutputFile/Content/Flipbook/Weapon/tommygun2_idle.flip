@@ -1,0 +1,15 @@
+[KEY]
+tommygun2_idle
+[PATH]
+Flipbook/Weapon/tommygun2_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+tommygun2_idle_001
+[PATH]
+Sprite/Weapon/tommygun2_idle/tommygun2_idle_001.sprite
+
+
+

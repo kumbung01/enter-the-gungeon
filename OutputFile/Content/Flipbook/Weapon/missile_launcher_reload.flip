@@ -1,0 +1,15 @@
+[KEY]
+missile_launcher_reload
+[PATH]
+Flipbook/Weapon/missile_launcher_reload.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+missile_launcher_reload_004
+[PATH]
+Sprite/Weapon/missile_launcher_reload/missile_launcher_reload_004.sprite
+
+
+

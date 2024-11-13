@@ -1,0 +1,14 @@
+[KEY]
+proton_pack_idle_001
+[PATH]
+Sprite/Weapon/proton_pack_idle/proton_pack_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+209, 439
+[SLICE]
+17, 7
+[OFFSET]
+0, 0

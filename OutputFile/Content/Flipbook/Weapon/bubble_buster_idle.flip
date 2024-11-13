@@ -1,0 +1,15 @@
+[KEY]
+bubble_buster_idle
+[PATH]
+Flipbook/Weapon/bubble_buster_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+bubble_buster_idle_001
+[PATH]
+Sprite/Weapon/bubble_buster_idle/bubble_buster_idle_001.sprite
+
+
+

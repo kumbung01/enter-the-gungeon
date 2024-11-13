@@ -1,0 +1,14 @@
+[KEY]
+polar_star_reload_001
+[PATH]
+Sprite/Weapon/polar_star_reload/polar_star_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+372, 477
+[SLICE]
+15, 13
+[OFFSET]
+0, 0

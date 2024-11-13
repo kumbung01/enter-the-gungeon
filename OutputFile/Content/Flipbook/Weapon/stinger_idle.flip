@@ -1,0 +1,15 @@
+[KEY]
+stinger_idle
+[PATH]
+Flipbook/Weapon/stinger_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+stinger_idle_001
+[PATH]
+Sprite/Weapon/stinger_idle/stinger_idle_001.sprite
+
+
+

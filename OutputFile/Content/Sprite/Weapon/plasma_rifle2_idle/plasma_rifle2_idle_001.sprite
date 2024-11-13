@@ -1,0 +1,14 @@
+[KEY]
+plasma_rifle2_idle_001
+[PATH]
+Sprite/Weapon/plasma_rifle2_idle/plasma_rifle2_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+406, 199
+[SLICE]
+20, 9
+[OFFSET]
+0, 0

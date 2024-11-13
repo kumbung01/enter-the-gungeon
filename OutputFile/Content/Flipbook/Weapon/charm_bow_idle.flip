@@ -1,0 +1,15 @@
+[KEY]
+charm_bow_idle
+[PATH]
+Flipbook/Weapon/charm_bow_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+charm_bow_idle_001
+[PATH]
+Sprite/Weapon/charm_bow_idle/charm_bow_idle_001.sprite
+
+
+

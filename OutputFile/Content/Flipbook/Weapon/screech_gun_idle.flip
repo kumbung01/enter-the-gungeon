@@ -1,0 +1,15 @@
+[KEY]
+screech_gun_idle
+[PATH]
+Flipbook/Weapon/screech_gun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+screech_gun_idle_001
+[PATH]
+Sprite/Weapon/screech_gun_idle/screech_gun_idle_001.sprite
+
+
+

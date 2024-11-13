@@ -1,0 +1,14 @@
+[KEY]
+quick_buster_fire_001
+[PATH]
+Sprite/Weapon/quick_buster_fire/quick_buster_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+199, 430
+[SLICE]
+9, 10
+[OFFSET]
+0, 0

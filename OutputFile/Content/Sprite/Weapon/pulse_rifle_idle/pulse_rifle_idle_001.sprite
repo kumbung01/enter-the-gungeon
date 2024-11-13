@@ -1,0 +1,14 @@
+[KEY]
+pulse_rifle_idle_001
+[PATH]
+Sprite/Weapon/pulse_rifle_idle/pulse_rifle_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+208, 315
+[SLICE]
+26, 10
+[OFFSET]
+0, 0

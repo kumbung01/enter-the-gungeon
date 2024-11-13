@@ -1,0 +1,14 @@
+[KEY]
+zapper2_idle_001
+[PATH]
+Sprite/Weapon/zapper2_idle/zapper2_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+472, 421
+[SLICE]
+15, 9
+[OFFSET]
+0, 0

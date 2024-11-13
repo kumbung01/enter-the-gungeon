@@ -1,0 +1,15 @@
+[KEY]
+box2_rocket_fire
+[PATH]
+Flipbook/Weapon/box2_rocket_fire.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+box2_rocket_fire_003
+[PATH]
+Sprite/Weapon/box2_rocket_fire/box2_rocket_fire_003.sprite
+
+
+

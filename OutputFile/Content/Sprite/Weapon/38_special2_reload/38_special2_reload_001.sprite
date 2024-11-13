@@ -1,0 +1,14 @@
+[KEY]
+38_special2_reload_001
+[PATH]
+Sprite/Weapon/38_special2_reload/38_special2_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+458, 407
+[SLICE]
+17, 11
+[OFFSET]
+0, 0

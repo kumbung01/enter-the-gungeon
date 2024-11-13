@@ -1,0 +1,14 @@
+[KEY]
+bundle_wands_idle_001
+[PATH]
+Sprite/Weapon/bundle_wands_idle/bundle_wands_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+124, 177
+[SLICE]
+31, 13
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+gshbd_fire_002
+[PATH]
+Sprite/Weapon/gshbd_fire/gshbd_fire_002.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+221, 134
+[SLICE]
+4, 4
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+box2_rocket_fire_003
+[PATH]
+Sprite/Weapon/box2_rocket_fire/box2_rocket_fire_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+263, 236
+[SLICE]
+27, 15
+[OFFSET]
+0, 0

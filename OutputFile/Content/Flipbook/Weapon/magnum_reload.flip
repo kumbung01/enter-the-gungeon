@@ -1,0 +1,15 @@
+[KEY]
+magnum_reload
+[PATH]
+Flipbook/Weapon/magnum_reload.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+magnum_reload_003
+[PATH]
+Sprite/Weapon/magnum_reload/magnum_reload_003.sprite
+
+
+

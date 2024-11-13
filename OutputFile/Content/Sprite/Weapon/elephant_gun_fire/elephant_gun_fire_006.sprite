@@ -1,0 +1,14 @@
+[KEY]
+elephant_gun_fire_006
+[PATH]
+Sprite/Weapon/elephant_gun_fire/elephant_gun_fire_006.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+124, 168
+[SLICE]
+31, 9
+[OFFSET]
+0, 0

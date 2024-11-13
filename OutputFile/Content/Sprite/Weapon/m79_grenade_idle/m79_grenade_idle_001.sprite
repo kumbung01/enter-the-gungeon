@@ -1,0 +1,14 @@
+[KEY]
+m79_grenade_idle_001
+[PATH]
+Sprite/Weapon/m79_grenade_idle/m79_grenade_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+337, 385
+[SLICE]
+21, 11
+[OFFSET]
+0, 0

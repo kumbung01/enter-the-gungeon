@@ -1,0 +1,14 @@
+[KEY]
+sniper_rifle_idle_001
+[PATH]
+Sprite/Weapon/sniper_rifle_idle/sniper_rifle_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+191, 134
+[SLICE]
+30, 9
+[OFFSET]
+0, 0

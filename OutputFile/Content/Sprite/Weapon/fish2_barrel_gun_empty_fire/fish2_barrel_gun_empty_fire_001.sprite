@@ -1,0 +1,14 @@
+[KEY]
+fish2_barrel_gun_empty_fire_001
+[PATH]
+Sprite/Weapon/fish2_barrel_gun_empty_fire/fish2_barrel_gun_empty_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+86, 496
+[SLICE]
+12, 13
+[OFFSET]
+0, 0

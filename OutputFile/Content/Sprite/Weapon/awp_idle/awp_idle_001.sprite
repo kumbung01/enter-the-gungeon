@@ -1,0 +1,14 @@
+[KEY]
+awp_idle_001
+[PATH]
+Sprite/Weapon/awp_idle/awp_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+203, 19
+[SLICE]
+30, 9
+[OFFSET]
+0, 0

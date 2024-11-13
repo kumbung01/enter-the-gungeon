@@ -1,0 +1,14 @@
+[KEY]
+T_Shirt_Gun_fire_005
+[PATH]
+Sprite/Weapon/T_Shirt_Gun_fire/T_Shirt_Gun_fire_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+42, 399
+[SLICE]
+21, 8
+[OFFSET]
+0, 0

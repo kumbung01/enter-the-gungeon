@@ -1,0 +1,14 @@
+[KEY]
+elephant2_gun_reload_005
+[PATH]
+Sprite/Weapon/elephant2_gun_reload/elephant2_gun_reload_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+382, 364
+[SLICE]
+18, 22
+[OFFSET]
+0, 0

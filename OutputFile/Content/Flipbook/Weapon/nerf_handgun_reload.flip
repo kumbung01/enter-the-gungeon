@@ -1,0 +1,15 @@
+[KEY]
+nerf_handgun_reload
+[PATH]
+Flipbook/Weapon/nerf_handgun_reload.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+nerf_handgun_reload_001
+[PATH]
+Sprite/Weapon/nerf_handgun_reload/nerf_handgun_reload_001.sprite
+
+
+

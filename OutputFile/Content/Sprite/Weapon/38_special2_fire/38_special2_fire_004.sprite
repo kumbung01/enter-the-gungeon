@@ -1,0 +1,14 @@
+[KEY]
+38_special2_fire_004
+[PATH]
+Sprite/Weapon/38_special2_fire/38_special2_fire_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+476, 379
+[SLICE]
+15, 11
+[OFFSET]
+0, 0

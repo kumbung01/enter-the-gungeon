@@ -1,0 +1,15 @@
+[KEY]
+yari_rocket_launcher_idle
+[PATH]
+Flipbook/Weapon/yari_rocket_launcher_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+yari_rocket_launcher_idle_001
+[PATH]
+Sprite/Weapon/yari_rocket_launcher_idle/yari_rocket_launcher_idle_001.sprite
+
+
+

@@ -1,0 +1,14 @@
+[KEY]
+minigun2_reload_001
+[PATH]
+Sprite/Weapon/minigun2_reload/minigun2_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+0, 168
+[SLICE]
+31, 29
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+uzi_idle
+[PATH]
+Flipbook/Weapon/uzi_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+uzi_idle_001
+[PATH]
+Sprite/Weapon/uzi_idle/uzi_idle_001.sprite
+
+
+

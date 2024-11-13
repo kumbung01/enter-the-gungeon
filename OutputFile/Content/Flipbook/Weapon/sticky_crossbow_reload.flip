@@ -1,0 +1,15 @@
+[KEY]
+sticky_crossbow_reload
+[PATH]
+Flipbook/Weapon/sticky_crossbow_reload.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+sticky_crossbow_reload_003
+[PATH]
+Sprite/Weapon/sticky_crossbow_reload/sticky_crossbow_reload_003.sprite
+
+
+

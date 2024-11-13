@@ -1,0 +1,15 @@
+[KEY]
+demon_head_idle
+[PATH]
+Flipbook/Weapon/demon_head_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+demon_head_idle_002
+[PATH]
+Sprite/Weapon/demon_head_idle/demon_head_idle_002.sprite
+
+
+

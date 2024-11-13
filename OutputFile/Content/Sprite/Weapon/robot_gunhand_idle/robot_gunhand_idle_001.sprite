@@ -1,0 +1,14 @@
+[KEY]
+robot_gunhand_idle_001
+[PATH]
+Sprite/Weapon/robot_gunhand_idle/robot_gunhand_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+125, 101
+[SLICE]
+7, 5
+[OFFSET]
+0, 0

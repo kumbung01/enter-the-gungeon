@@ -1,0 +1,14 @@
+[KEY]
+crash_buster_fire_001
+[PATH]
+Sprite/Weapon/crash_buster_fire/crash_buster_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+509, 460
+[SLICE]
+9, 10
+[OFFSET]
+0, 0

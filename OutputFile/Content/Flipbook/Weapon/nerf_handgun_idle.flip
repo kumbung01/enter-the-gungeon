@@ -1,0 +1,15 @@
+[KEY]
+nerf_handgun_idle
+[PATH]
+Flipbook/Weapon/nerf_handgun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+nerf_handgun_idle_001
+[PATH]
+Sprite/Weapon/nerf_handgun_idle/nerf_handgun_idle_001.sprite
+
+
+

@@ -1,0 +1,15 @@
+[KEY]
+m249_idle
+[PATH]
+Flipbook/Weapon/m249_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+m249_idle_001
+[PATH]
+Sprite/Weapon/m249_idle/m249_idle_001.sprite
+
+
+

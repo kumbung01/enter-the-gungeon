@@ -1,0 +1,14 @@
+[KEY]
+beehive2_fire_007
+[PATH]
+Sprite/Weapon/beehive2_fire/beehive2_fire_007.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+461, 194
+[SLICE]
+17, 15
+[OFFSET]
+0, 0

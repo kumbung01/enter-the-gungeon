@@ -1,0 +1,14 @@
+[KEY]
+E12_2_fire_003
+[PATH]
+Sprite/Weapon/E12_2_fire/E12_2_fire_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+201, 84
+[SLICE]
+30, 12
+[OFFSET]
+0, 0

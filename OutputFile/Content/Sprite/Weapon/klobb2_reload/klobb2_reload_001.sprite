@@ -1,0 +1,14 @@
+[KEY]
+klobb2_reload_001
+[PATH]
+Sprite/Weapon/klobb2_reload/klobb2_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+326, 435
+[SLICE]
+18, 17
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+box2_rocket_idle
+[PATH]
+Flipbook/Weapon/box2_rocket_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+box2_rocket_idle_001
+[PATH]
+Sprite/Weapon/box2_rocket_idle/box2_rocket_idle_001.sprite
+
+
+

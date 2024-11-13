@@ -1,0 +1,15 @@
+[KEY]
+sniper_rifle_fire
+[PATH]
+Flipbook/Weapon/sniper_rifle_fire.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+sniper_rifle_fire_001
+[PATH]
+Sprite/Weapon/sniper_rifle_fire/sniper_rifle_fire_001.sprite
+
+
+

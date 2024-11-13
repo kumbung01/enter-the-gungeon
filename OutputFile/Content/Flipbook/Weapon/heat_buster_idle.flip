@@ -1,0 +1,15 @@
+[KEY]
+heat_buster_idle
+[PATH]
+Flipbook/Weapon/heat_buster_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+heat_buster_idle_001
+[PATH]
+Sprite/Weapon/heat_buster_idle/heat_buster_idle_001.sprite
+
+
+

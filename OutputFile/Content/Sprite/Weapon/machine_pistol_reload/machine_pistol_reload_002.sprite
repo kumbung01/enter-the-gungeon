@@ -1,0 +1,14 @@
+[KEY]
+machine_pistol_reload_002
+[PATH]
+Sprite/Weapon/machine_pistol_reload/machine_pistol_reload_002.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+426, 128
+[SLICE]
+13, 15
+[OFFSET]
+0, 0

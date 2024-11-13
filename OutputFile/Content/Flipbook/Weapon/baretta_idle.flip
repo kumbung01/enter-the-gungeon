@@ -1,0 +1,15 @@
+[KEY]
+baretta_idle
+[PATH]
+Flipbook/Weapon/baretta_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+baretta_idle_001
+[PATH]
+Sprite/Weapon/baretta_idle/baretta_idle_001.sprite
+
+
+

@@ -1,0 +1,14 @@
+[KEY]
+bluetube_fire_003
+[PATH]
+Sprite/Weapon/bluetube_fire/bluetube_fire_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+177, 387
+[SLICE]
+20, 11
+[OFFSET]
+0, 0

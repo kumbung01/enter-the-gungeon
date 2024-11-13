@@ -1,0 +1,15 @@
+[KEY]
+magnum_idle
+[PATH]
+Flipbook/Weapon/magnum_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+magnum_idle_001
+[PATH]
+Sprite/Weapon/magnum_idle/magnum_idle_001.sprite
+
+
+

@@ -1,0 +1,14 @@
+[KEY]
+gshbd_idle_004
+[PATH]
+Sprite/Weapon/gshbd_idle/gshbd_idle_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+102, 81
+[SLICE]
+3, 4
+[OFFSET]
+0, 0

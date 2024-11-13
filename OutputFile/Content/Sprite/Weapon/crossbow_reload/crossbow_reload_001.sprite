@@ -1,0 +1,14 @@
+[KEY]
+crossbow_reload_001
+[PATH]
+Sprite/Weapon/crossbow_reload/crossbow_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+379, 223
+[SLICE]
+21, 8
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+yellow_blaster_fire_001
+[PATH]
+Sprite/Weapon/yellow_blaster_fire/yellow_blaster_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+441, 358
+[SLICE]
+18, 12
+[OFFSET]
+0, 0

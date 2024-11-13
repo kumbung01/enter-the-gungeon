@@ -1,0 +1,14 @@
+[KEY]
+bluetube_reload_002
+[PATH]
+Sprite/Weapon/bluetube_reload/bluetube_reload_002.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+426, 94
+[SLICE]
+16, 18
+[OFFSET]
+0, 0

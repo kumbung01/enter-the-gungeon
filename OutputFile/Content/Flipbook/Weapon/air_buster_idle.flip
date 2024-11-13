@@ -1,0 +1,15 @@
+[KEY]
+air_buster_idle
+[PATH]
+Flipbook/Weapon/air_buster_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+air_buster_idle_001
+[PATH]
+Sprite/Weapon/air_buster_idle/air_buster_idle_001.sprite
+
+
+

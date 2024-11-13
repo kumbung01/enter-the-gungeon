@@ -1,0 +1,15 @@
+[KEY]
+lamp_idle
+[PATH]
+Flipbook/Weapon/lamp_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+lamp_idle_001
+[PATH]
+Sprite/Weapon/lamp_idle/lamp_idle_001.sprite
+
+
+

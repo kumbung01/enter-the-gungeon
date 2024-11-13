@@ -1,0 +1,15 @@
+[KEY]
+super_soaker_idle
+[PATH]
+Flipbook/Weapon/super_soaker_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+super_soaker_idle_001
+[PATH]
+Sprite/Weapon/super_soaker_idle/super_soaker_idle_001.sprite
+
+
+

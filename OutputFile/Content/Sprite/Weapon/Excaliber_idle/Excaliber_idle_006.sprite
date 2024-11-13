@@ -1,0 +1,14 @@
+[KEY]
+Excaliber_idle_006
+[PATH]
+Sprite/Weapon/Excaliber_idle/Excaliber_idle_006.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+0, 56
+[SLICE]
+36, 14
+[OFFSET]
+0, 0

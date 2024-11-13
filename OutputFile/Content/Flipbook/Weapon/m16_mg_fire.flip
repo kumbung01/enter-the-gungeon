@@ -1,0 +1,15 @@
+[KEY]
+m16_mg_fire
+[PATH]
+Flipbook/Weapon/m16_mg_fire.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+m16_mg_fire_001
+[PATH]
+Sprite/Weapon/m16_mg_fire/m16_mg_fire_001.sprite
+
+
+

@@ -1,0 +1,15 @@
+[KEY]
+m79_grenade_idle
+[PATH]
+Flipbook/Weapon/m79_grenade_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+m79_grenade_idle_001
+[PATH]
+Sprite/Weapon/m79_grenade_idle/m79_grenade_idle_001.sprite
+
+
+

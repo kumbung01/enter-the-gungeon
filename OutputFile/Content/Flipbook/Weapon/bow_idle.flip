@@ -1,0 +1,15 @@
+[KEY]
+bow_idle
+[PATH]
+Flipbook/Weapon/bow_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+bow_idle_001
+[PATH]
+Sprite/Weapon/bow_idle/bow_idle_001.sprite
+
+
+

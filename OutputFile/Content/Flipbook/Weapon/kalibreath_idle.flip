@@ -1,0 +1,15 @@
+[KEY]
+kalibreath_idle
+[PATH]
+Flipbook/Weapon/kalibreath_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+kalibreath_idle_001
+[PATH]
+Sprite/Weapon/kalibreath_idle/kalibreath_idle_001.sprite
+
+
+

@@ -1,0 +1,14 @@
+[KEY]
+lawgiver_fire_001
+[PATH]
+Sprite/Weapon/lawgiver_fire/lawgiver_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+76, 430
+[SLICE]
+19, 15
+[OFFSET]
+0, 0

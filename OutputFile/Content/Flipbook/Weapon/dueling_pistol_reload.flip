@@ -1,0 +1,15 @@
+[KEY]
+dueling_pistol_reload
+[PATH]
+Flipbook/Weapon/dueling_pistol_reload.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+dueling_pistol_reload_002
+[PATH]
+Sprite/Weapon/dueling_pistol_reload/dueling_pistol_reload_002.sprite
+
+
+

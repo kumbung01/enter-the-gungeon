@@ -1,0 +1,14 @@
+[KEY]
+baretta_idle_001
+[PATH]
+Sprite/Weapon/baretta_idle/baretta_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+405, 466
+[SLICE]
+16, 10
+[OFFSET]
+0, 0

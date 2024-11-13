@@ -1,0 +1,14 @@
+[KEY]
+m79_grenade_reload_004
+[PATH]
+Sprite/Weapon/m79_grenade_reload/m79_grenade_reload_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+354, 420
+[SLICE]
+19, 11
+[OFFSET]
+0, 0

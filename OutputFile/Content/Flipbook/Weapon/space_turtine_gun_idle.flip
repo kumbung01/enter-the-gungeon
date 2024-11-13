@@ -1,0 +1,15 @@
+[KEY]
+space_turtine_gun_idle
+[PATH]
+Flipbook/Weapon/space_turtine_gun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+space_turtine_gun_idle_001
+[PATH]
+Sprite/Weapon/space_turtine_gun_idle/space_turtine_gun_idle_001.sprite
+
+
+

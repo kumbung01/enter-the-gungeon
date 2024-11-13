@@ -1,0 +1,15 @@
+[KEY]
+polar2_star_idle
+[PATH]
+Flipbook/Weapon/polar2_star_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+polar2_star_idle_001
+[PATH]
+Sprite/Weapon/polar2_star_idle/polar2_star_idle_001.sprite
+
+
+

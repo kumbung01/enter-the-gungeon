@@ -1,0 +1,15 @@
+[KEY]
+m249_reload
+[PATH]
+Flipbook/Weapon/m249_reload.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+m249_reload_001
+[PATH]
+Sprite/Weapon/m249_reload/m249_reload_001.sprite
+
+
+

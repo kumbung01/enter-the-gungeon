@@ -1,0 +1,14 @@
+[KEY]
+dueling_pistol2_idle_001
+[PATH]
+Sprite/Weapon/dueling_pistol2_idle/dueling_pistol2_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+443, 11
+[SLICE]
+18, 11
+[OFFSET]
+0, 0

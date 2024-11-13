@@ -1,0 +1,14 @@
+[KEY]
+shotgun_idle_001
+[PATH]
+Sprite/Weapon/shotgun_idle/shotgun_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+132, 307
+[SLICE]
+24, 5
+[OFFSET]
+0, 0

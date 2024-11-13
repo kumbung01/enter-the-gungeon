@@ -1,0 +1,15 @@
+[KEY]
+earthworm_idle
+[PATH]
+Flipbook/Weapon/earthworm_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+earthworm_idle_001
+[PATH]
+Sprite/Weapon/earthworm_idle/earthworm_idle_001.sprite
+
+
+

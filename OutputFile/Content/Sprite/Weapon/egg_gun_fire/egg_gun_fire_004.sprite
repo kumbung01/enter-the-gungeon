@@ -1,0 +1,14 @@
+[KEY]
+egg_gun_fire_004
+[PATH]
+Sprite/Weapon/egg_gun_fire/egg_gun_fire_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+272, 466
+[SLICE]
+16, 10
+[OFFSET]
+0, 0

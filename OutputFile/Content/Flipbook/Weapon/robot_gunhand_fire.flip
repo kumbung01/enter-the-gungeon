@@ -1,0 +1,15 @@
+[KEY]
+robot_gunhand_fire
+[PATH]
+Flipbook/Weapon/robot_gunhand_fire.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+robot_gunhand_fire_003
+[PATH]
+Sprite/Weapon/robot_gunhand_fire/robot_gunhand_fire_003.sprite
+
+
+

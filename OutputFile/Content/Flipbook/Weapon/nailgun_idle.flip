@@ -1,0 +1,15 @@
+[KEY]
+nailgun_idle
+[PATH]
+Flipbook/Weapon/nailgun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+nailgun_idle_001
+[PATH]
+Sprite/Weapon/nailgun_idle/nailgun_idle_001.sprite
+
+
+

@@ -1,0 +1,14 @@
+[KEY]
+bubble_buster_fire_001
+[PATH]
+Sprite/Weapon/bubble_buster_fire/bubble_buster_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+509, 258
+[SLICE]
+9, 10
+[OFFSET]
+0, 0

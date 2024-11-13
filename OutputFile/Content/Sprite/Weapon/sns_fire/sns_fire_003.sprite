@@ -1,0 +1,14 @@
+[KEY]
+sns_fire_003
+[PATH]
+Sprite/Weapon/sns_fire/sns_fire_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+243, 509
+[SLICE]
+13, 10
+[OFFSET]
+0, 0

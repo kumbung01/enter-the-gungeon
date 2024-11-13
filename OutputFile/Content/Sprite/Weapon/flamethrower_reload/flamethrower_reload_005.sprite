@@ -1,0 +1,14 @@
+[KEY]
+flamethrower_reload_005
+[PATH]
+Sprite/Weapon/flamethrower_reload/flamethrower_reload_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+0, 232
+[SLICE]
+29, 9
+[OFFSET]
+0, 0

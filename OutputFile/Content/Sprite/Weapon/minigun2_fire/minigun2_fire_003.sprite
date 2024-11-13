@@ -1,0 +1,14 @@
+[KEY]
+minigun2_fire_003
+[PATH]
+Sprite/Weapon/minigun2_fire/minigun2_fire_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+107, 11
+[SLICE]
+33, 15
+[OFFSET]
+0, 0

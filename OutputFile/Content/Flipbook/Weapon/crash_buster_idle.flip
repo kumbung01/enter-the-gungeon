@@ -1,0 +1,15 @@
+[KEY]
+crash_buster_idle
+[PATH]
+Flipbook/Weapon/crash_buster_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+crash_buster_idle_001
+[PATH]
+Sprite/Weapon/crash_buster_idle/crash_buster_idle_001.sprite
+
+
+

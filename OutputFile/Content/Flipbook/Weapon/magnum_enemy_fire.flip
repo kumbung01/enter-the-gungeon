@@ -1,0 +1,15 @@
+[KEY]
+magnum_enemy_fire
+[PATH]
+Flipbook/Weapon/magnum_enemy_fire.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+magnum_enemy_fire_004
+[PATH]
+Sprite/Weapon/magnum_enemy_fire/magnum_enemy_fire_004.sprite
+
+
+

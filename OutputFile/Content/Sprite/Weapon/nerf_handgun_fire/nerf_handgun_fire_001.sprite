@@ -1,0 +1,14 @@
+[KEY]
+nerf_handgun_fire_001
+[PATH]
+Sprite/Weapon/nerf_handgun_fire/nerf_handgun_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+165, 241
+[SLICE]
+13, 7
+[OFFSET]
+0, 0
