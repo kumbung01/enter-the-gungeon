@@ -7,7 +7,7 @@ rogue
 [ATLAS_PATH]
 Texture/rogue.png
 [LEFT_TOP]
-0, 165
+0, 55
 [SLICE]
 23, 55
 [OFFSET]

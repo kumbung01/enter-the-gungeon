@@ -1,0 +1,15 @@
+[KEY]
+rogue_weaponget
+[PATH]
+Flipbook/SpaceRogue/rogue_weaponget.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+rogue_weaponget_004
+[PATH]
+Sprite/SpaceRogue/rogue_weaponget/rogue_weaponget_004.sprite
+
+
+
