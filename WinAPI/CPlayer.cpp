@@ -13,6 +13,7 @@
 #include "CLevel.h"
 #include "CGun.h"
 #include "CReloadUI.h"
+#include "CCollisionMgr.h"
 
 #include "CMonster.h"
 #include "CCollider.h"
@@ -43,125 +44,110 @@ bool IsMoveState(PLAYER_STATE _state)
 	return _state == PLAYER_STATE::MOVING;
 }
 
+tAnimState ProcessDodgeAnimState(const Vec2& _dir)
+{
+	tAnimState state = { ROGUE_DODGE_LEFT, false, 0.0 };
+
+	if (_dir.x == 0.f)
+	{
+		state.mirror = false;
+		if (_dir.y >= 0.f)
+		{
+			state.idx = ROGUE_DODGE_FRONT;
+		}
+		else
+		{
+			state.idx = ROGUE_DODGE_BACK;
+		}	
+
+		return state;
+	} 
+	
+	else
+	{
+		state.mirror = _dir.x < 0.f;
+		if (_dir.y >= 0.f)
+		{
+			state.idx = ROGUE_DODGE_LEFT;
+		}
+		else
+		{
+			state.idx = ROGUE_DODGE_LEFT_BACK;
+		}
+	}
+}
+
 /* TODO: change it to binary search tree???*/
-tAnimState ProcessAnimState(const Vec2& _dir, const PLAYER_STATE _state)
+tAnimState CPlayer::ProcessAnimState(const Vec2& _dir, const PLAYER_STATE _state)
 {
 	float angle = std::atan2f(-_dir.y, _dir.x) * (180.0 / PI);
 	tAnimState state = { ROGUE_IDLE_FRONT_HANDS, false };
-	if (0 < angle && angle <= 60.f)
+
+	// forward or backward
+	if (fabs(fabs(angle) - 90.f) >= 20.f) 
 	{
-		state.mirror = false;
-		switch (_state)
+		if (_dir.y < 0.f)
 		{
-		case PLAYER_STATE::MOVING:
-			state.state = ROGUE_RUN_BACKWARD;
-			break;
-		case PLAYER_STATE::IDLE:
-		default:
-			state.state = ROGUE_IDLE_BACKWARDS;
-			break;
+			switch (_state)
+			{
+			case PLAYER_STATE::MOVING:
+				state.idx = ROGUE_RUN_BACKWARD;
+				break;
+			case PLAYER_STATE::IDLE:
+			default:
+				state.idx = ROGUE_IDLE_BACKWARDS;
+				break;
+			}
+		}
+
+		else
+		{
+			switch (_state)
+			{
+			case PLAYER_STATE::MOVING:
+				state.idx = ROGUE_RUN_FORWARD_HANDS;
+				break;
+			case PLAYER_STATE::IDLE:
+			default:
+				state.idx = ROGUE_IDLE_HANDS;
+				break;
+			}
 		}
 	}
-	else if (60.f < angle && angle <= 90.f)
+	// front or back
+	else
 	{
-		state.mirror = false;
-		switch (_state)
+		// back
+		if (_dir.y < 0.f)
 		{
-		case PLAYER_STATE::MOVING:
-			state.state = ROGUE_RUN_BACKWARD;
-			break;
-		case PLAYER_STATE::IDLE:
-		default:
-			state.state = ROGUE_IDLE_BACK_HAND_LEFT;
-			break;
+			switch (_state)
+			{
+			case PLAYER_STATE::MOVING:
+				state.idx = ROGUE_RUN_BACK_HANDS_LEFT;
+				break;
+			case PLAYER_STATE::IDLE:
+			default:
+				state.idx = ROGUE_IDLE_BACK_HAND_LEFT;
+				break;
+			}
 		}
-	}
-	else if (90.f < angle && angle <= 120.f)
-	{
-		state.mirror = true;
-		switch (_state)
+		// front
+		else
 		{
-		case PLAYER_STATE::MOVING:
-			state.state = ROGUE_RUN_BACKWARD;
-			break;
-		case PLAYER_STATE::IDLE:
-		default:
-			state.state = ROGUE_IDLE_BACK_HAND_RIGHT;
-			break;
-		}
-	}
-	else if (120.f < angle && angle <= 180.f)
-	{
-		state.mirror = true;
-		switch (_state)
-		{
-		case PLAYER_STATE::MOVING:
-			state.state = ROGUE_RUN_BACKWARD;
-			break;
-		case PLAYER_STATE::IDLE:
-		default:
-			state.state = ROGUE_IDLE;
-			break;
-		}
-	}
-	else if (-180.f < angle && angle <= -120.f)
-	{
-		state.mirror = true;
-		switch (_state)
-		{
-		case PLAYER_STATE::MOVING:
-			state.state = ROGUE_RUN_FORWARD;
-			break;
-		case PLAYER_STATE::IDLE:
-		default:
-			state.state = ROGUE_IDLE;
-			break;
-		}
-	}
-	else if (-120.f < angle && angle <= -90.f)
-	{
-		state.mirror = true;
-		switch (_state)
-		{
-		case PLAYER_STATE::MOVING:
-			state.state = ROGUE_RUN_FRONT_HANDS_LEFT;
-			break;
-		case PLAYER_STATE::IDLE:
-		default:
-			state.state = ROGUE_IDLE_FRONT_HAND_LEFT;
-			break;
-		}
-	}
-	else if (-90.f < angle && angle <= -60.f)
-	{
-		state.mirror = false;
-		switch (_state)
-		{
-		case PLAYER_STATE::MOVING:
-			state.state = ROGUE_RUN_FRONT_HANDS_LEFT;
-			break;
-		case PLAYER_STATE::IDLE:
-		default:
-			state.state = ROGUE_IDLE_FRONT_HAND_LEFT;
-			break;
-		}
-	}
-	else /* -60.f < angle && angle <= -0.f */
-	{
-		state.mirror = false;
-		switch (_state)
-		{
-		case PLAYER_STATE::MOVING:
-			state.state = ROGUE_RUN_FORWARD;
-			break;
-		case PLAYER_STATE::IDLE:
-		default:
-			state.state = ROGUE_IDLE;
-			break;
+			switch (_state)
+			{
+			case PLAYER_STATE::MOVING:
+				state.idx = ROGUE_RUN_FRONT_HANDS_LEFT;
+				break;
+			case PLAYER_STATE::IDLE:
+			default:
+				state.idx = ROGUE_IDLE_FRONT_HAND_LEFT;
+				break;
+			}
 		}
 	}
 
-	//printf("x: %f, y: %f, angle: %.1f, state: %d, mirror: %s\n", _dir.x, _dir.y, angle, state.state, state.mirror ? "yes" : "no");
+	state.mirror = !(m_gun->IsRightHand());
 
 	return state;
 }
@@ -171,13 +157,13 @@ CPlayer::CPlayer()
 	, m_maxHP(6)
 	, m_blankCnt(1)
 	, m_keyCnt(1)
-	, m_moveSpeed(500.f)
+	, m_moveSpeed(400.f)
 	, m_HitBox(nullptr)
 	, m_FlipbookPlayer(nullptr)
 	, m_gun(nullptr)
 	, m_reloadBar(nullptr)
-	, m_rollSpeed(1200.f)
-	, m_rollTime(0.7f)
+	, m_rollSpeed(500.f)
+	, m_rollTime(0.6f)
 	, m_rollAccTime(0.f)
 	, m_isInvincible(false)
 	, m_invincibleAccTime(0.f)
@@ -186,10 +172,11 @@ CPlayer::CPlayer()
 	, m_RigidBody(nullptr)
 {
 	// Collider 컴포넌트 추가
+	SetScale(45.f, 50.f);
 	m_HitBox = new CCollider;
 	m_HitBox->SetName(L"HitBox_01");
-	m_HitBox->SetScale(Vec2(60.f, 60.f));
-	m_HitBox->SetOffset(Vec2(0.f, 0.f));
+	m_HitBox->SetScale(GetScale());
+	m_HitBox->SetOffset(Vec2(0.f, 5.f));
 
 	AddComponent(m_HitBox);
 
@@ -209,7 +196,7 @@ CPlayer::~CPlayer()
 void CPlayer::Begin()
 {
 
-	m_FlipbookPlayer->Play(m_animState.state, 5.f, true, m_animState.mirror);
+	m_FlipbookPlayer->Play(m_animState.idx, 5.f, true, m_animState.mirror);
 	CCamera::GetInst()->SetTarget(this);
 
 
@@ -354,22 +341,14 @@ void CPlayer::Render()
 
 void CPlayer::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
 {
-	if (_OtherObject->GetName() == L"Monster")
+	if (_OtherObject->GetName() == L"Monster" ||
+		_OtherObject->GetLayerType() == LAYER_TYPE::MONSTER_OBJECT)
 	{
 		if (m_isInvincible)
 			return;
 
 		m_curHP--;
-		if (m_curHP == 0)
-			m_state = PLAYER_STATE::DEAD;
-		m_isInvincible = true;
-	}
-	else if (_OtherObject->GetLayerType() == LAYER_TYPE::MONSTER_OBJECT)
-	{
-		if (m_isInvincible || IsRollState(m_state))
-			return;
-
-		m_curHP--;
+		CCamera::GetInst()->PostProcessEffect(POST_PROCESS::HEART, 0.7f);
 		if (m_curHP == 0)
 			m_state = PLAYER_STATE::DEAD;
 		m_isInvincible = true;
@@ -393,7 +372,6 @@ void CPlayer::EndOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _O
 	{
 		m_normal = Vec2(0.f, 0.f);
 	}
-
 }
 
 void CPlayer::CreatePlayerFlipbook()
@@ -428,6 +406,13 @@ void CPlayer::CreatePlayerFlipbook()
 	m_FlipbookPlayer->AddFlipbook(ROGUE_RUN_FORWARD,			CAssetMgr::GetInst()->LoadFlipbook(L"rogue_run_forward",			L"Flipbook\\SpaceRogue\\rogue_run_forward.flip"));
 	m_FlipbookPlayer->AddFlipbook(ROGUE_RUN_FORWARD_HANDS,		CAssetMgr::GetInst()->LoadFlipbook(L"rogue_run_forward_hands",		L"Flipbook\\SpaceRogue\\rogue_run_forward_hands.flip"));
 	m_FlipbookPlayer->AddFlipbook(ROGUE_RUN_FORWARD_HANDS2,		CAssetMgr::GetInst()->LoadFlipbook(L"rogue_run_forward_hands2",		L"Flipbook\\SpaceRogue\\rogue_run_forward_hands2.flip"));
+
+	m_FlipbookPlayer->AddFlipbook(ROGUE_DODGE_BACK,      CAssetMgr::GetInst()->LoadFlipbook(L"rogue_dodge_back",      L"Flipbook\\SpaceRogue\\rogue_dodge_back.flip"));
+	m_FlipbookPlayer->AddFlipbook(ROGUE_DODGE_FRONT,     CAssetMgr::GetInst()->LoadFlipbook(L"rogue_dodge_front",     L"Flipbook\\SpaceRogue\\rogue_dodge_front.flip"));
+	m_FlipbookPlayer->AddFlipbook(ROGUE_DODGE_LEFT,		 CAssetMgr::GetInst()->LoadFlipbook(L"rogue_dodge_left",      L"Flipbook\\SpaceRogue\\rogue_dodge_left.flip"));
+	m_FlipbookPlayer->AddFlipbook(ROGUE_DODGE_LEFT_BACK, CAssetMgr::GetInst()->LoadFlipbook(L"rogue_dodge_left_back", L"Flipbook\\SpaceRogue\\rogue_dodge_left_back.flip"));
+
+	m_FlipbookPlayer->SetMagnification(3.f);
 }
 
 void CPlayer::CreateFlipbook(const wstring& _FlipbookName, CTexture* _Atlas, Vec2 _LeftTop, Vec2 _Slice, int MaxFrame)
@@ -447,7 +432,7 @@ void CPlayer::IdleState()
 	if (animState != m_animState)
 	{
 		m_animState = animState;
-		m_FlipbookPlayer->Play(m_animState.state, 10.f, true, m_animState.mirror);
+		m_FlipbookPlayer->Play(m_animState.idx, 10.f, true, m_animState.mirror);
 	}
 }
 
@@ -455,6 +440,13 @@ void CPlayer::MoveState()
 {
 	if (KEY_TAP(KEY::RBTN))
 	{
+		tAnimState animState = ProcessDodgeAnimState(m_moveDir);
+		if (animState != m_animState)
+		{
+			m_animState = animState;
+			m_FlipbookPlayer->Play(m_animState, 10.f, false);
+		}
+		CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER, LAYER_TYPE::MONSTER_OBJECT, false);
 		m_state = PLAYER_STATE::ROLLING;
 	}
 	else if (m_moveDir.Length() > 0)
@@ -465,7 +457,7 @@ void CPlayer::MoveState()
 		if (animState != m_animState)
 		{
 			m_animState = animState;
-			m_FlipbookPlayer->Play(m_animState.state, 10.f, true, m_animState.mirror);
+			m_FlipbookPlayer->Play(m_animState.idx, 10.f, true, m_animState.mirror);
 		}
 	}
 	else
@@ -480,10 +472,10 @@ void CPlayer::RollState()
 	m_rollAccTime += DT;
 	if (m_rollAccTime < m_rollTime)
 	{
+		m_gun->SetVisible(false);
 		float rollSpeed = m_rollSpeed;
 		float ratio = m_rollAccTime / m_rollTime;
-		rollSpeed *= ratio < 0.4f ? 1.0f : 0.15f;
-		//SetPos(GetPos() + m_moveDir * rollSpeed * DT);
+		rollSpeed *= ratio < 0.4f ? 1.0f : 0.3f;
 		m_RigidBody->SetVelocity(m_moveDir * rollSpeed);
 		// state 표시용
 		DrawDebugRect(PEN_TYPE::RED, GetRenderPos() + Vec2(50.f, -50.f), Vec2(10.f, 10.f), 0.f);
@@ -491,7 +483,16 @@ void CPlayer::RollState()
 	}
 
 	m_rollAccTime = 0;
-	m_state = PLAYER_STATE::MOVING;
+	m_gun->SetVisible(true);
+	CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER, LAYER_TYPE::MONSTER_OBJECT, true);
+	if (m_moveDir.Length() > 0) {
+		m_state = PLAYER_STATE::MOVING;
+	}
+	else
+	{
+		m_state = PLAYER_STATE::IDLE;
+	}
+
 }
 
 void CPlayer::DeadState()
