@@ -13,9 +13,14 @@ private:
 
     float               m_FPS;          // Flipbook 재생속도
     float               m_Time;         // 누적시간
+    bool                m_visible;      // 보일지 말지
     bool                m_Repeat;       // 반복재생인지 아닌지
     bool                m_Finish;       // 재생이 끝났는지 체크
     bool                m_mirror;       // 좌우 반전 확인
+    float               m_angle;        // 회전 각도
+    Vec2                m_axis;         // 회전축
+    Vec2                m_offset;       // 위치
+    float               m_magnification; // 확대 정도
 
 public:
     void AddFlipbook(CFlipbook* _Flipbook) { m_vecFlipbook.push_back(_Flipbook); }
@@ -40,6 +45,18 @@ public:
         m_mirror = _IsMirrored;
     }
 
+    void Play(const tAnimState& state, float _FPS, bool _Repeat)
+    {
+        m_CurFlipbook = m_vecFlipbook[state.idx];
+        m_SpriteIdx = 0;
+        m_FPS = _FPS;
+        m_Repeat = _Repeat;
+        m_Finish = false;
+        m_Time = 0.f;
+        m_mirror = state.mirror;
+        m_angle = state.angle;
+    }
+
     bool IsFinish() { return m_Finish; }
 
     void Reset()
@@ -48,7 +65,20 @@ public:
         m_SpriteIdx = 0;        
     }
 
+    bool IsFlipbookMatch(int _FlipbookIdx)
+    {
+        return m_CurFlipbook == m_vecFlipbook[_FlipbookIdx];
+    }
 
+    void SetAngle(float _angle) { m_angle = _angle; }
+    void SetMirror(bool _mirror) { m_mirror = _mirror; };
+    void SetMagnification(float _magnification) { m_magnification = _magnification; }
+    void SetVisible(bool _visible) { m_visible = _visible; }
+    void SetOffset(Vec2 _offset) { m_offset = _offset; }
+    void SetAxis(Vec2 _axis) { m_axis = _axis; }
+
+    Vec2 GetOffset() { return m_offset; }
+    Vec2 GetAxis() { return m_axis; }
 public:
     virtual void FinalTick() override;
     void Render(); 

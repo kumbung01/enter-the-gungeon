@@ -17,6 +17,9 @@ CFlipbookPlayer::CFlipbookPlayer()
 	, m_Repeat(false)
 	, m_Finish(false)
 	, m_mirror(false)
+	, m_magnification(1.f)
+	, m_angle(0.f)
+	, m_visible(true)
 {
 }
 
@@ -66,25 +69,27 @@ void CFlipbookPlayer::Render()
 	if (nullptr == m_CurFlipbook)
 		return;
 
+	if (!m_visible)
+		return;
+
 	CSprite* Sprite = m_CurFlipbook->GetSprite(m_SpriteIdx);
-	wprintf(L"%s\n", Sprite->GetKey().c_str());
 
 	// Sprite 를 화면에 그린다.
 	Gdiplus::Graphics* graphics = CEngine::GetInst()->GetBackGraphics();
 	Vec2 vPos = GetOwner()->GetRenderPos();
+	Vec2 center = Sprite->GetSlice() / 2.f;
 
-	Vec2 LeftTop = Vec2(vPos.x - (Sprite->GetSlice().x / 2) + Sprite->GetOffset().x,
-						vPos.y - (Sprite->GetSlice().y / 2) + Sprite->GetOffset().y);
+	Matrix mat;
+	mat.Translate(vPos.x + m_offset.x, vPos.y + m_offset.y);
+	mat.Scale(m_magnification, m_magnification);
+	if (m_mirror)
+		mat.Scale(-1.f, 1.f);
+	mat.RotateAt(m_angle, {m_axis.x, m_axis.y});
+	mat.Translate(-center.x, -center.y);
+	graphics->SetTransform(&mat);
 
-	float centerX = vPos.x - (Sprite->GetSlice().x * 2.f);
-	float centerY = vPos.y - (Sprite->GetSlice().y * 2.f);
-
-	graphics->TranslateTransform(centerX, centerY);
-	graphics->ScaleTransform((m_mirror ? -1.f : 1.f) * 4.f, 4.f);
-	graphics->TranslateTransform(-centerX - (m_mirror ? Sprite->GetSlice().x : 0.f), -centerY);
-	
-	graphics->DrawImage(Sprite->GetAtlas()->GetImage(),
-		centerX, centerY,
+	auto res = graphics->DrawImage(Sprite->GetAtlas()->GetImage(),
+		0.f, 0.f,
 		Sprite->GetLeftTop().x, Sprite->GetLeftTop().y,
 		Sprite->GetSlice().x, Sprite->GetSlice().y, UnitPixel);
 
