@@ -20,6 +20,7 @@ CEngine::CEngine()
     , m_Resolution{}
     , m_hDC(nullptr)
     , m_BackBuffer(nullptr)
+    , m_backGraphics(nullptr)
     , m_Pen{}
     , m_Brush{}
 {   
@@ -167,6 +168,7 @@ void CEngine::ChangeWindowSize(Vec2 _vResolution)
 void CEngine::CreateSecondBuffer()
 {
     m_BackBuffer = CAssetMgr::GetInst()->CreateTexture(L"BackBuffer", (int)m_Resolution.x, (int)m_Resolution.y);
+    m_tempBuffer = CAssetMgr::GetInst()->CreateTexture(L"TempBuffer", 1000, 1000);
     
     // gdiplus graphics object for back buffer
     m_backGraphics = new Gdiplus::Graphics(GetSecondDC());

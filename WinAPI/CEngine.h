@@ -14,6 +14,7 @@ private:
 						 
 	CTexture*			 m_BackBuffer;	// 백버퍼 용도 텍스쳐
 	Gdiplus::Graphics*   m_backGraphics;
+	CTexture*			 m_tempBuffer;  // 연산 두 번 용 buffer
 
 	HPEN		m_Pen[(UINT)PEN_TYPE::END];
 	HBRUSH		m_Brush[(UINT)BRUSH_TYPE::END];
@@ -25,6 +26,7 @@ public:
 	HBRUSH GetBrush(BRUSH_TYPE _Type) { return m_Brush[(UINT)_Type]; }
 	HDC GetMainDC() { return m_hDC; }
 	HDC GetSecondDC() { return m_BackBuffer->GetDC(); }
+	HDC GetBufferDC() { return m_tempBuffer->GetDC(); }
 	Gdiplus::Graphics* GetBackGraphics() { return m_backGraphics; }
 	CTexture* GetBackBuffer() { return m_BackBuffer; }
 	void ChangeWindowSize(Vec2 _vResolution);

@@ -9,7 +9,7 @@
 
 bool CRevolver::IsTriggered()
 {
-	return KEY_TAP(KEY::LBTN);
+	return KEY_PRESSED(KEY::LBTN);
 }
 
 void CRevolver::CreateFlipbook()

@@ -3,6 +3,8 @@
 
 #include "CEngine.h"
 #include "CTimeMgr.h"
+#include "CSprite.h"
+#include "CAssetMgr.h"
 
 #include "CCollider.h"
 
@@ -10,6 +12,8 @@ CMissile::CMissile()
 	: m_Mass(1.f)
 	, m_VelocityScale(1.f)
 	, m_damage(5.f)
+	, m_sprite(nullptr)
+	, m_magnification(3.f)
 {
 	m_Collider = (CCollider*)AddComponent(new CCollider);
 	m_Collider->SetScale(Vec2(15.f, 15.f));
@@ -17,12 +21,18 @@ CMissile::CMissile()
 	m_Velocity = Vec2(1.f, 1.f);
 	m_Velocity.Normalize();
 	m_Velocity *= 500.f;
+
+	CreateSprite();
 }
 
 CMissile::~CMissile()
 {
 }
 
+void CMissile::CreateSprite()
+{
+	m_sprite = CAssetMgr::GetInst()->LoadSprite(L"bullet_variant_001", L"Sprite\\Projectile\\bullet_variant\\bullet_variant_001.sprite");
+}
 
 void CMissile::Tick()
 {
@@ -48,13 +58,34 @@ void CMissile::Tick()
 
 void CMissile::Render()
 {
-	HDC dc = CEngine::GetInst()->GetSecondDC();
+	HDC bufDC = CEngine::GetInst()->GetBufferDC();
+	HDC backDC = CEngine::GetInst()->GetSecondDC();
+	CTexture* tex = m_sprite->GetAtlas();
+	Vec2 slice = m_sprite->GetSlice();
+	Vec2 leftTop = m_sprite->GetLeftTop();
+	Vec2 vPos = GetRenderPos() - slice / 2.f * m_magnification;
 
-	Vec2 vPos = GetRenderPos();
-	Vec2 vScale = GetScale();
+	StretchBlt(bufDC,
+		0, 0,
+		slice.x * m_magnification,
+		slice.x * m_magnification,
+		tex->GetDC(),
+		leftTop.x,
+		leftTop.y,
+		slice.x,
+		slice.y,
+		SRCCOPY);
 
-	Ellipse(dc, vPos.x - vScale.x / 2.f, vPos.y - vScale.y / 2
-		, vPos.x + vScale.x / 2.f, vPos.y + vScale.y / 2.f);
+	TransparentBlt(backDC,
+		vPos.x,
+		vPos.y,
+		slice.x * m_magnification,
+		slice.y * m_magnification,
+		bufDC,
+		0, 0,
+		slice.x * m_magnification,
+		slice.y * m_magnification,
+		Color::Magenta);
 }
 
 void CMissile::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)

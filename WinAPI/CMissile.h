@@ -2,6 +2,7 @@
 #include "CObj.h"
 
 
+class CSprite;
 
 class CMissile :
     public CObj
@@ -12,10 +13,12 @@ private:
 
     CCollider*  m_Collider;
     float       m_Mass;     // 질량
-
     Vec2        m_Force;    // 크기, 방향
 
     float       m_damage;
+
+    CSprite*    m_sprite;
+    float       m_magnification;
 
 public:
     void SetVelocity(Vec2 _Velocity) { m_Velocity = _Velocity; }
@@ -34,6 +37,9 @@ public:
 
     float GetDamage() { return m_damage; }
     void  SetDamage(float _damage) { m_damage = _damage; }
+
+private:
+    virtual void CreateSprite();
 
 public:
     virtual void Tick() override;
