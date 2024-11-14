@@ -1,0 +1,14 @@
+[KEY]
+resourceful_rat_metal_gear_giant_projectile_004
+[PATH]
+Sprite/EnemyProjectile/resourceful_rat_metal_gear_giant_projectile/resourceful_rat_metal_gear_giant_projectile_004.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+60, 62
+[SLICE]
+59, 57
+[OFFSET]
+0, 0

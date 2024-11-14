@@ -1,0 +1,15 @@
+[KEY]
+sniper_enemy_projectile
+[PATH]
+Flipbook/EnemyProjectile/sniper_enemy_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+sniper_enemy_projectile_001
+[PATH]
+Sprite/EnemyProjectile/sniper_enemy_projectile/sniper_enemy_projectile_001.sprite
+
+
+

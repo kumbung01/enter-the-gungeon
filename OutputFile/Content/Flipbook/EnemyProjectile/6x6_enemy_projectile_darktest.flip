@@ -1,0 +1,15 @@
+[KEY]
+6x6_enemy_projectile_darktest
+[PATH]
+Flipbook/EnemyProjectile/6x6_enemy_projectile_darktest.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+6x6_enemy_projectile_darktest_001
+[PATH]
+Sprite/EnemyProjectile/6x6_enemy_projectile_darktest/6x6_enemy_projectile_darktest_001.sprite
+
+
+

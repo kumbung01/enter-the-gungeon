@@ -1,0 +1,14 @@
+[KEY]
+star_love_projectile_001
+[PATH]
+Sprite/Projectile/star_love_projectile/star_love_projectile_001.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+511, 709
+[SLICE]
+15, 14
+[OFFSET]
+0, 0

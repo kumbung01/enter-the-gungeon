@@ -1,0 +1,15 @@
+[KEY]
+paper_lantern_burst
+[PATH]
+Flipbook/Projectile/paper_lantern_burst.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+paper_lantern_burst_001
+[PATH]
+Sprite/Projectile/paper_lantern_burst/paper_lantern_burst_001.sprite
+
+
+

@@ -1,0 +1,15 @@
+[KEY]
+trash_bag_projectile
+[PATH]
+Flipbook/Projectile/trash_bag_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+trash_bag_projectile_001
+[PATH]
+Sprite/Projectile/trash_bag_projectile/trash_bag_projectile_001.sprite
+
+
+

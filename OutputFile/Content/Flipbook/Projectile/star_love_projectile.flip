@@ -1,0 +1,15 @@
+[KEY]
+star_love_projectile
+[PATH]
+Flipbook/Projectile/star_love_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+star_love_projectile_001
+[PATH]
+Sprite/Projectile/star_love_projectile/star_love_projectile_001.sprite
+
+
+

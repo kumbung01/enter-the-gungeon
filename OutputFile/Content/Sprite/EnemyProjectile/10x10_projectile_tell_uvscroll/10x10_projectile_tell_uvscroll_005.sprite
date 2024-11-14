@@ -1,0 +1,14 @@
+[KEY]
+10x10_projectile_tell_uvscroll_005
+[PATH]
+Sprite/EnemyProjectile/10x10_projectile_tell_uvscroll/10x10_projectile_tell_uvscroll_005.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+93, 262
+[SLICE]
+4, 1
+[OFFSET]
+0, 0

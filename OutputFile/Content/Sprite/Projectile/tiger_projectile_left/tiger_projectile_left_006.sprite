@@ -1,0 +1,14 @@
+[KEY]
+tiger_projectile_left_006
+[PATH]
+Sprite/Projectile/tiger_projectile_left/tiger_projectile_left_006.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+497, 216
+[SLICE]
+64, 32
+[OFFSET]
+0, 0

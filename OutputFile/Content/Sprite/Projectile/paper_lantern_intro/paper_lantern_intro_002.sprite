@@ -1,0 +1,14 @@
+[KEY]
+paper_lantern_intro_002
+[PATH]
+Sprite/Projectile/paper_lantern_intro/paper_lantern_intro_002.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+524, 630
+[SLICE]
+10, 13
+[OFFSET]
+0, 0

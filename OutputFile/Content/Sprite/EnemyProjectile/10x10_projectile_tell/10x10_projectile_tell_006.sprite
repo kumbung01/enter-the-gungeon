@@ -1,0 +1,14 @@
+[KEY]
+10x10_projectile_tell_006
+[PATH]
+Sprite/EnemyProjectile/10x10_projectile_tell/10x10_projectile_tell_006.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+425, 323
+[SLICE]
+12, 12
+[OFFSET]
+0, 0

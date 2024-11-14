@@ -1,0 +1,14 @@
+[KEY]
+meduzi_gaze_projectile_001
+[PATH]
+Sprite/EnemyProjectile/meduzi_gaze_projectile/meduzi_gaze_projectile_001.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+429, 14
+[SLICE]
+14, 14
+[OFFSET]
+0, 0

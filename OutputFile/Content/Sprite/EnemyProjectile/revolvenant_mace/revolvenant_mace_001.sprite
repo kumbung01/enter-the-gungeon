@@ -1,0 +1,14 @@
+[KEY]
+revolvenant_mace_001
+[PATH]
+Sprite/EnemyProjectile/revolvenant_mace/revolvenant_mace_001.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+311, 315
+[SLICE]
+22, 22
+[OFFSET]
+0, 0

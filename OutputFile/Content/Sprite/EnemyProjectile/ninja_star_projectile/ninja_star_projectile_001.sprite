@@ -1,0 +1,14 @@
+[KEY]
+ninja_star_projectile_001
+[PATH]
+Sprite/EnemyProjectile/ninja_star_projectile/ninja_star_projectile_001.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+429, 271
+[SLICE]
+13, 13
+[OFFSET]
+0, 0

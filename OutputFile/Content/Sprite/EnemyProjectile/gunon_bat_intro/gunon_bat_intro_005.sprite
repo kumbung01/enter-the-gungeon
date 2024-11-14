@@ -1,0 +1,14 @@
+[KEY]
+gunon_bat_intro_005
+[PATH]
+Sprite/EnemyProjectile/gunon_bat_intro/gunon_bat_intro_005.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+183, 213
+[SLICE]
+29, 16
+[OFFSET]
+0, 0

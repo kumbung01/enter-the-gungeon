@@ -1,0 +1,14 @@
+[KEY]
+explosion_002
+[PATH]
+Sprite/Projectile/explosion/explosion_002.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+419, 598
+[SLICE]
+31, 30
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+boredave_002
+[PATH]
+Sprite/Projectile/boredave/boredave_002.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+370, 709
+[SLICE]
+14, 7
+[OFFSET]
+0, 0

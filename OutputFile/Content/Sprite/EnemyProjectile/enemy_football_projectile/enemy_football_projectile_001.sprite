@@ -1,0 +1,14 @@
+[KEY]
+enemy_football_projectile_001
+[PATH]
+Sprite/EnemyProjectile/enemy_football_projectile/enemy_football_projectile_001.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+160, 168
+[SLICE]
+16, 6
+[OFFSET]
+0, 0

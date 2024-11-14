@@ -1,0 +1,15 @@
+[KEY]
+fridge_maiden_orange_projectile
+[PATH]
+Flipbook/EnemyProjectile/fridge_maiden_orange_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+fridge_maiden_orange_projectile_001
+[PATH]
+Sprite/EnemyProjectile/fridge_maiden_orange_projectile/fridge_maiden_orange_projectile_001.sprite
+
+
+

@@ -1,0 +1,14 @@
+[KEY]
+long_spear_enemy_projectile_tell_001
+[PATH]
+Sprite/EnemyProjectile/long_spear_enemy_projectile_tell/long_spear_enemy_projectile_tell_001.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+266, 24
+[SLICE]
+25, 12
+[OFFSET]
+0, 0

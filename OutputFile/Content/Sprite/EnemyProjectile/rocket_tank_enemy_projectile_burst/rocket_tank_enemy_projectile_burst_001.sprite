@@ -1,0 +1,14 @@
+[KEY]
+rocket_tank_enemy_projectile_burst_001
+[PATH]
+Sprite/EnemyProjectile/rocket_tank_enemy_projectile_burst/rocket_tank_enemy_projectile_burst_001.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+145, 346
+[SLICE]
+20, 17
+[OFFSET]
+0, 0

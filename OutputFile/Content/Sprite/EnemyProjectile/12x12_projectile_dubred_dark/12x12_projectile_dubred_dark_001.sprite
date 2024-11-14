@@ -1,0 +1,14 @@
+[KEY]
+12x12_projectile_dubred_dark_001
+[PATH]
+Sprite/EnemyProjectile/12x12_projectile_dubred_dark/12x12_projectile_dubred_dark_001.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+429, 97
+[SLICE]
+14, 14
+[OFFSET]
+0, 0

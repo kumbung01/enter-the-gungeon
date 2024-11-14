@@ -1,0 +1,15 @@
+[KEY]
+shark_fin_south
+[PATH]
+Flipbook/Projectile/shark_fin_south.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+shark_fin_south_001
+[PATH]
+Sprite/Projectile/shark_fin_south/shark_fin_south_001.sprite
+
+
+

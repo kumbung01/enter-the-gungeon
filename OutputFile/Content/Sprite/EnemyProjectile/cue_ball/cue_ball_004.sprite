@@ -1,0 +1,14 @@
+[KEY]
+cue_ball_004
+[PATH]
+Sprite/EnemyProjectile/cue_ball/cue_ball_004.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+125, 298
+[SLICE]
+7, 1
+[OFFSET]
+0, 0

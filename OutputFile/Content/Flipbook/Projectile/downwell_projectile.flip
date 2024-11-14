@@ -1,0 +1,15 @@
+[KEY]
+downwell_projectile
+[PATH]
+Flipbook/Projectile/downwell_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+downwell_projectile_001
+[PATH]
+Sprite/Projectile/downwell_projectile/downwell_projectile_001.sprite
+
+
+

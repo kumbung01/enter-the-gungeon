@@ -1,0 +1,15 @@
+[KEY]
+skull_projectile
+[PATH]
+Flipbook/Projectile/skull_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+skull_projectile_001
+[PATH]
+Sprite/Projectile/skull_projectile/skull_projectile_001.sprite
+
+
+

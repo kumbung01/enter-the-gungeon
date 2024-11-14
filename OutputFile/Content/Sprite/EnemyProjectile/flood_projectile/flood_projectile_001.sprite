@@ -1,0 +1,14 @@
+[KEY]
+flood_projectile_001
+[PATH]
+Sprite/EnemyProjectile/flood_projectile/flood_projectile_001.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+172, 429
+[SLICE]
+12, 11
+[OFFSET]
+0, 0

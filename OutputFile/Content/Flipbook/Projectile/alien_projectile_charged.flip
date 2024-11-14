@@ -1,0 +1,15 @@
+[KEY]
+alien_projectile_charged
+[PATH]
+Flipbook/Projectile/alien_projectile_charged.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+alien_projectile_charged_001
+[PATH]
+Sprite/Projectile/alien_projectile_charged/alien_projectile_charged_001.sprite
+
+
+

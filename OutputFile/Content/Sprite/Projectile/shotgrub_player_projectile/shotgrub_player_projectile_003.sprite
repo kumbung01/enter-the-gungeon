@@ -1,0 +1,14 @@
+[KEY]
+shotgrub_player_projectile_003
+[PATH]
+Sprite/Projectile/shotgrub_player_projectile/shotgrub_player_projectile_003.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+707, 159
+[SLICE]
+16, 14
+[OFFSET]
+0, 0

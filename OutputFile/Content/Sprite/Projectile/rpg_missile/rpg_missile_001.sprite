@@ -1,0 +1,14 @@
+[KEY]
+rpg_missile_001
+[PATH]
+Sprite/Projectile/rpg_missile/rpg_missile_001.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+128, 717
+[SLICE]
+13, 7
+[OFFSET]
+0, 0

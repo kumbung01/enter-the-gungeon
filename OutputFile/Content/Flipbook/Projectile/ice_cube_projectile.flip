@@ -1,0 +1,15 @@
+[KEY]
+ice_cube_projectile
+[PATH]
+Flipbook/Projectile/ice_cube_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+ice_cube_projectile_001
+[PATH]
+Sprite/Projectile/ice_cube_projectile/ice_cube_projectile_001.sprite
+
+
+

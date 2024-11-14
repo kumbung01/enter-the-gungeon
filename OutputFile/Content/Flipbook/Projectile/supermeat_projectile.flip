@@ -1,0 +1,15 @@
+[KEY]
+supermeat_projectile
+[PATH]
+Flipbook/Projectile/supermeat_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+supermeat_projectile_001
+[PATH]
+Sprite/Projectile/supermeat_projectile/supermeat_projectile_001.sprite
+
+
+

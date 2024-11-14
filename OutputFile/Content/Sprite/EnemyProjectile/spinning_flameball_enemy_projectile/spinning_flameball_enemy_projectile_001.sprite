@@ -1,0 +1,14 @@
+[KEY]
+spinning_flameball_enemy_projectile_001
+[PATH]
+Sprite/EnemyProjectile/spinning_flameball_enemy_projectile/spinning_flameball_enemy_projectile_001.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+429, 410
+[SLICE]
+13, 13
+[OFFSET]
+0, 0

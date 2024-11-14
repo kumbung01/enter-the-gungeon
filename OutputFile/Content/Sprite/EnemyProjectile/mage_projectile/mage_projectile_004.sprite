@@ -1,0 +1,14 @@
+[KEY]
+mage_projectile_004
+[PATH]
+Sprite/EnemyProjectile/mage_projectile/mage_projectile_004.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+147, 302
+[SLICE]
+17, 22
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+big_donut_enemy_projectile
+[PATH]
+Flipbook/EnemyProjectile/big_donut_enemy_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+big_donut_enemy_projectile_001
+[PATH]
+Sprite/EnemyProjectile/big_donut_enemy_projectile/big_donut_enemy_projectile_001.sprite
+
+
+

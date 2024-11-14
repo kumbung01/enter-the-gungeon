@@ -1,0 +1,15 @@
+[KEY]
+blue_black_bullet
+[PATH]
+Flipbook/EnemyProjectile/blue_black_bullet.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+blue_black_bullet_001
+[PATH]
+Sprite/EnemyProjectile/blue_black_bullet/blue_black_bullet_001.sprite
+
+
+

@@ -1,0 +1,15 @@
+[KEY]
+magnum_bullet
+[PATH]
+Flipbook/Projectile/magnum_bullet.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+magnum_bullet_001
+[PATH]
+Sprite/Projectile/magnum_bullet/magnum_bullet_001.sprite
+
+
+

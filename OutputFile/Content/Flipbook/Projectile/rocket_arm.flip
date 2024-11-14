@@ -1,0 +1,15 @@
+[KEY]
+rocket_arm
+[PATH]
+Flipbook/Projectile/rocket_arm.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+rocket_arm_001
+[PATH]
+Sprite/Projectile/rocket_arm/rocket_arm_001.sprite
+
+
+

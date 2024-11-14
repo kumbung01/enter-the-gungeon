@@ -1,0 +1,15 @@
+[KEY]
+egg_projectile
+[PATH]
+Flipbook/EnemyProjectile/egg_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+egg_projectile_001
+[PATH]
+Sprite/EnemyProjectile/egg_projectile/egg_projectile_001.sprite
+
+
+

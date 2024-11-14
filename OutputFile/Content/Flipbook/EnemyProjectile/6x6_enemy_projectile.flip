@@ -1,0 +1,15 @@
+[KEY]
+6x6_enemy_projectile
+[PATH]
+Flipbook/EnemyProjectile/6x6_enemy_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+6x6_enemy_projectile_001
+[PATH]
+Sprite/EnemyProjectile/6x6_enemy_projectile/6x6_enemy_projectile_001.sprite
+
+
+

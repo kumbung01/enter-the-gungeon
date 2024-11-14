@@ -1,0 +1,14 @@
+[KEY]
+duckdog_move_left_004
+[PATH]
+Sprite/Projectile/duckdog_move_left/duckdog_move_left_004.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+482, 630
+[SLICE]
+18, 24
+[OFFSET]
+0, 0

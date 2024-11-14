@@ -1,0 +1,14 @@
+[KEY]
+ghost_bullet_002
+[PATH]
+Sprite/Projectile/ghost_bullet/ghost_bullet_002.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+597, 727
+[SLICE]
+9, 9
+[OFFSET]
+0, 0

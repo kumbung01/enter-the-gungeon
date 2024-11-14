@@ -1,0 +1,15 @@
+[KEY]
+mt_plushie_projectile
+[PATH]
+Flipbook/Projectile/mt_plushie_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+mt_plushie_projectile_001
+[PATH]
+Sprite/Projectile/mt_plushie_projectile/mt_plushie_projectile_001.sprite
+
+
+

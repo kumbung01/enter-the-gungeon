@@ -1,0 +1,15 @@
+[KEY]
+orange_projectile_explode
+[PATH]
+Flipbook/Projectile/orange_projectile_explode.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+orange_projectile_explode_001
+[PATH]
+Sprite/Projectile/orange_projectile_explode/orange_projectile_explode_001.sprite
+
+
+

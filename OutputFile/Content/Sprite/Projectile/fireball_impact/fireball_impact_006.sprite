@@ -1,0 +1,14 @@
+[KEY]
+fireball_impact_006
+[PATH]
+Sprite/Projectile/fireball_impact/fireball_impact_006.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+0, 689
+[SLICE]
+20, 19
+[OFFSET]
+0, 0

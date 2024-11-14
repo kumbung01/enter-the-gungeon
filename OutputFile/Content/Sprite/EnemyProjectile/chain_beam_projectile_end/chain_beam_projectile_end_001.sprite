@@ -1,0 +1,14 @@
+[KEY]
+chain_beam_projectile_end_001
+[PATH]
+Sprite/EnemyProjectile/chain_beam_projectile_end/chain_beam_projectile_end_001.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+209, 53
+[SLICE]
+4, 7
+[OFFSET]
+0, 0

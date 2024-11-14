@@ -1,0 +1,15 @@
+[KEY]
+mt_bobble_marine
+[PATH]
+Flipbook/Projectile/mt_bobble_marine.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+mt_bobble_marine_001
+[PATH]
+Sprite/Projectile/mt_bobble_marine/mt_bobble_marine_001.sprite
+
+
+

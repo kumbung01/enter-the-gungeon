@@ -1,0 +1,15 @@
+[KEY]
+chaingunner_link_projectile
+[PATH]
+Flipbook/EnemyProjectile/chaingunner_link_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+chaingunner_link_projectile_001
+[PATH]
+Sprite/EnemyProjectile/chaingunner_link_projectile/chaingunner_link_projectile_001.sprite
+
+
+

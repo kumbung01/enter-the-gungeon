@@ -1,0 +1,14 @@
+[KEY]
+knight_projectile_impact_006
+[PATH]
+Sprite/EnemyProjectile/knight_projectile_impact/knight_projectile_impact_006.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+345, 292
+[SLICE]
+15, 19
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+musketball
+[PATH]
+Flipbook/Projectile/musketball.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+musketball_001
+[PATH]
+Sprite/Projectile/musketball/musketball_001.sprite
+
+
+

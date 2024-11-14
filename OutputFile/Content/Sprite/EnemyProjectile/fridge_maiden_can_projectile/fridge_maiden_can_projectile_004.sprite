@@ -1,0 +1,14 @@
+[KEY]
+fridge_maiden_can_projectile_004
+[PATH]
+Sprite/EnemyProjectile/fridge_maiden_can_projectile/fridge_maiden_can_projectile_004.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+144, 382
+[SLICE]
+17, 17
+[OFFSET]
+0, 0

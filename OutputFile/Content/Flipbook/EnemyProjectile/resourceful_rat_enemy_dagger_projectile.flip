@@ -1,0 +1,15 @@
+[KEY]
+resourceful_rat_enemy_dagger_projectile
+[PATH]
+Flipbook/EnemyProjectile/resourceful_rat_enemy_dagger_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+resourceful_rat_enemy_dagger_projectile_001
+[PATH]
+Sprite/EnemyProjectile/resourceful_rat_enemy_dagger_projectile/resourceful_rat_enemy_dagger_projectile_001.sprite
+
+
+

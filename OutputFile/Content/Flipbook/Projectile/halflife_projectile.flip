@@ -1,0 +1,15 @@
+[KEY]
+halflife_projectile
+[PATH]
+Flipbook/Projectile/halflife_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+halflife_projectile_001
+[PATH]
+Sprite/Projectile/halflife_projectile/halflife_projectile_001.sprite
+
+
+

@@ -1,0 +1,15 @@
+[KEY]
+enemy_arrow_projectile
+[PATH]
+Flipbook/EnemyProjectile/enemy_arrow_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+enemy_arrow_projectile_001
+[PATH]
+Sprite/EnemyProjectile/enemy_arrow_projectile/enemy_arrow_projectile_001.sprite
+
+
+

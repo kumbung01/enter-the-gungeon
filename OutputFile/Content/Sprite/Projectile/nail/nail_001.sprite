@@ -1,0 +1,14 @@
+[KEY]
+nail_001
+[PATH]
+Sprite/Projectile/nail/nail_001.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+677, 275
+[SLICE]
+6, 4
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+space_shotgun_pellet
+[PATH]
+Flipbook/Projectile/space_shotgun_pellet.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+space_shotgun_pellet_001
+[PATH]
+Sprite/Projectile/space_shotgun_pellet/space_shotgun_pellet_001.sprite
+
+
+

@@ -1,0 +1,14 @@
+[KEY]
+paper_projectile_003
+[PATH]
+Sprite/EnemyProjectile/paper_projectile/paper_projectile_003.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+408, 224
+[SLICE]
+5, 8
+[OFFSET]
+0, 0

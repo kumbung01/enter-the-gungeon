@@ -1,0 +1,15 @@
+[KEY]
+magic_bullet_chunk
+[PATH]
+Flipbook/Projectile/magic_bullet_chunk.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+magic_bullet_chunk_001
+[PATH]
+Sprite/Projectile/magic_bullet_chunk/magic_bullet_chunk_001.sprite
+
+
+

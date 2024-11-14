@@ -1,0 +1,14 @@
+[KEY]
+6x6_enemy_projectile_darktest_001
+[PATH]
+Sprite/EnemyProjectile/6x6_enemy_projectile_darktest/6x6_enemy_projectile_darktest_001.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+394, 440
+[SLICE]
+8, 8
+[OFFSET]
+0, 0

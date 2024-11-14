@@ -1,0 +1,14 @@
+[KEY]
+eyeball_projectile_001
+[PATH]
+Sprite/EnemyProjectile/eyeball_projectile/eyeball_projectile_001.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+386, 440
+[SLICE]
+8, 8
+[OFFSET]
+0, 0

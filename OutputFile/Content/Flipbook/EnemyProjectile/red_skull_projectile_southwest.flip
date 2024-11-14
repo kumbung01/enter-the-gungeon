@@ -1,0 +1,15 @@
+[KEY]
+red_skull_projectile_southwest
+[PATH]
+Flipbook/EnemyProjectile/red_skull_projectile_southwest.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+red_skull_projectile_southwest_001
+[PATH]
+Sprite/EnemyProjectile/red_skull_projectile_southwest/red_skull_projectile_southwest_001.sprite
+
+
+

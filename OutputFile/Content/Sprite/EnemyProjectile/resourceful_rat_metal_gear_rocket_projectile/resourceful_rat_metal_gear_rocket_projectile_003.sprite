@@ -1,0 +1,14 @@
+[KEY]
+resourceful_rat_metal_gear_rocket_projectile_003
+[PATH]
+Sprite/EnemyProjectile/resourceful_rat_metal_gear_rocket_projectile/resourceful_rat_metal_gear_rocket_projectile_003.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+413, 268
+[SLICE]
+15, 15
+[OFFSET]
+0, 0

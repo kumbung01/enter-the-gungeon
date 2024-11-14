@@ -1,0 +1,14 @@
+[KEY]
+knife_frife_active_002
+[PATH]
+Sprite/Projectile/knife_frife_active/knife_frife_active_002.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+725, 60
+[SLICE]
+13, 14
+[OFFSET]
+0, 0

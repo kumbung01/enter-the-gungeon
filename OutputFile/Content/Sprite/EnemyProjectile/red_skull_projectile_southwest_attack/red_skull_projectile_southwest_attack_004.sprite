@@ -1,0 +1,14 @@
+[KEY]
+red_skull_projectile_southwest_attack_004
+[PATH]
+Sprite/EnemyProjectile/red_skull_projectile_southwest_attack/red_skull_projectile_southwest_attack_004.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+230, 238
+[SLICE]
+15, 25
+[OFFSET]
+0, 0

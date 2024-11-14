@@ -1,0 +1,14 @@
+[KEY]
+bubble_bullet_005
+[PATH]
+Sprite/EnemyProjectile/bubble_bullet/bubble_bullet_005.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+396, 27
+[SLICE]
+17, 17
+[OFFSET]
+0, 0

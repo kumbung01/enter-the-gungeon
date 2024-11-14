@@ -1,0 +1,15 @@
+[KEY]
+rubeadyne_projectile
+[PATH]
+Flipbook/Projectile/rubeadyne_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+rubeadyne_projectile_001
+[PATH]
+Sprite/Projectile/rubeadyne_projectile/rubeadyne_projectile_001.sprite
+
+
+

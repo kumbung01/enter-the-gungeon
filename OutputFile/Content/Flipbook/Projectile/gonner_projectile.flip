@@ -1,0 +1,15 @@
+[KEY]
+gonner_projectile
+[PATH]
+Flipbook/Projectile/gonner_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+gonner_projectile_001
+[PATH]
+Sprite/Projectile/gonner_projectile/gonner_projectile_001.sprite
+
+
+

@@ -1,0 +1,14 @@
+[KEY]
+purple_bolt_002
+[PATH]
+Sprite/Projectile/purple_bolt/purple_bolt_002.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+455, 578
+[SLICE]
+21, 3
+[OFFSET]
+0, 0

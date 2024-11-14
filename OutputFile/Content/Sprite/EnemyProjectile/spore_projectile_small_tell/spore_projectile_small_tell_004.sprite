@@ -1,0 +1,14 @@
+[KEY]
+spore_projectile_small_tell_004
+[PATH]
+Sprite/EnemyProjectile/spore_projectile_small_tell/spore_projectile_small_tell_004.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+32, 441
+[SLICE]
+10, 10
+[OFFSET]
+0, 0

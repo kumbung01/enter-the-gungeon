@@ -1,0 +1,15 @@
+[KEY]
+giant_ball_projectile
+[PATH]
+Flipbook/EnemyProjectile/giant_ball_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+giant_ball_projectile_001
+[PATH]
+Sprite/EnemyProjectile/giant_ball_projectile/giant_ball_projectile_001.sprite
+
+
+

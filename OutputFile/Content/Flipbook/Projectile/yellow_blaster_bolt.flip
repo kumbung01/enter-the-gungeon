@@ -1,0 +1,15 @@
+[KEY]
+yellow_blaster_bolt
+[PATH]
+Flipbook/Projectile/yellow_blaster_bolt.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+yellow_blaster_bolt_001
+[PATH]
+Sprite/Projectile/yellow_blaster_bolt/yellow_blaster_bolt_001.sprite
+
+
+

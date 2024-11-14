@@ -1,0 +1,15 @@
+[KEY]
+banana_projectile
+[PATH]
+Flipbook/Projectile/banana_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+banana_projectile_001
+[PATH]
+Sprite/Projectile/banana_projectile/banana_projectile_001.sprite
+
+
+

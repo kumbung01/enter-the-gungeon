@@ -1,0 +1,14 @@
+[KEY]
+magnum_smoke_001
+[PATH]
+Sprite/Projectile/magnum_smoke/magnum_smoke_001.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+739, 157
+[SLICE]
+7, 7
+[OFFSET]
+0, 0

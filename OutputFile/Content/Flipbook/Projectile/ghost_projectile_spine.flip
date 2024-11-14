@@ -1,0 +1,15 @@
+[KEY]
+ghost_projectile_spine
+[PATH]
+Flipbook/Projectile/ghost_projectile_spine.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+ghost_projectile_spine_001
+[PATH]
+Sprite/Projectile/ghost_projectile_spine/ghost_projectile_spine_001.sprite
+
+
+

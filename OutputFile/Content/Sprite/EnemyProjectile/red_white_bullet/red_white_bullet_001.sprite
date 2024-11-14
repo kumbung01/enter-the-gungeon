@@ -1,0 +1,14 @@
+[KEY]
+red_white_bullet_001
+[PATH]
+Sprite/EnemyProjectile/red_white_bullet/red_white_bullet_001.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+346, 429
+[SLICE]
+11, 11
+[OFFSET]
+0, 0

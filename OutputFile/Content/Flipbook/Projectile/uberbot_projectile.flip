@@ -1,0 +1,15 @@
+[KEY]
+uberbot_projectile
+[PATH]
+Flipbook/Projectile/uberbot_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+uberbot_projectile_001
+[PATH]
+Sprite/Projectile/uberbot_projectile/uberbot_projectile_001.sprite
+
+
+

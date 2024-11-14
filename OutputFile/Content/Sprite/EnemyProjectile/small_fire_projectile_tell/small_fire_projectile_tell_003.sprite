@@ -1,0 +1,14 @@
+[KEY]
+small_fire_projectile_tell_003
+[PATH]
+Sprite/EnemyProjectile/small_fire_projectile_tell/small_fire_projectile_tell_003.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+111, 415
+[SLICE]
+13, 14
+[OFFSET]
+0, 0

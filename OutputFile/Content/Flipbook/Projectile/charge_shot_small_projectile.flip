@@ -1,0 +1,15 @@
+[KEY]
+charge_shot_small_projectile
+[PATH]
+Flipbook/Projectile/charge_shot_small_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+charge_shot_small_projectile_001
+[PATH]
+Sprite/Projectile/charge_shot_small_projectile/charge_shot_small_projectile_001.sprite
+
+
+

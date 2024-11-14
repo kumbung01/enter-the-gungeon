@@ -1,0 +1,15 @@
+[KEY]
+10x10_player_Projectile
+[PATH]
+Flipbook/Projectile/10x10_player_Projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+10x10_player_Projectile_001
+[PATH]
+Sprite/Projectile/10x10_player_Projectile/10x10_player_Projectile_001.sprite
+
+
+

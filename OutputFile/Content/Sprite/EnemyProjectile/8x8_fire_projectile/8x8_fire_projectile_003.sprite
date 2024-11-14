@@ -1,0 +1,14 @@
+[KEY]
+8x8_fire_projectile_003
+[PATH]
+Sprite/EnemyProjectile/8x8_fire_projectile/8x8_fire_projectile_003.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+335, 166
+[SLICE]
+17, 21
+[OFFSET]
+0, 0

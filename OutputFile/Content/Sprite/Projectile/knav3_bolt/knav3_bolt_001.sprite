@@ -1,0 +1,14 @@
+[KEY]
+knav3_bolt_001
+[PATH]
+Sprite/Projectile/knav3_bolt/knav3_bolt_001.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+395, 700
+[SLICE]
+9, 5
+[OFFSET]
+0, 0

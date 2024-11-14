@@ -1,0 +1,14 @@
+[KEY]
+dung_projectile_die_004
+[PATH]
+Sprite/EnemyProjectile/dung_projectile_die/dung_projectile_die_004.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+200, 263
+[SLICE]
+25, 12
+[OFFSET]
+0, 0

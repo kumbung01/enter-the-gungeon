@@ -1,0 +1,14 @@
+[KEY]
+cactus_fruit_projectile_001
+[PATH]
+Sprite/Projectile/cactus_fruit_projectile/cactus_fruit_projectile_001.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+463, 709
+[SLICE]
+11, 14
+[OFFSET]
+0, 0

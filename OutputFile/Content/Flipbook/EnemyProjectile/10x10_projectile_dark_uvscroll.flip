@@ -1,0 +1,15 @@
+[KEY]
+10x10_projectile_dark_uvscroll
+[PATH]
+Flipbook/EnemyProjectile/10x10_projectile_dark_uvscroll.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+10x10_projectile_dark_uvscroll_001
+[PATH]
+Sprite/EnemyProjectile/10x10_projectile_dark_uvscroll/10x10_projectile_dark_uvscroll_001.sprite
+
+
+

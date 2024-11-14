@@ -1,0 +1,14 @@
+[KEY]
+blue_black_bullet_001
+[PATH]
+Sprite/EnemyProjectile/blue_black_bullet/blue_black_bullet_001.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+302, 439
+[SLICE]
+11, 11
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+cannonball_enemy_001
+[PATH]
+Sprite/EnemyProjectile/cannonball_enemy/cannonball_enemy_001.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+307, 363
+[SLICE]
+18, 18
+[OFFSET]
+0, 0

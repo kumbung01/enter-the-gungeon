@@ -1,0 +1,14 @@
+[KEY]
+spinning_crescent_enemy_projectile_003
+[PATH]
+Sprite/EnemyProjectile/spinning_crescent_enemy_projectile/spinning_crescent_enemy_projectile_003.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+123, 324
+[SLICE]
+14, 22
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+red_white_bullet
+[PATH]
+Flipbook/EnemyProjectile/red_white_bullet.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+red_white_bullet_001
+[PATH]
+Sprite/EnemyProjectile/red_white_bullet/red_white_bullet_001.sprite
+
+
+

@@ -1,0 +1,15 @@
+[KEY]
+long_spear_enemy_projectile
+[PATH]
+Flipbook/EnemyProjectile/long_spear_enemy_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+long_spear_enemy_projectile_001
+[PATH]
+Sprite/EnemyProjectile/long_spear_enemy_projectile/long_spear_enemy_projectile_001.sprite
+
+
+

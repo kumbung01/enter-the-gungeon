@@ -1,0 +1,15 @@
+[KEY]
+origami_projectile
+[PATH]
+Flipbook/Projectile/origami_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+origami_projectile_001
+[PATH]
+Sprite/Projectile/origami_projectile/origami_projectile_001.sprite
+
+
+

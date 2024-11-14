@@ -1,0 +1,14 @@
+[KEY]
+hld_projectile_003
+[PATH]
+Sprite/Projectile/hld_projectile/hld_projectile_003.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+118, 643
+[SLICE]
+23, 12
+[OFFSET]
+0, 0

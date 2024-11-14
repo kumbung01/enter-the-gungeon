@@ -1,0 +1,14 @@
+[KEY]
+recycled_bullet_projectile_003
+[PATH]
+Sprite/Projectile/recycled_bullet_projectile/recycled_bullet_projectile_003.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+695, 117
+[SLICE]
+12, 17
+[OFFSET]
+0, 0

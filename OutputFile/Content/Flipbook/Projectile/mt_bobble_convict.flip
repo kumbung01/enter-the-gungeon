@@ -1,0 +1,15 @@
+[KEY]
+mt_bobble_convict
+[PATH]
+Flipbook/Projectile/mt_bobble_convict.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+mt_bobble_convict_001
+[PATH]
+Sprite/Projectile/mt_bobble_convict/mt_bobble_convict_001.sprite
+
+
+

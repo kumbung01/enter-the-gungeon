@@ -1,0 +1,14 @@
+[KEY]
+resourceful_rat_enemy_dagger_projectile_001
+[PATH]
+Sprite/EnemyProjectile/resourceful_rat_enemy_dagger_projectile/resourceful_rat_enemy_dagger_projectile_001.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+119, 96
+[SLICE]
+44, 15
+[OFFSET]
+0, 0

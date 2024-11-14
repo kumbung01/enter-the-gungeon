@@ -1,0 +1,15 @@
+[KEY]
+winchester_projectile
+[PATH]
+Flipbook/Projectile/winchester_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+winchester_projectile_001
+[PATH]
+Sprite/Projectile/winchester_projectile/winchester_projectile_001.sprite
+
+
+

@@ -1,0 +1,15 @@
+[KEY]
+mt_art_book_projectile
+[PATH]
+Flipbook/Projectile/mt_art_book_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+mt_art_book_projectile_001
+[PATH]
+Sprite/Projectile/mt_art_book_projectile/mt_art_book_projectile_001.sprite
+
+
+

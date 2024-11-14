@@ -1,0 +1,14 @@
+[KEY]
+square_donut_enemy_projectile_001
+[PATH]
+Sprite/EnemyProjectile/square_donut_enemy_projectile/square_donut_enemy_projectile_001.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+434, 187
+[SLICE]
+9, 9
+[OFFSET]
+0, 0

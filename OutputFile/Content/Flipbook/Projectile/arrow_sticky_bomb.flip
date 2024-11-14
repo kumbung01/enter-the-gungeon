@@ -1,0 +1,15 @@
+[KEY]
+arrow_sticky_bomb
+[PATH]
+Flipbook/Projectile/arrow_sticky_bomb.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+arrow_sticky_bomb_001
+[PATH]
+Sprite/Projectile/arrow_sticky_bomb/arrow_sticky_bomb_001.sprite
+
+
+

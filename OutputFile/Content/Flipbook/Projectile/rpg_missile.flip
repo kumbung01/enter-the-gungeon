@@ -1,0 +1,15 @@
+[KEY]
+rpg_missile
+[PATH]
+Flipbook/Projectile/rpg_missile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+rpg_missile_001
+[PATH]
+Sprite/Projectile/rpg_missile/rpg_missile_001.sprite
+
+
+

@@ -1,0 +1,14 @@
+[KEY]
+goopy_bullet_dark_003
+[PATH]
+Sprite/EnemyProjectile/goopy_bullet_dark/goopy_bullet_dark_003.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+173, 275
+[SLICE]
+24, 24
+[OFFSET]
+0, 0

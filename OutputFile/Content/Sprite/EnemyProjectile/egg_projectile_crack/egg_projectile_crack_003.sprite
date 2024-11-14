@@ -1,0 +1,14 @@
+[KEY]
+egg_projectile_crack_003
+[PATH]
+Sprite/EnemyProjectile/egg_projectile_crack/egg_projectile_crack_003.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+343, 249
+[SLICE]
+14, 20
+[OFFSET]
+0, 0

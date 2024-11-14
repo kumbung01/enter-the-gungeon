@@ -1,0 +1,15 @@
+[KEY]
+shotgun_projectile_debris
+[PATH]
+Flipbook/Projectile/shotgun_projectile_debris.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+shotgun_projectile_debris_001
+[PATH]
+Sprite/Projectile/shotgun_projectile_debris/shotgun_projectile_debris_001.sprite
+
+
+

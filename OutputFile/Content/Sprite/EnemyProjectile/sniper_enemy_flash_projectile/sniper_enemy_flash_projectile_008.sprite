@@ -1,0 +1,14 @@
+[KEY]
+sniper_enemy_flash_projectile_008
+[PATH]
+Sprite/EnemyProjectile/sniper_enemy_flash_projectile/sniper_enemy_flash_projectile_008.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+378, 0
+[SLICE]
+18, 15
+[OFFSET]
+0, 0

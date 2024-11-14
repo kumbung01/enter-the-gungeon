@@ -1,0 +1,15 @@
+[KEY]
+cannonball
+[PATH]
+Flipbook/Projectile/cannonball.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+cannonball_001
+[PATH]
+Sprite/Projectile/cannonball/cannonball_001.sprite
+
+
+

@@ -1,0 +1,15 @@
+[KEY]
+word_projectile_D
+[PATH]
+Flipbook/Projectile/word_projectile_D.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+word_projectile_D_001
+[PATH]
+Sprite/Projectile/word_projectile_D/word_projectile_D_001.sprite
+
+
+

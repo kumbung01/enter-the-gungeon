@@ -1,0 +1,15 @@
+[KEY]
+candy_projectile
+[PATH]
+Flipbook/Projectile/candy_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+candy_projectile_001
+[PATH]
+Sprite/Projectile/candy_projectile/candy_projectile_001.sprite
+
+
+

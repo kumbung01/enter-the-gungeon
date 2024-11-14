@@ -1,0 +1,15 @@
+[KEY]
+ice_giant_projectile
+[PATH]
+Flipbook/Projectile/ice_giant_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+ice_giant_projectile_001
+[PATH]
+Sprite/Projectile/ice_giant_projectile/ice_giant_projectile_001.sprite
+
+
+

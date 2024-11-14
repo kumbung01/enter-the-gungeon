@@ -1,0 +1,14 @@
+[KEY]
+chaingunner_ball_projectile_tell_004
+[PATH]
+Sprite/EnemyProjectile/chaingunner_ball_projectile_tell/chaingunner_ball_projectile_tell_004.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+337, 61
+[SLICE]
+21, 21
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+4x4_enemy_projectile
+[PATH]
+Flipbook/EnemyProjectile/4x4_enemy_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+4x4_enemy_projectile_001
+[PATH]
+Sprite/EnemyProjectile/4x4_enemy_projectile/4x4_enemy_projectile_001.sprite
+
+
+

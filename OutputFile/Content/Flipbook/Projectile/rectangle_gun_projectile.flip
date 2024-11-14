@@ -1,0 +1,15 @@
+[KEY]
+rectangle_gun_projectile
+[PATH]
+Flipbook/Projectile/rectangle_gun_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+rectangle_gun_projectile_001
+[PATH]
+Sprite/Projectile/rectangle_gun_projectile/rectangle_gun_projectile_001.sprite
+
+
+

@@ -1,0 +1,14 @@
+[KEY]
+bullet_variant_009
+[PATH]
+Sprite/Projectile/bullet_variant/bullet_variant_009.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+672, 709
+[SLICE]
+4, 4
+[OFFSET]
+0, 0

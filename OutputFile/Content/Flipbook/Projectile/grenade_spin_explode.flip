@@ -1,0 +1,15 @@
+[KEY]
+grenade_spin_explode
+[PATH]
+Flipbook/Projectile/grenade_spin_explode.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+grenade_spin_explode_001
+[PATH]
+Sprite/Projectile/grenade_spin_explode/grenade_spin_explode_001.sprite
+
+
+

@@ -1,0 +1,14 @@
+[KEY]
+player_bulletman_projectile_007
+[PATH]
+Sprite/Projectile/player_bulletman_projectile/player_bulletman_projectile_007.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+142, 628
+[SLICE]
+25, 14
+[OFFSET]
+0, 0

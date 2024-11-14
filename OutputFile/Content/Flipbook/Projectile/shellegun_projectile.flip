@@ -1,0 +1,15 @@
+[KEY]
+shellegun_projectile
+[PATH]
+Flipbook/Projectile/shellegun_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+shellegun_projectile_001
+[PATH]
+Sprite/Projectile/shellegun_projectile/shellegun_projectile_001.sprite
+
+
+

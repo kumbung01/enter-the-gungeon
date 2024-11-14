@@ -1,0 +1,15 @@
+[KEY]
+gun_projectile_debris
+[PATH]
+Flipbook/Projectile/gun_projectile_debris.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+gun_projectile_debris_001
+[PATH]
+Sprite/Projectile/gun_projectile_debris/gun_projectile_debris_001.sprite
+
+
+

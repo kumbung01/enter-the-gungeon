@@ -1,0 +1,14 @@
+[KEY]
+shelleton_shell_projectile_005
+[PATH]
+Sprite/EnemyProjectile/shelleton_shell_projectile/shelleton_shell_projectile_005.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+353, 185
+[SLICE]
+5, 9
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+snowball_projectile
+[PATH]
+Flipbook/Projectile/snowball_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+snowball_projectile_001
+[PATH]
+Sprite/Projectile/snowball_projectile/snowball_projectile_001.sprite
+
+
+

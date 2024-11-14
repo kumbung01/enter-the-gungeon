@@ -1,0 +1,15 @@
+[KEY]
+sword_projectile
+[PATH]
+Flipbook/Projectile/sword_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+sword_projectile_001
+[PATH]
+Sprite/Projectile/sword_projectile/sword_projectile_001.sprite
+
+
+

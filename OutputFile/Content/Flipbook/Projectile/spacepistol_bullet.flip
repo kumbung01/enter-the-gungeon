@@ -1,0 +1,15 @@
+[KEY]
+spacepistol_bullet
+[PATH]
+Flipbook/Projectile/spacepistol_bullet.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+spacepistol_bullet_001
+[PATH]
+Sprite/Projectile/spacepistol_bullet/spacepistol_bullet_001.sprite
+
+
+

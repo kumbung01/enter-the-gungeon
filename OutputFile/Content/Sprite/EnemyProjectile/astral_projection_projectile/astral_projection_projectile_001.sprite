@@ -1,0 +1,14 @@
+[KEY]
+astral_projection_projectile_001
+[PATH]
+Sprite/EnemyProjectile/astral_projection_projectile/astral_projection_projectile_001.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+66, 325
+[SLICE]
+18, 22
+[OFFSET]
+0, 0

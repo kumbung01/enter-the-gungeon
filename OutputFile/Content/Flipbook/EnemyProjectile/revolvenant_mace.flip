@@ -1,0 +1,15 @@
+[KEY]
+revolvenant_mace
+[PATH]
+Flipbook/EnemyProjectile/revolvenant_mace.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+revolvenant_mace_001
+[PATH]
+Sprite/EnemyProjectile/revolvenant_mace/revolvenant_mace_001.sprite
+
+
+

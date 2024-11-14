@@ -1,0 +1,15 @@
+[KEY]
+football_egg_projectile
+[PATH]
+Flipbook/EnemyProjectile/football_egg_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+football_egg_projectile_001
+[PATH]
+Sprite/EnemyProjectile/football_egg_projectile/football_egg_projectile_001.sprite
+
+
+

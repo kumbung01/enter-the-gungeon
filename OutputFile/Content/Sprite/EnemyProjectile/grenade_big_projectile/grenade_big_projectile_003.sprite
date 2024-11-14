@@ -1,0 +1,14 @@
+[KEY]
+grenade_big_projectile_003
+[PATH]
+Sprite/EnemyProjectile/grenade_big_projectile/grenade_big_projectile_003.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+18, 277
+[SLICE]
+24, 23
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+tank_projectile
+[PATH]
+Flipbook/EnemyProjectile/tank_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+tank_projectile_001
+[PATH]
+Sprite/EnemyProjectile/tank_projectile/tank_projectile_001.sprite
+
+
+

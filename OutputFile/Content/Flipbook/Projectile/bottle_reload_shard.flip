@@ -1,0 +1,15 @@
+[KEY]
+bottle_reload_shard
+[PATH]
+Flipbook/Projectile/bottle_reload_shard.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+bottle_reload_shard_001
+[PATH]
+Sprite/Projectile/bottle_reload_shard/bottle_reload_shard_001.sprite
+
+
+

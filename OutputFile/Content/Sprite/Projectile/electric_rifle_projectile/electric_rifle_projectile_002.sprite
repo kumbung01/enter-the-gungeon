@@ -1,0 +1,14 @@
+[KEY]
+electric_rifle_projectile_002
+[PATH]
+Sprite/Projectile/electric_rifle_projectile/electric_rifle_projectile_002.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+101, 502
+[SLICE]
+41, 6
+[OFFSET]
+0, 0

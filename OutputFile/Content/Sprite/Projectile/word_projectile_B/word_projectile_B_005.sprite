@@ -1,0 +1,14 @@
+[KEY]
+word_projectile_B_005
+[PATH]
+Sprite/Projectile/word_projectile_B/word_projectile_B_005.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+730, 733
+[SLICE]
+8, 10
+[OFFSET]
+0, 0

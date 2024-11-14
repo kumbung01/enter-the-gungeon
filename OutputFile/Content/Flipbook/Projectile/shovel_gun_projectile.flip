@@ -1,0 +1,15 @@
+[KEY]
+shovel_gun_projectile
+[PATH]
+Flipbook/Projectile/shovel_gun_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+shovel_gun_projectile_001
+[PATH]
+Sprite/Projectile/shovel_gun_projectile/shovel_gun_projectile_001.sprite
+
+
+

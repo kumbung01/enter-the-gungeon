@@ -1,0 +1,14 @@
+[KEY]
+bard_projectile_impact_005
+[PATH]
+Sprite/EnemyProjectile/bard_projectile_impact/bard_projectile_impact_005.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+164, 381
+[SLICE]
+15, 18
+[OFFSET]
+0, 0

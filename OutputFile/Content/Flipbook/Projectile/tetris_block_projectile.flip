@@ -1,0 +1,15 @@
+[KEY]
+tetris_block_projectile
+[PATH]
+Flipbook/Projectile/tetris_block_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+tetris_block_projectile_001
+[PATH]
+Sprite/Projectile/tetris_block_projectile/tetris_block_projectile_001.sprite
+
+
+

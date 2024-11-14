@@ -1,0 +1,14 @@
+[KEY]
+resourceful_rat_enemy_cheese_projectile_001
+[PATH]
+Sprite/EnemyProjectile/resourceful_rat_enemy_cheese_projectile/resourceful_rat_enemy_cheese_projectile_001.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+235, 366
+[SLICE]
+18, 16
+[OFFSET]
+0, 0

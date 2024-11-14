@@ -1,0 +1,15 @@
+[KEY]
+10x10_projectile_alternate_dark
+[PATH]
+Flipbook/EnemyProjectile/10x10_projectile_alternate_dark.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+10x10_projectile_alternate_dark_001
+[PATH]
+Sprite/EnemyProjectile/10x10_projectile_alternate_dark/10x10_projectile_alternate_dark_001.sprite
+
+
+

@@ -1,0 +1,15 @@
+[KEY]
+predator_projectile
+[PATH]
+Flipbook/Projectile/predator_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+predator_projectile_001
+[PATH]
+Sprite/Projectile/predator_projectile/predator_projectile_001.sprite
+
+
+

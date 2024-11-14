@@ -1,0 +1,14 @@
+[KEY]
+32_rolling_enemy_projectile_009
+[PATH]
+Sprite/EnemyProjectile/32_rolling_enemy_projectile/32_rolling_enemy_projectile_009.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+160, 178
+[SLICE]
+32, 32
+[OFFSET]
+0, 0

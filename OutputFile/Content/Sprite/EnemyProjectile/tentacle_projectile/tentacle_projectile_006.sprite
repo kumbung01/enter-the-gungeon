@@ -1,0 +1,14 @@
+[KEY]
+tentacle_projectile_006
+[PATH]
+Sprite/EnemyProjectile/tentacle_projectile/tentacle_projectile_006.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+423, 192
+[SLICE]
+11, 14
+[OFFSET]
+0, 0

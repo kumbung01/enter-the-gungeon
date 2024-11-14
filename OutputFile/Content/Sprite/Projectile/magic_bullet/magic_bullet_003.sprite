@@ -1,0 +1,14 @@
+[KEY]
+magic_bullet_003
+[PATH]
+Sprite/Projectile/magic_bullet/magic_bullet_003.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+278, 659
+[SLICE]
+18, 6
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+me_projectile_big_002
+[PATH]
+Sprite/Projectile/me_projectile_big/me_projectile_big_002.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+20, 665
+[SLICE]
+24, 24
+[OFFSET]
+0, 0

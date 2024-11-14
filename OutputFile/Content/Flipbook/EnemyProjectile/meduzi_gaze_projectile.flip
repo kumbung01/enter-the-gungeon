@@ -1,0 +1,15 @@
+[KEY]
+meduzi_gaze_projectile
+[PATH]
+Flipbook/EnemyProjectile/meduzi_gaze_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+meduzi_gaze_projectile_001
+[PATH]
+Sprite/EnemyProjectile/meduzi_gaze_projectile/meduzi_gaze_projectile_001.sprite
+
+
+

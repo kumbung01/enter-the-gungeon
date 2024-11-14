@@ -1,0 +1,14 @@
+[KEY]
+helicopter_fire_projectile_004
+[PATH]
+Sprite/EnemyProjectile/helicopter_fire_projectile/helicopter_fire_projectile_004.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+296, 320
+[SLICE]
+15, 21
+[OFFSET]
+0, 0

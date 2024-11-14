@@ -1,0 +1,14 @@
+[KEY]
+blobuloid_projectile_007
+[PATH]
+Sprite/EnemyProjectile/blobuloid_projectile/blobuloid_projectile_007.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+357, 429
+[SLICE]
+11, 11
+[OFFSET]
+0, 0

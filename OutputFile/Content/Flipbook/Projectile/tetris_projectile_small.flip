@@ -1,0 +1,15 @@
+[KEY]
+tetris_projectile_small
+[PATH]
+Flipbook/Projectile/tetris_projectile_small.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+tetris_projectile_small_001
+[PATH]
+Sprite/Projectile/tetris_projectile_small/tetris_projectile_small_001.sprite
+
+
+

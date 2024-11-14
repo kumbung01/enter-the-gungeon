@@ -1,0 +1,14 @@
+[KEY]
+icethrower_projectile_008
+[PATH]
+Sprite/Projectile/icethrower_projectile/icethrower_projectile_008.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+195, 665
+[SLICE]
+22, 22
+[OFFSET]
+0, 0

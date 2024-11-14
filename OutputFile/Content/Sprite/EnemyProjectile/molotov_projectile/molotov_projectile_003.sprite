@@ -1,0 +1,14 @@
+[KEY]
+molotov_projectile_003
+[PATH]
+Sprite/EnemyProjectile/molotov_projectile/molotov_projectile_003.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+196, 381
+[SLICE]
+17, 11
+[OFFSET]
+0, 0

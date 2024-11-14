@@ -1,0 +1,14 @@
+[KEY]
+shark_fin_northeast_003
+[PATH]
+Sprite/Projectile/shark_fin_northeast/shark_fin_northeast_003.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+663, 507
+[SLICE]
+21, 16
+[OFFSET]
+0, 0

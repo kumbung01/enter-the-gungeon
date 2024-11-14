@@ -1,0 +1,15 @@
+[KEY]
+grenade_projectile
+[PATH]
+Flipbook/EnemyProjectile/grenade_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+grenade_projectile_001
+[PATH]
+Sprite/EnemyProjectile/grenade_projectile/grenade_projectile_001.sprite
+
+
+

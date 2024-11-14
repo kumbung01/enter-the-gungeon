@@ -1,0 +1,14 @@
+[KEY]
+enemy_projectile_bulletman_004
+[PATH]
+Sprite/EnemyProjectile/enemy_projectile_bulletman/enemy_projectile_bulletman_004.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+285, 286
+[SLICE]
+23, 12
+[OFFSET]
+0, 0

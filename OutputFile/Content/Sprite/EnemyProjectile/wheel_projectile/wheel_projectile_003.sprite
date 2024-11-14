@@ -1,0 +1,14 @@
+[KEY]
+wheel_projectile_003
+[PATH]
+Sprite/EnemyProjectile/wheel_projectile/wheel_projectile_003.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+429, 206
+[SLICE]
+14, 14
+[OFFSET]
+0, 0

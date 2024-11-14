@@ -1,0 +1,15 @@
+[KEY]
+looper_projectile
+[PATH]
+Flipbook/Projectile/looper_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+looper_projectile_001
+[PATH]
+Sprite/Projectile/looper_projectile/looper_projectile_001.sprite
+
+
+

@@ -1,0 +1,15 @@
+[KEY]
+crystal_shotgun_projectile
+[PATH]
+Flipbook/Projectile/crystal_shotgun_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+crystal_shotgun_projectile_001
+[PATH]
+Sprite/Projectile/crystal_shotgun_projectile/crystal_shotgun_projectile_001.sprite
+
+
+

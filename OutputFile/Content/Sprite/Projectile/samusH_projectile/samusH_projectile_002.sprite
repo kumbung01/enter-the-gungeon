@@ -1,0 +1,14 @@
+[KEY]
+samusH_projectile_002
+[PATH]
+Sprite/Projectile/samusH_projectile/samusH_projectile_002.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+132, 590
+[SLICE]
+33, 8
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+jolt_pistol_projectile
+[PATH]
+Flipbook/Projectile/jolt_pistol_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+jolt_pistol_projectile_001
+[PATH]
+Sprite/Projectile/jolt_pistol_projectile/jolt_pistol_projectile_001.sprite
+
+
+

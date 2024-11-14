@@ -1,0 +1,14 @@
+[KEY]
+rad_projectile_015
+[PATH]
+Sprite/Projectile/rad_projectile/rad_projectile_015.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+296, 736
+[SLICE]
+10, 10
+[OFFSET]
+0, 0

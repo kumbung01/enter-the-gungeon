@@ -1,0 +1,15 @@
+[KEY]
+bladerunner_projectile
+[PATH]
+Flipbook/Projectile/bladerunner_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+bladerunner_projectile_001
+[PATH]
+Sprite/Projectile/bladerunner_projectile/bladerunner_projectile_001.sprite
+
+
+

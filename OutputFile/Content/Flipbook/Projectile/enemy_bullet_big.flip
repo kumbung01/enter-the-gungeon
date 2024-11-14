@@ -1,0 +1,15 @@
+[KEY]
+enemy_bullet_big
+[PATH]
+Flipbook/Projectile/enemy_bullet_big.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+enemy_bullet_big_001
+[PATH]
+Sprite/Projectile/enemy_bullet_big/enemy_bullet_big_001.sprite
+
+
+

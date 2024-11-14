@@ -1,0 +1,15 @@
+[KEY]
+armgun_projectile
+[PATH]
+Flipbook/Projectile/armgun_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+armgun_projectile_001
+[PATH]
+Sprite/Projectile/armgun_projectile/armgun_projectile_001.sprite
+
+
+

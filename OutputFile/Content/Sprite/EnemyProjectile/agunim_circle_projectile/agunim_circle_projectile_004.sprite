@@ -1,0 +1,14 @@
+[KEY]
+agunim_circle_projectile_004
+[PATH]
+Sprite/EnemyProjectile/agunim_circle_projectile/agunim_circle_projectile_004.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+44, 325
+[SLICE]
+22, 22
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+cold_45_projectile
+[PATH]
+Flipbook/Projectile/cold_45_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+cold_45_projectile_001
+[PATH]
+Sprite/Projectile/cold_45_projectile/cold_45_projectile_001.sprite
+
+
+

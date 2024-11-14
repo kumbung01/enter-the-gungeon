@@ -1,0 +1,15 @@
+[KEY]
+mt_bobble_rogue
+[PATH]
+Flipbook/Projectile/mt_bobble_rogue.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+mt_bobble_rogue_001
+[PATH]
+Sprite/Projectile/mt_bobble_rogue/mt_bobble_rogue_001.sprite
+
+
+

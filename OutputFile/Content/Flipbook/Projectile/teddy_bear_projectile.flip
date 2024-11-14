@@ -1,0 +1,15 @@
+[KEY]
+teddy_bear_projectile
+[PATH]
+Flipbook/Projectile/teddy_bear_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+teddy_bear_projectile_001
+[PATH]
+Sprite/Projectile/teddy_bear_projectile/teddy_bear_projectile_001.sprite
+
+
+

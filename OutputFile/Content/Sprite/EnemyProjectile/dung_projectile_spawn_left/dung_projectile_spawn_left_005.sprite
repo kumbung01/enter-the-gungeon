@@ -1,0 +1,14 @@
+[KEY]
+dung_projectile_spawn_left_005
+[PATH]
+Sprite/EnemyProjectile/dung_projectile_spawn_left/dung_projectile_spawn_left_005.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+378, 15
+[SLICE]
+18, 16
+[OFFSET]
+0, 0

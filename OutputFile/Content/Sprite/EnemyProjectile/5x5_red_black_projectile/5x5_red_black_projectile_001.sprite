@@ -1,0 +1,14 @@
+[KEY]
+5x5_red_black_projectile_001
+[PATH]
+Sprite/EnemyProjectile/5x5_red_black_projectile/5x5_red_black_projectile_001.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+408, 119
+[SLICE]
+5, 5
+[OFFSET]
+0, 0

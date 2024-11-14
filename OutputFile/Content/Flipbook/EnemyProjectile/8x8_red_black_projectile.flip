@@ -1,0 +1,15 @@
+[KEY]
+8x8_red_black_projectile
+[PATH]
+Flipbook/EnemyProjectile/8x8_red_black_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+8x8_red_black_projectile_001
+[PATH]
+Sprite/EnemyProjectile/8x8_red_black_projectile/8x8_red_black_projectile_001.sprite
+
+
+

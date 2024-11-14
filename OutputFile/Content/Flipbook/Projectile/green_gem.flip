@@ -1,0 +1,15 @@
+[KEY]
+green_gem
+[PATH]
+Flipbook/Projectile/green_gem.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+green_gem_001
+[PATH]
+Sprite/Projectile/green_gem/green_gem_001.sprite
+
+
+

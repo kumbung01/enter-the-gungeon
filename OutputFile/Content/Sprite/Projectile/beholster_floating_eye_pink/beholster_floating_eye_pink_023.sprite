@@ -1,0 +1,14 @@
+[KEY]
+beholster_floating_eye_pink_023
+[PATH]
+Sprite/Projectile/beholster_floating_eye_pink/beholster_floating_eye_pink_023.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+580, 408
+[SLICE]
+18, 33
+[OFFSET]
+0, 0

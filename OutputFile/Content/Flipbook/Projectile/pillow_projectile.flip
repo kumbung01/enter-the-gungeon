@@ -1,0 +1,15 @@
+[KEY]
+pillow_projectile
+[PATH]
+Flipbook/Projectile/pillow_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+pillow_projectile_001
+[PATH]
+Sprite/Projectile/pillow_projectile/pillow_projectile_001.sprite
+
+
+

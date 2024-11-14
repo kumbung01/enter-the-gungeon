@@ -1,0 +1,14 @@
+[KEY]
+spiritbomb_projectile_004
+[PATH]
+Sprite/EnemyProjectile/spiritbomb_projectile/spiritbomb_projectile_004.sprite
+[ATLAS_KEY]
+EnemyProjectile
+[ATLAS_PATH]
+Texture/EnemyProjectile.png
+[LEFT_TOP]
+174, 0
+[SLICE]
+39, 39
+[OFFSET]
+0, 0

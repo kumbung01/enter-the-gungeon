@@ -1,0 +1,15 @@
+[KEY]
+blue2_ant_projectile
+[PATH]
+Flipbook/Projectile/blue2_ant_projectile.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+blue2_ant_projectile_001
+[PATH]
+Sprite/Projectile/blue2_ant_projectile/blue2_ant_projectile_001.sprite
+
+
+

@@ -1,0 +1,14 @@
+[KEY]
+floating_eye_spawn_007
+[PATH]
+Sprite/Projectile/floating_eye_spawn/floating_eye_spawn_007.sprite
+[ATLAS_KEY]
+Projectile
+[ATLAS_PATH]
+Texture/Projectile.png
+[LEFT_TOP]
+439, 725
+[SLICE]
+11, 11
+[OFFSET]
+0, 0
