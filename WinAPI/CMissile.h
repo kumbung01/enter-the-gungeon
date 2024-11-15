@@ -17,6 +17,7 @@ private:
 
     float       m_damage;
 
+protected:
     CSprite*    m_sprite;
     float       m_magnification;
 
@@ -42,6 +43,7 @@ private:
     virtual void CreateSprite();
 
 public:
+    virtual void Begin() override;
     virtual void Tick() override;
     virtual void Render() override;
 

@@ -8,6 +8,7 @@ public:
     ~CMonsterMissile();
 
 public:
+    virtual void Begin() override;
     virtual void CreateSprite() override;
 };
 

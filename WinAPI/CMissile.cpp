@@ -21,8 +21,6 @@ CMissile::CMissile()
 	m_Velocity = Vec2(1.f, 1.f);
 	m_Velocity.Normalize();
 	m_Velocity *= 500.f;
-
-	CreateSprite();
 }
 
 CMissile::~CMissile()
@@ -32,6 +30,11 @@ CMissile::~CMissile()
 void CMissile::CreateSprite()
 {
 	m_sprite = CAssetMgr::GetInst()->LoadSprite(L"bullet_variant_001", L"Sprite\\Projectile\\bullet_variant\\bullet_variant_001.sprite");
+}
+
+void CMissile::Begin()
+{
+	CreateSprite();
 }
 
 void CMissile::Tick()

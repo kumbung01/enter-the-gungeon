@@ -4,11 +4,15 @@
 
 CMonsterMissile::CMonsterMissile()
 {
-	CMonsterMissile::CreateSprite();
 }
 
 CMonsterMissile::~CMonsterMissile()
 {
+}
+
+void CMonsterMissile::Begin()
+{
+	CreateSprite();
 }
 
 void CMonsterMissile::CreateSprite()
