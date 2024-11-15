@@ -12,6 +12,7 @@
 #include "CGun.h"
 #include "CReloadUI.h"
 #include "CRevolver.h"
+#include "CMonsterRevolver.h"
 
 #include "CCollisionMgr.h"
 #include "CCollider.h"
@@ -57,7 +58,6 @@ void CLevel_Start::Begin()
     AddObject(pPlayer, LAYER_TYPE::PLAYER);
 
     CGun* gun = new CRevolver;
-    gun->SetPos(pPlayer->GetPos());
     gun->SetName(L"Revolver");
     gun->SetOwner(pPlayer);
     pPlayer->SetGun(gun);
@@ -77,6 +77,12 @@ void CLevel_Start::Begin()
     pMonster->SetSpeed(300.f);
     AddObject(pMonster, LAYER_TYPE::MONSTER);
 
+    gun = new CMonsterRevolver;
+    gun->SetOwner(pMonster);
+    pMonster->SetGun(gun);
+    gun->SetName(L"MonsterRevolver");
+    AddObject(gun, LAYER_TYPE::GUN);
+
 
     pMonster = new CMonster;
     pMonster->SetName(L"Monster");
@@ -85,6 +91,13 @@ void CLevel_Start::Begin()
     pMonster->SetDistance(200.f);
     pMonster->SetSpeed(300.f);
     AddObject(pMonster, LAYER_TYPE::MONSTER);
+
+    gun = new CMonsterRevolver;
+    gun->SetOwner(pMonster);
+    pMonster->SetGun(gun);
+    gun->SetName(L"MonsterRevolver");
+    AddObject(gun, LAYER_TYPE::GUN);
+
 
     //// Platform Object Ãß°¡
     CObj* pPlatform = new CPlatform;
