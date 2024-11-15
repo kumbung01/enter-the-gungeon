@@ -1,0 +1,15 @@
+[KEY]
+bullet_hit_right
+[PATH]
+Flipbook/BulletMan/bullet_hit_right.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+bullet_hit_right_001
+[PATH]
+Sprite/BulletMan/bullet_hit_right/bullet_hit_right_001.sprite
+
+
+

@@ -1,0 +1,14 @@
+[KEY]
+bullet_pitfall_right_005
+[PATH]
+Sprite/BulletMan/bullet_pitfall_right/bullet_pitfall_right_005.sprite
+[ATLAS_KEY]
+BulletMan
+[ATLAS_PATH]
+Texture/BulletMan.png
+[LEFT_TOP]
+43, 111
+[SLICE]
+4, 4
+[OFFSET]
+0, 0

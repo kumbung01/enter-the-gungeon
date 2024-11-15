@@ -1,0 +1,14 @@
+[KEY]
+bullet_surprise_left_004
+[PATH]
+Sprite/BulletMan/bullet_surprise_left/bullet_surprise_left_004.sprite
+[ATLAS_KEY]
+BulletMan
+[ATLAS_PATH]
+Texture/BulletMan.png
+[LEFT_TOP]
+31, 71
+[SLICE]
+15, 23
+[OFFSET]
+0, 0

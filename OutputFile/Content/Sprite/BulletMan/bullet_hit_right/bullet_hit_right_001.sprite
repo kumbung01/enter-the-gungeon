@@ -1,0 +1,14 @@
+[KEY]
+bullet_hit_right_001
+[PATH]
+Sprite/BulletMan/bullet_hit_right/bullet_hit_right_001.sprite
+[ATLAS_KEY]
+BulletMan
+[ATLAS_PATH]
+Texture/BulletMan.png
+[LEFT_TOP]
+127, 88
+[SLICE]
+16, 22
+[OFFSET]
+0, 0

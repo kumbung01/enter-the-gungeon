@@ -1,0 +1,14 @@
+[KEY]
+bullet_idle_right_001
+[PATH]
+Sprite/BulletMan/bullet_idle_right/bullet_idle_right_001.sprite
+[ATLAS_KEY]
+BulletMan
+[ATLAS_PATH]
+Texture/BulletMan.png
+[LEFT_TOP]
+81, 92
+[SLICE]
+12, 23
+[OFFSET]
+0, 0

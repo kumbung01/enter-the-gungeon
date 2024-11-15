@@ -1,0 +1,15 @@
+[KEY]
+bullet_shooting_left
+[PATH]
+Flipbook/BulletMan/bullet_shooting_left.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+bullet_shooting_left_001
+[PATH]
+Sprite/BulletMan/bullet_shooting_left/bullet_shooting_left_001.sprite
+
+
+
