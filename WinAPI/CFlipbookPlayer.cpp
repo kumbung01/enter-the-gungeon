@@ -18,7 +18,6 @@ CFlipbookPlayer::CFlipbookPlayer()
 	, m_Finish(false)
 	, m_mirror(false)
 	, m_magnification(1.f)
-	//, m_angle(0.f)
 {
 }
 
