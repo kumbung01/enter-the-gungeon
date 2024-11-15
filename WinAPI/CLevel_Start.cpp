@@ -58,6 +58,7 @@ void CLevel_Start::Begin()
 
     CGun* gun = new CRevolver;
     gun->SetPos(pPlayer->GetPos());
+    gun->SetName(L"Revolver");
     gun->SetOwner(pPlayer);
     pPlayer->SetGun(gun);
     AddObject(gun, LAYER_TYPE::GUN);
