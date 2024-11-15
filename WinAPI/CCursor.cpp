@@ -39,14 +39,17 @@ void CCursor::Render()
 					GetScale(), 
 					0.f);
 
-	auto graphics = CEngine::GetInst()->GetBackGraphics();
+	HDC backDC = CEngine::GetInst()->GetSecondDC();
 	Vec2 vPos = GetRenderPos();
 
-	float centerX = vPos.x - m_Tex->GetWidth() / 2.f;
-	float centerY = vPos.y - m_Tex->GetHeight() / 2.f;
-	
-	graphics->DrawImage(m_Tex->GetImage(),
-		(int)centerX, (int)centerY,
-		(int)0, (int)0,
-		m_Tex->GetWidth(), m_Tex->GetHeight(), UnitPixel);
+	TransparentBlt(backDC,
+		vPos.x - m_Tex->GetWidth() / 2.f,
+		vPos.y - m_Tex->GetHeight() / 2.f,
+		m_Tex->GetWidth(),
+		m_Tex->GetHeight(),
+		m_Tex->GetDC(),
+		0, 0,
+		m_Tex->GetWidth(),
+		m_Tex->GetHeight(),
+		RGB(255, 0, 255));
 }
