@@ -140,13 +140,11 @@ struct tAnimState
 public:
 	int   idx;
 	bool  mirror;
-	float angle;
 
 public:
 	bool operator == (const tAnimState& _other) const {
-		return (this->idx    == _other.idx) && 
-			   (this->mirror == _other.mirror) &&
-			   (this->angle  == _other.angle);
+		return (this->idx == _other.idx)
+			&& (this->mirror == _other.mirror);
 	}
 	bool operator != (const tAnimState& _other) const {
 		return !(*this == _other);
