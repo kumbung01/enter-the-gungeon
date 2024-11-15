@@ -5,6 +5,7 @@ class CCollider;
 class CTexture;
 class CFSM;
 class CGun;
+class CFlipbookPlayer;
 
 class CMonster :
     public CObj
@@ -17,9 +18,10 @@ private:
     Vec2        m_InitPos;
     float       m_Dist;
 
-
+    CFlipbookPlayer* m_flipbookPlayer;
     CTexture*   m_Tex;
     CCollider*  m_Collider;
+    
     CFSM*       m_FSM;
 
     CGun*       m_gun;
@@ -33,11 +35,15 @@ public:
 
     tMonInfo& GetMonInfo() { return m_Info; }
 
+    void Play(tAnimState _state, float _duration, bool _repeat);
+
 public:
     virtual void Begin() override;
     virtual void Tick() override;            
     virtual void Render() override;
     virtual void BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider) override;
+private:
+    virtual void CreateFlipbook();
 
 public:
     CMonster();

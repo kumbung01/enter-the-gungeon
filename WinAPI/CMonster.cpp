@@ -5,6 +5,7 @@
 #include "CEngine.h"
 #include "CTimeMgr.h"
 #include "CCollider.h"
+#include "CFlipbookPlayer.h"
 
 #include "CAssetMgr.h"
 #include "CTexture.h"
@@ -30,8 +31,8 @@ CMonster::CMonster()
 	// 몬스터 스탯
 	m_Info.MaxHP = 25.f;
 	m_Info.CurHP = 25.f;
-	m_Info.AttRange = 100.f;
-	m_Info.DetectRange = 200.f;
+	m_Info.AttRange = 500.f;
+	m_Info.DetectRange = 900.f;
 	m_Info.Speed = 100.f;
 	m_Info.AttDelay = 1.f;
 
@@ -41,11 +42,18 @@ CMonster::CMonster()
 	// FSM 에 상태 추가
 	m_FSM->AddState(L"Idle", new CIdleState);
 	m_FSM->AddState(L"Trace", new CTraceState);
+
+	CreateFlipbook();
 }
 
 CMonster::~CMonster()
 {
 	DeleteObject(m_gun);
+}
+
+void CMonster::Play(tAnimState _state, float _duration, bool _repeat)
+{
+	m_flipbookPlayer->Play(_state, _duration, _repeat);
 }
 
 void CMonster::Begin()
@@ -129,4 +137,42 @@ void CMonster::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider*
 		if (m_Info.CurHP <= 0)
 			DeleteObject(this);
 	}
+}
+
+void CMonster::CreateFlipbook()
+{
+	m_flipbookPlayer = new CFlipbookPlayer;
+
+	m_flipbookPlayer->AddFlipbook(BULLET_COVER_LEFT_IDLE, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_cover_left_idle", L"Flipbook\\BulletMan\\bullet_cover_left_idle.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_COVER_LEFT_LEAP, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_cover_left_leap", L"Flipbook\\BulletMan\\bullet_cover_left_leap.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_COVER_RIGHT_IDLE, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_cover_right_idle", L"Flipbook\\BulletMan\\bullet_cover_right_idle.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_COVER_RIGHT_LEAP, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_cover_right_leap", L"Flipbook\\BulletMan\\bullet_cover_right_leap.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_DEATH_BACK_SOUTH, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_death_back_south", L"Flipbook\\BulletMan\\bullet_death_back_south.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_DEATH_FRONT_NORTH, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_death_front_north", L"Flipbook\\BulletMan\\bullet_death_front_north.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_DEATH_LEFT_BACK, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_death_left_back", L"Flipbook\\BulletMan\\bullet_death_left_back.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_DEATH_LEFT_FRONT, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_death_left_front", L"Flipbook\\BulletMan\\bullet_death_left_front.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_DEATH_LEFT_SIDE, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_death_left_side", L"Flipbook\\BulletMan\\bullet_death_left_side.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_DEATH_RIGHT_BACK, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_death_right_back", L"Flipbook\\BulletMan\\bullet_death_right_back.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_DEATH_RIGHT_FRONT, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_death_right_front", L"Flipbook\\BulletMan\\bullet_death_right_front.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_DEATH_RIGHT_SIDE, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_death_right_side", L"Flipbook\\BulletMan\\bullet_death_right_side.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_DIE_LEFT, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_die_left", L"Flipbook\\BulletMan\\bullet_die_left.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_DIE_LEFT_BACK, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_die_left_back", L"Flipbook\\BulletMan\\bullet_die_left_back.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_DIE_RIGHT, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_die_right", L"Flipbook\\BulletMan\\bullet_die_right.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_DIE_RIGHT_BACK, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_die_right_back", L"Flipbook\\BulletMan\\bullet_die_right_back.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_HIT_BACK_LEFT, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_hit_back_left", L"Flipbook\\BulletMan\\bullet_hit_back_left.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_HIT_BACK_RIGHT, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_hit_back_right", L"Flipbook\\BulletMan\\bullet_hit_back_right.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_HIT_LEFT, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_hit_left", L"Flipbook\\BulletMan\\bullet_hit_left.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_HIT_RIGHT, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_hit_right", L"Flipbook\\BulletMan\\bullet_hit_right.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_IDLE_BACK, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_idle_back", L"Flipbook\\BulletMan\\bullet_idle_back.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_IDLE_LEFT, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_idle_left", L"Flipbook\\BulletMan\\bullet_idle_left.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_IDLE_RIGHT, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_idle_right", L"Flipbook\\BulletMan\\bullet_idle_right.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_PITFALL_RIGHT, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_pitfall_right", L"Flipbook\\BulletMan\\bullet_pitfall_right.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_RUN_LEFT, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_run_left", L"Flipbook\\BulletMan\\bullet_run_left.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_RUN_LEFT_BACK, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_run_left_back", L"Flipbook\\BulletMan\\bullet_run_left_back.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_RUN_RIGHT, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_run_right", L"Flipbook\\BulletMan\\bullet_run_right.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_RUN_RIGHT_BACK, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_run_right_back", L"Flipbook\\BulletMan\\bullet_run_right_back.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_SHOOTING_LEFT, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_shooting_left", L"Flipbook\\BulletMan\\bullet_shooting_left.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_SHOOTING_RIGHT, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_shooting_right", L"Flipbook\\BulletMan\\bullet_shooting_right.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_SPAWN, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_spawn", L"Flipbook\\BulletMan\\bullet_spawn.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_SURPRISE_LEFT, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_surprise_left", L"Flipbook\\BulletMan\\bullet_surprise_left.flip"));
 }
