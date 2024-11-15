@@ -4,7 +4,7 @@
 #include "CLevelMgr.h"
 #include "CMonster.h"
 #include "CTimeMgr.h"
-#include "CMissile.h"
+#include "CMonsterMissile.h"
 #include "CGun.h"
 
 CTraceState::CTraceState()
@@ -48,7 +48,7 @@ void CTraceState::FinalTick()
 		for (int i = -2; i < 2; ++i)
 		{
 			info.AccTime = 0;
-			CMissile* pMissile = new CMissile;
+			CMonsterMissile* pMissile = new CMonsterMissile;
 			pMissile->SetPos(pMon->GetPos());
 			pMissile->SetScale(20.f, 20.f);
 			pMissile->SetVelocity(Rotate(vMoveDir, i * 0.175f) * 500.f);
