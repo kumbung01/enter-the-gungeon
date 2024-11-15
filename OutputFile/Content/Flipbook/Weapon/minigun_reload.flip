@@ -3,13 +3,13 @@ minigun_reload
 [PATH]
 Flipbook/Weapon/minigun_reload.flip
 [SPRITE_COUNT]
-3
+4
 [INDEX]
 0
 [KEY]
-minigun_reload_004
+minigun_reload_001
 [PATH]
-Sprite/Weapon/minigun_reload/minigun_reload_004.sprite
+Sprite/Weapon/minigun_reload/minigun_reload_001.sprite
 
 
 [INDEX]
@@ -26,6 +26,14 @@ Sprite/Weapon/minigun_reload/minigun_reload_002.sprite
 minigun_reload_003
 [PATH]
 Sprite/Weapon/minigun_reload/minigun_reload_003.sprite
+
+
+[INDEX]
+3
+[KEY]
+minigun_reload_004
+[PATH]
+Sprite/Weapon/minigun_reload/minigun_reload_004.sprite
 
 
 

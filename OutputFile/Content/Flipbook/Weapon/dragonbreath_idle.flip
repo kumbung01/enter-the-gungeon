@@ -3,9 +3,17 @@ dragonbreath_idle
 [PATH]
 Flipbook/Weapon/dragonbreath_idle.flip
 [SPRITE_COUNT]
-2
+3
 [INDEX]
 0
+[KEY]
+dragonbreath_idle_001
+[PATH]
+Sprite/Weapon/dragonbreath_idle/dragonbreath_idle_001.sprite
+
+
+[INDEX]
+1
 [KEY]
 dragonbreath_idle_002
 [PATH]
@@ -13,11 +21,11 @@ Sprite/Weapon/dragonbreath_idle/dragonbreath_idle_002.sprite
 
 
 [INDEX]
-1
+2
 [KEY]
-dragonbreath_idle_001
+dragonbreath_idle_003
 [PATH]
-Sprite/Weapon/dragonbreath_idle/dragonbreath_idle_001.sprite
+Sprite/Weapon/dragonbreath_idle/dragonbreath_idle_003.sprite
 
 
 

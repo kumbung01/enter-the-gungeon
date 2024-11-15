@@ -3,13 +3,13 @@ m16_mggl_reload
 [PATH]
 Flipbook/Weapon/m16_mggl_reload.flip
 [SPRITE_COUNT]
-3
+4
 [INDEX]
 0
 [KEY]
-m16_mggl_reload_003
+m16_mggl_reload_001
 [PATH]
-Sprite/Weapon/m16_mggl_reload/m16_mggl_reload_003.sprite
+Sprite/Weapon/m16_mggl_reload/m16_mggl_reload_001.sprite
 
 
 [INDEX]
@@ -23,9 +23,17 @@ Sprite/Weapon/m16_mggl_reload/m16_mggl_reload_002.sprite
 [INDEX]
 2
 [KEY]
-m16_mggl_reload_001
+m16_mggl_reload_003
 [PATH]
-Sprite/Weapon/m16_mggl_reload/m16_mggl_reload_001.sprite
+Sprite/Weapon/m16_mggl_reload/m16_mggl_reload_003.sprite
+
+
+[INDEX]
+3
+[KEY]
+m16_mggl_reload_004
+[PATH]
+Sprite/Weapon/m16_mggl_reload/m16_mggl_reload_004.sprite
 
 
 

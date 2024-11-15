@@ -3,13 +3,45 @@ bundle_wands_fire
 [PATH]
 Flipbook/Weapon/bundle_wands_fire.flip
 [SPRITE_COUNT]
-1
+5
 [INDEX]
 0
+[KEY]
+bundle_wands_fire_001
+[PATH]
+Sprite/Weapon/bundle_wands_fire/bundle_wands_fire_001.sprite
+
+
+[INDEX]
+1
 [KEY]
 bundle_wands_fire_002
 [PATH]
 Sprite/Weapon/bundle_wands_fire/bundle_wands_fire_002.sprite
+
+
+[INDEX]
+2
+[KEY]
+bundle_wands_fire_003
+[PATH]
+Sprite/Weapon/bundle_wands_fire/bundle_wands_fire_003.sprite
+
+
+[INDEX]
+3
+[KEY]
+bundle_wands_fire_004
+[PATH]
+Sprite/Weapon/bundle_wands_fire/bundle_wands_fire_004.sprite
+
+
+[INDEX]
+4
+[KEY]
+bundle_wands_fire_005
+[PATH]
+Sprite/Weapon/bundle_wands_fire/bundle_wands_fire_005.sprite
 
 
 

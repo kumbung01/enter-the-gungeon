@@ -3,13 +3,45 @@ knav3_fire
 [PATH]
 Flipbook/Weapon/knav3_fire.flip
 [SPRITE_COUNT]
-1
+5
 [INDEX]
 0
+[KEY]
+knav3_fire_001
+[PATH]
+Sprite/Weapon/knav3_fire/knav3_fire_001.sprite
+
+
+[INDEX]
+1
+[KEY]
+knav3_fire_002
+[PATH]
+Sprite/Weapon/knav3_fire/knav3_fire_002.sprite
+
+
+[INDEX]
+2
 [KEY]
 knav3_fire_003
 [PATH]
 Sprite/Weapon/knav3_fire/knav3_fire_003.sprite
+
+
+[INDEX]
+3
+[KEY]
+knav3_fire_004
+[PATH]
+Sprite/Weapon/knav3_fire/knav3_fire_004.sprite
+
+
+[INDEX]
+4
+[KEY]
+knav3_fire_005
+[PATH]
+Sprite/Weapon/knav3_fire/knav3_fire_005.sprite
 
 
 

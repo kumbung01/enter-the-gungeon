@@ -3,13 +3,37 @@
 [PATH]
 Flipbook/Weapon/38_special_fire.flip
 [SPRITE_COUNT]
-1
+4
 [INDEX]
 0
+[KEY]
+38_special_fire_001
+[PATH]
+Sprite/Weapon/38_special_fire/38_special_fire_001.sprite
+
+
+[INDEX]
+1
+[KEY]
+38_special_fire_002
+[PATH]
+Sprite/Weapon/38_special_fire/38_special_fire_002.sprite
+
+
+[INDEX]
+2
 [KEY]
 38_special_fire_003
 [PATH]
 Sprite/Weapon/38_special_fire/38_special_fire_003.sprite
+
+
+[INDEX]
+3
+[KEY]
+38_special_fire_004
+[PATH]
+Sprite/Weapon/38_special_fire/38_special_fire_004.sprite
 
 
 

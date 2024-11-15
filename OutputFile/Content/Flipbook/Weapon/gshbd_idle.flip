@@ -3,9 +3,17 @@ gshbd_idle
 [PATH]
 Flipbook/Weapon/gshbd_idle.flip
 [SPRITE_COUNT]
-2
+4
 [INDEX]
 0
+[KEY]
+gshbd_idle_001
+[PATH]
+Sprite/Weapon/gshbd_idle/gshbd_idle_001.sprite
+
+
+[INDEX]
+1
 [KEY]
 gshbd_idle_002
 [PATH]
@@ -13,11 +21,19 @@ Sprite/Weapon/gshbd_idle/gshbd_idle_002.sprite
 
 
 [INDEX]
-1
+2
 [KEY]
-gshbd_idle_001
+gshbd_idle_003
 [PATH]
-Sprite/Weapon/gshbd_idle/gshbd_idle_001.sprite
+Sprite/Weapon/gshbd_idle/gshbd_idle_003.sprite
+
+
+[INDEX]
+3
+[KEY]
+gshbd_idle_004
+[PATH]
+Sprite/Weapon/gshbd_idle/gshbd_idle_004.sprite
 
 
 

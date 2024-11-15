@@ -3,13 +3,29 @@ sns_reload
 [PATH]
 Flipbook/Weapon/sns_reload.flip
 [SPRITE_COUNT]
-1
+3
 [INDEX]
 0
 [KEY]
 sns_reload_001
 [PATH]
 Sprite/Weapon/sns_reload/sns_reload_001.sprite
+
+
+[INDEX]
+1
+[KEY]
+sns_reload_002
+[PATH]
+Sprite/Weapon/sns_reload/sns_reload_002.sprite
+
+
+[INDEX]
+2
+[KEY]
+sns_reload_003
+[PATH]
+Sprite/Weapon/sns_reload/sns_reload_003.sprite
 
 
 

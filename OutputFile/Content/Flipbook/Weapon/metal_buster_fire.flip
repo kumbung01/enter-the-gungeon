@@ -3,13 +3,21 @@ metal_buster_fire
 [PATH]
 Flipbook/Weapon/metal_buster_fire.flip
 [SPRITE_COUNT]
-1
+2
 [INDEX]
 0
 [KEY]
 metal_buster_fire_001
 [PATH]
 Sprite/Weapon/metal_buster_fire/metal_buster_fire_001.sprite
+
+
+[INDEX]
+1
+[KEY]
+metal_buster_fire_002
+[PATH]
+Sprite/Weapon/metal_buster_fire/metal_buster_fire_002.sprite
 
 
 

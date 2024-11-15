@@ -3,17 +3,33 @@ yellow_blaster_reload
 [PATH]
 Flipbook/Weapon/yellow_blaster_reload.flip
 [SPRITE_COUNT]
-4
+8
 [INDEX]
 0
 [KEY]
-yellow_blaster_reload_008
+yellow_blaster_reload_001
 [PATH]
-Sprite/Weapon/yellow_blaster_reload/yellow_blaster_reload_008.sprite
+Sprite/Weapon/yellow_blaster_reload/yellow_blaster_reload_001.sprite
 
 
 [INDEX]
 1
+[KEY]
+yellow_blaster_reload_002
+[PATH]
+Sprite/Weapon/yellow_blaster_reload/yellow_blaster_reload_002.sprite
+
+
+[INDEX]
+2
+[KEY]
+yellow_blaster_reload_003
+[PATH]
+Sprite/Weapon/yellow_blaster_reload/yellow_blaster_reload_003.sprite
+
+
+[INDEX]
+3
 [KEY]
 yellow_blaster_reload_004
 [PATH]
@@ -21,7 +37,15 @@ Sprite/Weapon/yellow_blaster_reload/yellow_blaster_reload_004.sprite
 
 
 [INDEX]
-2
+4
+[KEY]
+yellow_blaster_reload_005
+[PATH]
+Sprite/Weapon/yellow_blaster_reload/yellow_blaster_reload_005.sprite
+
+
+[INDEX]
+5
 [KEY]
 yellow_blaster_reload_006
 [PATH]
@@ -29,11 +53,19 @@ Sprite/Weapon/yellow_blaster_reload/yellow_blaster_reload_006.sprite
 
 
 [INDEX]
-3
+6
 [KEY]
-yellow_blaster_reload_005
+yellow_blaster_reload_007
 [PATH]
-Sprite/Weapon/yellow_blaster_reload/yellow_blaster_reload_005.sprite
+Sprite/Weapon/yellow_blaster_reload/yellow_blaster_reload_007.sprite
+
+
+[INDEX]
+7
+[KEY]
+yellow_blaster_reload_008
+[PATH]
+Sprite/Weapon/yellow_blaster_reload/yellow_blaster_reload_008.sprite
 
 
 

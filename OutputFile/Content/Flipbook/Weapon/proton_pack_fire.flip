@@ -3,13 +3,21 @@ proton_pack_fire
 [PATH]
 Flipbook/Weapon/proton_pack_fire.flip
 [SPRITE_COUNT]
-1
+2
 [INDEX]
 0
 [KEY]
 proton_pack_fire_001
 [PATH]
 Sprite/Weapon/proton_pack_fire/proton_pack_fire_001.sprite
+
+
+[INDEX]
+1
+[KEY]
+proton_pack_fire_002
+[PATH]
+Sprite/Weapon/proton_pack_fire/proton_pack_fire_002.sprite
 
 
 

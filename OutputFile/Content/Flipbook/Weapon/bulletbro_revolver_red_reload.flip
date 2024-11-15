@@ -3,13 +3,45 @@ bulletbro_revolver_red_reload
 [PATH]
 Flipbook/Weapon/bulletbro_revolver_red_reload.flip
 [SPRITE_COUNT]
-1
+5
 [INDEX]
 0
+[KEY]
+bulletbro_revolver_red_reload_001
+[PATH]
+Sprite/Weapon/bulletbro_revolver_red_reload/bulletbro_revolver_red_reload_001.sprite
+
+
+[INDEX]
+1
+[KEY]
+bulletbro_revolver_red_reload_002
+[PATH]
+Sprite/Weapon/bulletbro_revolver_red_reload/bulletbro_revolver_red_reload_002.sprite
+
+
+[INDEX]
+2
+[KEY]
+bulletbro_revolver_red_reload_003
+[PATH]
+Sprite/Weapon/bulletbro_revolver_red_reload/bulletbro_revolver_red_reload_003.sprite
+
+
+[INDEX]
+3
 [KEY]
 bulletbro_revolver_red_reload_004
 [PATH]
 Sprite/Weapon/bulletbro_revolver_red_reload/bulletbro_revolver_red_reload_004.sprite
+
+
+[INDEX]
+4
+[KEY]
+bulletbro_revolver_red_reload_005
+[PATH]
+Sprite/Weapon/bulletbro_revolver_red_reload/bulletbro_revolver_red_reload_005.sprite
 
 
 

@@ -3,9 +3,33 @@ eyeball_sgun_fire
 [PATH]
 Flipbook/Weapon/eyeball_sgun_fire.flip
 [SPRITE_COUNT]
-3
+6
 [INDEX]
 0
+[KEY]
+eyeball_sgun_fire_001
+[PATH]
+Sprite/Weapon/eyeball_sgun_fire/eyeball_sgun_fire_001.sprite
+
+
+[INDEX]
+1
+[KEY]
+eyeball_sgun_fire_002
+[PATH]
+Sprite/Weapon/eyeball_sgun_fire/eyeball_sgun_fire_002.sprite
+
+
+[INDEX]
+2
+[KEY]
+eyeball_sgun_fire_003
+[PATH]
+Sprite/Weapon/eyeball_sgun_fire/eyeball_sgun_fire_003.sprite
+
+
+[INDEX]
+3
 [KEY]
 eyeball_sgun_fire_004
 [PATH]
@@ -13,7 +37,7 @@ Sprite/Weapon/eyeball_sgun_fire/eyeball_sgun_fire_004.sprite
 
 
 [INDEX]
-1
+4
 [KEY]
 eyeball_sgun_fire_005
 [PATH]
@@ -21,7 +45,7 @@ Sprite/Weapon/eyeball_sgun_fire/eyeball_sgun_fire_005.sprite
 
 
 [INDEX]
-2
+5
 [KEY]
 eyeball_sgun_fire_006
 [PATH]

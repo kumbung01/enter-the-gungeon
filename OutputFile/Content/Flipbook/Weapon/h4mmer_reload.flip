@@ -3,13 +3,21 @@ h4mmer_reload
 [PATH]
 Flipbook/Weapon/h4mmer_reload.flip
 [SPRITE_COUNT]
-1
+2
 [INDEX]
 0
 [KEY]
 h4mmer_reload_001
 [PATH]
 Sprite/Weapon/h4mmer_reload/h4mmer_reload_001.sprite
+
+
+[INDEX]
+1
+[KEY]
+h4mmer_reload_002
+[PATH]
+Sprite/Weapon/h4mmer_reload/h4mmer_reload_002.sprite
 
 
 

@@ -3,13 +3,45 @@ burning_hand_fire
 [PATH]
 Flipbook/Weapon/burning_hand_fire.flip
 [SPRITE_COUNT]
-1
+5
 [INDEX]
 0
 [KEY]
 burning_hand_fire_001
 [PATH]
 Sprite/Weapon/burning_hand_fire/burning_hand_fire_001.sprite
+
+
+[INDEX]
+1
+[KEY]
+burning_hand_fire_002
+[PATH]
+Sprite/Weapon/burning_hand_fire/burning_hand_fire_002.sprite
+
+
+[INDEX]
+2
+[KEY]
+burning_hand_fire_003
+[PATH]
+Sprite/Weapon/burning_hand_fire/burning_hand_fire_003.sprite
+
+
+[INDEX]
+3
+[KEY]
+burning_hand_fire_004
+[PATH]
+Sprite/Weapon/burning_hand_fire/burning_hand_fire_004.sprite
+
+
+[INDEX]
+4
+[KEY]
+burning_hand_fire_005
+[PATH]
+Sprite/Weapon/burning_hand_fire/burning_hand_fire_005.sprite
 
 
 

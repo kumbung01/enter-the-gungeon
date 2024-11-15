@@ -3,21 +3,21 @@ bluetube_reload
 [PATH]
 Flipbook/Weapon/bluetube_reload.flip
 [SPRITE_COUNT]
-4
+5
 [INDEX]
 0
 [KEY]
-bluetube_reload_005
+bluetube_reload_001
 [PATH]
-Sprite/Weapon/bluetube_reload/bluetube_reload_005.sprite
+Sprite/Weapon/bluetube_reload/bluetube_reload_001.sprite
 
 
 [INDEX]
 1
 [KEY]
-bluetube_reload_004
+bluetube_reload_002
 [PATH]
-Sprite/Weapon/bluetube_reload/bluetube_reload_004.sprite
+Sprite/Weapon/bluetube_reload/bluetube_reload_002.sprite
 
 
 [INDEX]
@@ -31,9 +31,17 @@ Sprite/Weapon/bluetube_reload/bluetube_reload_003.sprite
 [INDEX]
 3
 [KEY]
-bluetube_reload_002
+bluetube_reload_004
 [PATH]
-Sprite/Weapon/bluetube_reload/bluetube_reload_002.sprite
+Sprite/Weapon/bluetube_reload/bluetube_reload_004.sprite
+
+
+[INDEX]
+4
+[KEY]
+bluetube_reload_005
+[PATH]
+Sprite/Weapon/bluetube_reload/bluetube_reload_005.sprite
 
 
 

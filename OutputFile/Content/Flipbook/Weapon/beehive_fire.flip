@@ -3,9 +3,17 @@ beehive_fire
 [PATH]
 Flipbook/Weapon/beehive_fire.flip
 [SPRITE_COUNT]
-3
+4
 [INDEX]
 0
+[KEY]
+beehive_fire_001
+[PATH]
+Sprite/Weapon/beehive_fire/beehive_fire_001.sprite
+
+
+[INDEX]
+1
 [KEY]
 beehive_fire_002
 [PATH]
@@ -13,7 +21,7 @@ Sprite/Weapon/beehive_fire/beehive_fire_002.sprite
 
 
 [INDEX]
-1
+2
 [KEY]
 beehive_fire_003
 [PATH]
@@ -21,7 +29,7 @@ Sprite/Weapon/beehive_fire/beehive_fire_003.sprite
 
 
 [INDEX]
-2
+3
 [KEY]
 beehive_fire_004
 [PATH]

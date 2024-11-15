@@ -3,9 +3,17 @@ nerf_handgun_fire
 [PATH]
 Flipbook/Weapon/nerf_handgun_fire.flip
 [SPRITE_COUNT]
-2
+3
 [INDEX]
 0
+[KEY]
+nerf_handgun_fire_001
+[PATH]
+Sprite/Weapon/nerf_handgun_fire/nerf_handgun_fire_001.sprite
+
+
+[INDEX]
+1
 [KEY]
 nerf_handgun_fire_002
 [PATH]
@@ -13,7 +21,7 @@ Sprite/Weapon/nerf_handgun_fire/nerf_handgun_fire_002.sprite
 
 
 [INDEX]
-1
+2
 [KEY]
 nerf_handgun_fire_003
 [PATH]

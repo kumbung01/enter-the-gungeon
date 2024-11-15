@@ -7,9 +7,9 @@ Flipbook/Weapon/space_shotgun_reload.flip
 [INDEX]
 0
 [KEY]
-space_shotgun_reload_003
+space_shotgun_reload_001
 [PATH]
-Sprite/Weapon/space_shotgun_reload/space_shotgun_reload_003.sprite
+Sprite/Weapon/space_shotgun_reload/space_shotgun_reload_001.sprite
 
 
 [INDEX]
@@ -23,9 +23,9 @@ Sprite/Weapon/space_shotgun_reload/space_shotgun_reload_002.sprite
 [INDEX]
 2
 [KEY]
-space_shotgun_reload_001
+space_shotgun_reload_003
 [PATH]
-Sprite/Weapon/space_shotgun_reload/space_shotgun_reload_001.sprite
+Sprite/Weapon/space_shotgun_reload/space_shotgun_reload_003.sprite
 
 
 

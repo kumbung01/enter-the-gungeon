@@ -3,13 +3,37 @@ blunderbuss2_fire
 [PATH]
 Flipbook/Weapon/blunderbuss2_fire.flip
 [SPRITE_COUNT]
-1
+4
 [INDEX]
 0
+[KEY]
+blunderbuss2_fire_001
+[PATH]
+Sprite/Weapon/blunderbuss2_fire/blunderbuss2_fire_001.sprite
+
+
+[INDEX]
+1
+[KEY]
+blunderbuss2_fire_002
+[PATH]
+Sprite/Weapon/blunderbuss2_fire/blunderbuss2_fire_002.sprite
+
+
+[INDEX]
+2
 [KEY]
 blunderbuss2_fire_003
 [PATH]
 Sprite/Weapon/blunderbuss2_fire/blunderbuss2_fire_003.sprite
+
+
+[INDEX]
+3
+[KEY]
+blunderbuss2_fire_004
+[PATH]
+Sprite/Weapon/blunderbuss2_fire/blunderbuss2_fire_004.sprite
 
 
 

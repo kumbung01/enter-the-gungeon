@@ -3,7 +3,7 @@ polar_star_fire
 [PATH]
 Flipbook/Weapon/polar_star_fire.flip
 [SPRITE_COUNT]
-2
+3
 [INDEX]
 0
 [KEY]
@@ -18,6 +18,14 @@ Sprite/Weapon/polar_star_fire/polar_star_fire_001.sprite
 polar_star_fire_002
 [PATH]
 Sprite/Weapon/polar_star_fire/polar_star_fire_002.sprite
+
+
+[INDEX]
+2
+[KEY]
+polar_star_fire_003
+[PATH]
+Sprite/Weapon/polar_star_fire/polar_star_fire_003.sprite
 
 
 

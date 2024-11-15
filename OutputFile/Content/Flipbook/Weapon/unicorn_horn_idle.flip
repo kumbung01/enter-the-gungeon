@@ -3,9 +3,25 @@ unicorn_horn_idle
 [PATH]
 Flipbook/Weapon/unicorn_horn_idle.flip
 [SPRITE_COUNT]
-4
+7
 [INDEX]
 0
+[KEY]
+unicorn_horn_idle_001
+[PATH]
+Sprite/Weapon/unicorn_horn_idle/unicorn_horn_idle_001.sprite
+
+
+[INDEX]
+1
+[KEY]
+unicorn_horn_idle_002
+[PATH]
+Sprite/Weapon/unicorn_horn_idle/unicorn_horn_idle_002.sprite
+
+
+[INDEX]
+2
 [KEY]
 unicorn_horn_idle_003
 [PATH]
@@ -13,7 +29,7 @@ Sprite/Weapon/unicorn_horn_idle/unicorn_horn_idle_003.sprite
 
 
 [INDEX]
-1
+3
 [KEY]
 unicorn_horn_idle_004
 [PATH]
@@ -21,7 +37,15 @@ Sprite/Weapon/unicorn_horn_idle/unicorn_horn_idle_004.sprite
 
 
 [INDEX]
-2
+4
+[KEY]
+unicorn_horn_idle_005
+[PATH]
+Sprite/Weapon/unicorn_horn_idle/unicorn_horn_idle_005.sprite
+
+
+[INDEX]
+5
 [KEY]
 unicorn_horn_idle_006
 [PATH]
@@ -29,7 +53,7 @@ Sprite/Weapon/unicorn_horn_idle/unicorn_horn_idle_006.sprite
 
 
 [INDEX]
-3
+6
 [KEY]
 unicorn_horn_idle_007
 [PATH]

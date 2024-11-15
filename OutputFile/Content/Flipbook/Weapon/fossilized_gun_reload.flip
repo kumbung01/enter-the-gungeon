@@ -3,9 +3,17 @@ fossilized_gun_reload
 [PATH]
 Flipbook/Weapon/fossilized_gun_reload.flip
 [SPRITE_COUNT]
-2
+3
 [INDEX]
 0
+[KEY]
+fossilized_gun_reload_001
+[PATH]
+Sprite/Weapon/fossilized_gun_reload/fossilized_gun_reload_001.sprite
+
+
+[INDEX]
+1
 [KEY]
 fossilized_gun_reload_002
 [PATH]
@@ -13,7 +21,7 @@ Sprite/Weapon/fossilized_gun_reload/fossilized_gun_reload_002.sprite
 
 
 [INDEX]
-1
+2
 [KEY]
 fossilized_gun_reload_003
 [PATH]

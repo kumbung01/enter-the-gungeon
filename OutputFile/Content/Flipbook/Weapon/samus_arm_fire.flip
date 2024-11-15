@@ -3,13 +3,21 @@ samus_arm_fire
 [PATH]
 Flipbook/Weapon/samus_arm_fire.flip
 [SPRITE_COUNT]
-1
+2
 [INDEX]
 0
 [KEY]
 samus_arm_fire_001
 [PATH]
 Sprite/Weapon/samus_arm_fire/samus_arm_fire_001.sprite
+
+
+[INDEX]
+1
+[KEY]
+samus_arm_fire_002
+[PATH]
+Sprite/Weapon/samus_arm_fire/samus_arm_fire_002.sprite
 
 
 

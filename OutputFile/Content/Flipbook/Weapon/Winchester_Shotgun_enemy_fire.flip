@@ -3,9 +3,17 @@ Winchester_Shotgun_enemy_fire
 [PATH]
 Flipbook/Weapon/Winchester_Shotgun_enemy_fire.flip
 [SPRITE_COUNT]
-2
+3
 [INDEX]
 0
+[KEY]
+Winchester_Shotgun_enemy_fire_001
+[PATH]
+Sprite/Weapon/Winchester_Shotgun_enemy_fire/Winchester_Shotgun_enemy_fire_001.sprite
+
+
+[INDEX]
+1
 [KEY]
 Winchester_Shotgun_enemy_fire_002
 [PATH]
@@ -13,7 +21,7 @@ Sprite/Weapon/Winchester_Shotgun_enemy_fire/Winchester_Shotgun_enemy_fire_002.sp
 
 
 [INDEX]
-1
+2
 [KEY]
 Winchester_Shotgun_enemy_fire_003
 [PATH]

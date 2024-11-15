@@ -3,13 +3,21 @@ space_shotgun_idle
 [PATH]
 Flipbook/Weapon/space_shotgun_idle.flip
 [SPRITE_COUNT]
-1
+2
 [INDEX]
 0
 [KEY]
 space_shotgun_idle_001
 [PATH]
 Sprite/Weapon/space_shotgun_idle/space_shotgun_idle_001.sprite
+
+
+[INDEX]
+1
+[KEY]
+space_shotgun_idle_002
+[PATH]
+Sprite/Weapon/space_shotgun_idle/space_shotgun_idle_002.sprite
 
 
 

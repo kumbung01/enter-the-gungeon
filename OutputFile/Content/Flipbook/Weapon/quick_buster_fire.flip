@@ -3,13 +3,21 @@ quick_buster_fire
 [PATH]
 Flipbook/Weapon/quick_buster_fire.flip
 [SPRITE_COUNT]
-1
+2
 [INDEX]
 0
 [KEY]
 quick_buster_fire_001
 [PATH]
 Sprite/Weapon/quick_buster_fire/quick_buster_fire_001.sprite
+
+
+[INDEX]
+1
+[KEY]
+quick_buster_fire_002
+[PATH]
+Sprite/Weapon/quick_buster_fire/quick_buster_fire_002.sprite
 
 
 

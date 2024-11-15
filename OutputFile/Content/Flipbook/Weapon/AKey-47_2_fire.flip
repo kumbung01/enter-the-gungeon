@@ -3,13 +3,21 @@ AKey-47_2_fire
 [PATH]
 Flipbook/Weapon/AKey-47_2_fire.flip
 [SPRITE_COUNT]
-1
+2
 [INDEX]
 0
 [KEY]
 AKey-47_2_fire_001
 [PATH]
 Sprite/Weapon/AKey-47_2_fire/AKey-47_2_fire_001.sprite
+
+
+[INDEX]
+1
+[KEY]
+AKey-47_2_fire_002
+[PATH]
+Sprite/Weapon/AKey-47_2_fire/AKey-47_2_fire_002.sprite
 
 
 

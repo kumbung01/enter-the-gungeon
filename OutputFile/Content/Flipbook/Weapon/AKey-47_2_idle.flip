@@ -3,25 +3,17 @@ AKey-47_2_idle
 [PATH]
 Flipbook/Weapon/AKey-47_2_idle.flip
 [SPRITE_COUNT]
-4
+5
 [INDEX]
 0
 [KEY]
-AKey-47_2_idle_004
+AKey-47_2_idle_001
 [PATH]
-Sprite/Weapon/AKey-47_2_idle/AKey-47_2_idle_004.sprite
+Sprite/Weapon/AKey-47_2_idle/AKey-47_2_idle_001.sprite
 
 
 [INDEX]
 1
-[KEY]
-AKey-47_2_idle_003
-[PATH]
-Sprite/Weapon/AKey-47_2_idle/AKey-47_2_idle_003.sprite
-
-
-[INDEX]
-2
 [KEY]
 AKey-47_2_idle_002
 [PATH]
@@ -29,11 +21,27 @@ Sprite/Weapon/AKey-47_2_idle/AKey-47_2_idle_002.sprite
 
 
 [INDEX]
+2
+[KEY]
+AKey-47_2_idle_003
+[PATH]
+Sprite/Weapon/AKey-47_2_idle/AKey-47_2_idle_003.sprite
+
+
+[INDEX]
 3
 [KEY]
-AKey-47_2_idle_001
+AKey-47_2_idle_004
 [PATH]
-Sprite/Weapon/AKey-47_2_idle/AKey-47_2_idle_001.sprite
+Sprite/Weapon/AKey-47_2_idle/AKey-47_2_idle_004.sprite
+
+
+[INDEX]
+4
+[KEY]
+AKey-47_2_idle_005
+[PATH]
+Sprite/Weapon/AKey-47_2_idle/AKey-47_2_idle_005.sprite
 
 
 

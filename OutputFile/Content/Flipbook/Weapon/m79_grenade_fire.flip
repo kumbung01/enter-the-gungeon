@@ -3,13 +3,21 @@ m79_grenade_fire
 [PATH]
 Flipbook/Weapon/m79_grenade_fire.flip
 [SPRITE_COUNT]
-1
+2
 [INDEX]
 0
 [KEY]
 m79_grenade_fire_001
 [PATH]
 Sprite/Weapon/m79_grenade_fire/m79_grenade_fire_001.sprite
+
+
+[INDEX]
+1
+[KEY]
+m79_grenade_fire_002
+[PATH]
+Sprite/Weapon/m79_grenade_fire/m79_grenade_fire_002.sprite
 
 
 

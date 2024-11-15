@@ -3,13 +3,21 @@ crash_buster_fire
 [PATH]
 Flipbook/Weapon/crash_buster_fire.flip
 [SPRITE_COUNT]
-1
+2
 [INDEX]
 0
 [KEY]
 crash_buster_fire_001
 [PATH]
 Sprite/Weapon/crash_buster_fire/crash_buster_fire_001.sprite
+
+
+[INDEX]
+1
+[KEY]
+crash_buster_fire_002
+[PATH]
+Sprite/Weapon/crash_buster_fire/crash_buster_fire_002.sprite
 
 
 

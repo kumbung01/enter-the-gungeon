@@ -3,9 +3,17 @@ dueling_pistol2_reload
 [PATH]
 Flipbook/Weapon/dueling_pistol2_reload.flip
 [SPRITE_COUNT]
-2
+3
 [INDEX]
 0
+[KEY]
+dueling_pistol2_reload_001
+[PATH]
+Sprite/Weapon/dueling_pistol2_reload/dueling_pistol2_reload_001.sprite
+
+
+[INDEX]
+1
 [KEY]
 dueling_pistol2_reload_002
 [PATH]
@@ -13,7 +21,7 @@ Sprite/Weapon/dueling_pistol2_reload/dueling_pistol2_reload_002.sprite
 
 
 [INDEX]
-1
+2
 [KEY]
 dueling_pistol2_reload_003
 [PATH]

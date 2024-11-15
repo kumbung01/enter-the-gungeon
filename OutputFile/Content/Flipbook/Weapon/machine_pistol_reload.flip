@@ -3,7 +3,7 @@ machine_pistol_reload
 [PATH]
 Flipbook/Weapon/machine_pistol_reload.flip
 [SPRITE_COUNT]
-2
+3
 [INDEX]
 0
 [KEY]
@@ -14,6 +14,14 @@ Sprite/Weapon/machine_pistol_reload/machine_pistol_reload_001.sprite
 
 [INDEX]
 1
+[KEY]
+machine_pistol_reload_002
+[PATH]
+Sprite/Weapon/machine_pistol_reload/machine_pistol_reload_002.sprite
+
+
+[INDEX]
+2
 [KEY]
 machine_pistol_reload_003
 [PATH]

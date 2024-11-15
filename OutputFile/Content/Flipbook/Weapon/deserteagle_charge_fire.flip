@@ -3,9 +3,17 @@ deserteagle_charge_fire
 [PATH]
 Flipbook/Weapon/deserteagle_charge_fire.flip
 [SPRITE_COUNT]
-3
+5
 [INDEX]
 0
+[KEY]
+deserteagle_charge_fire_001
+[PATH]
+Sprite/Weapon/deserteagle_charge_fire/deserteagle_charge_fire_001.sprite
+
+
+[INDEX]
+1
 [KEY]
 deserteagle_charge_fire_002
 [PATH]
@@ -13,7 +21,7 @@ Sprite/Weapon/deserteagle_charge_fire/deserteagle_charge_fire_002.sprite
 
 
 [INDEX]
-1
+2
 [KEY]
 deserteagle_charge_fire_003
 [PATH]
@@ -21,11 +29,19 @@ Sprite/Weapon/deserteagle_charge_fire/deserteagle_charge_fire_003.sprite
 
 
 [INDEX]
-2
+3
 [KEY]
 deserteagle_charge_fire_004
 [PATH]
 Sprite/Weapon/deserteagle_charge_fire/deserteagle_charge_fire_004.sprite
+
+
+[INDEX]
+4
+[KEY]
+deserteagle_charge_fire_005
+[PATH]
+Sprite/Weapon/deserteagle_charge_fire/deserteagle_charge_fire_005.sprite
 
 
 

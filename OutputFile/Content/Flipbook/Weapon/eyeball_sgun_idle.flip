@@ -3,13 +3,37 @@ eyeball_sgun_idle
 [PATH]
 Flipbook/Weapon/eyeball_sgun_idle.flip
 [SPRITE_COUNT]
-1
+4
 [INDEX]
 0
 [KEY]
 eyeball_sgun_idle_001
 [PATH]
 Sprite/Weapon/eyeball_sgun_idle/eyeball_sgun_idle_001.sprite
+
+
+[INDEX]
+1
+[KEY]
+eyeball_sgun_idle_002
+[PATH]
+Sprite/Weapon/eyeball_sgun_idle/eyeball_sgun_idle_002.sprite
+
+
+[INDEX]
+2
+[KEY]
+eyeball_sgun_idle_003
+[PATH]
+Sprite/Weapon/eyeball_sgun_idle/eyeball_sgun_idle_003.sprite
+
+
+[INDEX]
+3
+[KEY]
+eyeball_sgun_idle_004
+[PATH]
+Sprite/Weapon/eyeball_sgun_idle/eyeball_sgun_idle_004.sprite
 
 
 

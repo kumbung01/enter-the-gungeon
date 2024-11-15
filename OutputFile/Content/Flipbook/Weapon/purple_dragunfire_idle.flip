@@ -7,9 +7,9 @@ Flipbook/Weapon/purple_dragunfire_idle.flip
 [INDEX]
 0
 [KEY]
-purple_dragunfire_idle_003
+purple_dragunfire_idle_001
 [PATH]
-Sprite/Weapon/purple_dragunfire_idle/purple_dragunfire_idle_003.sprite
+Sprite/Weapon/purple_dragunfire_idle/purple_dragunfire_idle_001.sprite
 
 
 [INDEX]
@@ -23,9 +23,9 @@ Sprite/Weapon/purple_dragunfire_idle/purple_dragunfire_idle_002.sprite
 [INDEX]
 2
 [KEY]
-purple_dragunfire_idle_001
+purple_dragunfire_idle_003
 [PATH]
-Sprite/Weapon/purple_dragunfire_idle/purple_dragunfire_idle_001.sprite
+Sprite/Weapon/purple_dragunfire_idle/purple_dragunfire_idle_003.sprite
 
 
 

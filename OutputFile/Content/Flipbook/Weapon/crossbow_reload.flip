@@ -7,9 +7,9 @@ Flipbook/Weapon/crossbow_reload.flip
 [INDEX]
 0
 [KEY]
-crossbow_reload_003
+crossbow_reload_001
 [PATH]
-Sprite/Weapon/crossbow_reload/crossbow_reload_003.sprite
+Sprite/Weapon/crossbow_reload/crossbow_reload_001.sprite
 
 
 [INDEX]
@@ -23,9 +23,9 @@ Sprite/Weapon/crossbow_reload/crossbow_reload_002.sprite
 [INDEX]
 2
 [KEY]
-crossbow_reload_001
+crossbow_reload_003
 [PATH]
-Sprite/Weapon/crossbow_reload/crossbow_reload_001.sprite
+Sprite/Weapon/crossbow_reload/crossbow_reload_003.sprite
 
 
 
