@@ -14,6 +14,7 @@
 
 #include "CIdleState.h"
 #include "CTraceState.h"
+#include "CSurpriseState.h"
 
 CMonster::CMonster()
 	: m_Dir(1)
@@ -22,17 +23,16 @@ CMonster::CMonster()
 	, m_Collider(nullptr)
 	, m_FSM(nullptr)
 {
-	m_Tex = CAssetMgr::GetInst()->LoadTexture(L"Character", L"Texture\\TX_GlowScene_2.png");
 
 	// Collider 컴포넌트 추가
 	m_Collider = (CCollider*)AddComponent(new CCollider);
-	m_Collider->SetScale(Vec2(100.f, 100.f));
+	m_Collider->SetScale(Vec2(45.f, 75.f));
 
 	// 몬스터 스탯
 	m_Info.MaxHP = 25.f;
 	m_Info.CurHP = 25.f;
 	m_Info.AttRange = 500.f;
-	m_Info.DetectRange = 900.f;
+	m_Info.DetectRange = 500.f;
 	m_Info.Speed = 100.f;
 	m_Info.AttDelay = 1.f;
 
@@ -42,6 +42,7 @@ CMonster::CMonster()
 	// FSM 에 상태 추가
 	m_FSM->AddState(L"Idle", new CIdleState);
 	m_FSM->AddState(L"Trace", new CTraceState);
+	m_FSM->AddState(L"Surprise", new CSurpriseState);
 
 	CreateFlipbook();
 }
@@ -49,11 +50,6 @@ CMonster::CMonster()
 CMonster::~CMonster()
 {
 	DeleteObject(m_gun);
-}
-
-void CMonster::Play(tAnimState _state, float _duration, bool _repeat)
-{
-	m_flipbookPlayer->Play(_state, _duration, _repeat);
 }
 
 void CMonster::Begin()
@@ -85,45 +81,12 @@ void CMonster::Tick()
 
 void CMonster::Render()
 {
+	m_flipbookPlayer->Render();
+
 	if (m_gun != nullptr && m_gun->GetHandSprite() == nullptr)
 	{
 		m_gun->SetHandSprite(CAssetMgr::GetInst()->LoadSprite(L"bullet_hand_001", L"Sprite\\BulletMan\\bullet_hand\\bullet_hand_001.sprite"));
 	}
-
-	HDC dc = CEngine::GetInst()->GetSecondDC();
-
-	Vec2 vPos = GetRenderPos();
-	Vec2 vScale = GetScale();
-
-	//BitBlt(dc
-	//	, vPos.x - m_Tex->GetWidth() / 2.f
-	//	, vPos.y - m_Tex->GetHeight() / 2
-	//	, m_Tex->GetWidth()
-	//	, m_Tex->GetHeight()
-	//	, m_Tex->GetDC()
-	//	, 0, 0
-	//	, SRCCOPY);
-
-	BLENDFUNCTION blend = {};
-
-	blend.BlendOp = AC_SRC_OVER;
-	blend.BlendFlags = 0;
-	blend.SourceConstantAlpha = 127;
-	blend.AlphaFormat = AC_SRC_ALPHA;
-
-	AlphaBlend(dc
-		, vPos.x - m_Tex->GetWidth() / 2.f
-		, vPos.y - m_Tex->GetHeight() / 2.f
-		, m_Tex->GetWidth()
-		, m_Tex->GetHeight()
-		, m_Tex->GetDC()
-		, 0, 0
-		, m_Tex->GetWidth()
-		, m_Tex->GetHeight()
-		, blend);
-
-	/*Ellipse(dc, vPos.x - vScale.x / 2.f, vPos.y - vScale.y / 2
-		, vPos.x + vScale.x / 2.f, vPos.y + vScale.y / 2.f );*/
 }
 
 
@@ -141,7 +104,7 @@ void CMonster::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider*
 
 void CMonster::CreateFlipbook()
 {
-	m_flipbookPlayer = new CFlipbookPlayer;
+	m_flipbookPlayer = (CFlipbookPlayer*)AddComponent(new CFlipbookPlayer);
 
 	m_flipbookPlayer->AddFlipbook(BULLET_COVER_LEFT_IDLE, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_cover_left_idle", L"Flipbook\\BulletMan\\bullet_cover_left_idle.flip"));
 	m_flipbookPlayer->AddFlipbook(BULLET_COVER_LEFT_LEAP, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_cover_left_leap", L"Flipbook\\BulletMan\\bullet_cover_left_leap.flip"));
@@ -175,4 +138,7 @@ void CMonster::CreateFlipbook()
 	m_flipbookPlayer->AddFlipbook(BULLET_SHOOTING_RIGHT, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_shooting_right", L"Flipbook\\BulletMan\\bullet_shooting_right.flip"));
 	m_flipbookPlayer->AddFlipbook(BULLET_SPAWN, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_spawn", L"Flipbook\\BulletMan\\bullet_spawn.flip"));
 	m_flipbookPlayer->AddFlipbook(BULLET_SURPRISE_LEFT, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_surprise_left", L"Flipbook\\BulletMan\\bullet_surprise_left.flip"));
+	m_flipbookPlayer->AddFlipbook(BULLET_SURPRISE_RIGHT, CAssetMgr::GetInst()->LoadFlipbook(L"bullet_surprise_right", L"Flipbook\\BulletMan\\bullet_surprise_right.flip"));
+
+	m_flipbookPlayer->SetMagnification(3.f);
 }

@@ -5,6 +5,7 @@ class CTraceState :
 {
 private:
     CObj*       m_TargetObject;
+    tAnimState  m_animState;
 
 public:
     virtual void Enter() override;

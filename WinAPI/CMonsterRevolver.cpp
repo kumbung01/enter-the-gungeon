@@ -65,7 +65,7 @@ void CMonsterRevolver::Tick()
 		if (m_flipbookPlayer->IsFlipbookMatch(GUN_CHARGE) && m_flipbookPlayer->IsFinish())
 		{
 			CreateBullet();
-			m_flipbookPlayer->Play({ GUN_FIRE, false }, 10.f, false);
+			m_flipbookPlayer->Play({ GUN_FIRE, false }, 15.f, false);
 		}
 
 		if (m_fireTime > m_fireDelay)

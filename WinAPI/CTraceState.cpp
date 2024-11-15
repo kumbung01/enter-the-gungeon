@@ -5,15 +5,70 @@
 #include "CMonster.h"
 #include "CTimeMgr.h"
 #include "CMonsterMissile.h"
+#include "CFlipbookPlayer.h"
 #include "CGun.h"
 
 CTraceState::CTraceState()
 	: m_TargetObject(nullptr)
+	, m_animState({BULLET_IDLE_RIGHT, false})
 {
 }
 
 CTraceState::~CTraceState()
 {
+}
+
+// idle, run, cover
+tAnimState ProcessAnimState(Vec2 dir, MONSTER_STATE state)
+{
+	tAnimState animState = { BULLET_IDLE_RIGHT, false };
+
+	if (dir.y < 0.f)
+	{
+		if (state == MONSTER_STATE::RUN)
+		{
+			if (dir.x >= 0.f)
+				animState.idx = BULLET_RUN_RIGHT_BACK;
+			else
+				animState.idx = BULLET_RUN_LEFT_BACK;
+		}
+		else
+		{
+			animState.idx = BULLET_IDLE_BACK;
+		}
+
+	}
+	else
+	{
+		if (dir.x >= 0.f)
+		{
+			switch (state)
+			{
+			case MONSTER_STATE::RUN:
+				animState.idx = BULLET_RUN_RIGHT;
+				break;
+			case MONSTER_STATE::IDLE:
+			default:
+				animState.idx = BULLET_IDLE_RIGHT;
+				break;
+			}
+		}
+		else
+		{
+			switch (state)
+			{
+			case MONSTER_STATE::RUN:
+				animState.idx = BULLET_RUN_LEFT;
+				break;
+			case MONSTER_STATE::IDLE:
+			default:
+				animState.idx = BULLET_IDLE_LEFT;
+				break;
+			}
+		}
+	}
+
+	return animState;
 }
 
 void CTraceState::Enter()
@@ -45,6 +100,14 @@ void CTraceState::FinalTick()
 	{
 		Vec2 vPos = pMon->GetPos() + vMoveDir * info.Speed * DT;
 		pMon->SetPos(vPos);
+	}
+
+	MONSTER_STATE state = (dist >= info.AttRange) ? MONSTER_STATE::RUN : MONSTER_STATE::IDLE;
+	tAnimState animState = ProcessAnimState(vMoveDir, state);
+	if (m_animState != animState)
+	{
+		m_animState = animState;
+		pMon->GetComponent<CFlipbookPlayer>()->Play(animState, 10.f, true);
 	}
 
 	// รั น฿ป็

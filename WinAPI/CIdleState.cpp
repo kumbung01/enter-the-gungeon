@@ -21,14 +21,14 @@ CIdleState::~CIdleState()
 
 void CIdleState::Enter()
 {	
+	CMonster* pMon = (CMonster*)GetOwnerObj();
 	// 소유자(몬스터) 의 FlipbookPlayer 를 이용해서 특정 플립북(애니메이션) 을 재생시킨다.
-	CFlipbookPlayer* pFP = GetOwnerObj()->GetComponent<CFlipbookPlayer>();
+	CFlipbookPlayer* pFP = pMon->GetComponent<CFlipbookPlayer>();
 	if (pFP)
 	{
-		//pFP->Play();
+		pFP->Play(BULLET_SPAWN, 10.f, false);
 	}
 
-	CMonster* pMon = (CMonster*)GetOwnerObj();
 	pMon->GetGun()->SetVisible(false);
 }
 
@@ -55,7 +55,10 @@ void CIdleState::FinalTick()
 		// 범위 안에 있으면 자신의 상태를 TraceState
 		if (fDist < info.DetectRange)
 		{
-			GetFSM()->ChangeState(L"Trace");
+			if (fDist < info.AttRange)
+				GetFSM()->ChangeState(L"Surprise");
+			else
+				GetFSM()->ChangeState(L"Trace");
 		}
 	}
 

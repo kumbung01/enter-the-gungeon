@@ -21,9 +21,7 @@ private:
     CFlipbookPlayer* m_flipbookPlayer;
     CTexture*   m_Tex;
     CCollider*  m_Collider;
-    
     CFSM*       m_FSM;
-
     CGun*       m_gun;
 
 public:
