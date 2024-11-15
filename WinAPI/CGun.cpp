@@ -219,22 +219,38 @@ void CGun::Render()
 
 		if (m_handSprite != nullptr)
 		{
-			Gdiplus::Graphics* graphics = CEngine::GetInst()->GetBackGraphics();
-			Vec2 vPos = CCamera::GetInst()->GetRenderPos(m_hand);
-			Vec2 center = m_handSprite->GetSlice() / 2.f;
+			HDC bufDC = CEngine::GetInst()->GetBufferDC();
+			HDC backDC = CEngine::GetInst()->GetSecondDC();
+			CTexture* tex = m_handSprite->GetAtlas();
+			Vec2 sliceSrc = m_handSprite->GetSlice();
+			Vec2 sliceDst = sliceSrc * 3.5f;
+			Vec2 leftTop = m_handSprite->GetLeftTop();
+			Vec2 vPos = CCamera::GetInst()->GetRenderPos(m_hand) - sliceDst / 2.f;
 
-			Matrix mat;
-			mat.Translate(vPos.x, vPos.y);
-			mat.Scale(3.f, 3.f);
-			mat.Translate(-center.x, -center.y);
-			graphics->SetTransform(&mat);
+			StretchBlt(bufDC,
+				0,
+				0,
+				sliceDst.x,
+				sliceDst.y,
+				tex->GetDC(),
+				leftTop.x,
+				leftTop.y,
+				sliceSrc.x,
+				sliceSrc.y,
+				SRCCOPY);
 
-			auto res = graphics->DrawImage(m_handSprite->GetAtlas()->GetImage(),
-				0.f, 0.f,
-				m_handSprite->GetLeftTop().x, m_handSprite->GetLeftTop().y,
-				m_handSprite->GetSlice().x, m_handSprite->GetSlice().y, UnitPixel);
+			TransparentBlt(backDC,
+				vPos.x,
+				vPos.y,
+				sliceDst.x,
+				sliceDst.y,
+				bufDC,
+				0, 0,
+				sliceDst.x,
+				sliceDst.y,
+				RGB(255, 0, 255));
 
-			graphics->ResetTransform();
+
 		}
 	}
 
