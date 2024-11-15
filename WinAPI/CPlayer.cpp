@@ -46,7 +46,7 @@ bool IsMoveState(PLAYER_STATE _state)
 
 tAnimState ProcessDodgeAnimState(const Vec2& _dir)
 {
-	tAnimState state = { ROGUE_DODGE_LEFT, false, 0.0 };
+	tAnimState state = { ROGUE_DODGE_LEFT, false };
 
 	if (_dir.x == 0.f)
 	{
@@ -59,8 +59,6 @@ tAnimState ProcessDodgeAnimState(const Vec2& _dir)
 		{
 			state.idx = ROGUE_DODGE_BACK;
 		}	
-
-		return state;
 	} 
 	
 	else
@@ -75,6 +73,8 @@ tAnimState ProcessDodgeAnimState(const Vec2& _dir)
 			state.idx = ROGUE_DODGE_LEFT_BACK;
 		}
 	}
+
+	return state;
 }
 
 /* TODO: change it to binary search tree???*/
@@ -336,6 +336,11 @@ void CPlayer::Tick()
 
 void CPlayer::Render()
 {
+	if (m_gun != nullptr && m_gun->GetHandSprite() == nullptr)
+	{
+		m_gun->SetHandSprite(CAssetMgr::GetInst()->LoadSprite(L"rogue_hand_001", L"Sprite\\SpaceRogue\\rogue_hand\\rogue_hand_001.sprite"));
+	}
+
 	m_FlipbookPlayer->Render();
 }
 
