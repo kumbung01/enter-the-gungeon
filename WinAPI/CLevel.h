@@ -12,6 +12,13 @@ struct cmp {
             return a->GetPos().y + a->GetRenderOffset() > b->GetPos().y + b->GetRenderOffset();
         }
         
+        bool isATile = (a->GetLayerType() > LAYER_TYPE::TILE);
+        bool isBTile = (b->GetLayerType() > LAYER_TYPE::TILE);
+
+        if (isATile != isBTile) {
+            return isATile;
+        }
+
         bool isAUi = (int)a->GetLayerType() > (int)LAYER_TYPE::UIS;
         bool isBUi = (int)b->GetLayerType() > (int)LAYER_TYPE::UIS;
 
