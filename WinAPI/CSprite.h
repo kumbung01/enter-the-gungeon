@@ -3,6 +3,12 @@
 
 class CTexture;
 
+enum RENDER_TYPE
+{
+    RENDER_BITBLT,
+    RENDER_GDIPLUS,
+};
+
 class CSprite :
     public CAsset
 {
@@ -13,6 +19,8 @@ private:
     Vec2        m_Slice;    // 조각 크기
     Vec2        m_Offset;   // 추가 보정이동
 
+    RENDER_TYPE m_renderType; // 렌더 방식
+
 public:
     CTexture* GetAtlas() { return m_Atlas; }
     Vec2 GetLeftTop() { return m_LeftTop; }
@@ -20,6 +28,7 @@ public:
     Vec2 GetOffset() { return m_Offset; }
 
     void SetOffset(Vec2 _Offset) { m_Offset = _Offset; }
+    RENDER_TYPE GetRenderType() { return m_renderType; }
 public:
     virtual int Save(const wstring& _RelativePath) override;
     virtual int Load(const wstring& _RelativePath) override;

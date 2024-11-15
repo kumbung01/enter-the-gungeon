@@ -7,6 +7,7 @@
 
 CSprite::CSprite()
 	: CAsset(ASSET_TYPE::SPRITE)
+	, m_renderType(RENDER_GDIPLUS)
 	, m_Atlas(nullptr)
 {
 }
@@ -131,6 +132,19 @@ int CSprite::Load(const wstring& _RelativePath)
 			int x = 0, y = 0;
 			fwscanf_s(File, L"%d, %d", &x, &y);
 			m_Offset = Vec2(x, y);
+		}
+
+		else if (!wcscmp(szBuff, L"[RENDERTYPE]"))
+		{
+			fwscanf_s(File, L"%s", szBuff, 255);
+			if (!wcscmp(szBuff, L"BITBLT"))
+			{
+				m_renderType = RENDER_BITBLT;
+			}
+			else
+			{
+				m_renderType = RENDER_GDIPLUS;
+			}
 		}
 	}
 
