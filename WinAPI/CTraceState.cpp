@@ -37,34 +37,25 @@ void CTraceState::FinalTick()
 	// 몬스터의 이동속에 맞게 플레이어를 향해서 이동한다.
 	// 이동 방향 계산
 	Vec2 vMoveDir = m_TargetObject->GetPos() - pMon->GetPos();
+	float dist = vMoveDir.Length();
 	vMoveDir.Normalize();
 
 	// 해당 방향으로, 속력에 맞게 매프레임마다 이동
-	Vec2 vPos = pMon->GetPos() + vMoveDir * info.Speed * DT;
-	pMon->SetPos(vPos);
+	if (dist >= info.AttRange)
+	{
+		Vec2 vPos = pMon->GetPos() + vMoveDir * info.Speed * DT;
+		pMon->SetPos(vPos);
+	}
 
+	// 총 발사
 	pMon->GetGun()->Fire();
-
-	// 플레이어가 공격범위 안으로 들어오면 Attack 상태로 변경한다.
-	//info.AccTime += DT;
-	//if (info.AccTime >= info.AttDelay)
-	//{
-	//	for (int i = -2; i < 2; ++i)
-	//	{
-	//		info.AccTime = 0;
-	//		CMonsterMissile* pMissile = new CMonsterMissile;
-	//		pMissile->SetPos(pMon->GetPos());
-	//		pMissile->SetScale(20.f, 20.f);
-	//		pMissile->SetVelocity(Rotate(vMoveDir, i * 0.175f) * 500.f);
-	//		CreateObject(pMissile, LAYER_TYPE::MONSTER_OBJECT);
-	//	}
-	//}
 	
 
 	// 만약에 추적중에 피격을 당하면, 피격상태로 전환다.
 
 		
 	// 인지범위 시각화
+	DrawDebugCircle(PEN_TYPE::RED, pMon->GetRenderPos(), Vec2(info.AttRange * 2.f, info.AttRange * 2.f), 0.f);
 	DrawDebugCircle(PEN_TYPE::BLUE, pMon->GetRenderPos(), Vec2(info.DetectRange * 2.f, info.DetectRange * 2.f), 0.f);
 }
 
