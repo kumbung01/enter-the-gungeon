@@ -3,23 +3,22 @@ import re
 from pprint import pprint
 import os
 
-atlas_path = 'Texture/rogue.png'
-atlas_key = 'rogue'
-texture_json_path = 'Texture/rogue.json'
+atlas_key = 'BulletMan'
+flipbook_path = f'Flipbook\\\\{atlas_key}'
 
-folder_name = 'SpaceRogue'
-key_pattern = r'SpaceRogue/((rogue_\S+)_(\d{3})).png'
+file_list = os.listdir(flipbook_path)
 
-states = set()
+for filename in file_list:
+    key = filename.removesuffix('.flip')
+    state = key.upper()
+    filepath = f"{flipbook_path}\\\\{filename}"
 
+    print(f'm_flipbookPlayer->AddFlipbook({state}, CAssetMgr::GetInst()->LoadFlipbook(L\"{key}\", L\"{filepath}\"));')
 
-with open(texture_json_path, 'r') as json_file:
-    data = json.load(json_file)
-    data = data['frames']
+print("\n\n")
 
-    for key, value in data.items():
-        match = re.match(key_pattern, key)
-        if match:
-            states.add(match.group(2).upper())
+for filename in file_list:
+    key = filename.removesuffix('.flip')
+    state = key.upper()
 
-    pprint(states)
+    print(f"{state},")
