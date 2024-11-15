@@ -1,0 +1,14 @@
+[KEY]
+JK-47_reload_009
+[PATH]
+Sprite/Weapon/JK-47_reload/JK-47_reload_009.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+540, 650
+[SLICE]
+23, 8
+[OFFSET]
+0, 0

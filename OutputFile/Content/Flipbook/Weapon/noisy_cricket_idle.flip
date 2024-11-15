@@ -1,0 +1,15 @@
+[KEY]
+noisy_cricket_idle
+[PATH]
+Flipbook/Weapon/noisy_cricket_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+noisy_cricket_idle_001
+[PATH]
+Sprite/Weapon/noisy_cricket_idle/noisy_cricket_idle_001.sprite
+
+
+

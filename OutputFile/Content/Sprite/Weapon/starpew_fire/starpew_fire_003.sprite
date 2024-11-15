@@ -1,0 +1,14 @@
+[KEY]
+starpew_fire_003
+[PATH]
+Sprite/Weapon/starpew_fire/starpew_fire_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+107, 801
+[SLICE]
+18, 12
+[OFFSET]
+0, 0

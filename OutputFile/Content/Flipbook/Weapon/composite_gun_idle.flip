@@ -1,0 +1,15 @@
+[KEY]
+composite_gun_idle
+[PATH]
+Flipbook/Weapon/composite_gun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+composite_gun_idle_001
+[PATH]
+Sprite/Weapon/composite_gun_idle/composite_gun_idle_001.sprite
+
+
+

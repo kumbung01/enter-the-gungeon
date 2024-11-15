@@ -1,0 +1,14 @@
+[KEY]
+trident_fire_005
+[PATH]
+Sprite/Weapon/trident_fire/trident_fire_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+33, 330
+[SLICE]
+33, 12
+[OFFSET]
+0, 0

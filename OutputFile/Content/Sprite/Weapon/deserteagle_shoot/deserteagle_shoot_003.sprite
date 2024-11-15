@@ -1,0 +1,14 @@
+[KEY]
+deserteagle_shoot_003
+[PATH]
+Sprite/Weapon/deserteagle_shoot/deserteagle_shoot_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+850, 602
+[SLICE]
+16, 10
+[OFFSET]
+0, 0

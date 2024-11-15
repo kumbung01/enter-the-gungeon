@@ -1,0 +1,14 @@
+[KEY]
+miner_dog_idle_001
+[PATH]
+Sprite/Weapon/miner_dog_idle/miner_dog_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+783, 566
+[SLICE]
+19, 11
+[OFFSET]
+0, 0

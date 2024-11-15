@@ -1,0 +1,15 @@
+[KEY]
+glacier_idle
+[PATH]
+Flipbook/Weapon/glacier_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+glacier_idle_001
+[PATH]
+Sprite/Weapon/glacier_idle/glacier_idle_001.sprite
+
+
+

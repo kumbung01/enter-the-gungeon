@@ -1,0 +1,14 @@
+[KEY]
+flash2_raygun_idle_001
+[PATH]
+Sprite/Weapon/flash2_raygun_idle/flash2_raygun_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+524, 848
+[SLICE]
+16, 12
+[OFFSET]
+0, 0

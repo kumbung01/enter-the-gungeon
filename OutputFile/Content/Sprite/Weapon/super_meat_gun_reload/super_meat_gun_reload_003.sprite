@@ -1,0 +1,14 @@
+[KEY]
+super_meat_gun_reload_003
+[PATH]
+Sprite/Weapon/super_meat_gun_reload/super_meat_gun_reload_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+866, 614
+[SLICE]
+14, 15
+[OFFSET]
+0, 0

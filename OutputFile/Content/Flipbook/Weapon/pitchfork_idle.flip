@@ -1,0 +1,15 @@
+[KEY]
+pitchfork_idle
+[PATH]
+Flipbook/Weapon/pitchfork_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+pitchfork_idle_001
+[PATH]
+Sprite/Weapon/pitchfork_idle/pitchfork_idle_001.sprite
+
+
+

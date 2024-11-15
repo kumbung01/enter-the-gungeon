@@ -1,0 +1,14 @@
+[KEY]
+devolver_reload_001
+[PATH]
+Sprite/Weapon/devolver_reload/devolver_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+87, 722
+[SLICE]
+21, 17
+[OFFSET]
+0, 0

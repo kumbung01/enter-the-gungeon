@@ -1,0 +1,15 @@
+[KEY]
+ice_giant_gun_idle
+[PATH]
+Flipbook/Weapon/ice_giant_gun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+ice_giant_gun_idle_001
+[PATH]
+Sprite/Weapon/ice_giant_gun_idle/ice_giant_gun_idle_001.sprite
+
+
+

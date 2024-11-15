@@ -1,0 +1,14 @@
+[KEY]
+zilla_combat_shotgun_Cfire_002
+[PATH]
+Sprite/Weapon/zilla_combat_shotgun_Cfire/zilla_combat_shotgun_Cfire_002.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+420, 650
+[SLICE]
+23, 18
+[OFFSET]
+0, 0

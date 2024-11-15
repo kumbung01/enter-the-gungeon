@@ -1,0 +1,14 @@
+[KEY]
+claw_fire_001
+[PATH]
+Sprite/Weapon/claw_fire/claw_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+467, 785
+[SLICE]
+19, 16
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+blue_ant_empty_001
+[PATH]
+Sprite/Weapon/blue_ant_empty/blue_ant_empty_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+297, 643
+[SLICE]
+24, 13
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+blunderbuss2_charge_001
+[PATH]
+Sprite/Weapon/blunderbuss2_charge/blunderbuss2_charge_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+389, 514
+[SLICE]
+27, 8
+[OFFSET]
+0, 0

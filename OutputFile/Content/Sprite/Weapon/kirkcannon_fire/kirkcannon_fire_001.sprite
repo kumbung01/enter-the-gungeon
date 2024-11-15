@@ -1,0 +1,14 @@
+[KEY]
+kirkcannon_fire_001
+[PATH]
+Sprite/Weapon/kirkcannon_fire/kirkcannon_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+180, 445
+[SLICE]
+30, 6
+[OFFSET]
+0, 0

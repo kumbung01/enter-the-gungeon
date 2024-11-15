@@ -1,0 +1,14 @@
+[KEY]
+pitchfork_enemy_charge_001
+[PATH]
+Sprite/Weapon/pitchfork_enemy_charge/pitchfork_enemy_charge_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+822, 594
+[SLICE]
+17, 11
+[OFFSET]
+0, 0

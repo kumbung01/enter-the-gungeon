@@ -1,0 +1,14 @@
+[KEY]
+dpad_gun_reload_002
+[PATH]
+Sprite/Weapon/dpad_gun_reload/dpad_gun_reload_002.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+675, 830
+[SLICE]
+17, 17
+[OFFSET]
+0, 0

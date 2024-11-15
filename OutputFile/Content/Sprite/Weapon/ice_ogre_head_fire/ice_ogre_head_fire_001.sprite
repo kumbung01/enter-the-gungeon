@@ -1,0 +1,14 @@
+[KEY]
+ice_ogre_head_fire_001
+[PATH]
+Sprite/Weapon/ice_ogre_head_fire/ice_ogre_head_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+866, 690
+[SLICE]
+13, 14
+[OFFSET]
+0, 0

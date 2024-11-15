@@ -1,0 +1,14 @@
+[KEY]
+baretta_enemy_charge_002
+[PATH]
+Sprite/Weapon/baretta_enemy_charge/baretta_enemy_charge_002.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+155, 860
+[SLICE]
+14, 12
+[OFFSET]
+0, 0

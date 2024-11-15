@@ -1,0 +1,14 @@
+[KEY]
+bomb_gun_idle_003
+[PATH]
+Sprite/Weapon/bomb_gun_idle/bomb_gun_idle_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+579, 320
+[SLICE]
+25, 21
+[OFFSET]
+0, 0

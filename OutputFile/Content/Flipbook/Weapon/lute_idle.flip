@@ -1,0 +1,15 @@
+[KEY]
+lute_idle
+[PATH]
+Flipbook/Weapon/lute_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+lute_idle_001
+[PATH]
+Sprite/Weapon/lute_idle/lute_idle_001.sprite
+
+
+

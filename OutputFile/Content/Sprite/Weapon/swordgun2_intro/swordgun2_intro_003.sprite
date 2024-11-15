@@ -1,0 +1,14 @@
+[KEY]
+swordgun2_intro_003
+[PATH]
+Sprite/Weapon/swordgun2_intro/swordgun2_intro_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+206, 208
+[SLICE]
+40, 9
+[OFFSET]
+0, 0

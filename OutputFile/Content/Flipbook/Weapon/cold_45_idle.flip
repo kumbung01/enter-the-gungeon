@@ -1,0 +1,15 @@
+[KEY]
+cold_45_idle
+[PATH]
+Flipbook/Weapon/cold_45_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+cold_45_idle_001
+[PATH]
+Sprite/Weapon/cold_45_idle/cold_45_idle_001.sprite
+
+
+

@@ -1,0 +1,15 @@
+[KEY]
+pillow_idle
+[PATH]
+Flipbook/Weapon/pillow_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+pillow_idle_001
+[PATH]
+Sprite/Weapon/pillow_idle/pillow_idle_001.sprite
+
+
+

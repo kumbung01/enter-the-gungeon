@@ -1,0 +1,15 @@
+[KEY]
+tommygun_shoot
+[PATH]
+Flipbook/Weapon/tommygun_shoot.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+tommygun_shoot_001
+[PATH]
+Sprite/Weapon/tommygun_shoot/tommygun_shoot_001.sprite
+
+
+

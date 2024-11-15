@@ -1,0 +1,14 @@
+[KEY]
+samus_intro_003
+[PATH]
+Sprite/Weapon/samus_intro/samus_intro_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+182, 882
+[SLICE]
+13, 9
+[OFFSET]
+0, 0

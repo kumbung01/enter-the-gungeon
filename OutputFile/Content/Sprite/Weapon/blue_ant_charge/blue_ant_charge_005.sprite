@@ -1,0 +1,14 @@
+[KEY]
+blue_ant_charge_005
+[PATH]
+Sprite/Weapon/blue_ant_charge/blue_ant_charge_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+701, 419
+[SLICE]
+22, 15
+[OFFSET]
+0, 0

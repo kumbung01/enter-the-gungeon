@@ -1,0 +1,14 @@
+[KEY]
+distortion_launcher_reload_001
+[PATH]
+Sprite/Weapon/distortion_launcher_reload/distortion_launcher_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+457, 123
+[SLICE]
+28, 16
+[OFFSET]
+0, 0

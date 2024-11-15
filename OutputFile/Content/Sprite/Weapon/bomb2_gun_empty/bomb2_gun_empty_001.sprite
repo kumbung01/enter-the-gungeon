@@ -1,0 +1,14 @@
+[KEY]
+bomb2_gun_empty_001
+[PATH]
+Sprite/Weapon/bomb2_gun_empty/bomb2_gun_empty_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+561, 663
+[SLICE]
+23, 18
+[OFFSET]
+0, 0

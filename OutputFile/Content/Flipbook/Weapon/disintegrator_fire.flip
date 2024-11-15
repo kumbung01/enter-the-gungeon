@@ -1,0 +1,15 @@
+[KEY]
+disintegrator_fire
+[PATH]
+Flipbook/Weapon/disintegrator_fire.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+disintegrator_fire_001
+[PATH]
+Sprite/Weapon/disintegrator_fire/disintegrator_fire_001.sprite
+
+
+

@@ -1,0 +1,14 @@
+[KEY]
+me_shotgun_fire_001
+[PATH]
+Sprite/Weapon/me_shotgun_fire/me_shotgun_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+161, 684
+[SLICE]
+22, 19
+[OFFSET]
+0, 0

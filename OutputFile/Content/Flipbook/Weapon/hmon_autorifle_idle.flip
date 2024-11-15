@@ -1,0 +1,15 @@
+[KEY]
+hmon_autorifle_idle
+[PATH]
+Flipbook/Weapon/hmon_autorifle_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+hmon_autorifle_idle_001
+[PATH]
+Sprite/Weapon/hmon_autorifle_idle/hmon_autorifle_idle_001.sprite
+
+
+

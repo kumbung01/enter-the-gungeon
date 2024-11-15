@@ -1,0 +1,14 @@
+[KEY]
+blasphemy_alt_swipe_downver2_003
+[PATH]
+Sprite/Weapon/blasphemy_alt_swipe_downver2/blasphemy_alt_swipe_downver2_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+678, 208
+[SLICE]
+23, 23
+[OFFSET]
+0, 0

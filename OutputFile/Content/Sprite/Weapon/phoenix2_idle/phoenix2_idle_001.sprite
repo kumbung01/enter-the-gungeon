@@ -1,0 +1,14 @@
+[KEY]
+phoenix2_idle_001
+[PATH]
+Sprite/Weapon/phoenix2_idle/phoenix2_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+138, 886
+[SLICE]
+13, 11
+[OFFSET]
+0, 0

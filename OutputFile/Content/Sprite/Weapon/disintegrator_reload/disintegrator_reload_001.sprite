@@ -1,0 +1,14 @@
+[KEY]
+disintegrator_reload_001
+[PATH]
+Sprite/Weapon/disintegrator_reload/disintegrator_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+606, 78
+[SLICE]
+24, 15
+[OFFSET]
+0, 0

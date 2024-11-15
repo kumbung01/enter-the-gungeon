@@ -1,0 +1,14 @@
+[KEY]
+nailgun_shoot_002
+[PATH]
+Sprite/Weapon/nailgun_shoot/nailgun_shoot_002.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+702, 892
+[SLICE]
+9, 8
+[OFFSET]
+0, 0

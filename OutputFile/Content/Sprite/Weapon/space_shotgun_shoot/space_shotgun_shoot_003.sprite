@@ -1,0 +1,14 @@
+[KEY]
+space_shotgun_shoot_003
+[PATH]
+Sprite/Weapon/space_shotgun_shoot/space_shotgun_shoot_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+229, 797
+[SLICE]
+18, 13
+[OFFSET]
+0, 0

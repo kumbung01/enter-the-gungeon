@@ -1,0 +1,14 @@
+[KEY]
+sailgun2_reload_003
+[PATH]
+Sprite/Weapon/sailgun2_reload/sailgun2_reload_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+460, 541
+[SLICE]
+26, 15
+[OFFSET]
+0, 0

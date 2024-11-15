@@ -1,0 +1,14 @@
+[KEY]
+trigun_arm_idle_001
+[PATH]
+Sprite/Weapon/trigun_arm_idle/trigun_arm_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+367, 859
+[SLICE]
+15, 11
+[OFFSET]
+0, 0

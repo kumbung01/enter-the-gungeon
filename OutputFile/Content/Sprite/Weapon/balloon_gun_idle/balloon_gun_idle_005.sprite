@@ -1,0 +1,14 @@
+[KEY]
+balloon_gun_idle_005
+[PATH]
+Sprite/Weapon/balloon_gun_idle/balloon_gun_idle_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+223, 393
+[SLICE]
+30, 11
+[OFFSET]
+0, 0

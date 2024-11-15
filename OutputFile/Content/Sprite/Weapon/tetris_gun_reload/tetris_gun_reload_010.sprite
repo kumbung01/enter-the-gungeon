@@ -1,0 +1,14 @@
+[KEY]
+tetris_gun_reload_010
+[PATH]
+Sprite/Weapon/tetris_gun_reload/tetris_gun_reload_010.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+180, 421
+[SLICE]
+30, 24
+[OFFSET]
+0, 0

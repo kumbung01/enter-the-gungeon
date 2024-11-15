@@ -1,0 +1,14 @@
+[KEY]
+shotgrub_fire_004
+[PATH]
+Sprite/Weapon/shotgrub_fire/shotgrub_fire_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+223, 637
+[SLICE]
+24, 7
+[OFFSET]
+0, 0

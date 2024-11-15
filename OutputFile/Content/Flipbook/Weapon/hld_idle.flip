@@ -1,0 +1,15 @@
+[KEY]
+hld_idle
+[PATH]
+Flipbook/Weapon/hld_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+hld_idle_001
+[PATH]
+Sprite/Weapon/hld_idle/hld_idle_001.sprite
+
+
+

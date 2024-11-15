@@ -1,0 +1,14 @@
+[KEY]
+mask_gun_reload_004
+[PATH]
+Sprite/Weapon/mask_gun_reload/mask_gun_reload_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+470, 514
+[SLICE]
+25, 7
+[OFFSET]
+0, 0

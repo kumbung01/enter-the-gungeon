@@ -1,0 +1,14 @@
+[KEY]
+mt_gun_fire_001
+[PATH]
+Sprite/Weapon/mt_gun_fire/mt_gun_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+88, 802
+[SLICE]
+19, 19
+[OFFSET]
+0, 0

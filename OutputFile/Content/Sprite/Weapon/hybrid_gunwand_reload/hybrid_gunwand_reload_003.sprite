@@ -1,0 +1,14 @@
+[KEY]
+hybrid_gunwand_reload_003
+[PATH]
+Sprite/Weapon/hybrid_gunwand_reload/hybrid_gunwand_reload_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+56, 762
+[SLICE]
+20, 12
+[OFFSET]
+0, 0

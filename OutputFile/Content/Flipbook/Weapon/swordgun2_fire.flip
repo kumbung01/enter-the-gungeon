@@ -1,0 +1,15 @@
+[KEY]
+swordgun2_fire
+[PATH]
+Flipbook/Weapon/swordgun2_fire.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+swordgun2_fire_001
+[PATH]
+Sprite/Weapon/swordgun2_fire/swordgun2_fire_001.sprite
+
+
+

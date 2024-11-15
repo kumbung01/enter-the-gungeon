@@ -1,0 +1,15 @@
+[KEY]
+predator_idle_W
+[PATH]
+Flipbook/Weapon/predator_idle_W.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+predator_idle_W_001
+[PATH]
+Sprite/Weapon/predator_idle_W/predator_idle_W_001.sprite
+
+
+

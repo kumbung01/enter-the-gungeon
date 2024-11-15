@@ -1,0 +1,14 @@
+[KEY]
+bulletbow_fire_002
+[PATH]
+Sprite/Weapon/bulletbow_fire/bulletbow_fire_002.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+414, 339
+[SLICE]
+8, 16
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+origami_fire_002
+[PATH]
+Sprite/Weapon/origami_fire/origami_fire_002.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+354, 802
+[SLICE]
+19, 14
+[OFFSET]
+0, 0

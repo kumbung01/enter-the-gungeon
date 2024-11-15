@@ -1,0 +1,14 @@
+[KEY]
+mermaid_gun_idle_001
+[PATH]
+Sprite/Weapon/mermaid_gun_idle/mermaid_gun_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+214, 292
+[SLICE]
+34, 12
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+super_meat_gun_idle
+[PATH]
+Flipbook/Weapon/super_meat_gun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+super_meat_gun_idle_001
+[PATH]
+Sprite/Weapon/super_meat_gun_idle/super_meat_gun_idle_001.sprite
+
+
+

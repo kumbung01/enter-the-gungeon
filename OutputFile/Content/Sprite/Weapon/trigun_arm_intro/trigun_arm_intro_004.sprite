@@ -1,0 +1,14 @@
+[KEY]
+trigun_arm_intro_004
+[PATH]
+Sprite/Weapon/trigun_arm_intro/trigun_arm_intro_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+398, 882
+[SLICE]
+10, 11
+[OFFSET]
+0, 0

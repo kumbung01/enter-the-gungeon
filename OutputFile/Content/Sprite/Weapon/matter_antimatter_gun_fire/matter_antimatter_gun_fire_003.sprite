@@ -1,0 +1,14 @@
+[KEY]
+matter_antimatter_gun_fire_003
+[PATH]
+Sprite/Weapon/matter_antimatter_gun_fire/matter_antimatter_gun_fire_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+765, 486
+[SLICE]
+20, 12
+[OFFSET]
+0, 0

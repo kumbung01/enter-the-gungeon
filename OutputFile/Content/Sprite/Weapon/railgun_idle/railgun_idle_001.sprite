@@ -1,0 +1,14 @@
+[KEY]
+railgun_idle_001
+[PATH]
+Sprite/Weapon/railgun_idle/railgun_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+100, 165
+[SLICE]
+47, 15
+[OFFSET]
+0, 0

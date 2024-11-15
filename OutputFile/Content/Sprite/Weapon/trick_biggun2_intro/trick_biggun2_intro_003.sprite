@@ -1,0 +1,14 @@
+[KEY]
+trick_biggun2_intro_003
+[PATH]
+Sprite/Weapon/trick_biggun2_intro/trick_biggun2_intro_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+744, 255
+[SLICE]
+21, 12
+[OFFSET]
+0, 0

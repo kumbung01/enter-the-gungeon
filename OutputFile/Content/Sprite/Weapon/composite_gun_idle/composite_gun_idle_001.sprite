@@ -1,0 +1,14 @@
+[KEY]
+composite_gun_idle_001
+[PATH]
+Sprite/Weapon/composite_gun_idle/composite_gun_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+866, 216
+[SLICE]
+15, 10
+[OFFSET]
+0, 0

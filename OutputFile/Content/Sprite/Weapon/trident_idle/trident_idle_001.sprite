@@ -1,0 +1,14 @@
+[KEY]
+trident_idle_001
+[PATH]
+Sprite/Weapon/trident_idle/trident_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+33, 318
+[SLICE]
+33, 12
+[OFFSET]
+0, 0

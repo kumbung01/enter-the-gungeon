@@ -1,0 +1,14 @@
+[KEY]
+guzheng_idle_001
+[PATH]
+Sprite/Weapon/guzheng_idle/guzheng_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+372, 681
+[SLICE]
+21, 22
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+colt_1851_enemy_shoot_001
+[PATH]
+Sprite/Weapon/colt_1851_enemy_shoot/colt_1851_enemy_shoot_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+227, 819
+[SLICE]
+18, 9
+[OFFSET]
+0, 0

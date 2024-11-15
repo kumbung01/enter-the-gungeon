@@ -1,0 +1,15 @@
+[KEY]
+shotgun_axe_idle
+[PATH]
+Flipbook/Weapon/shotgun_axe_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+shotgun_axe_idle_001
+[PATH]
+Sprite/Weapon/shotgun_axe_idle/shotgun_axe_idle_001.sprite
+
+
+

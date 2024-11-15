@@ -1,0 +1,14 @@
+[KEY]
+engine_gun_reload_003
+[PATH]
+Sprite/Weapon/engine_gun_reload/engine_gun_reload_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+461, 192
+[SLICE]
+28, 14
+[OFFSET]
+0, 0

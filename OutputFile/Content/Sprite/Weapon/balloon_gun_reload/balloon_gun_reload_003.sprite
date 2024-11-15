@@ -1,0 +1,14 @@
+[KEY]
+balloon_gun_reload_003
+[PATH]
+Sprite/Weapon/balloon_gun_reload/balloon_gun_reload_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+881, 835
+[SLICE]
+13, 12
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+predator_idle_SE_001
+[PATH]
+Sprite/Weapon/predator_idle_SE/predator_idle_SE_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+100, 685
+[SLICE]
+15, 17
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+blue_ant_flipbutt_004
+[PATH]
+Sprite/Weapon/blue_ant_flipbutt/blue_ant_flipbutt_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+816, 122
+[SLICE]
+14, 17
+[OFFSET]
+0, 0

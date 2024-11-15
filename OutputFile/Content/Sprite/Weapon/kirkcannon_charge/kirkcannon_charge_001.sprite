@@ -1,0 +1,14 @@
+[KEY]
+kirkcannon_charge_001
+[PATH]
+Sprite/Weapon/kirkcannon_charge/kirkcannon_charge_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+629, 456
+[SLICE]
+24, 12
+[OFFSET]
+0, 0

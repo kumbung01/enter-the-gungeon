@@ -1,0 +1,15 @@
+[KEY]
+dpad_gun_idle
+[PATH]
+Flipbook/Weapon/dpad_gun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+dpad_gun_idle_001
+[PATH]
+Sprite/Weapon/dpad_gun_idle/dpad_gun_idle_001.sprite
+
+
+

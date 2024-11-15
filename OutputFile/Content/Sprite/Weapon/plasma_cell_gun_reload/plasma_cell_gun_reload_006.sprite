@@ -1,0 +1,14 @@
+[KEY]
+plasma_cell_gun_reload_006
+[PATH]
+Sprite/Weapon/plasma_cell_gun_reload/plasma_cell_gun_reload_006.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+372, 608
+[SLICE]
+24, 16
+[OFFSET]
+0, 0

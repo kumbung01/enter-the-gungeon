@@ -1,0 +1,14 @@
+[KEY]
+poxshirt_fire_001
+[PATH]
+Sprite/Weapon/poxshirt_fire/poxshirt_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+466, 324
+[SLICE]
+28, 16
+[OFFSET]
+0, 0

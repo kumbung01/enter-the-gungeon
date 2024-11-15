@@ -1,0 +1,14 @@
+[KEY]
+burning_hand_empty_001
+[PATH]
+Sprite/Weapon/burning_hand_empty/burning_hand_empty_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+98, 340
+[SLICE]
+4, 4
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+snowball_launcher2_fire_001
+[PATH]
+Sprite/Weapon/snowball_launcher2_fire/snowball_launcher2_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+784, 527
+[SLICE]
+19, 13
+[OFFSET]
+0, 0

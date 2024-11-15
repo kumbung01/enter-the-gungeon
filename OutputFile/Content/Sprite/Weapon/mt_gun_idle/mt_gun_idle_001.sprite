@@ -1,0 +1,14 @@
+[KEY]
+mt_gun_idle_001
+[PATH]
+Sprite/Weapon/mt_gun_idle/mt_gun_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+296, 783
+[SLICE]
+20, 19
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+swordgun_reload_001
+[PATH]
+Sprite/Weapon/swordgun_reload/swordgun_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+249, 278
+[SLICE]
+13, 35
+[OFFSET]
+0, 0

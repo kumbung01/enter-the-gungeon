@@ -1,0 +1,14 @@
+[KEY]
+mt_gun_reload_003
+[PATH]
+Sprite/Weapon/mt_gun_reload/mt_gun_reload_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+630, 515
+[SLICE]
+24, 19
+[OFFSET]
+0, 0

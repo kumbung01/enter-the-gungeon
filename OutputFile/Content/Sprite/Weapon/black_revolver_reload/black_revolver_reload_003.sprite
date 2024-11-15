@@ -1,0 +1,14 @@
+[KEY]
+black_revolver_reload_003
+[PATH]
+Sprite/Weapon/black_revolver_reload/black_revolver_reload_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+804, 662
+[SLICE]
+18, 18
+[OFFSET]
+0, 0

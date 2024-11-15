@@ -1,0 +1,14 @@
+[KEY]
+magic_sniper_fire_003
+[PATH]
+Sprite/Weapon/magic_sniper_fire/magic_sniper_fire_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+219, 120
+[SLICE]
+41, 12
+[OFFSET]
+0, 0

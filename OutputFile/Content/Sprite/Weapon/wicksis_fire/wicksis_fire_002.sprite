@@ -1,0 +1,14 @@
+[KEY]
+wicksis_fire_002
+[PATH]
+Sprite/Weapon/wicksis_fire/wicksis_fire_002.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+605, 138
+[SLICE]
+25, 25
+[OFFSET]
+0, 0

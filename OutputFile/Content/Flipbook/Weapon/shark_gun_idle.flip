@@ -1,0 +1,15 @@
+[KEY]
+shark_gun_idle
+[PATH]
+Flipbook/Weapon/shark_gun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+shark_gun_idle_001
+[PATH]
+Sprite/Weapon/shark_gun_idle/shark_gun_idle_001.sprite
+
+
+

@@ -1,0 +1,15 @@
+[KEY]
+pea_shooter_empty
+[PATH]
+Flipbook/Weapon/pea_shooter_empty.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+pea_shooter_empty_001
+[PATH]
+Sprite/Weapon/pea_shooter_empty/pea_shooter_empty_001.sprite
+
+
+

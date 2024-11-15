@@ -1,0 +1,14 @@
+[KEY]
+sailgun_charge_003
+[PATH]
+Sprite/Weapon/sailgun_charge/sailgun_charge_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+763, 569
+[SLICE]
+20, 15
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+bigiron_empty_001
+[PATH]
+Sprite/Weapon/bigiron_empty/bigiron_empty_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+78, 547
+[SLICE]
+26, 11
+[OFFSET]
+0, 0

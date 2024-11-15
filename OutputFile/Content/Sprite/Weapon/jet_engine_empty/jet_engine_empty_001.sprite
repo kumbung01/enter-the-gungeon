@@ -1,0 +1,14 @@
+[KEY]
+jet_engine_empty_001
+[PATH]
+Sprite/Weapon/jet_engine_empty/jet_engine_empty_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+213, 655
+[SLICE]
+23, 15
+[OFFSET]
+0, 0

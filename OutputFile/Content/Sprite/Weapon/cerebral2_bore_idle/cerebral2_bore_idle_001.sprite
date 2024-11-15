@@ -1,0 +1,14 @@
+[KEY]
+cerebral2_bore_idle_001
+[PATH]
+Sprite/Weapon/cerebral2_bore_idle/cerebral2_bore_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+630, 484
+[SLICE]
+24, 16
+[OFFSET]
+0, 0

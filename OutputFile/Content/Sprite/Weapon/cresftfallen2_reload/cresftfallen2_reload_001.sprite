@@ -1,0 +1,14 @@
+[KEY]
+cresftfallen2_reload_001
+[PATH]
+Sprite/Weapon/cresftfallen2_reload/cresftfallen2_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+553, 376
+[SLICE]
+26, 13
+[OFFSET]
+0, 0

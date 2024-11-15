@@ -1,0 +1,14 @@
+[KEY]
+rectangle_gun_fire_001
+[PATH]
+Sprite/Weapon/rectangle_gun_fire/rectangle_gun_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+721, 573
+[SLICE]
+21, 11
+[OFFSET]
+0, 0

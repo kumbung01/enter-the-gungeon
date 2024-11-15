@@ -1,0 +1,14 @@
+[KEY]
+trash2_gun_fire_005
+[PATH]
+Sprite/Weapon/trash2_gun_fire/trash2_gun_fire_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+0, 284
+[SLICE]
+35, 16
+[OFFSET]
+0, 0

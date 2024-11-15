@@ -1,0 +1,14 @@
+[KEY]
+hybrid_wandgun_reload_004
+[PATH]
+Sprite/Weapon/hybrid_wandgun_reload/hybrid_wandgun_reload_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+723, 164
+[SLICE]
+21, 13
+[OFFSET]
+0, 0

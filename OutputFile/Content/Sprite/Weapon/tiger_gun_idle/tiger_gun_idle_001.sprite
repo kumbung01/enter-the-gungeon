@@ -1,0 +1,14 @@
+[KEY]
+tiger_gun_idle_001
+[PATH]
+Sprite/Weapon/tiger_gun_idle/tiger_gun_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+653, 672
+[SLICE]
+23, 13
+[OFFSET]
+0, 0

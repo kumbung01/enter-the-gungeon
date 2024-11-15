@@ -1,0 +1,14 @@
+[KEY]
+squad_green_fire_005
+[PATH]
+Sprite/Weapon/squad_green_fire/squad_green_fire_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+601, 496
+[SLICE]
+25, 12
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+trick_biggun_swap_vfx_001
+[PATH]
+Sprite/Weapon/trick_biggun_swap_vfx/trick_biggun_swap_vfx_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+895, 426
+[SLICE]
+9, 9
+[OFFSET]
+0, 0

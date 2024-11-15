@@ -1,0 +1,15 @@
+[KEY]
+magic_sniper_idle
+[PATH]
+Flipbook/Weapon/magic_sniper_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+magic_sniper_idle_001
+[PATH]
+Sprite/Weapon/magic_sniper_idle/magic_sniper_idle_001.sprite
+
+
+

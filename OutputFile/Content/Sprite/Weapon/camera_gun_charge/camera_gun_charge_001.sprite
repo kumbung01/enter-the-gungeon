@@ -1,0 +1,14 @@
+[KEY]
+camera_gun_charge_001
+[PATH]
+Sprite/Weapon/camera_gun_charge/camera_gun_charge_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+538, 129
+[SLICE]
+14, 20
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+miner_ham_idle
+[PATH]
+Flipbook/Weapon/miner_ham_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+miner_ham_idle_001
+[PATH]
+Sprite/Weapon/miner_ham_idle/miner_ham_idle_001.sprite
+
+
+

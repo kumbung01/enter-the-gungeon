@@ -1,0 +1,15 @@
+[KEY]
+wind_up_gun_idle
+[PATH]
+Flipbook/Weapon/wind_up_gun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+wind_up_gun_idle_001
+[PATH]
+Sprite/Weapon/wind_up_gun_idle/wind_up_gun_idle_001.sprite
+
+
+

@@ -1,0 +1,14 @@
+[KEY]
+black_hole_gun_empty_005
+[PATH]
+Sprite/Weapon/black_hole_gun_empty/black_hole_gun_empty_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+723, 149
+[SLICE]
+21, 15
+[OFFSET]
+0, 0

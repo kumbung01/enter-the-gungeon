@@ -1,0 +1,14 @@
+[KEY]
+squad_green_reload_001
+[PATH]
+Sprite/Weapon/squad_green_reload/squad_green_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+415, 695
+[SLICE]
+21, 22
+[OFFSET]
+0, 0

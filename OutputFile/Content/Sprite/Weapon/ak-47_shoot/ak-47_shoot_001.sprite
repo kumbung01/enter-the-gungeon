@@ -1,0 +1,14 @@
+[KEY]
+ak-47_shoot_001
+[PATH]
+Sprite/Weapon/ak-47_shoot/ak-47_shoot_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+525, 84
+[SLICE]
+27, 7
+[OFFSET]
+0, 0

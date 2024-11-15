@@ -1,0 +1,14 @@
+[KEY]
+flare2_gun_reload_001
+[PATH]
+Sprite/Weapon/flare2_gun_reload/flare2_gun_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+850, 71
+[SLICE]
+16, 11
+[OFFSET]
+0, 0

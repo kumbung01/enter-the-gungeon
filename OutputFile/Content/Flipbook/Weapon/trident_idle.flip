@@ -1,0 +1,15 @@
+[KEY]
+trident_idle
+[PATH]
+Flipbook/Weapon/trident_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+trident_idle_001
+[PATH]
+Sprite/Weapon/trident_idle/trident_idle_001.sprite
+
+
+

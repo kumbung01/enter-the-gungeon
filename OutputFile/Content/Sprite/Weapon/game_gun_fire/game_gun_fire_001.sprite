@@ -1,0 +1,14 @@
+[KEY]
+game_gun_fire_001
+[PATH]
+Sprite/Weapon/game_gun_fire/game_gun_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+56, 774
+[SLICE]
+20, 11
+[OFFSET]
+0, 0

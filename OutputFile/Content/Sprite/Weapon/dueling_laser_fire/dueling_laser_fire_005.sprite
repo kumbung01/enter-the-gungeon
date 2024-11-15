@@ -1,0 +1,14 @@
+[KEY]
+dueling_laser_fire_005
+[PATH]
+Sprite/Weapon/dueling_laser_fire/dueling_laser_fire_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+723, 466
+[SLICE]
+21, 13
+[OFFSET]
+0, 0

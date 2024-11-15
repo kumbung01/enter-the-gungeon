@@ -1,0 +1,14 @@
+[KEY]
+cerebral_bore_reload_001
+[PATH]
+Sprite/Weapon/cerebral_bore_reload/cerebral_bore_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+630, 64
+[SLICE]
+24, 16
+[OFFSET]
+0, 0

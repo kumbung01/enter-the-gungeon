@@ -1,0 +1,15 @@
+[KEY]
+pea_grenade_idle
+[PATH]
+Flipbook/Weapon/pea_grenade_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+pea_grenade_idle_001
+[PATH]
+Sprite/Weapon/pea_grenade_idle/pea_grenade_idle_001.sprite
+
+
+

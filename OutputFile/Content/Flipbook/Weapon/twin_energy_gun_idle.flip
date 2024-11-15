@@ -1,0 +1,15 @@
+[KEY]
+twin_energy_gun_idle
+[PATH]
+Flipbook/Weapon/twin_energy_gun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+twin_energy_gun_idle_001
+[PATH]
+Sprite/Weapon/twin_energy_gun_idle/twin_energy_gun_idle_001.sprite
+
+
+

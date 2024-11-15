@@ -1,0 +1,15 @@
+[KEY]
+uzi_shoot
+[PATH]
+Flipbook/Weapon/uzi_shoot.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+uzi_shoot_001
+[PATH]
+Sprite/Weapon/uzi_shoot/uzi_shoot_001.sprite
+
+
+

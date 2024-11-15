@@ -1,0 +1,14 @@
+[KEY]
+gilded_hydra_fire_005
+[PATH]
+Sprite/Weapon/gilded_hydra_fire/gilded_hydra_fire_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+723, 479
+[SLICE]
+21, 11
+[OFFSET]
+0, 0

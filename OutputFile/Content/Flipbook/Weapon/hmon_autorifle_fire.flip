@@ -1,0 +1,15 @@
+[KEY]
+hmon_autorifle_fire
+[PATH]
+Flipbook/Weapon/hmon_autorifle_fire.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+hmon_autorifle_fire_001
+[PATH]
+Sprite/Weapon/hmon_autorifle_fire/hmon_autorifle_fire_001.sprite
+
+
+

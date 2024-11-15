@@ -1,0 +1,14 @@
+[KEY]
+claw_idle_003
+[PATH]
+Sprite/Weapon/claw_idle/claw_idle_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+562, 820
+[SLICE]
+18, 14
+[OFFSET]
+0, 0

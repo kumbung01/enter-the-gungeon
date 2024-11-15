@@ -1,0 +1,14 @@
+[KEY]
+trash2_gun_reload_001
+[PATH]
+Sprite/Weapon/trash2_gun_reload/trash2_gun_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+367, 66
+[SLICE]
+31, 23
+[OFFSET]
+0, 0

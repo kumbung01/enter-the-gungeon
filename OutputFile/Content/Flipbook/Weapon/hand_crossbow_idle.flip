@@ -1,0 +1,15 @@
+[KEY]
+hand_crossbow_idle
+[PATH]
+Flipbook/Weapon/hand_crossbow_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+hand_crossbow_idle_001
+[PATH]
+Sprite/Weapon/hand_crossbow_idle/hand_crossbow_idle_001.sprite
+
+
+

@@ -1,0 +1,15 @@
+[KEY]
+dueling_laser_empty
+[PATH]
+Flipbook/Weapon/dueling_laser_empty.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+dueling_laser_empty_001
+[PATH]
+Sprite/Weapon/dueling_laser_empty/dueling_laser_empty_001.sprite
+
+
+

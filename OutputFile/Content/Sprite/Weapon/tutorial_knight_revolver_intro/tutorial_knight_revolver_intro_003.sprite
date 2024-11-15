@@ -1,0 +1,14 @@
+[KEY]
+tutorial_knight_revolver_intro_003
+[PATH]
+Sprite/Weapon/tutorial_knight_revolver_intro/tutorial_knight_revolver_intro_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+866, 746
+[SLICE]
+13, 7
+[OFFSET]
+0, 0

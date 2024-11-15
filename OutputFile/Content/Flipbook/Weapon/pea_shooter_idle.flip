@@ -1,0 +1,15 @@
+[KEY]
+pea_shooter_idle
+[PATH]
+Flipbook/Weapon/pea_shooter_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+pea_shooter_idle_001
+[PATH]
+Sprite/Weapon/pea_shooter_idle/pea_shooter_idle_001.sprite
+
+
+

@@ -1,0 +1,15 @@
+[KEY]
+winchester_rifle_idle
+[PATH]
+Flipbook/Weapon/winchester_rifle_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+winchester_rifle_idle_001
+[PATH]
+Sprite/Weapon/winchester_rifle_idle/winchester_rifle_idle_001.sprite
+
+
+

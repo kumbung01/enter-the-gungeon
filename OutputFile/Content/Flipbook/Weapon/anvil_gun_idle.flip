@@ -1,0 +1,15 @@
+[KEY]
+anvil_gun_idle
+[PATH]
+Flipbook/Weapon/anvil_gun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+anvil_gun_idle_001
+[PATH]
+Sprite/Weapon/anvil_gun_idle/anvil_gun_idle_001.sprite
+
+
+

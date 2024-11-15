@@ -1,0 +1,15 @@
+[KEY]
+syringe_gun_idle
+[PATH]
+Flipbook/Weapon/syringe_gun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+syringe_gun_idle_001
+[PATH]
+Sprite/Weapon/syringe_gun_idle/syringe_gun_idle_001.sprite
+
+
+

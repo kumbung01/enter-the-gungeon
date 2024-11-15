@@ -1,0 +1,14 @@
+[KEY]
+balloon_gun_pop_004
+[PATH]
+Sprite/Weapon/balloon_gun_pop/balloon_gun_pop_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+263, 36
+[SLICE]
+37, 20
+[OFFSET]
+0, 0

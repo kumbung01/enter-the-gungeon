@@ -1,0 +1,14 @@
+[KEY]
+pea_grenade_idle_001
+[PATH]
+Sprite/Weapon/pea_grenade_idle/pea_grenade_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+181, 703
+[SLICE]
+22, 10
+[OFFSET]
+0, 0

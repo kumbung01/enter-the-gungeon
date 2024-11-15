@@ -1,0 +1,14 @@
+[KEY]
+heat_buster_charge_001
+[PATH]
+Sprite/Weapon/heat_buster_charge/heat_buster_charge_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+537, 882
+[SLICE]
+10, 8
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+rectangle_gun_idle_001
+[PATH]
+Sprite/Weapon/rectangle_gun_idle/rectangle_gun_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+516, 639
+[SLICE]
+21, 6
+[OFFSET]
+0, 0

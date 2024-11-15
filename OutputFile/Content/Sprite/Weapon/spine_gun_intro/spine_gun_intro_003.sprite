@@ -1,0 +1,14 @@
+[KEY]
+spine_gun_intro_003
+[PATH]
+Sprite/Weapon/spine_gun_intro/spine_gun_intro_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+162, 515
+[SLICE]
+27, 14
+[OFFSET]
+0, 0

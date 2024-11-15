@@ -1,0 +1,14 @@
+[KEY]
+mauser_pistol_idle_001
+[PATH]
+Sprite/Weapon/mauser_pistol_idle/mauser_pistol_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+723, 597
+[SLICE]
+21, 14
+[OFFSET]
+0, 0

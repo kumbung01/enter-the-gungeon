@@ -1,0 +1,14 @@
+[KEY]
+BSG_empty_001
+[PATH]
+Sprite/Weapon/BSG_empty/BSG_empty_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+380, 594
+[SLICE]
+25, 14
+[OFFSET]
+0, 0

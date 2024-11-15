@@ -1,0 +1,14 @@
+[KEY]
+engine_gun_fire_001
+[PATH]
+Sprite/Weapon/engine_gun_fire/engine_gun_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+361, 531
+[SLICE]
+26, 14
+[OFFSET]
+0, 0

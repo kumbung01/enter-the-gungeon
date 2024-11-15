@@ -1,0 +1,14 @@
+[KEY]
+engine_gun_idle_003
+[PATH]
+Sprite/Weapon/engine_gun_idle/engine_gun_idle_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+514, 403
+[SLICE]
+26, 15
+[OFFSET]
+0, 0

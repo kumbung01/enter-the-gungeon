@@ -1,0 +1,14 @@
+[KEY]
+claw_empty_001
+[PATH]
+Sprite/Weapon/claw_empty/claw_empty_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+448, 785
+[SLICE]
+19, 16
+[OFFSET]
+0, 0

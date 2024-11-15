@@ -1,0 +1,14 @@
+[KEY]
+ice_giant_gun_intro_001
+[PATH]
+Sprite/Weapon/ice_giant_gun_intro/ice_giant_gun_intro_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+499, 24
+[SLICE]
+28, 21
+[OFFSET]
+0, 0

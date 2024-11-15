@@ -1,0 +1,14 @@
+[KEY]
+origami2_reload_006
+[PATH]
+Sprite/Weapon/origami2_reload/origami2_reload_006.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+169, 880
+[SLICE]
+13, 12
+[OFFSET]
+0, 0

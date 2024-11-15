@@ -1,0 +1,15 @@
+[KEY]
+flare2_gun_idle
+[PATH]
+Flipbook/Weapon/flare2_gun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+flare2_gun_idle_001
+[PATH]
+Sprite/Weapon/flare2_gun_idle/flare2_gun_idle_001.sprite
+
+
+

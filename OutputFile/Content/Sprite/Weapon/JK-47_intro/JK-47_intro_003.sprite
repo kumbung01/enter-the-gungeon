@@ -1,0 +1,14 @@
+[KEY]
+JK-47_intro_003
+[PATH]
+Sprite/Weapon/JK-47_intro/JK-47_intro_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+525, 84
+[SLICE]
+27, 7
+[OFFSET]
+0, 0

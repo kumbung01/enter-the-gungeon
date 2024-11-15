@@ -1,0 +1,15 @@
+[KEY]
+rectangle_gun_idle
+[PATH]
+Flipbook/Weapon/rectangle_gun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+rectangle_gun_idle_001
+[PATH]
+Sprite/Weapon/rectangle_gun_idle/rectangle_gun_idle_001.sprite
+
+
+

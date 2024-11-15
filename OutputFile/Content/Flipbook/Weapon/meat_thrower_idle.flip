@@ -1,0 +1,15 @@
+[KEY]
+meat_thrower_idle
+[PATH]
+Flipbook/Weapon/meat_thrower_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+meat_thrower_idle_001
+[PATH]
+Sprite/Weapon/meat_thrower_idle/meat_thrower_idle_001.sprite
+
+
+

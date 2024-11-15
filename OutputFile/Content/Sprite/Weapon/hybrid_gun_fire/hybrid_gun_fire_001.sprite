@@ -1,0 +1,14 @@
+[KEY]
+hybrid_gun_fire_001
+[PATH]
+Sprite/Weapon/hybrid_gun_fire/hybrid_gun_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+723, 164
+[SLICE]
+21, 13
+[OFFSET]
+0, 0

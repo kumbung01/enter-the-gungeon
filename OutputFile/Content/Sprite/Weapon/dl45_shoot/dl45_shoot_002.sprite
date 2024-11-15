@@ -1,0 +1,14 @@
+[KEY]
+dl45_shoot_002
+[PATH]
+Sprite/Weapon/dl45_shoot/dl45_shoot_002.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+650, 847
+[SLICE]
+16, 13
+[OFFSET]
+0, 0

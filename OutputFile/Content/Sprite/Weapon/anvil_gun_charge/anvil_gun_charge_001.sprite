@@ -1,0 +1,14 @@
+[KEY]
+anvil_gun_charge_001
+[PATH]
+Sprite/Weapon/anvil_gun_charge/anvil_gun_charge_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+866, 644
+[SLICE]
+15, 15
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+trident_reload_003
+[PATH]
+Sprite/Weapon/trident_reload/trident_reload_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+678, 287
+[SLICE]
+22, 23
+[OFFSET]
+0, 0

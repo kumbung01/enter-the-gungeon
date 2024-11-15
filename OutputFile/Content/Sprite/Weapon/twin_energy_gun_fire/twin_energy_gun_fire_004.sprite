@@ -1,0 +1,14 @@
+[KEY]
+twin_energy_gun_fire_004
+[PATH]
+Sprite/Weapon/twin_energy_gun_fire/twin_energy_gun_fire_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+850, 743
+[SLICE]
+16, 11
+[OFFSET]
+0, 0

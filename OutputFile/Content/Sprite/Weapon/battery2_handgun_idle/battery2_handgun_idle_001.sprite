@@ -1,0 +1,14 @@
+[KEY]
+battery2_handgun_idle_001
+[PATH]
+Sprite/Weapon/battery2_handgun_idle/battery2_handgun_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+190, 743
+[SLICE]
+20, 12
+[OFFSET]
+0, 0

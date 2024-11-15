@@ -1,0 +1,14 @@
+[KEY]
+mjolnir_reload_001
+[PATH]
+Sprite/Weapon/mjolnir_reload/mjolnir_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+393, 721
+[SLICE]
+21, 12
+[OFFSET]
+0, 0

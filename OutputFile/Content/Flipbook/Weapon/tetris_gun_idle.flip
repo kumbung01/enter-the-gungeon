@@ -1,0 +1,15 @@
+[KEY]
+tetris_gun_idle
+[PATH]
+Flipbook/Weapon/tetris_gun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+tetris_gun_idle_001
+[PATH]
+Sprite/Weapon/tetris_gun_idle/tetris_gun_idle_001.sprite
+
+
+

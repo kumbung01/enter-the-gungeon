@@ -1,0 +1,14 @@
+[KEY]
+wicksis_reload_003
+[PATH]
+Sprite/Weapon/wicksis_reload/wicksis_reload_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+0, 123
+[SLICE]
+52, 26
+[OFFSET]
+0, 0

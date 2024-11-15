@@ -1,0 +1,15 @@
+[KEY]
+future_assault_rifle_idle
+[PATH]
+Flipbook/Weapon/future_assault_rifle_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+future_assault_rifle_idle_001
+[PATH]
+Sprite/Weapon/future_assault_rifle_idle/future_assault_rifle_idle_001.sprite
+
+
+

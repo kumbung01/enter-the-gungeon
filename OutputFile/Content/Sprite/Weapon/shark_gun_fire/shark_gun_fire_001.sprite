@@ -1,0 +1,14 @@
+[KEY]
+shark_gun_fire_001
+[PATH]
+Sprite/Weapon/shark_gun_fire/shark_gun_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+35, 310
+[SLICE]
+34, 8
+[OFFSET]
+0, 0

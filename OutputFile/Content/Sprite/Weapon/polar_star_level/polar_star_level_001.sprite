@@ -1,0 +1,14 @@
+[KEY]
+polar_star_level_001
+[PATH]
+Sprite/Weapon/polar_star_level/polar_star_level_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+850, 190
+[SLICE]
+16, 10
+[OFFSET]
+0, 0

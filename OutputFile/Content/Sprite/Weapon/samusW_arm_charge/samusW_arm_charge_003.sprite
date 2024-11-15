@@ -1,0 +1,14 @@
+[KEY]
+samusW_arm_charge_003
+[PATH]
+Sprite/Weapon/samusW_arm_charge/samusW_arm_charge_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+866, 389
+[SLICE]
+15, 15
+[OFFSET]
+0, 0

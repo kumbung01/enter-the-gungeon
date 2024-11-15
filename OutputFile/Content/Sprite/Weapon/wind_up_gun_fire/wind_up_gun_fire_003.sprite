@@ -1,0 +1,14 @@
+[KEY]
+wind_up_gun_fire_003
+[PATH]
+Sprite/Weapon/wind_up_gun_fire/wind_up_gun_fire_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+150, 616
+[SLICE]
+25, 10
+[OFFSET]
+0, 0

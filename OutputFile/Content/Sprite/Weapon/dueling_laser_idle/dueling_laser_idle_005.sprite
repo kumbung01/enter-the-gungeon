@@ -1,0 +1,14 @@
+[KEY]
+dueling_laser_idle_005
+[PATH]
+Sprite/Weapon/dueling_laser_idle/dueling_laser_idle_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+709, 724
+[SLICE]
+21, 13
+[OFFSET]
+0, 0

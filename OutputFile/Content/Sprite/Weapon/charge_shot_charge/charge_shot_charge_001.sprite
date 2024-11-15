@@ -1,0 +1,14 @@
+[KEY]
+charge_shot_charge_001
+[PATH]
+Sprite/Weapon/charge_shot_charge/charge_shot_charge_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+580, 477
+[SLICE]
+25, 10
+[OFFSET]
+0, 0

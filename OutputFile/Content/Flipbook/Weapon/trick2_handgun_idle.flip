@@ -1,0 +1,15 @@
+[KEY]
+trick2_handgun_idle
+[PATH]
+Flipbook/Weapon/trick2_handgun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+trick2_handgun_idle_001
+[PATH]
+Sprite/Weapon/trick2_handgun_idle/trick2_handgun_idle_001.sprite
+
+
+

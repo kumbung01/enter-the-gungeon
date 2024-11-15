@@ -1,0 +1,14 @@
+[KEY]
+bow_draw_001
+[PATH]
+Sprite/Weapon/bow_draw/bow_draw_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+583, 782
+[SLICE]
+17, 19
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+excaliber_green_intro_004
+[PATH]
+Sprite/Weapon/excaliber_green_intro/excaliber_green_intro_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+822, 476
+[SLICE]
+11, 17
+[OFFSET]
+0, 0

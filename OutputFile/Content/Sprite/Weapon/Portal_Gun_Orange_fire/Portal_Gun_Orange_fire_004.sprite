@@ -1,0 +1,14 @@
+[KEY]
+Portal_Gun_Orange_fire_004
+[PATH]
+Sprite/Weapon/Portal_Gun_Orange_fire/Portal_Gun_Orange_fire_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+744, 558
+[SLICE]
+20, 11
+[OFFSET]
+0, 0

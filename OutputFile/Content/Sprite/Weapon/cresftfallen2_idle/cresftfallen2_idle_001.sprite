@@ -1,0 +1,14 @@
+[KEY]
+cresftfallen2_idle_001
+[PATH]
+Sprite/Weapon/cresftfallen2_idle/cresftfallen2_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+553, 364
+[SLICE]
+26, 12
+[OFFSET]
+0, 0

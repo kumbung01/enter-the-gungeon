@@ -1,0 +1,14 @@
+[KEY]
+dpad_gun_fire_002
+[PATH]
+Sprite/Weapon/dpad_gun_fire/dpad_gun_fire_002.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+765, 728
+[SLICE]
+20, 19
+[OFFSET]
+0, 0

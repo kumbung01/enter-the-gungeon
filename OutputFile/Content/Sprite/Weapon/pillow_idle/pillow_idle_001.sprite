@@ -1,0 +1,14 @@
+[KEY]
+pillow_idle_001
+[PATH]
+Sprite/Weapon/pillow_idle/pillow_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+630, 112
+[SLICE]
+24, 24
+[OFFSET]
+0, 0

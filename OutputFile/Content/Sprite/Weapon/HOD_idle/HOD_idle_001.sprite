@@ -1,0 +1,14 @@
+[KEY]
+HOD_idle_001
+[PATH]
+Sprite/Weapon/HOD_idle/HOD_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+199, 484
+[SLICE]
+28, 15
+[OFFSET]
+0, 0

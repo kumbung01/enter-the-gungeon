@@ -1,0 +1,14 @@
+[KEY]
+sling_fire_001
+[PATH]
+Sprite/Weapon/sling_fire/sling_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+499, 873
+[SLICE]
+8, 10
+[OFFSET]
+0, 0

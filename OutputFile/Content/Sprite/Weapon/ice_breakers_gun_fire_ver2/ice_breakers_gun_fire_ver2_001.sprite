@@ -1,0 +1,14 @@
+[KEY]
+ice_breakers_gun_fire_ver2_001
+[PATH]
+Sprite/Weapon/ice_breakers_gun_fire_ver2/ice_breakers_gun_fire_ver2_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+550, 531
+[SLICE]
+26, 10
+[OFFSET]
+0, 0

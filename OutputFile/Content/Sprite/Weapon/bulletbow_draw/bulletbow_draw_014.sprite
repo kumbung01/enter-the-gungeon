@@ -1,0 +1,14 @@
+[KEY]
+bulletbow_draw_014
+[PATH]
+Sprite/Weapon/bulletbow_draw/bulletbow_draw_014.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+505, 755
+[SLICE]
+16, 20
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+pitchfork2_idle_001
+[PATH]
+Sprite/Weapon/pitchfork2_idle/pitchfork2_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+605, 762
+[SLICE]
+10, 20
+[OFFSET]
+0, 0

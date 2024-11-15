@@ -1,0 +1,14 @@
+[KEY]
+shark_gun_charge_004
+[PATH]
+Sprite/Weapon/shark_gun_charge/shark_gun_charge_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+372, 624
+[SLICE]
+24, 14
+[OFFSET]
+0, 0

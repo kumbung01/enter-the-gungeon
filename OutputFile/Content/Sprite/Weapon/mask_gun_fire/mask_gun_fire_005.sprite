@@ -1,0 +1,14 @@
+[KEY]
+mask_gun_fire_005
+[PATH]
+Sprite/Weapon/mask_gun_fire/mask_gun_fire_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+120, 644
+[SLICE]
+24, 12
+[OFFSET]
+0, 0

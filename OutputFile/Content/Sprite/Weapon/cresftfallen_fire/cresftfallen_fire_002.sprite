@@ -1,0 +1,14 @@
+[KEY]
+cresftfallen_fire_002
+[PATH]
+Sprite/Weapon/cresftfallen_fire/cresftfallen_fire_002.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+174, 632
+[SLICE]
+24, 12
+[OFFSET]
+0, 0

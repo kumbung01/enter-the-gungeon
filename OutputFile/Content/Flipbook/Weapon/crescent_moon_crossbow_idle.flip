@@ -1,0 +1,15 @@
+[KEY]
+crescent_moon_crossbow_idle
+[PATH]
+Flipbook/Weapon/crescent_moon_crossbow_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+crescent_moon_crossbow_idle_001
+[PATH]
+Sprite/Weapon/crescent_moon_crossbow_idle/crescent_moon_crossbow_idle_001.sprite
+
+
+

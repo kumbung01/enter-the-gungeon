@@ -1,0 +1,14 @@
+[KEY]
+crystal_gun2_shotgun_fire_001
+[PATH]
+Sprite/Weapon/crystal_gun2_shotgun_fire/crystal_gun2_shotgun_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+22, 706
+[SLICE]
+22, 13
+[OFFSET]
+0, 0

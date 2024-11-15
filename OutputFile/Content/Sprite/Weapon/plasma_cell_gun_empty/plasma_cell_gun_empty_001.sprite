@@ -1,0 +1,14 @@
+[KEY]
+plasma_cell_gun_empty_001
+[PATH]
+Sprite/Weapon/plasma_cell_gun_empty/plasma_cell_gun_empty_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+48, 629
+[SLICE]
+24, 15
+[OFFSET]
+0, 0

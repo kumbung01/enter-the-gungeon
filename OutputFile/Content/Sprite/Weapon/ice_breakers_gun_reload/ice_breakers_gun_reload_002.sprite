@@ -1,0 +1,14 @@
+[KEY]
+ice_breakers_gun_reload_002
+[PATH]
+Sprite/Weapon/ice_breakers_gun_reload/ice_breakers_gun_reload_002.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+723, 521
+[SLICE]
+21, 19
+[OFFSET]
+0, 0

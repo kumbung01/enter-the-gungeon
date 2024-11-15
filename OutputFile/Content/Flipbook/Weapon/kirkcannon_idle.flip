@@ -1,0 +1,15 @@
+[KEY]
+kirkcannon_idle
+[PATH]
+Flipbook/Weapon/kirkcannon_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+kirkcannon_idle_001
+[PATH]
+Sprite/Weapon/kirkcannon_idle/kirkcannon_idle_001.sprite
+
+
+

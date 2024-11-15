@@ -1,0 +1,15 @@
+[KEY]
+battery_handgun_idle
+[PATH]
+Flipbook/Weapon/battery_handgun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+battery_handgun_idle_001
+[PATH]
+Sprite/Weapon/battery_handgun_idle/battery_handgun_idle_001.sprite
+
+
+

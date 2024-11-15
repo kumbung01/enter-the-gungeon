@@ -1,0 +1,15 @@
+[KEY]
+disintegrator_reload
+[PATH]
+Flipbook/Weapon/disintegrator_reload.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+disintegrator_reload_001
+[PATH]
+Sprite/Weapon/disintegrator_reload/disintegrator_reload_001.sprite
+
+
+

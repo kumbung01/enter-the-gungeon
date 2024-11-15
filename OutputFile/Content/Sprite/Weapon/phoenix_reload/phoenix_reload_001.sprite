@@ -1,0 +1,14 @@
+[KEY]
+phoenix_reload_001
+[PATH]
+Sprite/Weapon/phoenix_reload/phoenix_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+785, 300
+[SLICE]
+12, 16
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+deserteagle_charge_005
+[PATH]
+Sprite/Weapon/deserteagle_charge/deserteagle_charge_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+850, 697
+[SLICE]
+16, 9
+[OFFSET]
+0, 0

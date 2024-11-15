@@ -1,0 +1,14 @@
+[KEY]
+combine_rifle_idle_005
+[PATH]
+Sprite/Weapon/combine_rifle_idle/combine_rifle_idle_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+98, 356
+[SLICE]
+32, 12
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+flash2_raygun_fire_003
+[PATH]
+Sprite/Weapon/flash2_raygun_fire/flash2_raygun_fire_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+524, 848
+[SLICE]
+16, 12
+[OFFSET]
+0, 0

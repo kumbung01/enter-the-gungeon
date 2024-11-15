@@ -1,0 +1,14 @@
+[KEY]
+crescent_moon_crossbow_idle_001
+[PATH]
+Sprite/Weapon/crescent_moon_crossbow_idle/crescent_moon_crossbow_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+273, 629
+[SLICE]
+24, 10
+[OFFSET]
+0, 0

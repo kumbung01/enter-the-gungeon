@@ -1,0 +1,15 @@
+[KEY]
+devolver_idle
+[PATH]
+Flipbook/Weapon/devolver_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+devolver_idle_001
+[PATH]
+Sprite/Weapon/devolver_idle/devolver_idle_001.sprite
+
+
+

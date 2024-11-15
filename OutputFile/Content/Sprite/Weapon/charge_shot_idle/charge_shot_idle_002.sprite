@@ -1,0 +1,14 @@
+[KEY]
+charge_shot_idle_002
+[PATH]
+Sprite/Weapon/charge_shot_idle/charge_shot_idle_002.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+524, 500
+[SLICE]
+26, 9
+[OFFSET]
+0, 0

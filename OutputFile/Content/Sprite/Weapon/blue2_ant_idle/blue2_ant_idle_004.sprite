@@ -1,0 +1,14 @@
+[KEY]
+blue2_ant_idle_004
+[PATH]
+Sprite/Weapon/blue2_ant_idle/blue2_ant_idle_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+41, 236
+[SLICE]
+39, 14
+[OFFSET]
+0, 0

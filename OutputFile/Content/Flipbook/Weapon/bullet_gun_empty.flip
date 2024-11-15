@@ -1,0 +1,15 @@
+[KEY]
+bullet_gun_empty
+[PATH]
+Flipbook/Weapon/bullet_gun_empty.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+bullet_gun_empty_001
+[PATH]
+Sprite/Weapon/bullet_gun_empty/bullet_gun_empty_001.sprite
+
+
+

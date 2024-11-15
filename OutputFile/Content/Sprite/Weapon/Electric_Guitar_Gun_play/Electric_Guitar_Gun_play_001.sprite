@@ -1,0 +1,14 @@
+[KEY]
+Electric_Guitar_Gun_play_001
+[PATH]
+Sprite/Weapon/Electric_Guitar_Gun_play/Electric_Guitar_Gun_play_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+368, 39
+[SLICE]
+32, 14
+[OFFSET]
+0, 0

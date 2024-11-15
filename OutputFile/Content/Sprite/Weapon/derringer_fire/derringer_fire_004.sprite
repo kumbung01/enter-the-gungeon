@@ -1,0 +1,14 @@
+[KEY]
+derringer_fire_004
+[PATH]
+Sprite/Weapon/derringer_fire/derringer_fire_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+202, 451
+[SLICE]
+7, 6
+[OFFSET]
+0, 0

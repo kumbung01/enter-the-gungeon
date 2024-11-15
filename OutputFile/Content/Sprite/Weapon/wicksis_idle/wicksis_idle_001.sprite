@@ -1,0 +1,14 @@
+[KEY]
+wicksis_idle_001
+[PATH]
+Sprite/Weapon/wicksis_idle/wicksis_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+430, 14
+[SLICE]
+29, 15
+[OFFSET]
+0, 0

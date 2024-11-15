@@ -1,0 +1,15 @@
+[KEY]
+camera_gun_idle
+[PATH]
+Flipbook/Weapon/camera_gun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+camera_gun_idle_001
+[PATH]
+Sprite/Weapon/camera_gun_idle/camera_gun_idle_001.sprite
+
+
+

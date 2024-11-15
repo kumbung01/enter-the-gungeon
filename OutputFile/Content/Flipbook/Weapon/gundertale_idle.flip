@@ -1,0 +1,15 @@
+[KEY]
+gundertale_idle
+[PATH]
+Flipbook/Weapon/gundertale_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+gundertale_idle_001
+[PATH]
+Sprite/Weapon/gundertale_idle/gundertale_idle_001.sprite
+
+
+

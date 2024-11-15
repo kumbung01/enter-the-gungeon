@@ -1,0 +1,14 @@
+[KEY]
+hld2_reload_003
+[PATH]
+Sprite/Weapon/hld2_reload/hld2_reload_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+138, 843
+[SLICE]
+15, 17
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+composite_gun_fire_003
+[PATH]
+Sprite/Weapon/composite_gun_fire/composite_gun_fire_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+320, 533
+[SLICE]
+15, 12
+[OFFSET]
+0, 0

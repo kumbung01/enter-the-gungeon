@@ -1,0 +1,14 @@
+[KEY]
+gckp_015
+[PATH]
+Sprite/Weapon/gckp/gckp_015.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+839, 587
+[SLICE]
+10, 14
+[OFFSET]
+0, 0

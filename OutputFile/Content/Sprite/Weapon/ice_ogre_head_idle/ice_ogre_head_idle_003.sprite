@@ -1,0 +1,14 @@
+[KEY]
+ice_ogre_head_idle_003
+[PATH]
+Sprite/Weapon/ice_ogre_head_idle/ice_ogre_head_idle_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+881, 762
+[SLICE]
+13, 12
+[OFFSET]
+0, 0

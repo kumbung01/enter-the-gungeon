@@ -1,0 +1,14 @@
+[KEY]
+banana2_gun_fire_001
+[PATH]
+Sprite/Weapon/banana2_gun_fire/banana2_gun_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+839, 721
+[SLICE]
+11, 13
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+trigun_weird_charge_005
+[PATH]
+Sprite/Weapon/trigun_weird_charge/trigun_weird_charge_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+147, 150
+[SLICE]
+46, 17
+[OFFSET]
+0, 0

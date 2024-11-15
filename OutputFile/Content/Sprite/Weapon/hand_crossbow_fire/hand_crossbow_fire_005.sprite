@@ -1,0 +1,14 @@
+[KEY]
+hand_crossbow_fire_005
+[PATH]
+Sprite/Weapon/hand_crossbow_fire/hand_crossbow_fire_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+420, 886
+[SLICE]
+10, 7
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+railgun_prot_idle
+[PATH]
+Flipbook/Weapon/railgun_prot_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+railgun_prot_idle_001
+[PATH]
+Sprite/Weapon/railgun_prot_idle/railgun_prot_idle_001.sprite
+
+
+

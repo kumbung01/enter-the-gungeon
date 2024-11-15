@@ -1,0 +1,14 @@
+[KEY]
+snakepoof_fire_003
+[PATH]
+Sprite/Weapon/snakepoof_fire/snakepoof_fire_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+727, 798
+[SLICE]
+19, 18
+[OFFSET]
+0, 0

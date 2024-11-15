@@ -1,0 +1,14 @@
+[KEY]
+bow_draw_shake_008
+[PATH]
+Sprite/Weapon/bow_draw_shake/bow_draw_shake_008.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+726, 845
+[SLICE]
+17, 15
+[OFFSET]
+0, 0

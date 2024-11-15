@@ -1,0 +1,14 @@
+[KEY]
+pea_grenade_reload_002
+[PATH]
+Sprite/Weapon/pea_grenade_reload/pea_grenade_reload_002.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+729, 816
+[SLICE]
+17, 18
+[OFFSET]
+0, 0

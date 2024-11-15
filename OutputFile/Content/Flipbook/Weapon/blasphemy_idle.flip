@@ -1,0 +1,15 @@
+[KEY]
+blasphemy_idle
+[PATH]
+Flipbook/Weapon/blasphemy_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+blasphemy_idle_001
+[PATH]
+Sprite/Weapon/blasphemy_idle/blasphemy_idle_001.sprite
+
+
+

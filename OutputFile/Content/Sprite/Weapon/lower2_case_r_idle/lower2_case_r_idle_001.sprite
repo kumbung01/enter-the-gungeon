@@ -1,0 +1,14 @@
+[KEY]
+lower2_case_r_idle_001
+[PATH]
+Sprite/Weapon/lower2_case_r_idle/lower2_case_r_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+376, 882
+[SLICE]
+11, 11
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+machine_gun_fliphand_003
+[PATH]
+Sprite/Weapon/machine_gun_fliphand/machine_gun_fliphand_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+665, 873
+[SLICE]
+10, 9
+[OFFSET]
+0, 0

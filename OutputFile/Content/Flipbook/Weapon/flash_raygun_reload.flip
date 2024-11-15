@@ -1,0 +1,15 @@
+[KEY]
+flash_raygun_reload
+[PATH]
+Flipbook/Weapon/flash_raygun_reload.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+flash_raygun_reload_001
+[PATH]
+Sprite/Weapon/flash_raygun_reload/flash_raygun_reload_001.sprite
+
+
+

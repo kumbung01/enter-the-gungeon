@@ -1,0 +1,14 @@
+[KEY]
+gundertale_fire_010
+[PATH]
+Sprite/Weapon/gundertale_fire/gundertale_fire_010.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+101, 123
+[SLICE]
+21, 11
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+electric_rifle_idle
+[PATH]
+Flipbook/Weapon/electric_rifle_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+electric_rifle_idle_001
+[PATH]
+Sprite/Weapon/electric_rifle_idle/electric_rifle_idle_001.sprite
+
+
+

@@ -1,0 +1,14 @@
+[KEY]
+blasphemy_reload_007
+[PATH]
+Sprite/Weapon/blasphemy_reload/blasphemy_reload_007.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+469, 240
+[SLICE]
+28, 13
+[OFFSET]
+0, 0

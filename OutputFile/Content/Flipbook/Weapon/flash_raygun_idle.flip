@@ -1,0 +1,15 @@
+[KEY]
+flash_raygun_idle
+[PATH]
+Flipbook/Weapon/flash_raygun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+flash_raygun_idle_001
+[PATH]
+Sprite/Weapon/flash_raygun_idle/flash_raygun_idle_001.sprite
+
+
+

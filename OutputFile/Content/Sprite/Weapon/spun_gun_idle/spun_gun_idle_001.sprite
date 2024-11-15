@@ -1,0 +1,14 @@
+[KEY]
+spun_gun_idle_001
+[PATH]
+Sprite/Weapon/spun_gun_idle/spun_gun_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+487, 384
+[SLICE]
+27, 9
+[OFFSET]
+0, 0

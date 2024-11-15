@@ -1,0 +1,15 @@
+[KEY]
+trick_shotgun_spin
+[PATH]
+Flipbook/Weapon/trick_shotgun_spin.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+trick_shotgun_spin_001
+[PATH]
+Sprite/Weapon/trick_shotgun_spin/trick_shotgun_spin_001.sprite
+
+
+

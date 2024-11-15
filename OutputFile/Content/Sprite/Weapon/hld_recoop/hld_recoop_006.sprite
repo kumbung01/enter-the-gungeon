@@ -1,0 +1,14 @@
+[KEY]
+hld_recoop_006
+[PATH]
+Sprite/Weapon/hld_recoop/hld_recoop_006.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+107, 813
+[SLICE]
+18, 13
+[OFFSET]
+0, 0

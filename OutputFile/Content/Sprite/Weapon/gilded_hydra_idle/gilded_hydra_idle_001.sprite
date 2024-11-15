@@ -1,0 +1,14 @@
+[KEY]
+gilded_hydra_idle_001
+[PATH]
+Sprite/Weapon/gilded_hydra_idle/gilded_hydra_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+723, 490
+[SLICE]
+21, 12
+[OFFSET]
+0, 0

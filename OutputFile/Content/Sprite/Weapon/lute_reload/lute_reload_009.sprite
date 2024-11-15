@@ -1,0 +1,14 @@
+[KEY]
+lute_reload_009
+[PATH]
+Sprite/Weapon/lute_reload/lute_reload_009.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+785, 242
+[SLICE]
+16, 19
+[OFFSET]
+0, 0

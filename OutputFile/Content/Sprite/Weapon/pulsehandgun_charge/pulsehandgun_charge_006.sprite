@@ -1,0 +1,14 @@
+[KEY]
+pulsehandgun_charge_006
+[PATH]
+Sprite/Weapon/pulsehandgun_charge/pulsehandgun_charge_006.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+850, 549
+[SLICE]
+16, 9
+[OFFSET]
+0, 0

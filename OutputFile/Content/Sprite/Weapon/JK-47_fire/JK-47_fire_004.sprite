@@ -1,0 +1,14 @@
+[KEY]
+JK-47_fire_004
+[PATH]
+Sprite/Weapon/JK-47_fire/JK-47_fire_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+50, 608
+[SLICE]
+25, 7
+[OFFSET]
+0, 0

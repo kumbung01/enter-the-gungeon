@@ -1,0 +1,14 @@
+[KEY]
+controller_reload_005
+[PATH]
+Sprite/Weapon/controller_reload/controller_reload_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+561, 801
+[SLICE]
+17, 7
+[OFFSET]
+0, 0

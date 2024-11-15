@@ -7,7 +7,7 @@ Weapon
 [ATLAS_PATH]
 Texture/Weapon.png
 [LEFT_TOP]
-406, 350
+545, 755
 [SLICE]
 20, 15
 [OFFSET]

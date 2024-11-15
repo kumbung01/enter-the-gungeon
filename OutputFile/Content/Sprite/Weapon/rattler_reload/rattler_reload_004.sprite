@@ -1,0 +1,14 @@
+[KEY]
+rattler_reload_004
+[PATH]
+Sprite/Weapon/rattler_reload/rattler_reload_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+765, 202
+[SLICE]
+18, 20
+[OFFSET]
+0, 0

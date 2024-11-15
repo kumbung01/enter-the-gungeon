@@ -1,0 +1,14 @@
+[KEY]
+rusty_poison_goop_gun_empty_001
+[PATH]
+Sprite/Weapon/rusty_poison_goop_gun_empty/rusty_poison_goop_gun_empty_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+765, 147
+[SLICE]
+20, 9
+[OFFSET]
+0, 0

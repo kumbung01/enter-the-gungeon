@@ -1,0 +1,15 @@
+[KEY]
+klobb_shoot
+[PATH]
+Flipbook/Weapon/klobb_shoot.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+klobb_shoot_001
+[PATH]
+Sprite/Weapon/klobb_shoot/klobb_shoot_001.sprite
+
+
+

@@ -1,0 +1,14 @@
+[KEY]
+spun_gun_reload_001
+[PATH]
+Sprite/Weapon/spun_gun_reload/spun_gun_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+589, 558
+[SLICE]
+25, 13
+[OFFSET]
+0, 0

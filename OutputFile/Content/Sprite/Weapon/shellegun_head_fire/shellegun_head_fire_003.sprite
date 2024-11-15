@@ -1,0 +1,14 @@
+[KEY]
+shellegun_head_fire_003
+[PATH]
+Sprite/Weapon/shellegun_head_fire/shellegun_head_fire_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+808, 855
+[SLICE]
+15, 15
+[OFFSET]
+0, 0

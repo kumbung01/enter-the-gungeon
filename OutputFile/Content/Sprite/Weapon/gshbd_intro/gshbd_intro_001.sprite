@@ -1,0 +1,14 @@
+[KEY]
+gshbd_intro_001
+[PATH]
+Sprite/Weapon/gshbd_intro/gshbd_intro_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+162, 340
+[SLICE]
+3, 3
+[OFFSET]
+0, 0

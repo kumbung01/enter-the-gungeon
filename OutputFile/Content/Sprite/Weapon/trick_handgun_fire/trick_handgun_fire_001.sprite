@@ -1,0 +1,14 @@
+[KEY]
+trick_handgun_fire_001
+[PATH]
+Sprite/Weapon/trick_handgun_fire/trick_handgun_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+866, 187
+[SLICE]
+15, 10
+[OFFSET]
+0, 0

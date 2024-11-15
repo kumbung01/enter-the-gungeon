@@ -1,0 +1,15 @@
+[KEY]
+bulletbow2_idle
+[PATH]
+Flipbook/Weapon/bulletbow2_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+bulletbow2_idle_001
+[PATH]
+Sprite/Weapon/bulletbow2_idle/bulletbow2_idle_001.sprite
+
+
+

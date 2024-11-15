@@ -1,0 +1,15 @@
+[KEY]
+rpg_empty
+[PATH]
+Flipbook/Weapon/rpg_empty.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+rpg_empty_001
+[PATH]
+Sprite/Weapon/rpg_empty/rpg_empty_001.sprite
+
+
+

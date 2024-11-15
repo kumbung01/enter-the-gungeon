@@ -1,0 +1,14 @@
+[KEY]
+meat_thrower_idle_001
+[PATH]
+Sprite/Weapon/meat_thrower_idle/meat_thrower_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+561, 592
+[SLICE]
+25, 15
+[OFFSET]
+0, 0

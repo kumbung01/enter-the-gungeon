@@ -1,0 +1,14 @@
+[KEY]
+railgun_charge_001
+[PATH]
+Sprite/Weapon/railgun_charge/railgun_charge_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+100, 150
+[SLICE]
+47, 15
+[OFFSET]
+0, 0

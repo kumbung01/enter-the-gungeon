@@ -1,0 +1,15 @@
+[KEY]
+matter_antimatter_gun_idle
+[PATH]
+Flipbook/Weapon/matter_antimatter_gun_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+matter_antimatter_gun_idle_001
+[PATH]
+Sprite/Weapon/matter_antimatter_gun_idle/matter_antimatter_gun_idle_001.sprite
+
+
+

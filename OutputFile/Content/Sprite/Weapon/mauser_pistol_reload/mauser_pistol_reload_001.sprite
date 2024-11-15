@@ -1,0 +1,14 @@
+[KEY]
+mauser_pistol_reload_001
+[PATH]
+Sprite/Weapon/mauser_pistol_reload/mauser_pistol_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+670, 775
+[SLICE]
+19, 14
+[OFFSET]
+0, 0

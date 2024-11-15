@@ -1,0 +1,15 @@
+[KEY]
+starpew_idle
+[PATH]
+Flipbook/Weapon/starpew_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+starpew_idle_001
+[PATH]
+Sprite/Weapon/starpew_idle/starpew_idle_001.sprite
+
+
+

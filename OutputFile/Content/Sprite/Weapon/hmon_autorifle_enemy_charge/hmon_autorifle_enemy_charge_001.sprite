@@ -1,0 +1,14 @@
+[KEY]
+hmon_autorifle_enemy_charge_001
+[PATH]
+Sprite/Weapon/hmon_autorifle_enemy_charge/hmon_autorifle_enemy_charge_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+335, 522
+[SLICE]
+27, 9
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+sailgun_idle_003
+[PATH]
+Sprite/Weapon/sailgun_idle/sailgun_idle_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+46, 670
+[SLICE]
+23, 15
+[OFFSET]
+0, 0

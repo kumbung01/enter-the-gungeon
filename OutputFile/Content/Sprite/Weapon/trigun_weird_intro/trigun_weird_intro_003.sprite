@@ -1,0 +1,14 @@
+[KEY]
+trigun_weird_intro_003
+[PATH]
+Sprite/Weapon/trigun_weird_intro/trigun_weird_intro_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+294, 533
+[SLICE]
+26, 9
+[OFFSET]
+0, 0

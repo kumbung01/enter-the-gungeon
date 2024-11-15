@@ -1,0 +1,15 @@
+[KEY]
+origami_idle
+[PATH]
+Flipbook/Weapon/origami_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+origami_idle_001
+[PATH]
+Sprite/Weapon/origami_idle/origami_idle_001.sprite
+
+
+

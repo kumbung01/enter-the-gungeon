@@ -1,0 +1,14 @@
+[KEY]
+trick_shotgun_fire_003
+[PATH]
+Sprite/Weapon/trick_shotgun_fire/trick_shotgun_fire_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+564, 645
+[SLICE]
+24, 8
+[OFFSET]
+0, 0

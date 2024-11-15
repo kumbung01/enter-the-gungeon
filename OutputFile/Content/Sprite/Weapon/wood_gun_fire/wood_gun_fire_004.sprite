@@ -1,0 +1,14 @@
+[KEY]
+wood_gun_fire_004
+[PATH]
+Sprite/Weapon/wood_gun_fire/wood_gun_fire_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+550, 506
+[SLICE]
+26, 14
+[OFFSET]
+0, 0

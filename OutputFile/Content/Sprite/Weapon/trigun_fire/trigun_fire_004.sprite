@@ -1,0 +1,14 @@
+[KEY]
+trigun_fire_004
+[PATH]
+Sprite/Weapon/trigun_fire/trigun_fire_004.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+24, 644
+[SLICE]
+24, 12
+[OFFSET]
+0, 0

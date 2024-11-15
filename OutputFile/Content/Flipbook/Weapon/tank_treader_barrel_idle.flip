@@ -1,0 +1,15 @@
+[KEY]
+tank_treader_barrel_idle
+[PATH]
+Flipbook/Weapon/tank_treader_barrel_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+tank_treader_barrel_idle_001
+[PATH]
+Sprite/Weapon/tank_treader_barrel_idle/tank_treader_barrel_idle_001.sprite
+
+
+

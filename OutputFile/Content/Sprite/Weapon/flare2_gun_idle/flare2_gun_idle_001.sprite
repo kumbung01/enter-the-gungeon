@@ -1,0 +1,14 @@
+[KEY]
+flare2_gun_idle_001
+[PATH]
+Sprite/Weapon/flare2_gun_idle/flare2_gun_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+261, 834
+[SLICE]
+17, 10
+[OFFSET]
+0, 0

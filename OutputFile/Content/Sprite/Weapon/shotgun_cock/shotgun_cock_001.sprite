@@ -1,0 +1,14 @@
+[KEY]
+shotgun_cock_001
+[PATH]
+Sprite/Weapon/shotgun_cock/shotgun_cock_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+216, 404
+[SLICE]
+23, 5
+[OFFSET]
+0, 0

@@ -1,0 +1,15 @@
+[KEY]
+hand_crossbow_enemy_charge
+[PATH]
+Flipbook/Weapon/hand_crossbow_enemy_charge.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+hand_crossbow_enemy_charge_001
+[PATH]
+Sprite/Weapon/hand_crossbow_enemy_charge/hand_crossbow_enemy_charge_001.sprite
+
+
+

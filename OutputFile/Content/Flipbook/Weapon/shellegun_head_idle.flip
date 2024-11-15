@@ -1,0 +1,15 @@
+[KEY]
+shellegun_head_idle
+[PATH]
+Flipbook/Weapon/shellegun_head_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+shellegun_head_idle_001
+[PATH]
+Sprite/Weapon/shellegun_head_idle/shellegun_head_idle_001.sprite
+
+
+

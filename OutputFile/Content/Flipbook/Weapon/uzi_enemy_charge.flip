@@ -1,0 +1,15 @@
+[KEY]
+uzi_enemy_charge
+[PATH]
+Flipbook/Weapon/uzi_enemy_charge.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+uzi_enemy_charge_001
+[PATH]
+Sprite/Weapon/uzi_enemy_charge/uzi_enemy_charge_001.sprite
+
+
+

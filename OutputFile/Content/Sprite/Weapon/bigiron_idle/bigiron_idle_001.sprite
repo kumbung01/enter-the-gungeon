@@ -1,0 +1,14 @@
+[KEY]
+bigiron_idle_001
+[PATH]
+Sprite/Weapon/bigiron_idle/bigiron_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+514, 392
+[SLICE]
+26, 11
+[OFFSET]
+0, 0

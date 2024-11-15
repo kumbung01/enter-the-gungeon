@@ -1,0 +1,15 @@
+[KEY]
+phoenix2_idle
+[PATH]
+Flipbook/Weapon/phoenix2_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+phoenix2_idle_001
+[PATH]
+Sprite/Weapon/phoenix2_idle/phoenix2_idle_001.sprite
+
+
+

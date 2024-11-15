@@ -1,0 +1,15 @@
+[KEY]
+tutorial_knight_revolver_idle
+[PATH]
+Flipbook/Weapon/tutorial_knight_revolver_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+tutorial_knight_revolver_idle_001
+[PATH]
+Sprite/Weapon/tutorial_knight_revolver_idle/tutorial_knight_revolver_idle_001.sprite
+
+
+

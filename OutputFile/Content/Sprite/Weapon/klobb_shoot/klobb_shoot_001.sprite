@@ -1,0 +1,14 @@
+[KEY]
+klobb_shoot_001
+[PATH]
+Sprite/Weapon/klobb_shoot/klobb_shoot_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+822, 726
+[SLICE]
+17, 9
+[OFFSET]
+0, 0

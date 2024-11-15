@@ -1,0 +1,15 @@
+[KEY]
+megaphone_idle
+[PATH]
+Flipbook/Weapon/megaphone_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+megaphone_idle_001
+[PATH]
+Sprite/Weapon/megaphone_idle/megaphone_idle_001.sprite
+
+
+

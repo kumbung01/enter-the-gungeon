@@ -1,0 +1,14 @@
+[KEY]
+mask_gun_intro_007
+[PATH]
+Sprite/Weapon/mask_gun_intro/mask_gun_intro_007.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+580, 376
+[SLICE]
+25, 14
+[OFFSET]
+0, 0

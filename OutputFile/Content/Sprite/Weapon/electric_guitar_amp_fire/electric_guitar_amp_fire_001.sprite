@@ -1,0 +1,14 @@
+[KEY]
+electric_guitar_amp_fire_001
+[PATH]
+Sprite/Weapon/electric_guitar_amp_fire/electric_guitar_amp_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+832, 177
+[SLICE]
+18, 17
+[OFFSET]
+0, 0

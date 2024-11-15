@@ -1,0 +1,14 @@
+[KEY]
+Portal_Gun_Blue_intro_001
+[PATH]
+Sprite/Weapon/Portal_Gun_Blue_intro/Portal_Gun_Blue_intro_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+173, 199
+[SLICE]
+15, 7
+[OFFSET]
+0, 0

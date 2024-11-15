@@ -1,0 +1,14 @@
+[KEY]
+anvil_gun_idle_001
+[PATH]
+Sprite/Weapon/anvil_gun_idle/anvil_gun_idle_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+776, 847
+[SLICE]
+16, 13
+[OFFSET]
+0, 0

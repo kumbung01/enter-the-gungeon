@@ -1,0 +1,14 @@
+[KEY]
+flare_gun_fire_001
+[PATH]
+Sprite/Weapon/flare_gun_fire/flare_gun_fire_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+866, 176
+[SLICE]
+15, 11
+[OFFSET]
+0, 0

@@ -1,0 +1,14 @@
+[KEY]
+tommygun_enemy_charge_001
+[PATH]
+Sprite/Weapon/tommygun_enemy_charge/tommygun_enemy_charge_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+667, 741
+[SLICE]
+20, 9
+[OFFSET]
+0, 0

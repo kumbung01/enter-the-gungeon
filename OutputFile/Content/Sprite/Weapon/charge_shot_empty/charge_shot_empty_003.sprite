@@ -1,0 +1,14 @@
+[KEY]
+charge_shot_empty_003
+[PATH]
+Sprite/Weapon/charge_shot_empty/charge_shot_empty_003.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+524, 491
+[SLICE]
+26, 9
+[OFFSET]
+0, 0

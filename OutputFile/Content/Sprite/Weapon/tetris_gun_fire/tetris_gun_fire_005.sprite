@@ -1,0 +1,14 @@
+[KEY]
+tetris_gun_fire_005
+[PATH]
+Sprite/Weapon/tetris_gun_fire/tetris_gun_fire_005.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+500, 801
+[SLICE]
+18, 15
+[OFFSET]
+0, 0

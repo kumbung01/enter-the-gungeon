@@ -1,0 +1,14 @@
+[KEY]
+shellegun_headgun_reload_006
+[PATH]
+Sprite/Weapon/shellegun_headgun_reload/shellegun_headgun_reload_006.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+243, 510
+[SLICE]
+11, 11
+[OFFSET]
+0, 0

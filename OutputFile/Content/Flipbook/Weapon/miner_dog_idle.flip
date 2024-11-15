@@ -1,0 +1,15 @@
+[KEY]
+miner_dog_idle
+[PATH]
+Flipbook/Weapon/miner_dog_idle.flip
+[SPRITE_COUNT]
+1
+[INDEX]
+0
+[KEY]
+miner_dog_idle_001
+[PATH]
+Sprite/Weapon/miner_dog_idle/miner_dog_idle_001.sprite
+
+
+

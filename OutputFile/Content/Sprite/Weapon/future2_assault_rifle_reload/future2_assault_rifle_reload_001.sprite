@@ -1,0 +1,14 @@
+[KEY]
+future2_assault_rifle_reload_001
+[PATH]
+Sprite/Weapon/future2_assault_rifle_reload/future2_assault_rifle_reload_001.sprite
+[ATLAS_KEY]
+Weapon
+[ATLAS_PATH]
+Texture/Weapon.png
+[LEFT_TOP]
+439, 484
+[SLICE]
+28, 15
+[OFFSET]
+0, 0
