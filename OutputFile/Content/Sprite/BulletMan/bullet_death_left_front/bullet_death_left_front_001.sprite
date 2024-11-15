@@ -7,8 +7,10 @@ BulletMan
 [ATLAS_PATH]
 Texture/BulletMan.png
 [LEFT_TOP]
-107, 132
+144, 145
 [SLICE]
 15, 21
 [OFFSET]
 0, 0
+[RENDERTYPE]
+BITBLT

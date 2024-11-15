@@ -7,8 +7,10 @@ Weapon
 [ATLAS_PATH]
 Texture/Weapon.png
 [LEFT_TOP]
-398, 111
+99, 223
 [SLICE]
 30, 20
 [OFFSET]
 0, 0
+[RENDERTYPE]
+GDIPLUS

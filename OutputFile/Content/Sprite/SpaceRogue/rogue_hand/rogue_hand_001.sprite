@@ -3,12 +3,14 @@ rogue_hand_001
 [PATH]
 Sprite/SpaceRogue/rogue_hand/rogue_hand_001.sprite
 [ATLAS_KEY]
-rogue
+SpaceRogue
 [ATLAS_PATH]
-Texture/rogue.png
+Texture/SpaceRogue.png
 [LEFT_TOP]
 146, 25
 [SLICE]
 4, 4
 [OFFSET]
 0, 0
+[RENDERTYPE]
+BITBLT

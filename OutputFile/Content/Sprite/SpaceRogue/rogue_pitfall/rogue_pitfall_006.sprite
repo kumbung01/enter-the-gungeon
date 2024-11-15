@@ -3,12 +3,14 @@ rogue_pitfall_006
 [PATH]
 Sprite/SpaceRogue/rogue_pitfall/rogue_pitfall_006.sprite
 [ATLAS_KEY]
-rogue
+SpaceRogue
 [ATLAS_PATH]
-Texture/rogue.png
+Texture/SpaceRogue.png
 [LEFT_TOP]
 23, 353
 [SLICE]
 23, 24
 [OFFSET]
 0, 0
+[RENDERTYPE]
+BITBLT

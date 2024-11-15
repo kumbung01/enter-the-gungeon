@@ -3,12 +3,14 @@ rogue_dodge_left_back_008
 [PATH]
 Sprite/SpaceRogue/rogue_dodge_left_back/rogue_dodge_left_back_008.sprite
 [ATLAS_KEY]
-rogue
+SpaceRogue
 [ATLAS_PATH]
-Texture/rogue.png
+Texture/SpaceRogue.png
 [LEFT_TOP]
 161, 216
 [SLICE]
 23, 24
 [OFFSET]
 0, 0
+[RENDERTYPE]
+BITBLT

@@ -3,12 +3,14 @@ rogue_run_backward_003
 [PATH]
 Sprite/SpaceRogue/rogue_run_backward/rogue_run_backward_003.sprite
 [ATLAS_KEY]
-rogue
+SpaceRogue
 [ATLAS_PATH]
-Texture/rogue.png
+Texture/SpaceRogue.png
 [LEFT_TOP]
 161, 367
 [SLICE]
 23, 24
 [OFFSET]
 0, 0
+[RENDERTYPE]
+BITBLT

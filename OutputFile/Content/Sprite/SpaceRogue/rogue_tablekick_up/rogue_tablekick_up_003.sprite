@@ -3,12 +3,14 @@ rogue_tablekick_up_003
 [PATH]
 Sprite/SpaceRogue/rogue_tablekick_up/rogue_tablekick_up_003.sprite
 [ATLAS_KEY]
-rogue
+SpaceRogue
 [ATLAS_PATH]
-Texture/rogue.png
+Texture/SpaceRogue.png
 [LEFT_TOP]
 437, 312
 [SLICE]
 23, 24
 [OFFSET]
 0, 0
+[RENDERTYPE]
+BITBLT

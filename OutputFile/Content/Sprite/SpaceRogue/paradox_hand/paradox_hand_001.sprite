@@ -1,0 +1,16 @@
+[KEY]
+paradox_hand_001
+[PATH]
+Sprite/SpaceRogue/paradox_hand/paradox_hand_001.sprite
+[ATLAS_KEY]
+SpaceRogue
+[ATLAS_PATH]
+Texture/SpaceRogue.png
+[LEFT_TOP]
+81, 125
+[SLICE]
+4, 4
+[OFFSET]
+0, 0
+[RENDERTYPE]
+BITBLT

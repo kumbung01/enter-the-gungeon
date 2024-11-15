@@ -3,12 +3,14 @@ rogue_tarnisher_004
 [PATH]
 Sprite/SpaceRogue/rogue_tarnisher/rogue_tarnisher_004.sprite
 [ATLAS_KEY]
-rogue
+SpaceRogue
 [ATLAS_PATH]
-Texture/rogue.png
+Texture/SpaceRogue.png
 [LEFT_TOP]
 0, 55
 [SLICE]
 23, 55
 [OFFSET]
 0, 0
+[RENDERTYPE]
+BITBLT

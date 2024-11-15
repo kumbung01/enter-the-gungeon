@@ -3,12 +3,14 @@ rogue_dadflip_south_001
 [PATH]
 Sprite/SpaceRogue/rogue_dadflip_south/rogue_dadflip_south_001.sprite
 [ATLAS_KEY]
-rogue
+SpaceRogue
 [ATLAS_PATH]
-Texture/rogue.png
+Texture/SpaceRogue.png
 [LEFT_TOP]
 138, 151
 [SLICE]
 23, 24
 [OFFSET]
 0, 0
+[RENDERTYPE]
+BITBLT

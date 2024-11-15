@@ -3,12 +3,14 @@ rogue_select_thumbs_up_007
 [PATH]
 Sprite/SpaceRogue/rogue_select_thumbs_up/rogue_select_thumbs_up_007.sprite
 [ATLAS_KEY]
-rogue
+SpaceRogue
 [ATLAS_PATH]
-Texture/rogue.png
+Texture/SpaceRogue.png
 [LEFT_TOP]
 428, 0
 [SLICE]
 23, 24
 [OFFSET]
 0, 0
+[RENDERTYPE]
+BITBLT

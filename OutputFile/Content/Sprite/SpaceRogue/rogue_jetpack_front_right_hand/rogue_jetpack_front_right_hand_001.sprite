@@ -3,12 +3,14 @@ rogue_jetpack_front_right_hand_001
 [PATH]
 Sprite/SpaceRogue/rogue_jetpack_front_right_hand/rogue_jetpack_front_right_hand_001.sprite
 [ATLAS_KEY]
-rogue
+SpaceRogue
 [ATLAS_PATH]
-Texture/rogue.png
+Texture/SpaceRogue.png
 [LEFT_TOP]
 324, 192
 [SLICE]
 23, 24
 [OFFSET]
 0, 0
+[RENDERTYPE]
+BITBLT

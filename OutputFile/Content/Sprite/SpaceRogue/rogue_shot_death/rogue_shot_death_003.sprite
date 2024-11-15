@@ -3,12 +3,14 @@ rogue_shot_death_003
 [PATH]
 Sprite/SpaceRogue/rogue_shot_death/rogue_shot_death_003.sprite
 [ATLAS_KEY]
-rogue
+SpaceRogue
 [ATLAS_PATH]
-Texture/rogue.png
+Texture/SpaceRogue.png
 [LEFT_TOP]
 426, 144
 [SLICE]
 23, 24
 [OFFSET]
 0, 0
+[RENDERTYPE]
+BITBLT

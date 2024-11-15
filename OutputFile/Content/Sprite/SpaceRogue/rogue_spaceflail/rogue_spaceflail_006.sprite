@@ -3,12 +3,14 @@ rogue_spaceflail_006
 [PATH]
 Sprite/SpaceRogue/rogue_spaceflail/rogue_spaceflail_006.sprite
 [ATLAS_KEY]
-rogue
+SpaceRogue
 [ATLAS_PATH]
-Texture/rogue.png
+Texture/SpaceRogue.png
 [LEFT_TOP]
 21, 473
 [SLICE]
 21, 22
 [OFFSET]
 0, 0
+[RENDERTYPE]
+BITBLT

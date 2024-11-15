@@ -3,12 +3,14 @@ rogue_run_front_006
 [PATH]
 Sprite/SpaceRogue/rogue_run_front/rogue_run_front_006.sprite
 [ATLAS_KEY]
-rogue
+SpaceRogue
 [ATLAS_PATH]
-Texture/rogue.png
+Texture/SpaceRogue.png
 [LEFT_TOP]
 138, 393
 [SLICE]
 23, 24
 [OFFSET]
 0, 0
+[RENDERTYPE]
+BITBLT

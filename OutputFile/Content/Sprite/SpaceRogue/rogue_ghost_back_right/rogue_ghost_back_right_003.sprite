@@ -3,12 +3,14 @@ rogue_ghost_back_right_003
 [PATH]
 Sprite/SpaceRogue/rogue_ghost_back_right/rogue_ghost_back_right_003.sprite
 [ATLAS_KEY]
-rogue
+SpaceRogue
 [ATLAS_PATH]
-Texture/rogue.png
+Texture/SpaceRogue.png
 [LEFT_TOP]
 230, 192
 [SLICE]
 24, 24
 [OFFSET]
 0, 0
+[RENDERTYPE]
+BITBLT

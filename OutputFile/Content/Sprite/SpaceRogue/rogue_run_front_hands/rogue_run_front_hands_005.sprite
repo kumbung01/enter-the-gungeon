@@ -3,12 +3,14 @@ rogue_run_front_hands_005
 [PATH]
 Sprite/SpaceRogue/rogue_run_front_hands/rogue_run_front_hands_005.sprite
 [ATLAS_KEY]
-rogue
+SpaceRogue
 [ATLAS_PATH]
-Texture/rogue.png
+Texture/SpaceRogue.png
 [LEFT_TOP]
 393, 192
 [SLICE]
 23, 24
 [OFFSET]
 0, 0
+[RENDERTYPE]
+BITBLT

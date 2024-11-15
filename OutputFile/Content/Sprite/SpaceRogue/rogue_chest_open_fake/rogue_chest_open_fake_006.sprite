@@ -3,12 +3,14 @@ rogue_chest_open_fake_006
 [PATH]
 Sprite/SpaceRogue/rogue_chest_open_fake/rogue_chest_open_fake_006.sprite
 [ATLAS_KEY]
-rogue
+SpaceRogue
 [ATLAS_PATH]
-Texture/rogue.png
+Texture/SpaceRogue.png
 [LEFT_TOP]
 0, 110
 [SLICE]
 27, 25
 [OFFSET]
 0, 0
+[RENDERTYPE]
+BITBLT
