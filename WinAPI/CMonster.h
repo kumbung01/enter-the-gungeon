@@ -4,6 +4,7 @@
 class CCollider;
 class CTexture;
 class CFSM;
+class CGun;
 
 class CMonster :
     public CObj
@@ -21,9 +22,14 @@ private:
     CCollider*  m_Collider;
     CFSM*       m_FSM;
 
+    CGun*       m_gun;
+
 public:
     void SetSpeed(float _Speed) { m_Speed = _Speed; }
     void SetDistance(float _Dist) { m_Dist = _Dist; }
+
+    void SetGun(CGun* _gun) { m_gun = _gun; }
+    CGun* GetGun() { return m_gun; }
 
     tMonInfo& GetMonInfo() { return m_Info; }
 

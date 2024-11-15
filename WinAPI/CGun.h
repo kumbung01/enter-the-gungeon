@@ -12,6 +12,7 @@ enum FIRE_TYPE
 enum GUN_ANIM_STATE
 {
     GUN_IDLE,
+    GUN_CHARGE,
     GUN_FIRE,
     GUN_RELOAD
 };
@@ -73,8 +74,9 @@ public:
 protected:
     virtual bool IsTriggered();           // ¹æ¾Æ¼è ´ç±è
     virtual void CreateBullet();
-    Vec2 CalculateFireDirection();
+    virtual Vec2 CalculateFireDirection();
     virtual void CreateFlipbook();
+    virtual void SetGunPos();
 
 public:
     void Begin() override;

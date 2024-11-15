@@ -23,6 +23,8 @@ void CTraceState::Enter()
 	{
 		m_TargetObject = CLevelMgr::GetInst()->FindObjectByName(LAYER_TYPE::PLAYER, L"Player");
 	}
+	CMonster* pMon = dynamic_cast<CMonster*>(GetOwnerObj());
+	pMon->GetGun()->SetVisible(true);
 }
 
 void CTraceState::FinalTick()
@@ -41,20 +43,22 @@ void CTraceState::FinalTick()
 	Vec2 vPos = pMon->GetPos() + vMoveDir * info.Speed * DT;
 	pMon->SetPos(vPos);
 
+	pMon->GetGun()->Fire();
+
 	// 플레이어가 공격범위 안으로 들어오면 Attack 상태로 변경한다.
-	info.AccTime += DT;
-	if (info.AccTime >= info.AttDelay)
-	{
-		for (int i = -2; i < 2; ++i)
-		{
-			info.AccTime = 0;
-			CMonsterMissile* pMissile = new CMonsterMissile;
-			pMissile->SetPos(pMon->GetPos());
-			pMissile->SetScale(20.f, 20.f);
-			pMissile->SetVelocity(Rotate(vMoveDir, i * 0.175f) * 500.f);
-			CreateObject(pMissile, LAYER_TYPE::MONSTER_OBJECT);
-		}
-	}
+	//info.AccTime += DT;
+	//if (info.AccTime >= info.AttDelay)
+	//{
+	//	for (int i = -2; i < 2; ++i)
+	//	{
+	//		info.AccTime = 0;
+	//		CMonsterMissile* pMissile = new CMonsterMissile;
+	//		pMissile->SetPos(pMon->GetPos());
+	//		pMissile->SetScale(20.f, 20.f);
+	//		pMissile->SetVelocity(Rotate(vMoveDir, i * 0.175f) * 500.f);
+	//		CreateObject(pMissile, LAYER_TYPE::MONSTER_OBJECT);
+	//	}
+	//}
 	
 
 	// 만약에 추적중에 피격을 당하면, 피격상태로 전환다.

@@ -8,6 +8,7 @@
 
 #include "CAssetMgr.h"
 #include "CTexture.h"
+#include "CGun.h"
 #include "CFSM.h"
 
 #include "CIdleState.h"
@@ -44,6 +45,7 @@ CMonster::CMonster()
 
 CMonster::~CMonster()
 {
+	DeleteObject(m_gun);
 }
 
 void CMonster::Begin()
@@ -75,6 +77,11 @@ void CMonster::Tick()
 
 void CMonster::Render()
 {
+	if (m_gun != nullptr && m_gun->GetHandSprite() == nullptr)
+	{
+		m_gun->SetHandSprite(CAssetMgr::GetInst()->LoadSprite(L"bullet_hand_001", L"Sprite\\BulletMan\\bullet_hand\\bullet_hand_001.sprite"));
+	}
+
 	HDC dc = CEngine::GetInst()->GetSecondDC();
 
 	Vec2 vPos = GetRenderPos();

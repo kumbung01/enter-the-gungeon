@@ -40,6 +40,29 @@ void CGun::CreateFlipbook()
 	//m_flipbookPlayer->SetOffset(Vec2(10.f, 0.f));
 }
 
+void CGun::SetGunPos()
+{
+	m_gunDir = CalculateFireDirection();
+
+	float offset = 20.f;
+	float angle = fabs(ToDegree(m_gunDir));
+	//wprintf(L"%.3f ", angle);
+	if (m_isRightHand && (100.f <= angle && angle <= 180.f))
+	{
+		m_isRightHand = false;
+	}
+	else if (!m_isRightHand && (0.f <= angle && angle <= 80.f))
+	{
+		m_isRightHand = true;
+	}
+
+	m_hand = m_owner->GetPos() + Vec2{ m_isRightHand ? offset : -offset, 20.f };
+	Vec2 realPos = m_hand + Vec2{ m_isRightHand ? 10.f : -10.f, -5.f };
+
+	SetPos(realPos);
+	m_muzzle = GetPos() + m_gunDir * 9.f;
+}
+
 /*
 * fires the bullet to the mouse cursor.
 * parameter: none
@@ -135,7 +158,7 @@ void CGun::Tick()
 	{
 	case GUN_STATE::EMPTY:
 	case GUN_STATE::IDLE:
-		if (nullptr != m_flipbookPlayer && !m_flipbookPlayer->IsFlipbookMatch(GUN_IDLE))
+		if (nullptr != m_flipbookPlayer)
 		{
 			tAnimState state{ GUN_IDLE, false };
 			m_flipbookPlayer->Play(state, 5.f, true);
@@ -170,27 +193,7 @@ void CGun::Tick()
 		break;
 	}
 
-	{
-		m_gunDir = CalculateFireDirection();
-
-		float offset = 20.f;
-		float angle = fabs(ToDegree(m_gunDir));
-		//wprintf(L"%.3f ", angle);
-		if (m_isRightHand && (100.f <= angle && angle <= 180.f))
-		{
-			m_isRightHand = false;
-		}
-		else if (!m_isRightHand && (0.f <= angle && angle <= 80.f))
-		{
-			m_isRightHand = true;
-		}
-
-		m_hand = m_owner->GetPos() + Vec2{ m_isRightHand ? offset : -offset, 20.f };
-		Vec2 realPos = m_hand + Vec2{ m_isRightHand ? 10.f : -10.f, -5.f };
-
-		SetPos(realPos);
-		m_muzzle = GetPos() + m_gunDir * 9.f;
-	}
+	SetGunPos();
 }
 
 void CGun::Render()

@@ -7,6 +7,7 @@
 #include "CFlipbookPlayer.h"
 
 #include "CMonster.h"
+#include "CGun.h"
 
 
 CIdleState::CIdleState()
@@ -26,6 +27,9 @@ void CIdleState::Enter()
 	{
 		//pFP->Play();
 	}
+
+	CMonster* pMon = (CMonster*)GetOwnerObj();
+	pMon->GetGun()->SetVisible(false);
 }
 
 void CIdleState::FinalTick()
