@@ -18,8 +18,7 @@ CFlipbookPlayer::CFlipbookPlayer()
 	, m_Finish(false)
 	, m_mirror(false)
 	, m_magnification(1.f)
-	, m_angle(0.f)
-	, m_visible(true)
+	//, m_angle(0.f)
 {
 }
 
@@ -69,10 +68,11 @@ void CFlipbookPlayer::Render()
 	if (nullptr == m_CurFlipbook)
 		return;
 
-	if (!m_visible)
-		return;
-
 	CSprite* Sprite = m_CurFlipbook->GetSprite(m_SpriteIdx);
+
+	if (GetOwner()->GetName() == L"Revolver") {
+		wprintf(L"%s\n", Sprite->GetKey().c_str());
+	}
 
 	// Sprite 를 화면에 그린다.
 	Gdiplus::Graphics* graphics = CEngine::GetInst()->GetBackGraphics();
