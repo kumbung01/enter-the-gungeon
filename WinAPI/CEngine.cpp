@@ -131,6 +131,7 @@ void CEngine::Progress()
     {
         SELECT_BRUSH(BRUSH_TYPE::GRAY);
         Rectangle(m_BackBuffer->GetDC(), -1, -1, (int)m_Resolution.x + 1, (int)m_Resolution.y + 1);
+        Rectangle(GetBufferDC(), -1, -1, 1000, 1000);
     }
 
     // ·¹º§ ·»´õ¸µ
