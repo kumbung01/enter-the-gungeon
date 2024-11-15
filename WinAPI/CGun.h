@@ -57,6 +57,7 @@ protected:
     Vec2      m_muzzle;
     Vec2      m_hand;
     CSprite*  m_handSprite;
+    bool      m_visible;
 
 public:
     virtual GUN_STATE Fire();      // 발사, 파라미터: 방향, return type 발사 여부(고장, 재장전 등)
@@ -64,8 +65,11 @@ public:
 public:
     void SetOwner(CObj* _owner) { m_owner = _owner; }
     float GetReloadDelay() { return m_reloadDelay; }
-    void SetVisible(bool _visible);
+    void SetVisible(bool _visible) { m_visible = _visible; }
     bool IsRightHand() { return m_isRightHand; }
+
+    CSprite* GetHandSprite() { return m_handSprite; }
+    void SetHandSprite(CSprite* _handSprite) { m_handSprite = _handSprite; }
 protected:
     virtual bool IsTriggered();           // 방아쇠 당김
     virtual void CreateBullet();

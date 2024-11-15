@@ -10,11 +10,6 @@
 #include "CMissile.h"
 #include "CFlipbookPlayer.h"
 
-void CGun::SetVisible(bool _visible)
-{
-	m_flipbookPlayer->SetVisible(_visible);
-}
-
 bool CGun::IsTriggered()
 {
 	return KEY_PRESSED(KEY::LBTN);
@@ -75,9 +70,11 @@ GUN_STATE CGun::Fire()
 
 	if (nullptr != m_flipbookPlayer)
 	{
-		tAnimState state{ GUN_FIRE, false, ToDegree(m_gunDir) };
-		m_flipbookPlayer->Play(state, 5.f, false);
+		tAnimState state{ GUN_FIRE, false };
+		m_flipbookPlayer->Play(state, 15.f, true);
 	}
+
+	CCamera::GetInst()->Oscillation(0.1f, 10.f, 100.f);
 
 	return m_gunState;
 }
@@ -114,8 +111,8 @@ GUN_STATE CGun::Reload(bool isFired)
 
 	if (nullptr != m_flipbookPlayer)
 	{
-		tAnimState state{ GUN_RELOAD,false, ToDegree(m_gunDir) };
-		m_flipbookPlayer->Play(state, 5.f, true);
+		tAnimState state{ GUN_RELOAD,false };
+		m_flipbookPlayer->Play(state, 10.f, true);
 	}
 
 	return m_gunState;
@@ -124,7 +121,7 @@ GUN_STATE CGun::Reload(bool isFired)
 void CGun::Begin()
 {
 	tAnimState state;
-	state.angle = ToDegree(m_gunDir);
+	//state.angle = ToDegree(m_gunDir);
 	state.mirror = false;
 	state.idx = GUN_IDLE;
 
@@ -140,7 +137,7 @@ void CGun::Tick()
 	case GUN_STATE::IDLE:
 		if (nullptr != m_flipbookPlayer && !m_flipbookPlayer->IsFlipbookMatch(GUN_IDLE))
 		{
-			tAnimState state{ GUN_IDLE, false, ToDegree(m_gunDir) };
+			tAnimState state{ GUN_IDLE, false };
 			m_flipbookPlayer->Play(state, 5.f, true);
 		}
 		break;
@@ -199,6 +196,10 @@ void CGun::Tick()
 void CGun::Render()
 {
 	DrawDebugCircle(PEN_TYPE::BLUE, GetRenderPos(), Vec2(50.f, 50.f), 0);
+
+	if (false == m_visible)
+		return;
+
 	if (nullptr != m_flipbookPlayer) {
 		float angle = ToDegree(m_gunDir);
 		if (!m_isRightHand) {
@@ -207,35 +208,31 @@ void CGun::Render()
 		}
 
 		// to draw before PC when up
-		if (m_gunDir.y <= 0)
-		{
-			SetRenderOffset(-20.1f);
-		}
-		else
-		{
-			SetRenderOffset(0.f);
-		}
+		SetRenderOffset(m_gunDir.y <= 0 ? -20.1f : 0.f);
 
 		m_flipbookPlayer->SetAngle(angle);
 		m_flipbookPlayer->SetMirror(!m_isRightHand);
 		m_flipbookPlayer->Render();
 
-		Gdiplus::Graphics* graphics = CEngine::GetInst()->GetBackGraphics();
-		Vec2 vPos = CCamera::GetInst()->GetRenderPos(m_hand);
-		Vec2 center = m_handSprite->GetSlice() / 2.f;
+		if (m_handSprite != nullptr)
+		{
+			Gdiplus::Graphics* graphics = CEngine::GetInst()->GetBackGraphics();
+			Vec2 vPos = CCamera::GetInst()->GetRenderPos(m_hand);
+			Vec2 center = m_handSprite->GetSlice() / 2.f;
 
-		Matrix mat;
-		mat.Translate(vPos.x, vPos.y);
-		mat.Scale(3.f, 3.f);
-		mat.Translate(-center.x, -center.y);
-		graphics->SetTransform(&mat);
+			Matrix mat;
+			mat.Translate(vPos.x, vPos.y);
+			mat.Scale(3.f, 3.f);
+			mat.Translate(-center.x, -center.y);
+			graphics->SetTransform(&mat);
 
-		auto res = graphics->DrawImage(m_handSprite->GetAtlas()->GetImage(),
-			0.f, 0.f,
-			m_handSprite->GetLeftTop().x, m_handSprite->GetLeftTop().y,
-			m_handSprite->GetSlice().x, m_handSprite->GetSlice().y, UnitPixel);
+			auto res = graphics->DrawImage(m_handSprite->GetAtlas()->GetImage(),
+				0.f, 0.f,
+				m_handSprite->GetLeftTop().x, m_handSprite->GetLeftTop().y,
+				m_handSprite->GetSlice().x, m_handSprite->GetSlice().y, UnitPixel);
 
-		graphics->ResetTransform();
+			graphics->ResetTransform();
+		}
 	}
 
 }
@@ -258,8 +255,9 @@ CGun::CGun()
 	, m_knockback(0.f)
 	, m_magnification(2.f)
 	, m_isRightHand(false)
+	, m_visible(true)
 {
-	m_handSprite = CAssetMgr::GetInst()->LoadSprite(L"rogue_hand_001", L"Sprite\\SpaceRogue\\rogue_hand\\rogue_hand_001.sprite");
+	
 }
 
 CGun::~CGun()
