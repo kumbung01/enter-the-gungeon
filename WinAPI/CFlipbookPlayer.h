@@ -2,6 +2,7 @@
 #include "CComponent.h"
 
 class CFlipbook;
+class CSprite;
 
 class CFlipbookPlayer :
     public CComponent
@@ -80,6 +81,9 @@ public:
     virtual void FinalTick() override;
     void Render(); 
 
+private:
+    void RenderBitBlt(CSprite* Sprite);
+    void RenderGdiPlus(CSprite* Sprite);
 public:
     CFlipbookPlayer();
     ~CFlipbookPlayer();

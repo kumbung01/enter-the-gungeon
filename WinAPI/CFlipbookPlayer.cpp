@@ -69,10 +69,54 @@ void CFlipbookPlayer::Render()
 
 	CSprite* Sprite = m_CurFlipbook->GetSprite(m_SpriteIdx);
 
-	if (GetOwner()->GetName() == L"Revolver") {
-		wprintf(L"%s\n", Sprite->GetKey().c_str());
+	switch (Sprite->GetRenderType())
+	{
+	case RENDER_BITBLT:
+		RenderBitBlt(Sprite);
+		break;
+	case RENDER_GDIPLUS:
+	default:
+		RenderGdiPlus(Sprite);
+		break;
 	}
+}
 
+void CFlipbookPlayer::RenderBitBlt(CSprite* Sprite)
+{
+	HDC bufDC = CEngine::GetInst()->GetBufferDC();
+	HDC backDC = CEngine::GetInst()->GetSecondDC();
+	CTexture* tex = Sprite->GetAtlas();
+	Vec2 sliceSrc = Sprite->GetSlice();
+	Vec2 sliceDst = sliceSrc * m_magnification;
+	Vec2 leftTop = Sprite->GetLeftTop();
+	Vec2 vPos = GetOwner()->GetRenderPos() - sliceDst / 2.f;
+
+	StretchBlt(bufDC,
+		m_mirror ? sliceDst.x : 0, 
+		0,
+		m_mirror ? -sliceDst.x - 1: sliceDst.x,
+		sliceDst.y,
+		tex->GetDC(),
+		leftTop.x,
+		leftTop.y,
+		sliceSrc.x,
+		sliceSrc.y,
+		SRCCOPY);
+
+	TransparentBlt(backDC,
+		vPos.x,
+		vPos.y,
+		sliceDst.x,
+		sliceDst.y,
+		bufDC,
+		0, 0,
+		sliceDst.x,
+		sliceDst.y,
+		RGB(255, 0, 255));
+}
+
+void CFlipbookPlayer::RenderGdiPlus(CSprite* Sprite)
+{
 	// Sprite 를 화면에 그린다.
 	Gdiplus::Graphics* graphics = CEngine::GetInst()->GetBackGraphics();
 	Vec2 vPos = GetOwner()->GetRenderPos();
@@ -83,15 +127,14 @@ void CFlipbookPlayer::Render()
 	mat.Scale(m_magnification, m_magnification);
 	if (m_mirror)
 		mat.Scale(-1.f, 1.f);
-	mat.RotateAt(m_angle, {m_axis.x, m_axis.y});
+	mat.RotateAt(m_angle, { m_axis.x, m_axis.y });
 	mat.Translate(-center.x, -center.y);
 	graphics->SetTransform(&mat);
 
 	auto res = graphics->DrawImage(Sprite->GetAtlas()->GetImage(),
 		0.f, 0.f,
 		Sprite->GetLeftTop().x, Sprite->GetLeftTop().y,
-		Sprite->GetSlice().x, Sprite->GetSlice().y, UnitPixel);
+		Sprite->GetSlice().x - (m_mirror ? 1 : 0), Sprite->GetSlice().y, UnitPixel);
 
 	graphics->ResetTransform();
-
 }
