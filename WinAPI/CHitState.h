@@ -1,8 +1,16 @@
 #pragma once
 #include "CState.h"
-class CSurpriseState :
+
+class CFlipbookPlayer;
+
+class CHitState :
     public CState
 {
+private:
+    CObj* m_targetObject;
+    CFlipbookPlayer* m_flipbookPlayer;
+    Vec2             m_hitDir;
+    float            m_knockBack;
 public:
     virtual void Enter() override;
     virtual void FinalTick() override;
@@ -10,7 +18,7 @@ public:
 private:
     tAnimState ProcessAnimState(Vec2 dir);
 public:
-    CSurpriseState();
-    ~CSurpriseState();
+    CHitState();
+    ~CHitState();
 };
 

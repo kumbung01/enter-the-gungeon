@@ -33,8 +33,6 @@ public:
 
     tMonInfo& GetMonInfo() { return m_Info; }
 
-    void Play(tAnimState _state, float _duration, bool _repeat);
-
 public:
     virtual void Begin() override;
     virtual void Tick() override;            

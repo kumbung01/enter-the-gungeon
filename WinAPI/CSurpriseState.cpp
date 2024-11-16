@@ -4,7 +4,7 @@
 #include "CMonster.h"
 #include "CLevelMgr.h"
 
-tAnimState ProcessAnimState(Vec2 dir)
+tAnimState CSurpriseState::ProcessAnimState(Vec2 dir)
 {
 	if (dir.x < 0.f)
 	{

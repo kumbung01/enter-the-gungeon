@@ -15,6 +15,7 @@
 #include "CIdleState.h"
 #include "CTraceState.h"
 #include "CSurpriseState.h"
+#include "CHitState.h"
 
 CMonster::CMonster()
 	: m_Dir(1)
@@ -43,6 +44,7 @@ CMonster::CMonster()
 	m_FSM->AddState(L"Idle", new CIdleState);
 	m_FSM->AddState(L"Trace", new CTraceState);
 	m_FSM->AddState(L"Surprise", new CSurpriseState);
+	m_FSM->AddState(L"Hit", new CHitState);
 
 	CreateFlipbook();
 }
@@ -99,6 +101,8 @@ void CMonster::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider*
 		m_Info.CurHP -= pMissile->GetDamage();
 		if (m_Info.CurHP <= 0)
 			DeleteObject(this);
+
+		m_FSM->ChangeState(L"Hit");
 	}
 }
 

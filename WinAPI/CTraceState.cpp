@@ -124,4 +124,5 @@ void CTraceState::FinalTick()
 
 void CTraceState::Exit()
 {
+	m_animState = { BULLET_SPAWN, false }; // animState √ ±‚»≠
 }
