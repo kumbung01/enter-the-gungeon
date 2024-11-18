@@ -12,12 +12,10 @@ class CMonster :
 {
 private:
     tMonInfo    m_Info;
-
-    int         m_Dir;
-    float       m_Speed;
     Vec2        m_InitPos;
     float       m_Dist;
     Vec2        m_normal;
+   
 
     CFlipbookPlayer* m_flipbookPlayer;
     CCollider*  m_Collider;
@@ -26,8 +24,6 @@ private:
     CRigidBody* m_rigidBody;
 
 public:
-    void SetSpeed(float _Speed) { m_Speed = _Speed; }
-    void SetDistance(float _Dist) { m_Dist = _Dist; }
     void SetVelocity(Vec2 _velocity);
     Vec2 getNormal() { return m_normal; }
 

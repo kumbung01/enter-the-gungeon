@@ -19,10 +19,7 @@
 #include "CHitState.h"
 
 CMonster::CMonster()
-	: m_Dir(1)
-	, m_Speed(300.f)
-	, m_Dist(100.f)
-	, m_Collider(nullptr)
+	: m_Collider(nullptr)
 	, m_FSM(nullptr)
 {
 

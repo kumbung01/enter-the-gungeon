@@ -73,8 +73,6 @@ void CLevel_Start::Begin()
     pMonster->SetName(L"Monster");
     pMonster->SetPos(300.f, 120.f);
     pMonster->SetScale(100.f, 100.f);
-    pMonster->SetDistance(200.f);
-    pMonster->SetSpeed(300.f);
     AddObject(pMonster, LAYER_TYPE::MONSTER);
 
     gun = new CMonsterRevolver;
@@ -88,8 +86,6 @@ void CLevel_Start::Begin()
     pMonster->SetName(L"Monster");
     pMonster->SetPos(1000.f, 500.f);
     pMonster->SetScale(100.f, 100.f);
-    pMonster->SetDistance(200.f);
-    pMonster->SetSpeed(300.f);
     AddObject(pMonster, LAYER_TYPE::MONSTER);
 
     gun = new CMonsterRevolver;
