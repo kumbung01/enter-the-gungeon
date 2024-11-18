@@ -4,6 +4,7 @@
 #include "CFlipbookPlayer.h"
 #include "CMonster.h"
 #include "CPlayer.h"
+#include "CRigidBody.h"
 #include "CGun.h"
 
 tAnimState CHitState::ProcessAnimState(Vec2 dir)
@@ -24,18 +25,14 @@ tAnimState CHitState::ProcessAnimState(Vec2 dir)
 
 void CHitState::Enter()
 {
-	if (m_targetObject == nullptr)
-	{
-		m_targetObject = CLevelMgr::GetInst()->FindObjectByName(LAYER_TYPE::PLAYER, L"Player");
-	}
 	CMonster* pMon = (CMonster*)GetOwnerObj();
 	pMon->GetGun()->SetVisible(false);
 
 	m_flipbookPlayer = pMon->GetComponent<CFlipbookPlayer>();
-	m_hitDir = pMon->GetPos() - m_targetObject->GetPos();
-	m_hitDir.Normalize();
+	Vec2 hitDir = pMon->GetRigidBody()->GetVelocity();
+	hitDir.Normalize();
 
-	tAnimState animState = ProcessAnimState(m_hitDir);
+	tAnimState animState = ProcessAnimState(hitDir);
 	m_flipbookPlayer->Play(animState, 7.f, false);
 }
 
@@ -45,10 +42,6 @@ void CHitState::FinalTick()
 	{
 		GetFSM()->ChangeState(L"Trace");
 	}
-	else
-	{
-		GetOwnerObj()->SetPos(GetOwnerObj()->GetPos() + m_hitDir * 0.33f);
-	}
 }
 
 void CHitState::Exit()
@@ -57,8 +50,6 @@ void CHitState::Exit()
 
 CHitState::CHitState()
 	: m_flipbookPlayer(nullptr)
-	, m_hitDir(0.f, 0.f)
-	, m_targetObject(nullptr)
 {
 }
 

@@ -16,6 +16,7 @@ private:
     Vec2        m_Force;    // 크기, 방향
 
     float       m_damage;
+    float       m_knockBack;
 
 protected:
     CSprite*    m_sprite;
@@ -38,6 +39,9 @@ public:
 
     float GetDamage() { return m_damage; }
     void  SetDamage(float _damage) { m_damage = _damage; }
+
+    float GetKnockBack() { return m_knockBack; }
+    void  GetKnockBack(float _knockBack) { m_knockBack = _knockBack; }
 
 private:
     virtual void CreateSprite();

@@ -13,6 +13,7 @@ CMissile::CMissile()
 	, m_VelocityScale(1.f)
 	, m_damage(5.f)
 	, m_sprite(nullptr)
+	, m_knockBack(100.f)
 	, m_magnification(3.f)
 {
 	m_Collider = (CCollider*)AddComponent(new CCollider);

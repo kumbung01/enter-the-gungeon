@@ -53,6 +53,7 @@ public:
 
     void SetVelocity(Vec2 _Velocity) { m_Velocity = _Velocity; }
     void AddVelocity(Vec2 _Velocity) { m_Velocity += _Velocity; }
+    Vec2 GetVelocity() { return m_Velocity; }
 
     void SetGravityAccel(Vec2 _GravityAccel) { m_GravityAccel = _GravityAccel; }
     Vec2 GetGravityAccel() { return m_GravityAccel; }

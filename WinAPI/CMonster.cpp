@@ -6,6 +6,7 @@
 #include "CTimeMgr.h"
 #include "CCollider.h"
 #include "CFlipbookPlayer.h"
+#include "CRigidBody.h"
 
 #include "CAssetMgr.h"
 #include "CTexture.h"
@@ -32,7 +33,7 @@ CMonster::CMonster()
 	// ¸ó½ºÅÍ ½ºÅÈ
 	m_Info.MaxHP = 25.f;
 	m_Info.CurHP = 25.f;
-	m_Info.AttRange = 500.f;
+	m_Info.AttRange = 300.f;
 	m_Info.DetectRange = 500.f;
 	m_Info.Speed = 100.f;
 	m_Info.AttDelay = 1.f;
@@ -46,12 +47,21 @@ CMonster::CMonster()
 	m_FSM->AddState(L"Surprise", new CSurpriseState);
 	m_FSM->AddState(L"Hit", new CHitState);
 
+	m_rigidBody = (CRigidBody*)AddComponent(new CRigidBody);
+	m_rigidBody->SetMode(RIGIDBODY_MODE::TOPVIEW);
+	m_rigidBody->SetMass(1.f);
+
 	CreateFlipbook();
 }
 
 CMonster::~CMonster()
 {
 	DeleteObject(m_gun);
+}
+
+void CMonster::SetVelocity(Vec2 _velocity)
+{
+	m_rigidBody->SetVelocity(_velocity);
 }
 
 void CMonster::Begin()
@@ -64,21 +74,7 @@ void CMonster::Begin()
 
 void CMonster::Tick()
 {
-	//return;
 
-	//Vec2 vPos = GetPos();
-
-	//vPos.x += DT * m_Speed * m_Dir;
-	//
-	//float fDistance = fabs(m_InitPos.x - vPos.x);
-
-	//if (m_Dist < fDistance)
-	//{
-	//	vPos.x = m_InitPos.x + m_Dir * m_Dist;
-	//	m_Dir *= -1;
-	//}
-
-	//SetPos(vPos);
 }
 
 void CMonster::Render()
@@ -91,8 +87,6 @@ void CMonster::Render()
 	}
 }
 
-
-
 void CMonster::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
 {
 	if (_OtherObject->GetLayerType() == LAYER_TYPE::PLAYER_OBJECT)
@@ -102,7 +96,31 @@ void CMonster::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider*
 		if (m_Info.CurHP <= 0)
 			DeleteObject(this);
 
+		Vec2 missileDir = pMissile->GetVelocity();
+		missileDir.Normalize();
+		Vec2 force = missileDir * pMissile->GetKnockBack();
+
+		m_rigidBody->SetVelocity(force);
 		m_FSM->ChangeState(L"Hit");
+	}
+}
+
+void CMonster::Overlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
+{
+	if (_OtherObject->GetLayerType() == LAYER_TYPE::TILE)
+	{
+		auto normal = _Collider->CalCulateNormal(_OtherCollider);
+
+		if (abs(normal.x) > 0) m_normal.x = normal.x;
+		else m_normal.y = normal.y;
+	}
+}
+
+void CMonster::EndOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
+{
+	if (_OtherObject->GetLayerType() == LAYER_TYPE::TILE)
+	{
+		m_normal = Vec2(0.f, 0.f);
 	}
 }
 

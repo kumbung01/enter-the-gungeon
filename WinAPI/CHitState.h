@@ -7,10 +7,7 @@ class CHitState :
     public CState
 {
 private:
-    CObj* m_targetObject;
     CFlipbookPlayer* m_flipbookPlayer;
-    Vec2             m_hitDir;
-    float            m_knockBack;
 public:
     virtual void Enter() override;
     virtual void FinalTick() override;
