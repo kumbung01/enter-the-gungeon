@@ -28,6 +28,12 @@ void CHitState::Enter()
 	CMonster* pMon = (CMonster*)GetOwnerObj();
 	pMon->GetGun()->SetVisible(false);
 
+	if (pMon->GetMonInfo().CurHP <= 0.f)
+	{
+		GetFSM()->ChangeState(L"Die");
+		return;
+	}
+
 	m_flipbookPlayer = pMon->GetComponent<CFlipbookPlayer>();
 	Vec2 hitDir = pMon->GetRigidBody()->GetVelocity();
 	hitDir.Normalize();

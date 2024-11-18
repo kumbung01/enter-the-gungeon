@@ -115,10 +115,6 @@ void CTraceState::FinalTick()
 
 	// 총 발사
 	pMon->GetGun()->Fire();
-	
-
-	// 만약에 추적중에 피격을 당하면, 피격상태로 전환다.
-
 		
 	// 인지범위 시각화
 	DrawDebugCircle(PEN_TYPE::RED, pMon->GetRenderPos(), Vec2(info.AttRange * 2.f, info.AttRange * 2.f), 0.f);
