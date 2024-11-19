@@ -21,7 +21,7 @@ void CMonsterShotgun::CreateBullet()
 {
 	for (int i = -2; i < 2; ++i)
 	{
-		Vec2 gunDir = Rotate(m_gunDir, i * 0.2f);
+		Vec2 gunDir = Rotate(m_gunDir, i * 0.1f);
 		CMonsterMissile* pMissile = new CMonsterMissile;
 		pMissile->SetPos(m_muzzle);
 		pMissile->SetScale(30.f, 30.f);
