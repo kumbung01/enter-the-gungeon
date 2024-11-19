@@ -103,6 +103,7 @@ void CEngine::CreateGDIObject()
     m_Brush[(UINT)BRUSH_TYPE::GREEN]    = CreateSolidBrush(RGB(0, 255, 0));
     m_Brush[(UINT)BRUSH_TYPE::BLUE]     = CreateSolidBrush(RGB(0, 0, 255));
     m_Brush[(UINT)BRUSH_TYPE::GRAY]     = CreateSolidBrush(RGB(100, 100, 100));
+    m_Brush[(UINT)BRUSH_TYPE::BLACK]    = CreateSolidBrush(RGB(0, 0, 0));
     m_Brush[(UINT)BRUSH_TYPE::HOLLOW]   = (HBRUSH)GetStockObject(HOLLOW_BRUSH);
 }
 
@@ -131,7 +132,7 @@ void CEngine::Progress()
     {
         SELECT_BRUSH(BRUSH_TYPE::GRAY);
         Rectangle(m_BackBuffer->GetDC(), -1, -1, (int)m_Resolution.x + 1, (int)m_Resolution.y + 1);
-        Rectangle(GetBufferDC(), -1, -1, 1000, 1000);
+        Rectangle(GetBufferDC(), -1, -1, 1300, 800);
     }
 
     // ·¹º§ ·»´õ¸µ
@@ -169,7 +170,7 @@ void CEngine::ChangeWindowSize(Vec2 _vResolution)
 void CEngine::CreateSecondBuffer()
 {
     m_BackBuffer = CAssetMgr::GetInst()->CreateTexture(L"BackBuffer", (int)m_Resolution.x, (int)m_Resolution.y);
-    m_tempBuffer = CAssetMgr::GetInst()->CreateTexture(L"TempBuffer", 1000, 1000);
+    m_tempBuffer = CAssetMgr::GetInst()->CreateTexture(L"TempBuffer", 1300, 800);
     
     // gdiplus graphics object for back buffer
     m_backGraphics = new Gdiplus::Graphics(GetSecondDC());

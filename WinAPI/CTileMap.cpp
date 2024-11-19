@@ -17,7 +17,8 @@ CTileMap::CTileMap()
 	, m_Row(1)
 	, m_Atlas(nullptr)
 	, m_AtlasTileCol(0)
-	, m_AtlasTileRow(0)	
+	, m_AtlasTileRow(0)
+	, m_Magnification(1.f)
 {
 }
 
@@ -32,15 +33,15 @@ void CTileMap::FinalTick()
 	for (int row = 0; row < m_Row + 1; ++row)
 	{
 		DrawDebugLine(PEN_TYPE::GREEN
-			, OwnerPos + Vec2(0, TILE_SIZE * row)
-			, OwnerPos + Vec2(m_Col * TILE_SIZE, TILE_SIZE * row), 0.f);
+			, OwnerPos + Vec2(0.f, (TILE_SIZE * row * m_Magnification))
+			, OwnerPos + Vec2(m_Col * TILE_SIZE * m_Magnification, TILE_SIZE * row * m_Magnification), 0.f);
 	}
 
 	for (int col = 0; col < m_Col + 1; ++col)
 	{
 		DrawDebugLine(PEN_TYPE::GREEN
-			, OwnerPos + Vec2(TILE_SIZE * col, 0)
-			, OwnerPos + Vec2(TILE_SIZE * col, m_Row * TILE_SIZE), 0.f);
+			, OwnerPos + Vec2(TILE_SIZE * col * m_Magnification, 0.f)
+			, OwnerPos + Vec2(TILE_SIZE * col * m_Magnification, m_Row * TILE_SIZE * m_Magnification), 0.f);
 	}
 	
 }
@@ -51,6 +52,7 @@ void CTileMap::Render()
 		return;
 
 	Vec2 OwnerRenderPos = GetOwner()->GetRenderPos();
+	HDC buf = CEngine::GetInst()->GetBufferDC();
 	HDC dc = CEngine::GetInst()->GetSecondDC();
 
 	// 카메라 영역 안에 들어오는 행, 열을 계산하기
@@ -62,8 +64,8 @@ void CTileMap::Render()
 	Vec2 vOwnerPos = GetOwner()->GetPos();
 	vCamLeftTop = vCamLeftTop - vOwnerPos;
 
-	int LeftTopCol = vCamLeftTop.x / TILE_SIZE;
-	int LeftTopRow = vCamLeftTop.y / TILE_SIZE;
+	int LeftTopCol = vCamLeftTop.x / (TILE_SIZE * m_Magnification);
+	int LeftTopRow = vCamLeftTop.y / (TILE_SIZE * m_Magnification);
 
 	if (LeftTopCol < 0)
 		LeftTopCol = 0;
@@ -71,8 +73,8 @@ void CTileMap::Render()
 		LeftTopRow = 0;
 
 	vCamRightBot = vCamRightBot - vOwnerPos;
-	int RightBotCol = (vCamRightBot.x / TILE_SIZE) + 1;
-	int RightBotRow = (vCamRightBot.y / TILE_SIZE) + 1;
+	int RightBotCol = (vCamRightBot.x / (TILE_SIZE * m_Magnification)) + 1;
+	int RightBotRow = (vCamRightBot.y / (TILE_SIZE * m_Magnification)) + 1;
 
 	if (m_Col < RightBotCol)
 		RightBotCol = m_Col;
@@ -97,15 +99,37 @@ void CTileMap::Render()
 
 			assert(!(ImgIdx < 0 || m_AtlasTileCol * m_AtlasTileRow <= ImgIdx));
 
-			BitBlt(dc
-				 , (int)OwnerRenderPos.x + Col * TILE_SIZE
-				 , (int)OwnerRenderPos.y + Row * TILE_SIZE
-				 , TILE_SIZE, TILE_SIZE
+			int realCol = Col - LeftTopCol;
+			int realRow = Row - LeftTopRow;
+
+			StretchBlt(buf
+				 , realCol * TILE_SIZE * m_Magnification
+				 , realRow * TILE_SIZE * m_Magnification
+				 , TILE_SIZE * m_Magnification
+				 , TILE_SIZE * m_Magnification
 				 , m_Atlas->GetDC()
-				 , ImgCol * TILE_SIZE, ImgRow * TILE_SIZE
+				 , ImgCol * TILE_SIZE
+				 , ImgRow * TILE_SIZE
+				 , TILE_SIZE
+				 , TILE_SIZE
 				 , SRCCOPY); 
 		}
 	}
+
+	int rowSize = (RightBotRow - LeftTopRow) * TILE_SIZE * m_Magnification;
+	int colSize = (RightBotCol - LeftTopCol) * TILE_SIZE * m_Magnification;
+
+	TransparentBlt(dc,
+		OwnerRenderPos.x + LeftTopCol * TILE_SIZE * m_Magnification,
+		OwnerRenderPos.y + LeftTopRow * TILE_SIZE * m_Magnification,
+		colSize,
+		rowSize,
+		buf,
+		0,
+		0,
+		colSize,
+		rowSize,
+		RGB(255, 0, 255));
 }
 
 void CTileMap::SetRowCol(int Row, int Col)
