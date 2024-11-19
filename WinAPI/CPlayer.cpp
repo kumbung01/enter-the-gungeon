@@ -184,12 +184,11 @@ CPlayer::CPlayer()
 	m_RigidBody->SetMode(RIGIDBODY_MODE::TOPVIEW);
 	m_RigidBody->SetMass(1.f);
 
-	m_HitBox = new CCollider;
+	m_HitBox = (CCollider*)AddComponent(new CCollider);
 	m_HitBox->SetName(L"HitBox_01");
 	m_HitBox->SetScale(GetScale());
 	m_HitBox->SetOffset(Vec2(0.f, 5.f));
 	m_HitBox->SetRigidBody(m_RigidBody);
-	AddComponent(m_HitBox);
 }
 
 CPlayer::~CPlayer()
@@ -198,11 +197,8 @@ CPlayer::~CPlayer()
 
 void CPlayer::Begin()
 {
-
 	m_FlipbookPlayer->Play(m_animState.idx, 5.f, true, m_animState.mirror);
 	CCamera::GetInst()->SetTarget(this);
-
-
 }
 
 void CPlayer::Tick()
@@ -230,16 +226,6 @@ void CPlayer::Tick()
 		if (m_moveDir.x != 0.f || m_moveDir.y != 0.f)
 			m_moveDir.Normalize();
 	}
-
-	//// check if collided with wall
-	//if (m_normal.x * m_moveDir.x < 0) // if normal and move direction is "not" the same
-	//{
-	//	m_moveDir.x = 0.f;
-	//}
-	//if (m_normal.y * m_moveDir.y < 0)
-	//{
-	//	m_moveDir.y = 0.f;
-	//}
 
 	// check for invincible state
 	if (m_isInvincible)
@@ -376,21 +362,10 @@ void CPlayer::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* 
 
 void CPlayer::Overlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
 {
-	//if (_OtherObject->GetLayerType() == LAYER_TYPE::TILE)
-	//{
-	//	auto normal = _Collider->CalCulateNormal(_OtherCollider);
-
-	//	if (abs(normal.x) > 0) m_normal.x = normal.x;
-	//	else m_normal.y = normal.y;
-	//}
 }
 
 void CPlayer::EndOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
 {
-	//if (_OtherObject->GetLayerType() == LAYER_TYPE::TILE)
-	//{
-	//	m_normal = Vec2(0.f, 0.f);
-	//}
 }
 
 void CPlayer::CreatePlayerFlipbook()
