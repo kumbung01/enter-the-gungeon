@@ -330,6 +330,18 @@ void CPlayer::Render()
 		m_gun->SetHandSprite(CAssetMgr::GetInst()->LoadSprite(L"rogue_hand_001", L"Sprite\\SpaceRogue\\rogue_hand\\rogue_hand_001.sprite"));
 	}
 
+	tAnimState animState;
+	if (m_state == PLAYER_STATE::ROLLING)
+		animState = ProcessDodgeAnimState(m_moveDir);
+	else
+		animState = ProcessAnimState(m_gunDir, m_state);
+
+	if (animState != m_animState)
+	{
+		m_animState = animState;
+		m_FlipbookPlayer->Play(m_animState, 10.f, m_state == PLAYER_STATE::ROLLING ? false : true);
+	}
+
 	m_FlipbookPlayer->Render();
 }
 
@@ -416,17 +428,17 @@ void CPlayer::CreateFlipbook(const wstring& _FlipbookName, CTexture* _Atlas, Vec
 
 void CPlayer::IdleState()
 {
-	if (m_moveDir.Length() > 0)
+	Vec2 moveDir = m_moveDir;
+	Vec2 normal = m_RigidBody->GetContactNormal();
+	if (normal.x * moveDir.x < 0.f)
+		moveDir.x = 0.f;
+	if (normal.y * moveDir.y < 0.f)
+		moveDir.y = 0.f;
+
+	if (moveDir.Length() > 0)
 	{
 		m_state = PLAYER_STATE::MOVING;
 		return;
-	}
-
-	tAnimState animState = ProcessAnimState(m_gunDir, m_state);
-	if (animState != m_animState)
-	{
-		m_animState = animState;
-		m_FlipbookPlayer->Play(m_animState.idx, 10.f, true, m_animState.mirror);
 	}
 }
 
@@ -434,25 +446,25 @@ void CPlayer::MoveState()
 {
 	if (KEY_TAP(KEY::RBTN))
 	{
-		tAnimState animState = ProcessDodgeAnimState(m_moveDir);
-		if (animState != m_animState)
-		{
-			m_animState = animState;
-			m_FlipbookPlayer->Play(m_animState, 10.f, false);
-		}
 		CCollisionMgr::GetInst()->CollisionCheck(LAYER_TYPE::PLAYER, LAYER_TYPE::MONSTER_OBJECT, false);
 		m_state = PLAYER_STATE::ROLLING;
+
+		return;
 	}
-	else if (m_moveDir.Length() > 0)
+
+	Vec2 moveDir = m_moveDir;
+	Vec2 normal = m_RigidBody->GetContactNormal();
+	if (normal.x * moveDir.x < 0.f)
+		moveDir.x = 0.f;
+	if (normal.y * moveDir.y < 0.f)
+		moveDir.y = 0.f;
+	
+	if (moveDir.Length() > 0)
 	{
-		auto velocity = m_moveDir * m_moveSpeed;
+		moveDir.Normalize();
+
+		auto velocity = moveDir * m_moveSpeed;
 		m_RigidBody->SetVelocity(velocity);
-		auto animState = ProcessAnimState(m_gunDir, m_state);
-		if (animState != m_animState)
-		{
-			m_animState = animState;
-			m_FlipbookPlayer->Play(m_animState.idx, 10.f, true, m_animState.mirror);
-		}
 	}
 	else
 	{
