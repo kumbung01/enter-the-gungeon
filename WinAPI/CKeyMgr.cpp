@@ -18,6 +18,8 @@ UINT KeyValue[KEY::KEY_END] =
 
 	VK_UP, VK_DOWN, VK_LEFT, VK_RIGHT,
 
+	'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+
 	VK_NUMPAD0,
 	VK_NUMPAD1,
 	VK_NUMPAD2,
@@ -125,8 +127,8 @@ void CKeyMgr::Tick()
 		}
 
 		// 마우스 좌표 갱신
-		*((int*)&m_MousePos.x) = 0xffffffff;
-		*((int*)&m_MousePos.y) = 0xffffffff;
+		//*((int*)&m_MousePos.x) = 0xffffffff;
+		//*((int*)&m_MousePos.y) = 0xffffffff;
 	}
 }
 
