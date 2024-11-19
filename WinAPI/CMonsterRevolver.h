@@ -10,7 +10,6 @@ private:
 public:
     virtual GUN_STATE Fire() override;
 public:
-    virtual void Begin() override;
     virtual void Tick() override;
 public:
     CMonsterRevolver();

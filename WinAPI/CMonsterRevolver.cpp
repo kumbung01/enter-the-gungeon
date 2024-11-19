@@ -48,11 +48,6 @@ GUN_STATE CMonsterRevolver::Fire()
 	return m_gunState;
 }
 
-void CMonsterRevolver::Begin()
-{
-	m_gunState = GUN_STATE::IDLE;
-}
-
 void CMonsterRevolver::Tick()
 {
 	switch (m_gunState)
@@ -94,8 +89,6 @@ CMonsterRevolver::CMonsterRevolver()
 {
 	m_magnification = 2.f;
 	m_fireDelay = 3.f;
-
-	CreateFlipbook();
 }
 
 CMonsterRevolver::~CMonsterRevolver()

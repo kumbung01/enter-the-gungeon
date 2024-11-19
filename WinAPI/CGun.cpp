@@ -143,6 +143,8 @@ GUN_STATE CGun::Reload(bool isFired)
 
 void CGun::Begin()
 {
+	CreateFlipbook();
+
 	tAnimState state;
 	//state.angle = ToDegree(m_gunDir);
 	state.mirror = false;

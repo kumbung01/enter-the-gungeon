@@ -13,6 +13,7 @@
 #include "CReloadUI.h"
 #include "CRevolver.h"
 #include "CMonsterRevolver.h"
+#include "CMonsterShotgun.h"
 
 #include "CCollisionMgr.h"
 #include "CCollider.h"
@@ -75,10 +76,10 @@ void CLevel_Start::Begin()
     pMonster->SetScale(100.f, 100.f);
     AddObject(pMonster, LAYER_TYPE::MONSTER);
 
-    gun = new CMonsterRevolver;
+    gun = new CMonsterShotgun;
     gun->SetOwner(pMonster);
     pMonster->SetGun(gun);
-    gun->SetName(L"MonsterRevolver");
+    gun->SetName(L"MonsterShotgun");
     AddObject(gun, LAYER_TYPE::GUN);
 
 
