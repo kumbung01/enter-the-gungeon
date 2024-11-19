@@ -94,12 +94,6 @@ void CTraceState::FinalTick()
 	Vec2 vMoveDir = m_TargetObject->GetPos() - pMon->GetPos();
 	float dist = vMoveDir.Length();
 	vMoveDir.Normalize();
-	Vec2 normal = pMon->getNormal();
-
-	if (normal.x * vMoveDir.x < 0.f)
-		vMoveDir.x = 0.f;
-	if (normal.y * vMoveDir.y < 0.f)
-		vMoveDir.y = 0.f;
 
 	// 해당 방향으로, 속력에 맞게 매프레임마다 이동
 	Vec2 velocity = dist >= info.AttRange ? vMoveDir * info.Speed : Vec2{0.f, 0.f};

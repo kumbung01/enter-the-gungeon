@@ -15,7 +15,6 @@ private:
     Vec2        m_InitPos;
     float       m_Dist;
     Vec2        m_normal;
-   
 
     CFlipbookPlayer* m_flipbookPlayer;
     CCollider*  m_Collider;
@@ -29,6 +28,8 @@ public:
 
     void SetGun(CGun* _gun) { m_gun = _gun; }
     CGun* GetGun() { return m_gun; }
+
+    const bool IsDead() { return m_Info.CurHP <= 0.f; }
 
     tMonInfo& GetMonInfo() { return m_Info; }
 

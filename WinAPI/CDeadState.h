@@ -3,11 +3,13 @@
 
 class CFlipbookPlayer;
 
-class CDieState :
+class CDeadState :
     public CState
 {
 private:
     CFlipbookPlayer* m_flipbookPlayer;
+    float            m_deadTime;
+    float            m_deadAccTime;
 
 private:
     tAnimState ProcessAnimState(Vec2 dir);
@@ -17,7 +19,7 @@ public:
     virtual void Exit() override;
 
 public:
-    CDieState();
-    ~CDieState();
+    CDeadState();
+    ~CDeadState();
 };
 

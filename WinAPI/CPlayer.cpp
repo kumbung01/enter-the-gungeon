@@ -173,12 +173,8 @@ CPlayer::CPlayer()
 {
 	// Collider 컴포넌트 추가
 	SetScale(45.f, 50.f);
-	m_HitBox = new CCollider;
-	m_HitBox->SetName(L"HitBox_01");
-	m_HitBox->SetScale(GetScale());
-	m_HitBox->SetOffset(Vec2(0.f, 5.f));
 
-	AddComponent(m_HitBox);
+
 
 	// Flipbook 생성 및 등록
 	CreatePlayerFlipbook();
@@ -187,6 +183,13 @@ CPlayer::CPlayer()
 	m_RigidBody = (CRigidBody*)AddComponent(new CRigidBody);
 	m_RigidBody->SetMode(RIGIDBODY_MODE::TOPVIEW);
 	m_RigidBody->SetMass(1.f);
+
+	m_HitBox = new CCollider;
+	m_HitBox->SetName(L"HitBox_01");
+	m_HitBox->SetScale(GetScale());
+	m_HitBox->SetOffset(Vec2(0.f, 5.f));
+	m_HitBox->SetRigidBody(m_RigidBody);
+	AddComponent(m_HitBox);
 }
 
 CPlayer::~CPlayer()
@@ -228,15 +231,15 @@ void CPlayer::Tick()
 			m_moveDir.Normalize();
 	}
 
-	// check if collided with wall
-	if (m_normal.x * m_moveDir.x < 0) // if normal and move direction is "not" the same
-	{
-		m_moveDir.x = 0.f;
-	}
-	if (m_normal.y * m_moveDir.y < 0)
-	{
-		m_moveDir.y = 0.f;
-	}
+	//// check if collided with wall
+	//if (m_normal.x * m_moveDir.x < 0) // if normal and move direction is "not" the same
+	//{
+	//	m_moveDir.x = 0.f;
+	//}
+	//if (m_normal.y * m_moveDir.y < 0)
+	//{
+	//	m_moveDir.y = 0.f;
+	//}
 
 	// check for invincible state
 	if (m_isInvincible)
@@ -346,7 +349,7 @@ void CPlayer::Render()
 
 void CPlayer::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
 {
-	if (_OtherObject->GetName() == L"Monster" ||
+	if (_OtherObject->GetLayerType() == LAYER_TYPE::MONSTER ||
 		_OtherObject->GetLayerType() == LAYER_TYPE::MONSTER_OBJECT)
 	{
 		if (m_isInvincible)
@@ -362,21 +365,21 @@ void CPlayer::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* 
 
 void CPlayer::Overlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
 {
-	if (_OtherObject->GetLayerType() == LAYER_TYPE::TILE)
-	{
-		auto normal = _Collider->CalCulateNormal(_OtherCollider);
+	//if (_OtherObject->GetLayerType() == LAYER_TYPE::TILE)
+	//{
+	//	auto normal = _Collider->CalCulateNormal(_OtherCollider);
 
-		if (abs(normal.x) > 0) m_normal.x = normal.x;
-		else m_normal.y = normal.y;
-	}
+	//	if (abs(normal.x) > 0) m_normal.x = normal.x;
+	//	else m_normal.y = normal.y;
+	//}
 }
 
 void CPlayer::EndOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
 {
-	if (_OtherObject->GetLayerType() == LAYER_TYPE::TILE)
-	{
-		m_normal = Vec2(0.f, 0.f);
-	}
+	//if (_OtherObject->GetLayerType() == LAYER_TYPE::TILE)
+	//{
+	//	m_normal = Vec2(0.f, 0.f);
+	//}
 }
 
 void CPlayer::CreatePlayerFlipbook()

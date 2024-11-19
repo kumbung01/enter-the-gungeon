@@ -18,15 +18,12 @@
 #include "CSurpriseState.h"
 #include "CHitState.h"
 #include "CDieState.h"
+#include "CDeadState.h"
 
 CMonster::CMonster()
 	: m_Collider(nullptr)
 	, m_FSM(nullptr)
 {
-
-	// Collider 컴포넌트 추가
-	m_Collider = (CCollider*)AddComponent(new CCollider);
-	m_Collider->SetScale(Vec2(45.f, 75.f));
 
 	// 몬스터 스탯
 	m_Info.MaxHP = 25.f;
@@ -45,10 +42,17 @@ CMonster::CMonster()
 	m_FSM->AddState(L"Surprise", new CSurpriseState);
 	m_FSM->AddState(L"Hit", new CHitState);
 	m_FSM->AddState(L"Die", new CDieState);
+	m_FSM->AddState(L"Dead", new CDeadState);
 
 	m_rigidBody = (CRigidBody*)AddComponent(new CRigidBody);
 	m_rigidBody->SetMode(RIGIDBODY_MODE::TOPVIEW);
 	m_rigidBody->SetMass(1.f);
+	//m_rigidBody->SetFriction(10000.f);
+
+	// Collider 컴포넌트 추가
+	m_Collider = (CCollider*)AddComponent(new CCollider);
+	m_Collider->SetScale(Vec2(45.f, 75.f));
+	m_Collider->SetRigidBody(m_rigidBody);
 
 	CreateFlipbook();
 }
@@ -90,35 +94,27 @@ void CMonster::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider*
 {
 	if (_OtherObject->GetLayerType() == LAYER_TYPE::PLAYER_OBJECT)
 	{
-		auto pMissile = (CMissile*)_OtherObject;
-		m_Info.CurHP -= pMissile->GetDamage();
+		if (!IsDead())
+		{
+			auto pMissile = (CMissile*)_OtherObject;
+			m_Info.CurHP -= pMissile->GetDamage();
 
-		Vec2 missileDir = pMissile->GetVelocity();
-		missileDir.Normalize();
-		Vec2 force = missileDir * pMissile->GetKnockBack();
+			Vec2 missileDir = pMissile->GetVelocity();
+			missileDir.Normalize();
+			Vec2 force = missileDir * pMissile->GetKnockBack();
 
-		m_rigidBody->SetVelocity(force);
-		m_FSM->ChangeState(L"Hit");
+			m_rigidBody->SetVelocity(force);
+			m_FSM->ChangeState(L"Hit");
+		}
 	}
 }
 
 void CMonster::Overlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
 {
-	if (_OtherObject->GetLayerType() == LAYER_TYPE::TILE)
-	{
-		auto normal = _Collider->CalCulateNormal(_OtherCollider);
-
-		if (abs(normal.x) > 0) m_normal.x = normal.x;
-		else m_normal.y = normal.y;
-	}
 }
 
 void CMonster::EndOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
 {
-	if (_OtherObject->GetLayerType() == LAYER_TYPE::TILE)
-	{
-		m_normal = Vec2(0.f, 0.f);
-	}
 }
 
 void CMonster::CreateFlipbook()
