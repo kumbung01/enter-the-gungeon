@@ -28,6 +28,9 @@ public:
     Vec2 CalCulateNormal(CCollider* _other);
     void SetRigidBody(CRigidBody* _rigidBody) { m_RigidBody = _rigidBody; }
 
+    bool IsActive() { return m_Active; }
+    void SetActive(bool _active) { m_Active = _active; }
+
 public:
     void BeginOverlap(CCollider* _Other);   // 다른 충돌체와 최초 충돌 시
     void Overlap(CCollider* _Other);        // 다른 충돌체와 BeginOverlap 이후에도 계속 겹쳐있을 경우

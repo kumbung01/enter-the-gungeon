@@ -137,6 +137,9 @@ void CCollisionMgr::CollisionBtwCollider(CCollider* _LeftCol, CCollider* _RightC
 
 bool CCollisionMgr::IsCollision(CCollider* _LeftCol, CCollider* _RightCol)
 {
+	if ((!_LeftCol->IsActive()) || (!_RightCol->IsActive()))
+		return false;
+
 	Vec2 LeftPos = _LeftCol->GetFinalPos();
 	Vec2 RightPos = _RightCol->GetFinalPos();
 

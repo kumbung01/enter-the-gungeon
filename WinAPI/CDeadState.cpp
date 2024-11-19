@@ -49,6 +49,8 @@ void CDeadState::Enter()
 	{
 		m_flipbookPlayer->Play(animState, 10.f, false);
 	}
+
+	collider->SetActive(false);
 }
 
 void CDeadState::FinalTick()

@@ -349,8 +349,19 @@ void CPlayer::Render()
 
 void CPlayer::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
 {
-	if (_OtherObject->GetLayerType() == LAYER_TYPE::MONSTER ||
-		_OtherObject->GetLayerType() == LAYER_TYPE::MONSTER_OBJECT)
+	if (_OtherObject->GetLayerType() == LAYER_TYPE::MONSTER)
+	{
+		if (m_isInvincible || (CMonster*)_OtherObject->IsDead())
+			return;
+
+		m_curHP--;
+		CCamera::GetInst()->PostProcessEffect(POST_PROCESS::HEART, 0.7f);
+		if (m_curHP == 0)
+			m_state = PLAYER_STATE::DEAD;
+		m_isInvincible = true;
+	}
+
+	if (_OtherObject->GetLayerType() == LAYER_TYPE::MONSTER_OBJECT)
 	{
 		if (m_isInvincible)
 			return;
