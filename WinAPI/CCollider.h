@@ -1,6 +1,8 @@
 #pragma once
 #include "CComponent.h"
 
+class CRigidBody;
+
 class CCollider :
     public CComponent
 {
@@ -12,7 +14,7 @@ private:
     bool        m_Active;   // 활성화
 
     int         m_OverlapCount; // 충돌 중인 물체의 숫자
-
+    CRigidBody* m_RigidBody; // 충돌 처리 위한 rigidbody
 
 public:
     void SetScale(Vec2 _Scale) { m_Scale = _Scale; }
@@ -24,6 +26,7 @@ public:
     Vec2 GetFinalPos() { return m_FinalPos; }
 
     Vec2 CalCulateNormal(CCollider* _other);
+    void SetRigidBody(CRigidBody* _rigidBody) { m_RigidBody = _rigidBody; }
 
 public:
     void BeginOverlap(CCollider* _Other);   // 다른 충돌체와 최초 충돌 시

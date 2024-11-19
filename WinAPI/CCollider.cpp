@@ -4,10 +4,13 @@
 #include "CLevelMgr.h"
 #include "CLevel.h"
 #include "CCamera.h"
+#include "CRigidBody.h"
 
 CCollider::CCollider()
 	: CComponent(COMPONENT_TYPE::COLLIDER)
 	, m_OverlapCount(0)
+	, m_RigidBody(nullptr)
+	, m_Active(true)
 {
 }
 
@@ -66,12 +69,26 @@ void CCollider::BeginOverlap(CCollider* _Other)
 
 void CCollider::Overlap(CCollider* _Other)
 {
+	if (m_RigidBody)
+	{
+		Vec2 normal = CalCulateNormal(_Other);
+		Vec2 rigidNormal = m_RigidBody->GetContactNormal();
+
+		if (abs(normal.x) > 0.f) rigidNormal.x = normal.x;
+		else rigidNormal.y = normal.y;
+
+		m_RigidBody->SetContactNormal(rigidNormal);
+	}
+
 	GetOwner()->Overlap(this, _Other->GetOwner(), _Other);
 }
 
 void CCollider::EndOverlap(CCollider* _Other)
 {
 	--m_OverlapCount;
+
+	if (m_RigidBody)
+		m_RigidBody->SetContactNormal({ 0.f, 0.f });
 
 	GetOwner()->EndOverlap(this, _Other->GetOwner(), _Other);
 }

@@ -58,6 +58,12 @@ void CRigidBody::FinalTick_TopView()
 	// 최대속력 제한
 	CalcMaxSpeed_TopView();
 
+	// 충돌 처리
+	if (m_ContactNormal.x * m_Velocity.x < 0.f)
+		m_Velocity.x = 0.f;
+	if (m_ContactNormal.y * m_Velocity.y < 0.f)
+		m_Velocity.y = 0.f;
+
 	// 속도에 따른 이동
 	Vec2 vPos = pObject->GetPos();
 	vPos += m_Velocity * DT;

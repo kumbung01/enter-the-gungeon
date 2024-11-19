@@ -13,7 +13,7 @@ class CRigidBody :
 private:
     Vec2            m_Force;        // 방향, 힘의 크기
     bool            m_Self;         // 힘을 준 주체가 자기자신인지 확인
-
+    Vec2            m_ContactNormal;
     Vec2            m_Velocity;     // 방향, 속력
     float           m_Mass;         // F = M x A
     float           m_InitialSpeed; // 초기 이동속력
@@ -57,6 +57,9 @@ public:
 
     void SetGravityAccel(Vec2 _GravityAccel) { m_GravityAccel = _GravityAccel; }
     Vec2 GetGravityAccel() { return m_GravityAccel; }
+
+    void SetContactNormal(Vec2 _ContactNormal) { m_ContactNormal = _ContactNormal; }
+    Vec2 GetContactNormal() { return m_ContactNormal; }
 
     bool IsGround() { return m_bGround; }
     void SetGround(bool _Ground) {
