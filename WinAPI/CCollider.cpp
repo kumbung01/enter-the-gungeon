@@ -37,18 +37,11 @@ void CCollider::FinalTick()
 
 Vec2 CCollider::CalCulateNormal(CCollider* _other)
 {
-	Vec2 myPos = m_FinalPos + m_Offset;
-	Vec2 urPos = _other->m_FinalPos + _other->m_Offset;
-	Vec2 diff = myPos - urPos;
+	Vec2 diff = m_FinalPos - _other->m_FinalPos;
+	Vec2 scalediff = (m_Scale + _other->m_Scale) / 2.f;
 
-	float diffx = abs(diff.x);
-	float diffy = abs(diff.y);
-
-	float scalediffx = (m_Scale.x + _other->m_Scale.x) / 2.f;
-	float scalediffy = (m_Scale.y + _other->m_Scale.y) / 2.f;
-
-	float comparedX = scalediffx - diffx;
-	float comparedY = scalediffy - diffy;
+	float comparedX = abs(scalediff.x - abs(diff.x));
+	float comparedY = abs(scalediff.y - abs(diff.y));
 
 	if (comparedX <= comparedY)
 	{
@@ -77,6 +70,7 @@ void CCollider::Overlap(CCollider* _Other)
 		if (abs(normal.x) > 0.f) rigidNormal.x = normal.x;
 		else rigidNormal.y = normal.y;
 
+		DrawDebugLine(PEN_TYPE::GREEN, GetOwner()->GetRenderPos(), GetOwner()->GetRenderPos() + normal * 5.f, 0.f);
 		m_RigidBody->SetContactNormal(rigidNormal);
 	}
 
