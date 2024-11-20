@@ -169,8 +169,10 @@ CPlayer::CPlayer()
 	, m_isInvincible(false)
 	, m_invincibleAccTime(0.f)
 	, m_invincibleTime(0.7f)
+	, m_invincibleVisibleTime(0)
 	, m_animState({ ROGUE_IDLE, false })
 	, m_RigidBody(nullptr)
+	, m_visible(true)
 {
 	// Collider 컴포넌트 추가
 	SetScale(45.f, 50.f);
@@ -232,8 +234,16 @@ void CPlayer::Tick()
 	if (m_isInvincible)
 	{
 		m_invincibleAccTime += DT;
+		if ((int)(m_invincibleAccTime / 0.1f) > m_invincibleVisibleTime)
+		{
+			m_invincibleVisibleTime = ((int)m_invincibleAccTime / 0.1f);
+			m_visible = !m_visible;
+		}
+
 		if (m_invincibleAccTime >= m_invincibleTime)
 		{
+			m_visible = true;
+			m_invincibleVisibleTime = 0;
 			m_invincibleAccTime = 0;
 			m_isInvincible = false;
 		}
@@ -326,6 +336,9 @@ void CPlayer::Tick()
 
 void CPlayer::Render()
 {
+	if (!m_visible)
+		return;
+
 	if (m_gun != nullptr && m_gun->GetHandSprite() == nullptr)
 	{
 		m_gun->SetHandSprite(CAssetMgr::GetInst()->LoadSprite(L"rogue_hand_001", L"Sprite\\SpaceRogue\\rogue_hand\\rogue_hand_001.sprite"));
@@ -355,7 +368,6 @@ void CPlayer::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* 
 			return;
 
 		m_curHP--;
-		CCamera::GetInst()->PostProcessEffect(POST_PROCESS::HEART, 0.7f);
 		if (m_curHP == 0)
 			m_state = PLAYER_STATE::DEAD;
 		m_isInvincible = true;
@@ -367,7 +379,6 @@ void CPlayer::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* 
 			return;
 
 		m_curHP--;
-		CCamera::GetInst()->PostProcessEffect(POST_PROCESS::HEART, 0.7f);
 		if (m_curHP == 0)
 			m_state = PLAYER_STATE::DEAD;
 		m_isInvincible = true;
@@ -431,11 +442,15 @@ void CPlayer::CreateFlipbook(const wstring& _FlipbookName, CTexture* _Atlas, Vec
 void CPlayer::IdleState()
 {
 	Vec2 moveDir = m_moveDir;
-	Vec2 normal = m_RigidBody->GetContactNormal();
-	if (normal.x * moveDir.x < 0.f)
-		moveDir.x = 0.f;
-	if (normal.y * moveDir.y < 0.f)
+	CRigidBody::Dir normal = m_RigidBody->GetContactNormal();
+	if (normal.up && moveDir.y > 0.f)
 		moveDir.y = 0.f;
+	if (normal.down && moveDir.y < 0.f)
+		moveDir.y = 0.f;
+	if (normal.left && moveDir.x > 0.f)
+		moveDir.x = 0.f;
+	if (normal.right && moveDir.x < 0.f)
+		moveDir.x = 0.f;
 
 	if (moveDir.Length() > 0)
 	{
@@ -455,11 +470,15 @@ void CPlayer::MoveState()
 	}
 
 	Vec2 moveDir = m_moveDir;
-	Vec2 normal = m_RigidBody->GetContactNormal();
-	if (normal.x * moveDir.x < 0.f)
-		moveDir.x = 0.f;
-	if (normal.y * moveDir.y < 0.f)
+	CRigidBody::Dir normal = m_RigidBody->GetContactNormal();
+	if (normal.up && moveDir.y > 0.f)
 		moveDir.y = 0.f;
+	if (normal.down && moveDir.y < 0.f)
+		moveDir.y = 0.f;
+	if (normal.left && moveDir.x > 0.f)
+		moveDir.x = 0.f;
+	if (normal.right && moveDir.x < 0.f)
+		moveDir.x = 0.f;
 	
 	if (moveDir.Length() > 0)
 	{

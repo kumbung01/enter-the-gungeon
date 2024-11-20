@@ -18,10 +18,10 @@ private:
     int                 m_maxHP;
     int                 m_blankCnt;
     int                 m_keyCnt;
-    float               m_moveSpeed;
-    float               m_rollSpeed; // 회피속도, px 단위
+    const float         m_moveSpeed;
+    const float         m_rollSpeed; // 회피속도, px 단위
     float               m_rollAccTime; // 회피 누적시간 
-    float               m_rollTime;  // 회피지속시간
+    const float         m_rollTime;  // 회피지속시간
     CCollider*          m_HitBox;
     CFlipbookPlayer*    m_FlipbookPlayer;
 
@@ -35,9 +35,11 @@ private:
 
     bool                m_isInvincible;
     float               m_invincibleAccTime;
-    float               m_invincibleTime;
+    const float         m_invincibleTime;
+    int                 m_invincibleVisibleTime;
     CRigidBody*         m_RigidBody;
     Vec2                m_normal; // for collision
+    bool                m_visible;
 
     
 
