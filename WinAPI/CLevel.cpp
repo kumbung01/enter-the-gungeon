@@ -2,6 +2,9 @@
 #include "CLevel.h"
 
 #include "CObj.h"
+#include "CTaskMgr.h"
+#include "CCamera.h"
+#include "CEngine.h"
 
 CLevel::CLevel()
 {
@@ -69,7 +72,8 @@ void CLevel::Render()
 			}
 			else
 			{
-				m_renderQueue.push(*iter);
+				if (IsInCamera(*iter))
+					m_renderQueue.push(*iter);
 				++iter;
 			}
 		}
@@ -101,6 +105,25 @@ CObj* CLevel::FindObjectByName(LAYER_TYPE _Layer, const wstring& _Name)
 	}
 
 	return nullptr;
+}
+
+bool CLevel::IsInCamera(CObj* obj)
+{
+	Vec2 cameraPos = CEngine::GetInst()->GetResolution() / 2.f;
+	Vec2 cameraScale = CEngine::GetInst()->GetResolution() * 1.1f;
+
+	Vec2 objRenderPos = obj->GetRenderPos();
+	Vec2 objScale = obj->GetScale();
+
+	Vec2 vDiff = cameraPos - objRenderPos;
+	Vec2 scaleDiff = (cameraScale + objScale) / 2.f;
+
+	return (fabs(vDiff.x) < scaleDiff.x && fabs(vDiff.y) < scaleDiff.y);
+}
+
+int CLevel::GetObjCount(LAYER_TYPE _layer)
+{
+	return m_vecObjects[(int)_layer].size();
 }
 
 void CLevel::DeleteObjects(int _LayerIdx)

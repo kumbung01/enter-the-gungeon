@@ -59,6 +59,10 @@ public:
 
     CObj* FindObjectByName(LAYER_TYPE _Layer, const wstring& _Name);
 
+    bool IsInCamera(CObj* obj);
+
+    int  GetObjCount(LAYER_TYPE _layer);
+
 protected:
     void DeleteObjects(int _LayerIdx);
     void DeleteAllObject();
