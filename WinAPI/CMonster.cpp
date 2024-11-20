@@ -53,8 +53,11 @@ CMonster::CMonster()
 	m_Collider = (CCollider*)AddComponent(new CCollider);
 	m_Collider->SetScale(Vec2(45.f, 75.f));
 	m_Collider->SetRigidBody(m_rigidBody);
+	m_Collider->SetRigid(true);
 
 	CreateFlipbook();
+
+
 }
 
 CMonster::~CMonster()
