@@ -1,20 +1,33 @@
 #include "pch.h"
 #include "CMap.h"
-
-#include "CAssetMgr.h"
-#include "CTexture.h"
 #include "CTileMap.h"
+#include "CAssetMgr.h"
+
 
 CMap::CMap()
 	: m_TileMap(nullptr)
 {
-	m_TileMap = (CTileMap*)AddComponent(new CTileMap);
-	m_TileMap->SetRowCol(10, 10);
-	m_TileMap->SetAtlasTexture(CAssetMgr::GetInst()->LoadTexture(L"TileMapAtlas", L"Texture\\TILE.bmp"));
+	
 }
 
 CMap::~CMap()
 {
+}
+
+void CMap::CreateTileMap(int row, int col)
+{
+	m_TileMap = (CTileMap*)AddComponent(new CTileMap);
+	m_TileMap->SetRowCol(row, col);
+	m_TileMap->SetMagnification(2.5f);
+	m_TileMap->SetAtlasTexture(CAssetMgr::GetInst()->LoadTexture(L"TileMapAtlas", L"Texture\\CastleTile.png"));
+
+	for (int i = 0; i < row; ++i)
+	{
+		for (int j = 0; j < col; ++j)
+		{
+			m_TileMap->SetTileImgIdx(i, j, TILE_FLOOR);
+		}
+	}
 }
 
 void CMap::Tick()
@@ -24,5 +37,6 @@ void CMap::Tick()
 
 void CMap::Render()
 {
-	m_TileMap->Render();
+	if (m_TileMap)
+		m_TileMap->Render();
 }

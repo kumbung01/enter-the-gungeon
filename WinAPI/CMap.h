@@ -6,9 +6,10 @@ class CTileMap;
 class CMap :
     public CObj
 {
-private:
+protected:
     CTileMap*   m_TileMap;
-
+    virtual void CreateMap(int row, int col) = 0;
+    virtual void CreateTileMap(int row, int col);
 
 public:
     CTileMap* GetTileMap() { return m_TileMap; }
