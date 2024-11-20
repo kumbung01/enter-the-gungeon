@@ -29,7 +29,7 @@ public:
     void SetGun(CGun* _gun) { m_gun = _gun; }
     CGun* GetGun() { return m_gun; }
 
-    const bool IsDead() { return m_Info.CurHP <= 0.f; }
+    const bool IsHPZero() { return m_Info.CurHP <= 0.f; }
 
     tMonInfo& GetMonInfo() { return m_Info; }
 

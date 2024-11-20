@@ -59,7 +59,6 @@ CMonster::CMonster()
 
 CMonster::~CMonster()
 {
-	DeleteObject(m_gun);
 }
 
 void CMonster::SetVelocity(Vec2 _velocity)
@@ -94,7 +93,7 @@ void CMonster::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider*
 {
 	if (_OtherObject->GetLayerType() == LAYER_TYPE::PLAYER_OBJECT)
 	{
-		if (!IsDead())
+		if (!IsHPZero())
 		{
 			auto pMissile = (CMissile*)_OtherObject;
 			m_Info.CurHP -= pMissile->GetDamage();
