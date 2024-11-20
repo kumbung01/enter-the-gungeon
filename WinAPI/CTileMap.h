@@ -25,7 +25,7 @@ public:
     tTile* GetTileInfo(Vec2 _MousePos);
 
     void SetMagnification(float _Magnification) { m_Magnification = _Magnification; }
-
+    void SetTileImgIdx(int row, int col, int idx) { m_vecTileInfo[m_Col * row + col].ImgIdx = idx; }
 public:
     bool SaveTileMap(wstring _FullPath);
     bool LoadTileMap(wstring _FullPath);

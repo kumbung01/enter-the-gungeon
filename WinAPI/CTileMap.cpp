@@ -28,7 +28,7 @@ CTileMap::~CTileMap()
 
 void CTileMap::FinalTick()
 {
-	Vec2 OwnerPos = GetOwner()->GetRenderPos();
+	Vec2 OwnerPos = GetOwner()->GetRenderPos() - GetOwner()->GetScale() / 2.f;
 
 	for (int row = 0; row < m_Row + 1; ++row)
 	{
@@ -51,7 +51,7 @@ void CTileMap::Render()
 	if (nullptr == m_Atlas)
 		return;
 
-	Vec2 OwnerRenderPos = GetOwner()->GetRenderPos();
+	Vec2 OwnerRenderPos = GetOwner()->GetRenderPos() - GetOwner()->GetScale() / 2.f;
 	HDC buf = CEngine::GetInst()->GetBufferDC();
 	HDC dc = CEngine::GetInst()->GetSecondDC();
 
@@ -61,7 +61,7 @@ void CTileMap::Render()
 	Vec2 vCamLeftTop = vCamLook - (vResolution / 2.f);
 	Vec2 vCamRightBot = vCamLook + (vResolution / 2.f);
 
-	Vec2 vOwnerPos = GetOwner()->GetPos();
+	Vec2 vOwnerPos = GetOwner()->GetPos() - GetOwner()->GetScale() / 2.f;
 	vCamLeftTop = vCamLeftTop - vOwnerPos;
 
 	int LeftTopCol = vCamLeftTop.x / (TILE_SIZE * m_Magnification);
@@ -99,10 +99,11 @@ void CTileMap::Render()
 
 			assert(!(ImgIdx < 0 || m_AtlasTileCol * m_AtlasTileRow <= ImgIdx));
 
+#if TRANSPARENTBLT_ACTIVE
 			int realCol = Col - LeftTopCol;
 			int realRow = Row - LeftTopRow;
 
-			StretchBlt(buf
+			StretchBlt(dc
 				 , realCol * TILE_SIZE * m_Magnification
 				 , realRow * TILE_SIZE * m_Magnification
 				 , TILE_SIZE * m_Magnification
@@ -113,9 +114,22 @@ void CTileMap::Render()
 				 , TILE_SIZE
 				 , TILE_SIZE
 				 , SRCCOPY); 
+#else
+			StretchBlt(dc
+				, OwnerRenderPos.x + Col * TILE_SIZE * m_Magnification
+				, OwnerRenderPos.y + Row * TILE_SIZE * m_Magnification
+				, TILE_SIZE * m_Magnification
+				, TILE_SIZE * m_Magnification
+				, m_Atlas->GetDC()
+				, ImgCol * TILE_SIZE
+				, ImgRow * TILE_SIZE
+				, TILE_SIZE
+				, TILE_SIZE
+				, SRCCOPY);
+#endif
 		}
 	}
-
+#if TRANSPARENTBLT_ACTIVE
 	int rowSize = (RightBotRow - LeftTopRow) * TILE_SIZE * m_Magnification;
 	int colSize = (RightBotCol - LeftTopCol) * TILE_SIZE * m_Magnification;
 
@@ -130,6 +144,7 @@ void CTileMap::Render()
 		colSize,
 		rowSize,
 		RGB(255, 0, 255));
+#endif
 }
 
 void CTileMap::SetRowCol(int Row, int Col)
