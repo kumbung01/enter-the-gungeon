@@ -14,6 +14,7 @@
 #include "CGun.h"
 #include "CReloadUI.h"
 #include "CCollisionMgr.h"
+#include "CMonster.h"
 
 #include "CMonster.h"
 #include "CCollider.h"
@@ -349,7 +350,8 @@ void CPlayer::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* 
 {
 	if (_OtherObject->GetLayerType() == LAYER_TYPE::MONSTER)
 	{
-		if (m_isInvincible || (CMonster*)_OtherObject->IsDead())
+		CMonster* pMon = (CMonster*)_OtherObject;
+		if (m_isInvincible || pMon->IsHPZero())
 			return;
 
 		m_curHP--;
