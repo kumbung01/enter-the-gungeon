@@ -94,6 +94,6 @@ void CMissile::Render()
 
 void CMissile::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider)
 {
-	DeleteObject(this);
+	DeleteCObject(this);
 }
 

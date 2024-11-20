@@ -58,7 +58,7 @@ void CDeadState::FinalTick()
 	m_deadAccTime += DT;
 	if (m_deadAccTime >= m_deadTime)
 	{
-		DeleteObject(GetOwnerObj());
+		DeleteCObject(GetOwnerObj());
 	}
 }
 

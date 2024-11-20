@@ -7,13 +7,13 @@
 #include "CLevel.h"
 #include "CDbgRender.h"
 
-void CreateObject(CObj* _NewObject, LAYER_TYPE _Layer)
+void CreateCObject(CObj* _NewObject, LAYER_TYPE _Layer)
 {
 	tTask task = {TASK_TYPE::CREATE_OBJECT,  (DWORD_PTR)_NewObject , (DWORD_PTR)_Layer };
 	CTaskMgr::GetInst()->AddTask(task);
 }
 
-void DeleteObject(CObj* _DeleteObj)
+void DeleteCObject(CObj* _DeleteObj)
 {
 	tTask task = {};
 
@@ -23,7 +23,7 @@ void DeleteObject(CObj* _DeleteObj)
 	CTaskMgr::GetInst()->AddTask(task);
 }
 
-void DeleteObjects(LAYER_TYPE _layer)
+void DeleteCObjects(LAYER_TYPE _layer)
 {
 	tTask task = {};
 	

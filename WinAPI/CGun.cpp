@@ -21,7 +21,7 @@ void CGun::CreateBullet()
 	pMissile->SetPos(m_muzzle);
 	pMissile->SetScale(20.f, 20.f);
 	pMissile->SetVelocity(m_gunDir * 700.f);
-	CreateObject(pMissile, LAYER_TYPE::PLAYER_OBJECT);
+	CreateCObject(pMissile, LAYER_TYPE::PLAYER_OBJECT);
 }
 
 Vec2 CGun::CalculateFireDirection()

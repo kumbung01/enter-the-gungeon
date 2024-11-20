@@ -31,7 +31,7 @@ void CMonsterRevolver::CreateBullet()
 	pMissile->SetPos(m_muzzle);
 	pMissile->SetScale(30.f, 30.f);
 	pMissile->SetVelocity(m_gunDir * 500.f);
-	CreateObject(pMissile, LAYER_TYPE::MONSTER_OBJECT);
+	CreateCObject(pMissile, LAYER_TYPE::MONSTER_OBJECT);
 }
 
 GUN_STATE CMonsterRevolver::Fire()

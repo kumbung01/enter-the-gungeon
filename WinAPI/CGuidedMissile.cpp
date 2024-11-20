@@ -139,7 +139,7 @@ void CGuidedMissile::BeginOverlap(CCollider* _Collider, CObj* _OtherObject, CCol
 {
 	if (_OtherObject->GetName() == L"Monster")
 	{
-		DeleteObject(this);
+		DeleteCObject(this);
 		//DeleteObject(_OtherObject);
 	}		
 }

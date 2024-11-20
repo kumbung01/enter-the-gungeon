@@ -31,7 +31,8 @@ void CDieState::Enter()
 	{
 		m_flipbookPlayer->Play(animState, 10.f, false);
 	}
-	DeleteObject(pMon->GetGun());
+
+	DeleteCObject((CObj*)pMon->GetGun());
 }
 
 void CDieState::FinalTick()

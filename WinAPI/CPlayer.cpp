@@ -306,7 +306,7 @@ void CPlayer::Tick()
 			// blank effect
 			CCamera::GetInst()->PostProcessEffect(HEART, 0.2f);
 
-			DeleteObjects(LAYER_TYPE::MONSTER_OBJECT);
+			DeleteCObjects(LAYER_TYPE::MONSTER_OBJECT);
 			m_blankCnt--;
 		}
 	}
