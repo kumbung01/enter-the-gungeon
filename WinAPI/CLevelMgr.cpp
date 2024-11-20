@@ -3,7 +3,7 @@
 #include "CLevel.h"
 #include "CLevel_Start.h"
 #include "CLevel_Editor.h"
-
+#include "CKeyMgr.h"
 
 
 
@@ -47,8 +47,8 @@ void CLevelMgr::Render()
 void CLevelMgr::ChangeLevel(LEVEL_TYPE _NextLevel)
 {
     // 1. 현재 레벨과 변경하려는 레벨이 동일하면 아무일도 안일어난다.
-    if (m_CurLevel == m_arrLevel[(UINT)_NextLevel])
-        return;
+    //if (m_CurLevel == m_arrLevel[(UINT)_NextLevel])
+        //return;
 
     // 2. 현재 레벨에 End 를 호출시킨다.
     m_CurLevel->End();

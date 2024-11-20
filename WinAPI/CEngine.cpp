@@ -150,6 +150,11 @@ void CEngine::Progress()
 
     // TaskMgr µ¿ÀÛ
     CTaskMgr::GetInst()->Tick();
+
+    if (KEY_TAP(KEY::NUM8))
+    {
+        ChangeLevel(LEVEL_TYPE::START);
+    }
 }
 
 
@@ -170,7 +175,7 @@ void CEngine::ChangeWindowSize(Vec2 _vResolution)
 void CEngine::CreateSecondBuffer()
 {
     m_BackBuffer = CAssetMgr::GetInst()->CreateTexture(L"BackBuffer", (int)m_Resolution.x, (int)m_Resolution.y);
-    m_tempBuffer = CAssetMgr::GetInst()->CreateTexture(L"TempBuffer", 1300, 800);
+    m_tempBuffer = CAssetMgr::GetInst()->CreateTexture(L"TempBuffer", 2000, 1000);
     
     // gdiplus graphics object for back buffer
     m_backGraphics = new Gdiplus::Graphics(GetSecondDC());
