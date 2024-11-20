@@ -11,6 +11,7 @@ CCollider::CCollider()
 	, m_OverlapCount(0)
 	, m_RigidBody(nullptr)
 	, m_Active(true)
+	, m_flag({false})
 {
 }
 
@@ -31,7 +32,7 @@ void CCollider::FinalTick()
 	if(m_OverlapCount)
 		DrawDebugRect(PEN_TYPE::RED, vRenderPos, m_Scale, 0.f);
 	else
-		DrawDebugRect(PEN_TYPE::GREEN, vRenderPos, m_Scale, 0.f);
+		DrawDebugRect(PEN_TYPE::BLUE, vRenderPos, m_Scale, 0.f);
 }
 
 
@@ -62,15 +63,16 @@ void CCollider::BeginOverlap(CCollider* _Other)
 
 void CCollider::Overlap(CCollider* _Other)
 {
-	if (m_RigidBody)
+	if (m_RigidBody && _Other->IsRigid())
 	{
 		Vec2 normal = CalCulateNormal(_Other);
-		Vec2 rigidNormal = m_RigidBody->GetContactNormal();
+		CRigidBody::Dir rigidNormal = m_RigidBody->GetContactNormal();
 
-		if (abs(normal.x) > 0.f) rigidNormal.x = normal.x;
-		else rigidNormal.y = normal.y;
+		if (normal.x < 0)      rigidNormal.left = 1;
+		else if (normal.x > 0) rigidNormal.right = 1;
+		else if (normal.y > 0) rigidNormal.down = 1;
+		else				   rigidNormal.up = 1;
 
-		DrawDebugLine(PEN_TYPE::GREEN, GetOwner()->GetRenderPos(), GetOwner()->GetRenderPos() + normal * 5.f, 0.f);
 		m_RigidBody->SetContactNormal(rigidNormal);
 	}
 
@@ -82,7 +84,7 @@ void CCollider::EndOverlap(CCollider* _Other)
 	--m_OverlapCount;
 
 	if (m_RigidBody)
-		m_RigidBody->SetContactNormal({ 0.f, 0.f });
+		m_RigidBody->SetContactNormal({});
 
 	GetOwner()->EndOverlap(this, _Other->GetOwner(), _Other);
 }

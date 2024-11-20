@@ -7,12 +7,17 @@ class CCollider :
     public CComponent
 {
 private:
+    struct Flag
+    {
+        UINT rigid : 1;
+    };
+private:
     Vec2        m_Offset;   // 상대 좌표
     Vec2        m_Scale;    // 크기
     Vec2        m_FinalPos; // 충돌체의 실제 위치
 
     bool        m_Active;   // 활성화
-
+    Flag        m_flag;
     int         m_OverlapCount; // 충돌 중인 물체의 숫자
     CRigidBody* m_RigidBody; // 충돌 처리 위한 rigidbody
 
@@ -30,6 +35,9 @@ public:
 
     bool IsActive() { return m_Active; }
     void SetActive(bool _active) { m_Active = _active; }
+
+    void SetRigid(bool rigid) { m_flag.rigid = rigid; }
+    bool IsRigid() { return m_flag.rigid; }
 
 public:
     void BeginOverlap(CCollider* _Other);   // 다른 충돌체와 최초 충돌 시

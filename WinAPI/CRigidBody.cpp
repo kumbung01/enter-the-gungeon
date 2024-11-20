@@ -59,16 +59,21 @@ void CRigidBody::FinalTick_TopView()
 	CalcMaxSpeed_TopView();
 
 	// 충돌 처리
-	if (m_ContactNormal.x * m_Velocity.x < 0.f)
-		m_Velocity.x = 0.f;
-	if (m_ContactNormal.y * m_Velocity.y < 0.f)
+	if (m_ContactNormal.up && m_Velocity.y > 0.f)
 		m_Velocity.y = 0.f;
+	if (m_ContactNormal.down && m_Velocity.y < 0.f)
+		m_Velocity.y = 0.f;
+	if (m_ContactNormal.left && m_Velocity.x > 0.f)
+		m_Velocity.x = 0.f;
+	if (m_ContactNormal.right && m_Velocity.x < 0.f)
+		m_Velocity.x = 0.f;
 
 	// 속도에 따른 이동
 	Vec2 vPos = pObject->GetPos();
 	vPos += m_Velocity * DT;
 	pObject->SetPos(vPos);
 
+	DrawDebugLine(PEN_TYPE::RED, GetOwner()->GetRenderPos(), GetOwner()->GetRenderPos() + m_Velocity * 0.5f, 0.f);
 	// 힘 초기화
 	m_Force = Vec2(0.f, 0.f);
 }
