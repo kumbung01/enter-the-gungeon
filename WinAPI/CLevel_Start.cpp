@@ -38,6 +38,90 @@ CLevel_Start::~CLevel_Start()
 
 }
 
+void CLevel_Start::LoadAssets()
+{
+    // player flipbook
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_idle", L"Flipbook\\SpaceRogue\\rogue_idle.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_idle_back", L"Flipbook\\SpaceRogue\\rogue_idle_back.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_idle_backwards", L"Flipbook\\SpaceRogue\\rogue_idle_backwards.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_idle_backwards_hands2", L"Flipbook\\SpaceRogue\\rogue_idle_backwards_hands2.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_idle_back_hands", L"Flipbook\\SpaceRogue\\rogue_idle_back_hands.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_idle_back_hand_left", L"Flipbook\\SpaceRogue\\rogue_idle_back_hand_left.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_idle_back_hand_right", L"Flipbook\\SpaceRogue\\rogue_idle_back_hand_right.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_idle_front", L"Flipbook\\SpaceRogue\\rogue_idle_front.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_idle_front_hands", L"Flipbook\\SpaceRogue\\rogue_idle_front_hands.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_idle_front_hand_left", L"Flipbook\\SpaceRogue\\rogue_idle_front_hand_left.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_idle_front_hand_right", L"Flipbook\\SpaceRogue\\rogue_idle_front_hand_right.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_idle_hands", L"Flipbook\\SpaceRogue\\rogue_idle_hands.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_idle_hands2", L"Flipbook\\SpaceRogue\\rogue_idle_hands2.flip");
+
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_run_front", L"Flipbook\\SpaceRogue\\rogue_run_front.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_run_front_hands", L"Flipbook\\SpaceRogue\\rogue_run_front_hands.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_run_front_hands2", L"Flipbook\\SpaceRogue\\rogue_run_front_hands2.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_run_front_hands_left", L"Flipbook\\SpaceRogue\\rogue_run_front_hands_left.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_run_back", L"Flipbook\\SpaceRogue\\rogue_run_back.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_run_back_hands", L"Flipbook\\SpaceRogue\\rogue_run_back_hands.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_run_back_hands2", L"Flipbook\\SpaceRogue\\rogue_run_back_hands2.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_run_back_hands_left", L"Flipbook\\SpaceRogue\\rogue_run_back_hands_left.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_run_backward", L"Flipbook\\SpaceRogue\\rogue_run_backward.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_run_backward_hands2", L"Flipbook\\SpaceRogue\\rogue_run_backward_hands2.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_run_forward", L"Flipbook\\SpaceRogue\\rogue_run_forward.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_run_forward_hands", L"Flipbook\\SpaceRogue\\rogue_run_forward_hands.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_run_forward_hands2", L"Flipbook\\SpaceRogue\\rogue_run_forward_hands2.flip");
+
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_dodge_back", L"Flipbook\\SpaceRogue\\rogue_dodge_back.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_dodge_front", L"Flipbook\\SpaceRogue\\rogue_dodge_front.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_dodge_left", L"Flipbook\\SpaceRogue\\rogue_dodge_left.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"rogue_dodge_left_back", L"Flipbook\\SpaceRogue\\rogue_dodge_left_back.flip");
+
+    // gun flipbook
+    CAssetMgr::GetInst()->LoadFlipbook(L"bulletbro_revolver_green_idle", L"Flipbook\\Weapon\\bulletbro_revolver_green_idle.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bulletbro_revolver_green_enemy_charge", L"Flipbook\\Weapon\\bulletbro_revolver_green_enemy_charge.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bulletbro_revolver_green_fire", L"Flipbook\\Weapon\\bulletbro_revolver_green_fire.flip");
+
+    CAssetMgr::GetInst()->LoadFlipbook(L"shotgun_idle", L"Flipbook\\Weapon\\shotgun_idle.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"shotgun_enemy_fire", L"Flipbook\\Weapon\\shotgun_enemy_fire.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"shotgun_fire", L"Flipbook\\Weapon\\shotgun_fire.flip");
+
+    // monster flipbook
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_cover_left_idle", L"Flipbook\\BulletMan\\bullet_cover_left_idle.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_cover_left_leap", L"Flipbook\\BulletMan\\bullet_cover_left_leap.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_cover_right_idle", L"Flipbook\\BulletMan\\bullet_cover_right_idle.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_cover_right_leap", L"Flipbook\\BulletMan\\bullet_cover_right_leap.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_death_back_south", L"Flipbook\\BulletMan\\bullet_death_back_south.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_death_front_north", L"Flipbook\\BulletMan\\bullet_death_front_north.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_death_left_back", L"Flipbook\\BulletMan\\bullet_death_left_back.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_death_left_front", L"Flipbook\\BulletMan\\bullet_death_left_front.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_death_left_side", L"Flipbook\\BulletMan\\bullet_death_left_side.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_death_right_back", L"Flipbook\\BulletMan\\bullet_death_right_back.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_death_right_front", L"Flipbook\\BulletMan\\bullet_death_right_front.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_death_right_side", L"Flipbook\\BulletMan\\bullet_death_right_side.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_die_left", L"Flipbook\\BulletMan\\bullet_die_left.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_die_left_back", L"Flipbook\\BulletMan\\bullet_die_left_back.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_die_right", L"Flipbook\\BulletMan\\bullet_die_right.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_die_right_back", L"Flipbook\\BulletMan\\bullet_die_right_back.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_hit_back_left", L"Flipbook\\BulletMan\\bullet_hit_back_left.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_hit_back_right", L"Flipbook\\BulletMan\\bullet_hit_back_right.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_hit_left", L"Flipbook\\BulletMan\\bullet_hit_left.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_hit_right", L"Flipbook\\BulletMan\\bullet_hit_right.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_idle_back", L"Flipbook\\BulletMan\\bullet_idle_back.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_idle_left", L"Flipbook\\BulletMan\\bullet_idle_left.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_idle_right", L"Flipbook\\BulletMan\\bullet_idle_right.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_pitfall_right", L"Flipbook\\BulletMan\\bullet_pitfall_right.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_run_left", L"Flipbook\\BulletMan\\bullet_run_left.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_run_left_back", L"Flipbook\\BulletMan\\bullet_run_left_back.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_run_right", L"Flipbook\\BulletMan\\bullet_run_right.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_run_right_back", L"Flipbook\\BulletMan\\bullet_run_right_back.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_shooting_left", L"Flipbook\\BulletMan\\bullet_shooting_left.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_shooting_right", L"Flipbook\\BulletMan\\bullet_shooting_right.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_spawn", L"Flipbook\\BulletMan\\bullet_spawn.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_surprise_left", L"Flipbook\\BulletMan\\bullet_surprise_left.flip");
+    CAssetMgr::GetInst()->LoadFlipbook(L"bullet_surprise_right", L"Flipbook\\BulletMan\\bullet_surprise_right.flip");
+    // tilemap
+    CAssetMgr::GetInst()->LoadTexture(L"TileMapAtlas", L"Texture\\CastleTile.png");
+
+}
+
 void CLevel_Start::Begin()
 {
     printf("clevel::begin() starts\n");

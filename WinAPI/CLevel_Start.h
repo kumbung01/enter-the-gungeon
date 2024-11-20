@@ -4,6 +4,8 @@
 class CLevel_Start :
     public CLevel
 {
+private:
+    void LoadAssets();
 public:
     virtual void Begin() override;
     virtual void Render() override;
