@@ -13,6 +13,7 @@
 #include "CCorridor.h"
 #include "CCursor.h"
 #include "CGun.h"
+#include "CPlayerHPUI.h"
 #include "CReloadUI.h"
 #include "CRevolver.h"
 #include "CMonsterRevolver.h"
@@ -124,8 +125,8 @@ void CLevel_Start::LoadAssets()
 
 void CLevel_Start::Begin()
 {
-    printf("clevel::begin() starts\n");
     ShowCursor(false);
+    LoadAssets();
 
     // 배경음 지정
     CSound* pBGM = CAssetMgr::GetInst()->LoadSound(L"BattleBGM", L"Sound\\BGM_Stage1.wav");
@@ -156,6 +157,8 @@ void CLevel_Start::Begin()
     ui->SetOwner(pPlayer);
     pPlayer->SetReloadBar(ui);
     AddObject(ui, LAYER_TYPE::INGAME_UI);
+
+    AddObject(new CPlayerHPUI(), LAYER_TYPE::INGAME_UI);
 
 #if 0
     // Monster 생성
@@ -264,11 +267,14 @@ void CLevel_Start::Render()
 {
     CLevel::Render();
 
-    TextOut(CEngine::GetInst()->GetSecondDC(), 10, 10, L"Start Level", wcslen(L"Start Level"));
+    WCHAR buf[100];
+
+    wsprintf(buf, L"%d objects rendered", m_renderCount);
+
+    TextOut(CEngine::GetInst()->GetSecondDC(), 10, 10, buf, wcslen(buf));
 }
 
 void CLevel_Start::End()
 {
-    printf("clevel::end()\n");
     DeleteAllObject();
 }
