@@ -7,7 +7,7 @@
 
 
 
-#pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console")
+//#pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console")
 
 HINSTANCE g_hInst = nullptr;
 HWND      g_hDlg = nullptr;
