@@ -60,7 +60,7 @@ public:
     int GetKeyCnt() { return m_keyCnt; }
     void SetKeyCnt(int _key) { m_keyCnt = _key; }
 
-
+    int GetCurHP() { return m_curHP; }
 private:
     void CreatePlayerFlipbook();
     void CreateFlipbook(const wstring& _FlipbookName, CTexture* _Atlas, Vec2 _LeftTop, Vec2 _Slice, int MaxFrame);
