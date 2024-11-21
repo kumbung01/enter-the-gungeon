@@ -7,6 +7,13 @@ enum class UI_STATE
     DRAWING,
 };
 
+enum class DRAW_TYPE
+{
+    RELOADING,
+    EMPTY,
+    NONE
+};
+
 class CFlipbookPlayer;
 
 class CReloadBar :
@@ -16,13 +23,14 @@ private:
     CFlipbookPlayer* m_flipbookPlayer;
     CObj* m_owner;
     UI_STATE m_state;
+    DRAW_TYPE m_type;
 
     int   m_frameCount;
     float m_duration;
     float m_currentTime;
 public:
     void SetOwner(CObj* _owner) { m_owner = _owner; }
-    void Draw(float _duration);
+    void Draw(DRAW_TYPE _type, float _duration);
 
     void Tick() override;
     void Render() override;

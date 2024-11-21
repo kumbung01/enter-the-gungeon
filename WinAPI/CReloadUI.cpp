@@ -7,10 +7,11 @@
 #include "CFlipbook.h"
 
 
-void CReloadBar::Draw(float _duration)
+void CReloadBar::Draw(DRAW_TYPE _type, float _duration)
 {
 	m_currentTime = 0.f;
 	m_duration = _duration;
+	m_type = _type;
 	m_state = UI_STATE::DRAWING;
 	float fps = m_frameCount / m_duration;
 	m_flipbookPlayer->Play({ 0, false }, fps, false);
@@ -18,12 +19,12 @@ void CReloadBar::Draw(float _duration)
 
 void CReloadBar::Tick()
 {
+	SetPos(m_owner->GetPos() + Vec2(0.f, -50.f)); // update only when drawing state
 	switch (m_state)
 	{
 	case UI_STATE::IDLE:
 		break;
 	case UI_STATE::DRAWING:
-		SetPos(m_owner->GetPos() + Vec2(0.f, -50.f)); // update only when drawing state
 		m_currentTime += DT;
 		if (m_currentTime >= m_duration) {
 			m_state = UI_STATE::IDLE;
@@ -34,15 +35,13 @@ void CReloadBar::Tick()
 
 void CReloadBar::Render()
 {
-	if (m_state == UI_STATE::DRAWING)
+	if (m_state == UI_STATE::DRAWING && m_type == DRAW_TYPE::RELOADING)
 	{
 		m_flipbookPlayer->Render();
-
-		// TODO:change to pixel texture.
-		DrawDebugRect(PEN_TYPE::GREEN, GetRenderPos(), Vec2(100.f, 20.f), 0.f);
-		float percentage = m_currentTime / m_duration;
-		DrawDebugRect(PEN_TYPE::BLUE, GetRenderPos() + Vec2(percentage * 50.f - 50.f, 0.f), 
-			Vec2(100.f * percentage, 20.f), 0.f);
+	}
+	else if (m_type == DRAW_TYPE::EMPTY)
+	{
+		TextOut(CEngine::GetInst()->GetSecondDC(), GetRenderPos().x - 25, GetRenderPos().y, L"Reload", wcslen(L"Reload"));
 	}
 }
 
@@ -51,6 +50,7 @@ CReloadBar::CReloadBar()
 	, m_duration(0.f)
 	, m_currentTime(0.f)
 	, m_state(UI_STATE::IDLE)
+	, m_type(DRAW_TYPE::NONE)
 	, m_flipbookPlayer(nullptr)
 {
 	m_flipbookPlayer = (CFlipbookPlayer*)AddComponent(new CFlipbookPlayer);

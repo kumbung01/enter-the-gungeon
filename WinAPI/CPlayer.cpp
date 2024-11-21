@@ -234,9 +234,9 @@ void CPlayer::Tick()
 	if (m_isInvincible)
 	{
 		m_invincibleAccTime += DT;
-		if ((int)(m_invincibleAccTime / 0.1f) > m_invincibleVisibleTime)
+		if ((int)(m_invincibleAccTime / 0.15f) > m_invincibleVisibleTime)
 		{
-			m_invincibleVisibleTime = ((int)m_invincibleAccTime / 0.1f);
+			m_invincibleVisibleTime = ((int)m_invincibleAccTime / 0.15f);
 			m_visible = !m_visible;
 		}
 
@@ -277,6 +277,10 @@ void CPlayer::Tick()
 			if (fireResult == GUN_STATE::RELOAD)
 			{
 				this->Reload(m_gun->GetReloadDelay());
+			}
+			else if (fireResult == GUN_STATE::EMPTY)
+			{
+				this->m_reloadBar->Draw(DRAW_TYPE::EMPTY, 0.f);
 			}
 		}
 
@@ -529,6 +533,6 @@ void CPlayer::DeadState()
 
 void CPlayer::Reload(float _duration)
 {
-	m_reloadBar->Draw(_duration);
+	m_reloadBar->Draw(DRAW_TYPE::RELOADING, _duration);
 }
 
