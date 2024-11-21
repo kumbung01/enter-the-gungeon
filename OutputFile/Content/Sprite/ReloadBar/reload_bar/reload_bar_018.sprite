@@ -1,0 +1,16 @@
+[KEY]
+reload_bar_018
+[PATH]
+Sprite/ReloadBar/reload_bar/reload_bar_018.sprite
+[ATLAS_KEY]
+ReloadBar
+[ATLAS_PATH]
+Texture/ReloadBar.png
+[LEFT_TOP]
+128, 64
+[SLICE]
+32, 32
+[OFFSET]
+0, 0
+[RENDERTYPE]
+BITBLT

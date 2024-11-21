@@ -7,13 +7,17 @@ enum class UI_STATE
     DRAWING,
 };
 
+class CFlipbookPlayer;
+
 class CReloadBar :
     public CObj
 {
 private:
+    CFlipbookPlayer* m_flipbookPlayer;
     CObj* m_owner;
     UI_STATE m_state;
 
+    int   m_frameCount;
     float m_duration;
     float m_currentTime;
 public:
