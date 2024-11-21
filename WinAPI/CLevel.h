@@ -36,6 +36,8 @@ private:
     vector<CObj*>                                       m_vecObjects[(UINT)LAYER_TYPE::END];
     vector<CCollider*>                                  m_vecCollider[(UINT)LAYER_TYPE::END];
     std::priority_queue<CObj*, std::vector<CObj*>, cmp> m_renderQueue;
+protected:
+    int m_renderCount;
 public:
     // 시점함수 
     //  Begin       : 레벨이 시작될 때, Object 들에게 호출

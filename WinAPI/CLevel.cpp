@@ -31,6 +31,7 @@ void CLevel::Begin()
 
 void CLevel::Tick()
 {
+	m_renderCount = 0;
 	// 이전프레임에 등록된 충돌체들 등록 해제
 	for (UINT i = 0; i < (UINT)LAYER_TYPE::END; ++i)
 	{
@@ -72,7 +73,7 @@ void CLevel::Render()
 			}
 			else
 			{
-				if (IsInCamera(*iter))
+				if (IsInCamera(*iter) || (*iter)->GetLayerType() > LAYER_TYPE::UIS)
 					m_renderQueue.push(*iter);
 				++iter;
 			}
@@ -84,6 +85,7 @@ void CLevel::Render()
 		auto obj = m_renderQueue.top();
 		m_renderQueue.pop();
 		obj->Render();
+		m_renderCount++;
 	}
 }
 
