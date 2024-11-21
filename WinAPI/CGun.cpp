@@ -128,7 +128,7 @@ GUN_STATE CGun::Reload(bool isFired)
 	{
 		m_bullets -= bulletsToReload;
 	}
-	m_magBullets += bulletsToReload;
+
 	
 	m_fireTime = 0.f; // resets fireTime
 
@@ -184,6 +184,7 @@ void CGun::Tick()
 		m_reloadTime += DT;
 		if (m_reloadTime > m_reloadDelay)
 		{
+			m_magBullets = m_maxMagBullets;
 			m_reloadTime = 0;
 			m_gunState = GUN_STATE::IDLE;
 		}
