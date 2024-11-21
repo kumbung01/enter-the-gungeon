@@ -14,6 +14,7 @@
 #include "CCursor.h"
 #include "CGun.h"
 #include "CPlayerHPUI.h"
+#include "CGunUI.h"
 #include "CReloadUI.h"
 #include "CRevolver.h"
 #include "CMonsterRevolver.h"
@@ -159,6 +160,7 @@ void CLevel_Start::Begin()
     AddObject(ui, LAYER_TYPE::INGAME_UI);
 
     AddObject(new CPlayerHPUI(), LAYER_TYPE::INGAME_UI);
+    AddObject(new CGunUI(), LAYER_TYPE::INGAME_UI);
 
 #if 0
     // Monster »ý¼º

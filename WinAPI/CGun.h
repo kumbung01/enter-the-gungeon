@@ -71,6 +71,10 @@ public:
 
     CSprite* GetHandSprite() { return m_handSprite; }
     void SetHandSprite(CSprite* _handSprite) { m_handSprite = _handSprite; }
+
+    int GetMagBullets() { return m_magBullets; }
+    int GetMaxMagBullets() { return m_maxMagBullets; }
+
 protected:
     virtual bool IsTriggered();           // ¹æ¾Æ¼è ´ç±è
     virtual void CreateBullet();

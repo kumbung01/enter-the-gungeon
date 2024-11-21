@@ -55,6 +55,7 @@ public:
     virtual void EndOverlap(CCollider* _Collider, CObj* _OtherObject, CCollider* _OtherCollider);
 
     void SetGun(CGun* _gun) { m_gun = _gun; }
+    CGun* GetGun() { return m_gun; }
     void SetReloadBar(CReloadBar* _bar) { m_reloadBar = _bar; }
     
     int GetKeyCnt() { return m_keyCnt; }
